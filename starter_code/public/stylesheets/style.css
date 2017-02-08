@@ -1,0 +1,49 @@
+body {
+  margin: 0;
+  padding: 0;
+
+}
+
+.page-heading {
+  text-align: center;
+}
+
+.thumb-box {
+  background-color: grey;
+  width: 300px;
+  height: auto;
+  margin: 10px 10px;
+  float: left;
+}
+
+.thumb-image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.thumb-heading {
+  color: white;
+  padding: 0px 0px;
+  margin: 5px auto;
+  text-align: center;
+  font-family: sans-serif;
+}
+
+.thumb-button {
+  text-decoration: none;
+  background-color: #DC4545;
+  border: 1px solid black;
+  border-radius: 10px;
+  display: block;
+  width: 130px;
+  margin: 5px auto;
+}
+
+.thumb-button-text {
+  color: white;
+  padding: 0px 0px;
+  text-align: center;
+  font-family: sans-serif;
+  font-size: 14px;
+}

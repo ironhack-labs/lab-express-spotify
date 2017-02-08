@@ -1,0 +1,13 @@
+<h1 class="page-heading"><%=artistSearched%></h1>
+
+<% artistsFound.forEach(function (artistObj) { %>
+  <div class="thumb-box">
+    <% if(artistObj.images.length > 0) {%>
+    <img class="thumb-image" src=<%=artistObj.images[0].url%>></img>
+    <% } %>
+    <h2 class="thumb-heading"><%=artistObj.name%></h2>
+    <a class="thumb-button" href="/albums/<%=artistObj.id%>">
+      <p class="thumb-button-text">View Albums</p>
+    </a>
+  </div>
+<%});%>

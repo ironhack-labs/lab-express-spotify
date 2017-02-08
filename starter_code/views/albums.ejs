@@ -1,0 +1,13 @@
+<h1 class="page-heading">Albums for: <%=artist%></h1>
+
+<% albums.forEach(function (albumObj) { %>
+  <div class="thumb-box">
+    <% if(albumObj.images.length > 0) {%>
+    <img class="thumb-image" src=<%=albumObj.images[0].url%>></img>
+    <% } %>
+    <h2 class="thumb-heading"><%=albumObj.name%></h2>
+    <a class="thumb-button" href="">
+      <p class="thumb-button-text">View Songs</p>
+    </a>
+  </div>
+<%});%>
