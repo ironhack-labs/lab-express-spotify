@@ -16,16 +16,55 @@ app.set('views', __dirname + "/views");
 app.set('view engine', 'ejs');
 
 
-spotify.searchArtists("The Beatles", {}, (err, data) => {
-  
-  if (err) throw err;
+app.get('/', (req, res) => {
+  res.render('index');
+});
 
-  let artists = data.body.artists.items;
-  console.log(artists)
+app.get('/artists', (req, res) => {
+  res.render('artists');
+});
+
+app.post('/artists', (req, res) => {
+  let search = req.body.keyboard;
+
+  spotify.searchArtists(search, {}, (err, data) => {
+
+    if (err) throw err;
+
+    let allArtists = {
+      artists: data.body.artists.items,
+    };
+
+    res.render('artists', allArtists);
+    // console.log(allArtists);
+  });
+
+});
+
+app.get('/artists/:artist', (req, res) => {
+  res.render('artist');
+});
+
+app.get('/artists/:artist', (req, res) => {
+
+  var artistId = req.params.artist
+
+
+  console.log(artistId)
+  console.log('working?')
+
+  spotify.getArtistAlbums(artistId, {}, (err, artistId) => {
+
+    console.log("whuttt");
+
+    if (err) throw err;
+
+    res.send(artistId);
+    });
 });
 
 
 
 app.listen(3000, () => {
-  console.log('SPOTIFY APP listening on port 3000!!!!!')
+  console.log('SPOTIFY APP listening on port 3000!!!!!');
 });
