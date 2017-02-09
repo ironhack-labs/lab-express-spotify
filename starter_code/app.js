@@ -22,13 +22,13 @@ app.get('/', function(request, response) {
   response.render('index');
 });
 
-app.get('/', function(request, response) {
+app.post('/', function(request, response) {
   // const artists = request.body.artist;
   spotify.searchArtists("The Beatles", {
     limit: 3,
     offset: 1
   }).then(function(groups) {
-    response.render('artists', {
+    response.send('artists', {
       groups: groups
     }); // to stuff here
   }).catch(function(err) {
@@ -63,16 +63,16 @@ app.get('/', function(request, response) {
 //   response.send('artists');
 // });
 
-app.get('/artists', function(request, response) {
-  response.render('artists');
-});
+//app.get('/artists', function(request, response) {
+//  response.render('artists');
+//});
 
-spotify.searchArtists("The Beatles", {}, (err, data) => {
-  if (err) throw err;
+//spotify.searchArtists("The Beatles", {}, (err, data) => {
+//  if (err) throw err;
 
-  let artists = data.body.artists.items;
-  console.log(artists);
-});
+ // let artists = data.body.artists.items;
+ // console.log(artists);
+//});
 
 
 
