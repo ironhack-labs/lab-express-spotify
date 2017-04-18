@@ -64,9 +64,31 @@ Let's take a look at that object:
 
 Included with the Artist object is the name, id, images, and much more. The album and tracks returned are in a *very similar structure*.
 
-:::danger
+#### In Express
+
+Using the package in express can be a bit trickier. Until this point, we've made a request to a route, and then rendered a page. The Spotify package is asynchronous, meaning we don't want to render our view until it is finished retrieving the data. That would like something like this:
+
+**Pseudocode**
+
+```
+// ...
+const SpotifyWebApi   = require('spotify-web-api-node');
+const spotify         = new SpotifyWebApi();
+const express         = require('express');
+
+app.get('/some-route', (req, res, next) => {
+  spotify.searchArtists("The Beatles", {}, (err, data) => {
+    if (err) throw err;
+
+    let artists = data.body.artists.items;
+    // Render after the data from spotify has returned
+    res.render('some-view', { artists });
+  });
+});
+// ...
+```
+
 :fire: *Styling should be the last thing you focus on. Functionality first this module!*
-:::
 
 ## Iteration 0 | Setup
 
@@ -106,7 +128,7 @@ Create a simple home page. You'll need a basic index route, that renders a home 
 
 On this page, you should have a search form. This form should direct its query to `/artists`, and have one input with a name of `artist`.
 
-![](https://i.imgur.com/YuTA0vQ.png =400x)
+![](https://i.imgur.com/YuTA0vQ.png=400x)
 
 
 ### Step 2 | [Display results for artist search](https://iron-spotify.herokuapp.com/artists?artist=The+Beatles)
@@ -115,15 +137,13 @@ Create the route `/artists`. This route will receive the search term from the qu
 
 Display the name, an image, and a button to show the albums for a particular artist on a new view.
 
-![](https://i.imgur.com/ZqjmoCZ.png =400x)
+![](https://i.imgur.com/ZqjmoCZ.png=400x)
 
 ## Iteration 2 | [View Albums](https://iron-spotify.herokuapp.com/albums/3WrFJ7ztbogyGnTHbHJFl2)
 
 When someone clicks on the "View Albums" button, they should be taken to a page to show all of the albums for that particular artist.
 
-:::info
 :zap: Check out the `getArtistAlbums` method in the `spotify-web-api-node` package.
-:::
 
 **Hint**
 
@@ -151,9 +171,7 @@ Meaning that your href for the view more button is going to have to look like th
 
 Make the "View Tracks" button work on the albums page. This page should take you to a page with a list of all of the tracks on a particular album.
 
-:::info
 :zap: Check out the `getAlbumTracks` method in the `spotify-web-api-node` package.
-:::
 
 A track object comes with a `preview_url`, which is the source for a 30 second preview of a particular song. You can plug this into an HTML [`audio`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag, and it will play the preview.
 
