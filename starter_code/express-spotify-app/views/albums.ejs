@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row text-center">
+
+    <h2 class="text-center">Albums for: <%= albums[0].artists[0].name%></h2>
+    <ul class="item-list">
+      <% albums.forEach((album) => { %>
+        <li class="single-item col-sm-4">
+          <% let image = "";%>
+            <%for(let i = 0; i < album.images.length; i++){%>
+            <%if(album.images[i].url){%>
+            <%image = album.images[i].url;%>
+            <%break;%>
+            <%}%>
+          <%}%>
+          <img src="<%=image%>">
+          <div class="item-footer">
+            <h3><%= album.name %></h3>
+            <a class="view-more btn" href="../tracks/<%= album.id%>">View Tracks</a>
+          </div>
+        </li>
+      <%});%>
+
+    </ul>
+    
+  </div>
+</div>

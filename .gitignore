@@ -1,3 +1,5 @@
+starter_code/express-spotify-app/node_modules
+
 # Logs
 logs
 *.log
@@ -25,6 +27,7 @@ build/Release
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
+
 
 # Debug log from npm
 npm-debug.log
