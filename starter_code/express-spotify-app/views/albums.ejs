@@ -1,0 +1,29 @@
+<body>
+  <p>artists</p>
+  <% if(albumsSearched!==undefined){%>
+    <div class="row">
+    <% albumsSearched.forEach((album)=>{ %>
+      <div class="col-xs-offset-1 col-xs-3">
+      <div class="album">
+
+      <% if(album.images.length!==0){ %>
+
+        <div class="album-image"><div class="row"><img src=<%= album.images[0].url%>></img></div></div>
+
+      <%}else{%>
+        <div class="album-image"><div class="row"><img src="../public/images/blank.png"></img></div></div>
+
+      <%}%>
+          <div class="album-bottom">
+            <div class="row">
+            <h4><%= album.name%></h4>
+            <button><a href=<%='tracks/'+ album.id%>>View Tracks</a></button>
+            </div>
+          </div>
+        </div>
+        </div>
+
+<%})%>
+</div>
+<%}%>
+<body>

@@ -22,12 +22,39 @@ app.get('/', (req, res, next) => {
 
 app.post('/artists',(req,res,next)=>{
   let artistSelected = req.body.artist;
-  console.log(req.body.artist);
+  // console.log(req.body.artist);
   spotify.searchArtists(artistSelected, {}, (err, data) => {
     if (err) throw err;
 
     let artists = data.body.artists.items;
-    console.log(artists);
+    // console.log(artists);
+    res.render('artists',{artistsSearched:artists});
+  });
+});
+
+app.get('/albums/:artistId',(req,res,next)=>{
+  console.log("hi");
+  let artistId = req.params.artistId;
+  console.log(artistId);
+  spotify.getArtistAlbums(artistId, {}, (err, data) => {
+    if (err) throw err;
+
+    let albums = data.body.items;
+    console.log(albums );
+    res.render('albums', {albumsSearched:albums});
+  });
+});
+
+app.get('/tracks/:albumId',(req,res,next)=>{
+  console.log("hi");
+  let albumId = req.params.albumId;
+  console.log(albumId);
+  spotify.getAlbumTracks(albumId, {}, (err, data) => {
+    if (err) throw err;
+
+    let tracks = data.body.items;
+    console.log(tracks );
+    res.render('albums', {tracksSearched:tracks});
   });
 });
 
