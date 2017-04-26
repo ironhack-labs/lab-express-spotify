@@ -35,16 +35,20 @@ let controller = (req, res) =>{
     console.log(artists);
     res.render('artists', {artists});
   });
-  // let data = {
-  //   artistname: req.params.artistname
-  // };
-  // console.log(data);
-  // res.render('artists', {artists});
 };
 
 app.post('/artists', controller);
 
-
+// app.get('/albums/:artistId', (req, res) => {
+//   spotify.getArtistAlbums(req.params.artistId, {}, (err, data) => {
+//     if (err) throw err;
+//
+//     let artists = data.body.artists.items;
+//     console.log(artists);
+//     res.render('artists', {artists});
+//   });
+//   // res.render('albums');
+// });
 
 //Server Started
 app.listen(3000, () => {

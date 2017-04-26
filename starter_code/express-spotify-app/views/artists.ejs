@@ -1,6 +1,9 @@
 <% for (i=0; i<artists.length; i++) { %>
       <% if (artists[i].images[0]) { %>
-        <<img src="<%= artists[i].images[0].url%>" alt="">
+        <img src="<%= artists[i].images[0].url%>" alt="">
         <% }%>
-       <h1><%= artists[i].name %></h1>
+       <p><%= artists[i].name %></p>
+       <button type="button" name="albums"><a href="/albums/<%= artists[i].id %>">
+              View Albums
+            </a></button></br></br>
   <% } %>
