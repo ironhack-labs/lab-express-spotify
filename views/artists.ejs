@@ -5,8 +5,10 @@
     <ul class="item-list">
       <% artists.forEach(function(artist) { %>
         <li class="single-item col-sm-4">
-          <% if(artist.images[0] != undefined) {%>
+          <% if(artist.images[0] != undefined) { %>
           <img src="<%= artist.images[0].url %>">
+          <% } else { %>
+          <img src="./images/no-image.png">
           <% } %>
           <div class="item-footer">
             <h3><%= artist.name %></h3>

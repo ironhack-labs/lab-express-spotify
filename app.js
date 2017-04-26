@@ -2,6 +2,7 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const SpotifyWebApi = require('spotify-web-api-node');
+const flash = require('connect-flash');
 
 const app = express();
 
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded({
   extended: true,
 }));
 
+app.use(flash());
 app.use(express.static('public'));
 app.use(morgan('dev'));
 
@@ -31,8 +33,11 @@ app.post('/artists/', (req, res) => {
   spotify.searchArtists(artistName, {}, (err, data) => {
     if (err) throw err;
     const artists = data.body.artists.items;
-    //console.log(artists[0]);
-    res.render('artists', { artists });
+    if (artists.length === 0) {
+      res.render('index');
+    } else {
+      res.render('artists', { artists });
+    }
   });
 });
 
