@@ -17,17 +17,38 @@ app.get('/', (request, response, next) => {
 });
 
 app.get('/artist', (request, response, next) => {
-
-    console.log(request.query.artist);
-
     spotify.searchArtists(request.query.artist, {}, (err, data) => {
         if (err) throw err;
 
         let artists = data.body.artists.items;
 
-        console.log(artists);
-        // Render after the data from spotify has returned
         response.render('artists', { artists });
+    });
+});
+
+app.get('/albums/:artistId', (request, response, next) => {
+
+    let artistId = request.params.artistId;
+
+    spotify.getArtistAlbums(artistId, {}, (err, data) => {
+        if (err) throw err;
+
+        let albums = data.body.items;
+
+        response.render('albums', { albums });
+    });
+});
+
+app.get('/tracks/:albumId', (request, response, next) => {
+
+    let albumId = request.params.albumId;
+
+    spotify.getAlbumTracks(albumId, {}, (err, data) => {
+        if (err) throw err;
+
+        let tracks = data.body.items;
+
+        response.render('tracks', { tracks });
     });
 });
 
