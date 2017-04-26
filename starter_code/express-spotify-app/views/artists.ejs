@@ -1,0 +1,6 @@
+<% for (i=0; i<artists.length; i++) { %>
+      <% if (artists[i].images[0]) { %>
+        <<img src="<%= artists[i].images[0].url%>" alt="">
+        <% }%>
+       <h1><%= artists[i].name %></h1>
+  <% } %>
