@@ -38,8 +38,7 @@ app.post('/artists/', (req, res) => {
 
 // Album Route:
 app.get('/albums/:artistId', (req, res) => {
-  // const artistid2 = req.body;
-  const artistId = '2ye2Wgw4gimLv2eAKyk1NB';
+  const artistId = req.params.artistId;
   spotify.getArtistAlbums(artistId, {}, (err, data) => {
     if (err) throw err;
     // console.log(data.body);
@@ -50,13 +49,11 @@ app.get('/albums/:artistId', (req, res) => {
 });
 
 // Track
-app.get('/tracks/:trackid', (req, res) => {
-  const albumId = '4kwN2OnnrwY2ZBcm379Ahn';
+app.get('/tracks/:albumId', (req, res) => {
+  const albumId = req.params.albumId;
   spotify.getAlbumTracks(albumId, {}, (err, data) => {
     if (err) throw err;
-    console.log(data.body);
     const tracks = data.body;
-    console.log(tracks);
     res.render('tracks', { tracks });
   });
 });

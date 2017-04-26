@@ -129,3 +129,8 @@
 .track-row {
   padding: 0 40px;
 }
+
+.navbar {
+  margin: 0;
+  border-radius: 0px;
+}
