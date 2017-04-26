@@ -2,10 +2,20 @@ const express = require('express');
 
 const app = express();
 
-// index route
-app.get('/', (request, response, next) => {
-  console.log(request);
-  response.send('Hello Isak');
+app.use(express.static('public'));
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+// Index Route:
+app.get('/', (req, res, next) => {
+  res.render('index');
+});
+
+// Artist Route:
+app.get('/artists', (request, response, next) => {
+  response.send('Welcome to the Artist Page');
+  next();
 });
 
 // start server
