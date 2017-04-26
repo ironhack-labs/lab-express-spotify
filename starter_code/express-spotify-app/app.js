@@ -23,8 +23,15 @@ app.post('/artists', (req, res, next) => {
   })
 })
 
-app.get('/artists/:artistId', (req, res) => {
-  spotify.getArtistAlbums()
+app.get('/albums/:artistId', (req, res) => {
+  console.log('==========='+ req.params.artistId)
+  spotify.getArtistAlbums(req.params.artistId, {}, (err, data) => {
+    if (err) throw err
+
+    let albums = data.body.items
+    console.log(albums)
+    res.render('albums', { albums })
+  })
 })
 
 app.listen(3000, () => {

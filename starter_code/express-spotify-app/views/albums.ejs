@@ -10,18 +10,18 @@
     <div class="container">
       <div class="row text-center">
         <ul class="single-item col-md-4">
-          <% artists.forEach( e => { %>
+          <% albums.forEach( e => { %>
             <li class="single-item col-sm-4">
               <% e.images.forEach( i => { %>
                 <img alt="" src="<%= i.url %>"/>
-              <div class="item-footer">
-                <h3><%= e.name %></h3>
-                <a class="view-more btn" href="/albums/<%= e.id%>">
-                  View Albums
-                </a>
-              </div>
+                <div class="item-footer">
+                  <h3><%= e.name %></h3>
+                  <a class="view-more btn" href="/albums/<%= e.id%>">
+                    View Albums
+                  </a>
+                </div>
             </li>
-            <% }) %>
+              <% }) %>
           <% }) %>
         </ul>
       </div>
