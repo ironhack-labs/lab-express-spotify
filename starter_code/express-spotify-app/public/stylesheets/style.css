@@ -1,11 +1,13 @@
+
+.searcher-form{
+  margin: 200px;
+}
+
+
 .album{
   margin-bottom: 20px;
   box-sizing: border-box;
   margin: 0;
-  padding: 0;
-}
-
-.row{
   padding: 0;
 }
 
@@ -17,16 +19,16 @@
   padding: 0;
 }
 
-.album-bottom{
-  height:20%;
+.album-image img{
+  height:100%;
   width: 100%;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.album-image img{
-  height:100%;
+.album-bottom{
+  height:20%;
   width: 100%;
   box-sizing: border-box;
   margin: 0;

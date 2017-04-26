@@ -35,12 +35,12 @@ app.post('/artists',(req,res,next)=>{
 app.get('/albums/:artistId',(req,res,next)=>{
   console.log("hi");
   let artistId = req.params.artistId;
-  console.log(artistId);
+  // console.log(artistId);
   spotify.getArtistAlbums(artistId, {}, (err, data) => {
     if (err) throw err;
 
     let albums = data.body.items;
-    console.log(albums );
+    // console.log(albums );
     res.render('albums', {albumsSearched:albums});
   });
 });
@@ -54,7 +54,7 @@ app.get('/tracks/:albumId',(req,res,next)=>{
 
     let tracks = data.body.items;
     console.log(tracks );
-    res.render('albums', {tracksSearched:tracks});
+    res.render('tracks', {tracksSearched:tracks});
   });
 });
 
