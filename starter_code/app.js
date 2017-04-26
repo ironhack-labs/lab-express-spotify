@@ -19,23 +19,23 @@ app.set('layout', 'layouts/main-layout');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
+
+
 app.get('/', (req, res, next) => {
   res.render('index');
 });
 
 
 app.get('/artists', (req, res, next) => {
-
   let artist = req.query.artist;
+  
   spotify.searchArtists(artist, {}, (err, data) => {
     if (err) throw err;
 
     let artists = data.body.artists.items;
 
     res.render('artist',{search:artist, artists:artists});
-
   });
- 
 });
 
 app.get('/albums/:artistId', (req, res) => {
@@ -53,12 +53,9 @@ app.get('/albums/:artistId', (req, res) => {
           }, function(err) {
             console.error(err);
           });
-
     }, function(err) {
       console.error(err);
     });
-
-  
 });
 
 
@@ -66,7 +63,6 @@ app.get('/tracks/:albumId', (req, res) => {
   console.log(req.params.albumId);
   spotify.getAlbumTracks(req.params.albumId)
     .then(function(data) {
-      console.log(data.body);
       res.render('tracks', {tracks:data.body.items});
     }, function(err) {
       console.log('Something went wrong!', err);
