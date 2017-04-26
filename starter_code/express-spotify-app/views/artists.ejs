@@ -1,0 +1,7 @@
+<% artists.forEach(function(elem){%>
+  <p><%= elem.name%></p>
+  <% if(elem.images[0]){ %>
+    <img width="300px" src="<%= elem.images[0].url %>">
+<% } else {%>
+  <img width="300px" src="http://www.ached.cl/congreso2015/img/user_placeholder.png">
+<%}}) %>
