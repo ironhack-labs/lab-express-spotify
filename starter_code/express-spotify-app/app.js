@@ -16,15 +16,19 @@ app.set('view engine', 'ejs');
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(morgan('dev'));
 
-// spotify.searchArtists("The Beatles", {}, (err, data) => {
-//   if (err) throw err;
-//
-//   let artists = data.body.artists.items;
-//   console.log(artists);
-// });
+app.get('/', (req, res, next) => {
+  res.render('index');
+});
 
-app.get('/', (request, response, next) => {
-  response.render('index');
+app.post('/artists',(req,res,next)=>{
+  let artistSelected = req.body.artist;
+  console.log(req.body.artist);
+  spotify.searchArtists(artistSelected, {}, (err, data) => {
+    if (err) throw err;
+
+    let artists = data.body.artists.items;
+    console.log(artists);
+  });
 });
 
 app.listen(3000, () => {
