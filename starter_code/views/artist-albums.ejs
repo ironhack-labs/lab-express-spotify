@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row text-center">
+  <h2 class="text-center">Albums for: <%=artistName%></h2>
+  <ul class="item-list">
+    <% albums.forEach((el,ind)=>{  %>
+
+        <li class="single-item ">
+          <img src="<%= el.images.length?el.images[0].url:'https://placeholdit.imgix.net/~text?txtsize=33&txt=250%C3%97250&w=250&h=250'%>">
+          <div class="item-footer">
+            <h3><%=el.name %></h3>
+            <a class="view-more btn" href="/tracks/<%= el.uri.split(':')[2]%>">
+              View Tracks
+            </a>
+          </div>
+        </li>
+   <% }) %>
+
+  </ul>
+</div>
+    </div>
