@@ -1,0 +1,129 @@
+body {
+  background-image: url("../images/background.jpg");
+  background-size: cover;
+  color: black;
+  font-family: helvetica;
+}
+
+/*.container {
+  display: flex;
+  background-color: black;
+  width: 100%;
+  height: 100%;
+}*/
+
+.containerindex {
+  position:relative;
+  width: 100%;
+  height: 100% !important;
+  /*background-color: black;*/
+  font-family: helvetica;
+  color: white;
+  text-align: center;
+  border: 1px solid white;
+}
+
+.scontainer {
+  margin: 0 auto;
+  margin-top: 200px;
+  /*margin-top: 200px;*/
+  width: 350px;
+  height: 100px;
+  padding-top: 70px;
+  /*background-color: rgba(255,255,255,1);*/
+  text-align: center;
+  font-family: helvetica;
+}
+
+.containeralbums {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  min-width: 100%;
+  min-height: 100%;
+  /*background-color: black;*/
+  font-family: helvetica;
+  color: white;
+  text-align: center;
+}
+
+.containertracks {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-content: center;
+  max-width: 550px;
+  min-height: auto;
+  margin: 0 auto;
+  background-color: white;
+  font-family: helvetica;
+  color: black;
+  text-align: center;
+  line-height: 25px;
+}
+.song {
+  /*border: 1px solid gray;*/
+  position: relative;
+}
+.track {
+  float: left;
+  width: 75%;
+  text-align: left;
+}
+
+.listen {
+  float: left;
+  width: 5%;
+}
+
+.row {
+  /*max-width: 600px;*/
+  margin: 0 auto;
+  text-align: center;
+  line-height: 15px;
+}
+
+.col-md-4 {
+  text-align: center;
+  height: 175px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  font-size: 14px;
+}
+
+#input {
+  width: 240px;
+  height: 15px;
+  font-family: helvetica;
+}
+
+h2 {
+  text-align: center;
+  color: white !important;
+}
+
+#button {
+  width: 180px;
+  color: white;
+  font-weight: bold;
+  background-color: red;
+  font-family: helvetica;
+}
+
+audio {
+  max-width: 100px;
+}
+
+
+a {
+  color: white;
+}
+
+img {
+  max-height: 100px;
+}
+
+li {
+  list-style: none;
+}

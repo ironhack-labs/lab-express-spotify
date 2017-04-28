@@ -1,0 +1,22 @@
+<link rel="stylesheet" href="../stylesheets/style.css">
+<h2> Tracks </h2>
+<div class="containertracks">
+
+<br>
+<ul>
+  <% tracks.forEach((element)=>{ %>
+    <li>
+      <div class="song">
+      <div class="track">
+      <%= element.name %>
+    </div>
+    <div class="listen">
+      <audio controls src=<%= element.preview_url %>>
+      </audio>
+    </div>
+    </div>
+     </li>
+  <% }) %>
+</ul>
+
+</div>
