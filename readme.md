@@ -171,7 +171,7 @@ Meaning that your href for the view more button is going to have to look like th
 
 Make the "View Tracks" button work on the albums page. This page should take you to a page with a list of all of the tracks on a particular album.
 
-:zap: Check out the `getAlbumTracks` method in the `spotify-web-api-node` package.
+**Note**: :zap: Check out the `getAlbumTracks` method in the `spotify-web-api-node` package.
 
 A track object comes with a `preview_url`, which is the source for a 30 second preview of a particular song. You can plug this into an HTML [`audio`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag, and it will play the preview.
 
