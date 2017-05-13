@@ -1,0 +1,94 @@
+/*body {
+  height: 600px;
+  background-image: url(/images/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}*/
+
+/* Home Page */
+body {
+  background-image: url(/images/back.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.home-search:hover, .home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Tracks */
+
+.track-list h4 {
+  display: inline;
+  margin: 0;
+  font-size: 16px;
+}
+
+.track-list li div {
+  float: left;
+  width: 50%;
+}
+
+.track {
+  background-color: #f6f6f6;
+  margin-bottom: 3px;
+  padding: 15px;
+  display: block;
+}
+
+.tracks-header {
+  display: block;
+  background-color: #4a4a4a;
+  padding: 15px;
+}
+
+.tracks-header h3 {
+  color: #c3c3c3;
+}
+
+.track-name {
+  padding: 5px;
+}
+
+.item-list li div.listen {
+  float: right;
+  width: 30%;
+}
+
+.listen h3 {
+  text-align: center;
+}
+
+.track-row {
+  padding: 0 40px;
+}

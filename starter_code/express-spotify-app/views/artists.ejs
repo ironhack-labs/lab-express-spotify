@@ -1,0 +1,11 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/artists.css">
+
+<% for(var i=0; i<artists.length; i++) { %>
+<div class="boxes">
+  <p> <%= artists[i].name %> </p>
+  <% if(artists[i].images[0]){ %>
+    <img width="300px" src="<%= artists[i].images[0].url %>">
+  <% } %>
+  <a class="home-search" href="<%= artists[i].id %>">View Albums</a>
+  <% } %>
+</div>
