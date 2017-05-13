@@ -1,0 +1,44 @@
+// 20170426103623
+// https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB
+
+{
+  "external_urls": {
+    "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+  },
+  "followers": {
+    "href": null,
+    "total": 3225771
+  },
+  "genres": [
+    "alternative metal",
+    "alternative rock",
+    "hard rock",
+    "metal",
+    "rock",
+    "speed metal",
+    "thrash metal"
+  ],
+  "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+  "id": "2ye2Wgw4gimLv2eAKyk1NB",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/5a06711d7fc48d5e0e3f9a3274ffed3f0af1bd91",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/0c22030833eb55c14013bb36eb6a429328868c29",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/c1fb4d88de092b5617e649bd4c406b5cab7d3ddd",
+      "width": 160
+    }
+  ],
+  "name": "Metallica",
+  "popularity": 81,
+  "type": "artist",
+  "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+}

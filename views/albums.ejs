@@ -1,0 +1,184 @@
+<% include ./partials/header %>
+<!-- <pre><%= JSON.stringify(albums, null, 2) %></pre> -->
+<div class="container">
+  <div class="row text-center">
+    <h2 class="text-center">Albums for: <%= albums.items[0].artists[0].name %></h2>
+    <ul class="item-list">
+
+      <% albums.items.forEach(function(item) { %>
+        <li class="single-item">
+          <% if(item.images[0] != undefined) {%>
+          <img src="<%= item.images[0].url %>">
+          <% } %>
+          <div class="item-footer">
+            <h3><%= item.name %></h3>
+            <a class="view-more btn" href="/tracks/<%= item.id %>">
+              View Tracks
+            </a>
+          </div>
+        </li>
+      <% }); %>
+<!--
+        <img src="https://i.scdn.co/image/1b1879c1dd1613586f9bcd1bdc51aa45146a86be">
+        <div class="item-footer">
+          <h3>Live At The Hollywood Bowl</h3>
+          <a class="view-more btn" href="/tracks/5XfJmldgWzrc1AIdbBaVZn">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/94c04cbf2ea221d53c4ca2c93c8228c39945a180">
+        <div class="item-footer">
+          <h3>Live At The Hollywood Bowl</h3>
+          <a class="view-more btn" href="/tracks/0n9SWDBEftKwq09B01Pwzw">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/cba8cf31b21ee3d97e55f48cef1f423ae0b169d9">
+        <div class="item-footer">
+          <h3>Love</h3>
+          <a class="view-more btn" href="/tracks/7aglIjEn9DjguIZ7CxGSS4">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/9ecfdf528562cae879748b73bd81b64dfa3d5704">
+        <div class="item-footer">
+          <h3>1 (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/7vEJAtP3KgKSpOHVgwm3Eh">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/4e6916b16ce51c241c16f4d642360443aeb7b4df">
+        <div class="item-footer">
+          <h3>1 (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/5ju5Ouzan3QwXqQt1Tihbh">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/809c6f28db643023d76b9cb650a8ea59689a3af2">
+        <div class="item-footer">
+          <h3>Let It Be (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/2pCqZLeavM2BMovJXsJEIV">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/b3651a85f2bca826b38194c51d09cd7b068aa3ab">
+        <div class="item-footer">
+          <h3>Let It Be (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/0jTGHV5xqHPvEcwL8f6YU5">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/c429243cd056974175abe72a3142d3dccffc166a">
+        <div class="item-footer">
+          <h3>Abbey Road (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/0ETFjACtuP2ADo6LFhL6HN">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/9cab76ad73ce2adbacbd118ebc632255ce7c1841">
+        <div class="item-footer">
+          <h3>Abbey Road (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/2Pqkn9Dq2DFtdfkKAeqgMd">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/411d661890b87bf5e09f436760049f30b2621de6">
+        <div class="item-footer">
+          <h3>Yellow Submarine (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/47bcKzmKgmMPHXNVOWpLiu">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/b524e45ee12bc0562cd36169a895b9ec59fa702f">
+        <div class="item-footer">
+          <h3>Yellow Submarine (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/1gKZ5A1ndFqbcrWtW85cCy">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/d6028aea974c75961cb9cdc2263f5d8a8a6582bd">
+        <div class="item-footer">
+          <h3>The Beatles (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/03Qh833fEdVT30Pfs93ea6">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/2782d94528b449fb6910300cc8c8f93ab8cc7a8d">
+        <div class="item-footer">
+          <h3>The Beatles (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/1klALx0u4AavZNEvC4LrTL">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/5779cc9a2ea0d1aa474a6e9575864d6d348acf97">
+        <div class="item-footer">
+          <h3>Magical Mystery Tour (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/6P9yO0ukhOx3dvmhGKeYoC">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/5efcba83e06ce03ca843b459a4189f861ddc5f23">
+        <div class="item-footer">
+          <h3>Magical Mystery Tour (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/2BtE7qm1qzM80p9vLSiXkj">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/377d0c66cae914111f5ee721853dc68d2cc53556">
+        <div class="item-footer">
+          <h3>Sgt. Pepper&#39;s Lonely Hearts Club Band (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/1PULmKbHeOqlkIwcDMNwD4">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/ec881187fe0432c8f6d208b9b4833bd411471345">
+        <div class="item-footer">
+          <h3>Sgt. Pepper&#39;s Lonely Hearts Club Band (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/6QaVfG1pHYl1z15ZxkvVDW">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/75ef0990aa0bb02ef7f6a52d41cc2c4c8028c3ba">
+        <div class="item-footer">
+          <h3>Revolver (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/3PRoXYsngSwjEQWR5PsHWR">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/6ed84deed3993bbdfb644f91cb9db2a85b25da38">
+        <div class="item-footer">
+          <h3>Revolver (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/0PYyrqs9NXtxPhf0CZkq2L">View Tracks</a>
+        </div>
+      </li>
+
+      <li class="single-item">
+        <img src="https://i.scdn.co/image/a7f271263055adb87353c76b2e5ebbdec07e92a9">
+        <div class="item-footer">
+          <h3>Rubber Soul (Remastered)</h3>
+          <a class="view-more btn" href="/tracks/3OdI6e43crvyAHhaqpxSyz">View Tracks</a>
+        </div>
+      </li>
+-->
+    </ul>
+  </div>
+</div>
+<% include ./partials/footer %>

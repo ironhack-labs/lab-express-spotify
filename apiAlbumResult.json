@@ -1,0 +1,615 @@
+// 20170426113702
+// http://localhost:3000/albums/2ye2Wgw4gimLv2eAKyk1NB
+
+{
+  "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB/albums?offset=20&limit=10&album_type=single,album,compilation,appears_on,ep",
+  "items": [
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "MX"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0HKpzK9ZoJ0oVA43E5gewM"
+      },
+      "href": "https://api.spotify.com/v1/albums/0HKpzK9ZoJ0oVA43E5gewM",
+      "id": "0HKpzK9ZoJ0oVA43E5gewM",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/e7c527d29e99edbae0318be381c4077a9272a6ea",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/23d9928132d24202360bf490737cfccdfe639143",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/8aa6b58f7b22eca22e094b6b1b6154c1b1183b64",
+          "width": 64
+        }
+      ],
+      "name": "St. Anger",
+      "type": "album",
+      "uri": "spotify:album:0HKpzK9ZoJ0oVA43E5gewM"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0fKUOyCvzWqs7K6uxT3pvB"
+      },
+      "href": "https://api.spotify.com/v1/albums/0fKUOyCvzWqs7K6uxT3pvB",
+      "id": "0fKUOyCvzWqs7K6uxT3pvB",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/97274b39ee9f3a9e60719a690ff743ab31dd6f62",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/69293ddcbfffb61a5961c1c745a3bc2baa957192",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/a323ffdd57d322b6944e22558d58eda45afd7e64",
+          "width": 64
+        }
+      ],
+      "name": "St. Anger",
+      "type": "album",
+      "uri": "spotify:album:0fKUOyCvzWqs7K6uxT3pvB"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "CA",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4ljK2LVKvEPd5xPgUJn0Bs"
+      },
+      "href": "https://api.spotify.com/v1/albums/4ljK2LVKvEPd5xPgUJn0Bs",
+      "id": "4ljK2LVKvEPd5xPgUJn0Bs",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/cee5a66fedfd0fb41ac41742f2c26f46b6f73a67",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/a486b5a32a2f83db787d4fc108c70974558552fb",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/f92da5aaa32136768016d4664479e83abe15b26e",
+          "width": 64
+        }
+      ],
+      "name": "St. Anger",
+      "type": "album",
+      "uri": "spotify:album:4ljK2LVKvEPd5xPgUJn0Bs"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "CA",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/4kwN2OnnrwY2ZBcm379Ahn"
+      },
+      "href": "https://api.spotify.com/v1/albums/4kwN2OnnrwY2ZBcm379Ahn",
+      "id": "4kwN2OnnrwY2ZBcm379Ahn",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/7fae0641ade1a4f16fd964f69f9c773d9dc74c32",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/d52b53e1f0dd70bc2e4bb655b40c1cf13728cb70",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/b6f2278351df85a60f41d65e96f3502ea9215191",
+          "width": 64
+        }
+      ],
+      "name": "St. Anger",
+      "type": "album",
+      "uri": "spotify:album:4kwN2OnnrwY2ZBcm379Ahn"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/7jxQLGhHA47f98EzgZgqYx"
+      },
+      "href": "https://api.spotify.com/v1/albums/7jxQLGhHA47f98EzgZgqYx",
+      "id": "7jxQLGhHA47f98EzgZgqYx",
+      "images": [
+        {
+          "height": 634,
+          "url": "https://i.scdn.co/image/3723111645cb827a1ee4a29364c7e4587dfee7e3",
+          "width": 640
+        },
+        {
+          "height": 297,
+          "url": "https://i.scdn.co/image/2d40a6979a34439a5a0405236e48b55c40a02b1d",
+          "width": 300
+        },
+        {
+          "height": 63,
+          "url": "https://i.scdn.co/image/eba5228b48d42eaadce4cce2d81fbd15da049ebc",
+          "width": 64
+        }
+      ],
+      "name": "S & M",
+      "type": "album",
+      "uri": "spotify:album:7jxQLGhHA47f98EzgZgqYx"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "MX"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/1OZaosC2RtsE2TEqLziwAD"
+      },
+      "href": "https://api.spotify.com/v1/albums/1OZaosC2RtsE2TEqLziwAD",
+      "id": "1OZaosC2RtsE2TEqLziwAD",
+      "images": [
+        {
+          "height": 635,
+          "url": "https://i.scdn.co/image/fdfaf41a921c4c55527d1f88cec0014fc04a32f8",
+          "width": 640
+        },
+        {
+          "height": 297,
+          "url": "https://i.scdn.co/image/7ab2b95f59a55e5a79729d8010dd91b26daad721",
+          "width": 300
+        },
+        {
+          "height": 63,
+          "url": "https://i.scdn.co/image/8e7912104761b47cd763783eb6576e86f29360f0",
+          "width": 64
+        }
+      ],
+      "name": "S & M",
+      "type": "album",
+      "uri": "spotify:album:1OZaosC2RtsE2TEqLziwAD"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "CA",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3kVRcb2fuCcKcqltzczxRP"
+      },
+      "href": "https://api.spotify.com/v1/albums/3kVRcb2fuCcKcqltzczxRP",
+      "id": "3kVRcb2fuCcKcqltzczxRP",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/390d4603d8c25a1635863fafd129e86560b2b60d",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/f62dd0e95b35d257b58003c92d76a3ce41ca1f91",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/a0d4886741e2ba46c80d0a77891f63dbf75d02e7",
+          "width": 64
+        }
+      ],
+      "name": "S&M",
+      "type": "album",
+      "uri": "spotify:album:3kVRcb2fuCcKcqltzczxRP"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "CA",
+        "US"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/7HcHPb1P9mubh0vyDdawAv"
+      },
+      "href": "https://api.spotify.com/v1/albums/7HcHPb1P9mubh0vyDdawAv",
+      "id": "7HcHPb1P9mubh0vyDdawAv",
+      "images": [
+        {
+          "height": 640,
+          "url": "https://i.scdn.co/image/c42ba360722f512d3334f2fecdec03e67ff6dda7",
+          "width": 640
+        },
+        {
+          "height": 300,
+          "url": "https://i.scdn.co/image/15c4ebbba1a1d057b423db7364985260b35e94cb",
+          "width": 300
+        },
+        {
+          "height": 64,
+          "url": "https://i.scdn.co/image/84d708cb3de322eb23ce42dead3c39853c8adf3b",
+          "width": 64
+        }
+      ],
+      "name": "S&M",
+      "type": "album",
+      "uri": "spotify:album:7HcHPb1P9mubh0vyDdawAv"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "MX"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/0vshXZYhBkbIoqxyC2fXcF"
+      },
+      "href": "https://api.spotify.com/v1/albums/0vshXZYhBkbIoqxyC2fXcF",
+      "id": "0vshXZYhBkbIoqxyC2fXcF",
+      "images": [
+        {
+          "height": 635,
+          "url": "https://i.scdn.co/image/807d725709ab669fa4ae0a064532dfe4b06da476",
+          "width": 640
+        },
+        {
+          "height": 297,
+          "url": "https://i.scdn.co/image/f56144ebbe65461d820127e841200aaef0b830c1",
+          "width": 300
+        },
+        {
+          "height": 63,
+          "url": "https://i.scdn.co/image/418ecaa9de90cc453b24216e288e1d06972e4667",
+          "width": 64
+        }
+      ],
+      "name": "Garage Inc.",
+      "type": "album",
+      "uri": "spotify:album:0vshXZYhBkbIoqxyC2fXcF"
+    },
+    {
+      "album_type": "album",
+      "artists": [
+        {
+          "external_urls": {
+            "spotify": "https://open.spotify.com/artist/2ye2Wgw4gimLv2eAKyk1NB"
+          },
+          "href": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB",
+          "id": "2ye2Wgw4gimLv2eAKyk1NB",
+          "name": "Metallica",
+          "type": "artist",
+          "uri": "spotify:artist:2ye2Wgw4gimLv2eAKyk1NB"
+        }
+      ],
+      "available_markets": [
+        "AD",
+        "AR",
+        "AT",
+        "AU",
+        "BE",
+        "BG",
+        "BO",
+        "BR",
+        "CH",
+        "CL",
+        "CO",
+        "CR",
+        "CY",
+        "CZ",
+        "DE",
+        "DK",
+        "DO",
+        "EC",
+        "EE",
+        "ES",
+        "FI",
+        "FR",
+        "GB",
+        "GR",
+        "GT",
+        "HK",
+        "HN",
+        "HU",
+        "ID",
+        "IE",
+        "IS",
+        "IT",
+        "JP",
+        "LI",
+        "LT",
+        "LU",
+        "LV",
+        "MC",
+        "MT",
+        "MY",
+        "NI",
+        "NL",
+        "NO",
+        "NZ",
+        "PA",
+        "PE",
+        "PH",
+        "PL",
+        "PT",
+        "PY",
+        "SE",
+        "SG",
+        "SK",
+        "SV",
+        "TR",
+        "TW",
+        "UY"
+      ],
+      "external_urls": {
+        "spotify": "https://open.spotify.com/album/3ZV7cKhLYQ8Z3p2oT36tZd"
+      },
+      "href": "https://api.spotify.com/v1/albums/3ZV7cKhLYQ8Z3p2oT36tZd",
+      "id": "3ZV7cKhLYQ8Z3p2oT36tZd",
+      "images": [
+        {
+          "height": 634,
+          "url": "https://i.scdn.co/image/b9bd225d69141727e50bc769f63d43c17ea3cf95",
+          "width": 640
+        },
+        {
+          "height": 297,
+          "url": "https://i.scdn.co/image/e6008284fd73b4f0bed0f83e0bea5f395f8cc9b1",
+          "width": 300
+        },
+        {
+          "height": 63,
+          "url": "https://i.scdn.co/image/4f438bb1366e0f5ca6a7fa13534859c2452f4ff3",
+          "width": 64
+        }
+      ],
+      "name": "Garage Inc.",
+      "type": "album",
+      "uri": "spotify:album:3ZV7cKhLYQ8Z3p2oT36tZd"
+    }
+  ],
+  "limit": 10,
+  "next": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB/albums?offset=30&limit=10&album_type=single,album,compilation,appears_on,ep",
+  "offset": 20,
+  "previous": "https://api.spotify.com/v1/artists/2ye2Wgw4gimLv2eAKyk1NB/albums?offset=10&limit=10&album_type=single,album,compilation,appears_on,ep",
+  "total": 97
+}
