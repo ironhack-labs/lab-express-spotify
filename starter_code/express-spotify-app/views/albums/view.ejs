@@ -1,0 +1,28 @@
+<link rel="stylesheet" href="../stylesheets/style.css">
+
+<div class="containeralbums">
+<div class="row">
+<h2> Albums List </h2>
+</div>
+<br>
+<div class="row">
+<ul>
+  <% albums.forEach((element)=>{ %>
+    <div class="col-md-4">
+    <li>
+      <%  for (let i = 0; i < element.images.length; i++) { %>
+      <%  if (element.images[i].url === undefined) {continue;} else { %>
+      <img src=<%= element.images[i].url; %> alt="">
+            <% break; %>
+      <%    } %>
+      <%  } %>
+      <br>
+      <%= element.name %>
+        <br><a class="btn-primary" href="/tracks/<%= element.id %>">View Tracks</a>
+     </li>
+   </div>
+  <% }) %>
+</ul>
+</div>
+
+</div>
