@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="stylesheets/style.css">
+  </head>
+  <body>
+    <div class="container">
+      <div class="row text-center">
+        <%groups.forEach(function(artist){%>
+          <h2 class="text-center"><%=artist.name%></h2>
+      <%}) %>
+  <ul class="item-list">
+
+        <li class="single-item col-sm-4">
+          <img src="https://i.scdn.co/image/3b1566cf7e02fdcbcaf0ca6e916930a29b441805">
+          <div class="item-footer">
+            <h3>The Bonobo Champions</h3>
+            <a class="view-more btn" href="/albums/7vXlcknzYaMvCpcOnBvG2m">
+              View Albums
+            </a>
+          </div>
+        </li>
+
+  </ul>
+</div>
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  </body>
+</html>
