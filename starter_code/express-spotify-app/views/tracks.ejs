@@ -1,0 +1,27 @@
+<body>
+  <p>tracks</p>
+  <div class="row">
+    <div class="col-xs-offset-1 col-xs-3">
+      <h3>Title</h3>
+    </div>
+    <div class="col-xs-offset-5 col-xs-3">
+      <h3>Listen</h3>
+    </div>
+  </div>
+  <% if(tracksSearched!==undefined){%>
+    <% tracksSearched.forEach((track)=>{ %>
+      <div class="row">
+        <div class="col-xs-offset-1 col-xs-3">
+          <h4><%= track.name%></h4>
+        </div>
+        <div class="col-xs-offset-5 col-xs-3">
+          <audio controls>
+            <source src=<%=track.preview_url%> type="audio/mpeg"/>
+            <source src=<%=track.preview_url%> type="audio/ogg"/>
+          </audio>
+        </div>
+      </div>
+
+<%})%>
+<%}%>
+<body>
