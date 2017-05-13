@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row track-row">
+        <ul class="item-list track-list col-sm-12">
+            <li class="tracks-header clearfix">
+                <div class="track-name">
+                    <h3>Title</h3>
+                </div>
+                <div class="listen">
+                    <h3>Listen</h3>
+                </div>
+            </li>
+            <% tracks.forEach((track) => { %>
+                <li class="track clearfix">
+                    <div class="track-name">
+                        <h4><%= track.name %></h4>
+                    </div>
+                    <div>
+                        <audio class="pull-right" controls="" src="<%= track.preview_url %>"></audio>
+                    </div>
+                </li>
+            <% }); %>
+        </ul>
+    </div>
+</div>

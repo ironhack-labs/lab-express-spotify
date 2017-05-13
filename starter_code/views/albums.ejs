@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row text-center">
+        <% albums.forEach((album) => { %>
+        <li class="single-item col-sm-4">
+            <img src="<%= ( album.images.length === 0 ? 'images/vinyl-disk.png' : album.images[0].url) %>" width="200px" height="200px">
+            <div class="item-footer">
+                <h3><%= album.name %></h3>
+                <a class="view-more btn" href="/tracks/<%= album.id %>">
+                    View Tracks
+                </a>
+            </div>
+        </li>
+        <% }); %>
+    </div>
+</div>
