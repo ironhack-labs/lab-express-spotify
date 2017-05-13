@@ -1,0 +1,21 @@
+{
+  "name": "spotify_app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^2.3.6",
+    "body-parser": "~1.15.2",
+    "ejs": "~2.5.2",
+    "express": "~4.14.0",
+    "express-ejs-layouts": "^2.2.0",
+    "morgan": "~1.7.0"    
+  }
+}
