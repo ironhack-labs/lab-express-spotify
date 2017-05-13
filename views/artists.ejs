@@ -1,0 +1,6 @@
+<h1>Artistaaaas</h1>
+
+<% artists.forEach((artist) => {%>
+  <p><%= artist.name %></p>
+  <a href="/artists/<%=artist.id%>"> View <%= artist.name %> Albums </a>
+<%});%>
