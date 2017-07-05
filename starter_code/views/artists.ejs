@@ -1,0 +1,11 @@
+<% artists.forEach( (artist) => { %>
+  <h2> <%= artist.name %> </h2>
+  <form action="http://localhost:3000/albums/<%= artist.id %>" method="get">
+    <input value="View Albums" type="submit"></input>
+  </form>
+  <% if(artist.images.length > 0) {%>
+    <img src=" <%= artist.images[0].url %> "></img>
+  <%} else { %>
+    <p> No photo. </p>
+    <% } %>
+<% } ) %>
