@@ -1,0 +1,19 @@
+<h2 class="title"><%= artistName %></h2>
+<h2 class="title">Album: <%= albumName %></h2>
+
+<div class="tracks-header">
+  <h3>Title</h3>
+  <h3>Listen</h3>
+</div>
+
+<ul class="track-list">
+    <% tracks.forEach( (track) => { %>
+      <li class="track"> 
+        <h4 class="track-name"><%= track.name %></h4>
+        <div class="listen">
+          <audio controls="controls" src="<%= track.preview_url %>" type="audio/mpeg"></audio>
+        </div>
+      </li>
+    <% }) %>
+</ul>
+

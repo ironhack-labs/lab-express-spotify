@@ -1,0 +1,16 @@
+<h2 class="title"><%= searchKeywords %></h2>
+<ul class="item-list">
+    <% artists.forEach( (artist) => { %>
+      <li class="single-item">
+        <% if (artist.images[0]) { %>
+          <img src="<%= artist.images[0].url %>" alt="<%= artist.name %>" />
+        <% } else { %>
+          <img src="/images/album-default.png" alt="<%= artist.name %>" />
+        <% } %>
+        <div class="item-footer">
+          <h3><%= artist.name %></h3>
+          <a class="btn btn-primary home-search" href="/albums/<%= artist.id %>">View albums</a>
+        </div>
+      </li>
+    <% }) %>
+<ul>
