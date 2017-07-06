@@ -1,0 +1,15 @@
+<div class="album-container">
+  <% albums.forEach( (album) => { %>
+    <div class="album">
+      <h2> <%= album.name %> </h2>
+      <form action="http://localhost:3000/tracks/<%= album.id %>" method="get">
+        <input value="View Tracks" type="submit"></input>
+      </form>
+      <% if(album.images.length > 0) {%>
+        <img src=" <%= album.images[0].url %> "></img>
+      <%} else { %>
+        <p> No photo. </p>
+        <% } %>
+        </div>
+    <% } ) %>
+</div>

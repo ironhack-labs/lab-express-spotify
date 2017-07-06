@@ -1,0 +1,56 @@
+body {
+  background-color: lightgray;
+  background-repeat: no-repeat;
+  height: 100vh;
+  background-position: center;
+}
+
+.searchbox-container {
+  margin: 10% auto;
+  height: 350px;
+  width: 650px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.4)
+}
+
+.searchbox * {
+  display: block;
+  margin: 5px auto;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.artist-container,
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artist,
+.album {
+  width: 33.3%;
+}
+
+.tracks-title {
+  display: flex;
+  justify-content: space-between;
+  width: 45%;
+}
+
+.track {
+  display: flex;
+  justify-content: flex-start;
+}
+
+.track p {
+  width: 35%;
+}
+
+.track audio {
+  justify-content: flex-end;
+}
