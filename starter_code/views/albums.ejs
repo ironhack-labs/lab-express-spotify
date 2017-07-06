@@ -1,0 +1,16 @@
+<h1>Albums for <%= albums[0].artists[0].name %></h1>
+<div class="artists-wrapper">
+   <% albums.forEach((album) => { %>
+    <div class="artist">
+    <div class="artist-caption">
+        <div class="artist-name"><%= album.name %></div>
+        <div class="artist-viewalbums"><button type="submit" onclick="location.href='/tracks/<%= album.id %>'" class="btn btn-danger">View Tracks</button></div>
+    </div>
+    <% if (album.images.length !== 0) { %>
+        <img class="artist-image" src="<%= album.images[0].url %>" />
+   <% } else { %>
+        <img class="artist-image" src="/images/emptyAlbum.png" />
+     <%  } %>
+     </div>
+    <% }) %>
+</div>

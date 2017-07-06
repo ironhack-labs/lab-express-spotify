@@ -1,0 +1,25 @@
+<h1>Tracks</h1>
+ <table class="table">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Listen</th>
+      </tr>
+    </thead>
+    <tbody>
+<% tracks.forEach((track) => { %>
+  <tr>
+    <td>
+        <%= track.name %>
+    </td>
+    <td>
+        <audio src="<%= track.preview_url %>" controls>
+        Your browser does not support the audio element.
+        </audio>
+    </td>
+   </tr>
+<% }) %>
+    </tbody>
+</table>
+
+
