@@ -1,0 +1,143 @@
+/* Global */
+.title { 
+  text-align: center; 
+  text-transform: capitalize;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.single-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: auto;
+  margin: 15px 12px;
+  width: 31%;
+}
+
+.single-item img {
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+.single-item h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.item-footer {
+  width: 100%;
+  background-color: #4d4d4d;
+  color: white;
+  padding: 10px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.item-footer a {
+  color: white;
+  margin-top: 8px;
+  background-color: #ff6666;
+}
+
+.view-more {
+  border: 1px solid black;
+}
+
+/* Home Page */
+.home-heading {
+  background-image: url("../images/home-heading.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.home-search:hover, .home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Tracks */
+.tracks-header {
+  display: block;
+  background-color: #4a4a4a;
+  padding: 15px;
+}
+
+.tracks-header h3 {
+  color: #c3c3c3;
+  display: inline-block;
+}
+
+.tracks-header h3:first-child { margin-left: 2%; }
+
+.tracks-header h3:last-child {
+  float: right;
+  margin-right: 12%;
+}
+
+.track-list { padding: 0; }
+
+.track {
+  background-color: #f6f6f6;
+  margin-bottom: 3px;
+  padding: 15px;
+  display: block;
+}
+
+.track-list h4 {
+  display: inline;
+  margin: 0;
+  font-size: 16px;
+}
+
+.-list li div {
+  float: left;
+  width: 50%;
+}
+
+.track-name {
+  padding: 5px;
+}
+
+.track-list li div.listen {
+  float: right;
+  width: 30%;
+}
+
+.listen h3 {
+  text-align: center;
+}

@@ -1,0 +1,31 @@
+<h2 class="title">Album for: <%= artistName %></h2>
+<ul class="item-list">
+    <!-- Display the first item -->
+    <li class="single-item">
+      <% if (album[0].images[0]) { %>
+        <img src="<%= album[0].images[0].url %>" alt="<%= album[0].name %>" />
+      <% } else { %>
+        <img src="/images/album-default.png" alt="<%= album[0].name %>" />
+      <% } %>
+        <div class="item-footer">
+          <h3><%= album[0].name %></h3>
+          <a class="btn btn-primary home-search" href="/tracks/<%= album[0].name %>/<%= album[0].id %>">View Tracks</a>
+        </div>
+      </li>
+    <!-- Then display all the other albums by removing duplicates (assuming they are received from the API in the proper order ) -->
+    <% for( let i = 1; i < album.length; i += 1 ) { %>
+      <% if( album[i].name !== album[i - 1].name ) { %>
+        <li class="single-item">
+          <% if (album[i].images[0]) { %>
+            <img src="<%= album[i].images[0].url %>" alt="<%= album[i].name %>" />
+          <% } else { %>
+            <img src="/images/album-default.png" alt="<%= album[i].name %>" />
+          <% } %>
+          <div class="item-footer">
+            <h3><%= album[i].name %></h3>
+            <a class="btn btn-primary home-search" href="/tracks/<%= album[i].name %>/<%= album[i].id %>">View Tracks</a>
+          </div>
+        </li>
+      <% } %>
+    <% } %>
+</ul>
