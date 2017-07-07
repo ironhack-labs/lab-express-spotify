@@ -11,7 +11,7 @@ var accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), {
 app.use(morgan('dev', {stream: accessLogStream}))
 
 var clientId = '524a0b707548469289f0462119a494fd',
-    clientSecret = '2498d9b77eb74b369d9ff3f1bf1c8936';
+    clientSecret = '4168a2834ac04d1bb138867da63e8700';
 
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
@@ -75,6 +75,6 @@ app.get('/tracks/:trackId', (req, res) => {
 });
 
 
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
     console.log('Listening in port 3000');
 });
