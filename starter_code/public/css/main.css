@@ -1,0 +1,76 @@
+body {
+    margin:0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.home-heading {
+    background-image: url(/images/home-heading.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.artist-image {
+    width: 300px;
+    height: 300px;
+}
+
+
+.artist {
+    position: relative;
+    float: left;
+    margin: 6px;
+}
+
+.artist-caption {
+    position: absolute;
+    float: left;
+    background-color: #4d4d4d;
+    margin-top: 221px;
+    text-align: center;
+    width: 300px;
+    padding-bottom: 10px;
+}
+
+.artist-viewalbums {
+ 
+}
+
+.artist-name {
+    color: #fff;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 17px;
+}

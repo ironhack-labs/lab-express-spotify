@@ -1,0 +1,17 @@
+<h1><%= searchName %></h1>
+<div class="artists-wrapper">
+    <% artists.forEach((artist) => { %>
+    <div class="artist">
+    <div class="artist-caption">
+        <div class="artist-name"><%= artist.name %></div>
+        <div class="artist-viewalbums"><button type="submit" onclick="location.href='/albums/<%= artist.id %>'" class="btn btn-danger">View Albums</button></div>
+    </div>
+    <% if (artist.images.length !== 0) { %>
+        <img class="artist-image" src="<%= artist.images[0].url %>" />
+   <% } else { %>
+        <img class="artist-image" src="/images/emptyAlbum.png" />
+     <%  } %>
+     </div>
+    <% }) %>
+  
+</div>
