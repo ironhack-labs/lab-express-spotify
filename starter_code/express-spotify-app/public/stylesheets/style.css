@@ -1,0 +1,56 @@
+.hpy-container {
+    margin: auto;
+    text-align: center;
+}
+
+.hpy-input {
+    line-height: 1.3em;
+    border: grey 2px solid;
+    width: 300px;
+}
+
+.hpy-btn {
+    color: white;
+    border-radius: 5px;
+    border: 3px white solid;
+    background-color: red;
+}
+
+.big-bad-title {
+    color: red;
+}
+
+.band-container {
+    display: flex;
+    justify-content: space-around;
+}
+
+.band {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.album-cover {
+    width: 250px;
+    height: 250px;
+}
+
+.artist-title {
+    color: blue;
+}
+
+.song-list {
+    margin: 5px;
+    background-color:  lightgrey;
+    border: black 1px solid;
+    text-align: left;
+    list-style: none;
+    padding: 20px;
+    width: 80%;
+}
+
+.track-song {
+    float: right;
+}
