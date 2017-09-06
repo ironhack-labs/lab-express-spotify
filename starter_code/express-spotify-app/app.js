@@ -34,17 +34,21 @@ app.get('/', (request, response, next) => {
   response.render('index');
 })
 
-app.get('/artists', (request, response, next) => {
-  response.render('artists');
-})
-
-app.listen(3000, () => console.log("HEYO"));
-
-
-
-// spotify.searchArtists("The Beatles", {}, (err, data) => {
+// app.get('/artists', (request, response, next) => {
+// spotifyApi.searchArtists("The Beatles", {}, (err, data) => {
 //   if (err) throw err;
 //
 //   let artists = data.body.artists.items;
 //   console.log(artists)
 // });
+// });
+
+app.get('/artists', (request, response, next) => {
+  spotifyApi.searchArtists(request.query.artists, {}, (err, data) => {
+    if (err) throw err;
+    let artists = data.body.artists.items;
+    response.render('artists',{ artists });
+  });
+});
+
+app.listen(3000, () => console.log("HEYO"));

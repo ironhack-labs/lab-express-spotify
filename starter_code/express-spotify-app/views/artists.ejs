@@ -1,6 +1,11 @@
 <h1>Artist Page</h1>
 
-<!-- <form action="GET">
-  Artist: <input type="text" name="artist-name">
-  <input type="submit" name="submit">
-</form> -->
+<div>
+    <% for (let i = 0; i < 3; i++) { %>
+        <div>
+            <h3><%= artists[i].name %></h3>
+            <img src="<%= artists[i].images[0].url %>"></img>
+            <a href="/albums/<%= artists[i].id %>"><button>See More</button></a>
+        </div>
+    <% } %>
+</div>
