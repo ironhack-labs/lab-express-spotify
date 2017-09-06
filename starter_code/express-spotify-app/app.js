@@ -46,8 +46,24 @@ app.get('/', (request, response, next) => {
 app.get('/artists', (request, response, next) => {
   spotifyApi.searchArtists(request.query.artists, {}, (err, data) => {
     if (err) throw err;
-    let artists = data.body.artists.items;
-    response.render('artists',{ artists });
+    let artist =  data.body.artists.items;
+    response.render('artists',{ artist });
+  });
+});
+
+app.get('/artists', (request, response, next) => {
+  spotifyApi.searchArtists(request.query.artists, {}, (err, data) => {
+    if (err) throw err;
+    let artist =  data.body.artists.items;
+    response.render('artists',{ artist });
+  });
+});
+
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi.searchArtists(request.query.artists, {}, (err, data) => {
+    if (err) throw err;
+    let artist =  data.body.artists.items;
+    response.render('artists',{ artist });
   });
 });
 

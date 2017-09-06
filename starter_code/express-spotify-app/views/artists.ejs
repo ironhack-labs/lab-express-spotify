@@ -1,11 +1,9 @@
 <h1>Artist Page</h1>
 
 <div>
-    <% for (let i = 0; i < 3; i++) { %>
         <div>
-            <h3><%= artists[i].name %></h3>
-            <img src="<%= artists[i].images[0].url %>"></img>
-            <a href="/albums/<%= artists[i].id %>"><button>See More</button></a>
+            <h3><%= artist[0].name %></h3>
+            <img src="<%= artist[0].images[0].url %>"></img>
+            <a href="/albums/<%= artist[0].id %>"><button>View Albums</button></a>
         </div>
-    <% } %>
 </div>
