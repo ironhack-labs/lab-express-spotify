@@ -34,8 +34,17 @@ app.get('/', (request, response, next) => {
 });
 
 app.get('/artists', (request, response, next) => {
-  response.send('artists');
+
+  spotifyApi.searchArtists(request.query.artists)
+    .then((data) => {
+        let artists = data.body.artists.items;
+      response.render('artists', {artists} );
+    }, function(err) {
+      console.error(err);
+    });
 });
+
+
 
 
 

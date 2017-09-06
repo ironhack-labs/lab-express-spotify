@@ -1,1 +1,9 @@
-<h1>This is the artist</h1>
+<h1>Artist Page</h1>
+
+<div>
+        <div>
+            <h3><%= artists[0].name %></h3>
+            <img src="<%= artists[0].images[0].url %>"></img>
+            <a href="/albums/<%= artists[0].id %>"><button>See More</button></a>
+        </div>
+</div>
