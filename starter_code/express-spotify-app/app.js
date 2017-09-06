@@ -39,24 +39,25 @@ app.get('/artist', (req, res, next) => {
     });
 });
 
+
 app.get('/albums/:artistId', (req, res) => {
-    spotify.getArtistAlbums(req.params.artistId, {}, (err, data) => {
-    if (err) throw err;
-    
-    let albums = data.body.items;
-    res.render('albums', { albums });
-    })
-  });
+  spotify.getArtistAlbums(req.params.artistId, {}, (err, data) => {
+  if (err) throw err;
+  
+  let albums = data.body.items;
+  res.render('albums', { albums });
+  })
+});
 
 app.get('/tracks/:albumId', (req, res) => {
-    spotify.getAlbumTracks(req.params.albumId, {}, (err, data) => {
-    if (err) throw err;
-    
-    let tracks = data.body.items;
-    console.log(tracks);
-    res.render('tracks', { tracks });
-    })
-  });
+  spotify.getAlbumTracks(req.params.albumId, {}, (err, data) => {
+  if (err) throw err;
+  
+  let tracks = data.body.items;
+  console.log(tracks);
+  res.render('tracks', { tracks });
+  })
+});
 
 app.listen(3000, () => {
   });

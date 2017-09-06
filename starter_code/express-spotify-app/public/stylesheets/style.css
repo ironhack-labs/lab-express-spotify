@@ -1,23 +1,71 @@
-.hpy-container {
-    margin: auto;
-    text-align: center;
+* {
+    box-sizing: border-box;
+    color: #1B5E20;
 }
 
-.hpy-input {
-    line-height: 1.3em;
-    border: grey 2px solid;
+*:focus {
+    outline: none;
+}
+
+h1, h4 {
+    font-family: 'Arvo', serif;
+}
+
+h2, h5 {
+    font-family: 'Lato', sans-serif;
+}
+
+h3, h6 {
+    font-family: 'Raleway', sans-serif;
+}
+
+p {
+    font-family: 'Arvo', sans-serif;
+}
+
+a {
+    text-decoration: none;
+}
+
+input {
+    line-height: 20px;
     width: 300px;
+    height: 30px;
+    border: 3px solid #1B5E20;
+    padding: 2px 5px;
+    font-family: 'Raleway', sans-serif;
+    color: #1B5E20;
+}
+
+input:focus {
+    border: none;
+    border-bottom: 3px solid #1B5E20;
+}
+
+button {
+    height: 30px;
+    color: #1B5E20;
+    display: inline;
+    border: 3px solid #1B5E20;
+    background-color: white;
+    font-family: 'Raleway', sans-serif;
+    ;
+}
+
+button:hover {
+    background-color:#1B5E20;
+    color: white;
+    border: 3px solid white;
 }
 
 .hpy-btn {
-    color: white;
-    border-radius: 5px;
-    border: 3px white solid;
-    background-color: red;
+    font-size: 0.8em;
 }
 
-.big-bad-title {
-    color: red;
+
+.hpy-container {
+    margin: auto;
+    text-align: center;
 }
 
 .band-container {
@@ -31,14 +79,12 @@
     align-items: center;
 }
 
-
 .album-cover {
-    width: 250px;
-    height: 250px;
-}
-
-.artist-title {
-    color: blue;
+    width: 320px;
+    height: 320px;
+    margin: 30px;
+    border: 5px solid #1B5E20;
+    border-left: 30px solid black;
 }
 
 .song-list {
