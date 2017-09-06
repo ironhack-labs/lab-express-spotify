@@ -21,7 +21,25 @@ Spotify is great for streaming music from the app, but they also have a [Web Ser
 
 We don't need to delve too deeply into what an API is until later, thanks to the npm package `spotify-web-api-node`. This package gives us simple methods to make requests to Spotify, and give us back artists, albums, tracks, and more.
 
-First, create a new folder, and set up your package.json:
+The **Spotify** API ask for a `clientId` and `clientSecret` in order to have permissons to make requests. For getting both of them, follow these steps:
+1. Navigate to [Spotify Developers](https://developer.spotify.com/my-applications/#!/)
+2. Click on the "LOGIN" button. If you do not have an account they will ask you to create one, it´s free :wink:
+3. After the login, click on the **Create an App** button.
+
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_a3a19d215083c5526df1f53f3c1fdf6f.png)
+4. Complete the fields and submit the form
+
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_db933b4f08d71ceff0b0d5d4ca124594.png)
+
+5. We are ready to go! We have all the info we need :muscle: Let´s start!
+
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8859d022ca1d53adc9f9ec829ec3d17b.png)
+
+## Iteration 1 | Spotify API Setup
+
+As always `fork` this repo, and clone it.
+
+Then, inside the `starter_code` folder, create a new folder, and set up your package.json. Use the following commands:
 
 ```
 $ mkdir express-spotify-app && cd express-spotify-app
@@ -30,67 +48,33 @@ $ npm install --save spotify-web-api-node prettyjson
 $ touch app.js
 ```
 
+Inside the `app.js` file, copy/paste the following code:
+
 ```javascript
-const SpotifyWebApi   = require('spotify-web-api-node');
-const spotify         = new SpotifyWebApi();
+var SpotifyWebApi = require('spotify-web-api-node');
 
-spotify.searchArtists("The Beatles", {}, (err, data) => {
-  if (err) throw err;
+// Remember to paste here your credentials
+var clientId = '1c30624cba6742dcb792991caecae571',
+    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
 
-  let artists = data.body.artists.items;
-  console.log(artists)
+var spotifyApi = new SpotifyWebApi({
+  clientId : clientId,
+  clientSecret : clientSecret
 });
 
-```
-
-The object that Spotify sends us is *huge*. Let's open the node Chrome inspector to check it out:
-
-```
-node --inspect --debug-brk app.js
-```
-
-`data.body.artists.items` is an array of objects, those objects being different artists.
-
-![](https://i.imgur.com/zprIbW4.png)
-
-
-Why an array?
-
-Well, when you search for "Kanye West", it will return a list of artists close to that name: ie "Kanye Best", and "Kanye West ft. T-Pain".
-
-Let's take a look at that object:
-
-![](https://i.imgur.com/fEbczuj.png)
-
-Included with the Artist object is the name, id, images, and much more. The album and tracks returned are in a *very similar structure*.
-
-#### In Express
-
-Using the package in express can be a bit trickier. Until this point, we've made a request to a route, and then rendered a page. The Spotify package is asynchronous, meaning we don't want to render our view until it is finished retrieving the data. That would like something like this:
-
-**Pseudocode**
-
-```
-// ...
-const SpotifyWebApi   = require('spotify-web-api-node');
-const spotify         = new SpotifyWebApi();
-const express         = require('express');
-
-app.get('/some-route', (req, res, next) => {
-  spotify.searchArtists("The Beatles", {}, (err, data) => {
-    if (err) throw err;
-
-    let artists = data.body.artists.items;
-    // Render after the data from spotify has returned
-    res.render('some-view', { artists });
-  });
+// Retrieve an access token.
+spotifyApi.clientCredentialsGrant()
+  .then(function(data) {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  }, function(err) {
+    console.log('Something went wrong when retrieving an access token', err);
 });
-// ...
+
 ```
 
 :fire: *Styling should be the last thing you focus on. Functionality first this module!*
 
-## Iteration 0 | Setup
+## Iteration 2 | Express Setup
 
 We've already set up our package.json, and `app.js`. You should set up an Express app with all of the packages we've used thusfar.
 
@@ -102,13 +86,19 @@ Your directory should look like this once you're done:
 ├── public
 │   ├── public/images
 │   ├── public/javascripts
-│   └── public/stylesheets
+│   └── public/stylesheetsa
 │       └── public/stylesheets/style.css
 └── views
     ├── views/layouts
 ```
 
-You should also have the following packages installed:
+We will need some npm packages for this project, so let´s install them:
+
+```
+$ npm install --save body-parser ejs express express-ejs-layouts morgan
+```
+
+After the installation, you should have a package.json like this:
 
 ```javascript
   "dependencies": {
@@ -120,7 +110,7 @@ You should also have the following packages installed:
     "spotify-web-api-node": "^2.3.6"
   }
 ```
-## Iteration 1 | Search for an Artist
+## Iteration 3 | Search for an Artist
 
 ### Step 1 | [Create a Homepage](https://iron-spotify.herokuapp.com/)
 
@@ -137,9 +127,12 @@ Create the route `/artists`. This route will receive the search term from the qu
 
 Display the name, an image, and a button to show the albums for a particular artist on a new view.
 
+The function we will use from the npm package is: `spotifyApi.searchArtists`
+
 ![](https://i.imgur.com/ZqjmoCZ.png=400x)
 
-## Iteration 2 | [View Albums](https://iron-spotify.herokuapp.com/albums/3WrFJ7ztbogyGnTHbHJFl2)
+
+## Iteration 4 | [View Albums](https://iron-spotify.herokuapp.com/albums/3WrFJ7ztbogyGnTHbHJFl2)
 
 When someone clicks on the "View Albums" button, they should be taken to a page to show all of the albums for that particular artist.
 
@@ -167,7 +160,7 @@ Meaning that your href for the view more button is going to have to look like th
 
 ![](https://i.imgur.com/oaoqQMj.png)
 
-## Iteration 3 | [View Tracks](https://iron-spotify.herokuapp.com/tracks/0n9SWDBEftKwq09B01Pwzw)
+## Iteration 5 | [View Tracks](https://iron-spotify.herokuapp.com/tracks/0n9SWDBEftKwq09B01Pwzw)
 
 Make the "View Tracks" button work on the albums page. This page should take you to a page with a list of all of the tracks on a particular album.
 
