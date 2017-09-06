@@ -37,9 +37,10 @@ body {
     margin-bottom: 10px;
     font-family: Montserrat;
     border: none;
+  
 }
 
-.search-btn:hover {
-
-  background-color: yellow;
+.search-btn {
+  background-color: blue;
+  color: white;
 }
