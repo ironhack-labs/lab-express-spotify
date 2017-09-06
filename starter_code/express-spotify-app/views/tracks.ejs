@@ -1,0 +1,9 @@
+<h1>HERE GO THE TRACKS </h1>
+
+  <% myTracks.forEach((t)=>{%>
+    <audio controls="controls">
+      <%= t.name%>
+      <source src="<%= t.preview_url%>" type="audio/wav">
+    </audio>
+
+  <%})%>

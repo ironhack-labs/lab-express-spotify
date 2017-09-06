@@ -1,0 +1,15 @@
+<h1>THIS IS WHERE THE ARTISTS GO</h1>
+
+<% if(check != undefined){%>
+  <%check.items.forEach((a) =>{%>
+    <div>
+      <ul>
+    <li><%= a.name %> </li>
+    <%if(a.images[0]){%>
+    <img src="<%= a.images[0].url %>">
+    <%}%>
+    <a href="/albums/<%=a.id%>">Check Albums</a>
+    </ul>
+  </div>
+  <%})%>
+<%}%>
