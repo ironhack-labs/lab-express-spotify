@@ -34,28 +34,25 @@ app.get('/', (request, response, next) => {
   response.render('index');
 })
 
-// app.get('/artists', (request, response, next) => {
-// spotifyApi.searchArtists("The Beatles", {}, (err, data) => {
-//   if (err) throw err;
-//
-//   let artists = data.body.artists.items;
-//   console.log(artists)
-// });
-// });
-
 app.get('/artists', (request, response, next) => {
-  spotifyApi.searchArtists(request.query.artists, {}, (err, data) => {
-    if (err) throw err;
-    let artists =  data.body.artists.items;
-    response.render('artists',{ artists });
-  });
+  spotifyApi.searchArtists(request.query.artists)
+    .then((data) => {
+        let artists = data.body.artists.items;
+      response.render('artists', {artists} );
+    }, function(err) {
+      console.error(err);
+    });
 });
 
-app.get('/albums/:artistId', (request, response, next) => {
-  spotifyApi.searchArtists(request.query.artists.albums, {}, (err, data) => {
-    if (err) throw err;
-    let artist =  data.body.artists.albums.items;
-    response.render('artists',{ artist });
+app.get('/albums/:artistId', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(function(data) {
+    let albums = {
+      albums: data.body.items
+    };
+    res.render('albums', albums);
+  }, function(err) {
+    console.error(err);
   });
 });
 
