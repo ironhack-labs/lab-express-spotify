@@ -30,12 +30,27 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-app.get('/', (request, response, next) => {
-  console.log(response);
+app.get('/', (request, expressResponse, next) => {
+  console.log(expressResponse)
+
+  spotifyApi.searchArtists('Puscifer')
+    .then((spotifyApiResponse) => {
+       console.log('Search artists by "Love"', spotifyApiResponse.body.artists.items);
+    }, function(err) {
+      console.error(err);
+    });
+
   let filename = __dirname +'/views/layouts/index.html';
-  response.sendFile(filename);
+  expressResponse.sendFile(filename);
 });
 
+app.get('/artists', (request, response, next) => {
+  const elvis = '43ZHCT0cAZBISjO8DG9PnE'
+  spotifyApi.searchArtists(elvis)
+    .then(function(data) {
+      console.log(data);
+    })
+});
 
 let port = 3000;
 app.listen(port, () => {
