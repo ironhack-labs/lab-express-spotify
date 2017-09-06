@@ -1,0 +1,53 @@
+body {
+  padding: 0;
+  margin: 0;
+}
+
+.imagemain {
+  height: 570px;
+  background-image: url(/Users/danigp/DESARROLLO/IronHack/Week4/DIA3/lab-express-spotify/starter_code/express-spotify-app/public/imagen.jpg);
+  background-size: cover;
+  text-align: center;
+  padding-top: 280px;
+}
+
+
+.box {
+padding-top: 40px;
+padding-bottom: 40px;
+margin-left: 200px;
+margin-top: 50px;
+margin-right: 200px;
+background-color: rgba(255, 255, 255, 0.5);
+border-radius: 10px;
+}
+
+input {
+  color: orange;
+  font-size: 40px;
+  border: 0px;
+}
+
+button {
+  margin-top: 40px;
+  padding-left: 30px;
+  padding-right: 30px;
+  padding-top: 10px;
+  padding-bottom:10px;
+  border: 0px;
+  font-size: 20px;
+  background-color: orange;
+  color: black;
+}
+
+button:hover {
+  background-color: orange;
+  color: white;
+}
+
+h2 {
+  color: darkorange;
+  font-family: helvetica;
+  font-size: 50px;
+  margin-top: -100px;
+}
