@@ -1,1 +1,16 @@
 <h1>Albums Page</h1>
+<div>
+  <div>
+      <% for (let i = 0 ; i < albums.length; i++){ %>
+
+        <h3><%= albums[i].name %></h3>
+      <%  if (albums[i].images[0] ) {   %>
+          <img src="<%= albums[i].images[0].url %>"></img>
+      <%  } %>
+
+
+    <%   }; %>
+
+
+  </div>
+</div>
