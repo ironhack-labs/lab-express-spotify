@@ -7,7 +7,7 @@ var SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
 
 app.use(expressLayouts);
-app.set('layout', 'artist');
+app.set('layout', 'index');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -30,9 +30,9 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-app.get('/artists', (request, response, next) => {
+app.get('/', (request, response, next) => {
   console.log(response);
-  let filename = __dirname +'/views/layouts/artists.html';
+  let filename = __dirname +'/views/layouts/index.html';
   response.sendFile(filename);
 });
 
