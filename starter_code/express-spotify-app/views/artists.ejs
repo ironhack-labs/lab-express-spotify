@@ -1,0 +1,12 @@
+
+  <% artistInfo.forEach( e => { %>
+    <ul>
+      <li> <%= e.name %> </li>
+      <% if ( e.images.length > 0) {%>
+        <li><img src="<%=e.images[0].url%>"></li>
+      <%}else{%>
+        <li>There's no photo</li>
+      <%}%>
+    </ul>
+    <form action=""><input type="submit" name="viewAlbums" value="View albums"></form>
+<% }) %>
