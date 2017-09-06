@@ -5,10 +5,10 @@
 
         <h3><%= albums[i].name %></h3>
       <%  if (albums[i].images[0] ) {   %>
-          <img src="<%= albums[i].images[0].url %>"></img>
+          <img src="<%= albums[i].images[0].url %>">
       <%  } %>
 
-
+        <a href="/tracks/<%= albums[i].id %>"><button>View Songs</button></a>
     <%   }; %>
 
 

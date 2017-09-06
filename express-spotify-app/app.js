@@ -48,13 +48,24 @@ app.get('/albums/:artistId', (req, res) => {
 
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then((data) => {
-    let albums = data.body.items;
-    res.render('albums', {albums} );
+    res.render('albums', {albums: data.body.items} );
   }).catch((err) => {
     console.log(err);
     throw err;
   });
 });
+
+app.get('/tracks/:albumId', (req, res) => {
+
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then((data) => {
+    res.render('tracks', {tracks: data.body.items} );
+  }).catch((err) => {
+    console.log(err);
+    throw err;
+  });
+});
+
 
 
 

@@ -1,0 +1,45 @@
+*,
+*:after,*:before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('../images/space-bg.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+
+}
+
+.wrapper h1 {
+  margin-bottom: 20px;
+}
+
+.form {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.form input {
+    font-size: 30px;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-family: Montserrat;
+    border: none;
+}
+
+.search-btn:hover {
+
+  background-color: yellow;
+}
