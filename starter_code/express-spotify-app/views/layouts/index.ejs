@@ -9,11 +9,13 @@
 <body>
 
   <div class="container">
-    <input type="text" class="searchTerm" placeholder="Search for an artist!">
-    <button type="submit" action="/artists" class="searchButton">Search for an artist</button>
+    <form action="/artist" method="POST">
+      <input type="search" name="artist" placeholder="Search for an artist!">
+      <br>
+      <button type="submit">Search for an artist</button>
+    </form>
 
   </div>
+</body>
 
-
-  </body>
 </html>
