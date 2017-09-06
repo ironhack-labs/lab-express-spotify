@@ -30,10 +30,9 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-app.get('/', (request, response, next) => {
-  console.log("Me ha llegado la pregunta.");
-  let filename = __dirname+'/views/juan.html';
-  console.log(`He pedido el fichero: ${filename}`);
+app.get('/artists', (request, response, next) => {
+  console.log(response);
+  let filename = __dirname +'/views/layouts/artists.html';
   response.sendFile(filename);
 });
 
