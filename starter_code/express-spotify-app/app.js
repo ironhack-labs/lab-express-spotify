@@ -1,8 +1,19 @@
 const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 var SpotifyWebApi = require('spotify-web-api-node');
 
+
 const app = express();
+
+app.use(expressLayouts);
+app.set('layout', 'artist');
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.use(bodyParser.urlencoded({ extended: true }));
+
+app.use(express.static('public'));
 
 var clientId = '0c9bde8be5024f2c8526a0cbc6ca92a9',
     clientSecret = 'ef50816d60044452b1421c5bc04d0aad';
@@ -12,10 +23,22 @@ var spotifyApi = new SpotifyWebApi({
   clientSecret : clientSecret
 });
 
-// Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
   .then(function(data) {
     spotifyApi.setAccessToken(data.body['access_token']);
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
+});
+
+app.get('/', (request, response, next) => {
+  console.log("Me ha llegado la pregunta.");
+  let filename = __dirname+'/views/juan.html';
+  console.log(`He pedido el fichero: ${filename}`);
+  response.sendFile(filename);
+});
+
+
+let port = 3000;
+app.listen(port, () => {
+  console.log(`My first app listening on port ${port}!`);
 });
