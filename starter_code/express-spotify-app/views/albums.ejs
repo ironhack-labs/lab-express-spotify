@@ -1,0 +1,14 @@
+<h1>HERE MY ALBUMS </h1>
+<% if(myAlbums != undefined){%>
+  <%myAlbums.forEach((a) =>{%>
+    <div>
+      <ul>
+    <li><%= a.name %> </li>
+    <%if(a.images[0]){%>
+    <img src="<%= a.images[0].url %>">
+    <%}%>
+    <a href="/tracks/<%=a.id%>">Check Tracks</a>
+    </ul>
+  </div>
+  <%})%>
+<%}%>
