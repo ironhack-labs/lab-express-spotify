@@ -1,0 +1,11 @@
+<h2 class="big-bad-title">Learn about Music</h2>
+
+<div class="band-container">
+        <% for (let i = 0; i < 3; i++) { %>
+        <div class="band">
+            <h3 class="artist-title"><%= albums[i].name %></h3>
+            <img class="album-cover" src="<%= albums[i].images[0].url %>"></img>
+            <a href="/tracks/<%= albums[i].id %>"><button class="click-thru hpy-btn">See tracks...</button></a>
+        </div>
+    <% } %>
+</div>

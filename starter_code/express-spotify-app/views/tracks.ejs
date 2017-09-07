@@ -1,0 +1,7 @@
+<h2>Tracks</h2>
+
+<ul>
+    <% for (let i = 0; i < tracks.length; i++) { %>
+        <li class="song-list"><%= tracks[i].name %><audio controls="controls" src="<%= tracks[i].preview_url %>" class="track-song"></audio></li>
+    <% } %>
+</ul>
