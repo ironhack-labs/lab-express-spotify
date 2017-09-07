@@ -1,0 +1,11 @@
+<h1> Tracks page </h1>
+
+
+    <div>
+      <% for (let i=0; i < tracks.length; i++) { %>
+        <div>
+        <h2><%= tracks[i].name %></h2>
+        <audio src="<%= tracks[i].preview_url %>" controls>
+        </div>
+      <% } %>
+    </div>
