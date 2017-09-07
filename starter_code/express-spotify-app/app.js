@@ -1,10 +1,13 @@
 /*jshint esversion:6*/
 const express = require('express');
-const _ = require('lodash');
+//const _ = require('lodash');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 
 const app = express();
+
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
 
 
 var SpotifyWebApi = require('spotify-web-api-node');
@@ -29,6 +32,7 @@ spotifyApi.clientCredentialsGrant()
 app.get('/artist', (req,res) =>{
   res.render('main.ejs');
 });
+
 
 
 // Server Started
