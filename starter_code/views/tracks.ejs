@@ -1,0 +1,6 @@
+<a href="/"><button>BackHome</button></a>
+<ul>
+    <% tracks.forEach((track) => { %>
+        <li><%= track.name %><audio controls="controls" src="<%= track.preview_url %>"></audio></li>
+    <% }); %>
+</ul>
