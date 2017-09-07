@@ -34,14 +34,13 @@ spotifyApi.clientCredentialsGrant()
 });
 
 
-app.get('/artist', (req, res) => {
+app.get('/', (req, res) => {
   res.render('index');
 });
 
 
-app.post('/artist', (req, res) => {
-  res.render('index');
-  spotifyApi.searchArtists(req.body.artist)
+app.get('/artist', (req, res) => {
+  spotifyApi.searchArtists(req.query.artist)
   .then((response) => {
     res.render('artist', {
       artist: response
