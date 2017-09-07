@@ -35,8 +35,19 @@ spotifyApi.clientCredentialsGrant()
 app.post('/artists', (req,res) =>{
   spotifyApi.searchArtists(req.body.artistName)
   .then((response) => {
+    // res.send(response)
     res.render('artists', {
       artistInfo: response.body.artists.items,
+    });
+  }).catch(err => {})
+});
+
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then((response) => {
+    // res.send(response.body.items)
+    res.render('albums', {
+      albumInfo: response.body.items,
     });
   }).catch(err => {})
 });

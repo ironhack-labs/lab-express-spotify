@@ -1,5 +1,5 @@
 
-  <% artistInfo.forEach( e => { %>
+  <% albumInfo.forEach( e => { %>
     <ul>
       <li> <%= e.name %> </li>
       <% if ( e.images.length > 0) {%>
@@ -8,5 +8,5 @@
         <li>There's no photo</li>
       <%}%>
     </ul>
-    <a href="/albums/<%=e.id%>">View albums</a>
+    <a href="/albums/<%=e.id%>">View tracks</a>
 <% }) %>
