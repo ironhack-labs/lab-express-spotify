@@ -52,6 +52,17 @@ app.get('/albums/:artistId', (req, res) => {
   }).catch(err => {})
 });
 
+app.get('/tracks/:albumId',(req, res)=>{
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then((response)=>{
+    res.render('tracks', {
+      tracksInfo: response.body.items
+    });
+  }).catch((err)=>{
+    console.log(err);
+  });
+});
+
 
 
 // Server Started
