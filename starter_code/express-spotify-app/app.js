@@ -40,17 +40,15 @@ app.get('/', (request, res) => {
 app.post('/artists', (request, expressResponse, next) => {
   spotifyApi.searchArtists(request.body.artist)
     .then((spotifyApiResponse) => {
-       myArtists = spotifyApiResponse.body.artists;
-       console.log(myArtists)
+      res.redirect('artists')
+      //console.log(spotifyApiResponse.body.artists);
     }, function(err) {
       console.error(err);
     });
-
-  
 })
 
-app.get('/artists', (request, response, next) => {
-  response.render('/artists')
+app.get('/', (request, response, next) => {
+  response.render('artists')
 })
 
 let port = 3000;
