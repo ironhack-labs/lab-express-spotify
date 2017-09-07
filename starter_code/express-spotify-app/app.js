@@ -43,7 +43,7 @@ app.get('/artist', (req, res) => {
   spotifyApi.searchArtists(req.query.artist)
   .then((response) => {
     res.render('artist', {
-      artist: response
+      prueba: response
     });
   }).catch((err) => {
     console.log("Unable to find the requested artist.");
