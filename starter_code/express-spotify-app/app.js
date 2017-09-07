@@ -56,4 +56,16 @@ app.get('/albums/:artistId', (req, res, next) => {
   });
 });
 
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(function(data) {
+    let tracks = {
+      tracks: data.body.items
+    };
+    res.render('tracks', tracks);
+  }, function(err) {
+    console.error(err);
+  });
+});
+
 app.listen(3000, () => console.log("Running"));

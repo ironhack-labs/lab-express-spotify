@@ -5,9 +5,9 @@
     <% for (let i = 0; i < albums.length; i++) { %>
       <h3><%= albums[i].name %></h3>
         <% if (albums[i].images[0]) { %>
-          <img src="<%= albums[i].images[0].url %>"
+          <img src="<%= albums[i].images[0].url %>">
         <% } %>
-          <a href="/albums/<%= albums[i].id %>"><button>See Albums</button></a>
+          <a href="/tracks/<%= albums[i].id %>"><button>See Albums</button></a>
         <% } %>
   </div>
 </div>
