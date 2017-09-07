@@ -22,8 +22,18 @@ const spotifyApi = new SpotifyWebApi({
 })
 
 // Routes
-app.get('/artists', (req, res) => {
+app.get('/', (req, res) => {
+  res.render('search')
+})
 
+app.post('/artists', (req, res) => {
+  spotifyApi.searchArtists(req.body.artist)
+    .then(response => {
+      console.log(response.body.artists.items)
+      res.render('artists', {
+        artists: response.body.artists.items,
+      })
+    })
 })
 
 // Retrieve an access token.
