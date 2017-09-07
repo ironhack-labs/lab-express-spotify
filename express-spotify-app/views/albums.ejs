@@ -1,5 +1,5 @@
 <h1>Albums Page</h1>
-<div>
+<div class="wrapperboxes">
   <div>
       <% for (let i = 0 ; i < albums.length; i++){ %>
 
@@ -8,7 +8,7 @@
           <img src="<%= albums[i].images[0].url %>">
       <%  } %>
 
-        <a href="/tracks/<%= albums[i].id %>"><button>View Songs</button></a>
+        <a href="/tracks/<%= albums[i].id %>"><button class="view-more">View Songs</button></a>
     <%   }; %>
 
 
