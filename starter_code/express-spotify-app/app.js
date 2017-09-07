@@ -19,7 +19,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 spotifyApi.clientCredentialsGrant()
   .then(function(data) {
     console.log("holi, entre en clientCredentialsGr");
-    spotifyApi.setAccessToken(data.body['access_token']); 
+    spotifyApi.setAccessToken(data.body['access_token']);
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
   });
@@ -29,6 +29,17 @@ app.get('/', (req, res) => {
   res.send('main');
   });
 
+  // spotifyApi.lookingForArtist()
+  // .then(function(data){
+  //   spotifyApi.searchArtists(artist.body);
+  // },function(err) {
+  //   console.log('Something went wrong when retrieving an access token', err);
+  // });
+
+  app.get('/artist', (req,res) =>{
+    console.log("Me ha llegado la pregunta.Estoy en artist");
+    res.send('main');
+  });
 
 
 
