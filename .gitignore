@@ -1,3 +1,9 @@
+/starter-code/express-spotify-app/node_modules
+DS_Store
+/starter-code/express-spotify-app/DS_Store
+/starter-code/DS_Store
+
+
 # Logs
 logs
 *.log
