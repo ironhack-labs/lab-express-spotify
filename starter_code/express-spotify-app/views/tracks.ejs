@@ -1,0 +1,7 @@
+
+  <% tracksInfo.forEach( e => { %>
+      <p><%= e.name %></p>
+      <audio controls="controls">
+        <source src="<%= e.preview_url%>" type="audio/wav">
+      </audio>
+<% }) %>
