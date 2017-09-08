@@ -1,0 +1,14 @@
+
+<section>
+
+    <% artists.forEach((artist) => { %>
+        <div>
+            <h1>Your search result:</h1>
+            <h2><%= artist.name %></h2>
+            <% if (artist.images.length > 0) { %>
+              <img src="<%= artist.images[0].url %>"></img>
+            <% } %>
+        </div>
+    <% }) %>
+
+</section>
