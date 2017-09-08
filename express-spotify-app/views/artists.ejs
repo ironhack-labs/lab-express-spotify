@@ -1,0 +1,17 @@
+<h1>Artist Page</h1>
+
+<div class="wrapperboxes">
+
+      <% for (let i = 0 ; i < artists.length; i++){ %>
+      <div class="artist">
+        <h3><%= artists[i].name %></h3>
+      <%  if (artists[i].images[0] ) {   %>
+          <img src="<%= artists[i].images[0].url %>"></img>
+      <%  } %>
+
+        <a href="/albums/<%= artists[i].id %>"><button class="view-more">View Albums</button></a>
+    <%   }; %>
+      </div>
+
+
+</div>
