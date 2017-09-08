@@ -1,3 +1,4 @@
+const SpotifyWebApi   = require('/../spotify-web-api-node');
 
 const spotify = new SpotifyWebApi({
     clientId : 'd9173cf7be274a2280d8171adf8aa2d7',
@@ -12,3 +13,5 @@ spotify.clientCredentialsGrant()
 	}, function(err) {
   console.log('Something went wrong!', err.message);
 });
+
+module.exports = spotify;

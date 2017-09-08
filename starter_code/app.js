@@ -4,10 +4,10 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
-const SpotifyWebApi   = require('spotify-web-api-node');
+
 const expressLayouts  = require('express-ejs-layouts');
 
-const SpotifyTokenApi   = require('api/spotify.js');
+const SpotifyTokenApi   = require('./api/spotify.js');
 
 var index = require('./routes/index');
 var search = require('./routes/search');
