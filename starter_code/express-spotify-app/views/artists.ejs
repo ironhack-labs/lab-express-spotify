@@ -1,0 +1,21 @@
+<body>
+   <h2 class="p-3 text-white text-center"> We found <u class="font-weight-bold"><%= img.length%></u> result(s) for your query </h2>
+   <div class="container-fluid m-auto">
+   <div class="row justify-content-center"><% for(i=0;i<img.length;i++) {%>
+      <div class="col-2">
+        <div class="card mb-3">
+          <div class="card-img square">
+            <img class="album" src="<%=img[i]%>">
+          </div>
+          <div class="card-title bg-dark text-center font-weight-bold p-1 mb-0">
+            <p class="m-0"><%=name[i]%></p>
+          </div>
+          <div class="card-body bg-dark p-0 pb-2 text-center"> 
+            <input class="btn btn-danger" type="button" onclick="location.href='/albums/<%=id[i]%>';" value="View Albums">
+          </div>
+        </div>
+      </div> <%}%>
+    </div>
+  </div>
+  </div>
+</body>

@@ -1,0 +1,110 @@
+* {
+box-sizing: border-box;
+}
+
+  body {
+    background-color: #43333B;
+  }
+
+  .view-more {
+    border: 1px solid black;
+  }
+  
+  /* Home Page */
+  .home-heading {
+    background-image: url("/images/home-heading.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+  .home-form {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+  }
+  
+  .home-search {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+  }
+  
+  .home-search:hover, .home-search:active {
+    color: #ff6666;
+    background-color: white;
+    border: 1px solid #ff6666;
+  }
+  
+  .form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 250px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  ul {
+    padding: 0px;
+  }
+
+  li {
+    list-style: none;
+        display: inline-block;
+        margin: 5px;
+
+  }
+
+  .card {
+    display: flex;
+    align-items: center;
+  }
+
+  .square {
+    height: 190px;
+    width: : 190px;
+    overflow: hidden;
+  }
+
+  .card-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    width: 100%;
+  }
+
+  .card-body {
+    width: 100%;
+  }
+
+  .album {
+    width: 100%;
+    overflow: hidden;
+  }
+
+  .player {
+    display: flex;
+    justify-content: flex-end;
+  }
+
+.songs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px; 
+}
+
+.audio {
+  max-width: 100%;
+  }
+.songs {
+  border-bottom: 2px solid grey;
+}

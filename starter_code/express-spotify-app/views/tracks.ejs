@@ -1,0 +1,14 @@
+<body>
+   <h2 class="p-3 text-white text-center"> We found <u class="font-weight-bold"><%= name.length%></u> result(s) for your query </h2>
+   <div class="container m-auto">
+    <div class="row bg-dark">
+      <div class="col-6 text-white font-weight-bold p-3 col-title"><h3 class="font-weight-bold">Title</h3></div>
+      <div class="col-3 text-white font-weight-bold p-3 col-title"><h3 class="text-right font-weight-bold">Listen</h3></div>
+    </div>
+    <% for(i=0;i<name.length;i++) {%>
+    <div class="row bg-light songs">
+      <div class="name col-6"><i><%=name[i]%></i></div>
+      <div class="audio col-3"><audio class="player" src="<%=preview[i]%>" autobuffer loop controls></audio></div>
+    </div><%}%>
+  </div>  
+</body>
