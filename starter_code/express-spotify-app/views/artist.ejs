@@ -1,15 +1,14 @@
 
 <h1>Hi from artist</h1>
-<div class="artists-info">
+<figure class="artists-info">
 	
 	<% names.forEach((n) => { %>
-		<p><%= n %></p>
-		<img src="<%= images[2].url %>" width="<%= images.width %>" height="<%= images.height %>">
+		<figcaption><%= n %></figcaption>
+		<img src="<%= images[1].url %>" width="<%= images.width %>" height="<%= images.height %>">
 		<button type="button"><a href="/albums/<%= id %>">View More Albums</a></button>
     <% }) %>
 		
 
-
-</div>
+</figure>
 
 

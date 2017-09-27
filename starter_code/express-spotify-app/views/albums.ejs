@@ -1,7 +1,9 @@
 <h1>All the albums</h1>
-<div>
+<figure>
 <% names.forEach((n) => { %>
-		<p><%= n %></p>
-		<img src="<%= images[2].url %>" width="<%= images.width %>" height="<%= images.height %>">
+		<figcaption><%= n %></figcaption>
+		<img src="<%= images[1].url %>" width="<%= images.width %>" height="<%= images.height %>">
+		<button type="button"><a href="/albums/'46qrICPWlwqpIPirMfAd7K'">View More Albums</a></button>
+
     <% }) %>
-</div>
+</figure>

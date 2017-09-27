@@ -41,7 +41,7 @@ app.get('/artist', (req, res, next) => {
     .then(function(data) {
     let artInfo = data.body.artists.items;
     artInfo = artInfo.filter(artI => artI.name===artistName);
-    console.log(artInfo);
+    //console.log(artInfo);
     let names = artInfo.map(artist => artist.name);
     //console.log(names);
     let id = artInfo.map(artist => artist.id);
@@ -72,16 +72,38 @@ app.get('/albums/:artistId', (req, res, next) => {
       let names = albInfo.map(album => album.name);
       names = [...new Set(names)];
       let images = albInfo.map(album => album.images);
-      console.log(images);
+      //console.log(images);
+      let id = albInfo.map(album => album.id);
+      console.log(id);
+
       res.render('albums', {
       names: names,
       images: images[0],
+      id: id
     });
     }, function(err) {
       console.error(err);
     });
 
 });
+
+
+app.get('/track/:albumId', (req, res, next) => {
+
+  let id = req.params.albumId;
+  console.log(id);
+ 
+  // Get tracks in an album
+  spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
+    .then(function(data) {
+      console.log(data.body);
+       res.render('track');
+    }, function(err) {
+      console.log('Something went wrong!', err);
+    });
+
+
+  });
 
 
 
