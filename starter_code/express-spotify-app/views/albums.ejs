@@ -1,0 +1,11 @@
+
+<% albumInfo.forEach((artist) => { %>
+  <div>
+    <h2><%= artist.name %></h2>
+    <% if (artist.images.length > 0) { %>
+      <img src="<%= artist.images[0].url %>"></img>
+    <% } %>
+    <a href="/tracks/<%= artist.id %>"><button>View tracks</button></a>
+
+  </div>
+<% }) %>
