@@ -1,0 +1,27 @@
+.home-heading {
+	background-color: #556B2F;
+    /*background-image: url(/images/home-heading.jpg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;*/
+    height: 100vh;
+}
+
+.artists-info {
+    background-color: #556B2F;
+    color: #fff;
+}
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-form {
+	text-align: center;
+	margin: auto;
+}
