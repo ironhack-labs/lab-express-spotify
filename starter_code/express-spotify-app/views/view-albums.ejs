@@ -1,0 +1,12 @@
+<ul>
+  <% for(let album of viewAlbums) { %>
+    <li><%=album.name%></li>
+
+      <div>
+        <img src="<%=album.images[0].url.replace(/['"]+/g, '')%>" height=200px>
+        <a href="view-tracks/<%= album.id%>"><button type="button" name="viewTracks">View Tracks</button></a>
+      </div>
+      <hr>
+
+  <% } %>
+</ul>
