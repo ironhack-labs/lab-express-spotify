@@ -1,0 +1,7 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+<h2>  </h2>
+<ul>
+<% tracksList.forEach((track) => { %>
+  <li><%=track.name%> -- <audio controls="controls" >Preview it: <source src="<%=track.preview_url%>"></audio></li>
+<% }) %>
+</ul>

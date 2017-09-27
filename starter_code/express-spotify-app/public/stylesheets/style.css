@@ -1,0 +1,33 @@
+.main-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.artist-box {
+  margin: 20px;
+  width: 200px;
+  background-color: #eee;
+  display: inline;
+  }
+
+img {
+  max-width: 100%
+}
+
+.artist-box h2 {
+  text-align: center;
+}
+
+.button {
+  margin: 0 28% 20px;
+}
+
+li {
+  margin: 20px 0 0 0;
+}
+
+ul li {
+  list-style: none;
+  font-family: Helvetica;
+}

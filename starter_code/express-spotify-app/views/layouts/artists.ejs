@@ -1,0 +1,13 @@
+<link rel="stylesheet" type="text/css" href="/stylesheets/style.css">
+
+<div class="main-container">
+  <% artistsInfo.forEach((artist) => { %>
+  <div class="artist-box">
+  <%if (artist.images.length > 0) { %>
+    <img src='<%=artist.images[0].url%>'>
+    <% } %>
+    <h2> <%= artist.name %> </h2>
+    <a href="/albums/<%=artist.id%>"><button class="button">View albums</button></a>
+    </div>
+  <% }) %>
+</div>
