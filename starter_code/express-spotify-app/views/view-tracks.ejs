@@ -1,0 +1,13 @@
+<ul>
+  <% for(let track of viewTracks) { %>
+    <li><%=track.name%></li>
+
+      <div>
+        <audio src="<%=track.preview_url%>" controls="controls">
+
+        </audio>
+      </div>
+      <hr>
+
+  <% } %>
+</ul>

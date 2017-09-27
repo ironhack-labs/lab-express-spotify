@@ -1,0 +1,16 @@
+<h1>You searched for <%=artistName %></h1>
+<h2>Found artists</h2>
+<ul>
+  <% for(let artist of foundArtists) { %>
+    <li><%=artist.name%></li
+    <% if(artist.images.length > 0) { %>
+      <div>
+        <img src="<%=artist.images[0].url.replace(/['"]+/g, '')%>" height=200px>
+        <a href="view-albums/<%= artist.id%>"><button type="button" name="viewAlbums">View Albums</button></a>
+      </div>
+      <hr>
+    <% } else {%>
+      <h1>NO IMAGE</h1>
+      <% } %>
+  <% } %>
+</ul>
