@@ -1,1 +1,7 @@
 <h1>All the albums</h1>
+<div>
+<% names.forEach((n) => { %>
+		<p><%= n %></p>
+		<img src="<%= images[2].url %>" width="<%= images.width %>" height="<%= images.height %>">
+    <% }) %>
+</div>

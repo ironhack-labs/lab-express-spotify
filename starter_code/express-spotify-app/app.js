@@ -2,7 +2,7 @@ var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
 var clientId = '168af06596434bd18934a863d9a55b94',
-    clientSecret = 'e68908d314dc427ebba70bdf5a0bc409';
+  clientSecret = 'e68908d314dc427ebba70bdf5a0bc409';
 
 var spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -12,9 +12,9 @@ var spotifyApi = new SpotifyWebApi({
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
   .then(function(data) {
-    spotifyApi.setAccessToken(data.body['access_token']);
+  spotifyApi.setAccessToken(data.body['access_token']);
   }, function(err) {
-    console.log('Something went wrong when retrieving an access token', err);
+  console.log('Something went wrong when retrieving an access token', err);
 });
 
 //Iteration 3 app.js
@@ -30,46 +30,57 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
 
-
 app.get('/', (req, res, next) => {
-	res.render('index');
-	  
-	});
-
+  res.render('index');
+  });
 
 app.get('/artist', (req, res, next) => {
-	let artistName = req.query.artist;
+  let artistName = req.query.artist;
+  //Find artist
+  spotifyApi.searchArtists(artistName)
+    .then(function(data) {
+    let artInfo = data.body.artists.items;
+    artInfo = artInfo.filter(artI => artI.name===artistName);
+    console.log(artInfo);
+    let names = artInfo.map(artist => artist.name);
+    //console.log(names);
+    let id = artInfo.map(artist => artist.id);
+    console.log(id);
+    let images = artInfo.map(artist => artist.images);
+    images = images[0];
+    //console.log(images);
+    res.render('artist', {
+      names: names,
+      images: images,
+      id: id[0],
+    });
+    }, function(err) {
+    console.error(err);
+    });
+  });
 
-	spotifyApi.searchArtists(artistName)
-	  .then(function(data) {
-	    let artInfo = data.body.artists.items;
-	    artInfo = artInfo.filter(artI => artI.name===artistName);
-	    console.log(artInfo);
-	    let names = artInfo.map(artist => artist.name);
-	    //console.log(names);
-	    let id = artInfo.map(artist => artist.id);
-	    console.log(id);
-	    let images = artInfo.map(artist => artist.images);
-	    images = images[0];
-	    //console.log(images);
-	    res.render('artist', {
-	    	names: names,
-	    	images: images,
-	    	id: id[0],
-	    });
-	  }, function(err) {
-	    console.error(err);
-	  });
-
-	});
-
-
-//need middleware
 app.get('/albums/:artistId', (req, res, next) => {
+  let id = req.params.artistId;
+  //console.log(id);
 
-	console.log(req.query);
-  // code
-  res.render('albums');
+  // Get albums by a certain artist
+  spotifyApi.getArtistAlbums(id)
+    .then(function(data) {
+      let albInfo = data.body.items;
+      //albInfo = [...new Set(albInfo)];
+      //console.log('Artist albums', albInfo);
+      let names = albInfo.map(album => album.name);
+      names = [...new Set(names)];
+      let images = albInfo.map(album => album.images);
+      console.log(images);
+      res.render('albums', {
+      names: names,
+      images: images[0],
+    });
+    }, function(err) {
+      console.error(err);
+    });
+
 });
 
 
