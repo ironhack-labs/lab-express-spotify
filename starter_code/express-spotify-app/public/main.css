@@ -1,0 +1,67 @@
+/* ============================ */
+/*     Landing Page Styling     */
+/* ============================ */
+#landingPage {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  /* Background */
+  background-image: url('/background.jpg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#landingPage h1 {
+  font-family: Helvetica;
+  font-size: 3em;
+  color: #2b2828;
+}
+
+/* Selecting the landingPage search bar/input bar */
+#landingPage form label input {
+  width: 180px;
+}
+
+/* ================================== */
+/*     Artist Search Page Styling     */
+/* ================================== */
+#artistSearchPage {
+  font-family: Helvetica;
+  color: #fbf9f9;
+  background: #403c3c;
+  display: flex;
+  flex-flow: wrap;
+}
+
+.artistWidget img,
+.albumWidget img {
+  height: 300px;
+  width: 300px;
+}
+
+.trackWidget {
+  height: 50px;
+  display: flex;
+  align-items: center;
+} 
+
+.trackWidget h2 {
+  height: 50px;
+  font-weight: 500;
+  font-size: 1.1em;
+  font-family: Helvetica;
+  margin-left: 100px;
+  margin-top: 40px;
+  margin-bottom: 0px;
+}
+
+.trackWidget audio {
+  height: 50px;
+  margin-left: auto;
+  margin-right: 100px; 
+}
