@@ -1,0 +1,26 @@
+
+
+<ul>
+<% for (var i = 0; i < albumsList.length; i++) { %>
+
+    <% if (albumsList[i].images.length > 0) { %>
+      <li>
+      <div class = 'artist'>
+        <div class ='img'>
+      <img src="<%=albumsList[i].images[0].url%>" alt="Test"></div>
+      <p><%= albumsList[i].name %>
+      <a href="tracks/<%=albumsList[i].id%>"><button class="button">View albums</button></a>
+
+    </p>
+    </li>
+    <% } else{%>
+    <li>
+      <p><%= albumsList[i].name %>
+      <a href="tracks/<%albumsList[i].id%>"><button class="button">View albums</button></a>
+
+    </p>
+  </li>
+
+<% }} %>
+</ul>
+</div>

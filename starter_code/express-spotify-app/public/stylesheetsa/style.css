@@ -1,0 +1,28 @@
+body {
+  background-color: #f9f9f9;
+  width: 100%;
+}
+
+ul li {
+  list-style-type: none;
+}
+
+.img {
+  width: 100%;
+}
+
+img {
+  width: 100%;
+}
+
+ul {
+  display: flex;
+}
+
+div {
+  padding: 5%;
+}
+
+.back {
+  background-image: url("/..public/images/bg.jpg");
+}
