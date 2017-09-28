@@ -1,0 +1,26 @@
+<div> you're looking for: <%= 'artistName' %></div>
+
+<ul>
+<% for (var i = 0; i < artists.length; i++) { %>
+
+    <% if (artists[i].images.length > 0) { %>
+      <li>
+      <div class = 'artist'>
+        <div class ='img'>
+      <img src="<%= artists[i].images[0].url %>" alt="Test"></div>
+      <p><%= artists[i].name %>
+      <a href="/albums/<%=artists[i].id%>"><button class="button">View albums</button></a>
+
+    </p>
+    </li>
+    <% } else{%>
+    <li>
+      <p><%= artists[i].name %>
+      <a href="/albums/<%=artists[i].id%>"><button class="button">View albums</button></a>
+
+    </p>
+  </li>
+
+<% }} %>
+</ul>
+</div>
