@@ -1,0 +1,14 @@
+<h1>Artist Albums</h1>
+<% albums.forEach( (album) => { %>
+  <div class='albumWidget'>
+    <h2>
+      <%= album.name %>
+    </h2>
+    <% if (album.images[0]) {%>
+      <img src="<%=album.images[0].url%>">
+      <%} else {%>
+        <img src="http://placekitten.com/g/300/300">
+        <%}%>
+          <a href="/albums/tracks/?albumID=<%=album.id%>" method="get">View Tracks</a>
+  </div>
+  <%})%>

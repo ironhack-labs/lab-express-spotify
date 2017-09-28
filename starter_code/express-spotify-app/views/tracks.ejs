@@ -1,0 +1,14 @@
+<h1>Tracks</h1>
+<% tracks.forEach( (track) => { %>
+  <div class='trackWidget'>
+    <h2>
+      <%= track.name %>
+    </h2>
+    <% if (track.preview_url != undefined) {%>
+      <audio controls="" name="media">
+        <source src="<%=track.preview_url%>" type="audio/mpeg">
+      </audio>
+      <%} else {%>
+        <%}%>
+  </div>
+  <%})%>
