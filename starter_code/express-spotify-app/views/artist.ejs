@@ -1,0 +1,23 @@
+<body>
+  <div class="artistpage">
+    <h1>Looking for artist results:</h1>
+    <% response.forEach(e => { %>
+      <div class="artists">
+        <% if (e.images.length > 0) { %>
+        <img src="<%= e.images[1].url %>">
+        <% } else { %>
+        <img src="/images/noimage.jpg">
+        <% } %>
+        <p>
+        <% if (e.name.length > 23) { %>
+        <%= e.name.substring(0, 23) + "..." %>
+        <% } else { %>
+        <%= e.name %>
+        <% } %>
+        </p>
+        <% let link = `/albums?id=${e.id}` %>
+        <a href="<%= link %>"><button>View Albums</button></a>
+      </div>
+      <%  }) %>
+  </div>
+</body>
