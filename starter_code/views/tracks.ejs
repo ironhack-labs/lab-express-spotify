@@ -1,0 +1,8 @@
+<% tracks.forEach( track => { %>
+  <div class="track">
+    <p>Songs: <%= track.name %></p>
+    <audio controls="" name="media">
+      <source src="<%= track.preview_url %>" type="audio/mpeg">
+    </audio>
+  </div>
+<% }) %>
