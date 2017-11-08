@@ -1,0 +1,31 @@
+<% include ../views/layout/nav.ejs %>
+<p class="subtitle">Tracks of the album</p>
+<div class="tracks">
+  <%for (var i = 0; i < data.body.items.length; i++) {%>
+  <%var track = data.body.items[i],
+        name = track.name,
+        id = track.id,
+        trackNumber = track.track_number,
+        url = track.preview_url,
+        miliseconds = track.duration_ms,
+        minutes = Math.floor(miliseconds / 60000),
+        seconds = ((miliseconds % 60000) / 1000).toFixed(0),
+        duration = minutes + ":" + (seconds < 10 ? '0' : '') + seconds;
+  %>
+  <div class="track" id="<%= id %>">
+    <div class="name"><small><%= trackNumber %></small> <%= name %> <small>(<%= duration %>)</small></div>
+    <%if (url) {%>
+    <div class="audio">
+      <audio controls>
+        <source src="<%= url %>" type="audio/mpeg">
+      </audio>
+    </div>
+    <%}-%>
+    <%if (!url) {%>
+    <div class="no-audio">
+      <img src="./images/icons8-no-audio.png" width="25" height="25" alt="No audio for this track">
+    </div>
+    <%}-%>
+  </div>
+  <%}-%>
+</div>

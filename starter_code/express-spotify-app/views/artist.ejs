@@ -1,10 +1,11 @@
-<p class="subtitle">Search results:</p>
+<% include ../views/layout/nav.ejs %>
+<p class="subtitle">Artists found</p>
 <div class="results">
   <%for (var i = 0; i < data.body.artists.items.length; i++) {%>
   <%var artist = data.body.artists.items[i],
         name = artist.name,
         id = artist.id,
-        imgUrl = "./images/img-placeholder.png";
+        imgUrl = "./images/img-artist.png";
 
         if (artist.images[0]) {
           imgUrl = artist.images[0].url
@@ -12,8 +13,8 @@
   %>
   <div class="item">
     <img src="<%= imgUrl %>" alt="<%= name %>">
-    <p> <%= name %> </p>
-    <a href="/artist/albums/?artist=<%= id %>" class="btn">View Albums</a>
+    <p class="name"> <%= name %> </p>
+    <a href="/albums?artist=<%= id %>" class="btn">View Albums</a>
   </div>
   <%}-%>
 </div>

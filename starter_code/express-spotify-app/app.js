@@ -52,6 +52,29 @@ app.get('/artists', (req, res) => {
     });
 });
 
+app.get('/albums', (req, res) => {
+  let artistId = req.query.artist;
+  spotifyApi.getArtistAlbums(artistId, { limit: 50, offset: 0 })
+  .then(function(data) {
+    console.log('Artist albums', data.body);
+    res.render('albums', {data});
+  }, function(err) {
+    console.error(err);
+  });
+});
+
+app.get('/tracks', (req, res) => {
+  // Get tracks in an album
+  let albumId = req.query.album;
+  spotifyApi.getAlbumTracks(albumId)
+    .then(function(data) {
+      console.log(data.body);
+      res.render('tracks', {data});
+    }, function(err) {
+      console.log('Something went wrong!', err);
+    });
+  });
+
 app.listen(3000, () => {
   console.log('Server running!');
 });
