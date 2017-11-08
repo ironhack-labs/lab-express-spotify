@@ -1,0 +1,7 @@
+<% albums.forEach(e => {%>
+
+  <!--artist es la key del objeto que estamos creando   -->
+  <img src="<%=e.images[0].url%>" alt="">
+  <span><%=e.name%></span>
+  <a href="/album/<%=e.id%>">View tracks</a>
+  <%})%>

@@ -1,0 +1,12 @@
+<% artist.forEach(e => {%>
+
+  <!--artist es la key del objeto que estamos creando   -->
+  <p>
+    <%=e.name%>
+      <a href="artist/<%=e.id%>">
+        View albums
+      </a>
+
+  </p>
+  <!-- <a href="artist/<%=e.id%>">See the artist</a> -->
+  <%})%>
