@@ -1,0 +1,10 @@
+<h1>
+  <%= body.artists.items[0].name %>
+</h1>
+
+<img src="<%= body.artists.items[0].images[1].url %>" alt="">
+<div class="button">
+  <a href="/albums/:artists.id" name="albums">
+    <button type="submit">View albums</button>
+  </a>
+</div>

@@ -1,0 +1,1 @@
+<h1>album page</h1>
