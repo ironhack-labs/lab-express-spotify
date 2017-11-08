@@ -1,0 +1,38 @@
+body {
+   padding: 0;
+   margin: 0;
+   background-image: url(../images/background-index.jpg);
+   background-size: cover;
+ }
+
+ .home {
+    text-align: center;
+    padding-top: 200px;
+  }
+
+  .home h1 {
+    color: white;
+    font-size: 65px;
+  }
+
+  #input {
+    width: 38%;
+    border-radius: 5px;
+    border-width: 0px;
+    height: 20px;
+  }
+
+  .home button {
+    background-color: #26A65B;
+    border-radius: 20px;
+    border-width: 0px;
+    height: 40px;
+    width: 18%;
+    margin: 20px auto;
+    display: block;
+    font-size: 18px;
+  }
+
+.second {
+  font-size: 65px;
+}
