@@ -1,0 +1,140 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(../images/home-heading.jpg);
+  background-size: cover;
+}
+
+.home-body {
+  text-align: center;
+  padding-top: 200px;
+}
+
+.home-body h1 {
+  color: white;
+  font-size: 60px;
+}
+
+.home-body input {
+  width: 40%;
+  display: block;
+  margin: 0 auto;
+}
+
+.home-body button {
+  background-color: #26A65B;
+  border: 0px;
+  border-radius: 20px;
+  margin: 20px auto;
+  display: block;
+  padding: 10px 30px;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.artistpage {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.artistpage h1 {
+  color: white;
+}
+
+.artists {
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+  width: 20%;
+  background-color: rgba(0,0,0,1);
+  border-radius: 20px;
+  color: white;
+}
+
+.artists img {
+  border-radius: 15px;
+  width: 100%;
+  height: 180px;
+}
+
+.artists p {
+  font-weight: bold;
+  margin: 5px;
+  text-transform: lowercase;
+}
+
+.artists button {
+  background-color: #C3272B;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+.albumpage {
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.albumpage h1 {
+  color: white;
+}
+
+.albums {
+  text-align: center;
+  display: inline-block;
+  margin: 20px;
+  width: 20%;
+  background-color: rgba(0,0,0,1);
+  border-radius: 20px;
+  color: white;
+}
+
+.albums img {
+  border-radius: 15px;
+  width: 100%;
+  height: 180px;
+}
+
+.albums p {
+  font-weight: bold;
+  margin: 5px;
+  text-transform: lowercase;
+}
+
+.albums button {
+  background-color: #C3272B;
+  border-radius: 5px;
+  font-weight: bold;
+  color: white;
+  padding: 5px 10px;
+  border: 1px solid black;
+}
+
+.songspage {
+  width: 80%;
+  margin: 0 auto;
+  background-color: black;
+  margin-top: 80px;
+}
+
+.songstitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  padding: 0 150px 0 50px;
+}
+
+.songs {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0px 50px;
+  background-color: rgba(255,255,255,0.6);
+  border: 1px solid black;
+  font-weight: bold;
+}
