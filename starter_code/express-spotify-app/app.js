@@ -42,14 +42,21 @@ app.get('/artists', (req, res, next) => {
     console.error(err);
 });
 
-app.get('/artist/:id ', (req, res) => {
-  spotifyApi.getArtist(req.params.id)
+app.get('/artist/:id', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.id)
   .then(function(data) {
-    console.log('Artist information', data.body);
+    let artistAlbums = data.body.items;
+    console.log(artistAlbums);
+    res.render('artist', {
+      album: artistAlbums});
   }, function(err) {
     console.error(err);
   });
 })
+
+
+
+
 
 });
 
