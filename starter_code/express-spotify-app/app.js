@@ -3,6 +3,8 @@ const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
+// const bootstrap = require('bootstrap');
+// const jQuery = require('');
 const SpotifyWebApi = require('spotify-web-api-node');
 const clientId = '130309a175f5439691f29b71820e47a5',
       clientSecret = 'a833cbef9f5d42aba52ae37462f2b66c';
@@ -38,16 +40,38 @@ app.get('/',(req,res)=>{
 });
 
 app.get('/artist', (req,res)=>{
-  let artist = req.query.artist;
-  spotifyApi.searchArtists(artist)
+  let artistSearch = req.query.artist;
+  spotifyApi.searchArtists(artistSearch)
   .then(function(data) {
-    console.log('Search this '+ artist, data.body);
-    res.render('artist', {artists: data.body.artists.items});
+    let artistResult = data.body.artists.items;
+    console.log(artistResult);
+    res.render('artist', {artists: artistResult});
   }, function(err) {
     console.error(err);
   });
 });
 
+app.get('/artist/:id', (req,res)=>{
+  let artistId = req.params.id;
+  spotifyApi.getArtistAlbums(artistId)
+  .then(function(data) {
+    // let artistAlbums
+    console.log(data.body.items);
+    res.render('albums', {albums: data.body.items});
+  }, function(err) {
+    console.error(err);
+  });
+});
+
+app.get('/albums/:id', (req,res)=>{
+  let albumId = req.params.id;
+  spotifyApi.getAlbumTracks(albumId)
+  .then(function(data) {
+    res.render('tracks', {tracks: data.body.items});
+  }, function(err) {
+    console.error(err);
+  });
+});
 
 
 app.listen(3000, () => {
