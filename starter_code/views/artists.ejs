@@ -1,4 +1,21 @@
+<div class="newSearch">
+  <a href="/">Make New Search</a>
+</div>
+<div class="container allcenter">
   <%artists.forEach(artist => {%>
-    <span><%=artist.name%></span>
-    <a href="/artists/<%=artist.id%>">Ver albumes</a><br>
-   <%})%>
+    <div class="inline-block col30 paddingDown">
+      <div class="divPhoto">
+        <% if(artist.images[0]){ %>
+          <img class="photo" src="<%=artist.images[0].url%>">
+          <% } %>
+            <% if(!artist.images[0]){ %>
+              <img class="photo" src="http://www.techweez.com/wp-content/uploads/2017/07/NO-IMAGE.png">
+              <% } %>
+      </div>
+      <div class="textPhoto">
+        <span class="textPhoto"><%=artist.name%></span><br>
+        <a class ="nolink" href="/artists/<%=artist.id%>">Ver albumes</a><br>
+      </div>
+    </div>
+    <% }) %>
+</div>

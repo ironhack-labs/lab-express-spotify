@@ -1,5 +1,6 @@
 const express = require('express');
 const app = express();
+const morgan = require('morgan');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
 var SpotifyWebApi = require('spotify-web-api-node');
@@ -12,10 +13,16 @@ var spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
+app.use(expressLayouts);
+app.set('layout', __dirname + '/views/layout/main-layout');
+
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
+app.use(morgan('dev'));
+app.use(express.static('public'));
+
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
   .then(function(data) {
@@ -30,10 +37,10 @@ app.get('/', (request, response, next) => {
   });
 
 app.get('/artists', (request, response, next) => {
-  let myData = request.query.artist;
-  spotifyApi.searchArtists(myData).then(function(data) {
+  spotifyApi.searchArtists(request.query.artist).then(function(data) {
     // console.log('Search artists by name', data.body.artists.items);
     artistsArray = data.body.artists.items;
+    console.log(artistsArray[0].images[0].url);
     response.render('artists',{artists: artistsArray});
     next();
   }, function(err) {
@@ -41,11 +48,9 @@ app.get('/artists', (request, response, next) => {
   });
   });
 app.get('/artists/:id', (request, response, next) => {
-  let artistId = request.params.id;
-  spotifyApi.getArtistAlbums(artistId)
+  spotifyApi.getArtistAlbums(request.params.id)
   .then(function(data) {
-    let artistAlbums = data.body.items;
-    response.render('album', {albums: artistAlbums});
+    response.render('album', {albums: data.body.items});
   }, function(err) {
     console.error(err);
   });
@@ -54,11 +59,9 @@ app.get('/artists/:id', (request, response, next) => {
   console.error(err);
 });
 app.get('/album/:id', (request, response, next) => {
-  let albumId = request.params.id;
-  spotifyApi.getAlbumTracks(albumId)
+  spotifyApi.getAlbumTracks(request.params.id)
   .then(function(data) {
-    let tracksAlbum = data.body.items;
-    response.render('tracks', {tracks: tracksAlbum});
+    response.render('tracks', {tracks: data.body.items});
   }, function(err) {
     console.error(err);
   });
