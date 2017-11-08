@@ -1,0 +1,8 @@
+<h1>Albums - artist</h1>
+
+<% albums.forEach(e => { %>
+<img src="<%= e.images[0].url %>">
+  <p> <%= e.name %> </p>
+  <p><a href="<%= e.id %>">Ver albums</a>  </p>
+
+<% }) %>
