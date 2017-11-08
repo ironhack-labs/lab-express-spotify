@@ -40,13 +40,25 @@ app.post('/artist', (request, response) => {
     let data = request.body;
     spotifyApi.searchArtists(data.artist)
         .then(function(data) {
-            console.log(`Search results: ` , data.body.artists.items);
-            let artist = data.body.artists.items;
-            response.render('artist', {artist});
+            let artists = data.body.artists.items;
+            response.render('artist', {artists});
         }, function(err) {
             console.error(err);
         });
 });
+
+app.get('/albums', (request, response) => {
+    let artistId = request.query.id;
+    spotifyApi.getArtistAlbums(artistId)
+        .then(function(data) {
+            let albums = data.body.items;
+            response.render('albums', {albums});
+        }, function(err) {
+            console.error(err);
+        });
+});
+
+
 
 
 
