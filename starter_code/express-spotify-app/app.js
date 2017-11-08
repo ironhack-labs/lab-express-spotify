@@ -1,8 +1,21 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
+const express = require('express');
+const bodyParser = require('body-parser');
+const expressLayouts = require('express-ejs-layouts');
+const app = express();
+
+// Middleware setup
+app.use(bodyParser());
+app.use(express.json());
+app.use(expressLayouts);
+app.use(express.static('public'));
+
+app.set('layout', __dirname + '/views/layout/main-layout');
+app.set('view engine', 'ejs');
 
 // Remember to paste here your credentials
-var clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+var clientId = 'a664614360e040e588fe18ba8a2e6edd',
+    clientSecret = '4f0e07f4805a4ba8a6923e798207c012';
 
 var spotifyApi = new SpotifyWebApi({
     clientId: clientId,
@@ -16,3 +29,28 @@ spotifyApi.clientCredentialsGrant()
     }, function(err) {
         console.log('Something went wrong when retrieving an access token', err);
     });
+
+
+// Controllers
+app.get('/', (request, response) => {
+    response.render('index');
+});
+
+app.post('/artist', (request, response) => {
+    let data = request.body;
+    spotifyApi.searchArtists(data.artist)
+        .then(function(data) {
+            console.log(`Search results: ` , data.body.artists.items);
+            let artist = data.body.artists.items;
+            response.render('artist', {artist});
+        }, function(err) {
+            console.error(err);
+        });
+});
+
+
+
+// Start Server
+app.listen(3000, () => {
+    console.log('Express Spotify Searcher listening on port 3000!');
+});
