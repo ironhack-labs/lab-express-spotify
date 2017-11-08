@@ -66,7 +66,7 @@ app.get('/artist/:id', (req, res) => {
     .then(function(data) {
       let artistAlbums = data.body.items;
       console.log(data.body.items);
-      res.render('artist', {albums: artistAlbums});//artist nombre de la key que
+      res.render('artist', {albums: artistAlbums});//albums nombre de la key que
     }, function(err) {
       console.error(err);
     });
@@ -83,52 +83,6 @@ app.get('/album/:id', (req, res) => {
       console.log('Something went wrong!', err);
     });
 });
-
-
-// app.get('/artists/:name', (req, res) => {
-//   console.log(req.params);
-//   res.render('index');
-// }); Esto estaría mal, no se pueden poner dos veces /:
-
-
-// const getImagenes = (personaje) => {
-//   let imagesBart = [
-//     "https://assets.fxnetworks.com/cms/prod/2016/12/simpsonsworld_social_og_bart_1200x1200.jpg",
-//     "http://www.nombresparaperros.club/imagenes/1/original/5661473458711-Bart-Simpson.jpg",
-//     "http://2.bp.blogspot.com/-XKkwwaNcQp0/UHlgkuq5E7I/AAAAAAAABTI/fAtYElMP9T8/s640/Panda+Tope.jpg"
-//   ];
-//   let imagesHomer = [
-//     "http://360es.com/es/wp-content/uploads/2015/01/Homer-Simpson-un-ejemplo-de-emprendedor.jpeg",
-//     "http://cdn.skim.gs/images/homer-simpson-doughnuts/what-homer-simpson-taught-us-about-doughnuts",
-//     "https://pbs.twimg.com/profile_images/818630169728454656/_F0UzZKc.jpg"
-//   ]
-//
-//   return (personaje == 'Bart') ? imagesBart : imagesHomer;
-// }
-
-// app.get('/simpsons',(req,res)=>{
-//   console.log("la query es: ");
-//   console.log(req.query);
-//   res.render('simpsons', {
-//     title: "EL GET",
-//     images:getImagenes(req.query.personaje),
-//     color:"white",
-//     pepe: '<p class="hola">holaa</p>'
-//   });
-// });
-//
-//
-// app.post('/simpsons',(req,res) => {
-//   console.log("el body es: ");
-//   console.log(req.body);
-//   console.log(req.query)
-//   res.render('simpsons', {
-//     title: "EL POST",
-//     images:getImagenes(req.body.personaje),
-//     color: req.query.color,
-//     pepe: "hola que tal"
-//   });
-// });
 
 app.listen(3000, () => {
   console.log('My first app listening on port 3000!');
