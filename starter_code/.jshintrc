@@ -1,0 +1,15 @@
+{
+ "undef": true,
+ "unused": true,
+ "strict": true,
+ "globalstrict": true,
+ "esversion": 6,
+ "this": true,
+ "globals": {
+   "console": true,
+   "clearInterval":true,
+   "setInterval":true,
+   "require": true,
+   "process": true
+ }
+}
