@@ -1,0 +1,13 @@
+<body>
+    <div class="view-tracks">
+        <h2>Title</h2>
+        <h2>Listen</h2>
+        <% tracks.forEach( element => { %>
+            <div class="songs">
+                <p><%= element.name %></p>
+                <audio controls="" name="media"><source src="<%= element.preview_url %>" type="audio/mpeg"></audio>
+          </div>
+      <%  }) %>
+    </div>
+</div>
+</body>

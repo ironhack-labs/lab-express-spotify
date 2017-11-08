@@ -26,8 +26,8 @@ var spotifyApi = new SpotifyWebApi({
 spotifyApi.clientCredentialsGrant()
     .then(function(data) {
         spotifyApi.setAccessToken(data.body['access_token']);
-    }, function(err) {
-        console.log('Something went wrong when retrieving an access token', err);
+    }, function(error) {
+        console.log('Something went wrong when retrieving an access token', error);
     });
 
 
@@ -36,31 +36,41 @@ app.get('/', (request, response) => {
     response.render('index');
 });
 
+// Search artists
 app.post('/artist', (request, response) => {
-    let data = request.body;
-    spotifyApi.searchArtists(data.artist)
+    let artist = request.body.artist;
+    spotifyApi.searchArtists(artist)
         .then(function(data) {
             let artists = data.body.artists.items;
             response.render('artist', {artists});
-        }, function(err) {
-            console.error(err);
+        }, function(error) {
+            console.error(error);
         });
 });
 
+// Get albums by a certain artist
 app.get('/albums', (request, response) => {
     let artistId = request.query.id;
     spotifyApi.getArtistAlbums(artistId)
         .then(function(data) {
             let albums = data.body.items;
             response.render('albums', {albums});
-        }, function(err) {
-            console.error(err);
+        }, function(error) {
+            console.error(error);
         });
 });
 
-
-
-
+// Get tracks in an album
+app.get('/tracks', (request, response) => {
+    let albumId = request.query.id;
+    spotifyApi.getAlbumTracks(albumId, {limit: 10})
+        .then(function(data) {
+            let tracks = data.body.items;
+            response.render('tracks', {tracks});
+        }, function(error) {
+            console.log('Something went wrong!', error);
+        });
+});
 
 // Start Server
 app.listen(3000, () => {
