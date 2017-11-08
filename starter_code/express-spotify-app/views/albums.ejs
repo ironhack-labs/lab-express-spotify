@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Express Spotify</title>
+  </head>
+  <body>
+    <h1>Albums</h1>
+
+    <% for (var i in album) { %>
+      <% for (var k in album[i]) { %>
+        <% for (var j in album[i].items) { %>
+        <% const name = album[i].items[j].name; %>
+        <% const img = album[i].items[j].images; %>
+        <% const id = album[i].items[j].id; %>
+        <h3><%= name %></h3>
+        <% for (var n in img) { %>
+          <% if (n == 1) {
+            const img_src = img[n].url; %>
+            <img src="<%= img_src %>" alt="">
+            <a href="/tracks/<%=id%>" name="albumId"><button type="submit">View tracks</button></a>
+          <% } %>
+        <% } %>
+        <% } %>
+      <% } %>
+    <% } %>
+
+
+  </body>
+</html>
