@@ -1,0 +1,8 @@
+<% tracks.forEach((track) => { %>
+  <% if (track.preview_url) {%>
+    <audio src="<%=track.preview_url%>" controls="true"></audio>
+  <% } else { %>
+    Track preview not available.
+  <% } %>
+  <li><%= track.name %></li>
+<% }) %>
