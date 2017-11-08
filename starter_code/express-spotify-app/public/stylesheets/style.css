@@ -1,0 +1,13 @@
+body {
+  display: block;
+  margin: 100px auto;
+  max-width: 500px;
+}
+
+.img {
+  height: 100px;
+}
+
+li {
+  list-style: none;
+}
