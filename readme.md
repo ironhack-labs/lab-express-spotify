@@ -10,8 +10,6 @@
 
 Today, we're going to build an Express app to search spotify for artists, albums, and tracks. In addition, we'll be able to play a preview of some of these songs.
 
-To see the final product check out the deployed version: https://iron-spotify.herokuapp.com/.
-
 It may seem like a lot, but let's break it down into steps!
 
 
