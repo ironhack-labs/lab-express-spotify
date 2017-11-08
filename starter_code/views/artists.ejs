@@ -1,0 +1,8 @@
+
+<div class="artist">
+  <p>
+    <b>Nombre del artista:</b> <%= artist.name %>
+  </p>
+  <img src="<%= artist.images[0].url %>" style="width: 200px" alt="<%= artist.name %>"><br>
+  <a href="/albums/<%= artist.id %>">View Albums</a>
+</div>
