@@ -1,0 +1,8 @@
+<% albums.forEach(album => {%>
+<img src = "<%=album.images[0].url%>" alt="" style="width:20%">
+<br>
+<span><%= album.name%></span>
+<a href="/album/<%= album.id %>"> Ver Albumes </a>
+<br>
+
+<%})%>
