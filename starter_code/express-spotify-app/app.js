@@ -61,24 +61,10 @@ app.get('/album/:id',(req,res)=>{
 spotifyApi.getAlbumTracks(albumId)
   .then(function(data) {
     res.render('tracks', {tracks: data.body.items});
-    // console.log(data.body);
   }, function(err) {
     console.log('Something went wrong!', err);
   });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 // Retrieve an access token.
