@@ -4,10 +4,10 @@ const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const app = express();
 
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
-var clientId = '6decf53c4bbb4f0bb5c0f70d4cec515a',
+const clientId = '6decf53c4bbb4f0bb5c0f70d4cec515a',
     clientSecret = '4cbcaca73e84487ba9baa6a578835d8b';
 
 const spotifyApi = new SpotifyWebApi({
@@ -37,6 +37,16 @@ app.use(express.static('public'));
 
 app.get('/',(req,res)=>{
   res.render('index');
+});
+
+app.get('/artists',(req,res)=>{
+  let artist = req.query.artist;
+  spotifyApi.searchArtists(artist)
+  .then(function(data) {
+    res.render('artists', {artists: data.body.artists.items});
+  }, function(err) {
+    console.error(err);
+  });
 });
 
 app.listen(3000, () => {
