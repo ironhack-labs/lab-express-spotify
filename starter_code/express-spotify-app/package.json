@@ -11,7 +11,7 @@
     "type": "git",
     "url": "git+https://github.com/cucharadepalo/lab-express-spotify.git"
   },
-  "author": "",
+  "author": "Abraham Castro",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/cucharadepalo/lab-express-spotify/issues"
@@ -20,7 +20,6 @@
   "dependencies": {
     "body-parser": "^1.18.2",
     "ejs": "^2.5.7",
-    "ejs-lint": "^0.3.0",
     "express": "^4.16.2",
     "express-ejs-layouts": "^2.3.1",
     "morgan": "^1.9.0",
