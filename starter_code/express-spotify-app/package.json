@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -14,6 +15,7 @@
     "express": "^4.16.2",
     "express-ejs-layouts": "^2.3.1",
     "morgan": "^1.9.0",
+    "nodemon": "^1.12.1",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^2.5.0"
   }
