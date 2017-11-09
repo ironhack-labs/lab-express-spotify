@@ -1,0 +1,45 @@
+body{
+  display: flex;
+  justify-content: center;
+}
+
+h1{
+  color: green;
+  text-align: center;
+  width: 100%;
+}
+
+.logo{
+   height: 100px;
+}
+
+.container{
+  height: 400px;
+  margin-top: 200px;
+  width: 80%;
+}
+
+.wrap-formu{
+  align-items: center;
+  display: flex;
+  justify-content:space-around;
+}
+.btn-danger{
+text-align: center;
+}
+
+.btn{
+  margin-top: 20px;
+}
+input{
+  height: 50px;
+}
+
+.cover{
+  background-image: url('http://static.tumblr.com/7b37633d29d9aaca9828b5132273cdf1/sy59fz4/1linmyvvt/tumblr_static_4y2skv97m24ogs84wc40sccso.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}

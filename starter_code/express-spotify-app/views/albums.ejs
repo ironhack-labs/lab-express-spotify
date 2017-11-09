@@ -1,0 +1,13 @@
+  <div class="row">
+    <% albums.forEach(e => {%>
+    <div class="col-sm-6 col-md-3">
+      <div class="thumbnail">
+        <img src="<%=e.images[0].url%>" alt="Albums">
+        <div class="caption">
+          <h3><%=e.name%></h3>
+          <p><a href="/albums/<%=e.id%>" class="btn btn-primary" role="button">View Songs</a></p>
+        </div>
+      </div>
+    </div>
+    <%})%>
+  </div>
