@@ -1,0 +1,14 @@
+<body>
+    <div class="artist-search">
+        <h2>Artist</h2>
+        <% artists.forEach( element => { %>
+            <div class="artist">
+            <% if (element.images.length > 0) { %>
+                <img src="<%= element.images[1].url %>">
+            <% } %>
+            <p><%= element.name %></p>
+            <a href="/albums?id=<%= element.id %>"><button>View Albums</button></a>
+            </div>
+        <%  }) %>
+    </div>
+</body>
