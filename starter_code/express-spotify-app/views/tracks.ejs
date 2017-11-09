@@ -1,0 +1,8 @@
+<% result.forEach((e)=>{%>
+<div class="result-artist">
+  <p>Song <%=e.name%></h3>
+  <audio controls="controls" name="media">
+    <source src="<%=result.preview_url%>" type="audio/mpeg">
+  </audio>
+</div>
+<%});%>

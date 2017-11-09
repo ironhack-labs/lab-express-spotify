@@ -16,6 +16,7 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
 const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require('body-parser');
@@ -39,6 +40,30 @@ app.get('/',(req,res)=>{
   res.render('home');
 });
 
-app.listen(3002,()=>{
-  console.log("Listening oon port 3002 OK");
+app.get('/artists',(req,res)=>{
+  spotifyApi.searchArtists(req.query.artist).then( function (data){
+    res.render('artists',{result: data.body.artists.items});
+  },function (err){
+    console.log("Something went wrong!"+err);
+  });
+});
+
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.artistId).then( function (data){
+    res.render('albums',{result: data.body.items});
+  },function (err){
+    console.log("Something went wrong!"+err);
+  });
+});
+
+app.get('/tracks/:albumId', (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.albumId).then( function (data){
+    res.render('tracks',{result: data.body.items});
+  },function (err){
+    console.log("Something went wrong!"+err);
+  });
+});
+
+app.listen(3004,()=>{
+  console.log("Listening oon port 3004 OK");
 });
