@@ -9,15 +9,14 @@ h1{
   width: 100%;
 }
 
-img{
-   width: 200;
+.logo{
+   height: 100px;
 }
 
 .container{
   height: 400px;
   margin-top: 200px;
   width: 80%;
-
 }
 
 .wrap-formu{
@@ -34,5 +33,13 @@ text-align: center;
 }
 input{
   height: 50px;
+}
 
+.cover{
+  background-image: url('http://static.tumblr.com/7b37633d29d9aaca9828b5132273cdf1/sy59fz4/1linmyvvt/tumblr_static_4y2skv97m24ogs84wc40sccso.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  width: 100%;
 }
