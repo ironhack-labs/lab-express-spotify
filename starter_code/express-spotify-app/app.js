@@ -36,13 +36,23 @@ spotifyApi.clientCredentialsGrant().then(
     console.log("Something went wrong when retrieving an access token", err);
   }
 );
-app.get("/", (req, res, next) => {
-  res.render("index", {});
+app.get("/index", (req, res, next) => {
+  res.render("index");
 });
 
 app.get("/artist", (req, res) => {
   console.log(artist);
-  let artistSearch = req.query.artist;
+  //let artistSearch = req.query.artist;
+  spotifyApi
+    .getArtists(["2hazSY4Ef3aB9ATXW7F5w3", "6J6yx1t3nwIDyPXk5xa7O8"])
+    .then(
+      function(data) {
+        console.log("Artists information", data.body);
+      },
+      function(err) {
+        console.error(err);
+      }
+    );
   res.render('artist');
 });
 
