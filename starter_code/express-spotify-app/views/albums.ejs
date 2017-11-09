@@ -1,0 +1,9 @@
+<ol>
+  <% album.forEach(value => { %>
+  <li>
+    <%= value.name %>
+    <img src="<%= value.images[0].url %>">
+    <a href="/albums/<%= value.id %>">Go to tracks</a>
+  </li>
+  <% }); %>
+</ol>
