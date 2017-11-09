@@ -42,7 +42,7 @@ app.get('/',(req,res)=>{
 
 app.get('/artists', (req, res) => {
   // Get multiple artists
-  let artist = req.query.artist;
+  let artist = req.query.artist || 'Anderson+.Paak';
   spotifyApi.searchArtists(artist)
     .then(function(data) {
       console.log('Artists information', data.body.artists);
@@ -53,7 +53,7 @@ app.get('/artists', (req, res) => {
 });
 
 app.get('/albums', (req, res) => {
-  let artistId = req.query.artist;
+  let artistId = req.query.artist || '3jK9MiCrA42lLAdMGUZpwa';
   spotifyApi.getArtistAlbums(artistId, { limit: 50, offset: 0 })
   .then(function(data) {
     console.log('Artist albums', data.body);
@@ -65,7 +65,7 @@ app.get('/albums', (req, res) => {
 
 app.get('/tracks', (req, res) => {
   // Get tracks in an album
-  let albumId = req.query.album;
+  let albumId = req.query.album || '73uicPCTt24cmTc9bVaOIp';
   spotifyApi.getAlbumTracks(albumId)
     .then(function(data) {
       console.log(data.body);
