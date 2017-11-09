@@ -1,0 +1,99 @@
+body {
+    margin: 0 auto;
+}
+
+.search {
+    background-image: url("./../images/index.jpg");
+    background-size: cover;
+    text-align: center;
+    padding: 500px 0;
+}
+
+.search input {
+    display: block;
+    width: 30%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
+
+button {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    border: 1px solid #383838;
+    border-radius: 5px;
+    margin: 10px auto;
+    padding: 5px;
+    color: #fff;
+    background-color: #DA8BAD;
+}
+
+.artist-search {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.artist {
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+    margin: 20px;
+    color: white;
+    background-color: #484848;
+}
+
+.artist img {
+    max-width: 100%;
+}
+
+.artist a {
+    text-decoration: none;
+}
+
+.view-album {
+    width: 95%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.album {
+    text-align: center;
+    display: inline-block;
+    width: 20%;
+    margin: 20px;
+    color: white;
+    background-color: #484848;
+}
+
+.album img {
+    max-width: 100%;
+}
+
+.album a {
+    text-decoration: none;
+}
+
+.view-tracks {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 80px;
+}
+
+.tracks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    background-color: #404040;
+}
+
+.tracks {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0;
+    padding: 0px 20px;
+    background-color: #D3D3D3;
+}

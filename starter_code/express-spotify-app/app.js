@@ -2,9 +2,12 @@ const SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
 const bodyParser = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
+const morgan = require('morgan');
+
 const app = express();
 
 // Middleware setup
+app.use(morgan('dev'));
 app.use(bodyParser());
 app.use(express.json());
 app.use(expressLayouts);
