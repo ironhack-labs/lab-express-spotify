@@ -1,0 +1,22 @@
+<div class="newSearch">
+  <a href="/">Make New Search</a>
+</div>
+<div class="container allcenter">
+  <% albums.forEach(album => {%>
+    <div class="inline-block col30 paddingDown">
+      <div class="divPhoto">
+        <% if(album.images[0]){ %>
+          <img class="photo" src="<%=album.images[0].url%>">
+          <% } %>
+            <% if(!album.images[0]){ %>
+              <img class="photo" src="http://www.techweez.com/wp-content/uploads/2017/07/NO-IMAGE.png">
+              <% } %>
+      </div>
+      <div class="textPhoto">
+        <a class ="nolink" href="/album/<%=album.id%>">
+          <span class="textPhoto"><%=album.name%></span>
+      </a>
+  </div>
+</div>
+<% }) %>
+</div>

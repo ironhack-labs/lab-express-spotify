@@ -1,0 +1,113 @@
+body{
+  margin: 0;
+  padding: 0;
+}
+
+.backgroundTextField{
+  background: url(../images/background.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.contentTextField{
+  margin: 0 auto;
+  text-align: center;
+  padding: 200px;
+}
+
+.enterText {
+    display: block;
+    margin: 0 auto;
+    padding: 11px;
+    width: 400px;
+    border-radius: 13px;
+    border: 5px solid #2ec21b;
+    background-color: #ffffff;
+    color: #2ec21b;
+    font-size: 20px;
+}
+.buttonEnterText {
+    margin-top: 20px;
+    color: #ffffff;
+    background-color: #2dc31b;
+    border-radius: 5px;
+    border: 2px solid #2dc31b;
+    padding: 14px 30px;
+    font-size: 18px;
+}
+
+.photo{
+  max-width: 100%;
+  max-height: 500px;
+  min-height: 500px;
+}
+
+.textPhoto {
+  background: gray;
+  color: white;
+  text-align: center;
+  padding: 20px 0px 20px 0;
+  text-decoration: underline;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.inline-block{
+  display: inline-block;
+
+}
+
+.col30{
+  width: 30%;
+}
+.allcenter {
+    text-align: center;
+}
+
+.paddingDown{
+  padding-bottom: 15px;
+}
+
+.nolink{
+  text-decoration: none;
+}
+
+.myAudio {
+    margin: 5px 0px;
+    background-color: #f9f9f9;
+    width: 45%;
+    display: inline-block;
+}
+
+audio {
+    vertical-align: middle;
+}
+
+.newAudio {
+    width: 45%;
+    text-align: left;
+}
+
+.newText {
+  width: 45%;
+  text-align: right;
+  background-color: #3c3c3c;
+  color: white;
+  padding-right: 8px;
+}
+
+.newSearch {
+  background: #565656;
+  text-align: center;
+  padding: 7px;
+  font-size: 15px;
+  color: white;
+  text-transform: uppercase;
+}
+
+.newSearch > a{
+  text-decoration: none;
+  color: white;
+}

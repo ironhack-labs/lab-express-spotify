@@ -1,0 +1,13 @@
+<div class="newSearch">
+  <a href="/">Make New Search</a>
+</div>
+<% tracks.forEach(track => {%>
+  <div class="myAudio">
+  <div class="inline-block newText">
+  <p><%= track.name %></p>
+  </div>
+  <div class="inline-block newAudio">
+  <audio controls name="media"><source src="<%=track.preview_url%>" type="audio/mpeg"></audio>
+  </div>
+  </div>
+<%})%>
