@@ -1,11 +1,13 @@
-<% artist.forEach(e => {%>
+<div class="artists-holder">
+  <% artist.forEach(e => {%>
 
-  <!--artist es la key del objeto que estamos creando   -->
-  <p>
-    <%=e.name%>
-      <a href="artist/<%=e.id%>">
+    <!--artist es la key del objeto que estamos creando   -->
+    <p>
+      <%=e.name%>
+        <a href="artist/<%=e.id%>">
         View albums
       </a>
 
-  </p>
-  <%})%>
+    </p>
+    <%})%>
+</div>
