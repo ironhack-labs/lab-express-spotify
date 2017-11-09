@@ -1,0 +1,10 @@
+<h1> Albums <%= %> </h1>
+<ul>
+  <% for (var i = 0; i < tracks.length; i++) { %>
+    <li><%= tracks[i].name %> <a href="#"> PLAY</a></li>
+    <audio controls>
+      <source src="<%=tracks[i].preview_url %>" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+  <% } %>
+</ul>

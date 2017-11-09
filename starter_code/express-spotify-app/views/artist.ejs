@@ -1,0 +1,6 @@
+<h1> Busqueda <%= %> </h1>
+<ul>
+  <% artists.forEach(function(e){  %>
+    <li><%= e.name %> <a href="/albums?id=<%= e.id %>">View Albums</a></li>
+  <% }); %>
+</ul>
