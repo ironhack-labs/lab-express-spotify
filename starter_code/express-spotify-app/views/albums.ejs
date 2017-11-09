@@ -1,0 +1,21 @@
+<% include ../views/layout/nav.ejs %>
+<p class="subtitle">Albums found</p>
+<div class="results">
+  <%for (var i = 0; i < data.body.items.length; i++) {%>
+  <%var album = data.body.items[i],
+        id = album.id,
+        name = album.name,
+        type = album.album_type,
+        imgUrl = "./images/img-album.png";
+
+        if (album.images[0]) {
+          imgUrl = album.images[0].url
+        }
+  %>
+  <div class="item <%= type %>">
+    <img src="<%= imgUrl %>" alt="<%= name %>">
+    <p class="name"> <%= name %></p>
+    <a href="/tracks?album=<%= id %>" class="btn">View Tracks</a>
+  </div>
+  <%}%>
+</div>
