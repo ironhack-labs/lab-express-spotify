@@ -1,0 +1,8 @@
+<% result.forEach((e)=>{%>
+<div class="result-artist">
+  <h3>Album <%=e.name%></h3>
+  <img src="<%=e.images[0].url%>">
+  <p><%=e.name %></p>
+  <a href="/tracks/<%=e.id%>"> View Albums</a>
+</div>
+<%});%>

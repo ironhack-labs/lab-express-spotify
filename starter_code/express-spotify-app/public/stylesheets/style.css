@@ -1,0 +1,14 @@
+.content{
+  width: 80%;
+}
+.result-artist{
+  width: 30%;
+  margin-left: 35%;
+  display: inline-block;
+  border: 1px solid black;
+  margin-bottom: 50px;
+}
+.result-artist img{
+  width: 30%;
+  margin-left:35%; 
+}
