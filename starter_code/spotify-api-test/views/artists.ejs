@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>
+    <%= title %>
+  </title>
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <h1><%= title %></h1>
+  <p>Welcome to
+    <%= title %>
+  </p>
+  <form action="/artists">
+    <label for="artist-name-input">Artist Name:</label>
+    <input type="text" name="artist">
+    <button type="submit">Submit!</button>
+  </form>
+  <% search.forEach((e) => {%> <h3> <%= e.name %> </h3> <% }) %>
+</body>
+
+</html>
