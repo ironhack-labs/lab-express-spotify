@@ -30,19 +30,16 @@ app.get('/', (req, res, next) => {
 app.get('/artist', (req, res, next) => {
   spotifyApi.searchArtists(req.query.artist)
     .then(function (data) {
-      console.log(data);
       res.render('artist', { name: req.query.artist, songs: data.body.artists.items, href: data.body.artists.href, artists: data });
     }, function (err) {
       console.error(err);
     });
 })
 
-app.get('/artist:artistId', (req, res, next) => {
-  spotifyApi.getArtistAlbums(req.query)
+app.get('/albums', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.query.id)
     .then(function (data) {
-      console.log('Artist albums', data.body);
-      console.log('Request : ', req);
-      res.render('artist', { albums: data });
+      res.render('albums', { albums: data.body.items });
     }, function (err) {
       console.error(err);
     });

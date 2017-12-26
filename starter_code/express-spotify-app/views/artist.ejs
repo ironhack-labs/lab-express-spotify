@@ -22,7 +22,7 @@
             <% for(var i = 0 ; i < 1; i++) { %>
                 <% if(songs[i]) { %>
                 <img src= <%= songs[i].images[0].url %> >
-                    <a href=artist/<%= songs[i].id %> >
+                    <a href=albums/?id=<%= songs[i].id %>>
                         <p>Albums</p>
                     </a>
                 <% } %>        

@@ -10,7 +10,12 @@
     <div class="container">
         <div class="row">
             <div class="col-lg-12">
-                <pre> <%= data =></pre>
+                <h1> Albums : </h1>
+                    <ul>
+                      <% for (var i = 0; i < albums.length; i++) { %>
+                        <li><%= albums[i].name %> <a href="/tracks?albumId=<%= albums[i].id %>">View Tracks</a></li>
+                      <% } %>
+                    </ul>
             </div>
         </div>
     </div>
