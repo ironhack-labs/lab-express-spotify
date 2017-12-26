@@ -15,16 +15,18 @@
         <div class="row">
             <div class="col-lg-12">
                 <h1>
-                    Results for :
+                    Best Result for :
                     <%= name %>
                 </h1>
             </div>
-
-            <% for(var i = 0 ; i < 6 ; i++) { %>
-
-                    <img src= <%= songs[i].images[1].url %> class="img-responsive">
-                <% } %>
-                    <%= JSON.stringify(songs[0], null, 2) %>
+            <% for(var i = 0 ; i < 1; i++) { %>
+                <% if(songs[i]) { %>
+                <img src= <%= songs[i].images[0].url %> >
+                    <a href=artist/<%= songs[i].id %> >
+                        <p>Albums</p>
+                    </a>
+                <% } %>        
+            <% } %>
         </div>
     </div>
 </body>
