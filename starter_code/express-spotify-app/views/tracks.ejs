@@ -1,12 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
 </head>
+
 <body>
-    
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>Some stuffs.</h1>
+                <div class="col-lg-4">
+                    <% for(var i = 0 ; i < 5 ; i++) { %>
+                        <p>
+                            <%= tracks.items[i].name %>
+                        </p>
+
+                        <audio controls="controls">
+                            Your browser does not support the
+                            <code>audio</code> element.
+                            <source src="<%= tracks.items[i].preview_url %>" type="audio/mp3">
+                        </audio>
+
+                        
+                            <% } %>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
+
 </html>
