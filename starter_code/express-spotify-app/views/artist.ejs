@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ"
+        crossorigin="anonymous">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-12">
+                <h1>
+                    Best Result for :
+                    <%= name %>
+                </h1>
+            </div>
+            <% for(var i = 0 ; i < 1; i++) { %>
+                <% if(songs[i]) { %>
+                <img src= <%= songs[i].images[0].url %> >
+                    <a href=albums/?id=<%= songs[i].id %>>
+                        <p>Albums</p>
+                    </a>
+                <% } %>        
+            <% } %>
+        </div>
+    </div>
+</body>
+
+</html>
