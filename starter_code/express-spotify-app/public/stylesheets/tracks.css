@@ -1,0 +1,15 @@
+#title, .track {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+}
+
+#wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+#title {
+    margin: 10px 50px;
+}
