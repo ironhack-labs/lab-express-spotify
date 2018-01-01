@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/albums.css">
+    <title>Artist's Albums</title>
+</head>
+<body>
+    <h1>Albums for: <%= body.items[0].artists[0].name %></h1> 
+    <div id="wrapper">
+      <% let items = body.items.length; 
+        for (let i = 0; i < items; i++){
+            let photo;
+            if (body.items[i].images.length > 0){
+                photo = body.items[i].images[1].url.replace(/"/g, '');
+            }
+            else {
+                photo = "";
+            }
+            let name = body.items[i].name;
+            let albumName = encodeURI(name);
+            let albumId = body.items[i].id;
+            let tracksUrl = `http://localhost:3000/albums/${albumName}/tracks/${albumId}`; %>
+
+            <div class="album"><img src=<%= photo %>> 
+                <p><span><%= name %> </span></p><br>
+                <button><a href=<%= tracksUrl %>> View Tracks </a></button></div>
+
+        <% } %>
+    </div>
+
+
+
+
+</body>
+</html>
+

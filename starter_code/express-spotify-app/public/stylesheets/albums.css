@@ -1,0 +1,16 @@
+#wrapper {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+}
+
+.album{
+    margin: 10px;
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+h1 {
+    text-align: center;
+}
+

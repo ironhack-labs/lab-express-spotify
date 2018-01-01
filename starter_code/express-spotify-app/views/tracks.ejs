@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="/stylesheets/tracks.css">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Tracks For: <%= name %></h1>
+   
+        <div id="title">
+            <div>Title</div>
+            <div>Listen</div>
+        </div>
+        
+        <%  for (let i = 0; i < main.body.items.length; i++){
+            let songName = main.body.items[i].name;
+            console.log(songName);
+            let previewUrl;
+            if (!main.body.items[i].preview_url){
+                previewUrl = "https://www.google.com";
+            }
+            else {
+                previewUrl = main.body.items[i].preview_url.replace(/"/g, ''); 
+            }%>
+            
+            <div id="wrapper">
+                <div class="track">
+                    <p><%= songName %></p>
+                    <audio src=<%= previewUrl %> controls></audio>
+                </div>
+            </div>
+            
+            <% } %>
+        </div>
+        
+    </body>
+    </html>

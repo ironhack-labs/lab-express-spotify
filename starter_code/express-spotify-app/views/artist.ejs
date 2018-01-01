@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" type="text/css" href="stylesheets/style.css">
+    <title>Spotify Express Lab</title>
+</head>
+<body>
+    <h1> Your Search: <%= name %> </h1>
+    <div id="wrapper">
+    <% var items = parseInt(main.body.artists.items.length);
+    //console.log(main.body.artists);
+    //console.log(`There are ${items} items`);
+    var limit = Math.floor(items/5);
+        
+        for (var i = 0; i < items; i++) {
+            let item = main.body.artists.items[i];
+            //console.log(item);
+            let imageQty = item.images.length;
+            //console.log(imageQty);
+            if (imageQty > 0){ 
+                let artist = main.body.artists.items[i] 
+                let photo = artist.images[1].url.replace(/"/g, ''); 
+                let name = main.body.artists.items[i].name 
+                let artistId = main.body.artists.items[i].id;
+                let albumsUrl = `http://localhost:3000/albums/${artistId}`;
+                console.log(artistId) %>
+                <div class="artist"><img src=<%= photo %>> 
+                    <p><span><%= name %> </span></p><br>
+                    <button><a href=<%= albumsUrl %>> View Albums </a></button></div>
+            <% }
+            else { 
+                let artist = main.body.artists.items[i]
+                let name = artist.name;
+                let artistId = main.body.artists.items[i].id;
+                let albumsUrl = `http://localhost:3000/albums/${artistId}`;  %>
+                <div class="artist"><img alt="Photo Not Available">  
+                    <p><span><%= name %> </span></p><br>
+                    <button><a href=<%= albumsUrl %>> View Albums </a></button></div>
+            <% }
+            }; %>
+    </div>
+
+
+</body>
+</html>
