@@ -1,4 +1,12 @@
 var SpotifyWebApi = require('spotify-web-api-node');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.set('views', __dirname + '/views');
+app.set('view engine','ejs');
 
 // Remember to paste here your credentials
 var clientId = '0b37b3990fed4043a05be442fa3ee3db',
@@ -15,4 +23,15 @@ spotifyApi.clientCredentialsGrant()
     spotifyApi.setAccessToken(data.body['access_token']);
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
+});
+app.get('/', (req, res, next) => {
+    res.render('index');
+});
+
+app.post('/artist', (req, res, next) => {
+    res.send(req.body.artist);
+});
+
+app.listen(3000, () => { 
+    console.log('server started');
 });
