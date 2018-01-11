@@ -7,6 +7,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 app.set('views', __dirname + '/views');
 app.set('view engine','ejs');
+app.use(express.static('public'));
 
 // Remember to paste here your credentials
 var clientId = '0b37b3990fed4043a05be442fa3ee3db',
@@ -29,7 +30,14 @@ app.get('/', (req, res, next) => {
 });
 
 app.post('/artist', (req, res, next) => {
-    res.send(req.body.artist);
+    //res.send(req.body.artist);
+    spotifyApi.searchArtists(req.body.artist)
+    .then((response) => {
+        res.send(response);
+    }).catch((err) => {
+
+    });
+    
 });
 
 app.listen(3000, () => { 

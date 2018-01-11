@@ -2,13 +2,30 @@
 <html lang="en">
   <head>
     <title>Spotify Ironhack Express</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
     <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
   </head>
   <body>
-    <form method="post" action="/artist">
-        <label for="artist">Enter artist:</label>
-        <input id="artist" type="text" name="artist"><br>
-        <input type="submit" value="Search for an Artist">
-    </form>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Inicio</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#">Link</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link disabled" href="#">Disabled</a>
+        </li>
+    </ul>
+    <section>
+        <form method="post" action="/artist">
+            <label for="artist">Enter artist:</label>
+            <input id="artist" type="text" name="artist"><br>
+            <input type="submit" value="Search for an Artist">
+        </form>
+    </section>
   </body>
 </html>
