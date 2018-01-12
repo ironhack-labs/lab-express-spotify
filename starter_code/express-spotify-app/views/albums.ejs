@@ -12,9 +12,9 @@
         </li>
     </ul>
     <section>
-        <h1>Artist: <%= body.artists.items[0].name %></h1>
+        <h1>Artist: <%= items[0].name %></h1>
         <div class="card-columns">
-        <% body.artists.items.forEach( (item) => { 
+        <% items.forEach( (item) => { 
                 if(item.images.length != 0){
                     imageUrl = item.images[0].url;
                 }
@@ -23,7 +23,7 @@
                   <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
                   <div class="card-body">
                     <h5 class="card-title"><%= item.name %></h5>
-                    <p class="card-text"><button><a href="/albums/<%= item.id %>">View Albums</a></button></p>
+                    <p class="card-text"><button><a href="/albums/<%= item.id %>">View More</a></button></p>
                   </div>
                 </div>
         <% }); %>
@@ -31,6 +31,3 @@
     </section>
   </body>
 </html>
-
-
-
