@@ -44,12 +44,12 @@ app.post('/home', function (req, res) {
   spotifyApi.searchArtists(artist)
     .then(function (data) {
       console.log(data.body);
-      console.log(`SEGUNDO JSON ${data.body.artists.items[0].name}` );
+      console.log(`SEGUNDO JSON ${data.body.artists.items[0].name}`);
       console.log(data.body.artists.items[0]);
-      
+
       res.render('artist', {
         artist: req.body.art,
-        data:data.body
+        data: data.body
       });
     }, function (err) {
       console.error(err);
@@ -59,8 +59,20 @@ app.post('/home', function (req, res) {
 
 app.get('/artist', (request, res) => {
   console.log("Hola");
-
   res.render('artist');
+});
+
+app.get('/albums/:artistId', (req, res) => {
+  console.log(req.params.artistId);
+  spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(function (data) {
+      console.log('Artist albums', data.body.items[0]);
+      res.render('albums', {
+        data: data.body
+      })
+    }, function (err) {
+      console.error(err);
+    });
 });
 
 // app.get('/categories', (request, res, next) => {

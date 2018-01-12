@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../stylesheets/artist.css">
+  <title>ALBUMS</title>
+</head>
+<body>
+  <h1>ALBUMS</h1>
+  <section>
+      <% data.items.forEach((album) => { %>
+        <div class="bands">
+          <% if (typeof album.images != "undefined" && album.images != null && album.images.length > 0){%>
+            <img src="<%=album.images[0].url%>" alt="">
+          <%}%>
+          <h4>
+            <%=album.name%>
+          </h4>
+          <a href="/albums/<%=album.id%>">View Songs</a>
+        </div>
+      <% }) %>
+    </section>
+</body>
+</html>
