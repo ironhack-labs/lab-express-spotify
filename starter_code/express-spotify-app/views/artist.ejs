@@ -1,14 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../stylesheets/artist.css">
   <title>Artist</title>
 </head>
+
 <body>
   <h1>ARTIST</h1>
-  <input type="text" name="artist" id="artist" value="<%=artist %>">
-  
+  <h2>
+    Mostrar búsqueda para:
+    <%=artist %>
+  </h2>
+  <section>
+    <% data.artists.items.forEach((band) => { %>
+      <div class="bands">
+        <% if (typeof band.images != "undefined" && band.images != null && band.images.length > 0){%>
+          <img src="<%=band.images[0].url%>" alt="">
+        <%}%>
+        <h4>
+          <%=band.name%>
+        </h4>
+      </div>
+    <% }) %>
+  </section>
+  <h1>aaaaa</h1>
+  <h5>
+    <%=data.artists.items[0].name %>
+  </h5>
+  <h5>
+    <%=data.artists.items[0].href %>
+  </h5>
+  <img src="<%=data.artists.items[0].images[2].url %>" alt="">
+
 </body>
+
 </html>

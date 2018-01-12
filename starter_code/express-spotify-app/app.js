@@ -39,15 +39,27 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.post('/home', function (req, res) {
-  res.render('artist', {
-    artist: req.body.art
-  });
+  let artist = req.body.art;
+  // Search artists whose name contains 'Love'
+  spotifyApi.searchArtists(artist)
+    .then(function (data) {
+      console.log(data.body);
+      console.log(`SEGUNDO JSON ${data.body.artists.items[0].name}` );
+      console.log(data.body.artists.items[0]);
+      
+      res.render('artist', {
+        artist: req.body.art,
+        data:data.body
+      });
+    }, function (err) {
+      console.error(err);
+    });
 });
 
 
 app.get('/artist', (request, res) => {
   console.log("Hola");
-  
+
   res.render('artist');
 });
 
