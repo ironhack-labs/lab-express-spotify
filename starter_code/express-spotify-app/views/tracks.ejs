@@ -5,13 +5,16 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="../stylesheets/artist.css">
+  <link rel="stylesheet" href="../stylesheets/body.css">
   <title>Tracks</title>
 </head>
 
 <body>
-  <h1>TRACKS</h1>
   <section>
+    <h1>
+      TRACKS for band:
+      <%=band%>
+    </h1>
     <% data.items.forEach((song) => { %>
       <div class="bands">
 

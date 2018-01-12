@@ -1,0 +1,26 @@
+.navbar-default {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+section{
+  margin-top: 40px;
+}
+h1{
+  padding-top: 20px;
+}
+#search {
+  background-image: url("../images/concert.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 600px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#search form {
+  background-color: rgba(0, 0, 0, 0.5);
+  height: 100px;
+  padding: 20px 40px;
+}

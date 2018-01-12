@@ -59,65 +59,42 @@ app.post('/home', function (req, res) {
 
 
 app.get('/artist', (request, res) => {
-  console.log("Hola");
+  // console.log("Hola");
   res.render('artist');
 });
 
 app.get('/albums/:artistId', (req, res) => {
+  // console.log(req.params);
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(function (data) {
+      // console.log(data.body.items[0].artists[0].name);
+      
       res.render('albums', {
-        data: data.body
+        data: data.body,
+        band:data.body.items[0].artists[0].name
       })
     }, function (err) {
       console.error(err);
     });
 });
 app.get('/tracks/:albumId', (req, res) => {
-  console.log(req.params.albumId);
+  // console.log(req.params.albumId);
   // Get tracks in an album
   spotifyApi.getAlbumTracks(req.params.albumId, {
       limit: 50,
       offset: 1
     })
     .then(function (data) {
+      // console.log(data.body.items[0].artists[0].name);
+      
       res.render('tracks', {
-        data: data.body
+        data: data.body,
+        band:data.body.items[0].artists[0].name
       })
     }, function (err) {
       console.log('Something went wrong!', err);
     });
 });
-
-// app.get('/categories', (request, res, next) => {
-//   if (request.query.cat === undefined) {
-//     client.getJokeCategories()
-//       .then((response) => {
-//         let data = [];
-//         for (let item of response) {
-//           let link = "http://localhost:3000/categories?cat=" + item;
-//           data.push(link);
-//         }
-//         let objData = {};
-//         objData.links = data;
-//         res.render('index', objData);
-//       })
-//       .catch((err) => {
-//         // handle error
-//       });
-//   } else {
-//     client.getRandomJoke(request.query.cat)
-//       .then((response) => {
-//         // use the response here
-//         let objData = {};
-//         objData.joke = response.value;
-//         res.render('joke-by-category', objData);
-//       }).catch((err) => {
-//         // handle error
-//       });
-//   }
-// });
-
 
 // Server Started
 app.listen(3000, () => {
