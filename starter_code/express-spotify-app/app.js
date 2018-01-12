@@ -43,9 +43,9 @@ app.post('/home', function (req, res) {
   // Search artists whose name contains 'Love'
   spotifyApi.searchArtists(artist)
     .then(function (data) {
-      console.log(data.body);
-      console.log(`SEGUNDO JSON ${data.body.artists.items[0].name}`);
-      console.log(data.body.artists.items[0]);
+      // console.log(data.body);
+      // console.log(`SEGUNDO JSON ${data.body.artists.items[0].name}`);
+      // console.log(data.body.artists.items[0]);
 
       res.render('artist', {
         artist: req.body.art,
@@ -63,15 +63,28 @@ app.get('/artist', (request, res) => {
 });
 
 app.get('/albums/:artistId', (req, res) => {
-  console.log(req.params.artistId);
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(function (data) {
-      console.log('Artist albums', data.body.items[0]);
+      console.log(data.body.items[0]);
       res.render('albums', {
         data: data.body
       })
     }, function (err) {
       console.error(err);
+    });
+});
+app.get('/tracks/:albumId', (req, res) => {
+  console.log(req.params.albumId);
+  // Get tracks in an album
+  spotifyApi.getAlbumTracks(req.params.albumId, {
+      limit: 50,
+      offset: 1
+    })
+    .then(function (data) {
+      console.log(data.body);
+      res.render('tracks',{data: data.body})
+    }, function (err) {
+      console.log('Something went wrong!', err);
     });
 });
 
