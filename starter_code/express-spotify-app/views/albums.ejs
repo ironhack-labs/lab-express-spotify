@@ -15,11 +15,11 @@
         </form>
     </nav>
     <section>
-        <h1>
+        <h2>
             <span class="text-primary" <%= data.items.length %></span>
             <span class="text-dark">Albums of artist:</span>
             <span class="text-primary"><%= artist %></span>
-        </h1>
+        </h2>
         <div class="card-columns">
         <% data.items.forEach( (item) => { 
                 if(item.images.length != 0){

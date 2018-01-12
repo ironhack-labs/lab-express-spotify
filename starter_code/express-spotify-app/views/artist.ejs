@@ -15,11 +15,11 @@
         </form>
     </nav>
     <section>
-        <h1>
+        <h2>
             <span class="text-primary" <%= data.body.artists.items.length %></span>
             <span class="text-dark">Artists matches:</span>
             <span class="text-primary"><%= keyword %></span>
-        </h1>
+        </h2>
         <div class="card-columns">
         <% data.body.artists.items.forEach( (item) => { 
                 if(item.images.length != 0){
