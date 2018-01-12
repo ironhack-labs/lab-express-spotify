@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
   </head>
   <body>
+    <h1>Spotify Ironhack Express</h1>
     <ul class="nav nav-tabs">
         <li class="nav-item">
           <a class="nav-link active" href="/">Home</a>
@@ -18,19 +19,16 @@
                 if(item.images.length != 0){
                     imageUrl = item.images[0].url;
                 }
-            %>
-                <div class="card">
-                  <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
-                  <div class="card-body">
+        %>
+            <div class="card">
+                <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
+                <div class="card-body">
                     <h5 class="card-title"><%= item.name %></h5>
                     <p class="card-text"><button><a href="/albums/<%= item.id %>">View Albums</a></button></p>
-                  </div>
                 </div>
+            </div>
         <% }); %>
         </div>
     </section>
-  </body>
+</body>
 </html>
-
-
-

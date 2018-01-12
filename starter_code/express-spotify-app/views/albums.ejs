@@ -6,13 +6,13 @@
     <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
   </head>
   <body>
+    <h1>Spotify Ironhack Express</h1>
     <ul class="nav nav-tabs">
         <li class="nav-item">
           <a class="nav-link active" href="/">Home</a>
         </li>
     </ul>
     <section>
-        <h1>Artist: <%= items[0].name %></h1>
         <div class="card-columns">
         <% items.forEach( (item) => { 
                 if(item.images.length != 0){
@@ -29,5 +29,5 @@
         <% }); %>
         </div>
     </section>
-  </body>
+</body>
 </html>

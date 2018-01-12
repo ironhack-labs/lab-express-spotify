@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spotify Ironhack Express</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+    <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
+  </head>
+  <body>
+    <h1>Spotify Ironhack Express</h1>
+    <ul class="nav nav-tabs">
+        <li class="nav-item">
+          <a class="nav-link active" href="/">Home</a>
+        </li>
+    </ul>
+    <section>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Track</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Listen</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% items.forEach( (item) => { %>
+                <tr>
+                    <th scope="row"><%= item.track_number %></th>
+                    <td><%= item.name %></td>
+                    <td><audio controls><source src="<%= item.preview_url %>" type="audio/mpeg"></audio></td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
+    </section>
+</body>
+</html>
