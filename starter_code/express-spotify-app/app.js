@@ -1,8 +1,8 @@
 var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
-var clientId = '1c30624cba6742dcb792991caecae571',
-  clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+var clientId = '9f275de0ef5045b0bfb690054746a321',
+  clientSecret = '611c9cfa2d9d40b4abe2829a7d9f01d5';
 
 var spotifyApi = new SpotifyWebApi({
   clientId: clientId,
@@ -31,7 +31,7 @@ app.set('view engine', 'ejs');
 app.get('/home', (request, res) => {
   res.render('home');
 });
-app.get('/', (request, res, next) => {
+app.get('/', (request, res) => {
   res.render('home');
 });
 
@@ -39,23 +39,17 @@ app.use(bodyParser.urlencoded({
   extended: true
 }));
 app.post('/home', function (req, res) {
-  console.log(req.body.art);
-  
   res.render('artist', {
     artist: req.body.art
   });
 });
 
 
-// app.get('/random', (request, res, next) => {
-//   // Retrieve a random chuck joke
-//   client.getRandomJoke()
-//     .then((response) => {
-//       res.render('random', response);
-//     }).catch((err) => {
-//       // handle error
-//     });
-// });
+app.get('/artist', (request, res) => {
+  console.log("Hola");
+  
+  res.render('artist');
+});
 
 // app.get('/categories', (request, res, next) => {
 //   if (request.query.cat === undefined) {
@@ -85,13 +79,6 @@ app.post('/home', function (req, res) {
 //       });
 //   }
 // });
-
-// app.get('/search', (request, res, next) => {
-//   res.render('search-form');
-// });
-
-
-
 
 
 // Server Started
