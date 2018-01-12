@@ -20,10 +20,16 @@ spotifyApi.clientCredentialsGrant()
 const express = require('express');
 const app = express();
 const expressLayouts = require('express-ejs-layouts');
+const morgan = require('morgan');
 
 var bodyParser = require('body-parser');
 
 app.use(express.static('public'));
+app.use(expressLayouts);
+app.set('layout', 'layouts/main-layout');
+
+app.use(
+  morgan(`Request Method: :method, Request URL: :url, Response Time: :response-time(ms)`));
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -40,13 +46,8 @@ app.use(bodyParser.urlencoded({
 }));
 app.post('/home', function (req, res) {
   let artist = req.body.art;
-  // Search artists whose name contains 'Love'
   spotifyApi.searchArtists(artist)
     .then(function (data) {
-      // console.log(data.body);
-      // console.log(`SEGUNDO JSON ${data.body.artists.items[0].name}`);
-      // console.log(data.body.artists.items[0]);
-
       res.render('artist', {
         artist: req.body.art,
         data: data.body
@@ -65,7 +66,6 @@ app.get('/artist', (request, res) => {
 app.get('/albums/:artistId', (req, res) => {
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(function (data) {
-      console.log(data.body.items[0]);
       res.render('albums', {
         data: data.body
       })
@@ -81,8 +81,9 @@ app.get('/tracks/:albumId', (req, res) => {
       offset: 1
     })
     .then(function (data) {
-      console.log(data.body);
-      res.render('tracks',{data: data.body})
+      res.render('tracks', {
+        data: data.body
+      })
     }, function (err) {
       console.log('Something went wrong!', err);
     });
