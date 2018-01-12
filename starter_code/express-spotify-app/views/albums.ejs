@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="../stylesheets/body.css">
+  <title>ALBUMS</title>
+</head>
+<body>
+  <section>
+      <h1>Albums for band:
+          <%=band%>
+      </h1>
+      <div class="grid">
+        <% data.items.forEach((album) => { %>
+          <div class="media">
+            <div class="media-left media-middle">
+                <% if (typeof album.images != "undefined" && album.images != null && album.images.length > 0){%>
+                  <a href="/tracks/<%=album.id%>">
+                    <img class="media-object" src="<%=album.images[0].url%>" alt="bandLogo">
+                  </a>
+                <%}else {%>
+                  <a href="/tracks/<%=album.id%>">
+                    <img class="media-object" src="../images/No-image-found.jpg" alt="bandLogo">
+                  </a>    
+                <%}%>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><%=album.name%></h4>
+              <a href="/tracks/<%=album.id%>" class="btn btn-default">Listen Tracks</a>
+            </div>
+          </div>
+        <%})%>
+      </div>
+  </section>
+</body>
+</html>
