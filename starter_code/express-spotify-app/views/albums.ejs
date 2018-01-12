@@ -7,25 +7,32 @@
   </head>
   <body>
     <h1>Spotify Ironhack Express</h1>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
-        </li>
-    </ul>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="/">Home</a>
+        <form class="form-inline" method="POST" action="/artist">
+          <input class="form-control mr-sm-2" type="search" placeholder="Type artist name here..." aria-label="Search" name="artist">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Artist</button>
+        </form>
+    </nav>
     <section>
+        <h1>
+            <span class="text-primary" <%= data.items.length %></span>
+            <span class="text-dark">Albums of artist:</span>
+            <span class="text-primary"><%= artist %></span>
+        </h1>
         <div class="card-columns">
-        <% items.forEach( (item) => { 
+        <% data.items.forEach( (item) => { 
                 if(item.images.length != 0){
                     imageUrl = item.images[0].url;
                 }
             %>
-                <div class="card">
-                  <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
-                  <div class="card-body">
-                    <h5 class="card-title"><%= item.name %></h5>
-                    <p class="card-text"><button><a href="/tracks/<%= item.id %>">View Tracks</a></button></p>
-                  </div>
-                </div>
+            <div class="card">
+              <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
+              <div class="card-body">
+                <h5 class="card-title"><%= item.name %></h5>
+                <p class="card-text"><button><a href="/tracks/<%= item.id %>?album=<%= item.name %>">View Tracks</a></button></p>
+              </div>
+            </div>
         <% }); %>
         </div>
     </section>

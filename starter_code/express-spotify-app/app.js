@@ -28,6 +28,7 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
 app.get('/', (req, res, next) => {
     res.render('index');
 });
@@ -37,7 +38,10 @@ app.post('/artist', (req, res, next) => {
     spotifyApi.searchArtists(req.body.artist)
     .then((response) => {
         //res.send(response);
-        res.render('artist', response);
+        res.render('artist', {
+            data: response,
+            keyword: req.body.artist
+        });
     }).catch((err) => {
 
     });
@@ -47,7 +51,11 @@ app.post('/artist', (req, res, next) => {
 app.get('/albums/:artistId', (req, res) => {
     spotifyApi.getArtistAlbums(req.params.artistId)
     .then(function(data) {
-        res.render('albums', data.body);
+        //res.send(data.body);
+        res.render('albums', {
+            data: data.body,
+            artist: data.body.items[0].artists[0].name
+        });
     }, function(err) {
         console.error(err);
     });
@@ -58,7 +66,11 @@ app.get('/tracks/:albumId', (req, res) => {
     spotifyApi.getAlbumTracks(req.params.albumId)
     .then(function(data) {
         //res.send(data.body);
-        res.render('tracks', data.body);
+        res.render('tracks', {
+            data: data.body,
+            album: req.query.album,
+            artist: data.body.items[0].artists[0].name
+        });
     }, function(err) {
         console.error(err);
     });

@@ -7,12 +7,21 @@
   </head>
   <body>
     <h1>Spotify Ironhack Express</h1>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
-        </li>
-    </ul>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="/">Home</a>
+        <form class="form-inline" method="POST" action="/artist">
+          <input class="form-control mr-sm-2" type="search" placeholder="Type artist name here..." aria-label="Search" name="artist">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Artist</button>
+        </form>
+    </nav>
     <section>
+        <h1>
+            <span class="text-primary" <%= data.items.length %></span>
+            <span class="text-dark">Tracks of album:</span>
+            <span class="text-primary"><%= album %></span>
+            <span class="text-dark">of artist:</span>
+            <span class="text-primary"><%= artist %></span>
+        </h1>
         <table class="table">
             <thead class="thead-dark">
                 <tr>
@@ -22,7 +31,7 @@
                 </tr>
             </thead>
             <tbody>
-            <% items.forEach( (item) => { %>
+            <% data.items.forEach( (item) => { %>
                 <tr>
                     <th scope="row"><%= item.track_number %></th>
                     <td><%= item.name %></td>

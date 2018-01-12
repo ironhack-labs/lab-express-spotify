@@ -7,17 +7,13 @@
   </head>
   <body>
     <h1>Spotify Ironhack Express</h1>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
-        </li>
-    </ul>
-    <section>
-      <form method="post" action="/artist">
-          <label for="artist">Enter artist:</label>
-          <input id="artist" type="text" name="artist"><br>
-          <input type="submit" value="Search for an Artist">
-      </form>
-    </section>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="/">Home</a>
+        <form class="form-inline" method="POST" action="/artist">
+          <input class="form-control mr-sm-2" type="search" placeholder="Type artist name here..." aria-label="Search" name="artist">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Artist</button>
+        </form>
+      </nav>
   </body>
 </html>
+
