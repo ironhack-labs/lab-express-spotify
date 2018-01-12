@@ -1,14 +1,42 @@
+*{
+  margin: 0 auto;
+}
 .navbar-default {
   position: fixed;
   top: 0;
   width: 100%;
 }
-section{
+
+section {
   margin-top: 40px;
 }
-h1{
+
+
+section .grid{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* width: 30%; */
+}
+
+section .media{
+  display: flex;
+  flex-direction: column;
+  width: 32%;
+  background-color: rgba(0, 0, 0, 0.2);
+}
+
+.media img{
+  width: 60%;
+}
+.media-body{
+padding-left: 20%;
+margin: 20px 0;
+}
+h1 {
   padding-top: 20px;
 }
+
 #search {
   background-image: url("../images/concert.jpg");
   background-repeat: no-repeat;
@@ -23,4 +51,19 @@ h1{
   background-color: rgba(0, 0, 0, 0.5);
   height: 100px;
   padding: 20px 40px;
+
+}
+.bar{
+  color:white;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.tracks{
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: row;
+  align-items: center;
 }

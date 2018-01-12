@@ -12,12 +12,15 @@
 <body>
   <section>
     <h1>
-      TRACKS for band:
+      Tracks for band:
       <%=band%>
     </h1>
+    <div class="bar">
+      <h3>Title</h3>
+      <h3>Listen</h3>
+    </div>
     <% data.items.forEach((song) => { %>
-      <div class="bands">
-
+      <div class="tracks">
         <h4>
           <%=song.name%>
         </h4>

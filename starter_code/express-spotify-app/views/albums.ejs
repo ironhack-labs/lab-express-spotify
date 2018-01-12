@@ -12,25 +12,27 @@
       <h1>Albums for band:
           <%=band%>
       </h1>
-      <% data.items.forEach((album) => { %>
-        <div class="media">
-          <div class="media-left media-middle">
-              <% if (typeof album.images != "undefined" && album.images != null && album.images.length > 0){%>
-                <a href="/tracks/<%=album.id%>">
-                  <img class="media-object" src="<%=album.images[0].url%>" alt="bandLogo" height="100px">
-                </a>
-              <%}else {%>
-                <a href="/tracks/<%=album.id%>">
-                  <img class="media-object" src="../images/No-image-found.jpg" alt="bandLogo" height="100px">
-                </a>    
-              <%}%>
+      <div class="grid">
+        <% data.items.forEach((album) => { %>
+          <div class="media">
+            <div class="media-left media-middle">
+                <% if (typeof album.images != "undefined" && album.images != null && album.images.length > 0){%>
+                  <a href="/tracks/<%=album.id%>">
+                    <img class="media-object" src="<%=album.images[0].url%>" alt="bandLogo">
+                  </a>
+                <%}else {%>
+                  <a href="/tracks/<%=album.id%>">
+                    <img class="media-object" src="../images/No-image-found.jpg" alt="bandLogo">
+                  </a>    
+                <%}%>
+            </div>
+            <div class="media-body">
+              <h4 class="media-heading"><%=album.name%></h4>
+              <a href="/tracks/<%=album.id%>" class="btn btn-default">Listen Tracks</a>
+            </div>
           </div>
-          <div class="media-body">
-            <h4 class="media-heading"><%=album.name%></h4>
-            <a href="/tracks/<%=album.id%>">View Albums</a>
-          </div>
-        </div>
-      <%})%>
+        <%})%>
+      </div>
   </section>
 </body>
 </html>
