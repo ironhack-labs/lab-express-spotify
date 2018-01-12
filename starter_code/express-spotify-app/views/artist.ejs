@@ -21,11 +21,29 @@
         </li>-->
     </ul>
     <section>
-        <form method="post" action="/artist">
-            <label for="artist">Enter artist:</label>
-            <input id="artist" type="text" name="artist"><br>
-            <input type="submit" value="Search for an Artist">
-        </form>
+        <h1>Artist: <%= body.artists.items[0].name %></h1>
+        <div class="card-columns">
+        <% body.artists.items.forEach( (item) => { 
+                console.log("ARTIST");
+                console.log(item.name);
+                if(item.images.length != 0){
+                    imageUrl = item.images[0].url;
+                }
+            %>
+            
+                <div class="card">
+                  <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
+                  <div class="card-body">
+                    <h5 class="card-title"><%= item.name %></h5>
+                    <p class="card-text"><button><a href="">link</a></button></p>
+                  </div>
+                </div>
+            
+        <% }); %>
+        </div>
     </section>
   </body>
 </html>
+
+
+

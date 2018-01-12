@@ -33,7 +33,8 @@ app.post('/artist', (req, res, next) => {
     //res.send(req.body.artist);
     spotifyApi.searchArtists(req.body.artist)
     .then((response) => {
-        res.send(response);
+        //res.send(response);
+        res.render('artist', response);
     }).catch((err) => {
 
     });
