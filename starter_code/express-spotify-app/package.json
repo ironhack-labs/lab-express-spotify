@@ -15,6 +15,7 @@
     "express-ejs-layouts": "^2.3.1",
     "morgan": "^1.9.0",
     "prettyjson": "^1.2.1",
-    "spotify-web-api-node": "^2.5.0"
+    "spotify-web-api-node": "^2.5.0",
+    "winston": "^2.4.0"
   }
 }

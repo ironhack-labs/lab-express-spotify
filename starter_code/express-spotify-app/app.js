@@ -2,6 +2,8 @@ var SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
 const app = express();
 const bodyParser = require('body-parser');
+const morgan = require('morgan');
+const winston = require('winston');
 //const expressLayouts = require('express-ejs-layouts');
 
 app.use(bodyParser.json());
@@ -11,6 +13,7 @@ app.set('views', __dirname + '/views');
 //app.set('layout', 'layouts/main-layout');
 app.set('view engine','ejs');
 app.use(express.static('public'));
+//app.use(morgan(`Request Method: :method, Request URL: :url, Response Time: :response-time(ms)`));
 
 // Remember to paste here your credentials
 var clientId = '0b37b3990fed4043a05be442fa3ee3db',
@@ -28,6 +31,35 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
+var logger = new winston.Logger({
+    transports: [
+        new winston.transports.File({
+            level: 'info',
+            filename: './logs/appjs.log',
+            handleExceptions: true,
+            json: true,
+            maxsize: 5242880, //5MB
+            maxFiles: 5,
+            colorize: false
+        }),
+        new winston.transports.Console({
+            level: 'debug',
+            handleExceptions: true,
+            json: false,
+            colorize: true
+        })
+    ],
+    exitOnError: false
+});
+
+logger.stream = {
+    write: function(message, encoding){
+        logger.info(message);
+    }
+};
+
+app.use(require("morgan")("combined", { stream: logger.stream }));
 
 app.get('/', (req, res, next) => {
     res.render('index');
