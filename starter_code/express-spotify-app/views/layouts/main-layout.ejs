@@ -6,11 +6,14 @@
     <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
   </head>
   <body>
-    <ul class="nav nav-tabs">
-        <li class="nav-item">
-          <a class="nav-link active" href="/">Home</a>
-        </li>
-    </ul>
+    <h1 class="text-center my-5">Spotify Ironhack Express Layout</h1>
+    <nav class="navbar navbar-dark bg-dark justify-content-between">
+        <a class="navbar-brand" href="/">Home</a>
+        <form class="form-inline" method="POST" action="/artist">
+          <input class="form-control mr-sm-2" type="search" placeholder="Type artist name here..." aria-label="Search" name="artist">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Artist</button>
+        </form>
+    </nav>
     <section>
         <%-body%>
     </section>

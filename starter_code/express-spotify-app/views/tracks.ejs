@@ -1,20 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Spotify Ironhack Express</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
-    <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
-  </head>
-  <body>
-    <h1 class="text-center my-5">Spotify Ironhack Express</h1>
-    <nav class="navbar navbar-dark bg-dark justify-content-between">
-        <a class="navbar-brand" href="/">Home</a>
-        <form class="form-inline" method="POST" action="/artist">
-          <input class="form-control mr-sm-2" type="search" placeholder="Type artist name here..." aria-label="Search" name="artist">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search Artist</button>
-        </form>
-    </nav>
-    <section>
+
         <h2 class="my-3">
             <span class="text-primary" <%= data.items.length %></span>
             <span class="text-dark">Tracks of album:</span>
@@ -40,6 +24,3 @@
             <% }); %>
             </tbody>
         </table>
-    </section>
-</body>
-</html>

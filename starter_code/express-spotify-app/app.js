@@ -4,13 +4,13 @@ const app = express();
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const winston = require('winston');
-//const expressLayouts = require('express-ejs-layouts');
+const expressLayouts = require('express-ejs-layouts');
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-//app.use(expressLayouts);
+app.use(expressLayouts);
 app.set('views', __dirname + '/views');
-//app.set('layout', 'layouts/main-layout');
+app.set('layout', 'layouts/main-layout');
 app.set('view engine','ejs');
 app.use(express.static('public'));
 //app.use(morgan(`Request Method: :method, Request URL: :url, Response Time: :response-time(ms)`));
