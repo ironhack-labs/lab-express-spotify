@@ -6,7 +6,7 @@
     <link rel="stylesheet" type="css/text" href="../public/stylesheets/style.css">
   </head>
   <body>
-    <h1>Spotify Ironhack Express</h1>
+    <h1 class="text-center my-5">Spotify Ironhack Express</h1>
     <nav class="navbar navbar-dark bg-dark justify-content-between">
         <a class="navbar-brand" href="/">Home</a>
         <form class="form-inline" method="POST" action="/artist">
@@ -15,7 +15,7 @@
         </form>
     </nav>
     <section>
-        <h2>
+        <h2 class="my-3">
             <span class="text-primary" <%= data.items.length %></span>
             <span class="text-dark">Albums of artist:</span>
             <span class="text-primary"><%= artist %></span>
