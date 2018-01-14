@@ -1,0 +1,65 @@
+/* Home Page */
+.home-heading {
+  background-image: url("/images/home-heading.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.home-search:hover, .home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Artist page */
+.artist-box-title{
+  background: grey;
+  text-align: center;
+  padding: 5px 0;
+  color:white;
+}
+.artist-box-link{
+  background: grey;
+  text-align: center;
+  padding: 5px 0;
+}
+.artist-link{
+  color:white;
+  background: coral;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 103px;
+  margin: 5px 0;
+  display: inline-block;
+}
+.center{
+  margin: 0 auto;
+}
