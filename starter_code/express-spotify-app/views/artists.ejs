@@ -1,0 +1,21 @@
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+    <div class="home-heading">
+<p> You're looking for the artist  <%= nameOfArtist %> </p>
+<ul>
+<% artistItems.forEach((item) => { %>
+  <li>
+      <%= item.name %> <a href="/albums/<%=item.id%>">View Albums</a>
+  </li>
+  <% }) %>
+</ul>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>
