@@ -1,6 +1,6 @@
 var SpotifyWebApi = require('spotify-web-api-node');
 
-// Remember to paste here your credentials
+// My Credentials to connect with the API
 var clientId = '32b37c52347645008746a05864ad8c48',
   clientSecret = 'b5ad69b5d478449c9afcececf99fc248';
 
@@ -11,47 +11,36 @@ var spotifyApi = new SpotifyWebApi({
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant().then(
-  function (data) {
+  function(data) {
     spotifyApi.setAccessToken(data.body['access_token']);
   },
-  function (err) {
+  function(err) {
     console.log('Something went wrong when retrieving an access token', err);
   }
 );
 /* require modules */
 const express = require('express');
-const expressLayouts = require('express-ejs-layouts');
-
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
+const morgan = require('morgan');
+const bodyParser = require('body-parser');
+//Con esto le decimos que vamos a utilizar el bodyParser
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({ extended: false }));
 
 /* Middlewares config */
-app.use(express.static('public'));
-app.use(expressLayouts);
 
-app.set('layout', 'layout');
+app.use(expressLayouts);
 app.set('views', __dirname + '/views');
+app.set('layout', 'layouts/main-layout');
 app.set('view engine', 'ejs');
+app.use(express.static('public'));
 
 /* Routes */
 
-app.get("/", (req, res) => {
-  res.send("Hola");
+app.get('/', (req, res, next) => {
+  res.render('index');
 });
 
-app.get("/hello", (req, res) => {
-  let number = Math.random();
-
-  res.render("hello", {
-    randomNumber: number
-  });
-});
-
-app.get("/bye", (req, res) => {
-  let someValues = ["A", "B", "C"];
-
-  res.render("bye", {
-    values: someValues
-  });
-});
-
-app.listen(3000, () => console.log("Ready!"));
+app.listen(3000, () => console.log('Ready!'));

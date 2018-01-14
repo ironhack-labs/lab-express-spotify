@@ -1,0 +1,28 @@
+<h2 class="my-3">
+    <span class="text-primary" <%=d ata.items.length %></span>
+    <span class="text-dark">Albums of artist:</span>
+    <span class="text-primary">
+        <%= artist %>
+    </span>
+</h2>
+<div class="card-columns">
+    <% data.items.forEach( (item) => { 
+                if(item.images.length != 0){
+                    imageUrl = item.images[0].url;
+                }
+            %>
+        <div class="card">
+            <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
+            <div class="card-body">
+                <h5 class="card-title">
+                    <%= item.name %>
+                </h5>
+                <p class="card-text">
+                    <button>
+                        <a href="/tracks/<%= item.id %>?album=<%= item.name %>">View Tracks</a>
+                    </button>
+                </p>
+            </div>
+        </div>
+        <% }); %>
+</div>
