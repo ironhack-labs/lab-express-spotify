@@ -1,0 +1,26 @@
+
+        <h2 class="my-3">
+            <span class="text-primary" <%= data.items.length %></span>
+            <span class="text-dark">Tracks of album:</span>
+            <span class="text-primary"><%= album %></span>
+            <span class="text-dark">of artist:</span>
+            <span class="text-primary"><%= artist %></span>
+        </h2>
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                    <th scope="col">Track</th>
+                    <th scope="col">Title</th>
+                    <th scope="col">Listen</th>
+                </tr>
+            </thead>
+            <tbody>
+            <% data.items.forEach( (item) => { %>
+                <tr>
+                    <th scope="row"><%= item.track_number %></th>
+                    <td><%= item.name %></td>
+                    <td><audio controls><source src="<%= item.preview_url %>" type="audio/mpeg"></audio></td>
+                </tr>
+            <% }); %>
+            </tbody>
+        </table>
