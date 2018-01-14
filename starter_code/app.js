@@ -43,4 +43,18 @@ app.get('/', (req, res, next) => {
   res.render('index');
 });
 
+app.post('/artists', (req, res, next) => {
+  //res.send(req.body.artist);
+  spotifyApi
+    .searchArtists(req.body.artist)
+    .then(response => {
+      //res.send(response);
+      res.render('artists', {
+        data: response,
+        keyword: req.body.artist
+      });
+    })
+    .catch(err => {});
+});
+
 app.listen(3000, () => console.log('Ready!'));

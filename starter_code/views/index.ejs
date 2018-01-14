@@ -11,11 +11,12 @@
 
 <body>
     <section class="form">
-        <form class="form-elements" action="">
-            <input class="input-form" type="text" placeholder="Type here the artist/group name">
-            <button>Search for an artist</button>
+        <form action="/artists" method="POST" class="form-elements">
+            <input class="input-form" type="search" placeholder="Type here the artist/group name" name="artist">
+            <button type="submit">Search for an artist</button>
         </form>
     </section>
+
 </body>
 
 </html>
