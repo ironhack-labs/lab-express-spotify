@@ -9,13 +9,25 @@
   <body>
     <div class="home-heading">
 <p> You're looking for the artist  <%= nameOfArtist %> </p>
-<ul>
-<% artistItems.forEach((item) => { %>
-  <li>
-      <%= item.name %> <a href="/albums/<%=item.id%>">View Albums</a>
-  </li>
-  <% }) %>
-</ul>
+
+<div>
+<% artistItems.items.forEach((elem)=>{ %>
+  <div>
+    <h1><%= elem.name %></h1>
+  </div>
+  <div>
+    <% if(elem.images[0]){ %>
+      <img src="<%=elem.images[0].url%>" alt="">
+    <% } else{ %>
+      <img src="../images/spotify-2.svg" alt="">
+      <p>sin imagen</p>
+    <% } %>
+  </div>
+  <div>
+    <a href="./albums/<%=elem.id%>">Show albums</a>
+  </div>
+<% }) %>
+</div>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 </body>
 </html>
