@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const app = express();
 var SpotifyWebApi = require('spotify-web-api-node');
 
+app.set('layout', 'layout');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
@@ -17,6 +18,9 @@ var spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
+
+app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()

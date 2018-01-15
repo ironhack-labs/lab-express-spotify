@@ -1,12 +1,13 @@
-<h1><%= search %></h1>
-<ul>
-    <% artists.forEach((artist) => { %>
-    <% if( artist.images[0] ){ %>    
-    <li>
-        <img src="<%= artist.images[0].url %>"/>
-        <h2><%= artist.name %></h2>
-        <a href="/albums/<%= artist.id %>">View Albums</a>
-        </form>
-    </li>
-    <% }}) %>
-</ul>
+
+        <h1><%= search %></h1>
+        <div id="container">
+            <% artists.forEach((artist) => { %>
+            <% if( artist.images[0] ){ %>    
+            <div>
+                <img src="<%= artist.images[0].url %>" height="300" width="300"/>
+                <h2><%= artist.name %></h2>
+                <a href="/albums/<%= artist.id %>">View Albums</a>
+                </form>
+            </div>
+            <% }}) %>
+        </div>
