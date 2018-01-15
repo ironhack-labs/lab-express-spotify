@@ -8,12 +8,11 @@
 </head>
 
 <body>
-  <div class="home-heading">
+
     <ul>
       <% trackItems.forEach((track) => { %>
         <li>
           <%= track.name %>
-            <%= track.preview_url %>
             <audio controls="controls">
               <source src="<%= track.preview_url %>"/>
             </audio>

@@ -1,3 +1,23 @@
-body{
-  background-color: pink
+.home-heading{
+  background-image: url("/images/backgroundImage.gif");
+  height: 100%;
+  width: 1300px;
+}
+
+.home-form{
+  padding-top: 100px;
+  padding-left: 200px;
+  padding-bottom: 30px;
+  width: 70%;
+}
+
+.btn{
+  background-color: green;
+  margin-top: 20px;
+  margin-left: 275px;
+}
+
+img{
+  width: 200px;
+  height: 200px
 }
