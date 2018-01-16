@@ -3,13 +3,15 @@ const express = require('express');
 const expressLayouts = require('express-ejs-layouts');
 const bodyParser = require("body-parser");
 const SpotifyWebApi = require('spotify-web-api-node');
+const morgan = require('morgan');
 
 const app = express();
 
 app.use(express.static('public'));
 app.use(expressLayouts);
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(
+  morgan(`Request Method: :method, Request URL: :url, Response Time: :response-time(ms)`));
 
 app.set('layout', 'layouts/main-layout');
 app.set('views', __dirname + '/views');
@@ -39,6 +41,8 @@ app.get('/', (req, res, next) => {
   res.render('index');
 });
 
+
+// Artist request
 app.get('/artists', (req, res) => {
   let artist = req.query.artist;
 
@@ -53,13 +57,13 @@ app.get('/artists', (req, res) => {
     });
 });
 
-
+// Artist selection
 app.get('/albums/:artistID',(req,res) =>{
      let artistID = req.params.artistID ;
   // console.log(artistID)
   spotifyApi.getArtistAlbums(artistID)
   .then(function(data) {
-    // console.log(data.body.items);
+    console.log(data.body.items);
     res.render('albums',{
       albumsOfArtits: data.body.items
     })
@@ -68,6 +72,7 @@ app.get('/albums/:artistID',(req,res) =>{
   });
 })
 
+// Album selection
 app.get('/tracks/:albumID',(req,res) =>{
   let tracksOfAlbum = req.params.albumID ;
 // console.log(artistID)

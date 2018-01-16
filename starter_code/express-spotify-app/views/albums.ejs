@@ -1,5 +1,21 @@
-<ul>
-  <% albumsOfArtits.forEach((elem)=>{ %>
-    <li><a href="/tracks/<%=elem.id%>"><%= elem.name %></a></li>
-  <% }) %>
-</ul>
+<div class="container">
+  <div class="row">
+    <% albumsOfArtits.forEach((elem)=>{ %>
+      <div class="col-xs-12 col-md-4">
+        <div class="artist-box-title">
+          <h1><%= elem.name %></h1>
+        </div>
+        <div class= "">
+          <% if(elem.images[0]){ %>
+            <img src="<%=elem.images[0].url%>" alt="" class="artist-img">
+          <% } else{ %>
+            <img src="../images/no_image.png" alt="" class="artist-img">
+          <% } %>
+        </div>
+        <div class="artist-box-link">
+          <a class="artist-link" href="/tracks/<%=elem.id%>">Show tracks</a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>
