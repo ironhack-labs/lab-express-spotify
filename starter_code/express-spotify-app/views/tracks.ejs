@@ -1,0 +1,15 @@
+<h1></h1>
+<ul>
+    <% tracks.forEach((track) => { %>
+    <li>
+     <h3><%= track.name %></h3>
+     <% if (track.preview_url) { %>
+        <audio controls="" name="media"><source src="<%= track.preview_url %>" type="audio/mpeg"></audio>
+      <% }%>
+
+    </li>
+    <% }) %>
+</ul>
+<h2>
+    <a href="/">Inicio</a>
+</h2>
