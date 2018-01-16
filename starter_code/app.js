@@ -27,7 +27,11 @@ const bodyParser = require('body-parser');
 //Con esto le decimos que vamos a utilizar el bodyParser
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
 /* Middlewares config */
 
@@ -36,25 +40,30 @@ app.set('views', __dirname + '/views');
 app.set('layout', 'layouts/main-layout');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-
+app.use(
+  morgan(
+    `Request Method: :method, Request URL: :url, Response Time: :response-time(ms)`
+  )
+);
 /* Routes */
 
 app.get('/', (req, res, next) => {
   res.render('index');
 });
 
-app.post('/artists', (req, res, next) => {
-  //res.send(req.body.artist);
-  spotifyApi
-    .searchArtists(req.body.artist)
-    .then(response => {
-      //res.send(response);
+app.post('/artists', function(req, res) {
+  let artist = req.body.artist;
+  spotifyApi.searchArtists(artist).then(
+    function(data) {
       res.render('artists', {
-        data: response,
-        keyword: req.body.artist
+        artist: req.body.artist,
+        data: data.body
       });
-    })
-    .catch(err => {});
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
 });
 
 app.listen(3000, () => console.log('Ready!'));

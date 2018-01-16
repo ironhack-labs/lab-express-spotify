@@ -1,28 +1,30 @@
-<h2 class="my-3">
-    <span class="text-primary" <%=d ata.body.artists.items.length %></span>
-    <span class="text-dark">Artists matches:</span>
-    <span class="text-primary">
-        <%= keyword %>
-    </span>
-</h2>
-<div class="card-columns">
-    <% data.body.artists.items.forEach( (item) => { 
-                if(item.images.length != 0){
-                    imageUrl = item.images[0].url;
-                }
-        %>
-        <div class="card">
-            <img class="card-img-top" src="<%= imageUrl %>" alt="<%= imageUrl %>">
-            <div class="card-body">
-                <h5 class="card-title">
-                    <%= item.name %>
-                </h5>
-                <p class="card-text">
-                    <button>
-                        <a href="/albums/<%= item.id %>">View Albums</a>
-                    </button>
-                </p>
+<section>
+    <h1>Bands</h1>
+    <h2>
+        We have founded
+        <%=data.artists.items.length%> bands whit the text:
+            <%=artist %>
+    </h2>
+    <div class="grid">
+        <% data.artists.items.forEach((band) => { %>
+            <div class="media">
+                <div class="media-left media-middle">
+                    <% if (typeof band.images != "undefined" && band.images != null && band.images.length > 0){%>
+                        <a href="/albums/<%=band.id%>">
+                            <img class="media-object" src="<%=band.images[0].url%>" alt="bandLogo" ">
+                </a>
+              <%}else {%>
+                <a href="/albums/<%=band.id%>">
+                            <img class="media-object" src="../images/No-image-found.jpg" alt="bandLogo" ">
+                </a>    
+              <%}%>
+          </div>
+          <div class="media-body ">
+            <h4 class="media-heading "><%=band.name%></h4>
+            <a href="/albums/<%=band.id%>" class="btn btn-default">View Albums</a>
+                </div>
             </div>
-        </div>
-        <% }); %>
-</div>
+            <%})%>
+
+    </div>
+</section>
