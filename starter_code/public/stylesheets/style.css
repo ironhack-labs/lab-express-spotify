@@ -1,9 +1,7 @@
 /*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
 
-
 /* Document
    ========================================================================== */
-
 
 /**
  * 1. Correct the line height in all browsers.
@@ -20,10 +18,8 @@ html {
   /* 2 */
 }
 
-
 /* Sections
    ========================================================================== */
-
 
 /**
  * Remove the margin in all browsers (opinionated).
@@ -32,7 +28,6 @@ html {
 body {
   margin: 0;
 }
-
 
 /**
  * Add the correct display in IE 9-.
@@ -47,7 +42,6 @@ section {
   display: block;
 }
 
-
 /**
  * Correct the font size and margin on `h1` elements within `section` and
  * `article` contexts in Chrome, Firefox, and Safari.
@@ -58,10 +52,8 @@ h1 {
   margin: 0.67em 0;
 }
 
-
 /* Grouping content
    ========================================================================== */
-
 
 /**
  * Add the correct display in IE 9-.
@@ -75,7 +67,6 @@ main {
   display: block;
 }
 
-
 /**
  * Add the correct margin in IE 8.
  */
@@ -83,7 +74,6 @@ main {
 figure {
   margin: 1em 40px;
 }
-
 
 /**
  * 1. Add the correct box sizing in Firefox.
@@ -99,7 +89,6 @@ hr {
   /* 2 */
 }
 
-
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
  * 2. Correct the odd `em` font sizing in all browsers.
@@ -112,10 +101,8 @@ pre {
   /* 2 */
 }
 
-
 /* Text-level semantics
    ========================================================================== */
-
 
 /**
  * 1. Remove the gray background on active links in IE 10.
@@ -128,7 +115,6 @@ a {
   -webkit-text-decoration-skip: objects;
   /* 2 */
 }
-
 
 /**
  * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
@@ -144,7 +130,6 @@ abbr[title] {
   /* 2 */
 }
 
-
 /**
  * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
  */
@@ -154,7 +139,6 @@ strong {
   font-weight: inherit;
 }
 
-
 /**
  * Add the correct font weight in Chrome, Edge, and Safari.
  */
@@ -163,7 +147,6 @@ b,
 strong {
   font-weight: bolder;
 }
-
 
 /**
  * 1. Correct the inheritance and scaling of font size in all browsers.
@@ -179,7 +162,6 @@ samp {
   /* 2 */
 }
 
-
 /**
  * Add the correct font style in Android 4.3-.
  */
@@ -187,7 +169,6 @@ samp {
 dfn {
   font-style: italic;
 }
-
 
 /**
  * Add the correct background and color in IE 9-.
@@ -198,7 +179,6 @@ mark {
   color: #000;
 }
 
-
 /**
  * Add the correct font size in all browsers.
  */
@@ -206,7 +186,6 @@ mark {
 small {
   font-size: 80%;
 }
-
 
 /**
  * Prevent `sub` and `sup` elements from affecting the line height in
@@ -229,10 +208,8 @@ sup {
   top: -0.5em;
 }
 
-
 /* Embedded content
    ========================================================================== */
-
 
 /**
  * Add the correct display in IE 9-.
@@ -243,7 +220,6 @@ video {
   display: inline-block;
 }
 
-
 /**
  * Add the correct display in iOS 4-7.
  */
@@ -253,7 +229,6 @@ audio:not([controls]) {
   height: 0;
 }
 
-
 /**
  * Remove the border on images inside links in IE 10-.
  */
@@ -261,7 +236,6 @@ audio:not([controls]) {
 img {
   border-style: none;
 }
-
 
 /**
  * Hide the overflow in IE.
@@ -271,10 +245,8 @@ svg:not(:root) {
   overflow: hidden;
 }
 
-
 /* Forms
    ========================================================================== */
-
 
 /**
  * 1. Change the font styles in all browsers (opinionated).
@@ -296,7 +268,6 @@ textarea {
   /* 2 */
 }
 
-
 /**
  * Show the overflow in IE.
  * 1. Show the overflow in Edge.
@@ -308,7 +279,6 @@ input {
   overflow: visible;
 }
 
-
 /**
  * Remove the inheritance of text transform in Edge, Firefox, and IE.
  * 1. Remove the inheritance of text transform in Firefox.
@@ -319,7 +289,6 @@ select {
   /* 1 */
   text-transform: none;
 }
-
 
 /**
  * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
@@ -338,7 +307,6 @@ html [type='button'],
   /* 2 */
 }
 
-
 /**
  * Remove the inner border and padding in Firefox.
  */
@@ -351,7 +319,6 @@ button::-moz-focus-inner,
   padding: 0;
 }
 
-
 /**
  * Restore the focus styles unset by the previous rule.
  */
@@ -363,7 +330,6 @@ button:-moz-focusring,
   outline: 1px dotted ButtonText;
 }
 
-
 /**
  * Correct the padding in Firefox.
  */
@@ -371,7 +337,6 @@ button:-moz-focusring,
 fieldset {
   padding: 0.35em 0.75em 0.625em;
 }
-
 
 /**
  * 1. Correct the text wrapping in Edge and IE.
@@ -395,7 +360,6 @@ legend {
   /* 1 */
 }
 
-
 /**
  * 1. Add the correct display in IE 9-.
  * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
@@ -408,7 +372,6 @@ progress {
   /* 2 */
 }
 
-
 /**
  * Remove the default vertical scrollbar in IE.
  */
@@ -416,7 +379,6 @@ progress {
 textarea {
   overflow: auto;
 }
-
 
 /**
  * 1. Add the correct box sizing in IE 10-.
@@ -431,7 +393,6 @@ textarea {
   /* 2 */
 }
 
-
 /**
  * Correct the cursor style of increment and decrement buttons in Chrome.
  */
@@ -440,7 +401,6 @@ textarea {
 [type='number']::-webkit-outer-spin-button {
   height: auto;
 }
-
 
 /**
  * 1. Correct the odd appearance in Chrome and Safari.
@@ -454,7 +414,6 @@ textarea {
   /* 2 */
 }
 
-
 /**
  * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
  */
@@ -463,7 +422,6 @@ textarea {
 [type='search']::-webkit-search-decoration {
   -webkit-appearance: none;
 }
-
 
 /**
  * 1. Correct the inability to style clickable types in iOS and Safari.
@@ -477,10 +435,8 @@ textarea {
   /* 2 */
 }
 
-
 /* Interactive
    ========================================================================== */
-
 
 /*
  * Add the correct display in IE 9-.
@@ -495,7 +451,6 @@ menu {
   display: block;
 }
 
-
 /*
  * Add the correct display in all browsers.
  */
@@ -504,10 +459,8 @@ summary {
   display: list-item;
 }
 
-
 /* Scripting
    ========================================================================== */
-
 
 /**
  * Add the correct display in IE 9-.
@@ -517,7 +470,6 @@ canvas {
   display: inline-block;
 }
 
-
 /**
  * Add the correct display in IE.
  */
@@ -526,10 +478,8 @@ template {
   display: none;
 }
 
-
 /* Hidden
    ========================================================================== */
-
 
 /**
  * Add the correct display in IE 10-.
@@ -539,10 +489,9 @@ template {
   display: none;
 }
 
-
 /* ******* MY CSS ************ */
 
-body {
+.index-wrapper {
   background-image: url('../images/home-heading.jpg');
   background-repeat: no-repeat, repeat;
   background-position: center;
@@ -591,4 +540,71 @@ form button {
   color: #fff;
   cursor: pointer;
   outline: none;
+}
+
+/* ********** ARTIST.EJS ************* */
+
+.artist-wrapper {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: blur(7px);
+  width: calc(100vw + 30px);
+  height: calc(100vh + 30px);
+  margin: -15px;
+}
+.artist-album {
+  opacity: 1;
+  z-index: 2;
+  position: absolute;
+  top: 40%;
+  left: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.artist-content img {
+  width: 40%;
+  height: 100%;
+  border-radius: 50%;
+}
+.artist-content {
+  flex-direction: column;
+}
+.artist-content h1 {
+  color: #fff;
+  font-size: 72px;
+  line-height: 82px;
+  letter-spacing: -0.005em;
+}
+.artist-album button {
+  background-color: #1db954;
+  padding: 11px 44px;
+  font-size: 11px;
+  line-height: 16px;
+  letter-spacing: 0.015em;
+  font-weight: 200;
+  color: hsla(0, 0%, 100%, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  transition: none 33ms cubic-bezier(0.3, 0, 0.7, 1);
+  transition-property: all;
+  color: #fff;
+  margin-left: -200px;
+  margin-top: 174px;
+  display: inline-block;
+  margin-bottom: 0;
+  text-align: center;
+  border: 0;
+  border-radius: 500px;
+  padding: 13px;
+  min-width: 130px;
+  white-space: normal;
+  will-change: transform;
+  line-height: 1.6;
+  vertical-align: middle;
+}
+.artist-album button a {
+  color: #fff;
+  text-decoration: none;
 }

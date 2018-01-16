@@ -1,0 +1,21 @@
+<section>
+    <h1>
+        Tracks for band:
+        <%= band %> -
+            <%= album.name %>
+    </h1>
+    <div class="bar">
+        <h3>Title</h3>
+        <h3>Listen</h3>
+    </div>
+    <% tracks.forEach((song) => { %>
+        <div class="tracks">
+            <h4>
+                <%= song.name %>
+            </h4>
+            <audio src="<%= song.preview_url %>" controls>
+                <p>Tu navegador no implementa el elemento audio</p>
+            </audio>
+        </div>
+        <% }) %>
+</section>

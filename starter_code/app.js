@@ -27,7 +27,7 @@ const bodyParser = require('body-parser');
 //Con esto le decimos que vamos a utilizar el bodyParser
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({extended: false}));
 
 /* Middlewares config */
 
@@ -46,15 +46,60 @@ app.get('/', (req, res, next) => {
 app.post('/artists', (req, res, next) => {
   //res.send(req.body.artist);
   spotifyApi
+    //req.body.artist hace referencia a lo que pido en mi formulario
+    // body es el cuerpo del formulario y artist es el atributo name
     .searchArtists(req.body.artist)
+    // response es lo que recibo de la función
     .then(response => {
-      //res.send(response);
+      //para saber lo que me devuelve hago un console.log
+      console.log(response);
+      //Aqui renderizo la vista
       res.render('artists', {
+        //declaro las variables que voy a utilizar en la vista
         data: response,
-        keyword: req.body.artist
+        artistName: req.body.artist
       });
     })
     .catch(err => {});
 });
+app.get('/artists', (req, res, next) => {
+  res.render('artists');
+});
 
-app.listen(3000, () => console.log('Ready!'));
+app.get('/albums/:artistId', (req, res) => {
+  //para saber el elemento que tengo que añadir a la url que
+  // en este caso es /:artistId
+  //console.log(req.params);
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
+    function(data) {
+      res.render('albums', {
+        //defino data como todos los datos que me llegan y a partir
+        // de ahi le voy pidiendo lo que necesito
+        data: data.body,
+        band: data.body.items[0].artists[0].name
+      });
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+});
+
+app.get('/tracks/:albumId', (req, res) => {
+  // Get tracks in an album
+  spotifyApi.getAlbum(req.params.albumId).then(
+    data => {
+      //console.log(data.body.tracks.items);
+      res.render('tracks', {
+        album: data.body,
+        tracks: data.body.tracks.items,
+        band: data.body.artists[0].name
+      });
+    },
+    function(err) {
+      console.log('Something went wrong!', err);
+    }
+  );
+});
+
+app.listen(3000, () => console.log('You Can Do It!'));
