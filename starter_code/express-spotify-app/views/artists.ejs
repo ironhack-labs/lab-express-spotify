@@ -1,0 +1,35 @@
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Spotify</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+    <p> You're looking for the artist
+      <%= nameOfArtist %>
+    </p>
+
+    <div>
+      <% artistItems.items.forEach((elem)=>{ %>
+        <div>
+          <h1><%= elem.name %></h1>
+        </div>
+        <div>
+          <% if(elem.images[0]){ %>
+            <img src="<%=elem.images[0].url%>" alt="">
+            <% } else{ %>
+              <img src="../images/spotify-2.svg" alt="">
+              <p>sin imagen</p>
+              <% } %>
+        </div>
+        <div>
+          <a href="./albums/<%=elem.id%>">Show albums</a>
+        </div>
+        <% }) %>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+
+</html>
