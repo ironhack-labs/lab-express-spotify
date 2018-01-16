@@ -542,7 +542,7 @@ form button {
   outline: none;
 }
 
-/* ********** ARTIST.EJS ************* */
+/* ********** ARTISTS.EJS ************* */
 
 .artist-wrapper {
   background-repeat: no-repeat;
@@ -607,4 +607,10 @@ form button {
 .artist-album button a {
   color: #fff;
   text-decoration: none;
+}
+
+/* ********** ALBUMS.EJS ************* */
+
+.albums-wrapper {
+  background: rebeccapurple;
 }

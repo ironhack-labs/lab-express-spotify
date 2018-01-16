@@ -1,6 +1,5 @@
 <div class="artist-wrapper" style='background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.5) 40%), url("<%= data.body.artists.items[0].images[0].url %>")'>
 </div>
-
 <div class="artist-album">
     <div class="artist-content">
         <h1 class="">
@@ -9,9 +8,7 @@
         <% data.body.artists.items[0].images[0].url %>
             <img class="" src="<%= data.body.artists.items[0].images[0].url %>">
     </div>
-
     <button>
         <a href="/albums/<%= data.body.artists.items[0].id %>">View Albums</a>
     </button>
-
 </div>
