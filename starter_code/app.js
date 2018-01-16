@@ -27,7 +27,11 @@ const bodyParser = require('body-parser');
 //Con esto le decimos que vamos a utilizar el bodyParser
 
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded({extended: false}));
+app.use(
+  bodyParser.urlencoded({
+    extended: true
+  })
+);
 
 /* Middlewares config */
 
@@ -36,7 +40,11 @@ app.set('views', __dirname + '/views');
 app.set('layout', 'layouts/main-layout');
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
-
+app.use(
+  morgan(
+    `Request Method: :method, Request URL: :url, Response Time: :response-time(ms)`
+  )
+);
 /* Routes */
 
 app.get('/', (req, res, next) => {
@@ -50,17 +58,21 @@ app.post('/artists', (req, res, next) => {
     // body es el cuerpo del formulario y artist es el atributo name
     .searchArtists(req.body.artist)
     // response es lo que recibo de la función
-    .then(response => {
-      //para saber lo que me devuelve hago un console.log
-      console.log(response);
-      //Aqui renderizo la vista
-      res.render('artists', {
-        //declaro las variables que voy a utilizar en la vista
-        data: response,
-        artistName: req.body.artist
-      });
-    })
-    .catch(err => {});
+    .then(
+      response => {
+        //para saber lo que me devuelve hago un console.log
+        console.log(response);
+        //Aqui renderizo la vista
+        res.render('artists', {
+          //declaro las variables que voy a utilizar en la vista
+          data: response,
+          artistName: req.body.artist
+        });
+      },
+      function(err) {
+        console.error(err);
+      }
+    );
 });
 app.get('/artists', (req, res, next) => {
   res.render('artists');
