@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="row">
+    <div class="source-title col-xs-12">
+      <div class="col-xs-12 col-md-9">
+        <h1>Title</h1>
+      </div>
+      <div class="col-xs-12 col-md-3">
+        <h1>Listen</h1>
+      </div>
+    </div>
+    <% tracks.forEach((elem)=>{ %>
+      <div class="source-element col-xs-12">
+        <div class="col-xs-12 col-md-8">
+          <p class="source-txt"><%= elem.name %></p>
+        </div>
+        <div class="col-xs-12 col-md-4 source-align">
+          <audio controls>
+            <source src="<%= elem.preview_url%>">
+          </audio>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>

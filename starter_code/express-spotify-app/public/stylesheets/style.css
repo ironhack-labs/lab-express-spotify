@@ -1,0 +1,121 @@
+/* Home Page */
+.home-heading {
+  background-image: url("/images/home-heading.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.home-search:hover, .home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/* Artist page */
+h1{
+  min-height: 78px;
+  color: white;
+  overflow: auto;
+  max-height: 80px;
+}
+a{
+  height: auto;
+}
+body{
+  background-color: #333;
+}
+.artist-box-title{
+  padding: 0;
+  text-align: center;
+  font-size: 22px;
+  margin: 60px 0 0;
+
+}
+.artist-box-link{
+  background: grey;
+  text-align: center;
+  padding: 5px 0;
+}
+.artist-link{
+  color: white;
+  background: coral;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 28px;
+  margin: 5px 0;
+  min-width: 149px;
+  display: inline-block;
+}
+.artist-link:hover{
+  color: white;
+}
+.artist-img{
+  width: 359px;
+  height: 359px;
+}
+.artist-link{
+  color: white;
+  background: coral;
+  font-size: 16px;
+  text-align: center;
+  padding: 10px 0;
+  border-radius: 28px;
+  margin: 5px 0;
+  min-width: 149px;
+  display: inline-block;
+}
+.source-txt{
+  color: white;
+  display: inline-block;
+  vertical-align: text-bottom;
+  padding: 5px;
+  margin: 0 50px 0 0;
+  min-height: 49px;
+  font-size: 26px;
+}
+.source-element{
+  padding: 0;
+  background: GREY;
+  margin-top: 6px;
+}
+.source-align{
+  text-align: right;
+  display: inline-block;
+  margin-top: 10px;
+}
+
+/* tracks */
+.source-title{
+  max-height: 73px;
+  background: coral;
+  padding-top: 10px;
+}
