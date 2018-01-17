@@ -1,21 +1,26 @@
-<section>
-    <h1>
-        Tracks for band:
-        <%= band %> -
-            <%= album.name %>
-    </h1>
-    <div class="bar">
-        <h3>Title</h3>
-        <h3>Listen</h3>
+<div class="artist-wrapper tracks-wrapper" style='background-image: linear-gradient(90deg,rgba(0, 0, 0, 1) 0%,rgba(0, 0, 0, 0.5) 40%), url("<%= album.images[0].url %>")'>
+</div>
+<div class="tracks-elements">
+    <div class="thumb-album">
+        <img src="<%=album.images[0].url%>" alt="">
+        <h1>
+            <%= band %>
+        </h1>
     </div>
-    <% tracks.forEach((song) => { %>
-        <div class="tracks">
-            <h4>
-                <%= song.name %>
-            </h4>
-            <audio src="<%= song.preview_url %>" controls>
-                <p>Tu navegador no implementa el elemento audio</p>
-            </audio>
+    <section>
+
+        <div class="bar">
+            <h3>Title</h3>
         </div>
-        <% }) %>
-</section>
+        <% tracks.forEach((song) => { %>
+            <div class="tracks">
+                <h4>
+                    <%= song.name %>
+                </h4>
+                <audio id="music" src="<%= song.preview_url %>" controls="controls">
+                    <p>Tu navegador no implementa el elemento audio</p>
+                </audio>
+            </div>
+            <% }) %>
+    </section>
+</div>

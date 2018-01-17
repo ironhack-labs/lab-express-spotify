@@ -643,3 +643,40 @@ form button {
   color: #fff;
   text-decoration: none;
 }
+
+/* ********** TRACKS.EJS ************* */
+.tracks-elements {
+  position: relative;
+  z-index: 10;
+  top: 0;
+  display: flex;
+  height: 100%;
+}
+.thumb-album img {
+  width: 300px;
+  height: 300px;
+}
+.thumb-album {
+  text-align: center;
+  margin-top: 20%;
+  margin-left: 10%;
+}
+.thumb-album h1 {
+  color: #fff;
+}
+.tracks-wrapper {
+  background-size: cover;
+  position: absolute;
+  z-index: 0;
+}
+section {
+  height: 100vh;
+  overflow-y: scroll;
+  margin-left: 10%;
+}
+.tracks {
+  overflow-y: scroll;
+}
+.tracks h4 {
+  color: #fff;
+}
