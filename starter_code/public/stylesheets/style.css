@@ -669,7 +669,7 @@ form button {
   position: absolute;
   z-index: 0;
 }
-section {
+.audio-controls {
   height: 100vh;
   overflow-y: scroll;
   margin-left: 10%;
