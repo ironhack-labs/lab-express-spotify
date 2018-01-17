@@ -1,22 +1,18 @@
 <div class="albums-wrapper">
-    <div>
-        <% data.items.forEach((album) => { %>
-            <div class="">
-                <div class="">
-                    <a href="/tracks/<%=album.id%>">
-                        <img src="<%=album.images[0].url%>" alt="bandLogo">
-                    </a>
-                </div>
-                <div class="">
-                    <h1 class="">
-                        <%= album.name %>
-                    </h1>
-                    <h2>
-                        <%=band%>
-                    </h2>
-                    <a href="/tracks/<%=album.id%>" class="play-btn">Listen Tracks</a>
-                </div>
+    <% data.items.forEach((album) => { %>
+        <div class="album-elements">
+            <img src="<%=album.images[0].url%>" alt="bandLogo">
+            <div class="album-info">
+                <h1 class="">
+                    <%= album.name %>
+                </h1>
+                <h2>
+                    <%=band%>
+                </h2>
+                <button class="btn-spoty btn-spoty-albums" href="/tracks/<%=album.id%>" class="play-btn">
+                    <a href="/tracks/<%=album.id%>">Tracks</a>
+                </button>
             </div>
-            <%})%>
-    </div>
+        </div>
+        <%})%>
 </div>

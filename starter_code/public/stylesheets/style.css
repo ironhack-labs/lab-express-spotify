@@ -493,18 +493,22 @@ template {
 
 .index-wrapper {
   background-image: url('../images/home-heading.jpg');
-  background-repeat: no-repeat, repeat;
+  background-repeat: no-repeat;
   background-position: center;
+  background-size: cover;
+  height: 100vh;
+  position: relative;
+  text-align: center;
 }
 
 .form {
   background: rgba(255, 255, 255, 0.7);
   align-content: center;
   width: 50%;
-  margin-left: 25%;
-  margin-top: 25%;
+  top: 30%;
+  left: 25%;
+  position: absolute;
 }
-
 .form form {
   display: flex;
   flex-direction: column;
@@ -577,7 +581,7 @@ form button {
   line-height: 82px;
   letter-spacing: -0.005em;
 }
-.artist-album button {
+.btn-spoty {
   background-color: #1db954;
   padding: 11px 44px;
   font-size: 11px;
@@ -612,5 +616,30 @@ form button {
 /* ********** ALBUMS.EJS ************* */
 
 .albums-wrapper {
-  background: rebeccapurple;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  background: #222326;
+}
+.album-elements {
+  width: 16%;
+  text-align: center;
+  margin: 2%;
+}
+.album-elements h1 {
+  font-size: 24px;
+  color: #fff;
+}
+.album-elements h2 {
+  color: #919496;
+}
+.album-elements img {
+  width: 100%;
+}
+.btn-spoty-albums {
+  margin: 0;
+}
+.btn-spoty-albums a {
+  color: #fff;
+  text-decoration: none;
 }
