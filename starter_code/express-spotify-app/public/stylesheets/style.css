@@ -38,7 +38,7 @@ body {
   .item-footer a {
     color: white;
     margin-top: 8px;
-    background-color: #ff6666;
+    background-color: #1AB26B;
   }
   
   .view-more {
@@ -66,14 +66,14 @@ body {
     background-color: black;
     border-radius: 0;
     color: white;
-    background-color: #ff6666;
-    border: 1px solid #ff6666;
+    background-color: #1AB26B;
+    border: 1px solid #1AB26B;
   }
   
   .home-search:hover, .home-search:active {
-    color: #ff6666;
+    color: #1AB26B;
     background-color: white;
-    border: 1px solid #ff6666;
+    border: 1px solid #1AB26B;
   }
   
   .form-wrapper {
@@ -110,7 +110,7 @@ body {
   .artist-info-container a {
     color: #fff;
     font-size: 12px;
-    background-color: #F86967;
+    background-color: #1AB26B;
     border-radius: 5px;
     padding: 4px 10px;
   }
@@ -130,4 +130,15 @@ body {
     padding: 20px 10px;
     color: #F6F6F6;
     font-size: 20px;
+  }
+
+  .logo {
+    height: 40px;
+    width: 140px;
+    display: inline-block;
+    float: left;
+    background-image: url("../images/spotify-logo.png");
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 10px;
   }
