@@ -1,0 +1,18 @@
+<div class="albums-wrapper">
+    <% data.items.forEach((album) => { %>
+        <div class="album-elements">
+            <img src="<%=album.images[0].url%>" alt="bandLogo">
+            <div class="album-info">
+                <h1 class="">
+                    <%= album.name %>
+                </h1>
+                <h2>
+                    <%=band%>
+                </h2>
+                <button class="btn-spoty btn-spoty-albums" href="/tracks/<%=album.id%>" class="play-btn">
+                    <a href="/tracks/<%=album.id%>">Tracks</a>
+                </button>
+            </div>
+        </div>
+        <%})%>
+</div>
