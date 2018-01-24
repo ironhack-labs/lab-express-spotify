@@ -1,0 +1,17 @@
+<body>
+  <a href="/">NEW SEARCH</a>
+  <div class="row">
+    <span class="col-lg-4">Title</span>
+    <span class="col-lg-4">Listen</span>
+  </div>
+  <%for(i=0; i<tracks.length; i++){ %>
+  <div class="row">
+    <div class="col-lg-4">
+      <p><%=tracks[i].name%></p>
+  </div>
+  <div class="col-lg-4">
+    <audio controls="" name="media"><source src="<%=tracks[i].preview_url%>" type="audio/mpeg"></audio>
+  </div>
+  </div>
+  <% } %>
+</body>
