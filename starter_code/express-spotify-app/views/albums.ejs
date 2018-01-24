@@ -1,0 +1,17 @@
+<body>
+  <a href="/">NEW SEARCH</a>
+  <h1> Albums for</h1>
+  <div class="row">
+    <% for(i=0; i<3; i++){ %>
+      <div class="col-lg-4">
+        <img src="<%=albums[i].images[0].url%>">
+          <div>
+            <p>
+            <%=albums[i].name%>
+            </p>
+            <a href="/tracks/<%=albums[i].id%>">View Tracks</a>
+          </div>
+      </div>
+    <%}%>
+  </div>
+</body>
