@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row slide">
+    <% artists.forEach(artist => { %>
+      <div class="artist-container">
+        <% if (artist.images[0]) { %>
+          <img src="<%= artist.images[0].url %>" alt="" class="artist-img">
+        <% } else { %>
+          <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="" class="artist-img">
+        <% } %>
+        <div class="artist-info-container">
+          <p><%= artist.name %></p>
+          <a href="/albums/<%= artist.id %>"><button class="btn blue darken-2 waves-effect waves-light">View Albums</button></a>
+        </div>
+      </div>
+    <% }) %>
+  </div>
+</div>

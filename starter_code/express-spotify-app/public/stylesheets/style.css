@@ -1,0 +1,58 @@
+body {
+  background-image: url('http://www.guoguiyan.com/data/out/183/70137612-stage-wallpapers.jpeg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.finder {
+  display: flex;
+}
+
+.container {
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.row {
+  padding: 60px 150px;
+  background-color: rgba(255, 255, 255, 0.37);
+}
+
+.artist-container {
+  padding: 10px 40px;
+  margin: 5vh;
+}
+
+.artist-img {
+  width: 100%;
+}
+
+.artist-info-container {
+  background-color: #rgba(255, 255, 255, 0.37);
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artist-info-container p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+.header-row {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+}
+
+.track-item {
+  background-color: #F6F6F6;
+  margin-bottom: 2px;
+  padding: 10px 0;
+}
+
+.track-item p {
+  margin-bottom: 0;
+}

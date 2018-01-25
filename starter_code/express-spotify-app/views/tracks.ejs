@@ -1,0 +1,19 @@
+<div class="container">
+  <div class="row header-row">
+    <span class="col-lg-8">Title</span>
+    <span class="col-lg-4">Listen</span>
+  </div>
+
+  <% tracks.forEach((track) => { %>
+    <div class="row track-item">
+      <div class="col-lg-8">
+        <p><%= track.name %></p>
+      </div>
+      <div class="col-lg-4">
+        <% if (track.preview_url) { %>
+          <audio controls="" name="media"><source src="<%= track.preview_url %>" type="audio/mpeg"></audio>
+        <% }%>
+      </div>
+    </div>
+  <% }) %>
+</div>
