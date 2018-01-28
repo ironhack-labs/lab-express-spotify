@@ -1,0 +1,54 @@
+
+
+<div class="gen-container">
+  <h1 class="artist-title">Search results for: <%= search %></h1>
+  <div class="new-search">
+    <a class="home" href="/">New search</a>
+  </div>
+
+  <div class="artist-container">
+
+    <% artists.forEach((artist) => { %>
+      <div class="artist">
+        <div class="artist-name-div">
+          <h3><%= artist.name %></h3>
+        </div>
+
+        <div class="image">
+        <%  if(artist.images[0] !== undefined) {
+          let url = artist.images[0].url %>
+            <img src='<%= url %>'></img>
+          <% } else { %>
+            <img class="smaller" src='images/spotify-logo-button-grey.svg'></img>
+          <% } %>
+        </div>
+
+        <div class="popularity">
+          <p>Popularity:</p>
+          <div class="meter-cont">
+            <div class="popularity-meter"
+            style="width:<%= artist.popularity %>px;
+            height: 8px;
+            background-color: #4d5d53;">
+            </div>
+          </div>
+        </div>
+
+        <div class='view-albums'>
+          <button class='album-btn' type="button" name="button"><a class="ref" href="/albums/<%= artist.id %>">View albums</a></button>
+        </div>
+
+        <div class='view-albums'>
+          <button class='album-btn' type="button" name="button"><a class="ref" href="albums/toptracks/<%= artist.id %>">Listen toptracks</a></button>
+        </div>
+
+        <div class='genres'>
+          <% if(artist.genres.toString() !== '') { %>
+            <p>
+              <%= artist.genres.toString() %>
+            </p>
+            <% } %>
+        </div>
+      </div>
+      <% }) %>
+  </div>

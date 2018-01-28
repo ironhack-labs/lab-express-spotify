@@ -1,0 +1,55 @@
+
+
+<div class="gen-container">
+  <h1 class="artist-title">Albums from: <%= albums[0].artists[0].name %></h1>
+  <div class="new-search">
+    <a class="home" href="/">New search</a>
+  </div>
+
+<div class="flex-container">
+  <% albums.forEach((album) => { %>
+  <div class="album-container">
+
+
+      <div class="artist">
+        <div class="album-name-div">
+          <hr>
+          <h3><%= album.name %></h3>
+        </div>
+
+        <div class="image">
+        <%  if(album.images[0] !== undefined) {
+          let url = album.images[0].url %>
+            <img src='<%= url %>'></img>
+          <% } else { %>
+            <img class="smaller" src='images/spotify-logo-button-grey.svg'></img>
+          <% } %>
+        </div>
+
+        <div class='view-albums'>
+          <button class='album-btn' type="button" name="button"><a class="ref" href="<%= album.external_urls.spotify %>">Listen on spotify</a></button>
+        </div>
+
+        <div class='view-albums'>
+          <button class='album-btn' type="button" name="button"><a class="ref" href="tracks/<%= album.id %>">Listen tracks</a></button>
+        </div>
+
+        <div class='album-type'>
+          <% if(album.type.toString() !== '') { %>
+            <p>Release type:
+              <%= album.type.toString() %>
+            </p>
+            <% } %>
+        </div>
+
+
+
+        </div>
+
+
+
+      </div>
+      <% }) %>
+</div>
+
+  </div>

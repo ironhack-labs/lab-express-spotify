@@ -1,0 +1,28 @@
+<div class="gen-container">
+  <h1 class="artist-title">Albums from: <%= albums.artists[0].name %></h1>
+
+</div>
+
+<div class="artist-container">
+
+  <% albums.forEach((album) => { %>
+    <div class="artist">
+      <div class="artist-name-div">
+        <h3><%= album.name %></h3>
+      </div>
+
+      <div class="image">
+      <%  if(album.images[0] !== undefined) {
+        let url = album.images[0].url %>
+          <img src='<%= url %>'></img>
+        <% } else { %>
+          <img class="smaller" src='images/spotify-logo-button-grey.svg'></img>
+        <% } %>
+      </div>
+
+      <div class='view-albums'>
+        <button class='album-btn' type="button" name="button"><a class="ref" href="/albums/<%= artist.id %>">View albums</a></button>
+      </div>
+    </div>
+    <% }) %>
+</div>
