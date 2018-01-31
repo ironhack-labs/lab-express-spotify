@@ -1,0 +1,11 @@
+body{
+  text-align: center;
+  font-family: sans-serif;
+}
+.artist-img{
+  width: 500px;
+  margin-bottom: 30px;
+}
+a{
+  display: block;
+}
