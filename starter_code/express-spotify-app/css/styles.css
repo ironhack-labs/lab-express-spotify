@@ -1,0 +1,14 @@
+body {
+    background-image: "thumb1.jpg";
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
