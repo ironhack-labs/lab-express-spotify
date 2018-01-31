@@ -1,0 +1,18 @@
+<div class='search-container'>
+<% for (let i = 0; i < data.length; i++) {%>
+    <div class='item-wrapper'>
+    <div> 
+        <p><%= data[i].track_number %></p>
+    </div>
+    <div>
+        <p><%= data[i].name %></p>
+    </div>
+    <div>
+        <audio controls>
+            <source src="<%= data[i].preview_url %>" type="audio/mpeg">
+        </audio> 
+    </div>
+    </div>    
+<% } %>
+
+</div>

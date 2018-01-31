@@ -1,7 +1,28 @@
+body {
+    background-image: url('../images/home-heading.jpg');
+    background-size: cover;
+    color: white;
+}
+
 .search-container {
-    display: float;
+    display: flex;
+    flex-direction: column;
 }
 
 .item-wrapper {
+    display: flex;
+    justify-content: space-between;
     margin-bottom: 10px;
+    border: 1px black solid;
+    padding: 0 10px;
+    background-color: firebrick;
+}
+
+.item-wrapper audio{
+    margin-top: 8px;
+}
+
+.name-button-box {
+    display: flex;
+    flex-direction: column;
 }

@@ -43,7 +43,7 @@ app.get('/', (req, res) => {
 app.post('/artists', (req, res) => {
   let artistSearched = req.body.artist;
   spotifyApi.searchArtists(artistSearched).then(function (data) {
-    res.render('lists', {data: data.body.artists.items });
+    res.render('artists', {data: data.body.artists.items});
   }, function (err) {
     console.error(err);
   });
@@ -52,10 +52,24 @@ app.post('/artists', (req, res) => {
 app.get('/albums/:artistId', (req, res) => {
   let artistId = req.params.artistId;
   spotifyApi.getArtistAlbums(artistId).then(function (data) {
-    res.render('lists', { data: data.body.items });
+    res.render('albums', {data: data.body.items});
   }, function (err) {
     console.error(err);
   });
+});
+
+app.get('/listen-album/:albumId', (req, res) => {
+  let albumId = req.params.albumId;
+  spotifyApi
+    .getAlbumTracks(albumId, { limit: 10, offset: 1 })
+    .then(
+      function (data) {
+        res.render('tracklist', { data: data.body.items });
+      },
+      function (err) {
+        console.log('Something went wrong!', err);
+      }
+    );
 });
 
 // Start the server
