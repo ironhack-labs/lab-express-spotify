@@ -37,21 +37,23 @@ app.get('/', (req, res, next) => {
 app.get("/artists", (req, res, next) => {
     spotifyApi.searchArtists(req.query.artists)
         .then((data) => {
-            var artists = data.body.artists.items;
-            res.render("artists", {artists});
+          var artists = data.body.artists.items;
+          res.render("artists", {artists});
         }, function(err) {
-            console.log(err);
+          console.log(err);
         });
 });
 
-app.get("/album", (req, res, next) => {
-    spotifyApi.getArtistAlbums('artistId')
-    .then(function(data) {
-      var album = data.body.album.title;
-      res.render("album", album)
-    }, function(err) {
-      console.log(err);
-    });
+app.get("/album/:artistId", (req, res, next) => {
+    spotifyApi.getArtistAlbums(req.params.artistId)
+        .then(function(data) {
+            var album = {
+            album: data.body.items
+        };
+            res.render("album", album)
+        }, function(err) {
+            console.log(err);
+        });
 });
 
 
