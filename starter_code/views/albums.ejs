@@ -1,0 +1,13 @@
+
+<% for(var i=0; i<albums.length; i++){ %>
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="<%=albums[i].images[1].url%>" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title"><%=albums[i].name%></h5>
+          <p class="card-text"></p>
+          <a href="#" class="btn btn-primary">See albums</a>
+        </div>
+    </div>
+    
+  <% } %>

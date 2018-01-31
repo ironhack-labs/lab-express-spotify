@@ -2,8 +2,13 @@ h1{
   color: red;
 }
 
+.card-body{
+  text-align: center;
+}
+
 .wrapper{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
   align-items: center;
+  flex-wrap: wrap;
 }

@@ -1,3 +1,13 @@
-<div>
-  <%=artists%>
-</div>
+
+<% for(var i=0; i<artists.length; i++){ %>
+
+  <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="<%=artists[i].images[1].url%>" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title"><%=artists[i].name%></h5>
+        <p class="card-text"></p>
+        <a href="/albums/<%=artists[i].id%>" class="btn btn-primary">See albums</a>
+      </div>
+  </div>
+  
+<% } %>
