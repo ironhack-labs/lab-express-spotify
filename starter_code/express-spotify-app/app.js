@@ -56,8 +56,6 @@ app.get("/album/:artistId", (req, res, next) => {
         });
 });
 
-
-
 //start app
 app.listen(3020, () => {
    console.log('Spotify Search DE. 3020!')
