@@ -12,7 +12,7 @@ var spotifyApi = new SpotifyWebApi({
     clientSecret: clientSecret
 });
 
-app.set('views', __dirname + '/views');
+app.set('views', __dirname + '/views/layouts');
 app.set('view engine', 'ejs');
 
 // Retrieve an access token.
@@ -25,9 +25,8 @@ spotifyApi.clientCredentialsGrant()
 
 app.get('/', (req, res, next) => {
     // Retrieve a random chuck joke
-    res.send('hello world');
+    res.render("index");
 });
 
-app.listen(3000, () => {
-    console.log('My Spotify API listening on port 3000!')
-});
+app.listen(3000);
+
