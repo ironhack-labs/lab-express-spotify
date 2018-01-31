@@ -1,0 +1,18 @@
+<div class="home-heading">
+    <div class="item-list">
+        <% for (i=0; i<artists.length;i++) { %>
+            <div class="single-item"> 
+                <% if (artists[i].images.length > 1) {%>
+                    <img src="<%= artists[i].images[0].url %>">  
+                <%} else {%>
+                    <p class="no-image">No image available</p>
+                    <%}%>
+                <div class="item-footer">
+                    <h3><%= artists[i].name %></h3>
+                    <a href="albums?<%= artists[i].id %>">View album</a>
+                </div>
+            </div>
+        <% } %>
+    </div>
+</div>
+
