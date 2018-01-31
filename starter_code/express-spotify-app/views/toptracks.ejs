@@ -1,0 +1,22 @@
+<h1 class="artist-title">Preview toptracks</h1>
+<div class="new-search">
+  <a class="home" href="/">New search</a>
+</div>
+
+
+<div class="gen-container">
+  <% tracklist.forEach((track) => { %>
+  <div class="preview-track">
+    <div class="title">
+      <p>Artist: <%= track.artists[0].name %> </p>
+      <p>Track: <%= track.name %> </p>
+    </div>
+    <div class="audio-prev">
+      <audio controls>
+    <source src="<%= track.preview_url %>" type="audio/mp3">
+    Your browser does not support the audio tag.
+  </audio>
+    </div>
+  </div>
+  <% }); %>
+</div>

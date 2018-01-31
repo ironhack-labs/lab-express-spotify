@@ -1,0 +1,248 @@
+* {
+  margin: 0;
+  font-family: 'Montserrat', sans-serif;
+  box-sizing: border-box;
+}
+
+body {
+  /* background-image: url('../images/background.jpg'); */
+  background-color: #E4E2DD;
+}
+
+a {
+  text-decoration: none;
+  color: #4d5d53;
+}
+
+.logo-container {
+  width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  color: #4d5d53;
+}
+
+.logo {
+  width: 200px;
+}
+
+.gen-container {
+  width: 900px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+}
+
+.srch-field {
+  width: 500px;
+  height: 40px;
+  font-size: 24px;
+  font-weight: bold;
+  background-color: rgba(255, 255, 255, 0.3);
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+textarea:focus, input:focus{
+    outline: none;
+}
+
+::-webkit-input-placeholder {
+  color: lightgrey;
+  font-weight: lighter;
+  font-size: 24px;
+  text-indent: 20px;
+}
+
+
+.srch-btn {
+  text-align: center;
+  margin: 20px 0 50px 0;
+  font-size: 25px;
+  background-color: rgba(255,255,255, 0.1);;
+  color: #4d5d53;
+  border: 1px solid #4d5d53;
+  border-radius: 16px;
+  padding: 6px 15px;
+}
+
+.srch-btn:hover {
+  background-color: rgba(115,134,120, 0.5);;
+}
+
+.artist-search {
+  width: 900px;
+  background-color: rgba(255, 255, 255, 0.3);
+  margin: 0 auto;
+  padding: 50px 0 0 0;
+  text-align: center;
+}
+
+.artist-title {
+  width: 783px;
+  margin: 0 auto;
+  padding: 40px;
+  text-align: center;
+}
+
+.artist-container {
+  width: 783px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.flex-container {
+  width: 783px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+
+}
+
+.album-container {
+  width: 250px;
+  margin: 0 auto 30px auto;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  width: 250px;
+  min-height: 350px;
+  margin: 10px 5px;
+}
+
+.image{
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+  width: 100%;
+  height: 222px;
+  text-align: center;
+}
+
+img {
+  width: 220px;
+  height: 220px;
+  border-radius: 7px;
+}
+
+.smaller {
+  width: 50px;
+  display: inline-block;
+  height: 100%;
+  vertical-align: middle;
+}
+
+.genres {
+  width: 220px;
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
+}
+
+.album-type {
+  width: 220px;
+  margin-top: 10px;
+  font-size: 11px;
+  font-style: italic;
+  text-align: center;
+}
+
+
+.artist-name-div h3 {
+  text-align: center;
+  margin: 5px;
+  font-size: 16px;
+  background-color: #4d5d53;
+  color: white;
+  border-radius: 16px;
+  padding: 6px 15px;
+}
+
+.album-name-div h3 {
+  text-align: center;
+  margin: 5px;
+  font-size: 16px;
+  color: #4d5d53;
+  height: 50px;
+}
+
+
+
+.popularity p {
+  font-size: 12px;
+  display: inline;
+}
+
+.popularity {
+  width: 220px;
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: row;
+  align-items: baseline;
+  border-bottom: 1px solid #4d5d53;
+}
+
+.meter-cont {
+  width: 100px;
+  margin-left: 10px;
+  border: 1px solid #4d5d53;
+}
+
+.view-albums {
+  bottom: 10px;
+  padding: 5px 15px;
+}
+
+.album-btn {
+  padding: 8px 20px;
+  font-size: 11px;
+  font-weight: bold;
+  border-radius: 14px;
+}
+
+.album-btn:hover {
+  background-color: #8f9779;
+}
+
+.preview-track{
+  margin: 0 auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 700px;
+  height: 120px;
+  border-bottom: 1px solid black;
+}
+
+.title {
+  width: 55%;
+}
+
+.audio-prev {
+  width: 45%;
+}
+
+.new-search {
+  width: 200px;
+  margin: 0 auto;
+  text-align: center;
+  background-color: rgba(255, 255, 255, 0.3);
+  border-radius: 14px;
+  margin-bottom: 40px;
+}
+
+.new-search:hover {
+  background-color: rgba(255, 255, 255, 1);
+}
