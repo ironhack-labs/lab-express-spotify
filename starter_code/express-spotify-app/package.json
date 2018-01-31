@@ -1,0 +1,21 @@
+{
+  "name": "demo_spotify",
+  "version": "1.0.0",
+  "description": "testing spotify api",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "author": "Belt",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "ejs": "^2.5.7",
+    "express": "^4.16.2",
+    "express-ejs-layouts": "^2.3.1",
+    "morgan": "^1.9.0",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^2.5.0"
+  }
+}
