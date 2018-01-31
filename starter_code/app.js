@@ -58,13 +58,13 @@ app.get('/artists', (req, res, next) => {
   
   const params = req.query.artist;
   spotifyApi.searchArtists(params, { limit : 10})
-  .then(function(data) {
+  .then(function(results) {
     console.log(req.query);
-    console.log('Artist albums', data.body.artists.items[0]);
-    const expData = {
-      artists: data.body.artists.items
+    console.log('Artist albums', results.body.artists.items[0]);
+    const data = {
+      artists: results.body.artists.items
     }
-    res.render('artists', expData);
+    res.render('artists', data);
   }, function(err) {
     console.error(err);
   });
@@ -75,13 +75,28 @@ app.get('/artists', (req, res, next) => {
 app.get('/albums/:artistId', (req, res) => {
   const artistId = req.params.artistId;
   spotifyApi.getArtistAlbums(artistId, { limit : 10})
-  .then(function(data) {
+  .then(function(results) {
     console.log(req.query);
-    console.log('Artist albums', data.body.items);
-    const expData = {
-      albums: data.body.items
+    console.log('Artist albums', results.body.items);
+    const data = {
+      albums: results.body.items
     }
-    res.render('albums', expData);
+    res.render('albums', data);
+  }, function(err) {
+    console.error(err);
+  });
+});
+
+app.get('/tracks/:albumId', (req, res) => {
+  const albumId = req.params.albumId;
+  spotifyApi.getAlbumTracks(albumId)
+  .then(function(results) {
+    console.log(req.query);
+    console.log('Artist albums', results.body.items);
+    const data = {
+      tracks: results.body.items
+    }
+    res.render('tracks', data);
   }, function(err) {
     console.error(err);
   });

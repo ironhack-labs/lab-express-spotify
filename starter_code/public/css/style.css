@@ -6,6 +6,13 @@ h1{
   text-align: center;
 }
 
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
 .wrapper{
   display: flex;
   justify-content: space-around;
