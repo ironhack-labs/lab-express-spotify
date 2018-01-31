@@ -37,9 +37,9 @@ app.get('/', (req, res, next) => {
 
 //artist route
 app.get('/artists', (req, res, next) => {
-    let artist = req.query.artist;
-    spotifyApi.searchArtist(artist).then((data) => {
-
+    let artistSearch = req.query.artist;
+    spotifyApi.searchArtist(artistSearch).then((data) => {
+        res.render("artist", {data: body.artist.items});
     });
 });
 
