@@ -1,6 +1,9 @@
-console.log('sup');
-
 var SpotifyWebApi = require('spotify-web-api-node');
+var express = require('express');
+var expressLayouts = require('express-ejs-layouts');
+var bodyParser = require('body-parser');
+var prettyJson = require('prettyjson');
+var morgan = require('morgan');
 
 // Remember to paste here your credentials
 var clientId = 'de05d80b9f2540d4a0d51f5344718aee',
