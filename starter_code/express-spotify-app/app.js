@@ -1,3 +1,17 @@
+const SpotifyWebApi = require('spotify-web-api-node');
+const express = require("express");
+const app = express();
+const expressLayouts = require("express-ejs-layouts");
+const bodyParser = require("body-parser");
+
+app.set("layout", "layouts/main-layout");
+app.set("views", __dirname + "/views");
+app.set("view engine", "ejs");
+app.use(express.static("public"));
+
+
+
+
 var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
@@ -15,4 +29,18 @@ spotifyApi.clientCredentialsGrant()
     spotifyApi.setAccessToken(data.body['access_token']);
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
+});
+
+//First rute
+app.get('/', (req, res) => {
+      res.render('index');
+    });
+
+app.get('/artist',(req,res) => {
+    res.render('artist');
+});
+
+//Start server
+app.listen(3000, () => {
+    console.log("My first app listening on port 3000!");
 });
