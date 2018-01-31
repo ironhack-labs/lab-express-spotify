@@ -1,0 +1,9 @@
+h1{
+  color: red;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
