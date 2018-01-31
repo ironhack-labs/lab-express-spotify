@@ -5,6 +5,12 @@ var bodyParser = require('body-parser');
 var prettyJson = require('prettyjson');
 var morgan = require('morgan');
 
+const app = express();
+
+app.listen(3000,() => {
+  console.log('Listeninng on port 3000');
+});
+
 // Remember to paste here your credentials
 var clientId = 'de05d80b9f2540d4a0d51f5344718aee',
   clientSecret = '8dbcbab7f3ef4fa2be5298278f4cf9c3';
