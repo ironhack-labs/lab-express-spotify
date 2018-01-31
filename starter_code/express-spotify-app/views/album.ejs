@@ -1,0 +1,16 @@
+<h1>Album</h1>
+
+// listing the album
+
+<div>
+  <div>
+    <% for (var i = 0; i < album.length; i++) { %>
+      <h3><%= album[i].name %></h3>
+        <% if (album[i].images[0]) { %>
+        <img src="<%= album[i].images[0].url %>">
+        <% } %>
+        <a href="/track/<%= album[i].id %>">
+        <button>View Tracks</button></a>
+        <% } %>
+  </div>
+</div>

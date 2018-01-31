@@ -2,6 +2,15 @@
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
+const express = require('express');
+const app = express();
+const expressLayouts = require('express-ejs-layouts');
+
+//config app
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+
 // Remember to paste here your credentials
 var clientId = 'ee6adcb5d950407989fe1b589bbf7555',
     clientSecret = 'ca66810d1824435685290d58ca87da74';
@@ -19,17 +28,35 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-app.get('/', (req, res) => {
-    res.render("index");
+app.get('/', (req, res, next) => {
+    res.render('start');
   });
 
-app.get('/random', (req, res, next) => {
-    client
-    .getRandomJoke()
-    .then(response => {
-        res.send(`<p> ${response.value} </p>`);
-    })
-    .catch(err => {
-        console.log(err);
+// search for an artist - spotifyAPI fct
+
+app.get("/artists", (req, res, next) => {
+    spotifyApi.searchArtists(req.query.artists)
+        .then((data) => {
+            var artists = data.body.artists.items;
+            res.render("artists", {artists});
+        }, function(err) {
+            console.log(err);
+        });
+});
+
+app.get("/album", (req, res, next) => {
+    spotifyApi.getArtistAlbums('artistId')
+    .then(function(data) {
+      var album = data.body.album.title;
+      res.render("album", album)
+    }, function(err) {
+      console.log(err);
     });
-})
+});
+
+
+
+//start app
+app.listen(3020, () => {
+   console.log('Spotify Search DE. 3020!')
+});
