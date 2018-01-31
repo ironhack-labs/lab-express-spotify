@@ -7,6 +7,13 @@ var morgan = require('morgan');
 
 const app = express();
 
+app.set('views', __dirname + '/views');
+app.set('view engine', 'ejs');
+
+app.get('/', (req, res, next) => {
+  res.render('index');
+});
+
 app.listen(3000,() => {
   console.log('Listeninng on port 3000');
 });
