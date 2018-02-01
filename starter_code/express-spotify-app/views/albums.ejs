@@ -1,1 +1,6 @@
 <h1>Albums of <%= artist %> </h1>
+
+<% albums.items.forEach((a) => { %>
+ <img class="artist-img" src="<%= a.images[0].url %>" alt="">
+ <p> <%= a.name %> </p>
+<% }) %>
