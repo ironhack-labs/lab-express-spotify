@@ -26,3 +26,8 @@ body {
     display: flex;
     flex-direction: column;
 }
+
+.home-wrapper {
+   text-align: center;
+   margin-top: 100px;
+}
