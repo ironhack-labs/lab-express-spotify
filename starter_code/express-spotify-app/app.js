@@ -4,15 +4,13 @@ const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
 
-app.set("layout", "layouts/main-layout");
+app.set("layout", "layouts");
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
 
 
 
-
-var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
 var clientId = '6413006c502e44f8a7e43387588b503c',
