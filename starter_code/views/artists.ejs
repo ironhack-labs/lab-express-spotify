@@ -1,2 +1,9 @@
 <h2>Artist Searched</h2>
-<p> <% = artist %> </p>
+
+<div class="artists-list">
+  <% for (var i = 0; i < artists.length; i++) {  %>
+    <div class="artist-item">
+      <p><%= artists[i].name %></p>
+    </div>
+  <% } %> 
+</div>

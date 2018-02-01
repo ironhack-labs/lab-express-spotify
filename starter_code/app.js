@@ -40,11 +40,11 @@ app.get('/artists', (req, res, next) => {
 
   spotifyApi.searchArtists(req.query.artist)
   .then((data) => {
-    let artists = {
-      artist : data.body.artists.items
+    let dataArtist = {
+      artists : data.body.artists.items
     }
-    console.log("entra pero falla");
-    res.render('artists', artists );
+    console.log(dataArtist.artists);
+    res.render('artists', dataArtist );
   }, (err) => {
     console.log("errrrrror", err);
   });
