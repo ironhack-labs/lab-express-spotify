@@ -1,0 +1,23 @@
+body{
+    background-image: url("../home-heading.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+
+}
+
+.center-div{
+    margin: 0 auto;
+    text-align: center;
+}
+
+.form-group{
+    padding-top: 400px;
+    text-align: center;
+    margin: 0 auto;
+}   
+
+#btn_search {
+    margin-top: 25px;
+}
