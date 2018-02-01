@@ -14,10 +14,8 @@ app.set('view engine', 'ejs');
 
 app.locals.title = 'Spotify Clone';
 
-app.use(expressLayouts);
+app.use(expressLayouts); // why does the stylesheet not load?
 app.use(bodyParser.urlencoded({ extended: true }));
-
-//app.use(express.static('static'));
 
 
 // Remember to paste here your credentials
@@ -46,40 +44,62 @@ app.get('/', (req, res, next) => {
     res.render('home');
   });
 
+// artists route
 app.get('/artists', (req,res,next) => {
     let reqArtist = req.query.artist;
     spotifyApi.searchArtists(reqArtist).then(function(result) {  
-        console.log('Search artists: ',reqArtist);
-        console.log('data', result.body.artists.items[0].images[0].url);
+     //   console.log('Search artists: ',reqArtist);
+     //   console.log('data', result.body.artists.items[0].images[0].url);
         let matches = {
             data: result.body.artists.items
         };
 
        res.render('artists',matches);
       }, function(err) {
-        console.error(err);
-      });
+        console.log('Something went wrong with this search', err);
+    });
 
 });
 
-
+// album route
 app.get('/albums/:artistId', (req, res) => {
 
-    console.log( req.params.artistId);
+  //  console.log( req.params.artistId);
     let artistId = req.params.artistId;
  
     spotifyApi.getArtistAlbums(artistId)
         .then((data) => {
-            console.log(data.body.items);
+      //      console.log(data.body.items);
             let artistData = {
                 data: data.body.items
             };
         res.render('albums',artistData);
         }, function (err) {
             
-            console.error(err);
+            console.log('Something went wrong with this artist', err);
         });
  });
+
+// Get tracks in an album
+app.get('/tracks/:albumId', (req, res) => {
+
+    console.log( req.params.albumId);
+    let albumId = req.params.albumId;
+ 
+    spotifyApi.getAlbumTracks(albumId)
+    .then(function(data) {
+        let tracks = {
+            data: data.body.items
+        }
+      console.log(data.body.items);
+      res.render('tracks',tracks);
+
+    }, function(err) {
+      console.log('Something went wrong with this album', err);
+    });
+ });
+
+
 
 
 
