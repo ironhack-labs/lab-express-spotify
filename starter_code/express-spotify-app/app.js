@@ -7,7 +7,9 @@ var SpotifyWebApi = require('spotify-web-api-node');
 //app.use(express.static('public'));
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
-app.use(expressLayouts);
+// app.use(expressLayouts);
+
+
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
@@ -54,8 +56,8 @@ app.post('/artists', (req, res) => {
 });
 
 // Server Started
-app.listen(3000, () => {
-  console.log('My first app spotify listening on port 3000!');
+app.listen(3001, () => {
+  console.log('My first app spotify listening on port 3001!');
 });
 
 

@@ -18,5 +18,8 @@
     "morgan": "^1.9.0",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^2.5.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.14.11"
   }
 }
