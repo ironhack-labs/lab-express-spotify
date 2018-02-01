@@ -1,0 +1,15 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+body {
+  /* background-image: url('red.jpg'); */
+    color: blue;
+    background-color: bisque;
+  }
