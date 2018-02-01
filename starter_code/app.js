@@ -36,6 +36,21 @@ app.get('/', (req, res, next) => {
   res.render('home');
 });
 
+app.get('/artists', (req, res, next) => {
+
+  spotifyApi.searchArtists(req.query.artist)
+  .then((data) => {
+    let artists = {
+      artist : data.body.artists.items
+    }
+    console.log("entra pero falla");
+    res.render('artists', artists );
+  }, (err) => {
+    console.log("errrrrror", err);
+  });
+
+});
+
 // app.post('/contact-us', (req, res, next) => {
 //   console.log(req.body);
 //   if(!req.body.name || !req.body.subject ){
