@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <title>Charlie´s Spotify Homepage</title>
-    <link rel="stylesheet" type="css/text" href="../public/stylesheets/styles.css">
-  </head>
-  <body>
-    <h1>hola!</h1>
-    <p><%= artist %></p>
-  </body>
-</html>
+
+<form action="/homepage" method="POST">
+  <label for="artist">Artist</label>
+  <input id="artist" type="text" name="artist">
+  <button type="search"> Search
+  </button>
+</form>
