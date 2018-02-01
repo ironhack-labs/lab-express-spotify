@@ -1,0 +1,22 @@
+body {
+  background: url("/images/landing.jpg") no-repeat fixed center;
+  background-size: 100%;
+  max-width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: center;
+  color: orangered;
+}
+
+form {
+  font-size: 2rem;
+  width: 10rem;
+  color: orangered;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#artistRequest {
+}
