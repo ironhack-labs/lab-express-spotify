@@ -29,11 +29,11 @@ spotifyApi.clientCredentialsGrant().then(
   }
 );
 
-// app.get("/", (req, res, next) => {
-//   res.render("index");
-// });
-
 app.get("/", (req, res, next) => {
+  res.render("index");
+});
+
+app.get("/artists", (req, res, next) => {
   // let searchInput = req.body.searchInput;
   let searchInput = 'Love';
   let resultSearchArtists, artistSearch;
@@ -52,7 +52,6 @@ app.get("/", (req, res, next) => {
         console.error(err);
       }
     );
-  res.render('index');
   res.render("artists", artistSearch);
 });
 
