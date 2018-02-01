@@ -1,0 +1,14 @@
+<div class='search-container'>
+<% for (let i = 0; i < data.length; i++) {%>
+    <div class='item-wrapper'>
+    <img src='<%= data[i].images[0].url%>' width='50%' height='50%'>
+    <div class='name-button-box'>
+        <p><%= data[i].name %></p>
+        <a href="/listen-album/<%= data[i].id%>">
+            <button>View Tracks</button>
+        </a>
+    </div>
+    </div>    
+<% } %>
+
+</div>
