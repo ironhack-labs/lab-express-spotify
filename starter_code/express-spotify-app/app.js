@@ -1,18 +1,25 @@
 var SpotifyWebApi = require('spotify-web-api-node');
-var express = require('express');
-var expressLayouts = require('express-ejs-layouts');
-var bodyParser = require('body-parser');
-var prettyJson = require('prettyjson');
-var morgan = require('morgan');
+const express = require('express');
+const expressLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');
+const prettyJson = require('prettyjson');
+const morgan = require('morgan');
 
 const app = express();
+
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-app.get('/', (req, res, next) => {
-  res.render('index');
-});
+
+app.get('/', (req, res, next) => { 
+  let data = {
+    name: "Spotify",
+    type: "application"
+  };
+  res.render('index', data); // I dont understand why we use response, is it a response
+});                          //  to the response of my request??
+
 
 app.listen(3000,() => {
   console.log('Listeninng on port 3000');
