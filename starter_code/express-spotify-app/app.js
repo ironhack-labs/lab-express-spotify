@@ -33,28 +33,35 @@ app.get('/', (req, res, next) => {
 
 });
 // app.post('/artists', (req, res, next) => {
-    
-   
+
+
 //     let searchTerm = req.query.artist;
 //     res.render("artists", searchTerm);
 //     // // console.log(`artists:'${cat}`);
-    
+
 //         console.log(searchTerm)
 //     // console.log({cat: artista})
 //     //res.render('artists', );
 // res.redirect(`/artists?cat=${searchTerm}`);
 // })
-app.post('/search', (req, res, next) => {
+app.get('/artists', (req, res, next) => {
     let searchTerm = req.query.artist;
-
-    console.log(searchTerm);
-   res.render('artists',searchTerm) 
+    
+  
+    spotifyApi.searchArtists(searchTerm)
+        .then(function (data) {
+      let vodi=data.body
+            console.log(vodi.artists.name)
+    console.log('Search artists by '+searchTerm +','+ data.body);
+  }, function(err) {
+    console.error(err);
+  });
+    
+    console.log("The searchTerm is "+searchTerm);
+    res.render('artists', { searchTerm })
 });
-app.post("/artists", (req, res, next) => {
 
-    res.redirect(`/artists`)
- }
-)
+
 app.listen(3000, () => {
     console.log('My first app listening on port 3000!');
 });
