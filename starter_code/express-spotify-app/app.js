@@ -24,10 +24,10 @@ app.get("/artists", (req, res, next) => {
   spotifyApi
     .searchArtists(artist)
     .then(artist => {
-      let results = artist.body.artists;
-      console.log(results.artist.name);
+      let results = artist.body.artists.items;
+      console.log(results);
       res.render("artists", {
-        artist: results.items
+        artist: results
       });
     })
     .catch(err => {
