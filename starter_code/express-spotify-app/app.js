@@ -12,13 +12,13 @@ const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
 
 
-var clientId = '9c2ce4fddfab4f0e87443a0af21168f8',
+const clientId = '9c2ce4fddfab4f0e87443a0af21168f8',
     clientSecret = '89246e43ea7c40cc99ee0335ca320304';
 
-var spotifyApi = new SpotifyWebApi({
+const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
@@ -38,8 +38,15 @@ app.get('/', (req, res, next) => {
   });
 
 app.get('/artist',(req, res, next) => {
-    
-})
+  spotifyApi.searchArtists(req.query.artist)
+  .then((data) => {
+    res.render('artists', {
+      artists: data.body.artists.items
+    });
+  },(err) => {
+    console.log('smomething went wrong', err);
+  }); 
+});
 
 
 app.post('/artists',(req, res, next) => {
