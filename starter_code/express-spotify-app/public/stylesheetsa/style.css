@@ -1,0 +1,15 @@
+
+.artists{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    margin-bottom:2em;
+}
+
+.bandMatch{
+    display:flex;
+    flex-direction:column;
+    align-items:stretch;
+    background-color: grey;
+    color: white;
+}

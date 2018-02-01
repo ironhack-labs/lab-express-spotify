@@ -50,14 +50,42 @@ app.get('/artists', (req,res,next) => {
     let reqArtist = req.query.artist;
     spotifyApi.searchArtists(reqArtist).then(function(result) {  
         console.log('Search artists: ',reqArtist);
-        console.log('data', result.body.artists.items);
+        console.log('data', result.body.artists.items[0].images[0].url);
+        let matches = {
+            data: result.body.artists.items
+        };
+
+       res.render('artists',matches);
       }, function(err) {
         console.error(err);
       });
 
 });
 
+
+app.get('/albums/:artistId', (req, res) => {
+
+    console.log( req.params.artistId);
+    let artistId = req.params.artistId;
+ 
+    spotifyApi.getArtistAlbums(artistId)
+        .then((data) => {
+            console.log(data.body.items);
+            let artistData = {
+                data: data.body.items
+            };
+        res.render('albums',artistData);
+        }, function (err) {
+            
+            console.error(err);
+        });
+ });
+
+
+
 //start app
 app.listen(3000, () => {
     console.log('Easy web dev. 3000!')
   });
+
+  //<!-- <div><img src= <%= data[i].images[0].url %> ></div> -->

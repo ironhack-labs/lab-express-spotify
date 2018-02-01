@@ -1,0 +1,13 @@
+<p>artist result</p>
+<div class="artists"> 
+    <% for (i=0; i < data.length; i++) { %>
+        <div class="bandMatch">
+            <% if ( data[i].images.length > 0){ %>
+                <div><img src='<%= data[i].images[0].url %>'></div>
+                <% } %>
+            <div><%= data[i].name %></div>
+            <a class="button" href='<%= "/albums/" + data[i].id %>'>View Albums</a>
+        </div>
+    <% } %>
+</div>
+
