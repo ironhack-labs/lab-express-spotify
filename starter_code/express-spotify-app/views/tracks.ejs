@@ -1,0 +1,12 @@
+<p> track overview</p>
+
+<div class="tracks"> 
+    <% for (i=0; i < data.length; i++) { %>
+        <div>
+            <div><%= data[i].name %></div>
+            <% if ( data[i].preview_url !== null){ %>
+                <div><audio src='<%= data[i].preview_url%>'></div>
+                <% } %>
+        </div>
+    <% } %>
+</div>
