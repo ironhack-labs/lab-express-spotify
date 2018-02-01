@@ -32,36 +32,39 @@ app.get('/', (req, res, next) => {
     res.render('index');
 
 });
-// app.post('/artists', (req, res, next) => {
-
-
-//     let searchTerm = req.query.artist;
-//     res.render("artists", searchTerm);
-//     // // console.log(`artists:'${cat}`);
-
-//         console.log(searchTerm)
-//     // console.log({cat: artista})
-//     //res.render('artists', );
-// res.redirect(`/artists?cat=${searchTerm}`);
-// })
 app.get('/artists', (req, res, next) => {
     let searchTerm = req.query.artist;
     
-  
-    spotifyApi.searchArtists(searchTerm)
-        .then(function (data) {
-      let vodi=data.body
-            console.log(vodi.artists.name)
-    console.log('Search artists by '+searchTerm +','+ data.body);
-  }, function(err) {
-    console.error(err);
-  });
     
-    console.log("The searchTerm is "+searchTerm);
-    res.render('artists', { searchTerm })
+    spotifyApi.searchArtists(searchTerm)
+        .then(function (response) {
+            let vodi = response.body.artists;
+            let artistas = { artists: vodi.items }
+            console.log(artistas.artists[0].images[0].url)
+        res.render('artists',  { artists:vodi.items} )
+        
+    }, function (err) {
+        console.error(err);
+    });
+    
+    // console.log("The searchTerm is " + searchTerm);
+    //console.log(vodi);
+    //res.render('artists', {  : vodi })
 });
 
 
 app.listen(3000, () => {
     console.log('My first app listening on port 3000!');
 });
+            // app.post('/artists', (req, res, next) => {
+            
+            
+            //     let searchTerm = req.query.artist;
+            //     res.render("artists", searchTerm);
+            //     // // console.log(`artists:'${cat}`);
+            
+            //         console.log(searchTerm)
+            //     // console.log({cat: artista})
+            //     //res.render('artists', );
+            // res.redirect(`/artists?cat=${searchTerm}`);
+            // })
