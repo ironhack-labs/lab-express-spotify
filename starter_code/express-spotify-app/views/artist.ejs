@@ -1,0 +1,13 @@
+
+<div class="artist-found">
+    <div class="artist-wrapper">
+    <% for(let i = 0 ; i < 10; i++) { %>
+        <img src="<%= data[i].images[0].url" width= hmlt.innerwidth>
+        <p><%= data[i].name %></p>
+        <a href="./albums/<%= data[i].ide %>">
+        <button>View Albums</button>
+        </a>
+        </div>
+    <%}%>
+    </div>
+</div>
