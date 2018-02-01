@@ -1,14 +1,17 @@
 const express = require('express');
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
+const bodyParser = require('body-parser');
+var SpotifyWebApi = require('spotify-web-api-node');
 
-
-app.use(express.static('public'));
+//app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use(expressLayouts);
 
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
 
-
-var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
 var clientId = 'c68b5ea1207c4fc3ae3fa25ac1198577',
@@ -29,10 +32,25 @@ spotifyApi.clientCredentialsGrant()
 
 
 // our first Route:
-app.get('/artists', (req, res) => {
-  //let artist    = req.body.artist;
-  //res.render('index', {artist: artist});
+app.get('/', (req, res) => {
+
   res.render('index');
+});
+
+app.post('/artists', (req, res) => {
+  let artist = req.body.artist;
+  //console.error(req.body);
+
+ spotifyApi.searchArtists(artist)
+ .then(function(data) {
+ console.log(`Search artists by ${artist}, ${data}`);
+ }, function(err) {
+ console.error(err);
+});
+
+ res.render('artists', {artist})
+
+  
 });
 
 // Server Started
