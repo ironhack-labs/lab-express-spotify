@@ -1,0 +1,13 @@
+
+
+<form action="/artists" method="post">
+  <div class="searchNav">
+    <input type="text" placeholder="Search..">
+  </div>
+  <div class="form">
+    <input type="submit" value="Search for an Artist!">
+    <%if (message) {%>
+      <p><%=message %></p>
+    <%} %>
+  </div>
+</form>
