@@ -1,0 +1,16 @@
+<%
+
+let pic1 = "https://i.scdn.co/image/197cff807611777427c93258f0a1ccdf6b013b09"
+%>
+
+<div class="artistPage">
+
+<% for ( i =0; i<artists.body.artists.items.length; i++) { %>
+    <div class ="artistThumbnail">
+    
+    <img src="<%= pic1 %>"height="150" width="150"><br>
+     <%=artists.body.artists.items[i].name%>
+    </div>
+    <%} %>
+
+</div>
