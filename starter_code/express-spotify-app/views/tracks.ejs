@@ -1,0 +1,17 @@
+<div class="home-heading">
+<h2 class="h2-album-detail"><%= album.name %></h2>
+<img class="album-img" src="<%= album.images[0].url%>"> 
+    <ul>
+        <% for (i=0; i<tracks.length;i++) { %>
+            <li class="track">
+                <div class="left track-name">
+                    <%= tracks[i].name %>
+                </div>
+                <div class="left audio-track">
+                    <audio controls src="<%= tracks[i].preview_url %>" > Your browser does not support the
+                        <code>audio</code> element. </audio>
+                </div>
+            </li>
+        <% } %>
+    </ul>
+</div>

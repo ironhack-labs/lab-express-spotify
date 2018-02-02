@@ -9,9 +9,10 @@
                     <%}%>
                 <div class="item-footer">
                     <h3><%= artists[i].name %></h3>
-                    <a href="albums?<%= artists[i].id %>">View album</a>
+                    <a href="/artist/<%= artists[i].id %>">View albums</a>
                 </div>
             </div>
+           
         <% } %>
     </div>
 </div>

@@ -1,0 +1,12 @@
+<div class="home-heading">
+        <% for (i=0; i<album.length;i++) { %>
+            <div class="single-item">
+                <img src="<%= album[i].images[0].url %>">  
+                <div class="item-footer">
+                        <h3><%= album[i].name %></h3>
+                        <a href="<%= album[i].external_urls.spotify %>" target="_blank">View album on Spotify</a>
+                        <a href="/tracks/<%= album[i].id %>">View track list</a>
+                    </div>
+            </div>
+        <% } %>
+</div>

@@ -8,11 +8,11 @@ app.use(morgan(`Request Method: :method, Request URL: :url, Response Time: :resp
 app.use(bodyParser.urlencoded({
     extended: true
 }));
-app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 app.use(expressLayouts);
-app.set('layout', 'layouts/main');
 app.set('views', __dirname + '/views');
 app.set('view engine', 'ejs');
+app.set('layout', 'layouts/main');
 //spotify API
 var SpotifyWebApi = require('spotify-web-api-node');
 var clientId = 'a82a3712c00a47d787ca446704ce2c50',
@@ -43,21 +43,38 @@ app.get('/artists', (req, res, next) => {
             console.error(err);
         });
 });
-//album
-app.get('/albums', (req, res) => {
-    console.log(req);
-    let albumQuery = req.IncomingMessage._parsedUrl.query;
-    console.log(albumQuery);
-    
-    /* spotifyApi.searchArtists(artistQuery)
+
+//artist
+app.get('/artist/:id', (req, res) => {
+    let artistAlbumId = req.params.id;
+    spotifyApi.getArtistAlbums(artistAlbumId)
         .then(function (data) {
-            res.render('artists', {
-                artists: data.body.artists.items
+            let artistData = data.body.items;
+            res.render('album', {
+                album: artistData
             });
-            // console.log(data.body.artists.items[0].images[0].url);
         }, function (err) {
             console.error(err);
-        }); */
+        });
 });
+
+//tracks
+app.get('/tracks/:id', (req, res) => {
+    spotifyApi.getAlbums([req.params.id])
+        .then(function (albumData) {
+            console.log(albumData.body.albums[0].images[0].url);
+            spotifyApi.getAlbumTracks(req.params.id)
+                .then(function (data) {
+                    let artistTracks = data.body.items;
+                    res.render('tracks', {
+                        tracks: artistTracks,
+                        album:albumData.body.albums[0]
+                    });
+                })
+        })
+        .catch(err => next(err));
+   
+});
+
 // Server Started
-app.listen(3000, () => {});
+app.listen(3001, () => {});
