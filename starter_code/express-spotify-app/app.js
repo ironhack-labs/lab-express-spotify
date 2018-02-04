@@ -36,11 +36,14 @@ app.post("/artists", (request, response, next) => {
   let searchTerm = request.body.term;
   spotifyApi.searchArtists(searchTerm)
   .then(function(data) {
-    console.log(`Search artists by ${searchTerm}, ${data}`);
-  }, function(err) {
+    console.log(`Search artists by ${searchTerm}, ${((data.body.artists.items[0].images[2].url))}`);
+    console.log(`Search artists by ${searchTerm}, ${(data.body.artists.items[0].images[3].url)}`);
+
+    response.render("artists", {datos: data.body.artists})
+
+    }, function(err) {
     console.error(err);
   });
-   response.render("artists", {searchTerm})
 });
 
 // Server Started
