@@ -6,3 +6,7 @@ body{
 .form-group{
     margin-top: 50vh;
 }
+
+.white {
+    background-color : white;
+}

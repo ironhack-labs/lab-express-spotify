@@ -5,15 +5,18 @@
                 <h1>Search for an Artist</h1>
                 <% for (let i = 0; i < datos.items.length; i++) {%>
                     <div class="card" style="width: 20rem;">
-                        <img class="card-img-top" src="<%=datos.items[i].images[2].url%>" alt="Card image cap">
+                        <% if (datos.items[i].images.length > 1) {%>        
+                            <img class="card-img-top" src="<%=datos.items[i].images[0].url%>" alt="Card image cap">
+                        <%} else {%>
+                            <img class="card-img-top" src="http://www.toppstiles.co.uk/s_grout_selector_images/811550.png" alt="Card image cap">
+                        <% } %>
                         <div class="card-block">
                             <h4 class="card-title">
                                 <%=datos.items[i].name%>
                             </h4>
                             <p class="card-text">
-                                <%=datos.items[i].id%>
                             </p>
-                            <a href="#" class="btn btn-primary">Search for albums</a>
+                            <a href="<%=datos.items[i].id%>" class="btn btn-primary">Search for albums</a>
                         </div>
                     </div>
                     <% } %>
