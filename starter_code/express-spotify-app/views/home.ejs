@@ -1,4 +1,11 @@
-<form action="/artists">
-    <input id="search-input" type="text" name="artist" placeholder="Search..."/>
-    <input type="submit" value="Search for an Artist"/>
-  </form>
+<div class="row">
+	<form action="/artists" method="post">
+		<div class="form-group">
+			<input id="search-input" type="text" name="input" required="true" class="form-control" placeholder="Enter an artist...">
+		</div>
+		<button type="submit" class="btn btn-primary">Search for an Artist</button>
+	</form>
+</div>
+
+<%- contentFor('title') %>
+Search an Artist

@@ -1,0 +1,55 @@
+.header {
+	border-bottom: 1px solid gray;
+}
+
+.vertically-center {
+	display: flex;
+	align-items: center;
+}
+
+.img-thumbnail {
+	height: 200px;
+}
+
+.row {
+	margin-bottom: 60px;
+}
+
+.list-group-item {
+	border-left:none;
+	border-right:none;
+	height:80px;
+	background-color: gray;
+	color: white;
+}
+
+.track-grid li:nth-child(even) {
+	justify-content: center;
+}
+
+.track-grid li:nth-child(n+3) {
+	background-color: white;
+	color: rgb(51, 51, 51);
+}
+
+.track-grid li h3 {
+	margin: 0;
+}
+
+.item-image-list-container h4 {
+	display: inline-block;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-o-text-overflow: ellipsis;
+	width: 95%;
+}
+
+.item-image-list-container h4:hover {
+	white-space: normal;
+}
+
+.item-image-list-container h4:hover+a {
+	overflow:hidden;
+}
+
