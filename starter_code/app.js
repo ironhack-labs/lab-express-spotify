@@ -13,8 +13,8 @@ app.set("layout", "layouts/main-layout");
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
-var clientId = 'f883156ea0f845f1a5bda11d9b581800',
-clientSecret = '3be0c3159ff14f3d9a2b604a4a3607fc';
+var clientId = '9bff06859f5c4b719d80cb626bfd9d7b',
+clientSecret = '34d1aa5d42de4517be11660eb174f9d5';
 
 var spotifyApi = new SpotifyWebApi({
   clientId : clientId,
