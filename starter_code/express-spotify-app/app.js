@@ -1,13 +1,15 @@
-const SpotifyWebApi = require('spotify-web-api-node');
 const express = require("express");
 const app = express();
 const expressLayouts = require("express-ejs-layouts");
 const bodyParser = require("body-parser");
+const SpotifyWebApi = require('spotify-web-api-node');
 
 app.set("layout", "layouts");
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 app.use(express.static("public"));
+
+
 
 
 
@@ -40,5 +42,5 @@ app.get('/artist',(req,res) => {
 
 //Start server
 app.listen(3000, () => {
-    console.log("My first app listening on port 3000!");
+    console.log("Listening port 3000!");
 });
