@@ -1,0 +1,11 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\express-spotify-app",
+    "\\express-spotify-app\\public",
+    "\\express-spotify-app\\public\\stylesheets",
+    "\\express-spotify-app\\views"
+  ],
+  "SelectedNode": "\\express-spotify-app\\views\\track-list.ejs",
+  "PreviewInSolutionExplorer": false
+}

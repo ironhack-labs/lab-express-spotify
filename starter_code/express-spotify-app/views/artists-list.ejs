@@ -1,0 +1,9 @@
+<div class="list-group">
+<% items.forEach((item) => { %>
+    <div class="list-group-item">
+        <img src="<%= item.images[1].url %>"/>
+        <h3><%= item.name %></h3>
+        <a href="/albums?artist-id=<%= item.id %>" class="btn">View albums</a>
+    </div>
+<% }); %>
+</div>

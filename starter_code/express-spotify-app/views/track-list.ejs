@@ -1,0 +1,24 @@
+<% if(items.length === 0) { %>
+	<div class="row">
+		<h3>No tracks found for: <%= input %>"</h3>
+	</div>
+<% } else {%>
+	<ul class="list-group row track-grid">
+		<li class="list-group-item col-xs-8 vertically-center"><h3>Title</h3></li>
+		<li class="list-group-item col-xs-4 vertically-center"><h3>Listen</h3></li>
+<% } %>
+<% for (i=0; i< items.length ; i++) { %>
+	<li class="list-group-item col-xs-8 vertically-center"><h4><%= items[i].title %></h4></li>
+	<li class="list-group-item col-xs-4 vertically-center">
+		<audio controls>
+			<source src="<%= items[i].preview %>">
+			Your browser does not support the audio element.
+		</audio>
+	</li>
+<% } %>
+<% if(items.length > 0) { %>
+	</ul>
+<% } %>
+
+<%- contentFor('title') %>
+Tracks for: <%= input %>
