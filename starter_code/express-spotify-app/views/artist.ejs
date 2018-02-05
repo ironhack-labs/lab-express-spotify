@@ -2,7 +2,7 @@
     <div class="col-3 mx-auto">
         <div class="nauk-info-connections text-center">
             <div class="form-group row">
-                <h1>Search for an Artist</h1>
+                <h1>Search for Artists Albums</h1>
                 <% for (let i = 0; i < datos.length; i++) {%>
                     <div class="card" style="width: 20rem;">
                        <% if (datos[i].images.length > 1) {%>
@@ -16,7 +16,7 @@
                             </h4>
                             <p class="card-text">
                             </p>
-                            <a href="artist/<%=datos[i].id%>" class="btn btn-primary">Search for albums</a>
+                            <a href="album/<%=datos[i].id%>" class="btn btn-primary">Search for album</a>
                         </div>
                     </div>
                     <% } %>

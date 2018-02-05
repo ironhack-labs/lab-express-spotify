@@ -1,0 +1,17 @@
+<div class="row">
+    <div class="col-3 mx-auto">
+        <div class="nauk-info-connections text-center">
+            <h1>Search songs in an album</h1>
+            <div class="form-group row">
+                <ul>
+                    <% for (let i = 0; i < datos.length; i++) {%>
+                        <audio src="<%=datos[i].preview_url%>">
+                            <p>
+                                <%=i%>
+                            </p>
+                    <% } %>
+                </ul>
+            </div>
+        </div>
+    </div>
+</div>

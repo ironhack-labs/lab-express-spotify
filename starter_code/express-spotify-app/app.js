@@ -12,39 +12,51 @@ app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
 var clientId = 'f883156ea0f845f1a5bda11d9b581800',
-clientSecret = '3be0c3159ff14f3d9a2b604a4a3607fc';
+  clientSecret = '3be0c3159ff14f3d9a2b604a4a3607fc';
 
 var spotifyApi = new SpotifyWebApi({
-  clientId : clientId,
-  clientSecret : clientSecret
+  clientId: clientId,
+  clientSecret: clientSecret
 });
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
-  .then(function(data) {
+  .then(function (data) {
     spotifyApi.setAccessToken(data.body['access_token']);
-  }, function(err) {
+  }, function (err) {
     console.log('Something went wrong when retrieving an access token', err);
-});
+  });
 
 app.get("/", (request, response, next) => {
   response.render("index");
 })
 
-
-app.post("/artists", (request, response, next) => {
-  let searchTerm = request.body.term;
+app.get("/artists", (request, response, next) => {
+  let searchTerm = request.query.term;
   spotifyApi.searchArtists(searchTerm)
-  .then(function(data) {
-    console.log(`Search artists by ${searchTerm}, ${((data.body.artists.items[0].images[2].url))}`);
-    console.log(`Search artists by ${searchTerm}, ${(data.body.artists.items[0].images[3].url)}`);
-
-    response.render("artists", {datos: data.body.artists})
-
-    }, function(err) {
-    console.error(err);
-  });
+    .then(function (data) {
+      response.render("artists", { datos: data.body.artists.items })
+    }, function (err) {
+      console.error(err);
+    });
 });
+
+app.get("/artist/:id", (request, response, next) => {
+  let artist = request.params.id;
+  spotifyApi.getArtistAlbums(artist)
+    .then(function (data) {
+      response.render("artist", { datos: data.body.items })
+    })
+})
+
+app.get("/artist/album/:id", (request, response, next) => {
+  let album = request.params.id;
+  spotifyApi.getAlbumTracks(album)
+    .then(function (data) {
+      console.log(JSON.stringify(data.body.items[0].preview_url))
+      response.render("album", { datos: data.body.items })
+    })
+})
 
 // Server Started
 app.listen(3000, () => {
