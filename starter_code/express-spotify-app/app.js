@@ -53,7 +53,6 @@ app.get("/artist/album/:id", (request, response, next) => {
   let album = request.params.id;
   spotifyApi.getAlbumTracks(album)
     .then(function (data) {
-      console.log(JSON.stringify(data.body.items[0].preview_url))
       response.render("album", { datos: data.body.items })
     })
 })
