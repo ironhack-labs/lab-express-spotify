@@ -1,0 +1,12 @@
+<h1>Artists</h1>
+
+  <% artists.forEach((artist) => { %>
+    <div>
+      <img src="<%= artist.images.url %>" alt="">
+      <h3>
+        <%= artist.name %>
+      </h3>
+      <a href="/albums/<%= artist.uri %>">View albums</a>
+    </div>
+  <% }); %>
+</ul>
