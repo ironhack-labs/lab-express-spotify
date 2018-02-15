@@ -32,7 +32,8 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-//page:
+//pages:
+
 //home
 app.get("/", function(req, res){
   res.render("home");
@@ -42,6 +43,7 @@ app.get("/", function(req, res){
 
 //artist
  app.post('/artists',function(req, res){
+
   var searchArtist = req.body.search
 
   spotifyApi.searchArtists(searchArtist)
@@ -57,13 +59,19 @@ app.get("/", function(req, res){
 
 
  //albums
- app.get('/albums/:artistId', (req, res) => {
+ app.get('/albums/:artistId', function(req, res) {
+  var artistId = req.params.artistId;
+
   spotifyApi.getArtistAlbums(artistId)
   .then(function(data) {
-    console.log('Artist albums', data.body);
+    console.log(data.query)
+    res.render('albums', {
+      albums: data.query
+    });
   }, function(err) {
     console.error(err);
   });
+
 });
 
 // final
