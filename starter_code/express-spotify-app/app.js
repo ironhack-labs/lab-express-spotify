@@ -14,7 +14,7 @@ const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
-app.use(morgan('combined'))
+app.use(morgan('dev'));
 app.use(express.json());       // to support JSON-encoded bodies
 app.use(express.urlencoded()); // to support URL-encoded bodies
 
@@ -35,7 +35,6 @@ spotifyApi.clientCredentialsGrant()
 });
 
 app.post("/artist", function(req, res, next){
-    console.log(req)
     spotifyApi.searchArtists(req.body.term.split(" ")[0])
     .then((response) => {
         let artist = req.body.term;
@@ -73,10 +72,8 @@ app.get('/albums/:artistId', (req, res) => {
 
 app.get('/tracks/:albumId', (req, res) => {
 
-    console.log(req.params)
     spotifyApi.getAlbumTracks(req.params.albumId)
     .then((response) => {
-        console.log(response.body.items)
         let trackList = response.body.items
         res.render("tracks", {trackList: trackList})
     }).catch((err) => {
