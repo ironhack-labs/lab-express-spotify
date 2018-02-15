@@ -1,0 +1,14 @@
+html, body {
+  height: 100%;
+}
+
+body {
+  background: red;
+}
+
+.jumbotron {
+  background: url();
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}

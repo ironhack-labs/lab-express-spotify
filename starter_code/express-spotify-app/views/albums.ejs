@@ -1,0 +1,21 @@
+<% if (data.body.items.length === 0) { %>
+  <p>No albums found.</p>
+  <a href="/">Go back to search.</a>
+<% } else { %>
+  <div class="row row-eq-height">
+    <% data.body.items.forEach((album) => { %>
+      <div class="col-lg-4">
+        <div class="thumbnail"></div>
+        <% if (album.images.length > 0) { %>
+          <img class="img-fluid" src="<%= album.images[0].url %>" alt="<%= album.name %>">
+        <% } else { %>
+          <img class="img-fluid" src="/images/blankrecord.jpg" alt="<%= album.name %>">
+        <% } %>
+        <div class="caption text-center">
+          <h2><%= album.name %> </h2>
+          <p><a href="/tracks/<%= album.id %>" class="btn btn-danger" role="button">Show Tracks</a></p>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+<% } %>
