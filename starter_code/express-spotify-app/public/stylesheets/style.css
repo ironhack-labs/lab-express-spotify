@@ -1,0 +1,92 @@
+body{
+    background-image: url("../images/wickedBackground.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
+
+.container{
+    background-color: rgba(255,255,255,0.6);
+    width: 30%;
+    margin: 300px auto 0 auto;
+    display: flex;
+    padding: 25px ;
+    flex-direction: column;
+    align-content: space-between;
+    justify-content: center;
+}
+
+.artist{
+    margin: 100px auto 0 auto;
+}
+
+.container input{
+    width: 75%;
+    height: 30px;
+    margin: 10px 12.5%;
+    padding: 0;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.container button{
+    width: 40%;
+    height: 30px;
+    margin: 10px 30%;
+    border: 1px solid white;
+    background-color: rgba(118, 27, 170, 0.6);
+    padding: 0;
+}
+
+h2{
+    color: white;
+    text-align: center;
+}
+
+.artist-box{
+    display: flex;
+    justify-content: space-around;
+}
+
+.album-box{
+    width: 25%;
+}
+
+.album-box img{
+    width:100%;
+    margin-bottom: 0;
+}
+
+.album-box figcaption{
+    background-color: rgb(44, 42, 42);
+    color: white;
+    margin-top: 0;
+    text-align: center;
+    position: relative;
+    padding: 15px;
+}
+
+.album-box button{
+    width: 40%;
+    margin: 3px 30%;
+    border: 1px solid white;
+    background-color: rgba(211, 83, 60, 0.6);
+    padding: 0;
+    color: white;
+}
+
+a{
+    text-decoration: none;
+    color: white;
+}
+
+.track-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 75%;
+    margin: 0 12.5%;
+    background-color: rgb(223, 219, 219);
+    border: 2px black solid;
+}

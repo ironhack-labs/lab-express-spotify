@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Spotify Search App</title>
+    <style>
+    body{
+        display:flex;
+        flex-direction: column;
+        background-image: url("../images/wickedBackground.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+    .track-box{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        width: 75%;
+        margin: 5px 12.5%;
+        background-color: rgb(223, 219, 219);
+        border: 2px black solid;
+    }
+    </style>
+  </head>
+  <body>
+      <div class="title-box"></div>
+      <% for (var i=0; i<trackList.length;i++){ %>
+        <div class="track-box"><%=trackList[i].name%>
+            <audio controls><source src=<%=trackList[i].preview_url %> type="audio/mpeg"></audio>
+        </div>
+      <%}%>
+  </body>
+</html>
