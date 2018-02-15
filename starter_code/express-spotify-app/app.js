@@ -45,8 +45,7 @@ app.get('/artists', (req, res, next) => {
   spotifyApi.searchArtists(query)
   .then(function(data) {
     console.log(`Search artists by ${query}`, data.body);
-    console.log(data.body.artists.items)
-    console.log(data.body.artists.items[0].images);
+    console.log(data.body.artists.items[0].images[0]);
     res.render('artists', data.body); 
   }, function(err) {
     console.error(err);
@@ -69,6 +68,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
   spotifyApi.getAlbumTracks(req.params.albumId, { limit : 5, offset : 1 })
   .then(function(data) {
     console.log(data.body);
+    console.log(data.body.items[0].preview_url)
     res.render('tracks', data.body); 
   }, function(err) {
     console.log('Something went wrong!', err);
