@@ -1,18 +1,22 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
-var clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+const clientId = '42c49a32986340e5822051012530d7dd',
+    clientSecret = '356d5deea71d4f8d8902bb9f96a117ea';
 
-var spotifyApi = new SpotifyWebApi({
+const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
-
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
   .then(function(data) {
     spotifyApi.setAccessToken(data.body['access_token']);
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
+});
+
+app.listen(3000, function(err) {
+    if (err) console.log(err);
+    console.log("tu servidor esta funcionando en el puerto 3000");
 });
