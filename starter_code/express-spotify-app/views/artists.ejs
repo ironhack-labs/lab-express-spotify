@@ -1,0 +1,17 @@
+<section class="artists">
+    <% for(i=0; i<artists.length; i++){%>
+        <div class="album-artist">
+        <% if (artists[i].images[0]) { %>
+            <img src="<%=artists[i].images[0].url%>" alt="artist-img">
+            <% } else { %>
+                <img src="http://www.tiumag.com/wp-content/uploads/TIU-noticias-spotify-arrasara-futuro-705x529.gif" alt="random-img">
+                <% } %>
+            <h2><%=artists[i].name%></h2>
+            <a href="/albums/<%=artists[i].id%>">View albums</a>
+        </div>
+        
+    <%}%>
+</section>
+
+
+
