@@ -22,11 +22,7 @@ app.get("/", function(req, res){
   res.render("home");
 });
 
-//artist
-app.get('/artists',function(req, res,next){
-  //console.log(req.query)
-  res.render('artists')// cuando user:user solo lo pones una vez
- });
+
 
 
 // Remember to paste here your credentials
@@ -46,6 +42,17 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
+//artist
+// app.get('/artists',function(req, res,next){
+//   var artista = req.query.search;
+//   console.log(artista)
+//   res.render('artists')// cuando user:user solo lo pones una ve
+//  });
+ app.post('/artists',function(req, res){
+  
+  console.log(req.body)
+  res.render('artists')// cuando user:user solo lo pones una ve
+ });
 // siempre va al final, es lo que escucha
 app.listen(3000, function(err){
   if(err) console.log(err);
