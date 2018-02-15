@@ -1,0 +1,23 @@
+<h2>TRACKS</h2>
+
+
+
+<div class="tracks">
+        <%for (i=0;i<albumTracks.length;i++){%>
+
+            <div class="tracks-duo">
+                    <h3><%=albumTracks[i].name%></h3>  
+                    <audio controls>
+                            <source src=<%=albumTracks[i].preview_url%> type="audio/mpeg">
+                          </audio>
+            </div>
+          
+        <%}%>
+ 
+
+ 
+
+
+
+
+</div>

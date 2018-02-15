@@ -1,0 +1,58 @@
+<!-- Step 2 | Display results for artist search
+Create the route /artists. This route will receive the search term from the query parameters,
+ and make a search request using the Spotify Package.
+
+Display the name, an image, and a button to show the albums for a particular artist on a new view.
+
+The function we will use from the npm package is: spotifyApi.searchArtists -->
+<h2><%=artistsearched%></h2>
+
+<section class=artists>
+
+        
+<div class="artist">
+        
+
+        
+        <% if (artistfounded[0].images.length!=0){%>
+            <img src=<%=artistfounded[0].images[0].url%> alt="imagen1">
+            <% }else { %>
+                <img src="/images/notavailable.jpg" alt="imagen1"> 
+                <% }%>
+                <h1><%=artistfounded[0].name%></h1>
+        <button><a class="button"href="/albums/<%=artistfounded[0].id%>">View Album</a></button>
+        
+
+</div>
+
+<div class="artist">
+        
+        <% if (artistfounded[1].images.length!=0){%>
+        <img src=<%=artistfounded[1].images[0].url%> alt="imagen2"> 
+        <% }else { %>
+            <img src="/images/notavailable.jpg"alt="imagen1">
+            <% }%>
+            <h1><%=artistfounded[1].name%></h1>
+        
+        <button><a class="button"href="/albums/<%=artistfounded[1].id%>">View Album</a></button>
+
+
+</div>
+
+
+
+<div class="artist">
+        
+
+        <% if (artistfounded[2].images.length!=0){%>
+        <img src=<%=artistfounded[2].images[0].url%> alt="imagen2">
+        <% }else { %>
+            <img src="/images/notavailable.jpg" alt="imagen2">
+            <% }%>
+            <h1><%=artistfounded[2].name%></h1>
+        
+        <button><a class="button"href="/albums/<%=artistfounded[2].id%>">View Album</a></button>
+
+</div>
+
+</section>
