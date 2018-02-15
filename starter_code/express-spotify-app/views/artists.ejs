@@ -1,0 +1,7 @@
+<% artists.items.forEach((artist) => { %>
+  <% if(artist.images[0]){ %>
+  <img src= "<%= artist.images[0].url %>">
+  <% } %>
+  <%= artist.name %>
+  <a href="/albums/<%=artist.id %>"><button>View Albums</button></a>
+  <% }) %>
