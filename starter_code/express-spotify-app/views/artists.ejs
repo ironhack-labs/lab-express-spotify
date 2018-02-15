@@ -1,0 +1,30 @@
+<div>
+<h2>Your search: <%=artistSearch%></h2>
+<div>
+  <section>
+    <div>
+      <%if(artistFounded[0].images.length !== 0){%>
+      <img src=<%=artistFounded[0].images[0].url%> alt="Artist Image">
+      <% }%>
+      <a href="/albums/<%=artistFounded[0].id%>">View More</a>
+      <a><%=artistFounded[0].name%></a>
+    </div>
+  </section>
+  <section>
+    <div>
+      <%if(artistFounded[1].images.length !== 0){%>
+      <img src=<%=artistFounded[1].images[0].url%> alt="Artist Image">
+      <% }%>
+      <a href="/albums/<%=artistFounded[1].id%>">View More</a>
+      <a><%=artistFounded[1].name%></a>
+    </div>
+  </section>
+  <section>
+    <div>
+      <%if(artistFounded[2].images.length !== 0){%>
+      <img src=<%=artistFounded[2].images[0].url%> alt="Artist Image">
+      <% }%>
+      <a href="/albums/<%=artistFounded[2].id%>">View More</a>
+      <a><%=artistFounded[2].name%></a>
+    </div>
+  </section>

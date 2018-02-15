@@ -1,0 +1,32 @@
+<div>
+    <h2>Albums for: <%=artistName%></h2>
+<div>
+<section>
+  <div>
+    <%if(albumImage[0].images[0].length !== 0){%>
+      <img src=<%=albumImage[0].images[0].url%> alt="Artist Image">
+      <% }%>
+    <a href="/tracks/<%=albumName[0].id%>">View Tracks</a>
+    <a><%=albumName[0].name%></a>
+  </div>
+</section>
+
+<section>
+  <div>
+    <%if(albumImage[1].images[0].length !== 0){%>
+      <img src=<%=albumImage[1].images[0].url%> alt="Artist Image">
+      <% }%>
+    <a href="/tracks/<%=albumName[1].id%>">View Tracks</a>
+    <a><%=albumName[1].name%></a>
+  </div>
+</section>
+
+<section>
+    <div>
+      <%if(albumImage[2].images[0].length !== 0){%>
+        <img src=<%=albumImage[2].images[0].url%> alt="Artist Image">
+        <% }%>
+      <a href="/tracks/<%=albumName[2].id%>">View Tracks</a>
+      <a><%=albumName[2].name%></a>
+    </div>
+  </section>

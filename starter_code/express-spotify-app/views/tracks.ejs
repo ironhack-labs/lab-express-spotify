@@ -1,0 +1,13 @@
+<div>
+    <h2>Tracks in Album</h2>
+<div>
+<section>
+  <div>
+      <% for(var i=0; i<track.length; i++){%>
+          <h1><%=track[i].name%></h1>
+          <audio controls>
+              <source src=<%=track[i].preview_url%> type="audio/mpeg">
+          </audio>
+          <% } %>
+  </div>
+</section>
