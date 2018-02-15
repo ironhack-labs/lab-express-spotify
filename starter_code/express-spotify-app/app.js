@@ -43,15 +43,20 @@ spotifyApi.clientCredentialsGrant()
 });
 
 //artist
-// app.get('/artists',function(req, res,next){
-//   var artista = req.query.search;
-//   console.log(artista)
-//   res.render('artists')// cuando user:user solo lo pones una ve
-//  });
+
  app.post('/artists',function(req, res){
-  
-  console.log(req.body)
-  res.render('artists')// cuando user:user solo lo pones una ve
+  var searchArtist = req.body.search
+
+  spotifyApi.searchArtists(searchArtist)
+   .then(function(data) {
+     console.log(data.body.artists)
+      res.render('artists', {
+        artists: data.body.artists.items
+      });
+    }, function(err) {
+      console.log('error', err);
+    });
+
  });
 // siempre va al final, es lo que escucha
 app.listen(3000, function(err){
