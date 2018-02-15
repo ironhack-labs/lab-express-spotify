@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<form action="/artist" method="POST">
+  <label>
+    Search Artists
+    <input placeholder="Artist Name" type="text" name="artist">
+  </label>
+  <input type="submit">
+</form>
+  <% for(i = 0; i <= 3; i++) { %>
+    <h1> <%=artistList[i].name%> </h1>
+  <% } %>
+
+</html>
