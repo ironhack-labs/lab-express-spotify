@@ -1,0 +1,12 @@
+html, body {
+  height: 100%;
+}
+
+.jbackground {
+  background-image: url(/images/landingbackground.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+  padding-top: 35vh;
+  height: 100vh;
+}

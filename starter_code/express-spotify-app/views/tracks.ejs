@@ -1,0 +1,17 @@
+<h1>Listen to tracks</h1>
+
+<ul id="nostyle">
+  <% data.body.items.forEach((track) => { %>
+    <li class="d-flex p-2 flex-column"><%= track.name %> 
+      <% if (track.preview_url !== null) { %>
+      <audio controls="controls">
+        <source src="<%= track.preview_url %>" type="audio/mpeg">
+        There is no preview track for this song.
+      </audio> 
+      <% } else { %>
+      <p>You can't listen to the preview for this track.</p>
+      <% } %>
+    </li>
+  <% }); %>
+</ul>
+<h1><a href="/">Search Again</a></h1>
