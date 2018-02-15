@@ -1,23 +1,33 @@
 //para tener un servidor express
 //1-. importacion de la libreria
+var SpotifyWebApi = require('spotify-web-api-node');
+//2-. instancia de express
 const express = require("express");
+const app = express();
+const expressLayouts = require("express-ejs-layouts")
 const bodyParser = require("body-parser");
 
-//2-. instancia de express
-const app = express();
+
 //body parser
 app.use(bodyParser.urlencoded({extendes: true}))
 //es para que pueda leer los archivos de la carpeta public
 app.use(express.static("public"))
-var SpotifyWebApi = require('spotify-web-api-node');
+app.use(expressLayouts)
+app.set('layout', 'layouts/main-layout')
 //indicamos el motor de vistas
 app.set("views", __dirname + "/views");
 app.set("view engine", "ejs");
 
 app.get("/", function(req, res){
-  res.render("index");
-
+  res.render("home");
 });
+
+//artist
+app.get('/artists',function(req, res,next){
+  //console.log(req.query)
+  res.render('artists')// cuando user:user solo lo pones una vez
+ });
+
 
 // Remember to paste here your credentials
 var clientId = 'fa967eff37de4e2db29c46617ffd5c5e',
