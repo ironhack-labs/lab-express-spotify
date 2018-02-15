@@ -36,7 +36,7 @@ app.get("/", (req, res, next) => {
 });
 
 app.post("/artist", (req, res, next) => {
-  let artist = req.body.term;
+  const artist = req.body.term;
   console.log(req.body.term);
   spotifyApi.searchArtists(artist).then(response => {
     console.log(response);
@@ -44,7 +44,7 @@ app.post("/artist", (req, res, next) => {
 });
 
 app.get("/artist", (req, res, next) => {
-  res.render("artist");
+  res.send('${req.body.term}')
 });
 
 app.get("/example", (req, res, next) => {
