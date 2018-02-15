@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Ironfy</title>
+</head>
+<body>
+        <% if(aliz){ %>
+            <p>Bring me candies</p>
+       <% }else{ %>
+            <p>Gimme more!</p>
+      <%  } %>
+    <form action="/search" method="post" id="searchSpotify">
+        <input type="text" id="term" name="term">
+      </form>
+      <button type="submit" form="searchSpotify" value="Submit">Submit</button>
+</body>
+</html>
