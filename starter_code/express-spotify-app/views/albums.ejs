@@ -1,5 +1,5 @@
 <% items.forEach((album) => { %>
   
   <%= album.name %>
-  <a href="/tracks/"><button>View Tracks</button></a>
+  <a href="/tracks/<%= album.id %>"><button>View Tracks</button></a>
   <% }) %>

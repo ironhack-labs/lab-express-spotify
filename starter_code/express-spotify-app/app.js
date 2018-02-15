@@ -64,9 +64,9 @@ app.get('/albums/:artistId', (req, res, next) => {
 });
 
 
-app.get('/tracks', (req, res, next) => {
+app.get('/tracks/:albumId', (req, res, next) => {
   
-  spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
+  spotifyApi.getAlbumTracks(req.params.albumId, { limit : 5, offset : 1 })
   .then(function(data) {
     console.log(data.body);
     res.render('tracks', data.body); 
