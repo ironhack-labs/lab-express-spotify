@@ -1,3 +1,9 @@
 body{
-    background-image: url("./images/479.png")
+    background-image: url("../images/479.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+label{
+    color: white;
 }
