@@ -1,7 +1,7 @@
 const express        = require('express');
 const bodyParser     = require('body-parser');
 const expressLayouts = require('express-ejs-layouts');
-var SpotifyWebApi    = require('spotify-web-api-node');
+const SpotifyWebApi  = require('spotify-web-api-node');
 
 const app = express();
 
