@@ -10,6 +10,8 @@
 
 Today, we're going to build an Express app to search spotify for artists, albums, and tracks. In addition, we'll be able to play a preview of some of these songs.
 
+To see the final product check out the deployed version: https://spotify-lab.herokuapp.com.
+
 It may seem like a lot, but let's break it down into steps!
 
 
@@ -25,6 +27,7 @@ The **Spotify** API ask for a `clientId` and `clientSecret` in order to have per
 3. After the login, click on the **Create an App** button.
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_a3a19d215083c5526df1f53f3c1fdf6f.png)
+
 4. Complete the fields and submit the form
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_db933b4f08d71ceff0b0d5d4ca124594.png)
@@ -93,7 +96,7 @@ Your directory should look like this once you're done:
 We will need some npm packages for this project, so let´s install them:
 
 ```
-$ npm install --save body-parser ejs express express-ejs-layouts morgan
+$ npm install --save body-parser hbs express morgan
 ```
 
 After the installation, you should have a package.json like this:
@@ -101,13 +104,24 @@ After the installation, you should have a package.json like this:
 ```javascript
   "dependencies": {
     "body-parser": "~1.15.2",
-    "ejs": "~2.5.2",
     "express": "~4.14.0",
-    "express-ejs-layouts": "^2.2.0",
+    "hbs": "^4.0.1",
     "morgan": "~1.7.0",
     "spotify-web-api-node": "^2.3.6"
   }
 ```
+
+:::info
+Don't worry if is not exactly the same! Specially on versions! And don't forget to **require** all this packages on your `app.js` file:
+
+```javascript
+const express = require('express');
+const app = express();
+const hbs = require('hbs');
+```
+:::
+
+
 ## Iteration 3 | Search for an Artist
 
 ### Step 1 | [Create a Homepage](https://iron-spotify.herokuapp.com/)
@@ -121,11 +135,21 @@ On this page, you should have a search form. This form should direct its query t
 
 ### Step 2 | [Display results for artist search](https://iron-spotify.herokuapp.com/artists?artist=The+Beatles)
 
-Create the route `/artists`. This route will receive the search term from the query parameters, and make a search request using the Spotify Package.
+Create the route `/artists`. This route will receive the search term from the query string, and make a search request using the Spotify Package.
 
 Display the name, an image, and a button to show the albums for a particular artist on a new view.
 
-The function we will use from the npm package is: `spotifyApi.searchArtists`
+The function we will use from the npm package is: `spotifyApi.searchArtists()`. So you should have something like this:
+
+```javascript
+spotifyApi.searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
+    .then(data => {
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    })
+    .catch(err => {
+      // ----> 'HERE WE CAPTURE THE ERROR'
+    })
+```
 
 ![](https://i.imgur.com/ZqjmoCZ.png=400x)
 
@@ -138,8 +162,6 @@ When someone clicks on the "View Albums" button, they should be taken to a page 
 
 **Hint**
 
-You're going to need to use ejs inside of the "View Albums" link to create an href.
-
 Your route should look like the following:
 
 ```javascript
@@ -148,13 +170,13 @@ app.get('/albums/:artistId', (req, res) => {
 });
 ```
 
-Meaning that your href for the view more button is going to have to look like this:
+Meaning that your `href` for the view more button is going to have to look like this:
 
 ```html
 <a href="/albums/1UarLtyjvxGiRTsfFXxtnA">View More</a>
 ```
 
-`1UarLtyjvxGiRTsfFXxtnA` is a unique ID for a particular artist. Replace that with ejs to make it dynamic!
+`1UarLtyjvxGiRTsfFXxtnA` is a unique ID for a particular artist. Replace that with the value you send to the view to make it dynamic!
 
 ![](https://i.imgur.com/oaoqQMj.png)
 
