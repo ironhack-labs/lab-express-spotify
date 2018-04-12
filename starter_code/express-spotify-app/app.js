@@ -35,7 +35,8 @@ app.get("/artist", function(req, res) {
     .searchArtists(req.query.artist)
     .then(data => {
       console.log(data.body.artists.items);
-      res.render("artist");
+      res.render("artist",{artist:data.body.artists.items});
+      
     })
 
     .catch(err => {
