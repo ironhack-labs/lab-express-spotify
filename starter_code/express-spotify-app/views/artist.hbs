@@ -7,12 +7,12 @@
   
 
   <link rel="stylesheet" href="stylesheets/styles.css">
-  <title>Spotify test</title>
+  <title>{{name}}</title>
 </head>
 <body>
   <h1>{{name}}</h1>
 {{#each artists.items}}
-  <div id="artist-info">
+  <div class="info">
     {{#if images}}
     <img src={{images.0.url}} alt="no img" height="200" width="200">
     {{/if}}
@@ -20,7 +20,7 @@
     <img src="/images/notavailable.jpg" alt="no img" height="200" width="200">
     {{/else}}
     <h3>{{name}}</h3>
-    <button type="button">View albums</button>
+    <div id="album-button"><a href="/albums/{{{id}}}">View albums</a></div>
   </div>
 
 {{/each}}

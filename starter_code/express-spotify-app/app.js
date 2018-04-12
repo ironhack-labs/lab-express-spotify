@@ -34,7 +34,6 @@ spotifyApi.clientCredentialsGrant().then(
 let artist;
 
 app.get("/", (req, res) => {
-  // artist = req.query;
   res.render("index");
 });
 
@@ -53,6 +52,20 @@ app.get("/artist", (req, res) => {
       console.log(err);
     });
 });
+
+app.get("/albums/:artistId", (req, res) => {
+  let artistId = req.params.artistId;  
+  spotifyApi.getArtistAlbums(artistId)
+  .then(artistId => {
+    console.log(artistId.body.items);
+    res.render("albums", artistId)
+  })
+  .catch(err => {
+    console.log(err);
+  })
+
+})
+
 
 const port = 3000;
 app.listen(port, () => console.log(`Conected to port ${port}`));

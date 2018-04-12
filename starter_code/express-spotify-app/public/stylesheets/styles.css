@@ -23,14 +23,22 @@ body {
     width: 200px;
     background-color: red; }
 
-#artist-info {
+.info {
   padding: 30px;
   width: 200px;
   height: 300px;
   display: inline-block;
   text-align: center; }
-  #artist-info img {
+  .info img {
     display: block;
     margin: 0 auto; }
+  .info #album-button {
+    background-color: red;
+    margin: 0 auto;
+    width: 100px;
+    height: 40px; }
+    .info #album-button a {
+      text-decoration-style: none;
+      color: white; }
 
 /*# sourceMappingURL=styles.css.map */

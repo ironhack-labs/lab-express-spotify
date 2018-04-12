@@ -13,14 +13,13 @@ body {
   height: 200px;
   width: 600px;
   margin: 300px auto;
-  
+
   #searchbox {
     position: relative;
     top: 50px;
     left: 50px;
     width: 500px;
     @extend %text;
-    
   }
   #search-btn {
     position: relative;
@@ -32,8 +31,7 @@ body {
   }
 }
 
-
-#artist-info {
+.info {
   padding: 30px;
   width: 200px;
   height: 300px;
@@ -42,5 +40,16 @@ body {
   img {
     display: block;
     margin: 0 auto;
+  }
+
+  #album-button {
+    background-color: red;
+    margin: 0 auto;
+    width: 100px;
+    height: 40px;
+    a {
+      text-decoration-style: none;
+      color: white;
+    }
   }
 }

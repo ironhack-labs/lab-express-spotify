@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  {{#each body.items}}
+  <div class="info">
+    {{#if images}}
+    <img src={{images.0.url}} alt="no img" height="200" width="200"> {{/if}} {{#else}}
+    <img src="/images/notavailable.jpg" alt="no img" height="200" width="200"> {{/else}}
+    <h3>{{name}}</h3>
+    <div id="album-button">
+      <a href="/albums/{{{id}}}">View tracks</a>
+    </div>
+  </div>
+  {{/each}}
+</body>
+
+</html>
