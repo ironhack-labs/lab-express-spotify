@@ -22,12 +22,10 @@
     <main class="container opac-white">
       <div class="row">
         <div class="col-md-12 form-group">
-          <input class="form-control" type="text" placeholder="Search for an artist!">
-        </div>
-      </div>
-      <div class="row">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-danger"><a href="/">Search for an Artist</a></button>
+          <form class="form" action="/artists" method="GET">
+            <input class="form-control" type="text" name="artist" placeholder="Search for an artist!">
+            <button type="submit" class="btn btn-danger">Search for an Artist</button>
+          </form>
         </div>
       </div>
     </main>
