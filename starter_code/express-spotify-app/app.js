@@ -24,11 +24,8 @@ app.get('/', (req, res, next) => {
 app.post('/artists',(req,res) => {
 
   spotifyApi.searchArtists(req.body.artists)
-    .then(data => {
-      const artista = {
-        list : data.body.artists.items
-      }
-      res.render("artists", artista);
+    .then(dataArtist => {
+      res.render("artists", {dataArtist});
     })
     .catch(err => {
       console.log(`ERROR: ${err}`);
@@ -37,16 +34,25 @@ app.post('/artists',(req,res) => {
 }) 
 
 app.get('/album/:id', (req, res, next) => {
-  console.log(req.params.id)
+  //console.log(req.params.id)
   spotifyApi.getArtistAlbums(req.params.id)
-    .then(data => {
-      const artist = {
-        list: data.body.items
-      };
-       res.render('album', artist);
+    .then(albumData => {
+       res.render('album', {albumData});
     })
     .catch(err => {
-      console.log(`ERROR: ${err}`);
+      console.log(`ERROR: ${err} +`);
+    })
+});
+
+
+app.get('/songs/:idSongs', (req, res, next) => {
+
+  spotifyApi.getAlbumTracks(req.params.idSongs)
+    .then(dataSongs => {
+       res.render('songs', {dataSongs});
+    })
+    .catch(err => {
+      console.log(`ERROR: ${err} ++++++++++++++`);
     })
 });
 
