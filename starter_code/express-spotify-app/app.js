@@ -68,7 +68,7 @@ app.post("/artist",(req,res)=>{
 app.get("/album/:id",(req,res)=>{
     spotifyApi.getArtistAlbums(req.params.id) // Se coge el siguiente parametro 
     .then(albumData => {
-        console.log("++++++++++++++++++aaaaaaa")
+        
          res.render("album",{albumData})
        })
     .catch(err => {
@@ -76,11 +76,11 @@ app.get("/album/:id",(req,res)=>{
       
     })
 })
-app.get('/songs/:idSongs', (req, res, next) => {
+app.get('/song/:idSongs', (req, res, next) => {
     //console.log(req.params)
     spotifyApi.getAlbumTracks(req.params.idSongs)
       .then(dataSongs => {
-          console.log("++++++++++++++++++")
+          
          res.render('song', {dataSongs});
       })
       .catch(err => {
