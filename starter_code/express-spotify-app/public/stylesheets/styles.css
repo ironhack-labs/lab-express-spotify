@@ -1,0 +1,27 @@
+body {
+  height: 800px;
+  background-color: green; }
+
+#form-container #searchbox, #form-container #search-btn {
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif; }
+
+#form-container {
+  background-color: blue;
+  position: relative;
+  height: 200px;
+  width: 600px;
+  margin: 300px auto; }
+  #form-container #searchbox {
+    position: relative;
+    top: 50px;
+    left: 50px;
+    width: 500px; }
+  #form-container #search-btn {
+    position: relative;
+    top: 100px;
+    left: 200px;
+    width: 200px;
+    background-color: red; }
+
+/*# sourceMappingURL=styles.css.map */
