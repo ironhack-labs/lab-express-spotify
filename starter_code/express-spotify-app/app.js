@@ -27,7 +27,7 @@ spotifyApi.clientCredentialsGrant()
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + 'public'));
+app.use(express.static(__dirname + '/public'));
 
 hbs.registerPartials( __dirname + '/views/partials/' );
 
@@ -40,7 +40,6 @@ app.get("/artists", (req, res) => {
 
   spotifyApi.searchArtists(name)
   .then( artist => { 
-      console.log(artist.body.artists.items); 
       let artists = artist.body.artists.items;
       res.render("artists", {artists});
     },
@@ -53,7 +52,6 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi.getArtistAlbums(id)
   .then( album => {
     let albums = album.body.items; 
-    console.log(albums);
     res.render("albums", {albums});
   },
     err => console.log(err) );
@@ -65,7 +63,6 @@ app.get("/tracks/:albumId", (req, res) => {
   spotifyApi.getAlbumTracks(id)
   .then( track => {
     let tracks = track.body.items;
-    console.log(tracks);
     res.render("tracks", {tracks} );
   },
     err => console.log(err) );

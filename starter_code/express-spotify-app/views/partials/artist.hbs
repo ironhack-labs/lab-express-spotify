@@ -1,9 +1,9 @@
-<div class="single-artist">
+<div class="single-artist col-md-4">
   <div class="single-artist-image">
-    <img src="{{this.images.0.url}}" alt="">
+    <img src="{{this.images.0.url}}" alt="{{this.name}}">
   </div>
   <div class="single-artist-info">
-    <p>{{this.name}}</p>
-    <button><a href="/albums/{{this.id}}">View Albums</a></button>
+    <h2>{{this.name}}</h2>
+    <button class="btn btn-danger"><a href="/albums/{{this.id}}">View Albums</a></button>
   </div>
 </div>
