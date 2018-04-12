@@ -1,1 +1,3 @@
 node_modules
+public/scss
+public/.sass-cache

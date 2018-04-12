@@ -1,10 +1,14 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
+const express = require('express');
+const hbs = require('hbs');
+
+const app = express();
 
 // Remember to paste here your credentials
-var clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+const clientId = '3bf666e055684c42bc6eaa9789b34e37',
+    clientSecret = '578bb2451be04f34aa57767599d67f86';
 
-var spotifyApi = new SpotifyWebApi({
+const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
