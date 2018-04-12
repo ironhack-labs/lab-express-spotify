@@ -1,13 +1,20 @@
 var SpotifyWebApi = require('spotify-web-api-node');
-
+const express = require('express');
+const app = express();
+const hbs = require('hbs');
+const path = require("path")
 // Remember to paste here your credentials
-var clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+var clientId = '698d9a0ec4044bdfbd2d49c110bb4377',
+    clientSecret = 'b2a8eea3329b4a5fab688818e9478c55';
 
 var spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
+
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
@@ -16,3 +23,9 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
+app.get('/', function (req, res) {
+  res.render('index')
+})
+
+app.listen(3000);
