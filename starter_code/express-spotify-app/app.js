@@ -43,7 +43,7 @@ app.get('/artists', (req, res) => {
   spotifyApi.searchArtists(search)
     .then(data => {
       //console.log(data)
-      console.log(data.body.artists.items[0].images[0])
+      console.log(data.body.artists.items)
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("artists",{data})
     })
@@ -52,6 +52,19 @@ app.get('/artists', (req, res) => {
     })
 });
 
+
+app.get('/albums/:artistId', (req, res) => {
+  
+  let album = req.params.artistId;
+
+  spotifyApi.getArtistAlbums(album)
+  .then(function(data) {
+    console.log('Artist albums', data.body);
+  }, function(err) {
+    console.error(err);
+  });
+  res.render("albums")
+});
 
 app.listen(3000, () => {
   console.log('Listening on p0rt 3000!')
