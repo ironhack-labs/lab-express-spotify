@@ -35,14 +35,21 @@ app.get("/artists", (req, res, next) => {
     .then(data => {
       let artists = data.body.artists.items;
       console.log(data.body.artists.items);
-      artists.forEach(e => {
-        console.log(e.images);
-      });
       res.render("artists", {artists});
     })
     .catch(err => {
       console.log(err);
     })
   
+});
+app.get('/albumes/:artistId', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(data => {
+      let albumes = data.body.items;
+      res.render("albumes", {albumes});
+    })
+    .catch(err => {
+      console.log(err);
+    })
 });
 app.listen(3000);
