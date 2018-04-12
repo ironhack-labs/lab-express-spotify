@@ -1,9 +1,19 @@
-body{
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300');
+*{
+  font-family: 'Open Sans Condensed';
+  font-size: 18px;
+}
+body.main{
   background-image: url('/images/concert.jpg');
   background-size: cover;
   background-repeat: no-repeat;
   display:flex;
   justify-content: center;
+}
+.artists_page{
+  display:flex;
+  justify-content: center;
+  background-color: rgb(102, 66, 102)
 }
 .container{
   width: 50%;
@@ -12,9 +22,38 @@ body{
   flex-direction: column;
   justify-content: center;
 }
+.artists{
+  width: 90%;
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+.artist-img-top{
+  object-fit:cover;
+  width: 300px;
+  height: 300px;
+}
+.artist button{
+  background-color: #454e58;
+}
+.artist-name{
+  font-size: 1.2em;
+  text-align:center;
+}
+.artist{
+  margin: 0 10px 10px 0;
+}
+.artist .menu{
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 20px;
+}
+
 form{
   display:flex;
   flex-direction: row;
+  flex-wrap:wrap;
   justify-content: center;
   width: 100%;
   background-color:rgba(255,255,255, 0.3);
