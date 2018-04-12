@@ -12,7 +12,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 
-/* hbs.registerPartials(path.join(__dirname, "views", "partials")); */
+hbs.registerPartials(path.join(__dirname, "views", "partials"));
 
 const clientId = "3bf666e055684c42bc6eaa9789b34e37",
   clientSecret = "578bb2451be04f34aa57767599d67f86";
@@ -32,28 +32,38 @@ spotifyApi.clientCredentialsGrant().then(
   }
 );
 
-app.get('/', (req, res, next) => {
-  res.render('home');
+let data = {
+  pageTitle: ""
+};
+
+app.get("/", (req, res, next) => {
+  data = {
+    pageTitle: "Home"
+  };
+
+  res.render("home", data);
 });
 
-app.post('/artists', (req, res) => {
-  let {artistName} = req.body;
-  
-  res.render('artists');
-});
+app.post("/artists", (req, res) => {
+  let { artistName } = req.body;
 
-/* app.get("/artists", (req, res, next) => {
-  res.render('artists');
-});
+  spotifyApi
+    .searchArtists(artistName)
+    .then(data => {
+      let artistsList = data.body.artists.items;
+      /* console.log(data.body.artists.items[0].images[0]); */
 
-app.get("/albums", (req, res, next) => {
-  res.render('albums');
-});
+      data = {
+        pageTitle: "Artists",
+        artistsList: artistsList
+      };
 
-app.get("/tracks", (req, res, next) => {
-  res.render('tracks');
+      res.render("artists", data);
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
- */
 
 const port = 3000;
 app.listen(port, () => console.log(`Listening to port ${port}`));
