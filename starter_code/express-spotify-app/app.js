@@ -32,12 +32,27 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
   });
 
-  app.get('/',(req,res) => {
-    console.log(1)
-    res.render("index")
+app.get('/', (req, res) => {
+  console.log(1)
+  res.render("index")
+});
+
+app.get('/artists', (req, res) => {
+  console.log(2)
+  let search = req.query.artist;
+  spotifyApi.searchArtists(search)
+    .then(data => {
+      //console.log(data)
+      //console.log(data.body.artists)
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render("artists",{data})
+    })
+    .catch(err => {
+      // ----> 'HERE WE CAPTURE THE ERROR'
+    })
 });
 
 
-  app.listen(3000, () => {
-    console.log('Listening on p0rt 3000!')
+app.listen(3000, () => {
+  console.log('Listening on p0rt 3000!')
 });
