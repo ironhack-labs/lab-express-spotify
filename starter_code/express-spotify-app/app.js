@@ -34,25 +34,25 @@ app.post('/artists',(req,res) => {
 }) 
 
 app.get('/album/:id', (req, res, next) => {
-  //console.log(req.params.id)
+  //console.log(req.params)
   spotifyApi.getArtistAlbums(req.params.id)
     .then(albumData => {
        res.render('album', {albumData});
     })
     .catch(err => {
-      console.log(`ERROR: ${err} +`);
+      console.log(`ERROR: ${err} `);
     })
 });
 
 
 app.get('/songs/:idSongs', (req, res, next) => {
-
+  //console.log(req.params)
   spotifyApi.getAlbumTracks(req.params.idSongs)
     .then(dataSongs => {
        res.render('songs', {dataSongs});
     })
     .catch(err => {
-      console.log(`ERROR: ${err} ++++++++++++++`);
+      console.log(`ERROR: ${err}`);
     })
 });
 

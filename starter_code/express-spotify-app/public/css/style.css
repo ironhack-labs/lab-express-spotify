@@ -11,6 +11,8 @@ body{
 .index-container{
   display: flex;
   flex-direction: column;
+  text-align: center;
+  margin-top: 20%;
 
 }
 
@@ -30,4 +32,8 @@ body{
 .artist-index img{
   width: 250px;
   height: 250px;
+}
+
+h4{
+  color: white;
 }
