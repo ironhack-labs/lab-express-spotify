@@ -1,0 +1,33 @@
+/* ---- reset ---- */
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-image: url("https://i.ytimg.com/vi/_X91X7WHQo0/maxresdefault.jpg")
+}
+
+.formClass {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255,255,255,0.5);
+  width: 30%;
+  padding: 80px;
+  margin: 15% auto;
+}
+
+.content{
+
+}
+
+input{
+  padding: 15px;
+}
+
