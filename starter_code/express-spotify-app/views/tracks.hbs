@@ -1,0 +1,15 @@
+<h1>Tracks for this album</h1>
+
+
+{{#each myTracks.items}} 
+  <div style="width: 200px; height: 2%">
+  <img height="80px" src="{{{this.images.0.url}}}">
+  <p>{{this.name}}</p>
+  <audio controls>
+      <source src="{{this.preview_url}}" type="audio/ogg">
+      <source src="{{this.preview_url}}" type="audio/mpeg">
+      Your browser does not support the audio element.
+  </audio>
+  <p><a href="./tracks/{{this.id}}">View Tracks</a></p>
+  </div>
+{{/each}}

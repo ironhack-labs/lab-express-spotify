@@ -1,0 +1,91 @@
+body{
+  font-family: 'Montserrat', sans-serif;
+  margin: 0;
+  padding: 0;
+  size: 100%;
+}
+
+h1 {
+  font-size: 38px;
+  font-weight: 400;
+  margin: 0;
+}
+
+nav {
+  font-size: 30px;
+  font-weight: 800;
+  box-sizing: border-box;
+  padding: 20px;  
+  height: 80px;
+  width: 100%;
+  position: fixed;
+  background-color: white;
+  box-shadow: 0px 1px 4px black;
+  z-index: 10;
+}
+
+input {
+  margin: none;
+ 
+}
+
+form {
+  /* display: flex;
+  flex-direction: column;
+  align-items: center;   */
+}
+
+.index-container {
+  box-sizing: border-box;
+  padding-top: 190px;
+  height: calc(100vh);
+  background-image: url('../images/background.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  
+}
+
+.form-box {
+  
+  width: 60%;
+  height: 00px;
+  margin: 0 auto;
+}
+
+
+.search-box {
+  float:left;
+  border: none;
+  padding: 10px;
+  font-size: 30px;
+  width: 600px;
+  border-radius: 4px;
+  border: 0px solid gray;
+  background-color: rgba(255, 255, 255, 0.9);
+  box-shadow: 0px 2px 8px darkslategrey;
+}
+
+.button {
+  float:left;
+  position: relative;
+  top: 0px;
+  left: -120px;
+  color: white;
+  background-color: #1ED760;
+  border: solid 1px #1ED760;
+  border-radius: 0 4px 4px 0;
+  width: 120px;
+  padding: 18px;
+  font-size: 16px;
+}
+
+.albums-container {
+  width: 90%;
+  box-sizing: border-box;
+  padding-top: 90px;
+  padding-left: 40px;
+  height: calc(100vh);
+
+  
+}
