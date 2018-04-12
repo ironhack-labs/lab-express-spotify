@@ -8,13 +8,9 @@ const clientID = "60e8957408274d35ac3e9e4739ff17c7";
 const clientSecret = "068e7f2e990e40238abfb3ff74b31ed2";
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: clientId,
-})
-
-var spotifyApi = new SpotifyWebApi({
   clientId: clientID,
   clientSecret: clientSecret
-});
+})
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
@@ -29,5 +25,7 @@ app.set('views', path.join(__dirname, '/views'));
 app.use(express.static(path.join(__dirname, 'public')));
 
 hbs.registerPartials(path.join(__dirname, '/views/partials'));
+
+
 
 
