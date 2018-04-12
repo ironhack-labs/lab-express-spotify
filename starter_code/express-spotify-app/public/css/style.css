@@ -1,0 +1,21 @@
+body {
+  background-image: url("http://www.hdfondos.eu/preview/get_photo/212919/1920/1200");
+  position: relative;
+  display: block;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+}
+.searchArtists {
+  position: absolute;
+  margin: 400px 0px 0px 580px;
+  width: 400px;
+}
+.fondoInput {
+  margin: 350px 0px 0px 482px;
+  width: 600px;
+  height: 200px;
+}
+.button-Sartist {
+  margin: -80px 0px 0px 670px;
+}
