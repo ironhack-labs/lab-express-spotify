@@ -15,7 +15,7 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join( __dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
-//hbs.registerPartials( __dirname + '/views/partials')
+hbs.registerPartials( __dirname + '/views/partials')
 
 
 
@@ -34,19 +34,18 @@ app.get('/', (req, res) => {
   res.render('index');
 });
 
-app.post('/artists', (req, res) => {
-  let artistName = req.body.artistName;
+app.get('/artists', (req, res) => {
+  let artistName = req.query.artistName;
+  
   spotifyApi.searchArtists(artistName)
   .then(data => {
-    let arrayArtist = data.body.artists.items[0];
-    //console.log("-----------");
-    console.log(data.body.artists.items[0]);
-    arrayArtist.forEach(element => {
-      
-    });
+    
+    console.log(data.body.artists.items);
+
+    let arrayArtist = data.body.artists.items;
+    res.render("artists", { arrayArtist })
   })
   .catch(err => { console.log(err); })
-  res.render('artists');
 });
 
 

@@ -1,3 +1,10 @@
 <div class="container">
   <p>Estoy en el <b>artists</b></p>
+{{name }}
+{{#each arrayArtist}}
+    {{>artist this}}
+    <img src="{{{this.images.0.url}}}" width="320" />
+
+{{/each}}
+
 </div>
