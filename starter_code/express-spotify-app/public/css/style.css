@@ -1,0 +1,23 @@
+.index-page {
+  background: url("/img/index-background.jpeg") fixed center
+}
+
+.opac-white {
+  text-align: center;
+  max-width: 750px;
+  background-color: rgba(255, 255, 255, 0.4);
+  padding: 50px 100px;
+  position: absolute;
+  top: 50%;
+  left:50%;
+  transform: translate(-50%,-50%);
+}
+
+a {
+  color: white;
+}
+
+a:hover {
+  text-decoration: none;
+  color: white;
+}
