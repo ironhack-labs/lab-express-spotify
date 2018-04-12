@@ -1,0 +1,9 @@
+<div class="container">
+  {{#each albumes}}
+    <div class="artist col col-sm-4">
+      <img class="portada" src="{{images.[0].url}}" alt="img">
+      <h3>{{this.name}}</h3>
+      <a href="/tracks/{{id}}" class="btn btn-danger">View Tracks</a>
+  </div>
+  {{/each}}
+</div>
