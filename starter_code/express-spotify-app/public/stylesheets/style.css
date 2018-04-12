@@ -1,0 +1,12 @@
+body{
+    background-image: url("../images/home-heading.jpg");
+    background-size: cover;
+
+}
+.form-group{
+    margin-top: 50vh;
+}
+
+.white {
+    background-color : white;
+}

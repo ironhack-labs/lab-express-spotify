@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-3 mx-auto">
+        <div class="nauk-info-connections text-center">
+            <div class="form-group row">
+                <h1>Search for an Artist</h1>
+                <% for (let i = 0; i < datos.length; i++) {%>
+                    <div class="card" style="width: 20rem;">
+                       <% if (datos[i].images.length > 1) {%>
+                            <img src="<%= datos[i].images[1].url %>">  
+                        <%} else {%>
+                            <img class="card-img-top" src="http://www.toppstiles.co.uk/s_grout_selector_images/811550.png" alt="Card image cap">
+                       <%}%>
+                        <div class="card-block">
+                            <h4 class="card-title">
+                                <%=datos[i].name%>
+                            </h4>
+                            <p class="card-text">
+                            </p>
+                            <a href="artist/<%=datos[i].id%>" class="btn btn-primary">Search for albums</a>
+                        </div>
+                    </div>
+                    <% } %>
+            </div>
+        </div>
+    </div>
+</div>
