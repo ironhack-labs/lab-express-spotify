@@ -1,0 +1,9 @@
+  <div class="pepe">
+    {{#if images}}
+    <img src={{images.0.url}} alt="no img" height="200" width="200"> {{/if}} {{#else}}
+    <img src="../images/notavailable.jpg" alt="no img" height="200" width="200"> {{/else}}
+    <h3>{{name}}</h3>
+    <div class="album-button">
+      <a href="/tracks/{{{id}}}">View tracks</a>
+    </div>
+  </div>

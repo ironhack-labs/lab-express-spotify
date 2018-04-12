@@ -1,26 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Albums</title>
-</head>
-
-<body>
-  <h1>{{name}}</h1>
+ <h1>{{name}}</h1>
   {{#each body.items}}
-  <div class="info">
-    {{#if images}}
-    <img src={{images.0.url}} alt="no img" height="200" width="200"> {{/if}} {{#else}}
-    <img src="/images/notavailable.jpg" alt="no img" height="200" width="200"> {{/else}}
-    <h3>{{name}}</h3>
-    <div class="album-button">
-      <a href="/tracks/{{{id}}}">View tracks</a>
-    </div>
-  </div>
+    {{> albumPartial this}}
   {{/each}}
-</body>
 
-</html>

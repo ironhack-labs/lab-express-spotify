@@ -1,12 +1,20 @@
 body {
   height: 800px; }
 
-#form-container #searchbox, #form-container #search-btn {
+.bg {
+  height: 800px;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  width: 100%; }
+
+#form-container #searchbox, #form-container #search-btn, .info h3, .info a {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif; }
+  font-family: 'Open Sans', sans-serif; }
 
 #form-container {
-  background-color: blue;
+  background-color: rgba(217, 217, 217, 0.5);
   position: relative;
   height: 200px;
   width: 600px;
@@ -21,7 +29,9 @@ body {
     top: 100px;
     left: 200px;
     width: 200px;
-    background-color: red; }
+    background-color: #f76762;
+    color: white;
+    font-weight: 700; }
 
 .info {
   padding: 30px;
@@ -33,12 +43,14 @@ body {
     display: block;
     margin: 0 auto; }
   .info .album-button {
-    background-color: red;
+    background-color: #f76762;
     margin: 0 auto;
-    width: 100px;
-    height: 40px; }
+    width: 120px;
+    height: 50px; }
     .info .album-button a {
-      text-decoration-style: none;
+      text-decoration: none;
       color: white; }
+  .info h3 {
+    vertical-align: middle; }
 
 /*# sourceMappingURL=styles.css.map */

@@ -1,18 +1,29 @@
+@import "variables";
+
 body {
   height: 800px;
 }
 
+.bg {
+  height: 800px;
+  background-image: url("/images/bg.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
 %text {
   font-size: 16px;
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Open Sans', sans-serif;
 }
 
 #form-container {
-  background-color: blue;
+  background-color: $bggrey;
   position: relative;
   height: 200px;
   width: 600px;
-  margin: 300px auto;
+  margin: 300px auto; 
 
   #searchbox {
     position: relative;
@@ -26,8 +37,10 @@ body {
     top: 100px;
     left: 200px;
     width: 200px;
-    background-color: red;
+    background-color: $red;
+    color: $white;
     @extend %text;
+    font-weight: 700;
   }
 }
 
@@ -40,16 +53,24 @@ body {
   img {
     display: block;
     margin: 0 auto;
+    
   }
 
   .album-button {
-    background-color: red;
+    background-color: $red;
     margin: 0 auto;
-    width: 100px;
-    height: 40px;
+    width: 120px;
+    height: 50px;
     a {
-      text-decoration-style: none;
+      text-decoration: none;
       color: white;
     }
+  }
+  h3{
+    vertical-align: middle;
+    @extend %text
+  };
+  a {
+    @extend %text
   }
 }
