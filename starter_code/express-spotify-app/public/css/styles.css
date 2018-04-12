@@ -1,0 +1,30 @@
+body{
+    background-image: url("../images/concierto.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.album{
+    color:white;
+}
+.formulario{
+    text-align: center;
+    margin-top: 300px;
+    background-color: white;
+    opacity: 0.9;
+    padding: 50px 50px 50px 50px;
+}
+button{
+    margin-top: 30px;
+    background-color: tomato;
+}
+#artist-input{
+    border: 1px solid black;
+    width:320px;
+
+}
+.artistaimg{
+    width: 300px;
+}
+.albumimg{
+    width: 350px;
+}
