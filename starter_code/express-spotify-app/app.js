@@ -34,23 +34,19 @@ spotifyApi.clientCredentialsGrant().then(
 let artist;
 
 app.get("/", (req, res) => {
-  artist = req.query;
+  // artist = req.query;
   res.render("index");
 });
 
-app.get("/artist", (req, res) => {
-  
+app.get("/artist", (req, res) => {  
   artist = req.query.artist
   spotifyApi
     .searchArtists(artist)
     .then(artist => {
       let data = {
+        name: req.query.artist,
         artists :  artist.body.artists
       }
-      // console.log(data.artists.items.images);
-      data.artists.items.forEach(element => {
-        console.log(element.images)
-      });
       res.render("artist", data);
     })
     .catch(err => {

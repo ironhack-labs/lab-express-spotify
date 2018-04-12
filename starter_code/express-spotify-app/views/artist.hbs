@@ -10,9 +10,17 @@
   <title>Spotify test</title>
 </head>
 <body>
+  <h1>{{name}}</h1>
 {{#each artists.items}}
-  <div>
-    <img src={{images.0.url}} alt="no img available" height="200" width="200">
+  <div id="artist-info">
+    {{#if images}}
+    <img src={{images.0.url}} alt="no img" height="200" width="200">
+    {{/if}}
+    {{#else}}
+    <img src="/images/notavailable.jpg" alt="no img" height="200" width="200">
+    {{/else}}
+    <h3>{{name}}</h3>
+    <button type="button">View albums</button>
   </div>
 
 {{/each}}

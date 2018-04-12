@@ -1,6 +1,5 @@
 body {
   height: 800px;
-  background-color: green;
 }
 
 %text {
@@ -30,5 +29,18 @@ body {
     width: 200px;
     background-color: red;
     @extend %text;
+  }
+}
+
+
+#artist-info {
+  padding: 30px;
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+  text-align: center;
+  img {
+    display: block;
+    margin: 0 auto;
   }
 }

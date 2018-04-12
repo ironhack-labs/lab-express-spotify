@@ -1,6 +1,5 @@
 body {
-  height: 800px;
-  background-color: green; }
+  height: 800px; }
 
 #form-container #searchbox, #form-container #search-btn {
   font-size: 16px;
@@ -23,5 +22,15 @@ body {
     left: 200px;
     width: 200px;
     background-color: red; }
+
+#artist-info {
+  padding: 30px;
+  width: 200px;
+  height: 300px;
+  display: inline-block;
+  text-align: center; }
+  #artist-info img {
+    display: block;
+    margin: 0 auto; }
 
 /*# sourceMappingURL=styles.css.map */
