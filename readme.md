@@ -36,6 +36,10 @@ The **Spotify** API ask for a `clientId` and `clientSecret` in order to have per
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8859d022ca1d53adc9f9ec829ec3d17b.png)
 
+Client ID 9f85add961824b4fac6bc34c0d66b388
+Client Secret c115417db86748dea5fe97f0f1935df8
+
+
 ## Iteration 1 | Spotify API Setup
 
 As always `fork` this repo, and clone it.
