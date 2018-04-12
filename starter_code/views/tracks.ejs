@@ -1,0 +1,12 @@
+
+<ul class="list-group">
+
+  <% for(var i = 0; i<tracks.length; i++){ %>
+
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+      <%= tracks[i].name %>
+      <span> <audio controls><source src="<%= tracks[i].preview_url %>" type="audio/mpeg"></audio></span>
+    </li>
+
+  <% } %>
+</ul>

@@ -1,0 +1,21 @@
+h1{
+  color: red;
+}
+
+.card-body{
+  text-align: center;
+}
+
+.main{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.wrapper{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
