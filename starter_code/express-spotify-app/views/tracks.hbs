@@ -1,9 +1,11 @@
-<table>
-  <thead>
+<table class="table">
+  <thead class="thead-dark">
     <th>Title</th>
     <th>Listen</th>
   </thead>
-  {{#each tracks}}
-    {{> track this}}
-  {{/each}}
+  <tbody>
+    {{#each tracks}}
+      {{> track this}}
+    {{/each}}
+  </tbody>
 </table>
