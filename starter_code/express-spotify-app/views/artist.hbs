@@ -1,0 +1,20 @@
+<div class="container">
+<div class="card">
+<div class="has-text-centered">
+{{#each artists}}
+  <p>{{this.name}}</p>
+
+  <img src="{{this.images.[0].url}}"/>
+  <button>
+    <a href="/album/{{this.artist.id}}">view album</a> 
+    </button>
+
+{{/each}}
+
+
+</div>
+
+<a href="/"> Back</a>
+
+</div>
+</div>
