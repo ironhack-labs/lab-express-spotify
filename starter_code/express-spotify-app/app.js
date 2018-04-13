@@ -11,7 +11,6 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 
 app.use(express.static(path.join(__dirname, "public")));
-console.log(__dirname + "public");
 hbs.registerPartials(__dirname + "/views/partials");
 
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -31,10 +30,10 @@ var spotifyApi = new SpotifyWebApi({
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant().then(
-  function(data) {
+  data => {
     spotifyApi.setAccessToken(data.body["access_token"]);
   },
-  function(err) {
+  err => {
     console.log("Something went wrong when retrieving an access token", err);
   }
 );
@@ -56,16 +55,13 @@ app.post("/artist", (req, res) => {
 app.get("/albums/:artistId", (req, res) => {
   //console.log(req.params.artistId);
   spotifyApi.getArtistAlbums(req.params.artistId).then(
-    function(data) {
-      console.log(data.body.items);
+    data => {
       const artist = {
         list: data.body.items
       };
-      //console.log(artist.list)
       res.render("album", artist);
-      // console.log('Albums information', data.body);
     },
-    function(err) {
+    err => {
       console.error(err);
     }
   );
@@ -74,7 +70,7 @@ app.get("/albums/:artistId", (req, res) => {
 /*TRACKS*/
 app.get("/songs/:artistId", (req, res) => {
   spotifyApi.getAlbumTracks(req.params.artistId, { offset: 1 }).then(
-    function(data) {
+    data => {
       // console.log(data.body)
       const songs = {
         list: data.body.items
@@ -82,7 +78,7 @@ app.get("/songs/:artistId", (req, res) => {
       // console.log(songs)
       res.render("song", songs);
     },
-    function(err) {
+    err => {
       console.log("Something went wrong!", err);
     }
   );
