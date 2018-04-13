@@ -3,6 +3,7 @@ body{
   margin: 0;
   padding: 0;
   size: 100%;
+  background-color: #1ED760;
 }
 
 h1 {
@@ -11,29 +12,33 @@ h1 {
   margin: 0;
 }
 
+
 nav {
   font-size: 30px;
-  font-weight: 800;
+  font-weight: 600;
   box-sizing: border-box;
   padding: 20px;  
   height: 80px;
   width: 100%;
   position: fixed;
-  background-color: white;
+  background-color: black;
+  color: white;
   box-shadow: 0px 1px 4px black;
   z-index: 10;
 }
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
 
 input {
   margin: none;
  
 }
 
-form {
-  /* display: flex;
-  flex-direction: column;
-  align-items: center;   */
-}
+
 
 .index-container {
   box-sizing: border-box;
@@ -82,10 +87,72 @@ form {
 
 .albums-container {
   width: 90%;
-  box-sizing: border-box;
-  padding-top: 90px;
-  padding-left: 40px;
-  height: calc(100vh);
+  margin: 0 auto;
+  padding: 120px 30px 0px 30px;
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  box-sizing: border-box; 
+  height: calc(100vh);  
+}
 
-  
+.card {
+  text-align: center;
+  width: 250px;
+  height: 320px;
+  border-radius: 0 0 6px 6px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+  margin: 6px;
+  margin-bottom: 30px;
+  background-color: white;
+  background-image: url('../images/disc.png');
+  background-size: contain;
+  background-position: top;
+  background-repeat: no-repeat;
+}
+
+.album-cover {
+  height:250px;
+  width: 250px;
+  display: block;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-bottom: gainsboro 1px solid;
+}
+
+
+.card #title {
+  margin-top: 10px; 
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.card #album-title {
+  margin-top: 11px; 
+  font-size: 10px;
+  font-weight: bold;
+}
+
+.card p {
+  margin:0;
+}
+
+.card a {
+  text-decoration: none;
+  color: #1ED760;
+  font-size: 12px;
+
+}
+
+.track-row {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  width: 800px;
+  padding: 20px 0;
+  margin-bottom: 30px;
+  height: 10px;
+  color: white;
+  border-bottom: 1px solid white;
+  background-color: rgba(255, 255, 255, 0.4)
 }

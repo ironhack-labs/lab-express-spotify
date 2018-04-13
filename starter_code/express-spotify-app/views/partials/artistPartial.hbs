@@ -1,8 +1,10 @@
 <div class="card">
-  <div>
-    <img src="{{this.images[0]}}">
+  <div style="background-image:url('{{{this.images.0.url}}}')" class="album-cover">
+  
   </div>
-  <div class="card-title">
-    <h4>{{this.name}}</h4>
+  <div id="title">
+    {{name}}  
   </div>
+  <p><a href="./albums/{{this.id}}">View Albums</a></p>
+  
 </div>

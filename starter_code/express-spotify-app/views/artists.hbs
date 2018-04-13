@@ -1,15 +1,5 @@
-
-<section class="albums-container">
-  <h2>These are your results:</h2>
-    <section style="display:flex; flex-wrap:wrap">
-
-    {{#each myData}} 
-        <div style="width: 200px; height: 2%">
-        <img height="80px" src="{{{this.images.0.url}}}">
-        <p>{{this.name}}</p>
-  
-       <p><a href="./albums/{{this.id}}">View Albums</a></p>
-     </div>
-      {{/each}}
-</section>
+ <section class="albums-container">
+{{#each myData}} 
+  {{>artistPartial}}
+{{/each}}
 </section>
