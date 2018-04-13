@@ -25,6 +25,9 @@ button{
   margin:auto;
   padding: 10px 20px;
 }
+button:focus{
+  outline:none;
+}
 .artists_page,.albums_page,.tracks-page{
   display:flex;
   justify-content: center;
