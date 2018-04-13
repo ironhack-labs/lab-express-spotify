@@ -1,0 +1,11 @@
+<div class="album">
+  {{#if images.[0]}}
+  <img class="album-img-top" src="{{images.[0].url}}" alt="album image">{{else}}
+  <img class="album-img-top" src="/images/album.jpg" alt="album image"> {{/if}}
+  <form action="/tracks/{{id}}">
+    <div class="menu">
+      <h2 class="album-name">{{dotdotdot this.name}}</h2>
+      <button type="submit">View Tracks</button>
+    </div>
+  </form>
+</div>
