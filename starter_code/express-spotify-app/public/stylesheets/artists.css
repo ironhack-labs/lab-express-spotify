@@ -1,0 +1,32 @@
+h1{
+    text-align: center;
+    margin: 6vh 0;
+}
+
+ul{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+li{
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    list-style-type: none;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    box-shadow: 1px 1px 1px 1px #888888;
+    text-align: center;
+    width: 20vw;
+}
+
+li img{
+    margin: 0;
+    width: 20vw;
+    /* height: auto; */
+    height: 35vh;
+}
+
+.btn {
+    margin-bottom: 2vh;
+}

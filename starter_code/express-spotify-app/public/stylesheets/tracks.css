@@ -1,0 +1,23 @@
+header{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.6);
+    color: white;
+    margin-bottom: 5vh;
+}
+
+header h1{
+    margin: 3vh 5vw;
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(255,255,255, 0.6);
+    margin: 1vh 2vw;
+}
+
+p{
+    font-size:1.2em;
+}
+

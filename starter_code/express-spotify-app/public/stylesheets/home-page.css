@@ -1,0 +1,30 @@
+body{
+    height: 100vh;
+    background-image: url(/images/landing.jpg);
+    background-size: cover;
+    height: 100vh;
+    color: white;
+}
+
+img{
+    margin: 0;
+}
+
+form{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 40vw;
+    height: 20vh;
+    margin-left: 30vw;
+    margin-top: 20vh;
+}
+
+form input{
+    margin: 4vh 10vw;
+    width: 20vw;
+    padding: 1vh 0.6vw;
+    color: black;
+}
+
+form button{
+    margin-left: 15vw;
+}

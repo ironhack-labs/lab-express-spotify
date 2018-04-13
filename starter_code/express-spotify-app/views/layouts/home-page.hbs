@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Home Page</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/home-page.css">
+</head>
+<body>
+    
+        <form method="GET" action="/search">
+            <input type="search" name="q" placeholder="Chose an artist">
+            <input type="hidden" name="source" value="chrome">
+                        {{!-- req.query.source --}}
+            <br>
+            <button class="btn btn-danger">Search for an artist</button>
+        </form>
+        
+    
+</body>
+</html>
