@@ -1,0 +1,32 @@
+
+button{
+    background-color: red;
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+.white-container {
+    width: 500px;
+    height: 100px;
+    background-color:  white;
+    margin: 20%;
+    opacity: 0.6;
+}
+
+.grey-footer {
+    background-color: darkslategrey;
+    color: white;
+}
+
+
+.image-size {
+    height: 100%;
+    width: 100%;
+}
+
+
+.body-home {
+    background-image: url("../images/photo-1470229722913-7c0e2dbbafd3_1024.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
