@@ -1,0 +1,82 @@
+body {
+  background-image: url('/images/hannah-rodrigo-14680-unsplash.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+header {
+  color: mediumseagreen;
+  display: flex;
+  position: fixed;
+  top: 0;
+  margin: auto;
+}
+
+header a:hover {
+  text-decoration: none;
+}
+
+.home-search {
+  /* display: flex; */
+  /* position: relative; */
+  width: 40%;
+  margin-top: 15vw;
+  margin-left: 30vw;
+  padding-left: 5vw;
+  padding-top: 2vw;
+  padding-bottom: 2vw;
+  background-color: rgba(211,211,211, 0.2)
+}
+
+.title {
+  /* display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto; */
+  color: white;
+}
+
+.pp{
+  /* display: flex;
+  position: relative;
+  margin-right: auto;
+  margin-left: auto; */
+  color: white;
+}
+
+.formmm input {
+  width: 30%;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  background-color: transparent;
+  font-size: 1vw;
+  color: white;
+  padding-left: 2vw;
+}
+
+.card {
+  width: 30%;
+  margin: 1vw;
+}
+
+.card img {
+  width: 70%;
+  height: auto;
+}
+
+.tracks-title {
+  color: darkgray;
+  margin-left: 10.2vw;
+}
+
+.songs li {
+  list-style-type: none;
+}
+
+.songs h4 {
+  color: white;
+}
