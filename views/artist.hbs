@@ -1,0 +1,18 @@
+  <div class="container">
+  <div class="row">
+{{#each chosArtist}}
+
+  <div class="card">
+  {{#if this.images.length}}
+    <img class="card-img-top" src="{{this.images.[1].url}}" alt="Card image cap">
+  {{/if}}
+    <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+  </div>
+</div>
+{{/each}}
+</div>
+</div>    
+
+
