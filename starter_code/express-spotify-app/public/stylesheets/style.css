@@ -1,0 +1,61 @@
+html, body {
+  height: 100%;
+}
+
+.albumCover {
+  max-width: 300px;
+  max-height: 300px;
+  background-image: url("../images/no-image.gif");
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+h1 {
+  color: red;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+}
+
+form {
+  width: 40%;
+  margin: 0 auto;
+  text-align: center;
+  padding-top: 50px;
+}
+
+.home-container {
+  background-image: url("../images/home-background.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  margin-top: -20px;
+}
+
+.form-container {
+  width: 40%;
+  height: 150px;
+  background-color: rgba(255, 255, 255, 0.4);
+  margin: 0 auto;
+  margin-top: 15%;
+}
+
+.form-container input {
+  width: 100%;
+  margin-bottom: 10px;
+  border-radius: 15px;
+  padding: 5px 10px;
+}
+
+.btn-danger {
+  margin-bottom: 20px;
+}
+
+.artist-card {
+  float: left;
+  margin: 15px;
+}
