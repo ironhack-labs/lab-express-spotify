@@ -50,9 +50,9 @@ app.get("/artists", (req, res) => {
   spotifyApi
     .searchArtists(artist)
     .then(data => {
-      let artistsList = data.body.artists.items;
+      let artists = data.body.artists.items;
 
-      res.render("artists", { artistsList });
+      res.render("artists", { artists });
     })
     .catch(err => {
       console.error(err);
