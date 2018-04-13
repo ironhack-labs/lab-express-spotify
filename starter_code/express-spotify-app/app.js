@@ -60,10 +60,10 @@ app.get('/albums/:artistId', (req, res) => {
   spotifyApi.getArtistAlbums(album)
   .then(function(data) {
     console.log('Artist albums', data.body);
+    res.render("albums", {data})
   }, function(err) {
     console.error(err);
   });
-  res.render("albums")
 });
 
 app.listen(3000, () => {
