@@ -5,20 +5,23 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Home</title>
-
+  <title>Albums</title>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
     crossorigin="anonymous">
-  <link rel="stylesheet" href="/css/styles.css">
+  <link rel="stylesheet" href="/css/artist.css">
 </head>
 
 <body>
-  <div class="main">
-    <div class="form-wrapper">
-      <form action="/artists" class="form-group home-form">
-        <input placeholder="Search for an artist!" class="form-control home-input" type="text" name="artist" id="artist-input">
-        <button class="btn btn-danger home-search" type="submit">Search for an Artist</button>
-      </form>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="col-title col-6">
+        <h1>Albums de: {{name}}</h1>
+      </div>
+    </div>
+  </div>
+  <div class="card-container">
+    <div class="card-row row justify-content-between" style="width: 100%">
+      {{#each albums}} {{> albumsPartial }} {{/each}}
     </div>
   </div>
 </body>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Tracks</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="/css/tracks.css">
+</head>
+
+<body>
+  {{!-- <div class="container"> --}}
+    <div class="row justify-content-center">
+      <div class="col-title col-10">
+        <h1>Tracks del album: {{name}}</h1>
+      </div>
+    </div>
+  {{!-- </div> --}}
+  {{!-- <div class="container"> --}}
+    <div class="row justify-content-between title-row">
+      <div class="col-6 col-text align-self-center">Title</div>
+      <div class="col-6 col-r col-text align-self-center">Listen</div>
+    </div>
+    {{#each tracks}} {{> tracksPartial }} {{/each}}
+  {{!-- </div> --}}
+</body>
+
+</html>

@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-image: url("/images/background.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-wrapper {
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form-group {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+.btn-danger {
+    border-radius: 0px;
+    background-color: #ff6666;
+    margin-top: 10px;
+}

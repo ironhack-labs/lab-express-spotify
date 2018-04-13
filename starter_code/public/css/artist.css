@@ -1,0 +1,42 @@
+.col-title {
+    padding: 20px;
+}
+
+.card-container {
+    width: 90%;
+    margin: 0 auto;
+    height: 200px;
+}
+
+.card-body {
+    background-color: #4E4E4E;
+    width: 80%;
+    height: 20px;
+}
+
+.card {
+    width: 100px;
+    height: 450px;
+    margin-bottom: 20px;
+    border: none;
+}
+
+.card-img-top {
+    width: 80%;
+    height: 300px;
+    max-height: 300px;
+}
+
+.card-title {
+  text-align: center;
+  color: white;
+}
+
+.btn-danger {
+    border-radius: 0px;
+    background-color: #ff6666;
+}
+
+.artist-form {
+  text-align: center;
+}
