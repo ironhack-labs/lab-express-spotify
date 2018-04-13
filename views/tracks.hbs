@@ -1,0 +1,9 @@
+<h1>Hello</h1>
+
+<ol>
+  {{#each track}}
+  <li>{{this.name}}</li>
+  <li>{{this.track_number}}</li>
+  <li><a href="{{this.preview_url}}">Play Preview</a></li>
+  {{/each}}
+</ol>
