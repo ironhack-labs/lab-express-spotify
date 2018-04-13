@@ -1,0 +1,9 @@
+body {
+  background-image: url("../img/concert.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.imagen{
+  width: 250px;
+}

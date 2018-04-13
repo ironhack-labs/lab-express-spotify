@@ -15,6 +15,7 @@
     "hbs": "^4.0.1",
     "morgan": "^1.9.0",
     "nodemon": "^1.17.3",
+    "path": "^0.12.7",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^3.0.0"
   }
