@@ -1,0 +1,71 @@
+<section>
+    
+    {{!-- <img src="{{this.}}" /> --}}
+
+    {{#each this.images}}
+        {{#if @first}}
+            <img src="{{this.url}}" />
+        {{/if}}
+    {{/each}}
+    
+    <h3>{{this.name}}</h3>
+
+    <button><a href="/tracks/{{this.id}}/{{this.name}}">View tracks</a></button>
+    
+</section>
+
+
+
+
+
+
+{{!-- [ { height: 640,
+    url: 'https://i.scdn.co/image/94c04cbf2ea221d53c4ca2c93c8228c39945a180',
+    width: 640 },
+  { height: 300,
+    url: 'https://i.scdn.co/image/702e569b7ae20e95c2ae9e7a0ee9cd3c941a1ac5',
+    width: 300 },
+  { height: 64,
+    url: 'https://i.scdn.co/image/aec363797720043c00c583fcf3c663493af3675e',
+    width: 64 } ] --}}
+
+
+
+
+{{!-- { href: 'https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2/albums?offset=0&limit=20&include_groups=album,single,compilation,appears_on',
+  items:
+   [ { album_group: 'album',
+       album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/0n9SWDBEftKwq09B01Pwzw',
+       id: '0n9SWDBEftKwq09B01Pwzw',
+       images: [Array],
+       name: 'Live At The Hollywood Bowl',
+       release_date: '2016-09-09',
+       release_date_precision: 'day',
+       type: 'album',
+       uri: 'spotify:album:0n9SWDBEftKwq09B01Pwzw' },
+     { album_group: 'album',
+       album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/5XfJmldgWzrc1AIdbBaVZn',
+       id: '5XfJmldgWzrc1AIdbBaVZn',
+       images: [Array],
+       name: 'Live At The Hollywood Bowl',
+       release_date: '2016-09-09',
+       release_date_precision: 'day',
+       type: 'album',
+       uri: 'spotify:album:5XfJmldgWzrc1AIdbBaVZn' },
+     { album_group: 'album',
+       album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/7aglIjEn9DjguIZ7CxGSS4',
+       id: '7aglIjEn9DjguIZ7CxGSS4',
+       images: [Array],
+       name: 'Love', --}}
