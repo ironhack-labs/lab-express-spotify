@@ -18,12 +18,11 @@ app.get ("/", (req, res, next)=>{
 
 app.get ("/artists", (req, res, next)=>{
   //actions 
-  spotifyApi.searchArtists(req.query.q)
+  spotifyApi.searchArtists(req.query.searchterm)
   .then(data => {
     console.log(data)
     res.render("artists");
   })
-
   .catch(err => {
      console.log('Something went wrong...', err);
      res.render("error-pages");
@@ -31,7 +30,6 @@ app.get ("/artists", (req, res, next)=>{
 
 });
 // ---search 
-
 
 
 // Remember to paste here your credentials
@@ -62,3 +60,8 @@ spotifyApi.clientCredentialsGrant()
 //       } )
 //   })
 // });
+
+
+app.listen (3000, () => {
+  console.log("app is running!")
+});

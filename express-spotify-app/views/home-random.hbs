@@ -13,17 +13,15 @@
       <div class="notification">
         <div class="media-content">
             <div class="field">
-              <div class="control is-expanded">
-                <input class="input" type="text" placeholder="put a Artist">
+                <form class="control is-expanded" method="GET" action ="/artists">
+                  <input class="search" name="searchterm" type="text" placeholder="put a Artist">
+                </form>
+                <a href="./artists.hbs" class="button is-link is-medium is-primary is-outlined is-expanded">
+                Search for an Artist </a>
               </div>
             </div>
           </div>
-          <a href="./artists.hbs" class="button is-link is-medium is-primary is-outlined is-expanded">
-            Search for an Artist
-          </a>
         </div>
-      </div>
-     </div>
   </section>
-  </body>
+</body>
 </html>
