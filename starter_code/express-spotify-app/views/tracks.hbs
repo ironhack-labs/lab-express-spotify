@@ -1,0 +1,14 @@
+<div>
+
+    <ul class="tracks-list">
+        {{#each tracksArray}}
+        <li>
+           <div>
+                <h2 class="name">{{this.name}}</h2>
+                <a href="{{this.preview_url}}"><button>Preview</button></a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+</div>

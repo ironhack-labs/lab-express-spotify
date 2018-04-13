@@ -1,0 +1,15 @@
+<div>
+
+    <ul class="albums-list">
+        {{#each albumsArray}}
+        <li>
+           <div>
+                <img class="picture" src="{{this.images.0.url}}">
+                <h2 class="name">{{this.name}}</h2>
+                <a href="/tracks/{{this.id}}"><button>View Tracks</button></a>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+
+</div>
