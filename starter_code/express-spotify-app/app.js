@@ -42,13 +42,19 @@ app.get('/artists', (req, res, next) => {
     res.render('artists',{artist:data.body.artists.items});
     })
     .catch(err => {
-      // ----> 'HERE WE CAPTURE THE ERROR'
+      console.log("ERROR")
     })
 
-
-
-  
-  
+//Albums page
+app.get('/albums', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.query.artist)
+  .then(data => {
+    console.log(data.body.artists.albums); 
+  res.render('artists',{artist:data.body.artists.items});
+  })
+  .catch(err => {
+    console.log("ERROR")
+  })
 });
 
-app.listen(3001,()=> console.log("Testing..."));
+app.listen(3001,()=> console.log("Testing..."))})
