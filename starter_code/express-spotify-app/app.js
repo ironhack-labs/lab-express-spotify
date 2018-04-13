@@ -73,7 +73,7 @@ app.get("/albums/:artistId", (req, res) => {
 
 /*TRACKS*/
 app.get("/songs/:artistId", (req, res) => {
-  spotifyApi.getAlbumTracks(req.params.artistId, { limit: 1, offset: 1 }).then(
+  spotifyApi.getAlbumTracks(req.params.artistId, { offset: 1 }).then(
     function(data) {
       // console.log(data.body)
       const songs = {
