@@ -50,7 +50,7 @@ app.get('/albums', (req, res, next) => {
   spotifyApi.getArtistAlbums(req.query.artist)
   .then(data => {
     console.log(data.body.artists.albums); 
-  res.render('artists',{artist:data.body.artists.items});
+  res.render('albums',{artist:data.body.artists.items});
   })
   .catch(err => {
     console.log("ERROR")
