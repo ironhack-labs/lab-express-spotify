@@ -37,7 +37,7 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/artist", (req, res) => {  
+app.get("/:artist", (req, res) => {  
   artist = req.query.artist
   spotifyApi
     .searchArtists(artist)
@@ -49,7 +49,7 @@ app.get("/artist", (req, res) => {
       res.render("artist", data);
     })
     .catch(err => {
-      console.log(err);
+      console.log("Error al buscar artista", err);
     });
 });
 
@@ -60,7 +60,7 @@ app.get("/albums/:artistId", (req, res) => {
     res.render("albums", artistId)
   })
   .catch(err => {
-    console.log(err);
+    console.log("Error al buscar el album", err);
   })
 
 })
@@ -72,7 +72,7 @@ app.get("/tracks/:albumId", (req, res) => {
     res.render("tracks", albumId)
   })
   .catch(err => {
-    console.log(err);
+    console.log("Error al buscar las canciones",err);
   })
 })
 
