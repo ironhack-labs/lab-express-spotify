@@ -1,0 +1,50 @@
+body{
+    background-color: blanchedalmond;
+    color: darkcyan;
+    position: relative;
+}
+
+.search-area{
+    margin: 0 auto;
+    padding: 100px 20px;
+    background-color: cornsilk;
+    width: 50%;
+
+}
+.search-area *{
+    text-align: center;
+
+}
+
+.artists-list li div img,
+.albums-list li div img{
+    height: 250px;
+}
+
+.artists-list li,
+.albums-list li,
+.tracks-list li {
+    float: left;
+    width: 33%;
+    list-style-type: none;
+    padding-bottom: 20px;
+}
+.artists-list,
+.albums-list,
+.tracks-list{
+    overflow: auto;
+}
+
+.artists-list li div a button,
+.albums-list li div a button,
+.tracks-list li div a button{
+    background-color: #2081C3;
+    color: #FFF;
+    border: 0;
+}
+
+.artists-list li div,
+.albums-list li div,
+.tracks-list li div{
+    text-align: center;
+}
