@@ -1,0 +1,6 @@
+body {
+  background-image: "./images/concert_logo.jpg";
+  background-repeat: no-repeat;
+  background-position: right top;
+  background-attachment: fixed;
+}
