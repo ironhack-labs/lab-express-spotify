@@ -43,6 +43,7 @@ button:hover{
   background-size:cover;
   filter: greyscale(100%);
   padding: 40px;
+  min-height: 100vh;
   position:relative;
 }
 .artists, .albums{
@@ -58,6 +59,7 @@ button:hover{
 }
 .artist, .album{
   background-color: white;
+  max-height: 453px;
   transition: all 0.3s ease-out;
 }
 .artist:hover, .album:hover{
@@ -150,6 +152,7 @@ container{
 }
 .row{
   width:100%;
+  max-height: 70px;
   display:flex;
   background-color:lightgrey;
   margin: 2.5px;
