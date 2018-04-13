@@ -18,15 +18,23 @@ body.main{
   height:100vh;
 }
 button{
-  background-color: #f46665;
+  background-color: #41bf54;
   border: none;
   color:white;
+  font-weight: 900;
+  border-radius: 25px;
   width: auto;
   margin:auto;
   padding: 10px 20px;
+  transition: all 0.3s ease-out;
 }
 button:focus{
   outline:none;
+}
+button:hover{
+  background-color: white;
+  border: 1px solid #41bf54;
+  color: #41bf54;
 }
 .artists_page,.albums_page,.tracks-page{
   display:flex;
@@ -56,18 +64,6 @@ button:focus{
   perspective: 100px;
   transform: rotateY(30deg) skewY(5deg);
   transform-style: preserve-3d;
-}
-.artist button, .album button{
-  background-color: #41bf54;
-  transition: all 0.3s ease-out;
-  font-weight: 700;
-  border-radius: 25px;
-}
-
-.artist button:hover, .album button:hover{
-  background-color: white;
-  border: 1px solid #41bf54;
-  color: #41bf54;
 }
 .artist-name, .album-name{
   font-size: 1.2em;
