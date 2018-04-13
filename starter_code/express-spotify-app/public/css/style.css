@@ -33,6 +33,30 @@ a {
   a:hover {
     text-decoration: none; }
 
+.albums-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .albums-container .text-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    color: #ffffff;
+    box-sizing: border-box;
+    background-color: #002912; }
+  .albums-container img {
+    height: auto;
+    width: 100%; }
+  .albums-container a {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #640000;
+    background-color: #d80101; }
+
 .search-results {
   width: 100%;
   padding: 30px;
@@ -108,6 +132,25 @@ a {
     padding: 10px 15px 10px 15px;
     background-color: #d41212;
     box-shadow: 1px 1px 3px #000000; }
+
+.tracks-search-results {
+  width: 100%;
+  background-color: #ffffff; }
+  .tracks-search-results ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+
+.tracks-search-item {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #dfdfdf;
+  position: relative; }
+
+.tracks-container audio {
+  width: 30%;
+  height: 30px;
+  background-color: aqua; }
 
 body {
   background-color: #ffffff;
