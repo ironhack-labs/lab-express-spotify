@@ -1,0 +1,20 @@
+<div class="home-search">
+  <div class="title">
+    <h2>Jam Search</h2>
+  </div>
+
+  <div class="pp">
+    <p>Listen to some jam ☺️</p>
+  </div>
+
+  <div class="formmm">
+    <form method="GET" action="/artists">
+                  {{!-- req.query.q --}}
+      <input type="search" name="q" placeholder="Artist name here..." />
+                  {{!-- req.query.source --}}
+      <input type="hidden" name="source" value="chrome" />
+    <button>Search</button>
+    </form>
+  </div>
+  
+</div>

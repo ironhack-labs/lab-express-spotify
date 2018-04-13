@@ -1,0 +1,12 @@
+<h2 class="tracks-title">Tracks 👂</h2>
+<div class="container">
+  <div class="songs row">
+     {{#each songs}}
+        <h4 class="col-md-8">{{this.name}}</h4>
+        <audio class="col-md-4" controls="controls">
+          <source src="{{this.preview_url}}" type="audio/wav">
+          Your browser does not support the <code>audio</code> element. 
+        </audio>
+    {{/each}}
+  </div>
+</div>
