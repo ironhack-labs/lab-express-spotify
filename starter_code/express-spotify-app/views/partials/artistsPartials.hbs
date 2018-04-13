@@ -1,0 +1,45 @@
+
+<section>
+    
+    {{#each this.images}}
+        {{#if @first}}
+            <img src="{{this.url}}" />
+        {{/if}}
+    {{/each}}
+
+    <h3>{{this.name}}</h3>
+
+    <button><a href="/albums/{{this.id}}/{{this.name}}">View albums</a></button>
+
+</section>
+
+
+
+
+
+{{!-- { 
+external_urls: { spotify: 'https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2' },
+  followers: { href: null, total: 7102484 },
+  genres:
+   [ 'album rock',
+     'british invasion',
+     'classic rock',
+     'merseybeat',
+     'psychedelic rock',
+     'rock' ],
+  href: 'https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2',
+  id: '3WrFJ7ztbogyGnTHbHJFl2',
+  images:
+   [ { height: 640,
+       url: 'https://i.scdn.co/image/197cff807611777427c93258f0a1ccdf6b013b09',
+       width: 640 },
+     { height: 320,
+       url: 'https://i.scdn.co/image/2a80bb1f1da720b80ce29e7eff73a0b13d6a5c88',
+       width: 320 },
+     { height: 160,
+       url: 'https://i.scdn.co/image/b7d99ec41485c47e8cfc0401de182b948b5f9d49',
+       width: 160 } ],
+  name: 'The Beatles',
+  popularity: 86,
+  type: 'artist',
+  uri: 'spotify:artist:3WrFJ7ztbogyGnTHbHJFl2' } --}}

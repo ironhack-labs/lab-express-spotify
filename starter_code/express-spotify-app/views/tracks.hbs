@@ -1,0 +1,12 @@
+<div class="container">
+
+    <h2>{{album}}</h2>
+
+    {{#each albumTracks}}
+
+        {{> tracksPartial album = ../album}}
+        
+    {{/each}}
+    
+</div>
+

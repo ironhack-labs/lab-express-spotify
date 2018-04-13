@@ -1,0 +1,41 @@
+
+<div class="container">
+
+    <h2>{{artistsQuery}}</h2>
+
+    {{#each artists}}
+
+        {{> artistsPartials}}
+        
+    {{/each}}
+    
+
+</div>
+
+
+
+
+
+
+
+
+{{!-- [ { external_urls:
+     { spotify: 'https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2' },
+    followers: { href: null, total: 7102132 },
+    genres:
+     [ 'album rock',
+       'british invasion',
+       'classic rock',
+       'merseybeat',
+       'psychedelic rock',
+       'rock' ],
+    href: 'https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2',
+    id: '3WrFJ7ztbogyGnTHbHJFl2',
+    images: [ [Object], [Object], [Object] ],
+    name: 'The Beatles',
+    popularity: 86,
+    type: 'artist',
+    uri: 'spotify:artist:3WrFJ7ztbogyGnTHbHJFl2' },
+  { external_urls:
+     { spotify: 'https://open.spotify.com/artist/2NUpOkMGBeKWAPI0Ckn6gx' },
+    followers: { href: null, total: 15 }, --}}
