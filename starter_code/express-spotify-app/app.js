@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 // Remember to paste here your credentials
 const clientId = '56e6c681cd8d474fb18d5be29ca070ce';
-const clientSecret = 'cddf598e2857411e9701193321ef010d';
+const clientSecret = '10d223d5f1724fdea049eaf297f1eb41';
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
@@ -39,12 +39,12 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/artists', (req, res, next) => {
-  spotifyApi.searchArtists(req.query.artist)
+  spotifyApi.searchArtists(req.query)
     .then(result => {
       const data = {
-        info: result.body.artists.items
+        artists: result.body
       };
-      console.log(result, result.body.artists.items);
+      // console.log(result, result.body);
       res.render('artists', data);
     })
     .catch(err => {
