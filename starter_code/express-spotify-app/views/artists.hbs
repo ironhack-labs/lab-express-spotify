@@ -1,0 +1,14 @@
+
+{{#each artists.items}}
+<div class="artist-card">
+  {{#each this.images}}
+    {{#if @first}}
+      <div class="albumCover">
+        <img src="{{this.url}}" alt="cover">
+      </div>
+    {{/if}}
+  {{/each}}
+  <h2>{{this.name}}</h2>
+  <a class="btn btn-danger" href="/albums/{{this.id}}">Show albums</a>
+</div>
+{{/each}}
