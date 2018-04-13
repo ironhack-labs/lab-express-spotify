@@ -1,0 +1,10 @@
+*{
+    margin:0;
+    padding:0;
+}
+body{
+    background-image: url("images/fondo.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+
+}
