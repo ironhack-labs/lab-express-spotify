@@ -43,3 +43,10 @@ p
 li{
     list-style-type: none;
 }
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}

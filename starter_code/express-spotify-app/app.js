@@ -7,7 +7,9 @@ const path = require("path");
 const app = express();
 
 app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({
+  extended: true
+}));
 
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
@@ -24,28 +26,30 @@ const spotifyApi = new SpotifyWebApi({
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant().then(
-  function(data) {
+  function (data) {
     spotifyApi.setAccessToken(data.body["access_token"]);
   },
-  function(err) {
+  function (err) {
     console.log("Something went wrong when retrieving an access token", err);
   }
 );
 
-let data = {
+let pageData = {
   pageTitle: ""
 };
 
 app.get("/", (req, res, next) => {
-  data = {
+  pageData = {
     pageTitle: "Home"
   };
 
-  res.render("home", data);
+  res.render("home", pageData);
 });
 
 app.post("/artists", (req, res) => {
-  let { artistName } = req.body;
+  let {
+    artistName
+  } = req.body;
 
   spotifyApi
     .searchArtists(artistName)
@@ -53,12 +57,52 @@ app.post("/artists", (req, res) => {
       let artistsList = data.body.artists.items;
       /* console.log(data.body.artists.items[0].images[0]); */
 
-      data = {
+      pageData = {
         pageTitle: "Artists",
         artistsList: artistsList
       };
 
-      res.render("artists", data);
+      res.render("artists", pageData);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/albums", (req, res) => {
+
+  let artistID = req.query.artistID;
+  let artistName = req.query.artistName;
+
+  spotifyApi.getArtistAlbums(artistID).then(data => {
+
+      pageData = {
+        pageTitle: "Albums",
+        artistAlbums: data.body.items,
+        artistName: artistName
+      };
+
+      res.render("albums", pageData);
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/tracks", (req, res) => {
+
+  let albumID = req.query.albumID;
+  let albumName = req.query.albumName;
+
+  spotifyApi.getAlbumTracks(albumID).then(data => {
+
+      pageData = {
+        pageTitle: "Albums",
+        name: albumName,
+        tracks: data.body.items
+      };
+
+      res.render("tracks", pageData);
     })
     .catch(err => {
       console.log(err);
