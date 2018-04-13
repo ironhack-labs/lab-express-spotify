@@ -16,8 +16,17 @@
 }
 
 .tracks-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    h5{
+        font-size: 1.5em;
+    }
     audio{
-        width: 30%;
+        
+        width: 50%;
         height: 30px;
         background-color: aqua;
     }

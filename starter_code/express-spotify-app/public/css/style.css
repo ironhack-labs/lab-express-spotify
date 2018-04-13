@@ -147,10 +147,18 @@ a {
   background-color: #dfdfdf;
   position: relative; }
 
-.tracks-container audio {
-  width: 30%;
-  height: 30px;
-  background-color: aqua; }
+.tracks-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  .tracks-container h5 {
+    font-size: 1.5em; }
+  .tracks-container audio {
+    width: 50%;
+    height: 30px;
+    background-color: aqua; }
 
 body {
   background-color: #ffffff;
