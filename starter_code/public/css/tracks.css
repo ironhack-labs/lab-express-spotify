@@ -1,0 +1,37 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    width: 100%;
+}
+
+.title-row {
+    background-color: #4B4B4B;
+    height: 100px;
+    margin: 20px 0 0 0;
+}
+
+.col-text {
+    color: white;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 50px;
+}
+
+.col-r {
+    text-align: end;
+}
+
+.tracks-row {
+    background-color: #F6F6F6;
+    color: grey;
+    font-size: 16px;
+    font-weight: bolder;
+    padding: 50px;
+}
+
+h2 {
+    color: grey;
+}
