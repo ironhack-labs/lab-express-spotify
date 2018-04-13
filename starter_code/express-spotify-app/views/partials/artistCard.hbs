@@ -1,0 +1,15 @@
+<div>
+  <h3>
+    {{this.name}}
+  </h3>
+  <ul>
+    {{#each this.genres}}
+    <li>{{this}}</li>
+    {{/each}}
+  </ul>
+  <ul>
+    {{#each this.images}}
+    <img src="{{this.url}}">
+    {{/each}}
+  </ul>
+</div>
