@@ -1,0 +1,18 @@
+<head>
+    <meta charset="utf-8">
+    <title>Artists</title>
+</head>
+
+<body>
+<div class="">
+        <div class="index-container">
+<ul>
+  {{#each data.body.artists.items}}
+    {{this.name}}
+    <img height="80px" src="{{this.images.0.url}}" alt="">
+  <a class="btn btn-default" href="/albums/{{this.id}}" role="button">View Album</a>
+  {{/each}}
+</ul>
+</body>
+
+</html>

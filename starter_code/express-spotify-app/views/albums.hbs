@@ -1,0 +1,21 @@
+<head>
+    <meta charset="utf-8">
+    <title>Artists</title>
+</head>
+
+<body>
+<div class="">
+        <div class="index-container">
+{{#each data.body.items}} 
+
+  <div>
+  <img height="80px" src="{{{this.images.0.url}}}">
+  <p>{{this.name}}</p>
+  
+  </div>
+
+{{/each}}
+</body>
+
+</html>
+
