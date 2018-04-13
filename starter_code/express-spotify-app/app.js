@@ -20,10 +20,10 @@ app.get("/", (req, res, next) => {
 });
 
 //Remember to paste here your credentials
-var clientId = "73e3b1ab2b874ef98bf693131ec78453",
+let clientId = "73e3b1ab2b874ef98bf693131ec78453",
   clientSecret = "88d8a8d1695d41a48b5bd693586f24d0";
 
-var spotifyApi = new SpotifyWebApi({
+let spotifyApi = new SpotifyWebApi({
   clientId: clientId,
   clientSecret: clientSecret
 });
