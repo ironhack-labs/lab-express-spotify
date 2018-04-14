@@ -1,0 +1,22 @@
+ {{#each albumList}}
+
+<p>
+
+    {{this.name}}
+
+</p>
+
+{{#if this.images.[1].url}}
+<p>
+    <img src="{{this.images.[1].url}}"> </p>
+
+{{/if}}
+
+<a href="/tracks/{{this.id}}">
+    <button type="submit">
+        View Tracks
+    </button>
+</a>
+
+
+{{/each}}

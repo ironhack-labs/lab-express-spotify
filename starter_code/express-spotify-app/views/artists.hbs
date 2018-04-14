@@ -1,0 +1,23 @@
+<div class="spotifyAPI">
+
+    {{#each artistList}}
+    <p>
+
+        {{this.name}}
+
+    </p>
+    {{#if this.images.[1].url}}
+    <p>
+        <img src="{{this.images.[1].url}}"> </p>
+
+    {{/if}}
+
+    <a href="/albums/{{this.id}}">
+        <button type="submit">
+            View Albums
+        </button>
+    </a>
+
+    {{/each}}
+
+</div>
