@@ -6,9 +6,9 @@
         {{this.name}}
 
     </p>
+    {{#if this.images.[1].url}}
     <p>
-        {{#if this.images.[0].url}}
-        <img src="{{this.images.[0].url}}"> </p>
+        <img src="{{this.images.[1].url}}"> </p>
 
     {{/if}}
 

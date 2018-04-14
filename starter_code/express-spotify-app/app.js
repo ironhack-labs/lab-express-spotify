@@ -6,9 +6,9 @@ const hbs = require("hbs");
 // Middleware : app.use
 app.use(express.static(__dirname + "/public"));
 // setting global variables and configuration : app.set
-app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
-app.set("layout", __dirname + "/views/layout.hbs");
+app.set("views", __dirname + "/views");
+// app.set("layout", __dirname + "/views/layouts");
 
 // Remember to paste here your credentials
 var clientId = "28d1df6bef974407b035b56aa5cb4291",
@@ -29,8 +29,6 @@ spotifyApi.clientCredentialsGrant().then(
   }
 );
 
-// setting global variables and configuration : app.set
-
 // Routes : app.get => res.send or/and res.render
 
 app.get("/", (req, res, next) => {
@@ -42,7 +40,6 @@ app.get("/artist", (req, res, next) => {
     .searchArtists(req.query.artist)
     .then(data => {
       let artistList = data.body.artists.items;
-      //   let imagesList = artistList.images;
       res.render("artists.hbs", { artistList });
     })
     .catch(err => {
@@ -50,12 +47,26 @@ app.get("/artist", (req, res, next) => {
     });
 });
 
-app.get("/albums/:artistId", (req, res) => {
+app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(data => {
-      console.log(data.body.items);
-      res.render("albums.hbs");
+      let albumList = data.body.items;
+      console.log(albumList);
+      res.render("albums.hbs", { albumList });
+    })
+    .catch(err => {
+      console.log("error", error);
+    });
+});
+
+app.get("/tracks/:albumId", (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      let trackList = data.body.items;
+      console.log(trackList);
+      res.render("tracks.hbs", { trackList });
     })
     .catch(err => {
       console.log("error", error);
