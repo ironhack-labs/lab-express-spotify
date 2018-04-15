@@ -1,0 +1,93 @@
+.container-home-page, .search-form-class, #form-search-id, .container-row-artist,.artist-box,
+ .artist-items,#artistNameId, .container-tracks-header, .tracks-title, .tracks-listen {
+   display: flex;
+ }
+/**************************************Home page Css************************/
+
+.container-home-page{  
+  background-image: url("/images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+}
+.search-form-class{  
+  width: 880px; 
+  height: 210px;
+  border-radius: 4px;
+  background-color:rgba(242, 242, 242, 0.7);  
+  align-items: center;
+  justify-content: center;  
+}
+#form-search-id{  
+  flex-direction: column; 
+  align-items: center;  
+}
+#input-searhId, .btn-search{
+  font-size: 16px;
+  display: inline-block;
+  border-radius: 4px;
+}
+#input-searhId{
+  width: 500px;
+  padding: 12px 20px;
+  margin: 8px 0; 
+  border: 1px solid #ccc;   
+}
+.btn-search{  
+  background-color: tomato; 
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  padding: 12px 20px;
+  cursor: pointer; 
+  margin:10px auto;
+  border: 1px solid black;  
+}
+/**************************************Artist/Album page Css************************/
+.container-row-artist{
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width:100vw;  
+}
+.container-artist{  
+  width:20%;
+   margin:10px
+ }
+.artist-box{
+  flex-direction: column;
+  margin:10px auto;
+  justify-content: space-around;
+}
+.artist-items{
+  flex-direction: column;
+  border: 1px solid gray;
+  background: grey;
+  color: white
+}
+#artistNameId {
+  flex-direction: column;
+  margin-top:10px
+}
+
+/**************************************Track page Css************************/
+.container-tracks-header{
+  flex-direction: row;
+  justify-content:space-around;
+  border: 1px solid none;
+  font-size:2em;
+  background-color: grey;
+  height:100px;
+  align-items: center;
+}
+.tracks-title{
+  justify-content: flex-start;
+}
+
+.tracks-listen{
+  justify-content: flex-end; 
+}
