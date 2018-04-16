@@ -1,0 +1,23 @@
+.form-index {
+  margin-top: 200px;
+}
+
+.single-artist {
+  margin-bottom: 50px;
+}
+
+.single-artist-image {
+  height: 200px;
+}
+
+.single-artist-image img {
+  height: 100%;
+}
+
+.single-artist-info {
+  background: grey;
+}
+
+.single-artist-info a {
+  color: white;
+}
