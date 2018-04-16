@@ -1,0 +1,13 @@
+<div class="artist">
+  {{#if images.[1]}}
+  <img class="artist-img-top" src="{{images.[1].url}}" alt="image"> {{else}}
+  <img class="artist-img-top" src="/images/random.jpeg" alt="image"> {{/if}}
+  <div class="artist-body">
+    <form action="/albums/{{id}}">
+      <div class="menu">
+        <h2 class="artist-name">{{dotdotdot name}}</h2>
+        <button type="submit">View Albums</button>
+      </div>
+    </form>
+  </div>
+</div>

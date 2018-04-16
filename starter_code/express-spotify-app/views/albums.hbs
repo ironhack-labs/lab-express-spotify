@@ -1,0 +1,9 @@
+<div class="albums_page">
+  <div class="albums">
+    <h2>{{artists.[0]}}</h2>
+  {{#each albums}}
+    {{> album this}}
+  {{/each}}
+ </div>
+</div>
+<div class="prev" onclick="goBack()"></div>
