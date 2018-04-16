@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0; }
+
+body {
+  font: 62.5%/1.5 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  color: #000000; }
+
+h1 {
+  font-size: 4.0rem; }
+
+h2 {
+  font-size: 2.8rem; }
+
+h3 {
+  font-size: 2.0rem; }
+
+h4 {
+  font-size: 1.6rem; }
+
+h5 {
+  font-size: 1.4rem; }
+
+p {
+  font-size: 1.0rem; }
+
+li {
+  list-style-type: none; }
+
+a {
+  text-decoration: none; }
+  a:hover {
+    text-decoration: none; }
+
+.albums-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .albums-container .text-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    color: #ffffff;
+    box-sizing: border-box;
+    background-color: #002912; }
+  .albums-container img {
+    height: auto;
+    width: 100%; }
+  .albums-container a {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #640000;
+    background-color: #d80101; }
+
+.search-results {
+  width: 100%;
+  padding: 30px;
+  background-color: #ffffff; }
+  .search-results ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly; }
+
+.search-item {
+  text-align: center;
+  width: 250px;
+  min-height: 450px;
+  margin: 10px 30px 40px 30px;
+  background-color: #bbbbbb;
+  position: relative; }
+
+.artist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  .artist-container .text-container {
+    text-align: center;
+    width: 100%;
+    margin: 0 auto;
+    padding: 10px 10px 10px 10px;
+    color: #ffffff;
+    box-sizing: border-box;
+    background-color: #002912; }
+  .artist-container img {
+    height: auto;
+    width: 100%; }
+  .artist-container a {
+    position: absolute;
+    bottom: 10px;
+    padding: 10px;
+    font-size: 1.4rem;
+    font-weight: bold;
+    color: #640000;
+    background-color: #d80101; }
+
+.main {
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 200px);
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center; }
+
+.search-container {
+  width: 50%;
+  height: 200px;
+  background-color: rgba(41, 41, 41, 0.692);
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.search-artist {
+  width: 60%;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .search-artist input {
+    width: 100%;
+    height: 2.5em;
+    border-radius: 5px;
+    border: 1px solid #797979; }
+  .search-artist button {
+    color: #ffffff;
+    margin-top: 10px;
+    padding: 10px 15px 10px 15px;
+    background-color: #d41212;
+    box-shadow: 1px 1px 3px #000000; }
+
+.tracks-search-results {
+  width: 100%;
+  background-color: #ffffff; }
+  .tracks-search-results ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly; }
+
+.tracks-search-item {
+  width: 100%;
+  margin-bottom: 20px;
+  background-color: #dfdfdf;
+  position: relative; }
+
+.tracks-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between; }
+  .tracks-container h5 {
+    font-size: 1.5em; }
+  .tracks-container audio {
+    width: 50%;
+    height: 30px;
+    background-color: aqua; }
+
+body {
+  background-color: #ffffff;
+  background: url("../images/bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+  display: flex; }
+
+.btest {
+  border: 1px solid #ff0000; }
+
+/*# sourceMappingURL=style.css.map */

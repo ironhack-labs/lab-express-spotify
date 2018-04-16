@@ -1,0 +1,33 @@
+.tracks-search-results{
+    width: 100%;
+    background-color: #ffffff;
+    ul{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+    }
+}
+
+.tracks-search-item{
+    width: 100%;
+    margin-bottom: 20px;
+    background-color: rgb(223, 223, 223);
+    position: relative;
+}
+
+.tracks-container{
+    padding: 20px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    h5{
+        font-size: 1.5em;
+    }
+    audio{
+        
+        width: 50%;
+        height: 30px;
+        background-color: aqua;
+    }
+}

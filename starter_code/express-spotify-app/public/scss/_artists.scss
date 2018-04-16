@@ -1,0 +1,47 @@
+.search-results{
+    width: 100%;
+    padding: 30px;
+    background-color: #ffffff;
+    ul{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+
+.search-item{
+    text-align: center;
+    width: 250px;
+    min-height: 450px;
+    margin: 10px 30px 40px 30px;
+    background-color: rgb(187, 187, 187);
+    position: relative;
+}
+
+.artist-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    .text-container{
+        text-align: center;
+        width: 100%;
+        margin:0 auto;
+        padding: 10px 10px 10px 10px;
+        color: #ffffff;
+        box-sizing: border-box;
+        background-color: rgb(0, 41, 18);
+    }
+    img{
+        height: auto;
+        width: 100%;
+    }
+    a{
+        position: absolute;
+        bottom: 10px;
+        padding: 10px;
+        font-size: 1.4rem;
+        font-weight: bold;
+        color: #640000;
+        background-color: rgb(216, 1, 1);
+    }
+}

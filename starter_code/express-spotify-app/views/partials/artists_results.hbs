@@ -1,0 +1,11 @@
+<li class="search-item">
+    <div class="artist-container">
+        {{#if images.[0]}} {{#with images.[0]}}
+        <img src="{{url}}"> {{/with}} {{else}}
+        <img src="./images/default-avatar.jpg"> {{/if}}
+        <div class="text-container">
+            <h5>{{name}}</h5>
+        </div>
+        <a href="/albums?artistID={{id}}&artistName={{name}}"><h5>View Albums</h5></a>
+    </div>
+</li>

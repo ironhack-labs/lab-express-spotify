@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+body 
+    { 
+    font: 62.5%/1.5 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #000000; 
+}
+
+h1 
+    { 
+    font-size: 4.0rem; 
+} 
+
+h2 
+    { 
+    font-size: 2.8rem;     
+} 
+
+h3 
+    { 
+    font-size: 2.0rem; 
+} 
+
+h4 
+    { 
+    font-size: 1.6rem;     
+} 
+
+h5 
+    { 
+    font-size: 1.4rem;     
+} 
+
+p 
+    { 
+    font-size: 1.0rem;     
+}
+
+li{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+    &:hover{
+        text-decoration: none;
+    }
+}

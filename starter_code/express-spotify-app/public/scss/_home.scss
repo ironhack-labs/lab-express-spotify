@@ -1,0 +1,40 @@
+.main {
+  width: 100%;
+  position: absolute;
+  top: calc(50% - 200px);
+  display: flex;
+  box-sizing: border-box;
+  justify-content: center;
+}
+
+.search-container {
+  width: 50%;
+  height: 200px;
+  background-color: rgba(41, 41, 41, 0.692);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-artist {
+    width: 60%;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    input{
+        width: 100%;
+        height: 2.5em;
+        border-radius: 5px;
+        border: 1px solid #797979;
+    }
+    button{
+        color: #ffffff;
+        margin-top: 10px;
+        padding: 10px 15px 10px 15px;
+        background-color: rgb(212, 18, 18);
+        box-shadow: 1px 1px 3px #000000;
+    }
+
+}
