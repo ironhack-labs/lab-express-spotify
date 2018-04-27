@@ -1,0 +1,15 @@
+<div class="container-artist">
+  <div class="notification">                      
+    <div class= "artist-box has-text-centered">     
+          {{#each this.images}}
+             {{#if @first }}
+                <img src="{{this.url}}"/>  
+              {{/if}}      
+          {{/each }} 
+           <div class="artist-items">               
+                <h3 class="subtitle is-3" id= "artistNameId">{{this.name}}</h3>
+                <a href="/tracks/{{this.id}}" class="button is-danger">View Tracks</a>                       
+            </div>  
+    </div> 
+   </div>  
+</div>        

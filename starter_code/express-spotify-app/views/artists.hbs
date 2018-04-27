@@ -1,0 +1,20 @@
+<div class = "container container-row-artist">    
+  {{#each artist}}
+    <div class="container-artist"> 
+      <div class="notification"> 
+        <div class= "artist-box has-text-centered">     
+          {{#each this.images}}
+          {{#if @first }}
+          <img src="{{this.url}}"/>  
+          {{/if}}      
+          {{/each }} 
+          <div class="artist-items">               
+            <h3 class="subtitle is-3" id= "artistNameId">{{this.name}}</h3>
+                                   <!-- <button class="btn-search" >View albums</button> -->
+            <a href="/albums/{{this.id}}" class="button is-danger">View albums</a>                       
+            </div>                        
+        </div> 
+      </div>  
+    </div>        
+  {{/each}}    
+</div>

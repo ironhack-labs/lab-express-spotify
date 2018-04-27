@@ -1,0 +1,25 @@
+<div class ="container">
+  <div class ="container-tracks-header">
+    <div class ="tracks-title">
+        <p><h2><strong>Title</strong></h2></p>
+    </div>
+    <div class="tracks-listen">
+        <p><h2><strong>Listen</strong></h2></p>
+    </div>    
+  </div>
+  {{#each track}}
+    <div class="notification">
+      <div div ="container-tracks-header">        
+          <div class ="tracks-title">          
+            <p><h3><strong>{{this.name}}</strong></h3></p>
+        </div >
+        <div class="tracks-listen">          
+            <audio controls>
+                <source src="{{this.preview_url}}" type="audio/ogg">
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+            </audio> 
+        </div>
+      </div>
+    </div>
+  {{/each }} 
+</div>

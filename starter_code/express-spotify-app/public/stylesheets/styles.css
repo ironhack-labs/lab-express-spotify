@@ -1,0 +1,24 @@
+body{
+  display: flex;
+  background-color: rgba(185, 43, 221, 0.274);
+}
+
+.square{
+  display: flex;
+    justify-content: center;
+    background-color: rgba(82, 136, 207, 0.932);
+    width: 60vw;
+    height: 30vh;
+    align-items: center;
+    margin: 34vh auto;
+}
+.text-box{
+  width: 210px;
+  height: 25px;
+  text-align: center;
+  border: 1px solid rgb(8, 8, 226);
+  border-radius: 5px;
+}
+.bttn-search{
+
+}
