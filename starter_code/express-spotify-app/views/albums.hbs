@@ -1,0 +1,12 @@
+{{#each album}}
+
+    {{#each this.images}}
+        {{#if @first }}
+        <img src="{{this.url}}"/>  
+        {{/if}}      
+    {{/each }} 
+                
+    <h3 class="subtitle is-3" id= "artistNameId">{{this.name}}</h3>
+    <a href="/tracks/{{this.id}}" class="button is-danger">View Tracks</a>                       
+
+{{/each}}    

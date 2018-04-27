@@ -1,0 +1,13 @@
+<h1>Tracks krnal</h1>
+
+{{#each track}}
+
+    {{#each this.images}}
+        {{#if @first }}
+        <img src="{{this.url}}"/>  
+        {{/if}}      
+    {{/each }} 
+                
+    <h3>{{this.name}}</h3>                      
+
+{{/each}}   
