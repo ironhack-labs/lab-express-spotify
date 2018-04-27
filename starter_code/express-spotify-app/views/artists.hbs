@@ -1,0 +1,17 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+<div id="container">
+{{#each Artistas}}
+  <div id='card'>
+   {{#each this.images}}
+     {{#if @first}}
+     <img src='{{this.url}}'></img>
+     {{/if}}
+   {{/each}}
+   <h2>{{this.name}}</h2>
+   </div>
+{{/each}}
+</div>
+</body>
