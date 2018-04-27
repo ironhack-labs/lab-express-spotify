@@ -1,0 +1,19 @@
+{
+  "name": "express-spotify-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "watch": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "spotify-web-api-node": "^3.1.0"
+  }
+}

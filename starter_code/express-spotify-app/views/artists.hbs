@@ -1,0 +1,15 @@
+
+<div id="arrayArtistas">
+
+{{#each Artistas}}
+
+    {{#each this.images}}
+        {{#if @first}}
+        <img src="{{this.url}}" alt="">
+        {{/if}}
+    {{/each}}
+    <h3>{{this.name}}</h3>
+    <a href="/albums/{{this.id}}"> View albums</a>
+{{/each}}
+
+</div>
