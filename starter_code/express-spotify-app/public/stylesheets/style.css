@@ -1,0 +1,39 @@
+body{
+  background-image: url('../images/concierto-back.jpg');
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center
+}
+
+div{
+  background-color: rgba(255,255,255,0.5);
+  width: 800px;
+  height: 200px;
+  display:flex;
+  flex-direction: column;
+  justify-content:center;
+  align-items:center;
+}
+
+input{
+  width: 300px;
+  height: 40px;
+  border-radius: 5px;
+}
+
+button{
+  border-radius: none;
+  width: 100px;
+  height: 30px;
+  background-color: rgb(255,5,0);
+  margin: 10px;
+  color: white;
+}
+#container{
+  display:flex;
+  flex-wrap: wrap
+}
+#card{
+  height: 200px;
+}
