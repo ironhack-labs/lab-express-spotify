@@ -1,0 +1,7 @@
+<h1><small>Albums for</small> {{ artist.name }}</h1>
+
+<ul>
+  {{#each albums }}
+    <li> <a href="/tracks/{{ this.id }}"> {{ this.name }} </a> </li>
+  {{/each }}
+</ul>
