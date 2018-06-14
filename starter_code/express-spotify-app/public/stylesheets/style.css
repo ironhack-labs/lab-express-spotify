@@ -1,0 +1,19 @@
+
+
+.search-form {
+  width: 250px;
+}
+
+.artist-img {
+  width: 250px
+}
+
+.artist-container {
+  border-color: 1px solid grey;
+  padding: 20px 0px;
+}
+
+.tracks-header {
+  height: 100px;
+  background-color: #4A4A4A
+}
