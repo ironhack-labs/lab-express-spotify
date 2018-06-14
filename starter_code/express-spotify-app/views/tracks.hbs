@@ -1,0 +1,21 @@
+<ul>
+  {{#each tracks }}
+    <li>
+      <p>
+        <label for="t-rex-roar-loop">
+          {{ this.name }}
+        </label>
+
+        <br/>
+
+        <!-- This time we use the source element instead of the src attribute -->
+        <audio id="t-rex-roar-loop" controls loop>
+          <source
+                type="audio/mpeg"
+                src="{{ this.preview_url }}"/>
+            Your browser does not support the <code>audio</code> element.
+        </audio>
+      </p>
+    </li>
+  {{/each }}
+</ul>
