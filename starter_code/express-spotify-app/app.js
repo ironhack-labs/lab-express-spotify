@@ -12,7 +12,7 @@ app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-hbs.registerPartials(__dirname + "/views/par");
+hbs.registerPartials(__dirname + "/views/partials");
 //#endregion
 
 //#region  Spotify API Setup
@@ -46,25 +46,36 @@ app.get("/artists", function(req, res) {
   let artist = req.query.artist;
 });
 
+app.get("/albums/:id", function(req, res) {
+  let artistId = req.params.id;
+  searchAlbums(artistId, res);
+  // searchArtist(req.query.artist, res);
+  // let artist = req.query.artist;
+});
+
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
+
+function searchAlbums(artistId, res) {
+  console.log("DEBUG searchAlbums ", artistId);
+  spotifyApi.getArtistAlbums(artistId).then(data => {
+    console.log(data.body.items[0].name);
+    console.log(data.body.items[0].images);
+    let albumArr = data.body.items.map(album => ({ name: album.name, img: album.images }));
+    res.render("albums", { albums: albumArr });
+  });
+}
 
 function searchArtist(artist, res) {
   // `q=name:${artist}&type=artist`
-  console.log("DEBUG searchArtist ", artist);
   spotifyApi
     .searchArtists(artist)
     .then(data => {
-      console.log("DEBUG spotifyAPI data.body.artists.items[0].name", data.body.artists.items[0].name);
-      let responseArtistsArr = data.body.artists.items;
-      console.log("artists count: ", responseArtistsArr.length);
-
-      let artistsArr = responseArtistsArr.map((artist, index) => ({
+      let artistsArr = data.body.artists.items.map((artist, index) => ({
+        id: artist.id,
         name: artist.name,
         img: artist.images[0] ? artist.images[0].url : null
       }));
-      console.log("artistsArr: ", artistsArr);
-
-      res.render("artist", { name: data.body.artists.items[0].name, img: data.body.artists.items[0].images[1].url });
+      res.render("artist", { artists: artistsArr });
     })
     .catch(err => {
       // ----> 'HERE WE CAPTURE THE ERROR'

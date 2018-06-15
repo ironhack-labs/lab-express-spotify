@@ -41,3 +41,29 @@
   height: 28px;
   border-radius: 5px;
 }
+
+/*  */
+
+.artist-list-container {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.artist-card-container {
+  display: flex;
+  width: 30%;
+  margin: 3%;
+  flex-flow: wrap;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.artist-img {
+  max-height: 120px;
+  max-width: 80%;
+  align-self: center;
+}
