@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div id="artists">
+
+        {{#each artists}}
+        <div class="card" style="width: 30%; height:30%">
+            <img class="card-img-top" src="{{this.images.0.url}}" height="{{this.images.0.height}}px" width="{{this.images.0.width}}px"
+                alt="Card image cap">
+            <div class="card-body">
+                <a class="btn-artist" href="/artists/{{this.name}}" role="button">View Albums of{{this.name}}</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>
