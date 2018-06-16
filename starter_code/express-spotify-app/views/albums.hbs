@@ -1,9 +1,10 @@
-<div id="artists">
+<h1>Albums</h1>
 <form action="/">
     <button type="submit">New Search</button>
 </form>
-{{#each items}}
-    <div class="artist">
+<div id="albums">
+    {{#each items}}
+    <div class="album">
         {{#each images}}
             {{#if @first}}
                 <div>
@@ -12,16 +13,9 @@
             {{/if}}
         {{/each}}
         <div>{{name}}</div>
-        <div><form action="/albums">
-            <button type="submit" name="artistId" value={{id}}>View Albums</button>
+        <div><form action="/tracks">
+            <button type="submit" name="albumId" value={{id}}>View Tracks</button>
         </form></div>
     </div>
-{{/each}}
-</div>
-
-{{!-- 
-<div>
-    {{#each items}}
-        {{> artistPartial}}
     {{/each}}
-</div> --}}
+</div>

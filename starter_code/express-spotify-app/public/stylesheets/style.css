@@ -1,0 +1,33 @@
+#artists{
+    display: inline-block;
+    padding: 0 10%;
+}
+
+.artist{
+    float: left;
+    width: 25%;
+    height: 300px;
+    padding: 4%;
+}
+
+.artist-image{
+    height: 200px;
+    /* width: 100%; */
+    margin: 0;
+}
+
+.albums{
+    display: inline-block;
+    padding: 0 10%;
+}
+
+.album{
+    float: left;
+    width: 25%;
+    padding: 4%;
+}
+
+.track{
+    display: flex;
+    align-items: center;
+}
