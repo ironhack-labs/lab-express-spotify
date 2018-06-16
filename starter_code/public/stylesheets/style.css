@@ -1,0 +1,26 @@
+.background-image{
+  background-image: url("/images/music.jpg");
+  background-color:orange;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+}
+.transparent-box {
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  height: 40vh;
+  width: 60vw;
+}
+form {
+  margin-left: auto;
+  margin-right:auto;
+}
+.artist-img{
+  width: 25vw;
+}
