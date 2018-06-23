@@ -24,6 +24,24 @@ app.set('views', path.join(__dirname, 'views'));
 
 app.use(express.static('public'));
 
+app.get('/', (req, res, next) => {
+    res.render('home');
+})
+
+app.get('/artists', (req, res, next) => {
+    console.info(req.query.artist);
+    spotifyApi.searchArtists(req.query.artist)
+        .then(data => {
+            let { items } = data.body.artists;
+            res.render("artists", {
+                artists: items
+            });
+        })
+        .catch(err => {
+          console.error(err);
+        })
+})
+
 app.listen(PORT, () => {
     console.info('Holi');
 });
