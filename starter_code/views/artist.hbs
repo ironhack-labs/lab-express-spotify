@@ -1,0 +1,8 @@
+<p2>Search result</p2>
+
+
+{{#each artists}}
++    {{> artistPartial this}}
+    <button><a href="/albums/{{artistID}}">View album</a></button>
++  {{/each}}
+
