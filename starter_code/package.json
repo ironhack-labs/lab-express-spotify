@@ -1,0 +1,21 @@
+{
+  "name": "express-spotify-app",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shanx2",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "mongoose": "^5.1.6",
+    "morgan": "^1.9.0",
+    "prettyjson": "^1.2.1",
+    "request": "^2.87.0",
+    "spotify-web-api-node": "^3.1.1"
+  }
+}

@@ -1,0 +1,9 @@
+<p2>Here are the albums of this artist</p2>
+
+
+<ul>
+  {{#each albums}}
+    <li>{{this.name}}</li>
+    <a href="/tracks/{{this.id}} "><button>View Track</button></a>
+  {{/each}}
+</ul>
