@@ -4,6 +4,10 @@ body {
   font-family: 'Montserrat', sans-serif;
 }
 
+*, ::after, ::before {
+  box-sizing: inherit;
+}
+
 h2 {
   text-align: center;
 }
@@ -41,24 +45,96 @@ footer {
   color: #fff;
 }
 
+.home-container {
+  height: 100vh;
+}
+
+.search-bar {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  width: 100%;
+}
+
+.index-btn {
+  margin-top: 10px;
+  border-radius: 5px;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  padding: .5rem .75rem;
+}
+
 .container {
+  margin: 0 auto;
+  padding: 0 15px;
+  width: 100%;
+}
+
+@media (min-width: 567px) {
+  .container {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  .container {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+}
+
+/* .container {
   display: flex;
   justify-content: center;
   align-items: center;
   width: 100vw;
   height: 80vh;
-}
+} */
 
-.artists {
+/* .artists {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   align-content: center;
+  margin: 0 15px;
+} */
+
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 -15px;
+}
+
+@media (min-width: 1200px) {
+  .one-artist {
+    flex: 0 0 33.333333%;
+    max-width: 26.333333%;
+  }
 }
 
 .one-artist {
+  position: relative;
+  width: 100%;
+  min-height: 1px;
+  padding: 10px 40px;
+}
+
+/* .one-artist {
   display: flex;
   flex-direction: column;
   width: 30%;
@@ -68,25 +144,33 @@ footer {
   align-self: center;
   margin: 50px 0;
   color: white;
-}
+} */
 
 .one-artist img {
-  width: 400px;
-  align-self: center;
+  width: 100%;
+  vertical-align: middle;
 }
 
 .info-bar {
+  background-color: #4D4D4D;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+/* .info-bar {
   background-color: rgb(125, 125, 125);
   width: 400px;
   padding-bottom: 15px;
   display: flex;
   flex-direction: column;
   align-self: center;
-}
+} */
 
 .info-bar h3 {
-  font-size: 16px;
+  font-size: 18px;
   font-weight: bold;
+  margin: 0;
+  color: #fff;
 }
 
 .view-more {
@@ -115,9 +199,8 @@ button {
   border-radius: 5px;
   color: #fff;
   border: 1px solid black;
-  padding: 12px;
-  font-size: 14px;
-  font-weight: bold;
+  padding: 4px 10px;
+  font-size: 12px;
 }
 
 .header-tracks {
