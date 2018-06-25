@@ -18,32 +18,42 @@ app.get("/", (req, res, next) => {
 app.get('/artists', (req, res, next) => {
     spotifyApi.searchArtists(req.query.artist)
         .then(data => {
-            const artists = data.body.artists;
-            artists.items.forEach(i => console.log(i));
-            res.render('artist.hbs', artists);
-        })
+            //res.send(data.body.artists);     //check if API connected
+            let artists = data.body.artists.items;
+            //res.send(artists.images);
+            res.render("artist.hbs", {artists})
+            })
         .catch(err => {
             console.log(err);
         });
     });
 
-app.get('/albums', (req, res) => {
-    spotifyApi.getArtistAlbums(req.query.artistId)
+
+app.get("/albums/:artistID", (req, res, next) => {
+    const artistID = req.params.artistID;
+    spotifyApi.getArtistAlbums(artistID)
         .then(data => {
-            const albums = data.body;
-            albums.items.forEach(i => console.log(i));
-            res.render('albums', albums);
+           //res.send(data);
+           let albums = data.body.items;
+           res.render("album.hbs", {albums});
         })
         .catch(err => {
             console.log(err);
         });
-    });
-
-
-
-app.get("albums/:artistID", (req, res, next) => {
-    let artistID = req.query.artistID;
 })
+
+app.get("/tracks/:albumID", (req, res, next) => {
+    const albumID = req.params.albumID;
+    spotifyApi.getAlbumTracks(albumID)
+    .then(function(data) {
+        let tracks = data.body.items;
+        //res.send(tracks);
+        res.render("tracks.hbs", {tracks})
+    }, function(err) {
+        console.log('Something went wrong!', err);
+  });
+})
+
 
 
 // Listner

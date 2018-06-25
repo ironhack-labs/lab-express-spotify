@@ -1,9 +1,9 @@
-<h1> Albums</h1>
+<p2>Here are the albums of this artist</p2>
 
-<div>
 
-    {{#each albums}}
-+    {{> albumPartial this}}
-+  {{/each}}
-
-</div>
+<ul>
+  {{#each albums}}
+    <li>{{this.name}}</li>
+    <a href="/tracks/{{this.id}} "><button>View Track</button></a>
+  {{/each}}
+</ul>

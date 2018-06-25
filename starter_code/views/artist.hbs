@@ -1,8 +1,12 @@
 <p2>Search result</p2>
 
 
-{{#each artists}}
-+    {{> artistPartial this}}
-    <button><a href="/albums/{{artistID}}">View album</a></button>
-+  {{/each}}
+<ul>
+  {{#each artists}}
+    <li>{{this.name}}</li>
+    <a href="/albums/{{this.id}} "><button>View Albums</button></a>
+  {{/each}}
+</ul>
+
+
 
