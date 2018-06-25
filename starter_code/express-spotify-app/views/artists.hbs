@@ -1,0 +1,15 @@
+<p>Hello</p>
+<ul class="">
+  {{!-- for each element a new element on the list --}}
+  {{#each artists}}
+  {{!-- define artists in app.js --}}
+  <li>
+    {{#if this.images}}
+    <img src="{{ this.images.0.url }}" alt="">{{else}}
+    <img src="lorem.png" alt="">
+    {{/if}}
+    <h2>{{ this.name }} </h2>
+    <a href="/albums/{{this.id}}">Albums</a>
+    </li>
+  {{/each}}
+</ul>

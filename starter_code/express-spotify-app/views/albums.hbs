@@ -1,0 +1,11 @@
+<ul>
+  {{#each albums}}
+  <li>
+    {{#if this.images}}
+    <img src="{{this.images.0.url}}" alt=""> {{else}}
+    <img src="lorem.png" alt="">{{/if}}
+    <h2>{{this.name}}</h2>
+    <a href="/albums/{{this.id}}">View Albums</a>
+  </li>
+
+</ul>
