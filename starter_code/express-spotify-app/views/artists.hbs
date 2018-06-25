@@ -1,0 +1,8 @@
+<h2>{{artistsResults.[0].name}}</h2>
+
+<div class="albums">
+    {{#each artistsResults}}
+        {{>artistsPartial}}
+    {{/each}}
+    <button>View Albums</button>
+</div>
