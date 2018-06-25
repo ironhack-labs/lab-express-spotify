@@ -1,0 +1,12 @@
+<h3>Results:</h3>
+
+<ul class ="results">
+  {{#each artists}}
+  <li>
+    {{this.image}}
+    <img src="{{this.images.0.url}}" id="picture">
+    <p><b>{{this.name}}</b></p>
+    <a href="/albums/{{this.id}}">Albums</a>
+  </li>
+  {{/each}}
+</ul>
