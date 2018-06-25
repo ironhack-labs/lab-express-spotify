@@ -1,0 +1,13 @@
+<div class="card" style="position:relative;">
+    <img class="card-img-top" src="{{this.images.2.url}}">
+    
+    {{#unless this.images.2.url}}
+        <h4>NO IMAGE</h4>
+     {{/unless}}
+
+    <div class="card-body">
+        <h4 class="card-title">{{this.name}}</h4>
+        <h3><a href="/albums/{{this.id}}">View albums</a></h3>        
+    </div>
+</div> 
+

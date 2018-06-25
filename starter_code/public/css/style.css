@@ -1,0 +1,38 @@
+.card{
+    float: left;
+    width: calc(25% - 20px);
+    padding: 30px 10px;
+    /* border: 1px solid black; */
+    border-radius: 3px;
+}
+
+input{
+    border: 1px solid black !important;
+    border-radius: 3px;
+    color: black !important;
+}
+
+button{
+    background-color: red;
+}
+
+.card > img{
+    margin: 0 auto;
+    display: block;
+    width: 200px;
+    height: 200px;
+}
+
+.card h4, .card h3{
+    text-align: center;
+}
+
+.card h3{
+    background-color: rgba(232,113, 104);
+    color: white;
+    border-radius: 3px;
+    display: block;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px 5px;
+}
