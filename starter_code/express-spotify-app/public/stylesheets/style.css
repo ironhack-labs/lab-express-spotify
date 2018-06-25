@@ -1,0 +1,9 @@
+body {
+  background-color: red;
+}
+
+.container {
+  width: 100vw;
+  height: 75vh;
+  background-color: blue;
+}
