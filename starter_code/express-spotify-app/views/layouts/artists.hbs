@@ -1,0 +1,23 @@
+<h2>Are you looking for {{artistsRes.[0].name}} ?</h2>
+
+{{!-- //artistsRes[0].name --}}
+
+{{#each artistsRes}}
+<div>
+  {{!-- {{#if !this.images.[0].url}}
+   <p>No image provided :(</p>
+  
+  {{#else}} --}}
+      <img src="{{this.images.[0].url}}"> 
+  {{!-- {{/if}}  --}}
+</div>
+
+
+  <div>
+    <h3>{{this.name}}</h3>
+    <button>
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </button>
+  </div>
+</div>
+{{/each}}
