@@ -56,17 +56,26 @@ app.get('/albums/:artistId', (req, res) => {
   const {artistId} = req.params;
   spotifyApi.getArtistAlbums(artistId)
   .then(data => {
-
-    res.locals.albumsRes = data.body.items
     //res.send(data);
-    res.render("layouts/:artists.hbs")
-
+    res.locals.albumsRes = data.body.items
+    res.render("layouts/albums-info.hbs")
   })
   .catch(err => {
     console.log(`Can't retreive album:(`, err);
   });
-
 });
+
+app.get('/albums/:artistId/tracks/:albumId', (req, res, next)=>{
+    spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(data => {
+      //res.send(data)
+      res.locals.trackResults = data.body.items;
+      res.render("tracks.hbs")
+    })
+    .catch(err => {
+      console.log("View tracks failed", err)
+    })
+})
 
 
 app.listen(3000, () => {
