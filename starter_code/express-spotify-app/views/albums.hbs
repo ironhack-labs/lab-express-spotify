@@ -1,0 +1,15 @@
+<h2>Albums for: {{albumResults.[0].artists.[0].name}}</h2>
+<div class="container">
+  <div class="artists">
+    {{#each albumResults}}
+      <div class="one-artist">
+        {{>artistsPartial}}
+
+        <div class="info-bar">
+          <h3>{{this.name}}</h3>
+            <button class="view-more"><a href="/tracks/{{this.id}}">View Tracks</a></button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

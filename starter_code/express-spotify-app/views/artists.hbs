@@ -1,0 +1,15 @@
+<h2> Results for: {{artistsResults.[0].name}}</h2>
+<div class="container">
+  <div class="artists">
+    {{#each artistsResults}}
+      <div class="one-artist">
+      {{>artistsPartial}}
+
+        <div class="info-bar">
+          <h3>{{this.name}}</h3>
+            <button class="view-more"><a href="/albums/{{this.id}}">View Albums</a></button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
