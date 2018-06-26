@@ -1,0 +1,18 @@
+.albums-container{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.one-album-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center; 
+  width: 30%;
+  margin: 20px;
+}
+
+.one-album-container img {
+  margin: auto;
+  width: 300px;
+} 
