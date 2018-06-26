@@ -1,0 +1,16 @@
+<h2>
+  Search result
+</h2>
+
+<ul>
+  {{#each albums}}
+    <li>
+      {{this.name}}
+    </li>
+    <a href="/tracks/{{this.id}} ">
+      <button>
+        View Track
+      </button>
+    </a>
+  {{/each}}
+</ul>
