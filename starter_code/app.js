@@ -29,10 +29,11 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/artists', (req, res, next) => {
-    console.info(req.query.artist);
     spotifyApi.searchArtists(req.query.artist)
         .then(data => {
             let { items } = data.body.artists;
+            console.log(items);
+            console.log(items[0].images[0].url);
             res.render("artists", { items });
         })
         .catch(err => {
