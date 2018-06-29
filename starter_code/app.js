@@ -8,11 +8,11 @@ const hbs = require('hbs');
 
 const SpotifyWebApi = require('spotify-web-api-node');
 const clientId = '5c06cda28631421c996a311f1a529b2e',
-    clientSecret = '8128710f4402495892034495ff4ac7e9';
+  clientSecret = '8128710f4402495892034495ff4ac7e9';
 
 const spotifyApi = new SpotifyWebApi({
-    clientId : clientId,
-    clientSecret : clientSecret
+  clientId : clientId,
+  clientSecret : clientSecret
 });
 
 spotifyApi.clientCredentialsGrant()
@@ -29,30 +29,42 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/artists', (req, res, next) => {
-    spotifyApi.searchArtists(req.query.artist)
-        .then(data => {
-            let { items } = data.body.artists;
-            res.render("artists", { items });
-        })
-        .catch(err => {
-          console.error(err);
-        })
+  spotifyApi.searchArtists(req.query.artist)
+    .then(data => {
+      let { items } = data.body.artists;
+      res.render("artists", { items });
+    })
+    .catch(err => {
+      console.error(err);
+    })
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
-    console.log(req.params);
-    spotifyApi.getArtistAlbums(req.params.artistId)
+  console.log(req.params);
+  spotifyApi.getArtistAlbums(req.params.artistId)
     .then(data => {
-        let { items } = data.body;
-        console.log(items);
-        res.render("albums", { items });
-
+      let { items } = data.body;
+      console.log(items);
+      res.render("albums", { items });
     })
     .catch(error => {
-        console.log(error);
+      console.log(error);
     })
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+    spotifyApi.getAlbumTracks(req.params.albumId)
+      .then(data => {
+        console.log(data);          
+        let { items } = data.body;
+        console.log(items[0].preview_url);
+        res.render("tracks", { items });
+      })
+      .catch(error => {
+        console.log(error);
+      })
   });
 
 app.listen(PORT, () => {
-    console.info('Holi');
+  console.info('Holi');
 });
