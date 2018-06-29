@@ -32,14 +32,26 @@ app.get('/artists', (req, res, next) => {
     spotifyApi.searchArtists(req.query.artist)
         .then(data => {
             let { items } = data.body.artists;
-            console.log(items);
-            console.log(items[0].images[0].url);
             res.render("artists", { items });
         })
         .catch(err => {
           console.error(err);
         })
 })
+
+app.get('/albums/:artistId', (req, res, next) => {
+    console.log(req.params);
+    spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(data => {
+        let { items } = data.body;
+        console.log(items);
+        res.render("albums", { items });
+
+    })
+    .catch(error => {
+        console.log(error);
+    })
+  });
 
 app.listen(PORT, () => {
     console.info('Holi');
