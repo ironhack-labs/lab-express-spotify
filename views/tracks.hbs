@@ -1,0 +1,11 @@
+<div class="container m-2 p-5">
+    {{#each tracks}}
+        <div class="row foottext spcbtwn">
+            <h5>{{this.name}}</h5>
+            <audio class="right" controls>
+            <source src="{{preview_url}}" type="audio/ogg">
+            </audio>
+        </div>
+    {{/each}}
+   
+</div>
