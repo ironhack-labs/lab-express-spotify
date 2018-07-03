@@ -1,7 +1,10 @@
 <div>
   {{#each artists}}
         <h2>{{ name }}</h2>
+        <p>Popularity: {{ popularity }}</p>
+        <p>Followers: {{ followers.total }}</p>
         <img src="{{ images.[0].url }}" alt="">
+
     </div>
   {{/each}}
 </div>
