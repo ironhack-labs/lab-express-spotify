@@ -27,8 +27,10 @@ spotifyApi.clientCredentialsGrant()
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
+hbs.registerPartials(__dirname + '/views/partials');
+
 app.get('/', function (req, res) {
-  res.render('index')
+  res.render('home')
 })
 
 
