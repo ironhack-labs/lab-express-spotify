@@ -1,0 +1,67 @@
+/* Font Settings */
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro:600,700');
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+/* Container Settings */
+
+.container {
+  background-image: url(/images/bg-1.jpg);
+  width: 100%;
+  height: 100%;
+}
+
+/* General Form Settings */
+
+.formSearch {
+  border-radius: 25px;
+  display: inline-block;
+  padding: 40px 80px;
+  text-align: center;
+  margin-top: 165px;
+  margin-left: 350px;
+}
+
+/* Button Settings */
+
+button {
+  margin-top: 20px;
+  background-color: #1db954;
+  border: 0;
+  border-radius: 35px;
+  color: whitesmoke;
+  font-family: 'Source Sans Pro';
+  font-size: 1.4rem;
+  font-weight: 700;
+  padding: 15px 50px;
+}
+
+button:hover {
+  background-color: #1ed760;
+  cursor: pointer;
+}
+
+input {
+  border: 0;
+  border-radius: 15px;
+  font-family: 'Source Sans Pro';
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 20px 80px;
+  text-align: center;
+}
+
+.logo {
+  padding: 15px 0 0 15px;
+  color: white;
+}
+
+.footer {
+  background-color: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height:80px;
+}
