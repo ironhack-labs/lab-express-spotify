@@ -33,6 +33,18 @@ app.get('/', function (req, res) {
   res.render('home')
 })
 
+app.get("artists", (req, res, next) => {
+  let artist = req.query.artist;
+  console.log(artist)
+
+  spotifyApi.searchArtists(artist)
+    .then(data => {
+      res.render('artists', { artists: data.body.artists.items });
+    })
+    .catch(err => {
+      console.error(err);
+    })
+});
 
 app.listen(PORT, () => {
   console.log('CONNECTED')
