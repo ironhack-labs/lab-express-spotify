@@ -1,0 +1,13 @@
+<html lang="en">
+  <head>
+    <title>Spotify Search App</title>    
+  </head>
+  <body>
+      <div class="title-box"></div>
+      <% for (var i=0; i<trackList.length;i++){ %>
+        <div class="track-box"><%=trackList[i].name%>
+            <audio controls><source src=<%=trackList[i].preview_url %> type="audio/mpeg"></audio>
+        </div>
+      <%}%>
+  </body>
+</html>

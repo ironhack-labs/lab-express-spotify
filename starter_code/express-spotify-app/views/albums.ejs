@@ -1,0 +1,52 @@
+<html lang="en">
+  <head>
+    <title>Album Page</title>    
+  </head>
+  <body>
+    <div class="container artist">
+      <form action="/artist" method="post" id="formArtist">
+        <input type="text" id="term" name="term" placeholder="Search for an artist!">
+      </form>
+      <button type="submit" form="formArtist" value="Submit">Search for an artist</button>
+    </div>
+    <h2><%=artistName%></h2>
+    <div class="artist-box">
+      <figure class="album-box">
+        <% if (albumInfo[0].images.length>0){ %>
+          <img src=<%=albumInfo[0].images[0].url%>>
+        <%} else { %>
+          <img src="images/noImage.png">
+        <% } %>
+        <figcaption><%=albumInfo[0].name%><br>
+          <button>
+            <a href=<%="/tracks/"+albumInfo[0].id%>>View Tracks</a>
+          </button>
+        </figcaption>
+      </figure>
+      <figure class="album-box">
+        <% if (albumInfo[2].images.length>0){ %>
+          <img src=<%=albumInfo[2].images[0].url%>>
+        <%} else { %>
+          <img src="images/noImage.png">
+        <% } %>
+        <figcaption><%=albumInfo[2].name%><br>
+          <button>
+            <a href=<%="/tracks/"+albumInfo[2].id%>>View Tracks</a>
+          </button>
+        </figcaption>
+      </figure>
+      <figure class="album-box">
+        <% if (albumInfo[4].images.length>0){ %>
+          <img src=<%=albumInfo[4].images[0].url%>>
+        <%} else { %>
+          <img src="images/noImage.png">
+        <% } %>
+        <figcaption><%=albumInfo[4].name%><br>
+          <button>
+            <a href=<%="/tracks/"+albumInfo[4].id%>>View Tracks</a>
+          </button>
+        </figcaption>
+      </figure>
+    </div>
+  </body>
+</html>  
