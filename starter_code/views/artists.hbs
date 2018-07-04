@@ -1,0 +1,25 @@
+<h1>Artistas encontrados</h1>
+
+<div class="container">
+	<div class="cards">
+
+    {{#each artists as |artist|}}
+
+      <a class="card" href='/albums/{{artist.id}}'>
+  			<span class="card-header" style="background-image: url({{artist.images.2.url}});">
+  				<span class="card-title">
+  					<h3>{{artist.name}}</h3>
+  				</span>
+  			</span>
+  			<span class="card-summary">
+  				<p>Popularidad {{artist.popularity}}</p>
+  			</span>
+  			<span class="card-meta">
+  				Generos: {{artist.genres}}
+  			</span>
+  		</a>
+
+    {{/each}}
+
+  </div>
+</div>

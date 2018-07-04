@@ -1,0 +1,8 @@
+<h1> Pistas del album seleccionado </h1>
+
+{{#each tracks as |track|}}
+  <h5>{{track.name}}   {{track.ligaWeb}}</h5>
+  <audio controls>
+    <source src="{{track.ligaWeb}}" type="audio/mp3">
+  </audio>
+{{/each}}

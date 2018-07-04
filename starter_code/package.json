@@ -1,0 +1,38 @@
+{
+  "name": "lab-express-spotify",
+  "version": "1.0.0",
+  "description": "Ejercicio de ejemplo de uso de GET POST y acceso a las API's de spootify",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alekz7/lab-express-spotify.git"
+  },
+  "keywords": [
+    "spotify",
+    "musica",
+    "node",
+    "npm",
+    "express",
+    "javascript",
+    "html"
+  ],
+  "author": "AAA alekz7",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alekz7/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/alekz7/lab-express-spotify#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "chalk": "^2.4.1",
+    "cows": "^2.0.0",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^3.1.1"
+  }
+}

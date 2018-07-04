@@ -1,0 +1,194 @@
+/* clases para los contenedores de los artistas */
+
+.container {
+	max-width: 1100px;
+	margin: 0 auto;
+}
+
+.cards {
+	display: -webkit-flex;
+	display: flex;
+	-webkit-justify-content: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	flex-wrap: wrap;
+	margin-top: 15px;
+	padding: 1.5%;
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	box-sizing: border-box;
+}
+
+.card {
+	@media (max-width: 700px) {
+		width: 100%;
+	}
+	position: relative;
+	margin-bottom: 20px;
+	padding-bottom: 30px;
+	background: #fefff9;
+	color: #363636; //the whole content of the card becomes linked, so this will give the text a "norma;" appearance
+	text-decoration: none;
+	@include box-shadow(rgba(black, 0.19) 0 0 8px 0);
+	@include border-radius(4px);
+	@include breakpoint(700px, $no-query: true) {
+	//switch to 2 columns
+		max-width: 320px;
+		margin-right: 20px;
+		margin-bottom: 20px;
+		&:nth-child(even) {
+			margin-right: 0;
+		}
+	}
+	@include breakpoint(980px, $no-query: true) {
+	//switch to 3 columns
+		&:nth-child(even) {
+			margin-right: 20px;
+		}
+		&:nth-child(3n) {
+			margin-right: 0;
+		}
+	}
+	span {
+		display: block;
+	}
+	.card-summary {
+		padding: 5% 5% 3% 5%;
+	}
+	.card-header {
+		position: relative;
+		height: 175px;
+		overflow: hidden;
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: center;
+		background-color: rgba(white,.15);
+ 		background-blend-mode: overlay;
+		@include border-radius(4px 4px 0 0);
+		&:hover, &:focus {
+			background-color: rgba(white, 0);
+		}
+	}
+	.card-title {
+		background: rgba(157, 187, 63, .85);
+		padding: 3.5% 0 2.5% 0;
+		color: white;
+		font-family: 'Roboto Condensed', sans-serif;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 0;
+		width: 100%;
+		h3 {
+			font-size: 1.2em;
+			line-height: 1.2;
+			padding: 0 3.5%;
+			margin: 0;
+		}
+	}
+	.card-meta {
+		max-height: 0;
+		overflow: hidden;
+		color: #666;
+		font-size: .78em;
+		text-transform: uppercase;
+		position: absolute;
+		bottom: 5%;
+		padding: 0 5%;
+		@include transition-property(max-height);
+		@include transition-duration(.4s);
+		@include transition-timing-function(ease-in-out);
+	}
+	&:hover, &:focus {
+		background: white;
+	  @include box-shadow(rgba(black, 0.45) 0px 0px 20px 0px);
+		.card-title {
+			background: rgba(157, 187, 63, .95);
+		}
+		.card-meta {
+			max-height: 1em;
+		}
+	}
+}
+
+img {
+	max-width: 100%; // stop images from breaking out of their bounding boxes.
+}
+
+body {
+	background :#f0f0f0;
+	font-size: 17px;
+	line-height: 1.4;
+	font-family: 'Jaldi', sans-serif;
+}
+
+* {
+  @include transition-property(
+    background-color,
+    border-color,
+    box-shadow,
+    color,
+    opacity,
+    text-shadow,
+    transform
+  );
+  @include transition-duration(0.2s);
+  @include transition-timing-function(linear);
+}
+
+.home-container {
+
+  background-image: url(../img/fondo.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 25%;
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+.home-search:hover{
+  color: yellow;
+}
+
+.site-footer{
+  background-color: #0A2C42;
+  color: #F7F9F9;
+  margin-top: 15px;
+  padding-top: 15px;
+  background-color: #0A2C42;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+/* otro CSS  PARA LAS CARDS */
+.card {
+  box-shadow: 0 20px 40px 14px rgba(0,0,0,0.25);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  text-decoration: none;
+  padding: 30px;
+  width: 250px;
+  margin: 20px;
+}

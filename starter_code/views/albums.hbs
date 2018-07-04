@@ -1,0 +1,25 @@
+<h1> Albums Encontrados del Artista </h1>
+
+<div class="container">
+	<div class="cards">
+
+    {{#each albums as |album|}}
+
+      <a class="card" href='/tracks/{{album.id}}'>
+  			<span class="card-header" style="background-image: url({{album.images.0.url}});">
+  				<span class="card-title">
+  					<h3>{{album.name}}</h3>
+  				</span>
+  			</span>
+  			<span class="card-summary">
+  				<p>Fecha {{album.release_date}}</p>
+  			</span>
+  			<span class="card-meta">
+  				Generos: {{artist.genres}}
+  			</span>
+  		</a>
+
+    {{/each}}
+
+  </div>
+</div>
