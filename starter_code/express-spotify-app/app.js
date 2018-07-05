@@ -22,3 +22,15 @@ const app = express();
 const hbs = require('hbs');
 const morgan = require('morgan');
 
+app.set('views', path.join(__dirname, 'views'));
+app.set('public', path.join(__dirname, 'public'));
+app.set('view engine', 'hbs');
+
+app.get('/', (request, response, next) => {
+    response.sendFile(__dirname + '/views/layouts/index.hbs');
+    res.render('/')
+  });
+
+  app.listen(3000, () => {
+    console.log('Listening on port 3000!');
+  });
