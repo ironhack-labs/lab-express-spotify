@@ -39,7 +39,7 @@ app.get("/artists", (req, res, next) => {
 
   spotifyApi.searchArtists(artist)
     .then(data => {
-      console.log(data.body.artists.items)
+      //console.log(data.body.artists.items)
       res.render('artists', { artists: data.body.artists.items });
     })
     .catch(err => {
@@ -49,9 +49,9 @@ app.get("/artists", (req, res, next) => {
 
 
 app.get("/albums/:artistId", (req, res, next) => {
-  let album = req.params.artistId
-  spotifyApi.getArtistAlbums(req.params.artistId)
-    .then(data => {           
+  let artist = req.params.artistId
+  spotifyApi.getArtistAlbums(artist)
+    .then(data => {       
       res.render('albums', { albums: data.body.items });
     })
     .catch(err => {
@@ -59,7 +59,16 @@ app.get("/albums/:artistId", (req, res, next) => {
     });
 });
 
-
+app.get("/tracks/:albumId"), (req, res, next) => {
+  let album = req.params.albumId
+  spotifyApi.getAlbumTracks(album)
+  .then(data => {
+    res.render("tracks", {tracks: data.body.items});
+  })
+  .catch(err => {
+    res.send(err);
+  })
+}
 
 app.listen(PORT, () => {
   console.log('CONNECTED')
