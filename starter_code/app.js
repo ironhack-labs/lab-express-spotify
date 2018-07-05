@@ -11,6 +11,10 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: credentials.clientSecret
 });
 const morgan = require('morgan');
+const fs = require('fs');
+
+// create a write stream (in append mode)
+const accessLogStream = fs.createWriteStream(path.join(__dirname, 'access.log'), { flags: 'a' });
 
 spotifyApi.clientCredentialsGrant()
   .then(function (data) {
@@ -24,6 +28,7 @@ spotifyApi.clientCredentialsGrant()
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(morgan('combined', { stream: accessLogStream }));
 
 // Routes
 app.get('/', (req, res, next) => {
