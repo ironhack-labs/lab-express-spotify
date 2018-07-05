@@ -33,12 +33,13 @@ app.get('/', function (req, res) {
   res.render('home')
 })
 
-app.get("artists", (req, res, next) => {
+app.get("/artists", (req, res, next) => {
+  
   let artist = req.query.artist;
-  console.log(artist)
 
   spotifyApi.searchArtists(artist)
     .then(data => {
+      console.log(data.body.artists.items)
       res.render('artists', { artists: data.body.artists.items });
     })
     .catch(err => {
