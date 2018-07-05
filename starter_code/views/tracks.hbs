@@ -1,0 +1,9 @@
+<div class="container">
+  <div class="row header-row">
+    <span class="col-lg-8">Title</span>
+    <span class="col-lg-4">Listen</span>
+  </div>
+  {{#each tracks}}
+  {{> trackPartial this}}
+  {{/each}}
+</div>
