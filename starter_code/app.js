@@ -4,9 +4,9 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
-const path = require('path');
 const morgan = require('morgan')
 const prettyjson = require('prettyjson');
+const path = require('path');
 
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -16,6 +16,8 @@ const clientSecret = '5a46fa3876d84df1be1a32cff68aaf8b';
 app.set('views', path.join(__dirname, 'views/layouts'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
+
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -34,4 +36,23 @@ app.get('/', (req, res, next) => {
   res.render('index')
 });
 
-app.listen(3000);
+app.post('/index', function (req, res, next) {
+  let artistName = req.body.artistInput
+  console.log(artistName)
+  res.send(artistName)
+  // spotifyApi.searchArtists(req.body.artist)
+  // .then(function(data) {
+  //   // res.render('artists', data)
+  //   console.log(data.body);
+  // })
+  // .catch(err => {
+  //   console.log(err)
+  // })
+
+
+
+
+
+})    
+
+app.listen(3000, () => console.log('Example app listening on port 3000!'));
