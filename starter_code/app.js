@@ -39,7 +39,7 @@ app.get("/", (req, res, next) => {
   });
 });
 
-// Artist page
+// Artists page
 app.post("/artists", (req, res, next) => {
   var { artist } = req.body;
 
@@ -47,15 +47,7 @@ app.post("/artists", (req, res, next) => {
     .then(data => {
       var artists = data.body.artists.items;
 
-      artists.forEach(element => {
-        if (element.images.length > 1) {
-          element.imageUrl = element.images[1].url;
-        } else if (element.images.length) {
-          element.imageUrl = element.images[0].url;
-        } else {
-          element.imageUrl = "http://cdn.onlinewebfonts.com/svg/img_508643.png";
-        }
-      });
+      setImage(artists);
 
       res.render("artists", {
         title: "Artists - Spotify",
@@ -67,4 +59,36 @@ app.post("/artists", (req, res, next) => {
     });
 });
 
+// Albums page
+app.get('/albums/:artistId', (req, res) => {
+  var { artistId } = req.params;
+
+  spotifyApi.getArtistAlbums(artistId)
+    .then(data => {
+      var albums = data.body.items;
+
+      setImage(albums);
+
+      res.render("albums", {
+        title: "Albums - Spotify",
+        albums: albums
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 app.listen(3000);
+
+const setImage = (items) => {
+  items.forEach(element => {
+    if (element.images.length > 1) {
+      element.imageUrl = element.images[1].url;
+    } else if (element.images.length) {
+      element.imageUrl = element.images[0].url;
+    } else {
+      element.imageUrl = "http://cdn.onlinewebfonts.com/svg/img_508643.png";
+    }
+  });
+} 
