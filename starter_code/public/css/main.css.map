@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAAA,QAAQ,CACN,gBAAgB,CAAE,qEAAqE,CACvF,eAAe,CAAE,SAAS,CAC1B,iBAAiB,CAAE,SAAS,CAC5B,MAAM,CAAE,KAAK,CACb,KAAK,CAAE,KAAK",
+"sources": ["../scss/_nachoVidal.scss"],
+"names": [],
+"file": "main.css"
+}
