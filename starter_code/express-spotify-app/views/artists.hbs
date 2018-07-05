@@ -1,0 +1,8 @@
+<div class="artistsearch">
+    {{#each info}} 
+    {{> partial this}}
+    <div>
+        <a class="button" href="/albums/{{this.id}}">View Albums </a>
+    </div>
+    {{/each}}
+</div>
