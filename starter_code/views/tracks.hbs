@@ -1,0 +1,12 @@
+<ul>
+  {{#each items}}
+
+  <li>
+    <B>{{this.name}}</B>
+    {{#if this.preview_url}}
+    <audio controls src="{{this.preview_url}}">
+      {{/if}}
+  </li>
+
+  {{/each}}
+</ul>

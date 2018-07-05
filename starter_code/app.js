@@ -58,5 +58,15 @@ app.get('/albums/:artistId', (req, res) => {
   );
 });
 
+app.get('/tracks/:albumId', (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(function (data) {
+      console.log(data.body);
+      res.render('tracks', data.body);
+    }, function (err) {
+      console.log('Something went wrong!', err);
+    });
+});
+
 // Start listening
 app.listen(3000);
