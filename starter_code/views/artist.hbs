@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="title">
+        <h1>{{this.obj.[0].name}}</h1>
+    </div>
+    <div class="row">
+        {{#each this.obj}}
+        <div class="col-3">
+            <div class="card" style="width: 18rem;">
+                <img class="card-img-top" src="{{this.images.[0].url}}" alt="Album">
+                <div class="card-body">
+                    <h2>{{this.name}}</h2>
+                    <a href="/albums/{{this.id}}">
+                        <button type="submit" class="btn btn-danger">View Albums</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

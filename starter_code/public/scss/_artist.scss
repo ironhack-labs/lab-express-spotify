@@ -1,0 +1,40 @@
+.col-3 {
+    margin: 0 10px 40px 10px  !important;
+    flex: 0 0 20%;
+    max-width: 30%;
+}
+
+.card-body {
+    margin: 10px;
+    display: flex;
+    padding: 0;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card {
+    height: 420px;
+    border-radius: 0px;
+    background: #4d4d4d;
+
+    img {
+        height: 300px;
+    }
+}
+
+h2 {
+    font-size: 1.2rem;
+    font-weight: 700;
+}
+
+.title {
+    margin: 20px;
+}
+
+.name {
+    text-align: center;
+}
+
+.info {
+    text-align: center;
+}
