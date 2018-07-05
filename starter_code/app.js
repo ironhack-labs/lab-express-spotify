@@ -55,12 +55,26 @@ app.get('/artists', function (req, res) {
 app.get('/albums/:artistID', (req, res) => {
   spotifyApi.getArtistAlbums(req.params.artistID)
     .then(data => {
-      console.log(data.body.items);
       let sendData = {
         title: "Albums",
         items: data.body.items
       }
       res.render("albums", sendData);
+    })
+    .catch(err => {
+
+    });
+});
+
+app.get('/tracks/:trackID', (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.trackID)
+    .then(data => {
+      let sendData = {
+        title: "Tracks",
+        items: data.body.items
+      }
+      console.log(sendData.items);
+      res.render("tracks", sendData);
     })
     .catch(err => {
 
