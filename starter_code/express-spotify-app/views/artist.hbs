@@ -1,9 +1,5 @@
-<div>
-    {{#each data}}
-    <h3>{{name}}</h3>
-    <div>
-        <img src="{{images.[1].url}}">
-    </div>
-    <a href="">view albums</a>
-{{/each}}
+<div class="artistBox">
+    {{#each data}} {{>artistPartial artist=this}}
+    
+    {{/each}}
 </div>
