@@ -1,0 +1,15 @@
+<div class="tracks-header">
+</div>
+<div class="row">
+  {{#each items}}
+  <div class="col col-sm-12">
+    
+      <h3>{{this.name}}</h3>
+      <audio controls>
+        <source src="{{this.preview_url}}" >
+      </audio>
+      
+    
+  </div>
+  {{/each}}
+</div> 
