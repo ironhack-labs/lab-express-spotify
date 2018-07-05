@@ -16,17 +16,30 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/artists', (req, res, next) => {
-  console.log(req.query.artist)
+  
   spotifyApi.searchArtists(req.query.artist)
     .then(data => {
       res.render('artists', {artists: data.body.artists.items});
+      console.log(data.body.artists.items)  
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
       console.log("Error al cargar el artista");
       // ----> 'HERE WE CAPTURE THE ERROR'
     })
-  
+})
+
+app.get('/album/:artistId', (req, res, next) => {
+  console.log("holaaa")
+  spotifyApi.getArtistAlbums(req.params.artistId)/*'HERE GOES THE QUERY ARTIST'*/
+    .then(data => {
+      res.render('album' , {album: data.body.items});
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    })
+    .catch(err => {
+      console.log("Error al cargar el album")
+      // ----> 'HERE WE CAPTURE THE ERROR'
+    })
 })
 
 // Remember to paste here your credentials
@@ -46,4 +59,4 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-app.listen(3000);
+app.listen(4000);
