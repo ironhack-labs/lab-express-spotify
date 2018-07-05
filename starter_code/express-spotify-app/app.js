@@ -37,21 +37,6 @@ app.get('/',(req,res) => {
 }) 
 
 
-/*app.post("/artists", (req, res) => {
-  const artist = req.body.artist;
-
-  spotifyApi.searchArtists(artist)
-  .then(data => {
-      console.log(data)
-      let artistArr = data.body.artists.items;
-      res.render("artist")
-    })
-    .catch(err => {
-      console.error(err);
-    });
-});*/
-
-
 app.get('/artists', (req, res) => {
     let artist = req.query.artist;
     ;
@@ -67,6 +52,38 @@ app.get('/artists', (req, res) => {
       console.error(err);
     })
 });
+
+app.get('/albums/:artistId', (req, res) => {
+  let artistId = req.params.artistId;
+  
+  spotifyApi.getArtistAlbums(artistId)
+  .then((data) => {
+    let albumArr = data.body.items;
+    res.render('album', {albumArr});
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+});
+
+
+
+
+/*app.get('/albums/:artistId', (req, res) => {
+    let album = req.query.album;
+    ;
+    spotifyApi.getArtistAlbums(album)
+    .then(data => {
+
+      console.log(`Search artists by ${artist}`);
+      res.render('artists',{
+        data: data.body.artists.items
+      });
+    })
+    .catch(err => {
+      console.error(err);
+    })
+});*/
 
 app.listen(3000, () => {
     console.log('listening')

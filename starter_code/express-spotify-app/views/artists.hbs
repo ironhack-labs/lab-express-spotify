@@ -1,5 +1,10 @@
 
-{{#each data}}
-  {{this.name}}
-  <img src="{{this.images.[0].url}}">
-{{/each}}
+
+
+<div class="card">
+    {{#each data}}
+      {{this.name}}
+      <img src="{{this.images.[0].url}}">
+      <a href="/albums/{{this.id}}">album</a>
+    {{/each}}
+</div>
