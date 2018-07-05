@@ -1,0 +1,27 @@
+{
+  "name": "express-spotify-app",
+  "version": "1.0.0",
+  "description": "Spotify app",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kainmaligno/lab-express-spotify.git"
+  },
+  "author": "salemm",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kainmaligno/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/kainmaligno/lab-express-spotify#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^3.1.1"
+  }
+}

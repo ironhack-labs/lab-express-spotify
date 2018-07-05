@@ -1,0 +1,11 @@
+<div class="contenedor">
+{{#each tracks}}
+
+    <div class="row-track">
+        <h4>{{this.name}}</h4>
+        <audio class="right" controls>
+            <source src="{{preview_url}}" type="audio/ogg"> 
+        </audio>
+    </div>
+{{/each}}
+</div>
