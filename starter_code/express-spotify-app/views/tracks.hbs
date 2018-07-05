@@ -1,0 +1,14 @@
+<div class="list-head">
+  <div class="title">Title</div>
+  <div class="listen">Listen</div>
+</div>
+<div class="song-wrap">
+  {{#each items}}
+      <div class="song">
+        <div class="title">{{this.name}} </div>
+        <audio controls>
+          <source src='{{this.preview_url}}'>
+        </audio>
+      </div>
+    {{/each}}
+</div>

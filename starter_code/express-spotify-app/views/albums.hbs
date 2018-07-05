@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="title">Albums for: {{items.[0].artists.[0].name}}</div>
+  <div class="artist-wrap">
+    {{#each items}}
+      <div class='artist-item'>
+        <div class="img-wrap">
+          <img src={{this.images.[0].url}} width='100'>
+        </div>
+        <div class="info">
+          <div class="name">{{this.name}}</div>
+          <button><a href="/tracks/{{this.id}}">View Tracks</a></button>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
