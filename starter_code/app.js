@@ -3,6 +3,12 @@
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
+const path = require('path');
+var morgan = require('morgan')
+var prettyjson = require('prettyjson');
+var SpotifyWebApi = require('spotify-web-api-node');
+
 
 
 
