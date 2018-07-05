@@ -6,7 +6,7 @@ const path = require('path');
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
-app.set('public', __dirname + '/public');
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 var SpotifyWebApi = require('spotify-web-api-node');
@@ -36,7 +36,6 @@ app.get('/artist', (req, res, next) => {
   let artist = req.query.artist;
   spotifyApi.searchArtists(artist)
     .then(data => {
-      console.log(data.body.artists.items)
       res.render('artist', {artist:data.body.artists.items});
     })
     .catch(err => {
@@ -44,14 +43,14 @@ app.get('/artist', (req, res, next) => {
     })
 });
 
-app.get('/album', (req, res, next) => {
-  let album = req.query.album;
-  spotifyApi.searchAlbums(album)
+app.get('/albums/:id', (req, res, next) => {
+  let album = req.params.id;
+  spotifyApi.getArtistAlbums(album)
   .then(data => {
-    console.log(data.body.albums.items)
-    res.render('albums', {album:data.body.tracks});
+    console.log(data.body.items)
+    res.render('albums', {album:data.body.items});
   })
-  .cagtch.(err => {
+  .catch(err => {
     console.log('Something went wrong while searching for the album tracks!')
   })
 })
