@@ -1,0 +1,41 @@
+.tracksHead {
+    background: #4d4d4d;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+.songWrapper {
+    background: #4d4d4d;
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    background: #e6e5e5;
+    margin-bottom: 3px;
+
+    p {
+        display: inline-block;
+        padding-top: 7px;
+        margin: 10px 0 5px 20px;
+    }
+}
+
+.container {
+    padding: 0 !important;
+}
+
+h3 {
+    color: #e6e5e5;
+}
+
+.listen {
+    text-align: center;
+}
+
+audio {
+    margin-right: 20px;
+}
