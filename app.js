@@ -26,9 +26,6 @@ app.get('/', (req, res, next) => {
   res.render('home');
 });
 
-// data.body.artists.items
-
-
 app.get('/artist', (req, res) => {
   searchArtist(req.query.artist)
   .then((artist)=>{
@@ -39,9 +36,36 @@ app.get('/artist', (req, res) => {
   });
 })
 
+app.get('/albums/:artistId', (req, res) => {
+  searchAlbums(req.params.artistId)
+    .then((album)=>{
+      obj=album.body.items;
+      res.render('album', {obj});
+    }).catch((err)=>{
+      console.log(err);
+    });
+})
+
+app.get('/tracks/:albumId', (req, res) => {
+  searchTracks(req.params.albumId)
+    .then((tracks)=>{
+      console.log(tracks.body.items[0])
+      obj=tracks.body.items;
+      res.render('tracks', {obj});
+    }).catch((err)=>{
+      console.log(err);
+    });
+})
+
 
 const searchArtist = (term)=>{
   return spotifyApi.searchArtists(term)
+}
+const searchAlbums = (term)=>{
+  return spotifyApi.getArtistAlbums(term);
+}
+const searchTracks = (term)=>{
+  return spotifyApi.getAlbumTracks(term);
 }
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
