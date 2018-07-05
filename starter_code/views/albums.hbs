@@ -1,0 +1,7 @@
+<a href="/" id="home">Return Home</a>
+<h1>Albums</h1>
+<div class="cardContainer">
+    {{#each albumArr}}
+        {{> card this=this type="songs" }}
+    {{/each}}
+</div>
