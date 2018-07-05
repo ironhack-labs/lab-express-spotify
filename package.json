@@ -4,7 +4,9 @@
   "description": "![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon -e js,hbs app.js",
+    "sass": "sass --watch starter_code/scss:starter_code/public/css --style compressed"
   },
   "repository": {
     "type": "git",
@@ -18,7 +20,10 @@
   "homepage": "https://github.com/DMarinsa/lab-express-spotify#readme",
   "dependencies": {
     "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
     "nodemon": "^1.17.5",
+    "path": "^0.12.7",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^3.1.1"
   }
