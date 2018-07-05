@@ -1,0 +1,46 @@
+#home {
+  width: 100%;
+  height: 100vh;
+  background-image: url("https://d500.epimg.net/cincodias/imagenes/2017/10/26/lifestyle/1509020905_462284_1509021173_noticia_normal.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#home-form-container {
+  width: 50%;
+  height: 200px;
+  background-color: white;
+  opacity: 0.85;
+  text-align: center;
+}
+#home-form-container input{
+    width: 60%;
+    height: 30px;
+    margin-top: 10px;
+    color:black;
+    border:1px solid grey
+
+}
+#home-form-container button{
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 2px;
+    background: rgb(245, 69, 56);
+    color:white
+
+}
+
+.artist{
+    display: inline-block;
+    width: 30%;
+    max-width: 30%;
+
+}
+#main-search{
+    text-align: center
+}
+.btn-albums{
+    background: rgb(245, 69, 56);
+
+}
