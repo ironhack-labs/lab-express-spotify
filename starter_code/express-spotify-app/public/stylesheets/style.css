@@ -1,0 +1,58 @@
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, code, legend, button form, fieldset, input, textarea, p, blockquote, th, td {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 18px;
+}
+
+.main-container {
+  background-image: url('../images/concert.jpg');
+  height: 100vh;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.form-container{
+  margin: 0 auto;
+  width: 50%;
+  height: 20%;
+  display: flex;
+  background-color: rgb(255,255,255,0.4);
+  border-radius: 1rem;
+}
+
+.search-form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  margin: 0 auto;
+}
+
+.search-form input{
+    padding: 0.5 1rem;
+    border: 0;
+    font-size: 1rem;
+    overflow: hidden;
+    margin: 2rem 0;
+    padding: .5rem;
+    border-radius: .5rem;
+    width: 130%;
+}
+
+.search-form button{
+  width: 80%;
+  font-size: 1rem;
+  padding: .5rem;
+  border-radius: .5rem;
+  background: red;
+  color: white;
+  border: 0;
+}
