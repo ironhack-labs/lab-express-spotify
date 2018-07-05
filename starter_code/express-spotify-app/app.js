@@ -42,29 +42,26 @@ app.get('/artist', (req, res) => {
   spotifyApi.searchArtists(art)
     .then(data => {
       console.log(data.body.artists.items)
-
       res.render('artist-list',{data:data.body.artists.items});
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
-      // ----> 'HERE WE CAPTURE THE ERROR'
+      console.log(error)
     })
-  //console.log(req.params);
-  //console.log(req.color);
-  //const {ta,color} = req.params;
-
 })
 
-// app.post('/getArtist', (req, res) => {
-//   console.log(req.query);
-//   //console.log(req.params);
-//   //console.log(req.body);
-//   //const {ta,color} = req.params;
-//   const {art} = req.query; 
-//   res.render('index',{
-//       name: art
-//   });
-// })
+app.get('/albums/:artistId', (req, res) => {
+  console.log(req.params.artistId)
+
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    console.log(data)
+    res.render('artist-albums',{data:data.body.items});
+  })
+  .catch(err => {
+    console.log(err)
+  })
+
+});
 
 const port = 3000;
 app.listen(port, () => console.log(`Ready on http://localhost:${port}`));
