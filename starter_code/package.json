@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.16.3",
-    "hbs": "^4.0.1"
+    "hbs": "^4.0.1",
+    "spotify-web-api-node": "^3.1.1"
   },
   "devDependencies": {
     "eslint": "^5.0.1",
