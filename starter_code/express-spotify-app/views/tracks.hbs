@@ -1,0 +1,10 @@
+<div class="cabecera-audio">
+     <h2>Title</h2><h2>Listen</h2>
+</div>
+     {{#each data}}
+     <div class="audio">
+         <span>{{this.name}}</span> 
+          <audio src="{{this.preview_url}}" controls>
+               </div>
+
+     {{/each}}
