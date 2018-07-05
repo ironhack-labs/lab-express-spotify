@@ -1,0 +1,122 @@
+body{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  font-size: 16px;
+}
+
+h1, h3{
+ text-align: center
+}
+h1{
+  margin-top: 5%;
+  font-size: 3em;
+}
+h3{
+  font-size: 1.5em;
+}
+
+.row{
+  margin: 5%;
+  height: 100px;
+}
+.row img{
+  margin: 0 auto;
+  width: 100%;
+  height: 200px;
+ 
+}
+
+.col{
+  margin-bottom: 20px;
+  
+}
+.element{
+  width: 30%;
+  margin-bottom: 20px;
+}
+
+.element img{
+  height: 50px;
+}
+
+.artist-image{
+  display: flex;
+  justify-content: center;
+}
+
+.artist-content{
+  margin-top: 1%;
+  width: 100%;
+  background-color: grey; 
+  color: white;
+  text-align: center;
+}
+
+
+button{
+  color: white;
+  background-color: #bb5151;
+  border-radius: 10px;
+  border: 1px solid black; 
+  margin-bottom: 5px;
+}
+
+.tracks-header{
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  height: auto;
+  background-color: grey;
+  padding: 5px 175px 5px 100px;
+}
+.tracks-header p{
+  font-size: 32px;
+  display: inline-block;
+  color: white;
+}
+
+.col-sm-12{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #e0e0e0;
+  height: 100px;
+}
+
+.col-sm-12 div{
+  display: inline-block;
+}
+
+.col-sm-12 h3{
+
+  display: inline-block;
+}
+
+.index-image-container{
+  display: flex;
+  min-height: 100vh;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+  background-size: cover;
+}
+
+.index-grey-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(192,192,192,.5);
+  height: 200px;
+  width: 400px;
+  padding: 2px;
+}
+
+.form-control{
+  width: 300px;
+}
+.btn-primary{
+  background: #bb5151;
+  border:none;
+}
