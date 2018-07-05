@@ -1,3 +1,14 @@
+const express = require('express');
+const app = express();
+const hbs = require('hbs');
+const morgan = require('morgan');
+const path = require('path');
+
+app.set('view engine', 'hbs');
+app.set('views', path.join(__dirname, 'views'));
+app.set('public', __dirname + '/public');
+
+
 var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
@@ -17,19 +28,34 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-const express = require('express');
-const app = express();
-const hbs = require('hbs');
-const morgan = require('morgan');
+app.get('/', (req, res, next) => {
+  res.render('index');
+});
 
-app.set('views', path.join(__dirname, 'views'));
-app.set('public', path.join(__dirname, 'public'));
-app.set('view engine', 'hbs');
+app.get('/artist', (req, res, next) => {
+  let artist = req.query.artist;
+  spotifyApi.searchArtists(artist)
+    .then(data => {
+      console.log(data.body.artists.items)
+      res.render('artist', {artist:data.body.artists.items});
+    })
+    .catch(err => {
+      console.log('Something went wrong while searching for the artist!')
+    })
+});
 
-app.get('/', (request, response, next) => {
-    response.sendFile(__dirname + '/views/layouts/index.hbs');
-    res.render('/')
-  });
+app.get('/album', (req, res, next) => {
+  let album = req.query.album;
+  spotifyApi.searchAlbums(album)
+  .then(data => {
+    console.log(data.body.albums.items)
+    res.render('albums', {album:data.body.tracks});
+  })
+  .cagtch.(err => {
+    console.log('Something went wrong while searching for the album tracks!')
+  })
+})
+
 
   app.listen(3000, () => {
     console.log('Listening on port 3000!');
