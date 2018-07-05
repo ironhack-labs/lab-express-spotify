@@ -36,20 +36,26 @@ app.get('/', (req, res, next) => {
   res.render('index')
 });
 
-app.post('/index', function (req, res, next) {
-  let artistName = req.body.artistInput
-  console.log(artistName)
-  res.send(artistName)
-  // spotifyApi.searchArtists(req.body.artist)
-  // .then(function(data) {
-  //   // res.render('artists', data)
-  //   console.log(data.body);
-  // })
-  // .catch(err => {
-  //   console.log(err)
-  // })
+app.post('/artists', function (req, res, next) {
+  let artistName = req.body.artist;
+
+  console.log(req.body)
 
 
+  
+  spotifyApi.searchArtists(artistName)
+  .then(function(data) {
+    console.log(data.body.artists.items[0].name);
+    console.log(data.body.artists.items[0].images[0].url);
+    // console.log(data.body.artists.items[0].albums);
+    res.send(`Artist Name: ${data.body.artists.items[0].name}, 
+      Image: ${data.body.artists.items[0].images[0].url}`);
+
+
+
+  }, function(err) {
+    console.error(err);
+  });
 
 
 
