@@ -1,0 +1,20 @@
+
+  .container-img{
+    
+         display: flex;
+         min-height: 100vh;
+         min-width: 100vh;
+         justify-content: center;
+         align-items: center;
+         background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+         background-size: cover;
+      
+  }
+  .container{
+    width: 700px;
+    height: 700px;
+    background-image:url("../images/concierto.jpeg");
+
+  }
+  
+  
