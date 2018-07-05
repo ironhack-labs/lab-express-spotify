@@ -13,6 +13,9 @@ const SpotifyWebApi = require('spotify-web-api-node');
 const clientId = '8d628f5b061f45409cdde686279f85a2';
 const clientSecret = '5a46fa3876d84df1be1a32cff68aaf8b';
 
+app.set('views', path.join(__dirname, 'views/layouts'));
+app.set('view engine', 'hbs');
+
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
