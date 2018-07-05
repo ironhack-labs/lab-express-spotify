@@ -1,15 +1,5 @@
 <div class="container">
-  <div class="row">
-    
-      <div class="col-lg-4 artist-container">
-        
-          <img src="https://i.scdn.co/image/4079ef5effe54ab8cc099e2b6d872899d033b09d" alt="" class="artist-img">
-        
-        <div class="artist-info-container">
-          <p>Maroon 5</p>
-          <a href="/albums/04gDigrS5kc9YWfZHwBETP">View Albums</a>
-        </div>
-      </div>
-      
-  </div>
+  {{#each data}}
+     {{> artistsPartials this}}
+  {{/each}}
 </div>

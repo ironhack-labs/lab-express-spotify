@@ -16,6 +16,7 @@ const clientSecret = '5a46fa3876d84df1be1a32cff68aaf8b';
 app.set('views', path.join(__dirname, 'views/layouts'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -42,7 +43,7 @@ app.post('/artists', function (req, res, next) {
   console.log(req.body)
 
 
-  
+
   spotifyApi.searchArtists(artistName)
   .then(function(data) {
     console.log(data.body.artists.items[0].name);
@@ -51,14 +52,16 @@ app.post('/artists', function (req, res, next) {
     res.send(`Artist Name: ${data.body.artists.items[0].name}, 
       Image: ${data.body.artists.items[0].images[0].url}`);
 
+    app.get('/artists', (req, res, next) => {
+      res.render('data', {data});
+    })
 
 
   }, function(err) {
     console.error(err);
   });
 
+})   
 
-
-})    
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
