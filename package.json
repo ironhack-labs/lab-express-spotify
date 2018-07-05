@@ -1,0 +1,19 @@
+{
+  "name": "lab-express-spotify",
+  "version": "1.0.0",
+  "description": "![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MateoReparaz/lab-express-spotify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MateoReparaz/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/MateoReparaz/lab-express-spotify#readme"
+}
