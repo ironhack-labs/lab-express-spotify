@@ -42,37 +42,43 @@ app.get("/", (req, res, next) => {
 });
 
 app.post("/artists", (req, res, next) => {
-
   spotifyApi
     .searchArtists(req.body.artist)
     .then(data => {
       let artists = data.body.artists.items;
+      console.log(artists);
       console.log(artists[0].images[0].url);
       res.render("artists", { artists });
-      // artists.foreach(e => {
-      //   if (e.images.lenght == 0) {
-      //     e.imgUrl =
-      //       "https://artists.ludwig-musser.com/application/themes/ludwig_musser/assets/images/artist-list-default.jpg";
-      //   } else {
-      //     e.imgUrl = e.images[0].url;
-      //   }
-      // });
-      
     })
     .catch(err => {
       // ----> 'HERE WE CAPTURE THE ERROR'
     });
 
-    // app.get('/albums/:artistId', (req, res) => {
-    //   spotifyApi
-    //   .getArtistAlbums(req.params.artistId);
-    //   .then (data => {
-    //     res.render ("albums", { data})
-    //   }
-    // });
+  app.get("/albums/:artistId", (req, res) => {
+    spotifyApi
+      .getArtistAlbums(req.params.artistId)
+      .then(data => {
+        console.log(data.body.items);
+        let albums = data.body.items;
+        res.render("albums", { albums });
+      })
+      .catch(err => {
+        console.log(err);
+      });
+  });
+});
 
-
-
+app.get("/albums/:albumId/tracks", (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      console.log(data);
+      let tracks = data.body.items;
+      res.render("tracks", {tracks});
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 app.listen(3000, () => {
