@@ -1,1 +1,7 @@
-{{data}}
+{{#each data}}
+  <p>{{name}}</p>
+  <div>
+    <img src="{{images.[1].url}}">
+  </div>
+  <a href="/albums/{{id}}">View Albums</a>
+{{/each}}
