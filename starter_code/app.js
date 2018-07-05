@@ -20,7 +20,7 @@ spotifyApi.clientCredentialsGrant()
   .then(function(data) {
     spotifyApi.setAccessToken(data.body['access_token'])
   }, function(err) {
-    console.log('Something went wrong when retrieving an access token', err)
+    debug('Something went wrong when retrieving an access token', err)
 })
 
 const app = express()
@@ -35,34 +35,41 @@ hbs.registerPartials(__dirname + '/views/partials')
 
 app.get('/', (req, res, next) => {
   res.render('index', {title: 'Spotify'})
-  debug('prueba')
 })
 
 
 app.get('/artists', (req, res, next) => {
   spotifyApi.searchArtists(req.query.artist)
     .then(data => {
-      //debug(data.body.artists.items[0].images[0])
-      res.render('artists', {title: 'Artists', search: req.query.artist, artists: data.body.artists.items})
+      res.render('artists', {title: 'Artists', artists: data.body.artists.items})
     })
     .catch(err => {
-      debug('error al buscar artistas')
+      debug(`Error al buscar artistas: ${err}`)
     })
-
 })
 
 
 
-app.get('/albums/:artistId', (req, res) => {
-  spotifyApi.searchAlbums(req.params.artistId)
+app.get('/albums/:artistId', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
     .then(data => {
-      //debug(data.body.artists.items[0].images[0])
-      res.render('albums', {title: 'Albums', albums: data.body.artists.items})
+      res.render('albums', {title: 'Albums', albums: data.body.items})
     })
     .catch(err => {
-      debug('error al buscar albumes')
+      debug(`Error al buscar albumes: ${err}`)
     })
-});
+})
+
+
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(data => {
+      res.render('tracks', {title: 'Tracks', tracks: data.body.items})
+    })
+    .catch(err => {
+      debug(`Error al buscar canciones: ${err}`)
+    })
+})
 
 
 
