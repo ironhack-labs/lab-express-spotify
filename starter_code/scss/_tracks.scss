@@ -1,0 +1,27 @@
+#track-list-container{
+  display: flex;
+  flex-direction: column;
+
+  #title{
+    background-color: $grey-background;
+    color: $grey-font;
+  }
+  .track{
+    background-color: $light-grey-background;
+  }
+  .row{
+    display: flex;
+    justify-content: space-between;
+    .flex-left-item{
+      margin-left: 2vw;
+    }
+    .flex-right-item{
+      margin-right: 2vw;
+    }
+    .track-controls{
+      color: $grey-font;
+      display: flex;
+      align-items: center;
+    }
+  }
+}

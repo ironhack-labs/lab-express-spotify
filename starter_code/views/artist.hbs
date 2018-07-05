@@ -1,7 +1,16 @@
-{{#each obj}}
-<div class="artist">
-  <img src="{{images.[0].url}}" width=100>
-  <h3>{{name}}</h3>
-  <a href="/albums/{{id}}">View Albums</a>
+<div id="title-container">
+  <h2>{{obj.[0].name}}</h2>
 </div>
-{{/each}}
+<div class="container">
+  {{#each obj}}
+  <div class="column">
+    <div class="obj-container">
+      <img src="{{images.[0].url}}" width=100>
+      <div class="text-container">
+        <h4>{{name}}</h4>
+        <a class="btn" href="/albums/{{id}}">View Albums</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>
