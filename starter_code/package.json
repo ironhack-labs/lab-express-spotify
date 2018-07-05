@@ -13,6 +13,7 @@
     "eslint": "^5.0.1",
     "express": "^4.16.3",
     "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
     "spotify-web-api-node": "^3.1.1"
   }
 }
