@@ -1,3 +1,41 @@
+.whole {
+  overflow: hidden;
+  height: 100vh;
+  background-image: url(/images/concert.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .whole #square {
+    width: 400px;
+    height: 150px;
+    margin: 30vh auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px 20px; }
 
+.band {
+  width: 150px;
+  height: 300px;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px; }
+  .band .img-band {
+    width: 150px;
+    height: 150px; }
+    .band .img-band img {
+      max-width: 100%;
+      object-fit: contain; }
+  .band .artist-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px; }
+    .band .artist-body h3 {
+      text-align: center; }
+
+.artists {
+  display: flex;
+  flex-wrap: wrap; }
 
 /*# sourceMappingURL=styles.css.map */
