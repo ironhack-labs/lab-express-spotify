@@ -1,0 +1,88 @@
+
+
+.column{
+     height:200px;
+     width:40%;
+     background-color: rgba(255, 255, 255, 0.5);
+     display:flex;
+     flex-direction: column;
+     align-items: center;
+     justify-content: center;
+}
+.center{
+     background-image:url("https://iron-spotify.herokuapp.com/images/home-heading.jpg");
+     background-size: 100%;
+     height:1000px;
+     display:flex;
+     align-items: center;
+     justify-content: center;
+}
+
+a{
+border:.5px solid red;
+background-color: red;
+color:black;
+width:70px;
+height:30px;
+border-radius: 20px;
+}
+
+.buton{
+     margin-left:30%;
+}
+
+.btn{
+     margin-top:40px;
+}
+
+.contenedor{
+     width:400px;
+     height:500px;
+     float:left;
+     margin-left:10px;
+     margin-top:20px;
+     background-color: grey;
+     color:white;
+     text-align: center;
+}
+
+.texto{
+     margin-top:40px;
+}
+
+.audio{
+     width:100%;
+     background-color: #E8E8E8;
+}
+
+
+.cabecera-audio{
+     display:flex;
+     flex-direction: row;
+     justify-content: space-between;
+     width:100%;
+     height:100px;
+     background-color: gray;
+     color:white;
+     font-weight: 30px;
+     align-items: center;
+     padding-left:5%;
+     padding-right:5%;
+}
+
+audio{
+     margin-left:75%;
+     float:right;
+     /* height:100%; */
+}
+
+span{
+     float:left;
+     margin-left:20px;
+     margin-top:10px;
+}
+
+.center-text{
+     display:flex;
+    justify-content: center;
+}

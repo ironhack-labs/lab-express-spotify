@@ -1,0 +1,11 @@
+<div class="bloque" width=100>
+     {{#each data}}
+     <div class="contenedor">
+          <img src="{{this.images.[0].url}}" width=400 height=350>
+          <div class="texto">
+               <h5>{{this.name}}</h5>
+          </div>
+               <a href="/tracks/{{this.id}}">View More</a>
+     </div>
+     {{/each}}
+</div>
