@@ -33,28 +33,40 @@ spotifyApi.clientCredentialsGrant()
 
 app.get('/',(req,res) => {
     res.render('home',{
-    
     });
 }) 
 
 
+/*app.post("/artists", (req, res) => {
+  const artist = req.body.artist;
+
+  spotifyApi.searchArtists(artist)
+  .then(data => {
+      console.log(data)
+      let artistArr = data.body.artists.items;
+      res.render("artist")
+    })
+    .catch(err => {
+      console.error(err);
+    });
+});*/
+
+
 app.get('/artists', (req, res) => {
     let artist = req.query.artist;
-    res.render('home',{
-       artist
-    });
+    ;
     spotifyApi.searchArtists(artist)
     .then(data => {
+
       console.log(`Search artists by ${artist}`);
-      
+      res.render('artists',{
+        data: data.body.artists.items
+      });
     })
     .catch(err => {
       console.error(err);
     })
-})
-
-
-
+});
 
 app.listen(3000, () => {
     console.log('listening')
