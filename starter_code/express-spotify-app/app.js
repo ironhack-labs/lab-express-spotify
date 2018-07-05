@@ -66,24 +66,18 @@ app.get('/albums/:artistId', (req, res) => {
   })
 });
 
-
-
-
-/*app.get('/albums/:artistId', (req, res) => {
-    let album = req.query.album;
-    ;
-    spotifyApi.getArtistAlbums(album)
-    .then(data => {
-
-      console.log(`Search artists by ${artist}`);
-      res.render('artists',{
-        data: data.body.artists.items
-      });
-    })
-    .catch(err => {
-      console.error(err);
-    })
-});*/
+app.get('/songs/:albumId', (req, res) => {
+  let albumId = req.params.albumId;
+  
+  spotifyApi.getAlbumTracks(albumId)
+  .then((data) => {
+    let songsArr = data.body.items;
+    res.render('songs', {songsArr});
+  })
+  .catch((err) => {
+    console.error(err);
+  })
+});
 
 app.listen(3000, () => {
     console.log('listening')
