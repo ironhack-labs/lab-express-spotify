@@ -5,17 +5,13 @@ const app = express();
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const path = require('path');
-var morgan = require('morgan')
-var prettyjson = require('prettyjson');
-var SpotifyWebApi = require('spotify-web-api-node');
-
-
-
+const morgan = require('morgan')
+const prettyjson = require('prettyjson');
 
 const SpotifyWebApi = require('spotify-web-api-node');
 
-const clientId = '8d628f5b061f45409cdde686279f85a2',
-    clientSecret = '5a46fa3876d84df1be1a32cff68aaf8b';
+const clientId = '8d628f5b061f45409cdde686279f85a2';
+const clientSecret = '5a46fa3876d84df1be1a32cff68aaf8b';
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -29,3 +25,9 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
+app.get('/', (req, res, next) => {
+  res.render('index')
+});
+
+app.listen(3000);
