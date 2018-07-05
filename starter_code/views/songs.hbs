@@ -1,0 +1,16 @@
+<table cellspacing="0" cellpadding="0">
+    <tr>
+        <th>Title</th>
+        <th>Listen</th>
+    </tr>
+    {{#each songsArr}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td><audio controls>
+                <source src="{{this.preview_url}}">
+            </audio></td>
+        </tr>
+    {{/each}}
+</table>
+
+<a href="/" id="home">Return Home</a>
