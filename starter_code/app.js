@@ -47,7 +47,7 @@ app.post("/artists", (req, res, next) => {
     .then(data => {
       var artists = data.body.artists.items;
 
-      setImage(artists);
+      setData(artists, "/albums/", "View albums");
 
       res.render("artists", {
         title: "Artists - Spotify",
@@ -67,7 +67,7 @@ app.get('/albums/:artistId', (req, res) => {
     .then(data => {
       var albums = data.body.items;
 
-      setImage(albums);
+      setData(albums, "/tracks/", "View tracks");
 
       res.render("albums", {
         title: "Albums - Spotify",
@@ -99,7 +99,7 @@ app.get('/tracks/:albumId', (req, res) => {
 
 app.listen(3000);
 
-const setImage = (items) => {
+const setData = (items, url, text) => {
   items.forEach(element => {
     if (element.images.length > 1) {
       element.imageUrl = element.images[1].url;
@@ -107,6 +107,11 @@ const setImage = (items) => {
       element.imageUrl = element.images[0].url;
     } else {
       element.imageUrl = "http://cdn.onlinewebfonts.com/svg/img_508643.png";
+    }
+
+    element.myLink = {
+      href: url + element.id,
+      text: text
     }
   });
 } 
