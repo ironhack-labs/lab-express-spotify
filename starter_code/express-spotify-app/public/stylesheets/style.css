@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
+
+title {
+    display: none;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+
+}
+
+.home-container {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background-image: url("/images/landing.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+       
+}
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 36%;
+    left: 36%;
+    height: 30vh;
+    width: 50vh;
+    padding: 2%;
+}
+form {
+    padding: 1%;  
+    margin: 9% 1% 2% 1%;
+}
+
+button {
+    padding: 1%;
+    margin: 1%;
+}
+
+.artist-pics{
+    width: 200px;
+    display: flex;
+    flex-wrap: wrap;
+}

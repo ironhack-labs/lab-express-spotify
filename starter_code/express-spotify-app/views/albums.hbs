@@ -1,0 +1,12 @@
+<div class="container" font-family="Monserrat">
+    <div class="col">
+        <h2>Albums for {{this.artist.name}}</h2>
+        <div class="col-md-3">
+        {{#each album}} 
+        {{this.name}}
+        <img width="200px" src="{{this.images.[0].url}}">
+        <a class= "btn btn-danger text-center " type="submit " href="/tracks/{{this.id}}">View Tracks</a>
+{{/each}}
+</div>
+</div>
+</div>
