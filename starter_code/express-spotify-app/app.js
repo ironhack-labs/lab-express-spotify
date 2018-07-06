@@ -37,16 +37,13 @@ app.get('/',(req,res) => {
 }) 
 
 
-app.get('/artists', (req, res) => {
-    let artist = req.query.artist;
-    ;
+app.post('/artists', (req, res) => {
+    let artist = req.body.artist;
     spotifyApi.searchArtists(artist)
     .then(data => {
-
-      console.log(`Search artists by ${artist}`);
-      res.render('artists',{
-        data: data.body.artists.items
-      });
+      console.log(data); //poner siempre el cnsole con lo que vaya despues del then, en este caso data
+      let artistArr = data.body.artists.items;
+      res.render('artists',{data: artistArr});
     })
     .catch(err => {
       console.error(err);
@@ -54,11 +51,11 @@ app.get('/artists', (req, res) => {
 });
 
 app.get('/albums/:artistId', (req, res) => {
-  let artistId = req.params.artistId;
+  let albums = req.params.artistId;
   
-  spotifyApi.getArtistAlbums(artistId)
+  spotifyApi.getArtistAlbums(albums)
   .then((data) => {
-    let albumArr = data.body.items;
+    let albumArr = data.body.items; //Lo que devuelve la API
     res.render('album', {albumArr});
   })
   .catch((err) => {
@@ -72,6 +69,7 @@ app.get('/songs/:albumId', (req, res) => {
   spotifyApi.getAlbumTracks(albumId)
   .then((data) => {
     let songsArr = data.body.items;
+    console.log(data)
     res.render('songs', {songsArr});
   })
   .catch((err) => {

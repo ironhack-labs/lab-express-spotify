@@ -1,7 +1,6 @@
 {
   "name": "express-spotify-app",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "start": "nodemon app.js",
@@ -16,5 +15,7 @@
     "morgan": "^1.9.0",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^3.1.1"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }
