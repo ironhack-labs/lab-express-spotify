@@ -1,16 +1,8 @@
 <div class="albums-container">
-  {{#each attrBeers}}
-  {{> beerPartial }}
-   {{/each}}
+  <h1 class="artists-name">
+    {{name}}
+  </h1>
+  {{#each albums}} 
+    {{> albumPartial }}
+  {{/each}}
 </div>
-
-
-<div class="beer-card">
-      <img class="beer-img-top" src="{{image_url}}" alt="">
-      <div class="beer-card-body">
-        <h2>{{name}}</h2>
-        <h4>{{tagline}}</h4>
-        <p>{{description}}</p>
-      </div>
-</div>
-
