@@ -1,4 +1,4 @@
-const port = 3000;
+const port = process.env.PORT || 3000;
 const SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
 const app = express();
@@ -34,7 +34,17 @@ app.get('/', (req, res, next) => {
   res.render('home');
 });
 
-app.get('/artist', (req, res) => {
+app.post('/artist', (req,res)=>{
+  searchArtist(req.body.artist)
+  .then((artist)=>{
+    const obj = artist.body.artists.items;
+    res.render('artist', {obj});
+  }).catch((err)=>{
+    console.log(err);
+  });
+});
+
+/* app.get('/artist', (req, res) => {
   searchArtist(req.query.artist)
   .then((artist)=>{
     const obj = artist.body.artists.items;
@@ -42,7 +52,7 @@ app.get('/artist', (req, res) => {
   }).catch((err)=>{
     console.log(err);
   });
-})
+}) */
 
 app.get('/albums/:artistId', (req, res) => {
   searchAlbums(req.params.artistId)
