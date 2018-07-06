@@ -16,6 +16,11 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 // app.use(bodyParser.urlencoded({ extended: true }));
 
+// se agregaron las variables de ambiente dentro de ubuntu
+// /etc/environment
+// clientID="d405..."
+// clientSecret="6d1..."
+
 var varClientId = process.env.clientID;
 var varClientSecret = process.env.clientSecret;
 
