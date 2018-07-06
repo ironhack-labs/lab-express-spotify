@@ -1,0 +1,8 @@
+
+<a href="/" >Return Home</a>
+<h1>Results for "{{artist}}"</h1>
+<div class="cardContainer">
+    {{#each artistArr}}
+        {{> par this=this type="albums" }}
+    {{/each}}
+</div>
