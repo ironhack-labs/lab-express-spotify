@@ -1,0 +1,17 @@
+<div id="track-list-container">
+  <div id="title" class="row">
+    <h3 class="flex-left-item">Title</h3>
+    <h3 class="flex-right-item">Listen</h3>
+  </div>
+  {{#each obj}}
+  <div class="row track">
+    <div class="track-name flex-left-item">
+      <h4>{{name}}</h4>
+    </div>
+    <div class="track-controls">
+      <audio src="{{preview_url}}" controls="true"></audio>
+      <i class="fas fa-download"></i>
+    </div>
+  </div>
+  {{/each}}
+</div>
