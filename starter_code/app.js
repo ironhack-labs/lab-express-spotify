@@ -79,6 +79,24 @@ app.get('/albums/:artistId', (req, res) => {
     });
 });
 
+// Tracks page
+app.get('/tracks/:albumId', (req, res) => {
+  var { albumId } = req.params;
+
+  spotifyApi.getAlbumTracks(albumId)
+    .then(data => {
+      var tracks = data.body.items;
+
+      res.render("tracks", {
+        title: "Tracks - Spotify",
+        tracks: tracks
+      });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
 app.listen(3000);
 
 const setImage = (items) => {
