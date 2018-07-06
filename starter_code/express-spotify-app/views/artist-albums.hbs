@@ -1,5 +1,8 @@
 <div class="container">
-  {{#each data}} 
-    {{> albums this}}
-  {{/each}}
+    {{#each data}} 
+      <div class="album">
+        {{> albums this}}
+      </div>
+    {{/each}}
+  </div>
 </div>
