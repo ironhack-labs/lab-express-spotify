@@ -1,2 +1,2 @@
-body{margin:0;padding:0;background:url("/images/bg.jpg") no-repeat}
+body{margin:0;padding:0}.bg{background:url("/images/bg.jpg") no-repeat;background-size:cover;height:100vh}form{background:rgba(250,250,250,0.8);width:400px;height:200px;position:relative;top:40%;margin:0 auto;display:flex;flex-direction:column;align-items:center;justify-content:center}form input{margin-bottom:20px;min-height:20px;width:200px}
 /*# sourceMappingURL=styles.css.map */

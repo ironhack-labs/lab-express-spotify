@@ -1,7 +1,5 @@
-{{#each data}}
-  <p>{{name}}</p>
-  <div>
-    <img src="{{images.[1].url}}">
-  </div>
-  <a href="/albums/{{id}}">View Albums</a>
-{{/each}}
+<div class="container">
+  {{#each data}} 
+    {{> albums this}}
+  {{/each}}
+</div>
