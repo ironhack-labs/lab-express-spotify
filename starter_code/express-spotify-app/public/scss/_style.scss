@@ -1,0 +1,24 @@
+.artistBox{
+    max-width: 1400px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px auto;
+    align-content: center;
+}
+.artistBox article {
+    margin: 50px 0;
+    width: 30%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+  }
+  
+  .artistBox article > div {
+    height: 300px;
+    margin-bottom: 20px;
+  }
+  .artistBox article img {
+    display: block;
+    margin: 20px auto;
+  }
