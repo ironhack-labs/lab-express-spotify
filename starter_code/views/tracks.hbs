@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row header-row">
+        <span class="col-lg-8">Title</span>
+        <span class="col-lg-4">Listen</span>
+    </div>
+
+    <div class="row track-item">
+        {{#each tracks}}
+            <div class="col-lg-8">
+                <p>{{this.name}}</p>
+            </div>
+            <div class="col-lg-4">
+                <audio controls="" name="media"><source src="{{this.preview_url}}" type="audio/mpeg"></audio>
+            </div>
+         {{/each}}
+    </div>
+</div>

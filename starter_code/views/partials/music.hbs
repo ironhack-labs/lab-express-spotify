@@ -1,0 +1,13 @@
+
+<div class="col-lg-4 artist-container">
+    {{#if this.images.[0].url}}
+        <img src="{{this.images.[0].url}}" alt="artist" class="artist-img">
+        {{else}}
+        <img src="https://dummyimage.com/600x400/000/fff" alt="sinimagen" class="artist-img">
+    {{/if}}
+    
+    <div class="artist-info-container">
+    <p>{{this.name}}</p>
+    <a href="/{{type}}/{{this.id}}">View Albums</a>
+    </div>
+</div>
