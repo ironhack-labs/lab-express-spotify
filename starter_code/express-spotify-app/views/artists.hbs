@@ -1,0 +1,17 @@
+
+<h1>Artists Found</h1>
+<div id="artist-wrapper">
+{{#each body.artists.items as | artist |}}
+<div class="artist-box">
+    <div class="gray-container">
+        <img src="{{artist.images.0.url}}" width="100%">
+        <h3>{{artist.name}}</h3>
+
+        <a href="/albums/{{artist.id}}"><button>View Albums</button></a>
+    </div>
+
+</div>
+
+{{/each}}
+
+</div>
