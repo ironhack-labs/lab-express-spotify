@@ -37,7 +37,8 @@ app.get("/", (req, res, next) => {
 app.get("/getArtist", (req, res, next) => {
   const queryArtist = req.query.artist;
   console.log(queryArtist);
-  spotifyApi.searchArtists(queryArtist)
+  spotifyApi
+    .searchArtists(queryArtist)
     .then(data => {
       console.log(data.body.artists.items);
       console.log(data.body.artists.items);
@@ -60,6 +61,26 @@ app.get("/albums/:artistId", (req, res, next) => {
       console.log(err);
     });
 });
+
+
+
+
+/*app.get("/tracks/:artistId", (req, res, next) => {
+  const albumId = req.params.albumId;
+  spotifyApi.getAlbumTracks(albumId)
+    .then(data => {
+      res.render("tracks", { track: data.body.items });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+}); */
+
+
+
+
+
+
 
 app.listen(3000, () => {
   console.log("My first app listening on port 3000!");
