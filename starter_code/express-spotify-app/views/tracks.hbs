@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row">
+        <div class="col col-md-10 text-center">
+            <h2>Tracks for {{this.album}}</h2>
+            {{#each tracks}}
+            <div>
+                {{this.name}} {{this.preview_url}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

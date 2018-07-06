@@ -51,7 +51,19 @@ app.get('/albums/:id', (req, res, next) => {
     res.render('albums', {album:data.body.items});
   })
   .catch(err => {
-    console.log('Something went wrong while searching for the album tracks!')
+    console.log('Something went wrong while searching for the album!')
+  })
+})
+
+app.get('/tracks/:id', (req, res, next) => {
+  let albumId = req.params.id;
+  spotifyApi.getAlbumTracks(albumId)
+  .then(data => {
+    console.log(data.body.items)
+    res.render('tracks', {tracks:data.body.items});
+  })
+  .catch(err => {
+    console.log('Something went wrong while searching for the tracks!')
   })
 })
 

@@ -1,11 +1,11 @@
-<div class="container">
+<div class="container" font-family="Monserrat">
     <div class="row">
         <h2>Albums for {{this.artist}}</h2>
         <div class="col-md-3">
         {{#each album}} 
         {{this.name}}
-        <img src="{{this.images.[0].url}}">
-        <a class= "btn btn-danger text-center " type="submit " href="{{this.Item}} ">View Tracks</a>
+        <img width="200px" src="{{this.images.[0].url}}">
+        <a class= "btn btn-danger text-center " type="submit " href="/tracks/{{this.id}}">View Tracks</a>
 {{/each}}
 </div>
 </div>
