@@ -44,15 +44,6 @@ app.post('/artist', (req,res)=>{
   });
 });
 
-/* app.get('/artist', (req, res) => {
-  searchArtist(req.query.artist)
-  .then((artist)=>{
-    const obj = artist.body.artists.items;
-    res.render('artist', {obj});
-  }).catch((err)=>{
-    console.log(err);
-  });
-}) */
 
 app.get('/albums/:artistId', (req, res) => {
   searchAlbums(req.params.artistId)
