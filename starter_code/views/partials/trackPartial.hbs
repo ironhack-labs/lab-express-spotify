@@ -1,0 +1,15 @@
+<div class="alert alert-secondary" role="alert">
+  <div class="row">
+    <div class="col-12 col-md-6">
+      <strong>{{name}}</strong>
+    </div>
+    {{#if preview_url}}
+      <div class="col-12 col-md-6 text-right">
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    {{/if}}
+  </div>
+</div>

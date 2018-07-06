@@ -1,0 +1,14 @@
+<section class="artists">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Artists</h1>
+      </div>
+    </div>
+    <div class="row">
+      {{#each artists}}
+        {{> boxPartial this}}
+      {{/each}}
+    </div>
+  </div>
+</section>
