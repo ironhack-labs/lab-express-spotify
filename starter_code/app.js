@@ -35,7 +35,8 @@ spotifyApi.clientCredentialsGrant().then(
 // Home page
 app.get("/", (req, res, next) => {
   res.render("home", {
-    title: "Spotify"
+    title: "Spotify",
+    homePage: true
   });
 });
 
@@ -106,7 +107,7 @@ const setData = (items, url, text) => {
     } else if (element.images.length) {
       element.imageUrl = element.images[0].url;
     } else {
-      element.imageUrl = "http://cdn.onlinewebfonts.com/svg/img_508643.png";
+      element.imageUrl = '/images/' + (url.indexOf('albums') > -1 ? 'default-artist.png' : 'default-album.png');
     }
 
     element.myLink = {

@@ -1,5 +1,9 @@
-<div>
-  <img src="{{imageUrl}}" alt="{{name}}">
-  <h3>{{name}}</h3>
-  <a href="{{myLink.href}}">{{myLink.text}}</a>
+<div class="col-6 col-md-4 col-lg-3">
+  <div class="card text-white bg-dark mb-4">
+    <img class="card-img-top" src="{{imageUrl}}" alt="{{name}}">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{name}}</h5>
+      <a href="{{myLink.href}}" class="btn btn-danger">{{myLink.text}}</a>
+    </div>
+  </div>
 </div>

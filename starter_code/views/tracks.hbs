@@ -1,4 +1,22 @@
-<h1>Tracks</h1>
-{{#each tracks}}
-  {{> trackPartial this}}
-{{/each}}
+<section class="artists">
+  <div class="container">
+    <div class="row">
+      <div class="col">
+        <h1>Tracks</h1>
+      </div>
+    </div>
+    <div class="alert alert-dark" role="alert">
+      <div class="row">
+        <div class="col-12 col-md-6">
+          <h3>Title</h3>
+        </div>
+        <div class="col-12 col-md-6 text-right">
+          <h3>Listen</h3>
+        </div>
+      </div>
+    </div>
+    {{#each tracks}}
+      {{> trackPartial this}}
+    {{/each}}
+  </div>
+</section>
