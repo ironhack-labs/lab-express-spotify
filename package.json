@@ -2,7 +2,7 @@
   "name": "lab-express-spotify",
   "version": "1.0.0",
   "description": "![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)",
-  "main": "index.js",
+  "main": "app.js",
   "dependencies": {
     "body-parser": "^1.18.3",
     "express": "^4.16.3",
