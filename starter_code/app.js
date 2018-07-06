@@ -34,34 +34,32 @@ spotifyApi.clientCredentialsGrant()
 });
 
 app.get('/', (req, res, next) => {
-  res.render('index')
+  res.render('index');
 });
 
-app.post('/artists', function (req, res, next) {
-  let artistName = req.body.artist;
+app.get('/artists', (req, res, next) => {
+  // console.log(req.query);
 
-  console.log(req.body)
+  spotifyApi.searchArtists(req.query.artist)
+  .then((data) => {
+    console.log(data.body.artists.items[0].images)
+    res.render('artists', {artists: data.body.artists.items})
+  })
+  .catch(err => {
+    console.log(err);
+  })
+  ;
 
+});   
 
+app.get('/albums/:artistId', (req, res, next) => {
 
-  spotifyApi.searchArtists(artistName)
-  .then(function(data) {
-    console.log(data.body.artists.items[0].name);
-    console.log(data.body.artists.items[0].images[0].url);
-    // console.log(data.body.artists.items[0].albums);
-    res.send(`Artist Name: ${data.body.artists.items[0].name}, 
-      Image: ${data.body.artists.items[0].images[0].url}`);
-
-    app.get('/artists', (req, res, next) => {
-      res.render('data', {data});
-    })
-
-
-  }, function(err) {
-    console.error(err);
-  });
-
-})   
-
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    console.log(data);
+    res.render('albums', {albums: data.body.items})
+  })
+  
+});   
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'));
