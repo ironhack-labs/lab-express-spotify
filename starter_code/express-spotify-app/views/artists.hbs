@@ -1,0 +1,17 @@
+<div>
+  {{!-- {{#each artists as artist}}
+    <div>
+      <img src="artist.images.[0].url" alt="artist">
+      <p>{{artist.name}}</p>
+    </div>         
+  {{/each}} --}}
+
+  {{#if items}}
+  <div>
+    {{#each items}}
+    <img src="items.images.[0].url" alt="artist">
+      <p>{{this.name}}</p>
+    {{/each}}
+  </div>
+  {{/if}}
+</div>
