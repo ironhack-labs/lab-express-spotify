@@ -1,0 +1,14 @@
+ {{#each data}}
+<div class="carta">
+    {{this.name}}
+    <div class="fotos">
+        <img src="{{this.images.[0].url}}">
+    </div>
+{{this.artists}}
+<form action="/artists" method="POST" class="">
+    <div class="botonalbum">
+        <button type="submit"> view album</button>
+    </div>
+</form>
+</div>
+{{/each}}

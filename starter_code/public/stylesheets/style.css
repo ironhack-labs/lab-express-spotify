@@ -1,0 +1,63 @@
+body{
+    background-image: url(http://los40es00.epimg.net/los40/imagenes/2017/07/20/andaya/1500545073_969475_1500545202_noticia_normal.jpg);
+    background-repeat: no-repeat;
+    background-size: 100%
+}
+
+.orden{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 20px 0
+}
+
+.carta{
+    width: 20%;
+    border: 1px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 10px;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.1);
+
+}
+
+.hola{
+    color: red;
+}
+
+.fotos{
+    height: 200px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.fotos img{
+    height: 100%;
+}
+
+.buscador{
+    background-color: rgba(255, 255, 255, 0.5);
+    height: 150px;
+    width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    top: 270px;
+    left: 580px;
+}
+.formulario{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+}
+
+.formulario button{
+    background: red;
+    color: white;
+    border-radius: 5px;
+}
