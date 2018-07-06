@@ -2,7 +2,6 @@ const express = require("express");
 const app = express();
 const hbs = require("hbs");
 const path = require("path");
-
 var SpotifyWebApi = require("spotify-web-api-node");
 
 // Remember to paste here your credentials
@@ -39,14 +38,26 @@ app.get("/getArtist", (req, res, next) => {
   const queryArtist = req.query.artist;
   console.log(queryArtist);
   spotifyApi.searchArtists(queryArtist)
-    .then(data =>  {
+    .then(data => {
       console.log(data.body.artists.items);
-      res.render("artist", data.body.artists.items);
+      console.log(data.body.artists.items);
+      res.render("artists", { artists: data.body.artists.items });
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
-      console.log(err)
+      console.log(err);
       // ----> 'HERE WE CAPTURE THE ERROR'
+    });
+});
+
+app.get("/albums/:artistId", (req, res, next) => {
+  const artistId = req.params.artistId;
+  spotifyApi.getArtistAlbums(artistId)
+    .then(data => {
+      res.render("albums", { album: data.body.items });
+    })
+    .catch(err => {
+      console.log(err);
     });
 });
 

@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon -e js, hbs app.js"
+    "start": "nodemon -e js,hbs app.js"
   },
   "author": "",
   "license": "ISC",
