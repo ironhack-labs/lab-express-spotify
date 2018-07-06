@@ -1,0 +1,26 @@
+<div class="container">
+  <div class="row center-align">
+    <h2>Albums Encontrados</h2>
+    {{#each body.items as | albums |}}
+      <div class="col s12 m4">
+        <div class="card">
+          <div class="card-image">
+            {{#if albums.images}}
+              <div style="width: 100%; height: 300px; background: url('{{albums.images.0.url}}') center no-repeat; background-size: cover;"></div>
+              {{!-- <img src="{{artist.images.0.url}}" alt="{{artist.name}}"> --}}
+            {{else}}
+              <div style="width: 100%; height: 300px; background: url('https://openclipart.org/image/90px/svg_to_png/247324/abstract-user-flat-1.png') center no-repeat; background-size: cover;"></div>
+              {{!-- <img src="https://openclipart.org/image/90px/svg_to_png/247324/abstract-user-flat-1.png" alt="{{artist.name}}"> --}}
+            {{/if}}
+          </div>
+          <div class="card-content">
+            <span class="card-title">{{albums.name}}</span>
+          </div>
+          <div class="card-action">
+            <a href="/tracks/{{albums.id}}">View Tracks</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

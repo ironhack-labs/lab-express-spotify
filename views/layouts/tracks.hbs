@@ -1,0 +1,22 @@
+<div class="container">
+  <h2>Preview Tracks</h2>
+  <table>
+    <thead>
+      <tr>
+          <th>Title</th>
+          <th>Listen</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      {{#each body.items as | track |}}
+        <tr>
+          <td>{{track.name}}</td>
+          <td>
+            <a href="{{track.external_urls.spotify}}" class="btn">Abrir en Spotify</a>
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>
