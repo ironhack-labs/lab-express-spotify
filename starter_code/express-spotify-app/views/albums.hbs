@@ -1,8 +1,5 @@
 <div>
     {{#each albums}}
-    <div>
-        <img src="{{images.[1].url}}">
-    </div>
-    <h3>{{name}}</h3>
+        {{>albumPartial albums=this}}
     {{/each}}
 </div>
