@@ -1,2 +1,70 @@
-.whole{overflow:hidden;height:100vh;background-image:url(/images/concert.jpg);background-repeat:no-repeat;background-size:cover}.whole #square{width:400px;height:150px;margin:30vh auto;background:rgba(255,255,255,0.5);padding:50px 20px}.band{width:200px;height:300px;display:flex;flex-direction:column;align-items:center;margin:20px}.band .img-band{width:200px;height:200px}.band .img-band img{max-width:100%;max-height:100%;object-fit:contain}.band .artist-body{display:flex;flex-direction:column;align-items:center;justify-content:space-between;height:130px}.band .artist-body h3{text-align:center;font-size:1em}.artists{display:flex;flex-wrap:wrap}.container{display:flex;flex-direction:column}
+.whole {
+  overflow: hidden;
+  height: calc(100vh - 110px);
+  background-image: url(/images/concert.jpg);
+  background-repeat: no-repeat;
+  background-size: cover; }
+  .whole #square {
+    width: 400px;
+    height: 150px;
+    margin: 30vh auto;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 50px 20px; }
+
+.band {
+  width: 200px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px; }
+  .band .img-band {
+    width: 200px;
+    height: 200px; }
+    .band .img-band img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain; }
+  .band .artist-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 130px; }
+    .band .artist-body h3 {
+      text-align: center;
+      font-size: 1em; }
+
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 100px; }
+
+.container {
+  display: flex;
+  flex-direction: column; }
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 85px;
+  background: black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+  header #logo {
+    margin-top: 35px; }
+  header h1 {
+    color: white;
+    margin-right: 20px; }
+
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 30px; }
+
 /*# sourceMappingURL=styles.css.map */
