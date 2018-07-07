@@ -1,0 +1,22 @@
+<!-- layout.hbs -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Spotify</title>
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+</head>
+<body id="body">
+  <nav class="navbar navbar-warning bg-warning justify-content-between">
+    <a class="navbar-brand"><img src="/images/logo.png" height="50"></a>
+    <form class="form-inline" action="/artist" method="POST">
+      <input id="artist" name="artist" class="form-control mr-sm-2" type="search" placeholder="Search for music!" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </nav>
+  {{{ body }}}
+</body>
+</html>

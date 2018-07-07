@@ -1,0 +1,20 @@
+{
+  "name": "iron-nba-project",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.0",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^3.1.1"
+  }
+}

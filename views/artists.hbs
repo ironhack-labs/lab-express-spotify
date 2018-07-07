@@ -1,0 +1,13 @@
+<!--artists.hbs-->
+
+ <div class="cards-container">
+  {{#each artists}}
+        <div class="card" style="width: 12rem;">
+          <img class="card-img-top" src="{{this.image}}" alt="Artist image cap" height="200px">
+          <div class="card-body">
+            <p class="card-text" style="font-size: 0.8rem;">{{this.name}}</p>
+            <p><a href="albums/{{this.id}}" class="btn btn-primary">View Albums</a></p>
+          </div>
+        </div>
+  {{/each}}
+</div>

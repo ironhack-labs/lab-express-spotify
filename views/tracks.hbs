@@ -1,0 +1,12 @@
+{{#each tracks}}
+  <div class="sound-container">
+    <div class="left">
+      {{this.name}}
+    </div>
+    <div class="right">
+      <video controls name="media" height="55px">
+        <source type="audio/mpeg" src="{{this.preview}}">
+      </video>
+    </div>
+  </div>
+{{/each}}
