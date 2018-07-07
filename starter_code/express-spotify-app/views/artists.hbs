@@ -4,7 +4,11 @@
 {{#each body.artists.items as | artist |}}
 <div class="artist-box">
     <div class="gray-container">
+        {{#if artist.images}}
         <img src="{{artist.images.0.url}}" width="100%">
+    {{else}}
+        <img src="images/logo.jpg" width="100%">
+    {{/if}}
         <h3>{{artist.name}}</h3>
 
         <a href="/albums/{{artist.id}}"><button>View Albums</button></a>

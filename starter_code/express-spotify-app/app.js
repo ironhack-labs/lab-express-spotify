@@ -29,6 +29,7 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 
+
 //home route
 app.get('/', (req, res, next) => {
     res.render('index');
@@ -67,6 +68,21 @@ app.get('/albums/:artistId', (req, res) => {
     })
   });
 
+//tracks route
+app.get('/tracks', (req,res)=>{
+  res.render('tracks')
+});
+
+  app.get('/tracks/:albumId', (req, res) => {
+    var id = req.params.albumId;
+    spotifyApi.getAlbumTracks(id)
+    .then(data => {
+        res.render('tracks', data);
+    })
+    .catch(err => {
+        res.send(err)
+    })
+  });
 
 
 app.listen(3000);

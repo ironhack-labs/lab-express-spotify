@@ -1,0 +1,23 @@
+<h1>Tracks Found</h1>
+
+<div id="tracks">
+    <div class="heading">
+        <p>Title</p>
+        <p>Listen</p>
+    </div>
+    {{#each body.items as | track |}}
+
+    <div class="track">
+<div class="title">
+{{track.name}}
+
+</div>
+<div class="audio">
+<audio src="{{track.preview_url}}" controls></audio>
+
+</div>
+    </div>
+
+    {{/each}}
+
+</div>
