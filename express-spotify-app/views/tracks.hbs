@@ -1,5 +1,11 @@
-<div class="cards-container">
-  {{#each tracks as |track|}}
-  {{> track this}}
-  {{/each}}
+<div class="cards-container m-2">
+     <h1>Tracks</h1>
+</div>
+     {{#each track}}
+     <div class="audio">
+        <h2>{{this.name}}</h2> 
+          <audio src="{{this.preview_url}}" controls>
+               </div>
+
+     {{/each}}
 </div>
