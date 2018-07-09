@@ -1,0 +1,128 @@
+body{
+  margin:0;
+}
+
+.home{
+  width:100vw;
+  height: 100vh;
+  background-image: url('https://images5.alphacoders.com/349/thumb-1920-349660.jpg');
+  background-size: cover;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form{
+  width: 35vw;
+  height: 35vh;
+  background-color: rgba(255,255, 255, 0.6);
+  display:flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form form input{
+  margin: 2vh 0;
+  width: 20vw;
+}
+
+.form form button{
+  padding: 2vh 2vw;
+  border-radius: 10px; 
+  border:none;
+  background-color: #FF5550;
+  color: white;
+}
+
+.artists{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container{
+  margin: 5vh 3vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.artists img{
+  width:25vw;
+  height: 50vh;
+}
+
+.card{
+  background-color: gray;
+  width: 25vw;
+  height: 20vh;
+  color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.card button{
+  text-decoration: none;
+  color: white;
+  background-color: #FF5550;
+  border: none;
+  height:4vh;
+  cursor: pointer;
+}
+
+.albums{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.albums img{
+  width:25vw;
+  height: 50vh;
+}
+
+.tracks{
+  display: flex;
+  flex-direction: row;
+  margin: 5vh 5vw;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.col{
+width: 40vw;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.tracks h2{
+  background-color: gray;
+  color: white;
+  width: 100%;
+}
+
+.row{
+  height: 8vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width:100%;
+  border-bottom: 1px solid black;
+  margin-bottom: 2vh;
+}
+
+.tracks h3{
+  margin:0;
+}

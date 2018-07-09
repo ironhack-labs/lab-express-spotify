@@ -1,0 +1,23 @@
+  <h1>Canciones del album {{body.name}}</h1>
+<div class="tracks">
+  <div class="col">
+    <h2>Title</h2>
+    {{#each body.items}}
+    <div class="row">
+      <h3>{{this.name}}</h3>
+    </div>
+    {{/each}}
+  </div>
+
+  <div class="col">
+    <h2>Listen</h2>  
+    {{#each body.items}}
+      <div class="row">
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    {{/each}}
+  </div>
+</div>

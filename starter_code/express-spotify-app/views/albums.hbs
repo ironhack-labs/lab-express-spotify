@@ -1,0 +1,15 @@
+<div class="albums">
+{{#each body.items}}
+<div class="container">
+  {{#if this.images}}
+    <img src="{{this.images.[0].url}}" alt="{{this.name}} img">
+  {{else}}
+    <img src="https://orig00.deviantart.net/5162/f/2014/153/9/e/no_album_art__no_cover___placeholder_picture_by_cmdrobot-d7kpm65.jpg" alt="{{this.name}} img">
+  {{/if}}
+  <div class="card">
+    <h2>{{this.name}}</h2>
+    <a href="/tracks/{{this.id}}"><button>View Tracks</button></a>
+  </div>
+</div>
+{{/each}}
+</div>
