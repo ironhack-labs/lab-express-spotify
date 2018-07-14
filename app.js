@@ -2,8 +2,11 @@ const express = require('express');
 const path = require('path');
 const hbs = require('hbs');
 const bodyParse = require('body-parser');
+const SpotifyWebAPI = require('spotify-web-api-node');
 
 const app = express();
+
+const spotifyAPI = new SpotifyWebAPI();
 
 app.use(express.static(path.join(__dirname, '/public')));
 app.set('views', path.join(__dirname, '/views'));
