@@ -1,7 +1,25 @@
 body {
-  /* background: #333; */
+  font-size: 1em;
+  background: #333;
 }
 
-.form-container {
+.form-container, .acard {
   background: #F5F5F5;
+}
+
+.acard {
+  padding: 1em 0 1em 1em;
+  border-bottom: 1px solid #CCC;
+}
+
+.acard-image {
+ margin-right: 0.5em;
+}
+
+.acard-image img {
+  width: 8em;
+}
+
+.acard-info {
+  text-align: center;
 }

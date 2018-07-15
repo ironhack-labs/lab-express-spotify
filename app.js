@@ -33,17 +33,25 @@ app.get('/artists', (req, res, next) => {
 
   spotifyAPI.searchArtists(artist)
     .then((data) => {
-      list = data.body.artists.items;
-      console.log(list);
-      res.render('artists', { list });
+      artistArray = data.body.artists.items;
+      res.render('artists', { artistArray });
     })
     .catch((err) => {
       console.log(`Error: ${err}`);
     });
 });
 
-app.get('/albums', (req, res, next) => {
-  res.render('albums');
+app.get('/albums/:artistID', (req, res, next) => {
+  const artist = req.params.artistID;
+
+  spotifyAPI.getArtistAlbums(artist)
+    .then((data) => {
+      albumArray = data.body.items;
+      res.render('albums', { albumArray });
+    })
+    .catch((err) => {
+      console.log(`Error fetching album data: ${err}`);
+    });
 });
 
 app.get('/tracks', (req, res, next) => {
