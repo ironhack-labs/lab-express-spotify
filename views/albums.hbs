@@ -1,24 +1,19 @@
 <!-- layout.hbs -->
 
-<div class="container">
-  <div class="row">
-    {{#each albumArray}}
-      <div class="acard col d-flex justify-content-center">
-        <div class="acard-image col">
-            {{#each images}}
-              {{#if this.0.url}}
-                <img src="{{this.0.url}}">
-              {{else}}
-                <p>No image</p>
-                <img src="/img/albumicon.png">
-              {{/if}}
-            {{/each}}
-        </div>
-        <div class="acard-info col">
-          <h5>{{this.name}}</h5>
-          <a href="/tracks/{{this.id}}"><button class="btn">Tracks</button></a>
-        </div>
+<div class="row">
+  {{#each albumArray}}
+    <div class="acard col d-flex justify-content-center">
+      <div class="acard-image col">
+            {{#if images.0.url}}
+              <img src="{{images.0.url}}">
+            {{else}}
+              <img src="../img/albumicon.png">
+            {{/if}}
       </div>
-    {{/each}}
-  </div>
+      <div class="acard-info col">
+        <h5>{{this.name}}</h5>
+        <a href="/tracks/{{this.id}}"><button class="btn">Tracks</button></a>
+      </div>
+    </div>
+  {{/each}}
 </div>

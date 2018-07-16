@@ -6,6 +6,8 @@ const SpotifyWebAPI = require('spotify-web-api-node');
 
 const app = express();
 
+hbs.registerPartials(path.join(__dirname, '/views/partials'));
+
 const spotifyAPI = new SpotifyWebAPI({
   clientId: 'cced69ef4f52428381a0a3a7319bf2cf',
   clientSecret: '4c67e1a4f61d46f7816e7c7fec2843e2',

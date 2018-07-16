@@ -1,10 +1,29 @@
 body {
   font-size: 1em;
-  background: #333;
+  background: #555;
+}
+
+.header {
+  color: #FFF;
+}
+
+.home-btn {
+  margin-top: 1em;
 }
 
 .form-container, .acard {
   background: #F5F5F5;
+}
+
+.form-content {
+  padding: 1em;
+  text-align: center;
+}
+
+.form-content .btn {
+  margin-top: 0.5em;
+  color: #FFF;
+  background: #FF8800;
 }
 
 .acard {
@@ -22,10 +41,6 @@ body {
 
 .acard-info {
   text-align: center;
-}
-
-.track-name h6 {
-
 }
 
 .track-preview p {
