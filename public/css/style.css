@@ -23,3 +23,13 @@ body {
 .acard-info {
   text-align: center;
 }
+
+.track-name h6 {
+
+}
+
+.track-preview p {
+  color: #C2C2C2;
+  font-size: 0.8em;
+  text-align: center;
+}

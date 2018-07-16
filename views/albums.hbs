@@ -5,15 +5,18 @@
     {{#each albumArray}}
       <div class="acard col d-flex justify-content-center">
         <div class="acard-image col">
-          {{#each images}}
-            {{#if @first}}
-              <img src="{{this.url}}">
-            {{/if}}
-          {{/each}}
+            {{#each images}}
+              {{#if this.0.url}}
+                <img src="{{this.0.url}}">
+              {{else}}
+                <p>No image</p>
+                <img src="/img/albumicon.png">
+              {{/if}}
+            {{/each}}
         </div>
         <div class="acard-info col">
           <h5>{{this.name}}</h5>
-          <a href="#"><button class="btn">Tracks</button></a>
+          <a href="/tracks/{{this.id}}"><button class="btn">Tracks</button></a>
         </div>
       </div>
     {{/each}}
