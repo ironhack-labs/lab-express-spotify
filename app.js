@@ -30,8 +30,8 @@ app.get('/', (req, res, next) => {
   res.render('index');
 });
 
-app.get('/artists', (req, res, next) => {
-  const artist = req.query.artist;
+app.post('/artists', (req, res, next) => {
+  const artist = req.body.artist;
 
   spotifyAPI.searchArtists(artist)
     .then((data) => {
@@ -39,7 +39,7 @@ app.get('/artists', (req, res, next) => {
       res.render('artists', { artistArray });
     })
     .catch((err) => {
-      console.log(`Error: ${err}`);
+      console.log(`Error fetching artists: ${err}`);
     });
 });
 
@@ -62,7 +62,6 @@ app.get('/tracks/:albumID', (req, res, next) => {
   spotifyAPI.getAlbumTracks(album)
     .then((data) => {
       trackArray = data.body.items;
-      console.log(trackArray[0].preview_url);
       res.render('tracks', { trackArray });
     })
     .catch((err) => {
