@@ -1,0 +1,15 @@
+<!--artist.hbs-->
+
+{{!-- <div class="py-5">
+</div> --}}
+  <div class="card text-center">
+    {{#if images.1.url}}
+      <img class="card-img-top w-100 d-block" src={{images.1.url}}>
+    {{else}}
+      <img class="card-img-top w-100 d-block" src="/images/no-image.png">
+    {{/if}}
+    <div class="card-body grey">
+      <h4 class="card-title">{{name}}</h4>
+      <button class="btn btn-danger" href="#" type="button">view albums </button>
+    </div>
+  </div>
