@@ -1,0 +1,20 @@
+<!-- layout.hbs -->
+
+{{#each trackArray}}
+  <div class="row">
+    <div class="acard col">
+      <div class="track-name col d-flex align-items-center">
+        <h6>{{this.track_number}}. {{this.name}}</h6>
+      </div>
+      <div class="track-preview col d-flex align-items-center">
+        {{#if this.preview_url}}
+          <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mp3">
+          </audio>
+        {{else}}
+          <p>No preview available</p>
+        {{/if}}
+      </div>
+    </div>
+  </div>
+{{/each}}
