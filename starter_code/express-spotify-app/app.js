@@ -2,6 +2,7 @@ const express = require('express');
 const app = express();
 const hbs = require('hbs');
 const path = require('path')
+const bodyParser = require('body-parser')
 var SpotifyWebApi = require('spotify-web-api-node');
 
 hbs.registerPartials(path.join(__dirname, '/views/partials'))
@@ -9,6 +10,7 @@ hbs.registerPartials(path.join(__dirname, '/views/partials'))
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'))
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: true}))
 
 
 // Remember to paste here your credentials
@@ -36,9 +38,8 @@ app.get('/artists', (req, res, next) => {
   //console.log(req.query.artists)
   spotifyApi.searchArtists(req.query.artists)
     .then(data => {
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       dataReceived = data.body.artists
-      // console.log(dataReceived) 
+      //console.log(data.body.artists) 
       res.render('artists', dataReceived)
     })
     .catch(err => {
@@ -46,6 +47,19 @@ app.get('/artists', (req, res, next) => {
     })
 })
 
+app.get('/albums/:artistId', (req, res) => {
+  console.log(req.params.artistId)
+  
+  spotifyApi.getArtistAlbums(req.params.artistId,{country:'ES',limit:10,offset:20})
+    .then(data => {
+      dataReceived = data.body
+      console.log(dataReceived)
+      res.render('albums', dataReceived)
+    })
+    .catch(err => {
+      console.log(err);
+    })
+})
 
 
 app.listen(3000, () => {

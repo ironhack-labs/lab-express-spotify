@@ -1,26 +1,20 @@
 *{
-  border: solid blue 1px;
-}
-
-.background-grey{
-  background-color: 
-}
-* {
+  border: dotted blue 1px;
   font-family: Arial, Helvetica, sans-serif;
 }
-
-body {
-  background-color: #F7F9F9;
+html,body{
+  height:100%;
+  width:100%;
 }
 
 .light-blue {
-  padding-top: 5px;
   background-color: #2081C3 !important;
+  color: #F7F9F9 !important;
 }
 
 .dark-blue {
-  padding-top: 5px;
   background-color: #0A2C42 !important;
+  color: #F7F9F9 !important;
 }
 
 .grey {
@@ -28,6 +22,12 @@ body {
   color: #F7F9F9 !important;
 }
 
-.index-container {
-  padding-top: 10px;
+div#concert{
+  background-image: url("../images/concert.jpg") ;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+  height:100%;
+  width:100%;
 }
