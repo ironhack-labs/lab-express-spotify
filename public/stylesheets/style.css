@@ -1,0 +1,48 @@
+body{
+  padding-top: 100px;
+  font-family: 'Varela Round', sans-serif;
+  font-weight: 300;
+  margin: 0;
+}
+
+.nav-bar{
+  height: 100px;
+  display: block;
+  padding: 10px 50px;
+  position: fixed;
+  top:0;
+  left:0;
+  box-sizing: border-box;
+  width: 100%;
+  background-color: #FFF;
+  
+}
+
+.nav-bar > a{
+  display: inline-block;
+  text-decoration: none;
+}
+
+.nav-bar-ul{
+  display: block;
+  float: right;
+  margin:0;
+
+}
+.logo{
+  height: 72px;
+}
+
+.nav-bar-ul>li{
+  list-style-type:none;
+  display: inline-block;
+  padding: 25px 15px;
+  font-size: 1.4em;
+  color: #1A1A1A;
+  
+}
+
+.nav-bar-ul a{
+  text-decoration: none;
+  color: #1A1A1A;
+}
