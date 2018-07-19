@@ -1,0 +1,14 @@
+<!--layout.hbs-->
+<div class="track row">
+    <div class="title col-sm-8">{{ name }}</div>
+    <div class="audio col-sm-4">
+        <audio controls>
+            {{#with preview_url}}
+                <source src="{{preview_url}}" type="audio/ogg">
+                <source src="{{preview_url}}" type="audio/mpeg">
+                <source src="{{preview_url}}" type="audio/wav">
+            {{/with}}
+            Your browser does not support the audio element
+        </audio>
+    </div>
+</div>

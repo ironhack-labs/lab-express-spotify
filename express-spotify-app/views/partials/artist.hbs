@@ -1,0 +1,11 @@
+<!--layout.hbs-->
+
+<div class="artist col-sm-4">
+    {{!-- {{#with resultsArtists}} --}}
+    <div class="cover"><img src="{{anyImage images.[0].url}}" alt="{{ name }}"></div>
+    <div class="info">
+        <h1 class="title">{{ name }}</h1>
+        <a href="/albums/{{ id }}"><div class="button shadow-sm">View Albums</div></a>
+    </div>
+    {{!-- {{/with}} --}}
+</div>
