@@ -1,0 +1,12 @@
+<h1>Artist</h1>
+
+{{!-- <div class="card-deck"> --}}
+<div class="row">
+{{#each artists}}
+  <div class="col-md-4">
+    {{> card this}}
+  </div>
+{{/each}}
+</div>
+
+{{!-- </div> --}}
