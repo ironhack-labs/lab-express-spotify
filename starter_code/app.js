@@ -40,10 +40,12 @@ app.get('/', (req, res, next) => {
 
 app.get('/artists', (req, res, next) => {
   const {name} = req.query;
+
   spotifyApi.searchArtists(name)
     .then(artists => {
       const artistArr = artists.body.artists.items;
       res.render('artists', {artistArr});
+      console.log(artistArr);
     })
     .catch(error => {
       console.log(error);

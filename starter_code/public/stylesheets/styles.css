@@ -19,3 +19,12 @@
     color: white;
     margin: 10px;
 }
+
+.center {
+    margin: 0 auto;
+  }
+
+  .img-fluid{
+      height: 100px;
+      width: auto;
+  }

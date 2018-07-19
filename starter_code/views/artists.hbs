@@ -1,7 +1,16 @@
-<section class="single-artist">
-    <div class="container">
-        <div class="row">
-            {{ artistArr }}
+<div class="row">
+    {{#each artistArr}}
+    <div class="col-md-4">
+
+        <div class="card" style="18rem">
+            <div class="center">
+                    <img style="height: 100px" class="img-fluid" src="{{ this.images.[0].url }}" alt="Card image cap">
+            </div>
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <a href="/artists/{{this.id}}" class="btn btn-primary">Link</a>
+            </div>
         </div>
     </div>
-</section>
+    {{/each}}
+</div>
