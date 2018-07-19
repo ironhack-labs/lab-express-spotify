@@ -1,0 +1,30 @@
+.banner{
+    height: 100vh;
+    background-image: url('../images/background-banner.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.full-height{
+    height: 100vh;
+}
+
+.search-form{
+    padding: 30px;
+    background: rgba(255, 255, 255, 0.7);
+}
+
+#submit{
+    background-color: rgba(235, 78, 78, 0.973);
+    color: white;
+    margin: 10px;
+}
+
+.center {
+    margin: 0 auto;
+  }
+
+  .img-fluid{
+      height: 100px;
+      width: auto;
+  }
