@@ -3,7 +3,8 @@ const app = express();
 const hbs = require('hbs');
 const path = require('path')
 const bodyParser = require('body-parser')
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
+const morgan = require('morgan')
 
 hbs.registerPartials(path.join(__dirname, '/views/partials'))
 
@@ -11,6 +12,7 @@ app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, '/views'))
 app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({extended: true}))
+app.use(morgan('combined'))
 
 
 // Remember to paste here your credentials
@@ -39,7 +41,7 @@ app.get('/artists', (req, res, next) => {
   spotifyApi.searchArtists(req.query.artists)
     .then(data => {
       dataReceived = data.body.artists
-      //console.log(data.body.artists) 
+      //console.log(dataReceived) 
       res.render('artists', dataReceived)
     })
     .catch(err => {

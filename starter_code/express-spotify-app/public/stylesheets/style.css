@@ -1,5 +1,5 @@
 *{
-  border: dotted blue 1px;
+  /* border: dotted blue 1px; */
   font-family: Arial, Helvetica, sans-serif;
 }
 html,body{
@@ -30,4 +30,21 @@ div#concert{
   background-size: cover;
   height:100%;
   width:100%;
+}
+
+img.size-300{
+  /* width: 300px !important;  */
+  height: 300px !important; 
+} 
+
+div#centered-form{
+  margin: 0 auto;
+  margin-top: 10%;
+  margin-left: 25%;
+  padding: 25px;
+  text-align: center;
+  background-color: rgba(250, 244, 244, 0.5);
+  border-radius: 10px;
+  border: 1px solid #666666;
+  width: 600px;
 }

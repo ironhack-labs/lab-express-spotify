@@ -1,15 +1,13 @@
 <!--index.hbs-->
-<div class="container-fluid align-middle" id="concert">
-  <div class="row text-center">
-    <div class="col-md-3"></div>
-    <div class="col-md-6">
+<div class="container-fluid" id="concert">
+  <div class="row">
+    <div class="form-group" id="centered-form">
       <form action="/artists" method="get">
         <input class="form-control" type="text" name="artists" id="artists">
-        <div class="col-md-12">
-          <button type="button" class="btn btn-danger btn-lg">search</button>
+        <button type="submit" class="btn btn-danger btn-lg my-3">search</button>
       </form>
-      </div>
     </div>
-    <div class="col-md-3"></div>
   </div>
+  <div class="col-md-1"></div>
+</div>
 </div>
