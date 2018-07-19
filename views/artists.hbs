@@ -1,0 +1,18 @@
+<!-- layout.hbs -->
+<div class="container">
+  {{#each artist}}
+    <div class="row">
+      <div class="col-lg-4 artist-container">
+        {{#if this.images.[0].url}}
+          <img src="{{this.images.[0].url}}" class="artist-img">
+        {{else}}
+          <img src="http://www.staticwhich.co.uk/static/images/products/no-image/no-image-available.png" class="artist-img">
+        {{/if}}
+        <div class="artist-info-container">
+          <p>{{this.name}}</p>
+          <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
