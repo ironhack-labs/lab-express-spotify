@@ -1,0 +1,150 @@
+.background
+{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding: 300px 300px;
+}
+form
+{
+    background-color: rgba(255,255,255,0.6);
+    text-align: center;
+    padding: 80px 50px;
+}
+form #artist
+{
+    width: 70%;
+    display: block;
+    margin: auto;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+}
+form #button
+{
+    display: block;
+    margin: auto;
+}
+.results
+{
+    padding: 80px 150px;
+}
+.results>h1
+{
+    text-align: center;
+    margin-bottom: 60px;
+}
+.artist, .album
+{
+    color: white;
+    padding: 15px;
+    text-align: center;
+}
+.cover
+{
+    background-color: #dddddd;
+    overflow: hidden;
+}
+.artist .info, .album .info
+{
+    background-color: #565656;
+    padding: 20px;
+}
+.artist .info h1, .album .info h1
+{
+    font-size: 20px;
+}
+.artist .cover img, .album .cover img
+{
+    width: 100%;
+}
+.artist .info .title, .album .info .title
+{
+    font-size: 22px;
+}
+.artist .info .button, .album .info .button
+{
+    background-color: lightcoral;
+    border: black solid 2px;
+    font-size: 14px;
+    width: 50%;
+    /* margin: 30px auto; */
+    border-radius: 4px;
+    padding: 8px 10px;
+    display: block;
+    margin: auto;
+    margin-top: 20px;
+}
+.artist .info a, .album .info a
+{
+    color: white;
+}
+.artist .info a:hover, .album .info a:hover
+{
+    text-decoration: none;
+}
+.artist .info a:hover .button, .album .info a:hover .button
+{
+    background-color: #f08888;
+}
+.tracks
+{
+    padding: 0 200px;
+}
+.tracks .header
+{
+    background-color: #444444;
+    color: white;
+    padding: 20px;
+    font-size: 20px;
+}
+.tracks .body .track
+{
+    background-color: #f6f6f6;
+    margin-bottom: 2px;
+}
+.tracks .body .track .title
+{
+    /* padding: 10px; */
+    padding: 20px 60px;
+}
+.tracks .body .track .audio
+{
+    padding-top: 6px;
+}
+.oops-message
+{
+    color: black;
+    font-size: 20px;
+    text-align: center;
+    margin-bottom: 30px;
+}
+.linkNext .button
+{
+    /* background-color: red; */
+}
+
+@media (max-width: 1000px)
+{
+    .background
+    {
+        padding: 200px 20px;
+    }
+    form
+    {
+        padding: 80px 10px;
+    }
+    form #artist
+    {
+        width: 90%;
+    }
+}   
+@media (max-height: 700px)
+{
+    .background
+    {
+        padding: 50px 20px;
+    }
+}   

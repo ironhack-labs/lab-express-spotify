@@ -1,0 +1,21 @@
+<!-- layout.hbs -->
+<div class="results">
+    <h1>Albums of {{ data.body.items.[0].artists.[0].name }}</h1>
+     {{!-- {{#if thereIsPrev numNext}} --}}
+        <a href="/albums/{{artist}}/{{numPrev numNext}}" class="linkNext"><div class="button btn btn-secondary">Prev</div></a>
+    {{!-- {{/if}} --}}
+    {{#if thereIsNext}}
+        <a href="/albums/{{artist}}/{{numNext}}" class="linkNext"><div class="button btn btn-secondary">Next</div></a>
+    {{/if}}
+    <div class="row">
+        {{#each data.body.items}}
+            {{> album this}}
+        {{/each}}
+    </div>
+    {{!-- {{#if thereIsPrev numNext}} --}}
+        <a href="/albums/{{artist}}/{{numPrev numNext}}" class="linkNext"><div class="button btn btn-secondary">Prev</div></a>
+    {{!-- {{/if}} --}}
+    {{#if thereIsNext}}
+        <a href="/albums/{{artist}}/{{numNext}}" class="linkNext"><div class="button btn btn-secondary">Next</div></a>
+    {{/if}}
+</div>

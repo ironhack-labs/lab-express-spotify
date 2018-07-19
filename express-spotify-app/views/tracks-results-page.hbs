@@ -1,0 +1,16 @@
+<!-- layout.hbs -->
+<div class="tracks">
+    {{!-- <h1>Tracks of {{ data.body.items.[0].artists.[0].name }}</h1> --}}
+    <div class="header row">
+        <div class="col-sm-8">Title</div>
+        <div class="col-sm-4">Listen</div>
+    </div>
+    <div class="body">
+        {{#each data.body.items}}
+            {{> track this}}
+        {{/each}}
+    </div>
+    {{!-- {{#if thereIsNext}}
+        <a href="{{ next }}"><div class="button">Next</div></a>
+    {{/if}} --}}
+</div>

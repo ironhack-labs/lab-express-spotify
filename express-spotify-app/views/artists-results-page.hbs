@@ -1,0 +1,23 @@
+<!-- layout.hbs -->
+<div class="results">
+    {{!-- {{#with resultsArtists}} --}}
+    <h1>{{ artist }}</h1>
+    {{!-- {{#if thereIsPrev numNext}} --}}
+        <a href="/artists/{{artist}}/{{numPrev numNext}}" class="linkNext"><div class="button btn btn-secondary">Prev</div></a>
+    {{!-- {{/if}} --}}
+    {{#if thereIsNext}}
+        <a href="/artists/{{artist}}/{{numNext}}" class="linkNext"><div class="button btn btn-secondary">Next</div></a>
+    {{/if}}
+    <div class="row">
+        {{#each data.body.artists.items}}
+            {{> artist this}}
+        {{/each}}
+    </div>
+    {{!-- {{#if thereIsPrev numNext}} --}}
+        <a href="/artists/{{artist}}/{{numPrev numNext}}" class="linkNext"><div class="button btn btn-secondary">Prev</div></a>
+    {{!-- {{/if}} --}}
+    {{#if thereIsNext}}
+        <a href="/artists/{{artist}}/{{numNext}}" class="linkNext"><div class="button btn btn-secondary">Next</div></a>
+    {{/if}}
+    {{!-- {{/with}} --}}
+</div>
