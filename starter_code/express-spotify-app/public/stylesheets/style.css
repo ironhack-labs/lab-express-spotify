@@ -1,0 +1,57 @@
+.home-heading {
+    background-image: url("../images/concert.jpg");
+    background-size: 100% 100%;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+
+  .home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+  }
+
+  .form-group {
+      margin-bottom: 15px;
+  }
+
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    padding: 6px 12px;
+    font-size: 14px;
+    line-height: 1.5;
+    color: #777;
+    background-color: white;
+    border: 1px solid #CCC;
+    border-radius: 8px;
+}
+
+body {
+    margin: 0;
+}
+
+.btn {
+    display: inline-block;
+    color: white;
+    background-color: #ff6666;
+    text-align: center;
+    line-height: 1.5;
+    font-size: 14px;
+    margin-top: 10px;
+}
