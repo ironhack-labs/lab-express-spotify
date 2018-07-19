@@ -50,10 +50,10 @@ app.get('/artists', (req, res, next) => {
 app.get('/albums/:artistId', (req, res) => {
   console.log(req.params.artistId)
   
-  spotifyApi.getArtistAlbums(req.params.artistId,{country:'ES',limit:10,offset:20})
+  spotifyApi.getArtistAlbums(req.params.artistId,{limit:10,offset:20})
     .then(data => {
       dataReceived = data.body
-      console.log(dataReceived)
+      //console.log(dataReceived)
       res.render('albums', dataReceived)
     })
     .catch(err => {
@@ -61,6 +61,19 @@ app.get('/albums/:artistId', (req, res) => {
     })
 })
 
+app.get('/tracks/:tracksId', (req, res) => {
+  console.log(req.params.tracksId)
+  
+  spotifyApi.getAlbumTracks(req.params.tracksId,{limit : 5, offset : 1 })
+    .then(data => {
+      dataReceived = data.body
+      //console.log(dataReceived)
+      res.render('tracks', dataReceived)
+    })
+    .catch(err => {
+      console.log(err);
+    })
+})
 
 app.listen(3000, () => {
   console.log('server on line. waiting for query...')
