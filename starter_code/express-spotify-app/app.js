@@ -12,10 +12,20 @@ app.get('/', (req, res, next) => {
 
 });
 
-app.get('/artists', (req, res, next) => {
-  res.render('artists');
+app.get('/artist', (req, res, next) => {
+  console.log(req.query.artist);
+  const searchArtist = req.query.artist;
+  spotifyApi.searchArtists(searchArtist)
+    .then(result => {
+      const data={
+        artists: result.body.artists.items
+      }
+      res.render('artist', data);
+    })
+    .catch(next)
 
 });
+
 
 app.get('/albums', (req, res, next) => {
   res.render('albums');
