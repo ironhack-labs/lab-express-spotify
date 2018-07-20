@@ -1,0 +1,11 @@
+<!-- album.hbs -->
+
+<div class="card text-center">
+  {{#if images.1.url}}
+  <img class="card-img-top size-300" src={{images.1.url}}> {{else}}
+  <img class="card-img-top size-300" src="/images/no-image.png"> {{/if}}
+  <div class="card-body grey">
+    <h6 class="card-title">{{name}}</h6>
+    <a class="btn btn-danger" href="/tracks/{{id}}" role="button">view tracks </a>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<!--artist.hbs-->
+
+<h1 class="text-center">Artists</h1>
+<div class="container-fluid">
+  <div class='row'>
+    {{#each items}}
+    <div class="col-md-3">
+      {{>artist}}
+    </div>
+    {{/each}}
+  </div>
+</div>

@@ -1,0 +1,20 @@
+<!-- tracks.hbs -->
+
+{{!--
+<h1 class="text-center">Tracks</h1> --}}
+<div class="container-fluid align-text-top">
+  <div class="row grey">
+    <div class="col-md-2">
+      <p class="text-right ">Title</p>
+    </div>
+    <div class="col-md-8"></div>
+    <div class="col-md-2">
+      <p class="text-left">listen</p>
+    </div>
+  </div>
+  <div class="row light-blue">
+    {{#each items}}
+      {{>track}}
+    {{/each}}
+  </div>
+</div>
