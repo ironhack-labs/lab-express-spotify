@@ -28,16 +28,6 @@ const spotifyApi = new SpotifyWebApi({
 spotifyApi.clientCredentialsGrant()
   .then(function (data) {
     spotifyApi.setAccessToken(data.body['access_token']);
-    
-    // spotifyApi.searchArtists('maiden')
-    //   .then(result => {
-    //     console.log(result.body.artists.items[0].name);
-    //     res.render('artists');
-    //   })
-    //   .catch(err => {
-    //     console.log('err', err)
-    //   })
-
   }, function (err) {
     console.log('Something went wrong when retrieving an access token', err);
   });
@@ -48,24 +38,33 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/artists', (req, res, next) => {
+  //--> browser me dice: cannot post /artists
+  // const artistsSearch = req.query.artists
+  // spotifyApi.searchArtists(artistsSearch)
   spotifyApi.searchArtists('iron maiden')
-  .then(result => {
-    console.log('funciono')
-    const searchArtistArray = result.body.artists
-    // console.log(searchArtistArray);
-    // console.log('imagenes', searchArtistArray.items[0].images)
-    res.render('artists', searchArtistArray);
+    .then(result => {
+      const resultArtist = result.body.artists.items
+      // console.log(resultArtist);
+      // console.log('imagenes', resultArtist.items[0].images)
+      res.render('artists', {resultArtist});
   }).catch(err => {
-    console.log('err', err)
+      console.log('err', err)
     })
 });
 
 // app.get('/album/:artistId', (req, res, next) => {
-  // console.log(req.params.artistId)
-//   res.render('album');
+//   const albumSearch = req.params.artistID
+//   .then(result => {
+
+//     res.render(albumSearch);
+//   })
+//   .catch(err => {
+//     console.log('err', err)
+//   })
 // });
 
 // app.get('/tracks/:albumID', (req, res, next) => {
+//   const trackSearch = req.params.albumID;
 //   spotifyApi.getAlbumTracks()
 //   .then(result => {
 

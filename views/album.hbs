@@ -1,12 +1,19 @@
 <!-- layout.hbs -->
+Album
 <div class="container">
-  <div class="row">
-    <div class="col-lg-4 artist-container">
-      <img src="https://i.scdn.co/image/395ad6fbf859f13d1ad536dda1834d4a0ba64fc9" alt="" class="artist-img">
-      <div class="artist-info-container">
-        <p>The Book Of Souls: Live Chapter</p>
-        <a href="/tracks/3oFAX7PeOFbZnKiPmpUPv4">View Tracks</a>
+  {{#each}}
+    <div class="row">
+      <div class="col-lg-4 artist-container">
+        {{#if this.images.[0].url}}
+          <img src="{{this.images.[0].url}}" alt="{{this.name}}" class="artist-img">
+        {{else}}
+          <img src="http://www.staticwhich.co.uk/static/images/products/no-image/no-image-available.png" class="artist-img"> 
+        {{/if}}
+        <div class="artist-info-container">
+          <p>{{this.name}}</p>
+          <a href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
       </div>
     </div>
-  </div>
+  {{/each}}
 </div>
