@@ -1,0 +1,15 @@
+<div class="cards-container">
+  <div class="card" style="width: 33.333%;">
+    {{#each image}}
+        {{> artistCard this}}
+    {{/each}}
+
+
+    <div class="card-body">
+      {{#each items}}
+        {{> artistCard this}}
+      {{/each}}
+    </div>
+
+  </div>
+</div>
