@@ -1,0 +1,27 @@
+  .home{
+    margin-top: 10px;
+  }
+
+  .form-container {
+    background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+ 
+  .form-content {
+    padding: 1px;
+    text-align: center;
+  }
+  
+  .form-content .btn {
+    margin-top: 2px;
+    color: #FFF;
+    background:yellowgreen;
+  }
+  
+  .album-image img {
+    width: 50px;
+  }
+  
+  

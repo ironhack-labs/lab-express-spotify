@@ -1,0 +1,16 @@
+<!-- layout.hbs -->
+  {{#each albumArray}}
+    <div class="album ">
+      <div class="album-image ">
+            {{#if images.0.url}}
+              <img src="{{images.0.url}}">
+            {{else}}
+              <img src="images/vinil.png">
+            {{/if}}
+      </div>
+      <div class="album-info">
+        <h5>{{this.name}}</h5>
+        <a href="/tracks/{{this.id}}"><button class="btn">Tracks</button></a>
+      </div>
+    </div>
+  {{/each}}
