@@ -61,16 +61,16 @@ app.get('/album/:artistId', (req, res, next) => {
   })
 });
 
-// app.get('/tracks/:albumID', (req, res, next) => {
-//   const trackSearch = req.params.albumID;
-//   spotifyApi.getAlbumTracks(trackSearch)
-//   .then((data) => {
-//     trackData = data.body.items;
-//     res.render('tracks', { trackData });
-//   })
-//   .catch(err => {
-//     console.log('err', err)
-//   })
-// });
+app.get('/tracks/:albumID', (req, res, next) => {
+  const trackSearch = req.params.albumID;
+  spotifyApi.getAlbumTracks(trackSearch)
+  .then((data) => {
+    trackData = data.body.items;
+    res.render('tracks', { trackData });
+  })
+  .catch(err => {
+    console.log('err', err)
+  })
+});
 
 app.listen(3000, () => console.log('Port 3000 running'));
