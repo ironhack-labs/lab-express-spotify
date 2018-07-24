@@ -1,5 +1,4 @@
 <!-- layout.hbs -->
-artists
 <div class="container">
   {{#each artistData}}
     <div class="row">
@@ -11,7 +10,7 @@ artists
         {{/if}}
         <div class="artist-info-container">
           <p>{{this.name}}</p>
-          <a href="/albums/{{this.id}}">View Albums</a>
+          <a href="/album/{{this.id}}">View Albums</a>
         </div>
       </div>
     </div>

@@ -49,4 +49,28 @@ app.get('/artists', (req, res, next) => {
   })
 });
 
+app.get('/album/:artistId', (req, res, next) => {
+  const albumSearch = req.params.artistId
+  spotifyApi.getArtistAlbums(albumSearch)
+  .then((data) => {
+    albumData = data.body.items;
+    res.render('album', { albumData });
+  })
+  .catch(err => {
+    console.log('err', err)
+  })
+});
+
+// app.get('/tracks/:albumID', (req, res, next) => {
+//   const trackSearch = req.params.albumID;
+//   spotifyApi.getAlbumTracks(trackSearch)
+//   .then((data) => {
+//     trackData = data.body.items;
+//     res.render('tracks', { trackData });
+//   })
+//   .catch(err => {
+//     console.log('err', err)
+//   })
+// });
+
 app.listen(3000, () => console.log('Port 3000 running'));
