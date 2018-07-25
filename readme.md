@@ -8,7 +8,7 @@
 
 [Spotify](https://www.spotify.com/us/) is a super cool music streaming service that provides you access to tons of music without ever having to buy an album.
 
-Today, we're going to build an Express app to search spotify for artists, albums, and tracks. In addition, we'll be able to play a preview of some of these songs.
+Today, we're going to build an Express app to search spotify for artists, albums, and tracks. In addition, we'll be able to play a preview of some of these songs.http://mongoosejs.com/docs/populate.html
 
 To see the final product check out the deployed version: https://spotify-lab.herokuapp.com.
 
