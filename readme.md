@@ -42,10 +42,10 @@ To help you with this exercise, we have built some tests to make sure your websi
 
 For this we use **Cypress**, that is like Jasmine but with more features and able to tests websites made with Node.js for example.
 
-To be able to do the test, you will need to go into the folder `starter_code_cypress` and do the following commands:
+To be able to do the test, you will need to go into the folder `starter_code_cypress` and do the next commands. Don't panic if it takes many minutes, Cypress installation is long only the first time.
 
 ```sh
-# The first time to initial your project
+# The first time to initial your project, it will take few minutes
 $ cd starter_code_cypress
 $ npm install
 
@@ -58,12 +58,11 @@ $ cd starter_code_cypress
 $ npm test
 ```
 
-![Imgur](https://i.imgur.com/K9eu0gG.png)
+![Imgur](https://i.imgur.com/QpjCyOt.png)
 
 Then you need to click on the button "*Run all specs*". Then you should see a Chrome instance launching that navigates on different pages and assess some tests. At the beginning, you should only have 2 tests that pass. If you just have 1 test, it probably means that your server in not working and http://localhost:3000 is not available.
 
-![Imgur](https://i.imgur.com/QNf6joy.png)
-
+![Imgur](https://i.imgur.com/VyhZPcG.png)
 
 ## Iteration 1 | Spotify API Setup
 
