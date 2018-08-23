@@ -1,6 +1,6 @@
 
 describe('Check Server', function() {
-  it('Does not do much!', function() {
+  it('Test always true!', function() {
     expect(true).to.equal(true)
   })
   it('Check if http://localhost:3000/ is working', function() {

@@ -36,13 +36,43 @@ The **Spotify** API ask for a `clientId` and `clientSecret` in order to have per
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8859d022ca1d53adc9f9ec829ec3d17b.png)
 
+## Test with Cypress (for Berlin)
+
+To help you with this exercise, we have built some tests to make sure your website is working correctly.
+
+For this we use **Cypress**, that is like Jasmine but with more features and able to tests websites made with Node.js for example.
+
+To be able to do the test, you will need to go into the folder `starter_code_cypress` and do the following commands:
+
+```sh
+# The first time to initial your project
+$ cd starter_code_cypress
+$ npm install
+
+# In a first terminal, launch your server on port 3000
+$ cd starter_code_cypress
+$ npm start 
+
+# In a second terminal, launch the Cypress tests
+$ cd starter_code_cypress
+$ npm test
+```
+
+![Imgur](https://i.imgur.com/K9eu0gG.png)
+
+Then you need to click on the button "*Run all specs*". Then you should see a Chrome instance launching that navigates on different pages and assess some tests. At the beginning, you should only have 2 tests that pass. If you just have 1 test, it probably means that your server in not working and http://localhost:3000 is not available.
+
+![Imgur](https://i.imgur.com/QNf6joy.png)
+
+
 ## Iteration 1 | Spotify API Setup
 
 As always `fork` this repo, and clone it.
 
 Then, inside the `starter_code` folder, create a new folder, and set up your package.json. Use the following commands:
 
-```
+```sh
+# Everything is already done in "starter_code_cypress"
 $ mkdir express-spotify-app && cd express-spotify-app
 $ npm init
 $ npm install --save spotify-web-api-node prettyjson
@@ -52,13 +82,13 @@ $ touch app.js
 Inside the `app.js` file, copy/paste the following code:
 
 ```javascript
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste here your credentials
-var clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+const clientId = '1c30624cba6742dcb792991caecae571', // TO CHANGE
+    clientSecret = '746977b1e77240faa9d0d2411c3e0efe'; // TO CHANGE 
 
-var spotifyApi = new SpotifyWebApi({
+const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
 });
@@ -95,7 +125,8 @@ Your directory should look like this once you're done:
 
 We will need some npm packages for this project, so let´s install them:
 
-```
+```sh
+# Everything is already done in "starter_code_cypress"
 $ npm install --save body-parser hbs express morgan
 ```
 
@@ -111,15 +142,14 @@ After the installation, you should have a package.json like this:
   }
 ```
 
-:::info
 Don't worry if is not exactly the same! Specially on versions! And don't forget to **require** all this packages on your `app.js` file:
 
 ```javascript
+// Everything is already done in "starter_code_cypress"
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
 ```
-:::
 
 
 ## Iteration 3 | Search for an Artist
