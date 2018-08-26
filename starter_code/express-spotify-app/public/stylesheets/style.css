@@ -102,3 +102,37 @@
     align-items: center;
     margin: 3% 0;
 }
+
+.tracks-header {
+    height: 10vh;
+    background-color: rgb(74, 74, 74);
+    display: flex;
+    align-items: center;
+    margin-bottom: 1%;
+}
+
+.title-wrapper {
+    margin-left: 2%;
+}
+
+.listen-wrapper {
+    margin-left: 75%;
+}
+
+span {
+    color: #ffffff;
+    font-size: 150%;
+}
+
+.track-card {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    margin-bottom: 1%;
+    background-color: rgb(241, 243, 244);
+    padding-left: 2%;
+}
+
+.track-name {
+    width: 80%;
+}
