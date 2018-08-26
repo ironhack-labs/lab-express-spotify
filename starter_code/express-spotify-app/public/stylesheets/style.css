@@ -1,0 +1,104 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-wrapper {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/festival.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-wrapper {
+    width: 40%;
+    height: 25%;
+    background-color: rgba(255, 250, 250, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.input-txt {
+    width: 200px;
+    height: 30px;
+    border-radius: 5px;
+    outline: none;
+    box-shadow: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10%;
+}
+
+.submit-btn {
+    background: rgb(248, 105, 102);
+    color: white;
+    border-color: rgb(248, 105, 102);
+    height: 30px;
+    width: 120px;
+}
+
+.artist-wrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    width: 30%;
+    height: auto;
+    margin: 6px;
+    box-shadow: 0 3px 45px -15px rgb(0, 0, 0);
+    background-color: rgb(77, 77, 77);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-img img {
+    width: 100%;
+    height: auto;
+}
+
+.album-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.album-name p {
+    font-size: 150%;
+    color: #ffffff;
+    margin: 3% 0;
+}
+
+.album-name a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.view-btn {
+    width: 90px;
+    height: 30px;
+    background-color: rgb(248, 105, 102);
+    border-radius: 3px;
+    border: 1px solid rgb(74, 34, 33);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3% 0;
+}
