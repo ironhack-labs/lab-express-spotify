@@ -1,0 +1,22 @@
+<h1 class="text-center">{{userQuery}}</h1>
+<div class="container">
+  <div class="row">
+    {{#each albumList}}
+      <div class="col-md-4">
+        <div class="element-card">
+          <div class="img-box">
+            <img class="img-fluid" style="width: 100% !important; height: auto !important;" src="{{images.0.url}}" />
+          </div>
+          <div class="element-caption">
+            <h4 class="text-center">{{name}}</h4>
+            <form action="/tracks/:albumId" class="form-group text-center">
+              <a href="/tracks/{{id}}" class="badge badge-danger" type="submit">View tracks</a>
+            </form>
+          </div>
+
+              {{!-- <button class="btn btn-primary home-search" artistId={{id}} type="submit">Search for an Artist</button> albumId={{id}}--}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

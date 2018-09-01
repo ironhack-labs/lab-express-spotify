@@ -1,0 +1,11 @@
+<div class="element-card">
+  <div class="img-box d-flex justify-content-center">
+    <img class="img-fluid" style="width: 300px !important; height: 300px !important;" src="{{images.0.url}}" />
+  </div>
+  <h4 class="element-caption text-center">{{name}}</h4>
+  <form action="/albums/:artistId" class="form-group home-form">
+      <a href="/albums/{{id}}" class="badge badge-primary" name="artistId" value="{{id}}" type="submit">View albums</a>
+  </form>
+
+      {{!-- <button class="btn btn-primary home-search" artistId={{id}} type="submit">Search for an Artist</button> --}}
+</div>

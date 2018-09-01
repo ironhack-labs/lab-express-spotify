@@ -1,0 +1,47 @@
+.home-heading {
+  background-image: url(/images/home-heading.jpg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+/* Element card */
+.element-card {
+  
+}
+.element-caption {
+  background-color: grey;
+}
+
+/* Track items */
+
+.header-row {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+}
+.track-item {
+  background-color: #F6F6F6;
+  margin-bottom: 2px;
+  padding: 10px 0;
+}
