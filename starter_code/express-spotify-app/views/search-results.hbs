@@ -1,0 +1,11 @@
+{{!-- Display the name, an image, and a button to show the albums for a particular artist on a new view. --}}
+<p>You searched for {{artist}} </p>
+
+
+<div class="all-artists">
+    {{#each artistList}}
+        <h2>{{this.name}}</h2>
+        <img src="{{this.images.[1].url}}">
+        <button><a href="/albums/:artistId">View More</a></button>
+    {{/each}}
+</div>
