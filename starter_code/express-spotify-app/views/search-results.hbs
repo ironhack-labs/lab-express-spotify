@@ -1,0 +1,13 @@
+<h2>Search Results</h2>
+
+<ul class="artist-list">
+    {{#each artistArray}}
+        <li>
+            <img src="{{this.images.[1].url}}">
+            <h3>{{this.name}}</h3>
+            <a href="/albums/{{this._id}}">View albums</a>
+        </li>
+        
+    {{/each}}
+</ul>
+
