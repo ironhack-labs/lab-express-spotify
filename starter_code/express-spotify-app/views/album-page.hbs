@@ -1,1 +1,12 @@
-<h2>Album Page</h2>
+<h2>Albums For: {{albumArray.[0].artists.[0].name}}</h2>
+
+<ul class="artist-list">
+    {{#each albumArray}}
+        <li>
+            <img src="{{this.images.[1].url}}">
+            <h3>{{this.name}}</h3>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </li>
+        
+    {{/each}}
+</ul>

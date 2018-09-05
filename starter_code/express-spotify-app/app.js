@@ -58,12 +58,25 @@ app.get('/albums/:artistId', (req, res, next) => {
 
     spotifyApi.getArtistAlbums(artistId)
     .then(spotifyDoc => {
-      // send the database result (1) to the template as "bookItem"
-      res.locals.spotifyItem = spotifyDoc.body.items;
-      res.render("album-page.hbs");
+        // res.send(spotifyDoc);
+        res.locals.albumArray = spotifyDoc.body.items
+        res.render("album-page.hbs");
     })
     .catch(err => next(err));
   });
+
+
+app.get('/tracks/:trackId', (req, res, next) => {
+    const { trackId } = req.params;
+
+    spotifyApi.getAlbumTracks(trackId)
+    .then(data => {
+        // res.send(data);
+        res.locals.tracksArray = data.body.items
+        res.render("tracks-page.hbs");
+    }) 
+    .catch(err => next(err));
+});
 
 
 

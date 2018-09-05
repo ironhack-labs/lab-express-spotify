@@ -1,0 +1,12 @@
+<h2>Track Page</h2>
+
+<ul class="track-list">
+    {{#each tracksArray}}
+        <li>
+            <h3>{{this.name}}</h3>
+            {{!-- <audio src="{{this.preview_url}}"></audio> --}}
+            <audio controls="" name="media"><source src="{{preview_url}}" type="audio/mpeg"></audio>
+        </li>
+        
+    {{/each}}
+</ul>
