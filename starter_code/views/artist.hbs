@@ -1,0 +1,14 @@
+<h1 class="artist-name">Welcome to {{thisArtist.name}}'s page</h1>
+
+<img class="random-image" src="{{thisImage}}" alt="random beer">
+
+
+<p>Popularity: {{thisArtist.popularity}}</p>
+
+<strong>Genres:</strong>
+
+  {{#each thisArtist.genres}}
+        <li>{{this}}</li>
+  {{/each}}
+
+  <a href="/albums/{{thisArtist.id}}"" class="btn btn1">View Albums</a>
