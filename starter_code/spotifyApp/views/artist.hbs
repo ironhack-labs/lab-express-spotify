@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/styles.css">
+  <title></title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<div class="card mb-3 text-center hoverable">
+  <div class="card-body">
+    <!--Grid row-->
+    <div class="row">
+
+      <!--Grid column-->
+      <div class="col-md-4 offset-md-1 mx-3 my-3">
+        <!--Featured image-->
+        <div class="view overlay">
+          <img src="{{image}}" class="img-fluid" alt="Sample image for first version of blog listing">
+          <a>
+                        <div class="mask rgba-white-slight"></div>
+                    </a>
+        </div>
+      </div>
+
+      <div class="col-md-7 text-left ml-3 mt-3">
+        <!--Excerpt-->
+        <a href="" class="green-text">
+                    <h6 class="font-bold pb-1"><i class="fa fa-desktop"></i> Artist Info</h6>
+                </a>
+        <h4 class="mb-4"><strong>{{artistInfo}}</strong></h4>
+
+        <!-- <p>by <a><strong>Carine Fox</strong></a>, 19/08/2016</p> -->
+        <form class="form-inline md-form mr-auto mb-4 searchButton " action="/albums/{{artistId}}" method="get">
+          <label for="artistId"></label>
+          <input type="hidden" id="artistId"  class="form-control mr-sm-2"  type="text" aria-label="Search" name="">
+          <button class="btn btn-success "  type="submit" >View Albums</button>
+
+        </form>
+      </div>
+      <!--Grid column-->
+    </div>
+    <!--Grid row-->
+  </div>
+</div>

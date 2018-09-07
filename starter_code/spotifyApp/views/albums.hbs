@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title></title>
+</head>
+
+<body>
+
+  <h1>welcome to albums</h1>
+
+  <div class="card myCard">
+
+    <!-- Card image -->
+    <div class="view overlay">
+      <!-- Title -->{{#each albums}}
+        <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
+        <a>
+      <div class="mask rgba-white-slight"></div>
+    </a>
+    </div>
+
+    <!-- Card content -->
+    <div class="card-body elegant-color white-text rounded-bottom">
+
+      <!-- Social shares button -->
+      <a class="activator waves-effect mr-4"><i class="fa fa-share-alt white-text"></i></a>
+
+
+      <h4 class="card-title">{{this.name}}</h4>
+      <a href="#!" class="white-text d-flex justify-content-end"><h5>Play Tracks <i class="fa fa-angle-double-right"></i></h5></a>
+
+      <form class="form-inline md-form mr-auto mb-4 searchButton " action="/tracks/{{this.id}}" method="get">
+        <label for="artistId"></label>
+        <input type="hidden" id="artistId"  class="form-control mr-sm-2"  type="text" aria-label="Search" name="">
+        <button class="btn btn-success "  type="submit" >View Albums</button>
+
+      </form>
+      <hr class="hr-light">
+
+
+      {{/each}}
+    </div>
+
+  </div>
+  {{#each albums}}
+    {{this.image}}
+
+  {{/each}}
+
+</body>
+
+</html>
