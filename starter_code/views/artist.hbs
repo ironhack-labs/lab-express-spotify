@@ -1,14 +1,19 @@
-<h1 class="artist-name">Welcome to {{thisArtist.name}}'s page</h1>
+ <div class="row justify-content-md-center">
+  <div class="col-9">
 
-<img class="random-image" src="{{thisImage}}" alt="random beer">
+    <h1 class="heading">Welcome to {{thisArtist.name}}'s page</h1>
+
+    <img class="imag" src="{{thisImage}}" alt="random beer">
 
 
-<p>Popularity: {{thisArtist.popularity}}</p>
+    <p>Popularity: {{thisArtist.popularity}}</p>
 
-<strong>Genres:</strong>
+    <strong>Genres:</strong>
 
-  {{#each thisArtist.genres}}
-        <li>{{this}}</li>
-  {{/each}}
+      {{#each thisArtist.genres}}
+            <li>{{this}}</li>
+      {{/each}}
 
-  <a href="/albums/{{thisArtist.id}}"" class="btn btn1">View Albums</a>
+      <a href="/albums/{{thisArtist.id}}" class="btn btn1">View Albums</a>
+  </div>
+ </div>

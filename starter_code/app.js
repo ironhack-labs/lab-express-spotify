@@ -8,6 +8,8 @@ app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 
+hbs.registerPartials(__dirname + '/views/partials')
+
 const bodyParser = require('body-parser');
 app.use(bodyParser.urlencoded({ extended: true }));
 
@@ -35,12 +37,6 @@ app.get('/', (req, res, next)=>{
     console.log(req.body)
 })
 
-// app.post('/artist', (req, res, next) => {
-//   console.log('post successful ___ !!!!!!__________')
-//   console.log(req.body.theArtist)
-//   const thisArtist = req.body.theArtist;
-//   res.render('artist', {rtst: thisArtist});
-// });
 
 app.post('/artist', (req, res, next) => {
   console.log('post successful ___ !!!!!!__________')
