@@ -1,0 +1,12 @@
+
+<div class="col-lg-4 album-container">
+    {{#if this.images.0.url }}
+    <img src={{this.images.0.url}} alt="Album_image" class="album-img">
+    {{else}}
+    <img src="https://pp.userapi.com/c636725/v636725590/6b6ce/Le4wE_eUxsU.jpg" alt="Album_image" class="album-img">
+    {{/if}}
+    <div class="album-info-container">
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+</div>

@@ -1,0 +1,125 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-size: 14px;
+    line-height: 1.42857143;
+    color: #333;
+    background-color: #fff;
+}
+
+.wrapper {
+    background-image: url("../images/home-heading.jpg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-block {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+
+.btn-search {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+}
+
+.artist-container, .album-container {
+    padding: 10px 40px;
+}
+
+@media (max-width:1200px) {
+    .artist-container,
+    .album-container {
+        width: 100%;
+    }
+
+}
+
+.artist-img, .album-img {
+    width: 100%;
+}
+
+.artist-info-container, .album-info-container {
+    background-color: #4D4D4D;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.artist-info-container p, .album-info-container p{
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+    text-shadow: 0 0 1px black;
+}
+
+
+.artist-info-container a, .album-info-container a {
+    color: #fff;
+    font-size: 12px;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.album-info-container a {
+    color: #fff;
+    font-size: 12px;
+    background-color: deepskyblue;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.artists-wrapper, .album-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.track-item {
+    background-color: #F6F6F6;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
+
+.track-item p {
+    margin-bottom: 0;
+}
+
+.header-row {
+    background-color: #4A4A4A;
+    padding: 20px 10px;
+    color: #F6F6F6;
+    font-size: 20px;
+}
+
+
