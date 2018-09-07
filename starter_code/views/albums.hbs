@@ -1,0 +1,12 @@
+<div class="container">
+
+  <h1 class="heading">List of albums</h1>
+
+  <div class="row">
+
+    {{#each theAlbums}}
+      {{> _albumPartial this}}
+    {{/each}}
+
+  </div>
+</div>
