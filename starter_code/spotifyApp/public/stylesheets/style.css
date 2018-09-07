@@ -1,0 +1,15 @@
+body{
+  /* background-color: red */
+}
+
+.searchButton{
+  display: flex;
+  justify-content: center;
+}
+
+.myCard{
+  width: 50%;
+    display: flex;
+    justify-content: flex-end;
+    margin: 0 auto;
+}

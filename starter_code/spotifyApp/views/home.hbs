@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy" crossorigin="anonymous">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body>
+  <div class="row">
+    <div class="col-md-12">
+      <div class="card card-image" style="background-image: url(https://mdbootstrap.com/img/Photos/Others/gradient1.jpg);">
+        <div class="text-white text-center py-5 px-4 my-5">
+          <div>
+            <h1 class="card-title pt-3 mb-5 font-bold"><strong>Search for your Favorite Song, Artist, Album.</strong></h1>
+
+            <form class="form-inline md-form mr-auto mb-4 searchButton " action="/artist" method="post">
+              <label for="artistInput"></label>
+              <input id="artistInput" class="form-control mr-sm-2" placeholder="The Beatles..." type="text" placeholder="Search" aria-label="Search" name="newArtist">
+              <button class="btn btn-success "  type="submit" >Search</button>
+
+            </form>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+
+</html>
