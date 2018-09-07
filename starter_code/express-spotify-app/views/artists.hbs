@@ -1,0 +1,24 @@
+<h1>Artists!</h1>
+
+{{#each items}}
+
+<h2>{{name}}</h2>
+
+
+  {{#each images}}
+
+  {{#if @first}}
+<div>
+  <img src={{url}} class="img-fluid">
+</div>
+{{/if}}
+{{/each}}
+<div>
+  <a href="/albums/{{id}}"><button>View More</button></a>
+
+</div>
+
+{{id}}
+
+
+{{/each}}
