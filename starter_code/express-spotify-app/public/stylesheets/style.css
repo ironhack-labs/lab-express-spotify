@@ -113,13 +113,32 @@ body {
 
 .track-item p {
     margin-bottom: 0;
+    color: white;
+    background: deepskyblue;
+    text-transform: uppercase;
+    width: 350px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    letter-spacing: 10px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 10px;
+    padding: 10px;
 }
 
-.header-row {
+.tracks-row {
     background-color: #4A4A4A;
     padding: 20px 10px;
-    color: #F6F6F6;
+    color: deepskyblue;
     font-size: 20px;
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    text-shadow: 0 0 1px black;
+    font-weight: bold;
 }
+
 
 

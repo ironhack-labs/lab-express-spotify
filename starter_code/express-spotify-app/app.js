@@ -3,9 +3,20 @@ const hbs = require('hbs');
 const bodyParser = require('body-parser');
 const morgan = require('morgan');
 const path = require("path");
+const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
-app.use(morgan('combined'))
+// use logger
+app.use(morgan('combined'));
+
+// Remember to paste here your credentials
+var clientId = '0904ba7af5ea4a3cbae5c130a8fff88c',
+    clientSecret = '0ab00dd676ae43a59a4069c8779f5d94';
+
+var spotifyApi = new SpotifyWebApi({
+    clientId : clientId,
+    clientSecret : clientSecret
+});
 
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }));
@@ -17,18 +28,7 @@ app.set("view engine", "hbs");
 app.set("views", path.join(__dirname, "views"));
 app.use(express.static(path.join(__dirname,"public")));
 
-hbs.registerPartials(__dirname + '/views/partials');
-
-var SpotifyWebApi = require('spotify-web-api-node');
-
-// Remember to paste here your credentials
-var clientId = '0904ba7af5ea4a3cbae5c130a8fff88c',
-    clientSecret = '0ab00dd676ae43a59a4069c8779f5d94';
-
-var spotifyApi = new SpotifyWebApi({
-    clientId : clientId,
-    clientSecret : clientSecret
-});
+hbs.registerPartials(path.join(__dirname,"views","partials"));
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
