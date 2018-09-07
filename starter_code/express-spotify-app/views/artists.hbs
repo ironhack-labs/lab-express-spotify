@@ -1,0 +1,21 @@
+Hello there I'm an artist
+
+{{search.artists}}
+
+<button><a href="/">Go back hommie</a></button>
+
+
+<div class="get-the-images"> 
+
+{{#each search}}
+
+
+{{#if this.images.0.url}}
+<img style="height: 250px;" src="{{this.images.0.url}}">
+{{/if}}
+<div class="main-album" style="background-color:gray; padding:0px; width: 250px;">
+<p>{{this.name}}</p>
+<button style="background-color: red;"><a href="/albums" style="text-decoration:none; background-color: red; color: white;">Views Albums</a></button>
+</div>
+{{/each}}
+</div>
