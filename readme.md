@@ -91,7 +91,7 @@ Your directory should look like this once you're done:
 │   └── public/stylesheets
 │       └── public/stylesheets/style.css
 └── views
-    ├── views/layouts
+    ├── views/layout
 ```
 
 We will need some npm packages for this project, so let´s install them:
