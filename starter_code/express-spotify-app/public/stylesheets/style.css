@@ -310,7 +310,8 @@ h1 {
 .container {
   height: 100vh;
   width: 90%;
-  margin: 0 auto; }
+  margin: 0 auto;
+  text-align: center; }
 
 .container-home {
   width: 100%;
@@ -363,7 +364,8 @@ h1 {
     border: 1px solid black;
     background-color: #4D4D4D;
     text-align: center;
-    margin: 15px; }
+    margin: 15px;
+    display: inline-table; }
     .container-cards .card-wrap .card-name {
       margin-top: 0;
       margin-bottom: 0;

@@ -2,6 +2,7 @@
 	height: 100vh;
 	width: 90%;
 	margin: 0 auto;
+	text-align: center;
 }
 
 .container-home {
@@ -60,6 +61,7 @@
 		background-color: $dark-gray;
 		text-align: center;
 		margin: 15px;
+		display: inline-table;
 
 		.card-name {
 			margin-top: 0;

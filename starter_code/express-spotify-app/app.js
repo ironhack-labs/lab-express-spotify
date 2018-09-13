@@ -39,7 +39,7 @@ app.get('/artists', (req, res, next) => {
 		.then(data => {
 			const artists = data.body.artists.items;
 			//console.log(artists);
-			res.render('artists', {artists});
+			res.render('artists', {artists, title: name});
 		})
 		.catch(err => {
 			console.log('Error', err);
@@ -51,7 +51,7 @@ app.get('/albums/:artistId', (req, res) => {
 	spotifyApi.getArtistAlbums(artistId)
 		.then(data => {
 			const albums = data.body.items;
-			res.render('albums', {albums});
+			res.render('albums', {albums, title: name});
 		})
 });
 
