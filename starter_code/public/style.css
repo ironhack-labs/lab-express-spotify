@@ -1,0 +1,31 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background-image: url("../images/music-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.home-form {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.button {
+  margin-top: 10px;
+  margin-top: 4%;
+  width: 35%;
+}
