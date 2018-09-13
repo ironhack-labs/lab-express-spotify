@@ -1,0 +1,39 @@
+body {
+  background-image: url("https://www.rammstein.de/wp-content/uploads/2017/07/Rammstein-Nimes-13.07.2017_327.jpeg");
+ background-color: black;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  color:white;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.color-border {
+  border: 3px solid grey;
+  padding: 5px;
+  border-radius: 10px;
+  background-color:rgba(192,192,192,0.6);
+}
+
+.margin-body{
+  padding-top: 300px;
+  display: flex;
+  align-content: center;
+  justify-content: space-between;
+  margin-left: 240px;
+}
+
+.margin-body button {
+  margin-top: 30px;
+  padding-left: 100px;
+  padding-right: 100px;
+}
+
+.margin-top {
+  margin-top: 100px;
+}
+
+.form-width{
+  width: 600px;
+  text-align: center;
+}

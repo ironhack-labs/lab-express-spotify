@@ -1,0 +1,19 @@
+ <div class="row margin-top color-border">
+{{#each tracks}}
+ <div class="col-md-4">
+    <div class="element-card">
+       <div class="element-caption text-center">
+<p>
+  <label for="{{name}}">
+    {{name}}
+  </label>
+  <br/>
+  <audio controls src="{{preview_url}}">
+    Your browser does not support the <code>audio</code> element.
+  </audio>
+</p>
+</div>
+</div>
+</div>
+{{/each}}
+</div>
