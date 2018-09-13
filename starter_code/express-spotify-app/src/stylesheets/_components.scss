@@ -1,38 +1,40 @@
 .container {
 	height: 100vh;
-	
+	width: 90%;
+	margin: 0 auto;
 }
 
 .container-home {
 	width: 100%;
 	position: relative;
 	background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
-    background-size: 100% 100%;
+	background-size: 100% 100%;
 	background-repeat: no-repeat;
 }
 
-.container-artists {
-	width: 90%;
-	display: flex;
-	justify-content: center;
-	flex-wrap: wrap;
-	margin: 0 auto;
+.btn {
+	color: $color-white;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: $light-red;
+	border: 1px solid $dark-red;
 }
 
 .form-wrap {
 	width: 50%;
-    height: 220px;
+	height: 220px;
 	@include centerer(true, true);
 	background-color: rgba(255, 255, 255, 0.6);
-
 }
 
 .form-home {
-    width: 60%;
+	width: 60%;
 	text-align: center;
 	@include centerer(true, true);
 
-	input[type='search']{
+	input[type='search'] {
 		display: block;
 		width: 100%;
 		padding: 15px;
@@ -41,33 +43,45 @@
 		position: relative;
 	}
 
-	input[type='submit']{
-		background-color: $light-red;
-		border: 1px solid $dark-red;
-		color: $color-white;
+	input[type='submit'] {
 		padding: 15px;
-		cursor: pointer;
 	}
 }
 
 .container-artists {
-	width: 100%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+
 	.artist-card {
 		width: 100%;
 		border: 1px solid black;
 		background-color: $dark-gray;
 		text-align: center;
+		margin: 15px;
+
 		h3 {
 			margin-top: 0;
 			margin-bottom: 0;
-			padding: 15px 10px;
+			padding: 10px;
 			color: $color-white;
 		}
 	}
+
 	.artist-image img {
 		max-width: 100%;
 		height: auto;
 		display: block;
+	}
+
+	.artist-btn {
+		padding: 6px 10px;
+		border-radius: 5px;
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 14px;
+		text-decoration: none;
 	}
 }
 

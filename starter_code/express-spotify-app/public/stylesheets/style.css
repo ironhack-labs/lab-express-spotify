@@ -308,7 +308,9 @@ h1 {
   color: #222326; }
 
 .container {
-  height: 100vh; }
+  height: 100vh;
+  width: 90%;
+  margin: 0 auto; }
 
 .container-home {
   width: 100%;
@@ -317,12 +319,13 @@ h1 {
   background-size: 100% 100%;
   background-repeat: no-repeat; }
 
-.container-artists {
-  width: 90%;
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin: 0 auto; }
+.btn {
+  color: #ffffff;
+  cursor: pointer; }
+
+.btn-primary {
+  background-color: #ff6666;
+  border: 1px solid #ff6666; }
 
 .form-wrap {
   width: 50%;
@@ -348,28 +351,35 @@ h1 {
     box-sizing: border-box;
     position: relative; }
   .form-home input[type='submit'] {
-    background-color: #ff6666;
-    border: 1px solid #ff6666;
-    color: #ffffff;
-    padding: 15px;
-    cursor: pointer; }
+    padding: 15px; }
 
 .container-artists {
-  width: 100%; }
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto; }
   .container-artists .artist-card {
     width: 100%;
     border: 1px solid black;
     background-color: #4D4D4D;
-    text-align: center; }
+    text-align: center;
+    margin: 15px; }
     .container-artists .artist-card h3 {
       margin-top: 0;
       margin-bottom: 0;
-      padding: 15px 10px;
+      padding: 10px;
       color: #ffffff; }
   .container-artists .artist-image img {
     max-width: 100%;
     height: auto;
     display: block; }
+  .container-artists .artist-btn {
+    padding: 6px 10px;
+    border-radius: 5px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    text-decoration: none; }
 
 /* =================================== */
 /* =================================== */
