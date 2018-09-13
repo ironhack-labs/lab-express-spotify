@@ -35,11 +35,18 @@ app.get ('/artists', (req, res) => {
   let artists = req.query.artist;
   spotifyApi.searchArtists(artists)
     .then(data => {
-  
       res.render('artists', {artists, data})
     })
     .catch(err => console.error(err));
 });
+
+app.get('/albums/:artistId', (req, res) => {
+  let artID = req.params.artistId;
+  spotifyApi.getArtistAlbums(artID)
+  .then(data => {
+    res.render('albums', {artID, data})
+  })
+})
 
 
 app.listen(3000, () => console.log('Example app listening on port 3000!')); 
