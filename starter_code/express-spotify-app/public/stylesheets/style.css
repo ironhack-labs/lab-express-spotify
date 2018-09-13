@@ -1,0 +1,36 @@
+.index-container {
+background-image: url("/images/fest-pic.jpg");
+background-size: cover;
+height: 100vh;
+}
+
+.index-search {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.index-input {
+    margin: 40px;
+}
+
+.container img {
+    height: 250px;
+}
+
+.artist-info {
+    height: 75px;
+    background-color: rgb(52, 52, 52);
+}
+
+.artist-info p {
+    color: white;
+}
