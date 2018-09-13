@@ -1,0 +1,13 @@
+<section class="container-tracks">
+	<header class="tracks-header">
+		<div><h2>Title</h2></div>
+		<div><h2>Listen</h2></div>
+	</header>
+	<div class="tracks-wrap">
+		<ul>
+		{{#each tracks}}
+			{{> trackPartial this}}
+		{{/each}}
+		</ul>
+	</div>
+</section>

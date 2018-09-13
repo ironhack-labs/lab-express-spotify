@@ -1,0 +1,150 @@
+.container {
+	height: 100vh;
+	width: 90%;
+	margin: 0 auto;
+	text-align: center;
+}
+
+.container-home {
+	width: 100%;
+	position: relative;
+	background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+}
+
+.btn {
+	color: $color-white;
+	cursor: pointer;
+}
+
+.btn-primary {
+	background-color: $light-red;
+	border: 1px solid $dark-red;
+}
+
+.form-wrap {
+	width: 50%;
+	height: 220px;
+	@include centerer(true, true);
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.form-home {
+	width: 60%;
+	text-align: center;
+	@include centerer(true, true);
+
+	input[type='search'] {
+		display: block;
+		width: 100%;
+		padding: 15px;
+		margin-bottom: 15px;
+		box-sizing: border-box;
+		position: relative;
+	}
+
+	input[type='submit'] {
+		padding: 15px;
+	}
+}
+
+.container-cards {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
+
+	.card-wrap {
+		width: 100%;
+		border: 1px solid black;
+		background-color: $dark-gray;
+		text-align: center;
+		margin: 15px;
+		display: inline-table;
+
+		.card-name {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 10px;
+			color: $color-white;
+		}
+	}
+
+	.card-image img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+
+	.card-btn {
+		padding: 6px 10px;
+		border-radius: 5px;
+		display: inline-block;
+		margin-bottom: 10px;
+		font-size: 14px;
+		text-decoration: none;
+	}
+}
+
+.container-tracks {
+	.tracks-header {
+		background-color: $dark-gray;
+		color: $color-white;
+		overflow: hidden;
+		> div {
+			float: left;
+			padding-left: 30px;
+			box-sizing: border-box;
+		}
+		div:nth-child(1){
+			width: 70%;
+			text-align: left;
+		}
+		div:nth-child(2){
+			width: 30%;
+			text-align: center;
+		}
+	}
+	ul{
+		padding-left: 0;
+		margin: 0;
+	}
+	.track-item {
+		font-weight: 600;
+		background-color: $light-gray;
+		display: block;
+		margin-bottom: 3px;
+		display: flex;
+		padding: 5px 30px;
+		justify-content: space-between;
+	}
+}
+
+
+/* =================================== */
+// MEDIA QUERIES
+/* =================================== */
+@media screen and (min-width: 768px) {
+	.container-cards {
+		.card-wrap {
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (min-width: 481px) {
+	.container-cards {
+		.card-wrap {
+			width: 33.3333%;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.container-cards {
+		.card-wrap {
+			width: 25%;
+		}
+	}
+}

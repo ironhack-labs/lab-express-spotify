@@ -1,0 +1,13 @@
+<figure class="card-wrap">
+	<div class="card-image">
+		{{#if images.[0].url}}
+			<img src="{{images.[0].url}}" alt="">
+		{{else}}
+			<img src="images/placeholder-img.png" alt="Image cover">
+		{{/if}}
+	</div>
+	<figcaption class="figcaption">
+		<h3 class="card-name">{{name}}</h3>
+		<a class="btn btn-primary card-btn" href="/tracks/{{id}}" role="button">View Track</a>
+	</figcaption>
+</figure>
