@@ -1,0 +1,12 @@
+<section id="artists">
+  {{#if length}}
+    <h1>{{query}}</h1>
+    <ul>
+    {{#each artist}}
+      {{>artist this}}
+    {{/each}}
+    </ul>
+  {{else}}
+  <h1>Artist {{query}} not found</h1>
+  {{/if}}
+</section>

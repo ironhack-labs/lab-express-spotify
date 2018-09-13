@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e hbs,js app.js"
   },
   "author": "",
   "license": "ISC",
@@ -13,7 +14,11 @@
     "express": "^4.16.3",
     "hbs": "^4.0.1",
     "morgan": "^1.9.1",
+    "path": "^0.12.7",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^3.1.1"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.4"
   }
 }
