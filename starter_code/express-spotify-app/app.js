@@ -36,12 +36,34 @@ app.get("/artists", (req, res) => {
       let query = req.query.artist;
       let artist = data.body.artists.items;
       let length = data.body.artists.items.length;
-      console.log(data.body.artists.items.length);
       res.render("artists", { query, artist, length });
     })
     .catch(err => {
       console.log(err);
     });
 });
-
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+      let artist=req.query.name
+      let albums = data.body.items
+      res.render('albums',{albums,artist})
+    })
+    .catch(e => {
+      console.log(e)
+    })
+});
+app.get('/tracks/:albumId', (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      let album = req.query.album
+      let tracks = data.body.items
+      res.render('tracks',{tracks,album})
+    })
+    .catch(e => {
+      console.log(e)
+    })
+});
 app.listen(3000);
