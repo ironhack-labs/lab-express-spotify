@@ -1,0 +1,48 @@
+
+
+.container{
+    padding: 10%;
+    text-align: center;
+}
+#custom-search-input {
+    margin:0;
+    margin-top: 10px;
+    padding: 0;
+}
+ 
+#custom-search-input .search-query {
+    width:100%;
+    padding-right: 3px;
+    padding-left: 15px;
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 0;
+}
+ 
+#custom-search-input button {
+    border: 0;
+    background: none;
+    padding: 2px 5px;
+    margin-top: 2px;
+    position: absolute;
+    right:0;
+    margin-bottom: 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    color:#D9230F;
+    cursor: unset;
+    z-index: 2;
+}
+ 
+.search-query:focus{
+    z-index: 0;   
+}
+
+body {
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

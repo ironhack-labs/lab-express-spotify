@@ -1,0 +1,15 @@
+<div class="row">
+  {{#each tracksObj}}
+  <div class="col-md-4">
+    <p class=" bg-light">
+      <label for="{{name}}">
+        {{name}}
+      </label>
+      <br />
+      <audio controls src="{{preview_url}}">
+        Your browser does not support the <code>audio</code> element.
+      </audio>
+    </p>
+  </div>
+  {{/each}}
+</div>
