@@ -26,23 +26,25 @@ app.set('views', __dirname + '/views');
 app.set('view engine', 'hbs');
 
 app.use(express.static('public'));
+app.use(bodyParser.urlencoded({ extended: true }));
+hbs.registerPartials(__dirname + '/views/partials');
 
 app.get('/', (req, res, next) => {
-	res.render('index', {
-		// title: title.home
-	});
+	res.render('index', {});
 });
 
 app.get('/artists', (req, res, next) => {
-	const request = req.query;
-	console.log(request);
-	spotifyApi.searchArtists(request)
+	const name = req.query.artist;
+
+	spotifyApi.searchArtists(name)
 		.then(data => {
-			// ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-			console.log(data);
+			const artists = data.body.artists.items;
+			console.log(artists);
+			res.render('artists', {artists});
 		})
 		.catch(err => {
-			// ----> 'HERE WE CAPTURE THE ERROR'
+
+			console.log('Error', err);
 		})
 });
 

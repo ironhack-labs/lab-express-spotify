@@ -1,11 +1,22 @@
 .container {
-	width: 100%;
 	height: 100vh;
+	
+}
+
+.container-home {
+	width: 100%;
 	position: relative;
 	background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
     background-size: 100% 100%;
-    background-repeat: no-repeat;
-    
+	background-repeat: no-repeat;
+}
+
+.container-artists {
+	width: 90%;
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin: 0 auto;
 }
 
 .form-wrap {
@@ -28,8 +39,6 @@
 		margin-bottom: 15px;
 		box-sizing: border-box;
 		position: relative;
-
-
 	}
 
 	input[type='submit']{
@@ -38,5 +47,54 @@
 		color: $color-white;
 		padding: 15px;
 		cursor: pointer;
+	}
+}
+
+.container-artists {
+	width: 100%;
+	.artist-card {
+		width: 100%;
+		border: 1px solid black;
+		background-color: $dark-gray;
+		text-align: center;
+		h3 {
+			margin-top: 0;
+			margin-bottom: 0;
+			padding: 15px 10px;
+			color: $color-white;
+		}
+	}
+	.artist-image img {
+		max-width: 100%;
+		height: auto;
+		display: block;
+	}
+}
+
+
+/* =================================== */
+// MEDIA QUERIES
+/* =================================== */
+@media screen and (min-width: 768px) {
+	.container-artists {
+		.artist-card {
+			width: 50%;
+		}
+	}
+}
+
+@media screen and (min-width: 481px) {
+	.container-artists {
+		.artist-card {
+			width: 33.3333%;
+		}
+	}
+}
+
+@media screen and (min-width: 992px) {
+	.container-artists {
+		.artist-card {
+			width: 25%;
+		}
 	}
 }

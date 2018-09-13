@@ -308,12 +308,21 @@ h1 {
   color: #222326; }
 
 .container {
+  height: 100vh; }
+
+.container-home {
   width: 100%;
-  height: 100vh;
   position: relative;
   background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
   background-size: 100% 100%;
   background-repeat: no-repeat; }
+
+.container-artists {
+  width: 90%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 0 auto; }
 
 .form-wrap {
   width: 50%;
@@ -344,5 +353,34 @@ h1 {
     color: #ffffff;
     padding: 15px;
     cursor: pointer; }
+
+.container-artists {
+  width: 100%; }
+  .container-artists .artist-card {
+    width: 100%;
+    border: 1px solid black;
+    background-color: #4D4D4D;
+    text-align: center; }
+    .container-artists .artist-card h3 {
+      margin-top: 0;
+      margin-bottom: 0;
+      padding: 15px 10px;
+      color: #ffffff; }
+  .container-artists .artist-image img {
+    max-width: 100%;
+    height: auto;
+    display: block; }
+
+/* =================================== */
+/* =================================== */
+@media screen and (min-width: 768px) {
+  .container-artists .artist-card {
+    width: 50%; } }
+@media screen and (min-width: 481px) {
+  .container-artists .artist-card {
+    width: 33.3333%; } }
+@media screen and (min-width: 992px) {
+  .container-artists .artist-card {
+    width: 25%; } }
 
 /*# sourceMappingURL=style.css.map */

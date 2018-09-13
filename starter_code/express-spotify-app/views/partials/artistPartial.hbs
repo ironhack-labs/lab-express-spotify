@@ -1,0 +1,13 @@
+<figure class="artist-card">
+	<div class="artist-image">
+		{{#if images.[0].url}}
+			<img src="{{images.[0].url}}" alt="">
+		{{else}}
+			<img src="images/placeholder-img.png" alt="">
+		{{/if}}
+	</div>
+	<figcaption class="figcaption">
+		<h3 class="artist-name">{{name}}</h3>
+		<a class="btn btn-primary" href="" role="button">View Albums</a>
+	</figcaption>
+</figure>
