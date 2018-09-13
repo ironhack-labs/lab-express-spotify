@@ -48,20 +48,20 @@
 	}
 }
 
-.container-artists {
+.container-cards {
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
 	margin: 0 auto;
 
-	.artist-card {
+	.card-wrap {
 		width: 100%;
 		border: 1px solid black;
 		background-color: $dark-gray;
 		text-align: center;
 		margin: 15px;
 
-		h3 {
+		.card-name {
 			margin-top: 0;
 			margin-bottom: 0;
 			padding: 10px;
@@ -69,13 +69,13 @@
 		}
 	}
 
-	.artist-image img {
+	.card-image img {
 		max-width: 100%;
 		height: auto;
 		display: block;
 	}
 
-	.artist-btn {
+	.card-btn {
 		padding: 6px 10px;
 		border-radius: 5px;
 		display: inline-block;
@@ -90,24 +90,24 @@
 // MEDIA QUERIES
 /* =================================== */
 @media screen and (min-width: 768px) {
-	.container-artists {
-		.artist-card {
+	.container-cards {
+		.card-wrap {
 			width: 50%;
 		}
 	}
 }
 
 @media screen and (min-width: 481px) {
-	.container-artists {
-		.artist-card {
+	.container-cards {
+		.card-wrap {
 			width: 33.3333%;
 		}
 	}
 }
 
 @media screen and (min-width: 992px) {
-	.container-artists {
-		.artist-card {
+	.container-cards {
+		.card-wrap {
 			width: 25%;
 		}
 	}

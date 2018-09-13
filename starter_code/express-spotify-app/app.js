@@ -35,16 +35,23 @@ app.get('/', (req, res, next) => {
 
 app.get('/artists', (req, res, next) => {
 	const name = req.query.artist;
-
 	spotifyApi.searchArtists(name)
 		.then(data => {
 			const artists = data.body.artists.items;
-			console.log(artists);
+			//console.log(artists);
 			res.render('artists', {artists});
 		})
 		.catch(err => {
-
 			console.log('Error', err);
+		})
+});
+
+app.get('/albums/:artistId', (req, res) => {
+	const artistId = req.params.artistId;
+	spotifyApi.getArtistAlbums(artistId)
+		.then(data => {
+			const albums = data.body.items;
+			res.render('albums', {albums});
 		})
 });
 
