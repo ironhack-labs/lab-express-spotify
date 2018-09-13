@@ -24,18 +24,51 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/artists', (req, res, next) => {
-  let artist = req.query.artist
-  spotifyApi.searchArtists(artist)
+  let search = req.query.artist
+  spotifyApi.searchArtists(search)
     .then(data => {
-      
-      res.send(data);
-      // res.render('index')
+      let allArtists = new Array;
+      data.body.artists.items.forEach(element => {
+        allArtists.push(element);
+      });
+      res.render('artists', {search, allArtists} )
     })
     .catch(err => {
       console.log(err);
     })
 });
 
+app.get('/albums/:artistId', (req, res, next) => {
+  let artistId = req.params.artistId
+  spotifyApi.getArtistAlbums(artistId)
+  .then(data => {
+    let allAlbums = new Array;
+    data.body.items.forEach(element => {
+        allAlbums.push(element);
+      });
+      // res.send(allAlbums);
+      res.render('albums', {allAlbums} )
+    })
+    .catch(err => {
+      console.log(err);
+    })
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+  let albumId = req.params.albumId
+  spotifyApi.getAlbumTracks(albumId)
+  .then(data => {
+    // res.send(data);
+    let allTracks = new Array;
+    data.body.items.forEach(element => {
+      allTracks.push(element);
+    });
+    res.render('tracks', {allTracks} )
+    })
+    .catch(err => {
+      console.log(err);
+    })
+});
 
 
 
