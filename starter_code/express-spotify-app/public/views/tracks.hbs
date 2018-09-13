@@ -1,0 +1,29 @@
+
+<div class="track-container">
+    <h1>TRACKS </h1>
+    <button class="btn btn-dark"><a href="/">Home</a></button>
+    <table class="table">
+        <thead class="thead-dark thd">
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Listen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each albumTracks}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>
+                    <audio
+                        id="t-rex-roar"
+                        controls
+                        src="{{this.preview_url}}">
+                        Your browser does not support the <code>audio</code> element.
+                    </audio>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+</div>

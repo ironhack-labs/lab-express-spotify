@@ -1,0 +1,71 @@
+body {
+    margin: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+}
+
+.home-container {
+    background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.artist-container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background: #F7F9F9;
+    margin-top: 10px;
+}
+
+.artist {
+    width: 33%;
+}
+
+.artist-title {
+    font-size: 20px;
+    font-weight: bolder;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+.track-container {
+    width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    background: #F7F9F9;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+.track-container .thd {
+    background: #212529;
+    color: white;
+}
+.track-container tr {
+    font-weight: bold;
+}
+img{
+    width: 300px;
+    height: 300px;
+}
+
+a {
+    text-decoration: none;
+}
