@@ -1,0 +1,17 @@
+<div class="container margin-top">
+  <div class="row color-border">
+    {{#each artists}}
+    <div class="col-md-4">
+      <div class="element-card">
+        <div class="img-box">
+          <img class="img-fluid" src="{{this.images.0.url}}">
+        </div>
+        <div class="element-caption text-center">
+          <h4 class="text-center">{{this.name}}</h4>
+          <a class="btn btn-info" href="/albums/{{this.id}}">View Albums</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>  
