@@ -1,0 +1,10 @@
+<body>
+  <main>
+    <h2 class="py-5 mt-5 text-center">Search results for "{{search}}"</h2>
+    <div class="container d-flex flex-wrap justify-content-center">
+      {{#each allArtists}}
+        {{> oneArtist}}
+      {{/each}}
+    </div>
+  </main>
+</body>

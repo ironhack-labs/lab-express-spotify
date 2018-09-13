@@ -1,0 +1,10 @@
+<body>
+  <main>
+    <h2 class="py-5 mt-5 text-center">Track list</h2>
+    <div class="container d-flex flex-wrap justify-content-center">
+      {{#each allTracks}}
+        {{> oneTrack}}
+      {{/each}}
+    </div>
+  </main>
+</body>
