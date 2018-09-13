@@ -1,0 +1,7 @@
+<div class="col-md-4 artist-container d-flex flex-column align-items-center justify-content-center my-3">
+    <img src="{{#if this.images.0.url}}{{this.images.0.url}}{{else}}http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg{{/if}}" class="pic">
+    <div class="artist-info-container d-flex flex-column align-items-center justify-content-center">
+        <p>{{this.name}}</p>
+        <a href="/albums/{{this.id}}" class="btn btn-dark">View Albums</a>
+    </div>
+</div>

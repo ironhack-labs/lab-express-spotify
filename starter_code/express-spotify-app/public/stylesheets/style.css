@@ -12,7 +12,7 @@
     width: 30vw;
 }
 
-.container{
+.wrapper{
     height: 100vh;
 }
 
@@ -20,4 +20,18 @@
     height: 20vh;
     background-color: rgba(255, 255, 255, 0.5);
     width: 40vw;
+}
+
+.pic{
+    width: 20vw;
+    object-fit: contain;
+}
+
+#pic{
+    width: 20vw;
+    object-fit: contain;
+}
+
+.da-igual-lo-que-ponga{
+    height: 10px;
 }
