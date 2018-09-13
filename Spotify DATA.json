@@ -1,0 +1,700 @@
+{
+    "body": {
+        "artists": {
+            "href": "https://api.spotify.com/v1/search?query=mo&type=artist&offset=0&limit=20",
+            "items": [
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0bdfiayQAKewqEvaU6rXCv"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 828611
+                    },
+                    "genres": [
+                        "dance pop",
+                        "danish pop",
+                        "electropop",
+                        "pop",
+                        "tropical house"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/0bdfiayQAKewqEvaU6rXCv",
+                    "id": "0bdfiayQAKewqEvaU6rXCv",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/260dd36489e12be4c48c96caccfd0b81bbed9863",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/44558a8dbbfc22454befc7cd805ef6b07185fbb4",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/86799168a3533d73e1655cde279310bb9ada2b56",
+                            "width": 160
+                        }
+                    ],
+                    "name": "MØ",
+                    "popularity": 78,
+                    "type": "artist",
+                    "uri": "spotify:artist:0bdfiayQAKewqEvaU6rXCv"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5wBDD4FNJvob5fAGkAIQ92"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 80806
+                    },
+                    "genres": [
+                        "hip pop",
+                        "r&b",
+                        "urban contemporary"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/5wBDD4FNJvob5fAGkAIQ92",
+                    "id": "5wBDD4FNJvob5fAGkAIQ92",
+                    "images": [
+                        {
+                            "height": 690,
+                            "url": "https://i.scdn.co/image/f6cfde24e8dde3bc5eb7efa75d2665419dea64e2",
+                            "width": 446
+                        },
+                        {
+                            "height": 309,
+                            "url": "https://i.scdn.co/image/982332f470cb8f27207f1f6c0de2710128276f8c",
+                            "width": 200
+                        },
+                        {
+                            "height": 99,
+                            "url": "https://i.scdn.co/image/6ece7df9e4c3d54ccdb9cd51eeb29ae36fd5cba9",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Lil' Mo",
+                    "popularity": 55,
+                    "type": "artist",
+                    "uri": "spotify:artist:5wBDD4FNJvob5fAGkAIQ92"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6pMR8Zgot664613rAiLC2Z"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 72066
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/6pMR8Zgot664613rAiLC2Z",
+                    "id": "6pMR8Zgot664613rAiLC2Z",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/b689061a3a4332c11bc1f130a7615d60d7e27146",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/62da61443400b5597cfcb579fe4ad53eaa1d07bc",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/bbad9d4969982f42174abcadd88d6c9b850bf007",
+                            "width": 160
+                        }
+                    ],
+                    "name": "AGNEZ MO",
+                    "popularity": 58,
+                    "type": "artist",
+                    "uri": "spotify:artist:6pMR8Zgot664613rAiLC2Z"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/6iDaoPZVgxrTkndDCisX8F"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 110237
+                    },
+                    "genres": [
+                        "blues",
+                        "blues-rock",
+                        "country blues",
+                        "electric blues",
+                        "modern blues",
+                        "piedmont blues",
+                        "traditional blues"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/6iDaoPZVgxrTkndDCisX8F",
+                    "id": "6iDaoPZVgxrTkndDCisX8F",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/faf9e8fe1a53c35d17373ed260b9130ea73f00c4",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/eceb7822d3ddc92fa7deb3e756aa4d186eff70cc",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/f6c82211dc05d1d42a7d96383ca4de052f695627",
+                            "width": 160
+                        }
+                    ],
+                    "name": "Keb' Mo'",
+                    "popularity": 55,
+                    "type": "artist",
+                    "uri": "spotify:artist:6iDaoPZVgxrTkndDCisX8F"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2rv8IrcIQiFKkdvQAgUTZj"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 13295
+                    },
+                    "genres": [
+                        "aussietronica",
+                        "deep australian indie",
+                        "house",
+                        "tropical house"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/2rv8IrcIQiFKkdvQAgUTZj",
+                    "id": "2rv8IrcIQiFKkdvQAgUTZj",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/fadab28bacd06385b7a0b604067b47d57a5c96cb",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/f3642e075c7e417ca98995bad71115e0fee652e1",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/f3c06a1a23160da5179e50314f9f8342ed7b28ce",
+                            "width": 160
+                        }
+                    ],
+                    "name": "Set Mo",
+                    "popularity": 57,
+                    "type": "artist",
+                    "uri": "spotify:artist:2rv8IrcIQiFKkdvQAgUTZj"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/5tavLyYeYhXNb92YKmJFH6"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 0
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/5tavLyYeYhXNb92YKmJFH6",
+                    "id": "5tavLyYeYhXNb92YKmJFH6",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ac892efd3739a41ff0c5792a018b3d5bb4b8a834",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/01fe69496683de6a39eabb4911a35645f21ce37a",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/71c634ecceb590f99870a62c6a6cf96477730c53",
+                            "width": 160
+                        }
+                    ],
+                    "name": "P Mo",
+                    "popularity": 40,
+                    "type": "artist",
+                    "uri": "spotify:artist:5tavLyYeYhXNb92YKmJFH6"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3tuX54dqgS8LsGUvNzgrpP"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 26073
+                    },
+                    "genres": [
+                        "acid jazz",
+                        "electro swing",
+                        "nu jazz",
+                        "trip hop"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/3tuX54dqgS8LsGUvNzgrpP",
+                    "id": "3tuX54dqgS8LsGUvNzgrpP",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/5fb4a64d44dfb4c62a83ec0fe8b45b0051b65967",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/69dd1ce1d4a342610f9672e82973a725e0475aa4",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/07d04a94a62e904d30fff594a6855cad69601ee1",
+                            "width": 160
+                        }
+                    ],
+                    "name": "Mo' Horizons",
+                    "popularity": 54,
+                    "type": "artist",
+                    "uri": "spotify:artist:3tuX54dqgS8LsGUvNzgrpP"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3P3iJ6AlAdlb4tYAu00Fhk"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 10352
+                    },
+                    "genres": [
+                        "deep new americana"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/3P3iJ6AlAdlb4tYAu00Fhk",
+                    "id": "3P3iJ6AlAdlb4tYAu00Fhk",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/56866eb5364df5a3b41b781ac98c7c58979fdb3c",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/1dfe9c5eede4dd9b11c3a0b7b662f71f3487b219",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/82598f007ae7f92f6d564942b5aae82992a92095",
+                            "width": 160
+                        }
+                    ],
+                    "name": "Mo Lowda & the Humble",
+                    "popularity": 42,
+                    "type": "artist",
+                    "uri": "spotify:artist:3P3iJ6AlAdlb4tYAu00Fhk"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/3ZH0dwynYrmairMfgDDw0A"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 1833
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/3ZH0dwynYrmairMfgDDw0A",
+                    "id": "3ZH0dwynYrmairMfgDDw0A",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/b7c3c643de9556dad60bb93f4096c2541de23ffb",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/9cfe00340cab8fefa13d409e2db542f85950ed5d",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/255602a3ab0b9ed2629e39867b993cac9f63dbf4",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Kool Mo Dee",
+                    "popularity": 47,
+                    "type": "artist",
+                    "uri": "spotify:artist:3ZH0dwynYrmairMfgDDw0A"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/4KTbMDozhAqNFnScnvODwA"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 1
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/4KTbMDozhAqNFnScnvODwA",
+                    "id": "4KTbMDozhAqNFnScnvODwA",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/440a33902a92b301e248546a858cc70a1d6eae6f",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/a9389fd530290c7d1addd9be52e8edfa1dd78193",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/3833858f420bba5d5d8741f73f0c198b33bb44dc",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Mo Carofo",
+                    "popularity": 42,
+                    "type": "artist",
+                    "uri": "spotify:artist:4KTbMDozhAqNFnScnvODwA"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2Fpehg8U7oJkPJRzshAQQs"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 4582
+                    },
+                    "genres": [
+                        "deep underground hip hop",
+                        "indie pop rap"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/2Fpehg8U7oJkPJRzshAQQs",
+                    "id": "2Fpehg8U7oJkPJRzshAQQs",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/3c5b738ecf91cf262718792a26e15e44e05ab7d5",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/c1f2809f58006925b594f8acf202cba777ca6a84",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/83acd2aa61cc55990a634f110e0de71c016bf427",
+                            "width": 160
+                        }
+                    ],
+                    "name": "P.MO",
+                    "popularity": 46,
+                    "type": "artist",
+                    "uri": "spotify:artist:2Fpehg8U7oJkPJRzshAQQs"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0fMnpjfqmm7KCtlB0izVOg"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 17
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/0fMnpjfqmm7KCtlB0izVOg",
+                    "id": "0fMnpjfqmm7KCtlB0izVOg",
+                    "images": [],
+                    "name": "Mo-T",
+                    "popularity": 46,
+                    "type": "artist",
+                    "uri": "spotify:artist:0fMnpjfqmm7KCtlB0izVOg"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/1lzI1n7isejxFyXsmO17si"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 8149
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/1lzI1n7isejxFyXsmO17si",
+                    "id": "1lzI1n7isejxFyXsmO17si",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/284cfd24a59259c419621b5ecfc52da79f44b690",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/d2fc5cadfd913bc7ca9e50be25aac68bf88b2d59",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/1a0cbdc8985052a1e9eb391cc9eba0bea9c9c74a",
+                            "width": 160
+                        }
+                    ],
+                    "name": "G-Mo Skee",
+                    "popularity": 38,
+                    "type": "artist",
+                    "uri": "spotify:artist:1lzI1n7isejxFyXsmO17si"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/7r9M6ptJz7XnQp2RVFArb4"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 12022
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/7r9M6ptJz7XnQp2RVFArb4",
+                    "id": "7r9M6ptJz7XnQp2RVFArb4",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/95608f8fd3f8b16a4fc47c3978b09c931a369fee",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/64585e9645509d3b660b803384096ae3b4a97788",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/23bbfc4d45e14b9572f5b1bc098163b777f9ba1a",
+                            "width": 160
+                        }
+                    ],
+                    "name": "Mo Pitney",
+                    "popularity": 35,
+                    "type": "artist",
+                    "uri": "spotify:artist:7r9M6ptJz7XnQp2RVFArb4"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0MJ8sSwKrcYenpNAUeImuU"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 7545
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/0MJ8sSwKrcYenpNAUeImuU",
+                    "id": "0MJ8sSwKrcYenpNAUeImuU",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/1aaa00f8ad532de31d00fae883148252819ac97a",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/3435b41fb96efb27338b3ae4f371ade196188721",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/64fe851280191d0d74a9c95c7dd07f24d7127277",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Mo Thugs",
+                    "popularity": 34,
+                    "type": "artist",
+                    "uri": "spotify:artist:0MJ8sSwKrcYenpNAUeImuU"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2pxTS14EjHsM9dPri5VCIt"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 8867
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/2pxTS14EjHsM9dPri5VCIt",
+                    "id": "2pxTS14EjHsM9dPri5VCIt",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/fad1b73214a06a6848345b6ae41ee9bdb0a8237c",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/5997d1d5a9fb4b6ce05df2f50ca3d8004515150a",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/2051868b4f1fa6adb2eb8f47ab892a8d53c16375",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Mo Bread Nino",
+                    "popularity": 33,
+                    "type": "artist",
+                    "uri": "spotify:artist:2pxTS14EjHsM9dPri5VCIt"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/2WQcuSIBkCnWoPio6Cg9YD"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 318
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/2WQcuSIBkCnWoPio6Cg9YD",
+                    "id": "2WQcuSIBkCnWoPio6Cg9YD",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/a6f99f088d52d199447442090ea696c0a6bfefc1",
+                            "width": 640
+                        },
+                        {
+                            "height": 320,
+                            "url": "https://i.scdn.co/image/5b797a8bb11d11407ee52d0493ea698b7236d0bf",
+                            "width": 320
+                        },
+                        {
+                            "height": 160,
+                            "url": "https://i.scdn.co/image/50155fe5c7ee502f057ed0793d1f79d0cfbe4d32",
+                            "width": 160
+                        }
+                    ],
+                    "name": "Mo Dope",
+                    "popularity": 32,
+                    "type": "artist",
+                    "uri": "spotify:artist:2WQcuSIBkCnWoPio6Cg9YD"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0Vco3HYTJJEMWgHNC8BwAW"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 114
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/0Vco3HYTJJEMWgHNC8BwAW",
+                    "id": "0Vco3HYTJJEMWgHNC8BwAW",
+                    "images": [],
+                    "name": "Desi Mo",
+                    "popularity": 30,
+                    "type": "artist",
+                    "uri": "spotify:artist:0Vco3HYTJJEMWgHNC8BwAW"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/7o9hTqdhcddND3te69BBsk"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 9566
+                    },
+                    "genres": [
+                        "abstract beats",
+                        "indie jazz",
+                        "wonky"
+                    ],
+                    "href": "https://api.spotify.com/v1/artists/7o9hTqdhcddND3te69BBsk",
+                    "id": "7o9hTqdhcddND3te69BBsk",
+                    "images": [
+                        {
+                            "height": 1000,
+                            "url": "https://i.scdn.co/image/18e00d0f243da2d0a23ecd59621d82dd9d89fad6",
+                            "width": 1000
+                        },
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/6f584646b2d48e8f8bb7b4e0bb0c708e631406fd",
+                            "width": 640
+                        },
+                        {
+                            "height": 200,
+                            "url": "https://i.scdn.co/image/2d117ffb96c4942c9a5e58bfa7131f22b46bb5c5",
+                            "width": 200
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/afeceb0ac3f6341adff722ccc6dc4fa74787dc48",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Mo Kolours",
+                    "popularity": 36,
+                    "type": "artist",
+                    "uri": "spotify:artist:7o9hTqdhcddND3te69BBsk"
+                },
+                {
+                    "external_urls": {
+                        "spotify": "https://open.spotify.com/artist/0sdBYvEFvaLGoplRuc6V1T"
+                    },
+                    "followers": {
+                        "href": null,
+                        "total": 39
+                    },
+                    "genres": [],
+                    "href": "https://api.spotify.com/v1/artists/0sdBYvEFvaLGoplRuc6V1T",
+                    "id": "0sdBYvEFvaLGoplRuc6V1T",
+                    "images": [
+                        {
+                            "height": 640,
+                            "url": "https://i.scdn.co/image/ebd64df20c429823e0c87f739d49b20199bf4ebb",
+                            "width": 640
+                        },
+                        {
+                            "height": 300,
+                            "url": "https://i.scdn.co/image/d4ed0e91e77b714b5c2d1e3a851ca104953f063f",
+                            "width": 300
+                        },
+                        {
+                            "height": 64,
+                            "url": "https://i.scdn.co/image/ca0a95809f209ebb80ec72674457cb711da8ac7d",
+                            "width": 64
+                        }
+                    ],
+                    "name": "Mo Diggidy",
+                    "popularity": 26,
+                    "type": "artist",
+                    "uri": "spotify:artist:0sdBYvEFvaLGoplRuc6V1T"
+                }
+            ],
+            "limit": 20,
+            "next": "https://api.spotify.com/v1/search?query=mo&type=artist&offset=20&limit=20",
+            "offset": 0,
+            "previous": null,
+            "total": 1509
+        }
+    },
+    "headers": {
+        "content-type": "application/json; charset=utf-8",
+        "cache-control": "public, max-age=7200",
+        "access-control-allow-origin": "*",
+        "access-control-allow-headers": "Accept, Authorization, Origin, Content-Type, Retry-After",
+        "access-control-allow-methods": "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+        "access-control-allow-credentials": "true",
+        "access-control-max-age": "604800",
+        "content-encoding": "gzip",
+        "date": "Thu, 13 Sep 2018 19:34:46 GMT",
+        "via": "1.1 google",
+        "alt-svc": "clear",
+        "connection": "close",
+        "transfer-encoding": "chunked"
+    },
+    "statusCode": 200
+}
