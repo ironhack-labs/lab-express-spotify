@@ -383,6 +383,32 @@ h1 {
     font-size: 14px;
     text-decoration: none; }
 
+.container-tracks .tracks-header {
+  background-color: #4D4D4D;
+  color: #ffffff;
+  overflow: hidden; }
+  .container-tracks .tracks-header > div {
+    float: left;
+    padding-left: 30px;
+    box-sizing: border-box; }
+  .container-tracks .tracks-header div:nth-child(1) {
+    width: 70%;
+    text-align: left; }
+  .container-tracks .tracks-header div:nth-child(2) {
+    width: 30%;
+    text-align: center; }
+.container-tracks ul {
+  padding-left: 0;
+  margin: 0; }
+.container-tracks .track-item {
+  font-weight: 600;
+  background-color: #ededed;
+  display: block;
+  margin-bottom: 3px;
+  display: flex;
+  padding: 5px 30px;
+  justify-content: space-between; }
+
 /* =================================== */
 /* =================================== */
 @media screen and (min-width: 768px) {
