@@ -1,0 +1,10 @@
+<h1>ALBUMS</h1>
+<div class="artist-container">
+{{#each artistAlbums}}
+<div class="artist">
+<div class="art-img"><img src="{{this.images.0.url}}" alt="artistimg"></div>
+<h1 class="artist-title">{{this.name}}</h1>
+<button class="btn btn-warning"><a href="/tracks/{{this.id}}">View Tracks</a></button>
+</div>
+{{/each}}
+</div>
