@@ -23,32 +23,30 @@ spotifyApi.clientCredentialsGrant().then(
     console.log("Something went wrong when retrieving an access token", err);
   }
 );
-
-app.set("views", path.join(__dirname, "views"));
-app.set("view engine", "hbs");
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+app.use(express.static(path.join(__dirname, 'public')));
+hbs.registerPartials(__dirname + '/views/partials')
 
 app.get("/", (req, res, next) => {
   res.render("home");
 });
 
 app.get("/artists", function(req, res) {
-  console.log(req.query);
-  let artist = req.query.artist;
-  spotifyApi
-    .searchArtists(artist)
+  //console.log(req.query);
+  spotifyApi.searchArtists(req.query.artist)
     .then(data => {
-        let name = data.body.artists.name;
-      res.render("artists", {name});
-      //console.log(data);
-      console.log(data.body.artists);
+        let searchedArtist = data.body.artists.items;
+        res.render('artists', {searchedArtist});
+        console.log(searchedArtist);
     })
     .catch(err => {
       console.log(err);
     });
 });
 
-app.get("/albums/:artistId", (req, res) => {
+/* app.get("/albums/:artistId", (req, res) => {
   // code
-});
+}); */
 
 app.listen(3000, () => console.log("Port 3000!"));
