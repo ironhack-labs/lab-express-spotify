@@ -1,0 +1,15 @@
+
+
+.dataPartial {
+  height: 450px;
+}
+
+body {
+  background-image: url("/images/festival.jpg");
+  background-repeat: no-repeat;
+}
+
+.searchField {
+  margin: auto;
+  margin-top: 375px;
+}
