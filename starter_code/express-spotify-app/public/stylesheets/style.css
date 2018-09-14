@@ -1,0 +1,12 @@
+body {
+  background-image: url(https://c.pxhere.com/photos/5a/91/concert_festival_orange_flame_hands_up-1410537.jpg!d);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.cuerpo{
+  display: flex;
+  justify-content: center;
+  padding: 20% 0
+}
