@@ -1,0 +1,11 @@
+<p class="title-album">ALBUMS</p>
+<div class="album">
+  {{#each data.body.items}}
+  <div class="album-image">
+    <div>
+      <img class="albums-picture" src="{{this.images.1.url}}" alt="">
+    </div>
+    <a class="btn btn-primary btn-class" href="/tracks/{{this.id}}" role="button">View Tracks</a>
+  </div>
+  {{/each}}
+</div>
