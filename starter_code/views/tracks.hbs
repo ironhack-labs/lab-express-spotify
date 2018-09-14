@@ -1,0 +1,12 @@
+<div class="bg-audios">
+<div class="audios">
+  {{#each data.body.items}}
+  <div class="inside-audio">
+    <p>{{this.name}}</p>
+    <audio controls src="{{this.preview_url}}">
+      <code>audio</code> element.
+    </audio>
+  </div>
+  {{/each}}
+</div>
+</div>
