@@ -48,7 +48,7 @@ app.get('/albums/:artistId', (req, res, next) => {
   })
   .catch(err => {
     console.log('Something went wrong', err);
-  })
+  }) 
 });
 
 app.listen(3000)
