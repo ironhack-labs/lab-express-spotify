@@ -21,7 +21,7 @@ spotifyApi
   .catch(err => {
     console.log("Something went wrong when retrieving an access token", err);
   });
-
+app.use(express.static('public'))
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 hbs.registerPartials(__dirname + "/views/partials");

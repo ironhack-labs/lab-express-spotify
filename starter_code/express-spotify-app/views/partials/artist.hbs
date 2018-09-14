@@ -1,5 +1,11 @@
 <li>
-  {{this.name}}
-  <img src="{{this.images.1.url}}" alt="{{this.name}}">
-  <a href="/albums/{{id}}?name={{name}}">view albums</a>
+  <figure>
+    <img src="{{this.images.1.url}}" alt="{{this.name}}">
+    <figcaption>
+      <p>
+        {{this.name}}
+      </p>
+      <a href="/albums/{{id}}?name={{name}}">view albums</a>
+    </figcaption>
+  </figure>
 </li>

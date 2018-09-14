@@ -1,0 +1,55 @@
+body, html {
+  margin: 0;
+  padding: 0; }
+
+#home {
+  display: flex;
+  justify-content: center;
+  background-image: url("../images/background-spotify.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 15% 20% 25%; }
+  #home form {
+    font-size: 15px;
+    display: flex;
+    flex-flow: column;
+    align-items: center; }
+    #home form input, #home form button {
+      font-size: inherit;
+      padding: 5px;
+      margin: 15px;
+      display: block;
+      border-radius: 5px;
+      border: 1px solid white;
+      color: black; }
+    #home form button {
+      background: #dd433b;
+      color: white; }
+
+#artists, #albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center; }
+  #artists ul, #albums ul {
+    display: flex;
+    flex-flow: row wrap; }
+    #artists ul li, #albums ul li {
+      width: 30%;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      text-align: center; }
+
+figure figcaption {
+  background: grey;
+  margin: 0;
+  padding: 15px; }
+figure img {
+  width: 100%; }
+figure a {
+  background: #dd433b;
+  color: white;
+  padding: 5px;
+  text-decoration: none; }
+
+/*# sourceMappingURL=styles.css.map */
