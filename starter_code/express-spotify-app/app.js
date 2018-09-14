@@ -38,13 +38,20 @@ app.get("/artists", (req,res,) => {
   let artistQuery = req.query.artist //query to jedna z methods z query
   spotifyApi.searchArtists(artistQuery)
     .then(data => { //ta promise oddaje data z API
-      res.send(data)
-    res.render('artists');  // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render('artists', {artists: data.body.artists.items});  // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
-      // ----> 'HERE WE CAPTURE THE ERROR'
+      console.log("Something went wrong", err)
     })  
 })
+
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    //console.log(data.body)
+    res.render('albums', {albums: data.body.items})
+  })
+});
 
 app.listen(3000, () => {
   console.log("Port 3000")
