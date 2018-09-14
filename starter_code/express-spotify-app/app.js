@@ -13,7 +13,7 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret : clientSecret
 });
 
-app.set('vie engine', 'hbs'); // ojo to set up
+app.set('view engine', 'hbs'); // ojo to set up
 app.set('views', __dirname + '/views'); // para render
 app.use(express.static(path.join(__dirname, 'public'))); // ojo static folder containing img, js, css
 hbs.registerPartials(__dirname + '/views/partials'); // ojo parial
@@ -30,9 +30,21 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-app.get('/',(req,res) => {
+app.get('/', (req,res) => {
   res.render('index');
 });
+
+app.get('/artists', (req,res) => {
+  let queryArtists = req.query.artist;
+  spotifyApi.searchArtists(queryArtists)
+  .then(data => {
+    res.send(data)
+    res.render('artists');
+  })
+  .catch(err => {
+    return 'not found';
+  })
+})
 
 app.listen(3000, () => {
   console.log('Port 3000')
