@@ -18,11 +18,20 @@ app.get('/artist', function (req, res) {
         res.render('artist', {songs})
         // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
-    .catch(err => { console.log('An error happened:', err) });
+    .catch(err => { console.log('An error happened:', err) 
       // ----> 'HERE WE CAPTURE THE ERROR'
-    
-  })
+});
 
+  app.get('/albums/:artistId', (req, res) => {
+      const artistAlbum = req.params.album;
+      spotifyApi.getArtistAlbums(artistAlbum)
+      .then(data => {
+        const artistAlbums = {artistAlbum:data.body.artist.album}  
+          res.render('album', {artistAlbums})
+      }, function(err) {
+        console.error(err);
+ 
+});
 
 
 var clientId = 'd4cfe9a7536d4ba8b9dae6f18014a3db',
