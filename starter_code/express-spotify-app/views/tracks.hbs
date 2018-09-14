@@ -1,0 +1,9 @@
+<div class="player">
+  {{#each data.body.items}}
+  <div class="audio-controller">
+    <p>{{this.name}}</p>
+    <audio class="audio" controls  src="{{this.preview_url}}">
+    </audio>
+  </div>
+  {{/each}}
+</div>
