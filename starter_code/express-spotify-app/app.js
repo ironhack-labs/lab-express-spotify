@@ -49,8 +49,9 @@ app.get('/artists',(req,res)=>{
 })
 
 app.get('/albums/:artistId', (req, res) => {
-  spotifyApi.searchArtists(req.query.artist)
+  spotifyApi.getArtistAlbums(req.params.artistId)
     .then(data => {
+      console.log('Artist albums', data.body.items)
       res.render('albums',{data})
     })
     .catch(err => {
