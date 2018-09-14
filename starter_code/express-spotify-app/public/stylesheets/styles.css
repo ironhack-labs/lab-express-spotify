@@ -1,0 +1,89 @@
+/*
+Add a black background color to the top navigation bar
+.topnav {
+    overflow: hidden;
+    background-color: #e9e9e9;
+}
+
+Style the links inside the navigation bar
+.topnav a {
+    float: left;
+    display: block;
+    color: black;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+
+Change the color of links on hover
+.topnav a:hover {
+    background-color: #ddd;
+    color: black;
+}
+
+Style the "active" element to highlight the current page
+.topnav a.active {
+    background-color: #2196F3;
+    color: white;
+}
+
+Style the search box inside the navigation bar
+.topnav input[type=text] {
+    float: right;
+    padding: 6px;
+    border: none;
+    margin-top: 8px;
+    margin-right: 16px;
+    font-size: 17px;
+}
+*/
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+
+.album-container .album-card .album-image {
+    display: flex;
+    justify-content: center;
+}
+
+.album-container img {
+    height: 250px;
+}
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 50px;
+}
+
+.artist-container .artist-card .artist-image {
+    display: flex;
+    justify-content: center;
+}
+
+.artist-container img {
+    height: 250px;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    margin: 0 20px;
+    width: 30%;
+    align-items: center;
+    justify-content: center;
+}
