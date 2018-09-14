@@ -46,13 +46,26 @@ app.get('/albums/:artistId', (req, res) => {
   let artistId = req.params.artistId;
   spotifyApi.getArtistAlbums(artistId)
     .then(data => {
-      console.log(data.body.items[0])
+      //console.log(data.body.items[0])
       let albums = data.body.items;
       res.render('albums', { albums })
     })
     .catch(err => {
       throw Error("Found a problem. Albums")
     })
+})
+
+app.get('/tracks/:albumId', (req, res) => {
+  let albumId = req.params.albumId;
+  console.log(albumId);
+  spotifyApi.getAlbumTracks(albumId)
+    .then(data => {
+      //console.log(data);
+      let tracks = data.body.items
+      //console.log(tracks[2]);
+      res.render('tracks', { tracks })
+    })
+
 })
 
 
