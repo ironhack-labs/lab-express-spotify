@@ -1,0 +1,14 @@
+
+#flex{
+    display:flex;
+    align-content: center;
+    flex-wrap:wrap;
+   
+}
+.shorter{
+    width:200px;
+}
+.shorter img{
+    width:200px;
+}
+
