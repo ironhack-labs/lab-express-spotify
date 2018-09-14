@@ -51,7 +51,22 @@ app.get('/albums/:artistId', (req, res) => {
     data.body.items.forEach(e => {
       albumsArray.push(e);
     });
-    res.render('albums', {albumsArray})
+    res.render('albums', {albumsArray});
+  })
+  .catch(e => {
+    console.log(e);
+  });
+});
+
+app.get('/tracks/:albumId', (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then((data) => {
+    // console.log(data)
+    let tracksArray = [];
+    data.body.items.forEach(e => {
+      tracksArray.push(e);
+    });
+    res.render('tracks', {tracksArray});
   })
   .catch(e => {
     console.log(e);
