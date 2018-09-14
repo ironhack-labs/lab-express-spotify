@@ -1,11 +1,9 @@
-<div>
-  <img src="{{this.images.0.url}}">
-  <div>
-    <p>{{this.name}}</p>
+  <div class="artist-box">
+    <img src="{{this.images.0.url}}">
+    <div class="name-and-button">
+      <p>{{this.name}}</p>
+      <button>
+        <a href="/albums/{{this.id}}">View Albums</a>
+      </button>
+    </div>
   </div>
-  <div class="button-box">
-    <button>
-      <a href="/albums/{{this.id}}">View Albums</a>
-    </button>
-  </div>
-</div>

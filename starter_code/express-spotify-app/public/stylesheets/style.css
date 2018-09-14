@@ -1,11 +1,39 @@
 
-.button-box button {
+button {
   border: 1px solid black;
-  background-color: red;
+  background-color: rgb(177, 59, 59);
   border-radius: 2px;
+  padding: 10px;
 }
 
-.button-box button a {
+img {
+  width: 400px;
+  height: auto;
+}
+
+a {
   text-decoration: none;
   color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.artist-box {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.name-and-button {
+  background-color: grey;
+  text-align: center;
+  border: 1px solid red;
+
 }
