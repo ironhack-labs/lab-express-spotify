@@ -65,24 +65,53 @@ h5 {
   margin-top: 5%;
 }
 
-.title-album{
+.title-album {
   text-align: center;
-    font-size: 100px;
-
+  font-size: 100px;
 }
 
-.album-pic{
+.album-pic {
   margin-left: 6%;
   display: flex;
   flex-wrap: wrap;
   width: 20%;
 }
 
-.album-pic a{
+.album-pic a {
   margin-top: 10%;
   margin-bottom: 15%;
   margin-left: 27%;
 }
-.play{
+.play {
   display: flex;
+}
+
+.bg-audios{
+  background-image: url("../images/audio-bg.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+}
+.audios {
+  display: flex;
+  position: absolute;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 60%;
+  margin-top: 5%;
+  margin-left: 20%;
+}
+
+.inside-audio{
+  margin-top: 5%;
+
+}
+
+.bg-album{
+  background-image: url("../images/album-bg.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
 }
