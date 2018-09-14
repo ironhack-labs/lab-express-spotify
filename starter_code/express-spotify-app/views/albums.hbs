@@ -1,0 +1,9 @@
+
+ {{#each albums}} {{#if this.images}}
+<img src="{{this.images.0.url}}" alt="" srcset="" class="album-img"> {{else}}
+<img src="lorem.png" alt=""> {{/if}}
+<div class="artist-info-container">
+    <p>{{this.name}}</p>
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+</div>
+{{/each}}
