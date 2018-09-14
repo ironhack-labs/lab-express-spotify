@@ -1,0 +1,7 @@
+<div>CD TRACKS</div>
+{{#each tracks}}
+<audio controls>
+  <source src="{{this.preview_url}}">
+</audio>
+<div>{{this.name}}</div>
+{{/each}}

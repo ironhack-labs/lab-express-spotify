@@ -1,0 +1,18 @@
+body {
+  background-image: url("http://www.metalinjection.net/wp-content/uploads/2013/08/iron-maiden-european-tour-mini-documentary-part-2.jpg");
+  background-position: 0 0;
+  background-size: cover;
+  color: white;
+}
+
+h1 {
+  color: white;
+  text-align: center;
+}
+
+.search-menu {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+}
