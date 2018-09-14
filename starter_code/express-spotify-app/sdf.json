@@ -1,0 +1,22 @@
+[
+    { spotify: 'https: //open.spotify.com/artist/0rhA28IdY2o9SPUl6isIgx' },
+    followers: { href: null, total: 407
+        },
+    genres: [ 'tribute'
+        ],
+    href: 'https: //api.spotify.com/v1/artists/0rhA28IdY2o9SPUl6isIgx',
+    id: '0rhA28IdY2o9SPUl6isIgx',
+    images: [
+            [Object
+            ],
+            [Object
+            ],
+            [Object
+            ]
+        ],
+    name: 'The Beatles Orchestra',
+    popularity: 3,
+    type: 'artist',
+    uri: 'spotify:artist: 0rhA28IdY2o9SPUl6isIgx'
+    }
+]
