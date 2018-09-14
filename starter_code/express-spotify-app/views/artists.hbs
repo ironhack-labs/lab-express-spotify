@@ -15,11 +15,15 @@
     <div>{{#each images}}
         {{#if @first}}
         <img class="artist-image" src={{url}}>
+        <div><form action="/albums">
+            <button type="submit" name="artistId" value={{id}}>View Albums</button>
+        </form></div>m</a>
         {{/if}}
         {{/each}}
     </div>
     <h3>{{name}}</h3>
     {{/each}}
+    
     </div>
 </body>
 
