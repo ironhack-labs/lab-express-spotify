@@ -25,7 +25,7 @@ spotifyApi.clientCredentialsGrant()
     spotifyApi.setAccessToken(data.body['access_token']);
   })
   .catch(err => {
-    console.log(err);
+    console.error(err);
   });
 
 app.get("/", (req, res) => {
