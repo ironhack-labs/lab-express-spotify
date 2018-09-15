@@ -1,0 +1,21 @@
+<div class="track-container">
+    {{#each track}}
+        <div class="track">
+        <img class="track-img-top" src="{{this.images.[0].url}}" alt="">
+        <div class="track-body">
+            <h5 class="track-title">{{this.name}}</h5>
+            
+                <audio
+                    id="t-rex-roar"
+                    controls
+                    src="{{this.preview_url}}">
+                    Your browser does not support the <code>audio</code> element.
+                </audio>
+            {{!-- <form action="/tracks">
+                <button type ="button"><a href="tracks/{{this.id}}">VIEW TRACKS</a></button> 
+            </form> --}}
+            
+        </div>
+    {{/each}}
+</div>
+

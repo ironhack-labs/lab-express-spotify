@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="../stylesheets/styles.css">
+
+    <div class="artist">
+        <img class="artist-img-top" src="{{this.images.[0].url}}" alt="">
+        <div class="artist-body">
+            <h5 class="artist-title">{{this.name}}</h5>
+            <form action="/albums">
+                <button type ="button"><a href="albums/{{this.id}}">VIEW ALBUM</a></button> 
+            </form>
+            
+        </div>
+    </div>

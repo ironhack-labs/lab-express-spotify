@@ -1,0 +1,32 @@
+body {
+    /* background-color: #aac7fd; */
+}
+
+.div-container 
+{
+    width: 500px;
+    background-color: rgb(31, 39, 39);
+    text-align: center;
+    margin: 200px;
+    margin-left:300px;
+    margin-top: 150px;
+    padding: 50px;
+}
+
+input 
+{
+    margin: 30px;
+}
+
+.button-search 
+{
+    background-color: red;
+    color:white;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.artist 
+{
+    padding: 20px;
+}
