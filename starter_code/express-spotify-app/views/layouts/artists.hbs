@@ -1,0 +1,17 @@
+<div class="container margin-top">
+    {{#each artists}}
+    <div class="row text-center">
+        <div class="col-md-4 element-card">
+            <div class="img-box">
+                <img src="{{this.images.0.url}}">
+            </div>
+            <div class="artist-info">
+                <p>{{this.name}}</p>
+                <button class="btn btn-danger"><a href="/albums/{{id}}">View Albums</a></button>
+            </div>
+        </div>
+
+        {{/each}}
+    </div>
+</div>
+</div>
