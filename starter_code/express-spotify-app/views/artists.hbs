@@ -1,0 +1,8 @@
+<link rel="stylesheet" href="stylesheets/styles.css">
+
+{{#each items}}
+<div class="album">
+<h1>{{this.name}}</h1>
+<img src="{{this.images.[0].url}}" alt="">
+</div>
+{{/each}}
