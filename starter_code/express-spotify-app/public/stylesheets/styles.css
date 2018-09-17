@@ -1,0 +1,38 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+#concert {
+  width: 100vw;
+}
+#whitebox {
+  width: 500px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.719); 
+  position: relative;
+  top: 70vh;
+  left: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+
+input:read-write {
+  width: 300px;
+  height: 30px;
+  margin-bottom: 20px;
+}
+#btn-search {
+  background-color: rgb(247, 104, 104);
+  color:white;
+  padding: 10px;
+}
+
+.album img {
+  width: 300px;
+  height: 300px;
+  float: left;
+}
