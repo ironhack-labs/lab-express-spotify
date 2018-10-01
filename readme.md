@@ -2,7 +2,7 @@
 
 # DE | Express Spotify Searcher
 
-![](https://i.imgur.com/XhBF66a.png=500x)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_eb6313ef8c1bd11e3732034ebd4edafa.png)
 
 ## Introduction
 
@@ -43,7 +43,8 @@ As always `fork` this repo, and clone it.
 Then, inside the `starter_code` folder, create a new folder, and set up your package.json. Use the following commands:
 
 ```
-$ mkdir express-spotify-app && cd express-spotify-app
+$ mkdir express-spotify-app
+$ cd express-spotify-app
 $ npm init
 $ npm install --save spotify-web-api-node prettyjson
 $ touch app.js
@@ -54,7 +55,7 @@ Inside the `app.js` file, copy/paste the following code:
 ```javascript
 var SpotifyWebApi = require('spotify-web-api-node');
 
-// Remember to paste here your credentials
+// Remember to paste your credentials here
 var clientId = '1c30624cba6742dcb792991caecae571',
     clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
 
@@ -87,10 +88,10 @@ Your directory should look like this once you're done:
 ├── public
 │   ├── public/images
 │   ├── public/javascripts
-│   └── public/stylesheetsa
+│   └── public/stylesheets
 │       └── public/stylesheets/style.css
 └── views
-    ├── views/layouts
+    ├── views/layout
 ```
 
 We will need some npm packages for this project, so let´s install them:
@@ -103,16 +104,17 @@ After the installation, you should have a package.json like this:
 
 ```javascript
   "dependencies": {
-    "body-parser": "~1.15.2",
-    "express": "~4.14.0",
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
     "hbs": "^4.0.1",
-    "morgan": "~1.7.0",
-    "spotify-web-api-node": "^2.3.6"
+    "morgan": "^1.9.1",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^3.1.1"
   }
 ```
 
-:::info
-Don't worry if is not exactly the same! Specially on versions! And don't forget to **require** all this packages on your `app.js` file:
+:::info>
+Don't worry if it is not exactly the same! Specially on versions! And don't forget to **require** all this packages on your `app.js` file.
 
 ```javascript
 const express = require('express');
@@ -151,14 +153,14 @@ spotifyApi.searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
     })
 ```
 
-![](https://i.imgur.com/ZqjmoCZ.png=400x)
+![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9dc721e76158df1836ef07565b5385c2.png)
 
 
 ## Iteration 4 | [View Albums](https://iron-spotify.herokuapp.com/albums/3WrFJ7ztbogyGnTHbHJFl2)
 
 When someone clicks on the "View Albums" button, they should be taken to a page to show all of the albums for that particular artist.
 
-:zap: Check out the `getArtistAlbums` method in the `spotify-web-api-node` package.
+:zap: Check out the `getArtistAlbums` method in the `spotify-web-api-node` [package](https://www.npmjs.com/package/spotify-web-api-node) from npm.
 
 **Hint**
 
@@ -184,7 +186,7 @@ Meaning that your `href` for the view more button is going to have to look like 
 
 Make the "View Tracks" button work on the albums page. This page should take you to a page with a list of all of the tracks on a particular album.
 
-**Note**: :zap: Check out the `getAlbumTracks` method in the `spotify-web-api-node` package.
+**Note**: :zap: Check out the `getAlbumTracks` method in the `spotify-web-api-node` [package](https://www.npmjs.com/package/spotify-web-api-node) from npm.
 
 A track object comes with a `preview_url`, which is the source for a 30 second preview of a particular song. You can plug this into an HTML [`audio`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag, and it will play the preview.
 
@@ -197,7 +199,7 @@ A track object comes with a `preview_url`, which is the source for a 30 second p
   - Artists
   - Albums
   - Tracks
-- Basic dev level logging with Morgan
+- Basic dev level logging with [Morgan](https://www.npmjs.com/package/morgan)
 - Some styling, it doesn't have to look like the example.
 - A layout
 
