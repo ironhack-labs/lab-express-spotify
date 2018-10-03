@@ -1,0 +1,21 @@
+{
+  "name": "express-spotify-app",
+  "version": "0.0.1",
+  "description": "Daily Exercise - WEB DEV Ironhack",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js -e hbs -e js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mao",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.1",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {}
+}

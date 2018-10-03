@@ -1,0 +1,14 @@
+<div class="artists-container">
+  <h1>Artists</h1>
+  <div class="query">
+    <ul>
+      <li>{{> goBack}}Your search:&ensp;<span class="searched">"&ensp;<i>{{data.query}}</i>&ensp;"</span></li>
+      <li>Showing first {{info.limit}} out of&ensp;<span class="total"><i>{{info.total}}</i></span>&ensp;results found.</li>
+    </ul>
+  </div>
+  <div class="artists-cards">
+    {{#each artists}}
+      {{> artistCard}}
+    {{/each}}
+  </div>
+</div>

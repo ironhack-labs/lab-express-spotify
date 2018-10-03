@@ -1,0 +1,128 @@
+body {
+  background: #000;
+}
+.artists-container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3.7vh 4vw;
+  width: 100%;
+}
+h1 {
+  color: #fff;
+  font-size: 6em;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+.query {
+  background: rgba(29, 185, 84, 1);
+  border-top-left-radius: 0.3vw;
+  border-top-right-radius: 0.3vw;
+  cursor: default;
+  font-size: 2em;
+  width: 100%;
+}
+.query ul {
+  color: #fff;
+  display: flex;
+  list-style: none;
+  padding: 2vh 2vw;
+}
+.query ul li:first-child {
+  margin-right: auto;
+}
+.searched, .total {
+  background: rgba(255,255,255,0.3);
+  border: 0.1vw solid #fff;
+  border-radius: 0.2vw;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.searched {
+  box-shadow: inset -0.05vw -0.05vh 0.3vw rgba(0,0,0,0.3);
+  padding: 0.1vh 3vw;
+}
+.total {
+  padding: 0.1vh 0.7vw;
+  text-shadow: 0.1vw 0 rgba(0,0,0,0.2);
+}
+.artists-cards {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+.artist-card {
+  background: center / 75% no-repeat url('../img/spotify-logo-white.png') rgba(29, 185, 84, 1);
+  width: calc(100% / 3);
+}
+.img-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 50vh;
+  width: 100%;
+}
+.img-wrapper a {
+  display: block;
+  height: 75%;
+  text-decoration: none;
+  transform: scale(0.5);
+  transition: all 200ms;
+  width: 75%;
+}
+.img-wrapper a:hover {
+  transform: scale(1);
+}
+.info-box {
+  background: rgba(0,0,0,0.4);
+  color: #fff;
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  height: 100%;
+  padding: 1vh 1vw;
+  position: relative;
+  width: 100%;
+}
+.info-box::after, .info-box::before {
+  content: '';
+  position: absolute;
+  transition: all 350ms;
+  z-index: -2;
+}
+.info-box::before {
+  border-bottom: 0.3vw solid #fff;
+  border-top: 0.3vw solid #fff;
+  height: 98%;
+  left: 50%;
+  top: 0;
+  width: 0;
+}
+.info-box::after {
+  border-left: 0.3vw solid #fff;
+  border-right: 0.3vw solid #fff;
+  height: 0;
+  left: 0;
+  top: 50%;
+  width: 98%;
+}
+.info-box:hover:before {
+  transform: translate(-50%,0);
+  width: 100%;
+}
+.info-box:hover:after {
+  transform: translate(0,-50%);
+  height: 100%;
+}
+.info-box h2 {
+  font-size: 5em;
+  text-align: center;
+}
+.info-box p {
+  background: rgba(255,255,255,0.2);
+  border-radius: 0.5em;
+  font-size: 2em;
+  padding: 1vh 3vw;
+  text-shadow: 0.1vw 0.2vh #000;
+}
