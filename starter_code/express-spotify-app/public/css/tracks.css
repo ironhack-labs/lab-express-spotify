@@ -1,0 +1,80 @@
+body {
+  background: #000;
+}
+.track-container {
+  display: flex;
+  flex-flow: column wrap;
+  padding: 3.7vh 4vw;
+  width: 100%;
+}
+h1 {
+  color: #fff;
+  font-size: 6em;
+  margin-bottom: 3vh;
+  text-align: center;
+}
+.query {
+  background: rgba(29, 185, 84, 1);
+  border-top-left-radius: 0.3vw;
+  border-top-right-radius: 0.3vw;
+  cursor: default;
+  font-size: 2em;
+  width: 100%;
+}
+.query ul {
+  color: #fff;
+  display: flex;
+  list-style: none;
+  padding: 2vh 2vw;
+}
+.query ul li:first-child {
+  margin-right: auto;
+}
+.searched, .total {
+  background: rgba(255,255,255,0.3);
+  border: 0.1vw solid #fff;
+  border-radius: 0.2vw;
+  color: #000;
+  font-size: 1.2em;
+  font-weight: 400;
+}
+.searched {
+  box-shadow: inset -0.05vw -0.05vh 0.3vw rgba(0,0,0,0.3);
+  padding: 0.1vh 3vw;
+}
+.total {
+  padding: 0.1vh 0.7vw;
+  text-shadow: 0.1vw 0 rgba(0,0,0,0.2);
+}
+.tracks-rows {
+  display: flex;
+  flex-flow: row wrap;
+  width: 100%;
+}
+/******/
+.track-row {
+  background: #eee;
+  border-bottom: 0.4vh solid rgba(0,0,0,0.1);
+  padding: 3vh;
+  width: 100%;
+}
+audio::-webkit-media-controls-panel {
+  background: transparent;
+}
+.track-row ul {
+  display: flex;
+  align-items: center;
+  list-style: none;
+}
+.track-row ul li:first-child {
+  margin-right: auto;
+}
+.track-row ul li {
+  font-size: 3em;
+}
+.track-row ul li span {
+  font-size: 0.7em;
+}
+audio::-webkit-media-controls-play-button, audio::-webkit-media-controls-timeline, audio::-webkit-media-controls-mute-button, audio::-webkit-media-controls-volume-slider {
+  cursor: pointer;
+}

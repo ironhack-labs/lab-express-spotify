@@ -1,0 +1,14 @@
+<div class="albums-container">
+  <h1>Albums</h1>
+  <div class="query">
+    <ul>
+      <li>{{> goBack}}Artist:&ensp;<span class="searched"><i>{{artist}}</i></span></li>
+      <li>Showing first {{info.limit}} out of&ensp;<span class="total"><i>{{info.total}}</i></span>&ensp;results found.</li>
+    </ul>
+  </div>
+  <div class="albums-cards">
+    {{#each albums}}
+      {{> albumCard}}
+    {{/each}}
+  </div>
+</div>

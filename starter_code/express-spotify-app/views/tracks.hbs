@@ -1,0 +1,14 @@
+<div class="track-container">
+  <h1>Tracks</h1>
+  <div class="query">
+    <ul>
+      <li>{{> goBack}}Artist&ensp;<span class="searched"><i>{{artist}}</i></span></li>
+      <li>Showing first {{info.limit}} out of&ensp;<span class="total"><i>{{info.total}}</i></span>&ensp;results found.</li>
+    </ul>
+  </div>
+  <div class="tracks-rows">
+    {{#each tracks}}
+      {{> trackRow}}
+    {{/each}}
+  </div>
+</div>

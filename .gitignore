@@ -28,3 +28,9 @@ node_modules
 
 # Debug log from npm
 npm-debug.log
+
+#Damn DS
+.DS_Store
+
+#Layout images
+layouts/
