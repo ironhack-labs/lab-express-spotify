@@ -1,3 +1,7 @@
+body {
+  margin: 0;
+}
+
 /* Global */
 .item-list {
   list-style-type: none;
@@ -129,4 +133,49 @@
 
 .track-row {
   padding: 0 40px;
+}
+
+.artist-container {
+  padding: 10px 40px;
+}
+
+.artist-img {
+  width: 100%;
+}
+
+.artist-info-container {
+  background-color: #4d4d4d;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artist-info-container p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+.artist-info-container a {
+  color: #fff;
+  font-size: 12px;
+  background-color: #f86967;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+.track-item {
+  background-color: #f6f6f6;
+  margin-bottom: 2px;
+  padding: 10px 0;
+}
+
+.track-item p {
+  margin-bottom: 0;
+}
+
+.header-row {
+  background-color: #4a4a4a;
+  padding: 20px 10px;
+  color: #f6f6f6;
+  font-size: 20px;
 }
