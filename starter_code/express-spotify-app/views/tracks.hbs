@@ -1,0 +1,22 @@
+<div class="uk-child-width-expand@s" uk-grid>
+  <ul class="uk-list uk-list-striped">
+    <h2>Tracks</h2>
+    {{#each tracks as |track|}}
+    <li>{{track_number}}. {{track.name}}</li>
+    {{/each}}
+  </ul>
+  <ul class="uk-list uk-list-divider">
+    <h2>Preview</h2>
+    {{#each tracks as |track|}}
+    <li>
+      {{#if track.preview_url}}
+      <audio controls preload="auto">
+        <source src="{{track.preview_url}}">
+      </audio>
+      {{else}}
+      No audio preview available for this track.
+      {{/if}}
+    </li>
+    {{/each}}
+  </ul>
+</div>
