@@ -1,0 +1,88 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.search {
+    height: 100vh;
+    background-image: url(../images/background.jpeg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    background-color: black;
+    border: 1px, white, bold;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+}
+
+input[type=text] {
+    background-color: gray;
+    color: white;
+    border: none;
+    padding: 15px 32px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    height: 100%;
+}
+
+.card{
+    width: 30%;
+    padding-top: 50px;
+
+}
+
+.image{
+    width: 90%;
+}
+
+.container2{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: salmon;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    height: 100%;
+}
+.container3{
+    background-color: cornflowerblue;
+    position: relative;
+    min-height: 100vh;
+    height: 100%;
+}
+li{
+    list-style: none;
+    padding: 10px;
+}
+
+li>audio{
+   position: absoulte;
+    right: 20px;
+}
+
+.head{
+    text-align: right;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.tracks {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card>a{
+    font-size: 1.5em;
+}
