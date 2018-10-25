@@ -1,6 +1,6 @@
-![Ironhack Logo](https://i.imgur.com/1QgrNNw.png)
+![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)
 
-# DE | Express Spotify Searcher
+# Express Spotify Searcher
 
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_eb6313ef8c1bd11e3732034ebd4edafa.png)
 
@@ -100,28 +100,16 @@ We will need some npm packages for this project, so let´s install them:
 $ npm install --save body-parser hbs express morgan
 ```
 
-After the installation, you should have a package.json like this:
-
-```javascript
-  "dependencies": {
-    "body-parser": "^1.18.3",
-    "express": "^4.16.3",
-    "hbs": "^4.0.1",
-    "morgan": "^1.9.1",
-    "prettyjson": "^1.2.1",
-    "spotify-web-api-node": "^3.1.1"
-  }
-```
-
-:::info>
+:::info
 Don't worry if it is not exactly the same! Specially on versions! And don't forget to **require** all this packages on your `app.js` file.
+:::
 
 ```javascript
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
 ```
-:::
+
 
 
 ## Iteration 3 | Search for an Artist
@@ -203,4 +191,4 @@ A track object comes with a `preview_url`, which is the source for a 30 second p
 - Some styling, it doesn't have to look like the example.
 - A layout
 
-Happy Coding!
+Happy Coding! :heart: 
