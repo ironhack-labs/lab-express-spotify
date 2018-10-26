@@ -15,6 +15,23 @@ To see the final product check out the deployed version: https://spotify-lab.her
 It may seem like a lot, but let's break it down into steps!
 
 
+## Requirements
+
+- [Fork this repo](https://guides.github.com/activities/forking/)
+- Then clone this repo.
+
+
+## Submission
+
+- Upon completion, run the following commands
+```
+$ git add .
+$ git commit -m "done"
+$ git push origin master
+```
+- Create Pull Request so your TAs can check up your work.
+
+
 ### `spotify-web-api-node`
 
 Spotify is great for streaming music from the app, but they also have a [Web Service](https://en.wikipedia.org/wiki/Web_service) for us developers to play with.
@@ -191,4 +208,4 @@ A track object comes with a `preview_url`, which is the source for a 30 second p
 - Some styling, it doesn't have to look like the example.
 - A layout
 
-Happy Coding! :heart: 
+Happy Coding! :heart:
