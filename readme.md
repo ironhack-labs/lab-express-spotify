@@ -17,13 +17,14 @@ It may seem like a lot, but let's break it down into steps!
 
 ## Requirements
 
-- [Fork this repo](https://guides.github.com/activities/forking/)
-- Then clone this repo.
+- Fork this repo
+- Clone this repo
 
 
 ## Submission
 
-- Upon completion, run the following commands
+- Upon completion, run the following commands:
+
 ```
 $ git add .
 $ git commit -m "done"
@@ -127,11 +128,9 @@ const app = express();
 const hbs = require('hbs');
 ```
 
-
-
 ## Iteration 3 | Search for an Artist
 
-### Step 1 | [Create a Homepage](https://iron-spotify.herokuapp.com/)
+### Step 1 | Create a Homepage
 
 Create a simple home page. You'll need a basic index route, that renders a home page.
 
@@ -140,7 +139,7 @@ On this page, you should have a search form. This form should direct its query t
 ![](https://i.imgur.com/YuTA0vQ.png=400x)
 
 
-### Step 2 | [Display results for artist search](https://iron-spotify.herokuapp.com/artists?artist=The+Beatles)
+### Step 2 | Display results for artist search
 
 Create the route `/artists`. This route will receive the search term from the query string, and make a search request using the Spotify Package.
 
@@ -161,7 +160,7 @@ spotifyApi.searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9dc721e76158df1836ef07565b5385c2.png)
 
 
-## Iteration 4 | [View Albums](https://iron-spotify.herokuapp.com/albums/3WrFJ7ztbogyGnTHbHJFl2)
+## Iteration 4 | View Albums
 
 When someone clicks on the "View Albums" button, they should be taken to a page to show all of the albums for that particular artist.
 
@@ -187,7 +186,7 @@ Meaning that your `href` for the view more button is going to have to look like 
 
 ![](https://i.imgur.com/oaoqQMj.png)
 
-## Iteration 5 | [View Tracks](https://iron-spotify.herokuapp.com/tracks/0n9SWDBEftKwq09B01Pwzw)
+## Iteration 5 | View Tracks
 
 Make the "View Tracks" button work on the albums page. This page should take you to a page with a list of all of the tracks on a particular album.
 
