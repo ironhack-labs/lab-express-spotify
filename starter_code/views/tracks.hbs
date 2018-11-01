@@ -1,0 +1,17 @@
+
+<div class="d-flex flex-row flex-wrap">
+{{#each trackList}}
+<div class="pl-5 pr-5">
+<div class="card " style="width: 500px;">
+  <div class="card-body">
+    <h5 class="card-title">{{name}} </h5>
+</div>
+<div>
+  <audio controls src={{preview_url}}>Audio</audio>
+  <a href={{uri}}>Open Spotify</a>
+  
+</div>
+</div>
+</div>
+{{/each}}
+</div>

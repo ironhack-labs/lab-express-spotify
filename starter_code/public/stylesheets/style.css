@@ -1,0 +1,26 @@
+body {
+  background-color: red;
+}
+
+.main {
+  height: 100vh;
+  display: grid;
+  grid-template-columns: 20% 20% 20% 20% 20%;
+  grid-template-rows: 20% 20% 20% 20% 20%;
+  
+}
+
+.search {
+  display: grid;
+  grid-area: 2/2/3/5;
+  background-color: #fff;
+  
+}
+.button {
+  display: grid;
+  grid-area: 3/2/4 /5;
+  background-color: black;
+  
+}
+
+
