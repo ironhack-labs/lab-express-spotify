@@ -1,0 +1,10 @@
+.artist-search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.artist-albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
