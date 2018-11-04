@@ -47,16 +47,28 @@ app.get('/artists', (req, res) => {
 })
 
 app.get('/albums/:artistId', (req, res) => {
-  console.log(req.params.artistId)
+  // console.log(req.params.artistId)
   spotifyApi.getArtistAlbums(req.params.artistId, { limit: 10, offset: 20 })
     .then(data => {
-      // console.log(data.body.items)
+      //console.log(data.body.items)
       var albums = data.body.items
-      console.log(albums)
+      // console.log(albums)
       res.render('albums', { albums })
     })
+    .catch(err => { console.log(err) })
   // console.log("albums", albums)
   // res.render('albums')
+})
+
+app.get('/tracks/:albumId', (req, res) => {
+  let albumId = req.params.albumId
+  console.log(albumId)
+  spotifyApi.getAlbumTracks(albumId, { limit: 5, offset: 1 })
+    .then(data => {
+      var tracks = data.body.items
+      res.render('album-tracks', { tracks })
+    })
+    .catch(err => { console.log(err) })
 })
 
 app.listen(3000, () => {
