@@ -1,0 +1,73 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  height: 100vh;
+  background: url('../images/background.jpg') no-repeat center center fixed;
+  background-size: cover;
+}
+
+form {
+  position: fixed;
+  top: 50%;
+  left: 30%;
+}
+
+form input {
+  margin-right: -4px;
+  padding: 5px 15px;
+  width: 300px;
+  height: 40px;
+  background-color: rgba(25,25,25,0.2);
+  color: white;
+  border-radius: 10px 0 0 10px;
+  border: 2px solid rgba(25,25,25,0.5);
+  text-transform: uppercase;
+  font-weight: 500;
+  outline: none;
+}
+
+form button {
+  padding: 5px 15px;
+  width: 200px;
+  height: 54px;
+  background-color: coral;
+  color: black;
+  border-radius: 0 10px 10px 0;
+  border: 2px solid coral;
+  text-transform: uppercase;
+  font-weight: 800;
+  color: white;
+  cursor: pointer;
+}
+
+.artists-container {
+  padding: 40px;
+  display: flex;
+  flex-flow: row wrap;
+  justify-items: center;
+  justify-content: space-between;
+}
+
+.card {
+  height: 350px;
+  width: 300px;
+  padding: 20px;
+  background-color: white;
+  text-align: center;
+}
+
+.card a,
+.card a:hover,
+.card a:visited {
+  margin: 20px 0;
+  height: 40px;
+  width: 150px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: white;
+  background-color: coral;
+  border-radius: 2px;
+}

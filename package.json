@@ -1,0 +1,27 @@
+{
+  "name": "lab-express-spotify",
+  "version": "1.0.0",
+  "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/amancioandre/lab-express-spotify.git"
+  },
+  "author": "AA & IP",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/amancioandre/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/amancioandre/lab-express-spotify#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.1",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

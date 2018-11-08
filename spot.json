@@ -1,0 +1,107 @@
+{
+  body: {
+  artists: {
+  href: "https://api.spotify.com/v1/search?query=Pearl+Jam&type=artist&offset=0&limit=20",
+  items: [
+        {
+  external_urls: {},
+  followers: {},
+  genres: [],
+  href: "https://api.spotify.com/v1/artists/1w5Kfo2jwwIPruYS2UWh56",
+  id: "1w5Kfo2jwwIPruYS2UWh56",
+  images: [
+            {
+  height: 640,
+  url: "https://i.scdn.co/image/8a7775f16a99af5d353d4eb31ec0ccf908a6a6d1",
+  width: 640
+            },
+            {
+  height: 320,
+  url: "https://i.scdn.co/image/7d40296db84567ff1f76c6bb3a561de53bccadb3",
+  width: 320
+            },
+            {
+  height: 160,
+  url: "https://i.scdn.co/image/4733adb065f2e5c637bf7362413e9d2a9e330310",
+  width: 160
+            }
+          ],
+  name: "Pearl Jam",
+  popularity: 77,
+  type: "artist",
+  uri: "spotify:artist:1w5Kfo2jwwIPruYS2UWh56"
+        },
+        {
+  external_urls: {
+  spotify: "https://open.spotify.com/artist/1sQ47kp98KdFnRFGc3chp0"
+          },
+  followers: {
+  href: null,
+  total: 1606
+          },
+  genres: [],
+  href: "https://api.spotify.com/v1/artists/1sQ47kp98KdFnRFGc3chp0",
+  id: "1sQ47kp98KdFnRFGc3chp0",
+  images: [],
+  name: "Pearl Jam a/k/a Mookie Blaylock",
+  popularity: 22,
+  type: "artist",
+  uri: "spotify:artist:1sQ47kp98KdFnRFGc3chp0"
+        },
+        {
+  external_urls: {
+  spotify: "https://open.spotify.com/artist/1SC0BmfiLQrzFDmOVluDK4"
+          },
+  followers: {
+  href: null,
+  total: 2111
+          },
+  genres: [],
+  href: "https://api.spotify.com/v1/artists/1SC0BmfiLQrzFDmOVluDK4",
+  id: "1SC0BmfiLQrzFDmOVluDK4",
+  images: [
+            {
+  height: 640,
+  url: "https://i.scdn.co/image/c9e16c9f6978b36c6b8f47a8b95942c30219ebc7",
+  width: 640
+            },
+            {
+  height: 300,
+  url: "https://i.scdn.co/image/85b889ad228c917e764216394caf42f45011a948",
+  width: 300
+            },
+            {
+  height: 64,
+  url: "https://i.scdn.co/image/b47bb7f30677b5bb68887143ea06eb65df471d48",
+  width: 64
+            }
+          ],
+  name: "Singles plays Pearl Jam",
+  popularity: 12,
+  type: "artist",
+  uri: "spotify:artist:1SC0BmfiLQrzFDmOVluDK4"
+        }
+      ],
+  limit: 20,
+  next: null,
+  offset: 0,
+  previous: null,
+  total: 3
+    }
+  },
+  headers: {
+  content-type: "application/json; charset=utf-8",
+  cache-control: "public, max-age=7200",
+  access-control-allow-origin: "*",
+  access-control-allow-headers: "Accept, Authorization, Origin, Content-Type, Retry-After",
+  access-control-allow-methods: "GET, POST, OPTIONS, PUT, DELETE, PATCH",
+  access-control-allow-credentials: "true",
+  access-control-max-age: "604800",
+  content-encoding: "gzip",
+  date: "Thu, 08 Nov 2018 15:38:15 GMT",
+  via: "1.1 google",
+  alt-svc: "clear",
+  connection: "close",
+  transfer-encoding: "chunked"
+  },
+  statusCode: 200

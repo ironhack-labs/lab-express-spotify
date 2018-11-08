@@ -1,0 +1,11 @@
+<h1>TRACKS</h1>
+<div class="album-container">
+  <ul>
+    {{#each items}}
+      <li>
+        <p>{{this.name}}</p>
+        <audio src="{{this.href}}">Not Supported</audio>
+      </li>
+    {{/each}}
+  </ul>
+</div>
