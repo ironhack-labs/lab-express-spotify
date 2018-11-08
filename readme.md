@@ -132,6 +132,7 @@ const hbs = require('hbs');
 
 ### Step 1 | Create a Homepage
 
+
 Create a simple home page. You'll need a basic index route, that renders a home page.
 
 On this page, you should have a search form. This form should direct its query to `/artists`, and have one input with a name of `artist`.
