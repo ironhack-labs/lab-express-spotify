@@ -1,0 +1,18 @@
+.home-background {
+  background-image: url(../images/landing.jpg);
+  background-size: cover;
+}
+
+.back-search {
+  display: flex;
+  justify-content: center;
+  background-color: white;
+  opacity: 0.5;
+  width: 400px;
+  height: 400px;
+  margin: auto;
+}
+
+.btn-search {
+  position: absolute;
+}
