@@ -1,0 +1,9 @@
+<div class="grid">
+    {{#each artists}}
+        <div class="container">
+            <img class="image" src="{{this.images.0.url}}">
+            <p>{{this.name}}</p>
+            <button><a href="albums/{{this.id}}">Show Albums</a></button>
+        </div>
+    {{/each}}
+</div>

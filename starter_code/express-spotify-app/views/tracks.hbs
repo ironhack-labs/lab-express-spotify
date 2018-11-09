@@ -1,0 +1,12 @@
+<div class="song-header">
+    <span>Title</span>
+    <span>Listen</span>
+</div>
+<ol class="song-container">
+    {{#each tracks}}
+        <li class="song">
+            <span>{{this.name}}</span>
+            <audio controls src="{{this.preview_url}}">Play</audio>
+        </li>
+    {{/each}}
+</ol>

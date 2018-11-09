@@ -1,0 +1,102 @@
+.home {
+    background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main-search {
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.main-search > input {
+    width: 300px;
+    padding: 4px 8px;
+    outline: none;
+}
+
+.main-search > button {
+    padding: 6px;
+    color: white;
+    background-color: #ed6264;
+    margin-top: 20px;
+    outline: none;
+}
+
+.grid {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    width: 800px;
+    margin: 0 auto;
+}
+
+.container {
+    margin-top: 30px;
+    text-align: center;
+    width: 30%;
+    background-color: #4d4d4d;
+    color: white;
+    font-size: 20px;
+}
+
+.container > p {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.container > button {
+    width: 100px;
+    padding: 6px;
+    background-color: #ed6264;
+    margin-bottom: 4px;
+    outline: none;
+}
+
+.container a {
+    color: white;
+    text-decoration: none;
+}
+
+.image {
+    width: 100%;
+}
+
+.song-header {
+    width: 60%;
+    background-color: #4d4d4d;
+    color: #bfbbb6;
+    font-size: 24px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.song-container {
+    width: 60%;
+    margin: 0 auto;
+    background-color: #f1f3f4;
+    padding-left: 0;
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 30px;
+}
+
+.albums-header {
+    text-align: center;
+}
