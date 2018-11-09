@@ -1,6 +1,12 @@
-{{#if images.[0]}} {{#with images.[0]}}
-<img src="{{url}}"> {{/with}} {{else}}
-<img src="https://images.mentalfloss.com/sites/default/files/styles/mf_image_16x9/public/def-lep-header.png?itok=AkjvtERB&resize=1100x1100"> {{/if}}
-{{name}}
-
-<a href="albums/{{id}}">View Albums</a>
+<div class="container album-container">
+	<div class="">
+		{{#if images.[0]}} {{#with images.[0]}}
+		<img class="with-image" src="{{url}}"> {{/with}} {{else}}
+		<div class="no-image">No Image</div> {{/if}}
+	</div>
+	<div class="
+    cover-info">
+		<h5><strong>{{name}}</strong></h5>
+		<a class="btn btn-danger"  href="albums/{{id}}">View Albums</a>
+	</div>
+</div>

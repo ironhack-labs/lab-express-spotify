@@ -1,4 +1,11 @@
 {{!-- {{#each albumTrack}} {{> albumTrack}} {{/each}} --}}
-{{#each items as |track| }}
-  {{> albumTrack}}
-{{/each}} 
+<div class="container tracks-container">
+  <div class="tracks-header">
+    <h2>Listen</h2>
+  </div>
+  <div class="track">
+    {{#each items as |track| }}
+    {{> albumTrack}}
+    {{/each}}
+  </div>
+</div>
