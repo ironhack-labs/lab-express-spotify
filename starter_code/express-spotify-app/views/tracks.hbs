@@ -1,0 +1,12 @@
+<div class="artists-wrapper">
+  <div class="row header-row">
+    <div class="col-lg-8" style="text-align: left;">Title</div>
+    <div class="col-lg-4" style="text-align: right;">Listen</div>
+    </div>
+      {{#each artistTracks}}
+        <div class="artist-div track-div">
+          <h3>{{this.name}}</h3>
+          <audio src="{{this.preview_url}}" type="audio/mpeg" controls></audio>
+        </div>
+      {{/each}}
+</div>

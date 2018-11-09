@@ -1,0 +1,131 @@
+body{
+  margin: 0;
+  width: 100%;
+  height: 100vh;
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+}
+
+.homepage-section{
+  background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 100%;
+  height: 100%;
+}
+
+.homepage-input{
+  background-color: rgb(250, 250, 250, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+}
+
+.btn-search{
+  margin-top: 10px;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  display: inline-block;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  transition: all .15s ease-in-out;
+}
+
+.form-control{
+  display: block;
+  width: 450px;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.artists-wrapper{
+  text-align: center;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 0 10%;
+}
+
+.artist-div{
+  width: 100%;
+  height: auto;
+  padding: 10px 40px;
+
+}
+
+.artists-wrapper img{
+  width: 100%;
+  height: auto;
+}
+
+.artist-info-container {
+  background-color: #4D4D4D;
+  text-align: center;
+  padding: 8px 0 13px 0;
+  color: white;
+  }
+
+.artist-info-container h3 {
+  font-size: 18px;
+}
+
+.artist-info-container a{
+  color: #fff;
+  font-size: 12px;
+  background-color: #F86967;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+.header-row {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+  width: 100%;
+  }
+
+.listen.div{
+  text-align: right;
+}
+
+.row{
+  margin: 0;
+}
+
+.track-div{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F6F6F6;
+  margin-top: 6px;
+  padding: 10px 25px;
+}
+
+.track-div h3{
+  font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  font-size: 1rem;
+}
