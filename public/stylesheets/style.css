@@ -1,0 +1,151 @@
+@font-face {
+	font-family: Euclid;
+	src: url('/fonts/Euclid.woff');
+}
+
+@font-face {
+	font-family: NewParis;
+	src: url('/fonts/NewParis.woff2');
+}
+
+@font-face {
+	font-family: Euclid-Light;
+	src: url('/fonts/Euclid-Light.woff');
+}
+
+body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.home-container {
+	
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+	background-size: 100% 100%;
+    background-repeat: no-repeat;
+    background-position: contain;
+    height: 100vh;
+}
+
+.form-box {
+	width: 450px;
+	height: 175px;
+	background-color: rgba(255, 255, 255, 0.5);
+	border-radius: 10px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+input {
+	border-radius: 20px;
+	width: 250px;
+	background-color: white;
+	padding: 5px 30px;
+	border: none;
+	text-align: center;
+	font-size: 0.8em;
+	font-family: 'Euclid-Light'
+}
+
+form {
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+form button {
+	margin-top: 35px;
+	border: none;
+	border-radius: 20px;
+	background-color: #5CF261;
+	padding: 10px 30px;
+}
+
+/*############# ARTISTS ###########*/
+
+.list {
+	display: flex;
+	justify-content: space-around;
+	flex-wrap: wrap;
+
+}
+.element {
+	
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	background-color: #F2F4F5;
+	padding: 20px;
+	border-radius: 10px;
+
+	margin-bottom: 10px;
+	margin-top: 10px;
+}
+
+.prev-img {
+	height: 380px;
+	border-radius: 10px;
+}
+
+
+.button {
+	font-family: 'Euclid';
+	border-radius: 20px;
+	background-color: #88F28B;
+	padding: 10px 30px;
+	text-decoration: none;
+	color: black;
+}
+
+.header{
+	font-family: 'Euclid-Light'
+}
+
+.header-container {
+	width: 380px;
+	text-align: center;
+}
+
+
+/*########## TRACKS ##########*/
+
+.track-header {
+	font-family: 'Euclid';
+	font-size: 2.5em;
+	display: flex;
+	justify-content: space-between;
+	background-color: #7BF47F;
+	padding: 15px 0;
+
+}
+
+.track-header h3 {
+	display: inline-block;
+	padding: 0 200px;
+	margin: 0;
+	color: white;
+}
+
+.one-track {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	margin: 10px 15px;
+}
+
+.one-track h3, audio {
+	padding: 0 140px;
+}
+
+
+.track-list-container {
+	display: flex;
+	flex-direction: column;
+}
