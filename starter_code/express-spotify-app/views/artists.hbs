@@ -1,0 +1,11 @@
+<div class="allArtists">
+  {{#each artistsArray}}
+  <div class="oneArtist">
+    <img src="{{this.images.1.url}}" alt="coverAlbum"> 
+    <h2>{{this.name}}</h2>
+    <div>
+      <button><a href="/albums/artistId">View Albums</a></button>
+    </div>
+  </div>
+  {{/each}}
+</div>

@@ -1,0 +1,14 @@
+.index {
+  background-image: "";
+  background-repeat: no-repeat;
+}
+
+.form {
+  background-color: white;
+  opacity: 0.5;
+}
+
+.artistSearch {
+  background-color: tomato;
+  color:white;
+}
