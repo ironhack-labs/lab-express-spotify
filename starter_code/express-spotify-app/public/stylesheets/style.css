@@ -13,6 +13,33 @@ html {
   align-items: center;
   height: 100vh;
 }
+nav ul {
+  list-style-type: none;
+  display:flex;
+  flex-flow: row nowrap;
+  
+}
+
+nav ul li{
+  display: flex;
+  padding: 5px 10px;
+  background: rgb(219, 174, 169);
+}
+
+nav ul li:hover{
+  display: flex;
+  padding: 5px 10px;
+  background:#f57b4e;
+}
+
+nav ul li a{
+  text-decoration: none;
+  color:black;
+}
+
+.hidden{
+  visibility:hidden
+}
 
 .containerSearch {
   display: flex;
@@ -82,14 +109,14 @@ button:active {
   transform: translateY(2px);
 }
 
-.containerArtist{
+.containerList{
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
   align-content: center;
 }
 
-.artistCard{
+.card{
   background-color: rgba(114, 79, 93, 0.5);
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   display:flex;
@@ -100,4 +127,47 @@ button:active {
 
   font-size: 1rem;
   color:white;
+}
+
+.card-img:after { 
+  content: " ";
+  
+  color: rgb(100, 100, 100);
+  
+  background-color: #fff;
+}
+
+.containerTracks{
+  width: 700px;
+
+  display: flex;
+  flex-flow: column wrap;
+  justify-content: center;
+ 
+  margin: 0 auto;
+}
+
+.rowTrack{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-content: center;
+
+  margin:5px 5px;
+  padding: 5px 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.columnName{
+  display: flex;
+}
+
+.columnPlayer{
+  display: flex;
+}
+
+audio{
+  background-color:none;
+   border-radius: 0;
 }

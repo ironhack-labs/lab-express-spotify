@@ -1,7 +1,13 @@
-<div class="tracksPreview">
+<div class="rowTrack">
+  
+  <div class="columnName">
+    <p>{{this.name}}</p>
+  </div>
 
-  <p>{{this.name}}</p>
-  <audio controls>
-    <source src="{{this.preview_url}}">
-  </audio>
+  <div class="columnPlayer">
+    <audio controls>
+      <source src="{{this.preview_url}}">
+    </audio>
+  </div>
+
 </div>

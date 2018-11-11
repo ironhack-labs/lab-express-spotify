@@ -7,16 +7,22 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Express Spotify</title>
 
-  <link rel="stylesheet" href="./stylesheets/style.css">
+  <link rel="stylesheet" href="/stylesheets/style.css">
 </head>
 
 <body>
   <nav>
-    <a href="/">Home</a>
+    <ul>
+      <li id="nav-home"><a href="/">Home</a></li>
+      <li id="nav-artist" class="hidden"><a href="/artist">Artist</a></li>
+      <li id="nav-album" class="hidden"><a href="/album">Album</a></li>
+      <li id="nav-track" class="hidden"><a href="/track">Tracks</a></li>
+    </ul>
+    
   </nav>
   {{{body}}}
 
-  <script src="./javascripts/main.js"></script>
+  <script src="/javascripts/main.js"></script>
 
 </body>
 
