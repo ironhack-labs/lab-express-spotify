@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css?family=Lato|Open+Sans");
+
+html {
+  font-family: "Lato", sans-serif;
+  background: url("../images/background2.jpg") no-repeat center center fixed;
+  background-size: cover;
+  height: 100%;
+}
+
+.allViewport {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.containerSearch {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  width: 700px;
+  height: 250px;
+
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  background-color: rgba(114, 79, 93, 0.5);
+}
+
+form {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+}
+
+input {
+  background: rgb(219, 174, 169);
+  padding: 10px 5px;
+  width: 450px;
+  border: none;
+  font-size: 1.2rem;
+}
+
+button {
+  width: 300px;
+  margin-top: 30px;
+
+  padding: 10px 5px;
+
+  font-size: 1.2rem;
+  background: rgb(219, 174, 169);
+  border: none;
+}
+
+button:hover {
+  background-color: #f57b4e;
+  color: white;
+}
+
+button:active {
+  transform: translateY(2px);
+}
+
+.buttonCard{
+  display: block;
+    width: 100px;
+    height: 20px;
+    background: rgb(219, 174, 169);
+    padding: 10px;
+    margin: 5px;
+    text-align: center;
+    border-radius: 5px;
+    text-decoration-line: none;
+    color:black;
+}
+
+.buttonCard:hover {
+  background-color: #f57b4e;
+  color: white;
+}
+
+.buttonCard:active {
+  transform: translateY(2px);
+}
+
+.containerArtist{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: center;
+}
+
+.artistCard{
+  background-color: rgba(114, 79, 93, 0.5);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  display:flex;
+  flex-flow: column nowrap;
+  align-items: center;
+
+  margin: 10px 10px;
+
+  font-size: 1rem;
+  color:white;
+}
