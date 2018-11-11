@@ -2,7 +2,7 @@ var SpotifyWebApi = require("spotify-web-api-node");
 const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
-const bodyParser = require('body-parser');
+const bodyParser = require("body-parser");
 
 //instacia del servidor express
 const app = express();
@@ -18,40 +18,55 @@ app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, "public")));
 
 app.get("/", (req, res, next) => {
-  let data={
-    artist:req.query.artist
-  }
-  res.render("index",data);
+  let data = {
+    artist: req.query.artist
+  };
+  res.render("index", data);
 });
 
 app.get("/artists", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist)
     .then(artist => {
-       const data={
-        artists:artist.body.artists.items
+      const data = {
+        artists: artist.body.artists.items
       };
-      res.render("artists",data);
+      res.render("artists", data);
     })
     .catch(err => {
-        console.log("error API")
+      console.log("error API");
     });
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-  let {artistId}=req.params;
-  
+  let { artistId } = req.params;
+
   spotifyApi
     .getArtistAlbums(artistId)
     .then(albums => {
-      const data={
-        album:albums.body.items
-      }
-      console.log(data);
-      res.render("albums",data);
+      const data = {
+        album: albums.body.items
+      };
+      res.render("albums", data);
     })
     .catch(err => {
-        console.log("error API")
+      console.log("error API");
+    });
+});
+
+app.get("/tracks/:albumId", (req, res, next) => {
+  let { albumId } = req.params;
+
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then(tracks => {
+      const data = {
+        track: tracks.body.items
+      };
+      res.render("tracks", data);
+    })
+    .catch(err => {
+      console.log("error API");
     });
 });
 
