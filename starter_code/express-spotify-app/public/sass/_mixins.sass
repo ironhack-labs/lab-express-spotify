@@ -1,0 +1,66 @@
+$green: #1ed760
+$white: #fff
+$grey: #616467
+$darkGrey: #222326
+$black: black
+$background: #0f0f0f
+
+=prefix($property, $val)
+	#{$property}: $val
+	-webkit-#{$property}: $val
+	-moz-#{$property}: $val
+	-ms-#{$property}: $val
+	-o-#{$property}: $val
+
+=transform ($value)
+	-webkit-transform: $value
+	-moz-transform: $value
+	-ms-transform: $value
+	-o-transform: $value
+	transform: $value
+
+=transition ($value)
+	transition: $value
+	-webkit-transition: $value
+	-moz-transition: $value
+	-ms-transition: $value
+	-o-transition: $value
+
+=transition_default
+	transition: (all 300ms cubic-bezier(0.4, 0, 0.2, 1))
+	-webkit-transition: (all 300ms cubic-bezier(0.4, 0, 0.2, 1))
+	-moz-transition: (all 300ms cubic-bezier(0.4, 0, 0.2, 1))
+	-ms-transition: (all 300ms cubic-bezier(0.4, 0, 0.2, 1))
+	-o-transition: (all 300ms cubic-bezier(0.4, 0, 0.2, 1))
+
+=hover_scale
+	+transform(scale(1.1,1.1))
+	+transition_default
+
+=hover_scale_opacity
+	opacity: .7
+	+transform(scale(1.1,1.1))
+	+transition_default
+
+=flex_column
+  display: flex
+  flex-flow: column nowrap
+  justify-content: center
+  align-items: center
+
+=flex_center
+  display: flex
+  flex-flow: row wrap
+  justify-content: space-between
+  align-items: center
+
+
+//ANIMATIONS-------------------------------
+
+@keyframes animUp
+  from
+    top: 10px
+    transform: scale(1,1)
+  to
+    top: -10px
+    transform: scale(1.05,1.05)

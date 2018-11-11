@@ -1,0 +1,55 @@
+
+*
+  box-sizing: border-box
+
+html, body
+  margin: 0
+  min-height: 100vh
+  height: max-content
+  color: $white
+  background-color: $background
+  font-family: Circular, Helvetica, Arial, sans-serif
+  font-weight: black
+
+ul
+  margin: 0
+  padding: 0
+  li
+    list-style: none
+
+p
+  margin: 0
+  padding: 0
+
+a
+	display: inline-block
+	color: white
+	text-decoration: none
+	opacity: .4
+	+transition_default
+	&:hover
+		opacity: .6
+		+transition_default
+	&.active
+		opacity: 1
+		&::after
+			width: 100%
+	&::after
+		content: ''
+		display: block
+		background: white
+		width: 0px
+		height: .1em
+		margin-top: .03em
+		+transition_default
+	&:hover::after
+		width: 100%
+
+a.noEffect
+	display: inline-block
+	text-decoration: none
+	opacity: 1
+	&:hover
+		opacity: .5
+	&::after
+		content: none

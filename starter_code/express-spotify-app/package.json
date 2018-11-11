@@ -1,0 +1,40 @@
+{
+  "name": "express-spotify-app",
+  "version": "1.0.0",
+  "description": "playing around with Spotify API from Ironhack Madrid",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon -e js,hbs app.js & nodemon -e sass -x \"npm run build-css\"",
+    "build-css": "node-sass --include-path sass public/sass/styles.sass public/css/styles.css",
+    "watch-css": "nodemon -e sass -x \"npm run build-css\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aemartos/lab-express-spotify.git"
+  },
+  "keywords": [
+    "node",
+    "express",
+    "Spotify",
+    "API"
+  ],
+  "author": "anæstrada",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aemartos/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/aemartos/lab-express-spotify#readme",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "morgan": "^1.9.1",
+    "node-sass": "^4.10.0",
+    "nodemon": "^1.18.6",
+    "path": "^0.12.7",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

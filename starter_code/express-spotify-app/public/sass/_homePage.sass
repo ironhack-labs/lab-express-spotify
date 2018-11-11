@@ -1,0 +1,86 @@
+.main_container
+  min-height: 100vh
+  .container
+    &.home_container
+      min-height: 100vh
+      height: max-content
+      +flex_column
+      .formBox
+        +flex_column
+        border-radius: 1em
+        padding: 3em
+        background-color: $darkGrey
+        a.animate-logo
+          animation: animUp 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate
+          margin-bottom: 2em
+          img
+            width: 20em
+        form
+          &.searchForm
+            +flex_column
+            label.formTitle
+              font-size: 2em
+              margin-bottom: 1em
+            input.searchArtist
+              border: 2px solid white
+              border-radius: 5em
+              outline: none
+              width: 100%
+              padding: 1em 2em
+              margin-bottom: 1em
+              background-color: transparent
+              color: $white
+              font-size: 1em
+            span
+              height: 3em
+              button.searchBtn
+                cursor: pointer
+                font-size: 1.2em
+                font-weight: bold
+                padding: .5em
+                min-width: 7em
+                border-radius: 5em
+                color: $white
+                background-color: $green
+                border: .1em solid transparent
+                +transition_default
+                &:hover
+                  color: $green
+                  border: 3px solid $green
+                  background-color: $darkGrey
+                  +hover_scale
+
+
+@media (max-width: 767px)
+
+  .main_container
+    .container
+      &.home_container
+        .formBox
+          border-radius: 0
+          width: 100vw
+          height: 100vh
+          padding: 3em
+          background-color: $darkGrey
+          a.animate-logo
+            img
+              width: 17em
+          form
+            &.searchForm
+              label.formTitle
+                font-size: 1.8em
+
+
+@media (max-width: 360px)
+
+  .main_container
+    .container
+      &.home_container
+        .formBox
+          a.animate-logo
+            img
+              width: 15em
+          form
+            &.searchForm
+              label.formTitle
+                font-size: 1.4em
