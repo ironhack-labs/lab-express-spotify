@@ -150,9 +150,10 @@ button:active {
 
 .rowTrack{
   display: flex;
-  flex-flow: row wrap;
+  flex-flow: row nowrap;
   justify-content: space-between;
   align-content: center;
+  align-items: center;
 
   margin:5px 5px;
   padding: 5px 10px;
