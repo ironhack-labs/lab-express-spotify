@@ -1,0 +1,11 @@
+{{#if data.found}}
+  <div class="tracksBox">
+    {{#each data.consult}}
+      <div class="track">{{> track}}</div>
+    {{/each}}
+  </div>
+{{else}}
+  <div class="notFound">
+    TRACKS NOT FOUND
+  </div>
+{{/if}}

@@ -1,0 +1,11 @@
+{{#if data.found}}
+  <div class="artistBox">
+    {{#each data.consult}}
+      <div class="artist">{{> artist}}</div>
+    {{/each}}
+  </div>
+{{else}}
+  <div class="notFound">
+    ARTIST NOT FOUND
+  </div>
+{{/if}}

@@ -77,6 +77,9 @@ p {
   margin: 0;
   padding: 0; }
 
+button {
+  outline: none; }
+
 a {
   display: inline-block;
   color: white;

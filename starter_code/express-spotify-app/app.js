@@ -4,11 +4,10 @@ var clientId = '233be0ff6eec4286a17021b15024c094',
     clientSecret = '4ebe953e39174dbd911d95544bf443ba';
 
 var spotifyApi = new SpotifyWebApi({
-  clientId : clientId,
-  clientSecret : clientSecret
+  clientId: clientId,
+  clientSecret: clientSecret
 });
 
-// Retrieve an access token.
 spotifyApi.clientCredentialsGrant()
   .then(function(data) {
     spotifyApi.setAccessToken(data.body['access_token']);
@@ -19,7 +18,6 @@ spotifyApi.clientCredentialsGrant()
 
 const express = require("express");
 const hbs = require("hbs");
-const fs = require("fs");
 const bodyParser = require("body-parser");
 const app = express();
 const path = require("path");
@@ -44,48 +42,79 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.get("/", (req, res, next) => {
   let data = {
     name: "home",
-    home: true
+    home: true,
+    error: false
   };
-  res.render("home",{
-    data
-  });
+  res.render("home",{data});
 });
 
 
 
-// app.get('/', (req,res ) => {
-//   console.log(req.query);
+app.get('/artists', (req, res, next) => {
+  let data = {
+    name: "artists",
+    artists: true,
+    found: false
+  };
+  if(req.query.artist.length > 0) {
+    spotifyApi.searchArtists(req.query.artist)
+      .then(result => {
+        //console.log(result);
+        data.consult = result.body.artists.items;
+        data.found = data.consult.length <= 0 ? false : true;
+        //data.artist = req.query.artist;
+        res.render('artists', {data});
+      })
+      .catch(err => {res.send(err)});
+  } else {
+    let data = {
+      name: "home",
+      home: true,
+      error: true
+    };
+    res.render("home",{data});
+  }
+});
 
-//   let data = { showName: false };
-//   if(req.query.nombre){
-//       data = {
-//           showName: true,
-//           name: req.query.nombre,
-//           fav_color: req.query.fav_color
-//       }
-//   }
-//   res.render('home', data)
-// });
-
-// app.post('/', (req,res) => {
-//   console.log(req);
-//   console.log(req.body);
-//   res.send(`POST OOOK ${req.body.n1} color favorito: ${req.body.n2}`);
-// })
 
 
+app.get('/artists/:artistId/albums', (req, res, next) => {
+  console.log(req.params);
+  let data = {
+    name: "albums",
+    albums: true,
+    found: false
+  };
+  spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(result => {
+      data.consult = result.body.items;
+      data.artistId = req.params.artistId;
+      data.found = data.consult.length <= 0 ? false : true;
+      res.render('albums', {data});
+    })
+    .catch(err => {res.send(err)});
+});
 
-// app.get('/simpsons/:personaje',(req, res) => {
-//   let {personaje} = req.params;
 
-//   if(personaje == "homer" ){
-//       personaje =  "Homer mola mucho";
-//   }
+app.get('/artists/:artistId/albums/:albumId/tracks', (req, res, next) => {
+  let data = {
+    name: "tracks",
+    tracks: true,
+    found: false
+  };
+  spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(result => {
+      data.consult = result.body.items;
+      //console.log(data.consult)
+      //data.artistId = req.params.artistId;
+      //data.albumId = req.params.artistId;
+      data.found = data.consult.length <= 0 ? false : true;
+      res.render('tracks', {data});
+    })
+    .catch(err => {res.send(err)});
+});
 
-//   res.render('simpson',{
-//       nombre: personaje
-//   });
-// })
+
 
 let port = 3000;
 app.listen(port, () => console.log(`Ready on http://localhost:${port}`))
