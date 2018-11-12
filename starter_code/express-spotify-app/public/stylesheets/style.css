@@ -1,0 +1,76 @@
+h3,
+p {
+  color: white;
+}
+p {
+  font-size: 4vh;
+}
+body {
+  margin: 0;
+}
+.buttonIndex {
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #ffffff;
+  background-color: rgb(44, 193, 14);
+  border-radius: 6px;
+  border: 2px solid green;
+}
+.inputIndex {
+  padding: 10px;
+  font-size: 15px;
+}
+.index {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: 100%, 100%;
+  background-image: url(../images/concert.jpg);
+  background-repeat: no-repeat center center fixed;
+  height: 100vh;
+}
+.albumButton {
+  text-decoration: none;
+  padding: 1%;
+  margin: 1%;
+  background: red;
+  border-radius: 5px;
+  color: #f7f9f9;
+}
+.img {
+  width: 30vh;
+  height: 30vh;
+}
+.boxTotal {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+.boxAlbum {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: grey;
+  width: 30vh;
+  margin: 3vh;
+}
+.boxTracks {
+  text-align: center;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  background: rgb(0, 203, 0);
+}
+.line {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  margin: 5vh 0;
+  align-items: center;
+}
+.widthText {
+  width: 40vh;
+}
