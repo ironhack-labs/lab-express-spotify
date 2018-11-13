@@ -326,9 +326,16 @@ a {
     width: 80%; }
     .main_container .container.artists_container .box.artistsBox .artist .img.imgArtist {
       border-radius: 40em;
-      overflow: hidden; }
+      overflow: hidden;
+      position: relative;
+      padding-top: 80%; }
     .main_container .container.artists_container .box.artistsBox .artist .img img {
-      width: 100%; }
+      width: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0; }
   .main_container .container.artists_container .box.artistsBox .artist .info .name {
     width: 10em;
     margin: .8em 0 .5em;
