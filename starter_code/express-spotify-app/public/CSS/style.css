@@ -50,3 +50,32 @@
   font-size: 1rem;
   line-height: 1.25;
 }
+
+
+.div-artists{
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  margin: 1em;
+  color: white;
+}
+
+.ancho{
+  width: 300px;
+  margin: 1em;
+}
+
+.information-artist{
+  background: grey;
+  padding: 1em;
+  width: 300px;
+}
+
+.separacion-arriba{
+  margin-top: 5px;
+}
+img{
+  width: 350px;
+  height: 350px;
+}
