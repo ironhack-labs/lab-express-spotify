@@ -1,11 +1,14 @@
 {{#if data.found}}
-  <div class="albumsBox">
-    {{#each data.consult}}
-      <div class="album">{{> album}}</div>
-    {{/each}}
+  <div class="box albumsBox">
+    <div class="boxConsult artistName"><span class="artistConsult">{{data.artistName}}</span> albums</div>
+    <div class="owl-carousel owl-theme">
+      {{#each data.consult}}
+        <div class="album">{{> album}}</div>
+      {{/each}}
+    </div>
   </div>
 {{else}}
   <div class="notFound">
-    ALBUMS NOT FOUND
+    <p class="textNF">Could not find any albums</span></p>
   </div>
 {{/if}}

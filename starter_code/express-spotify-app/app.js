@@ -1,3 +1,7 @@
+//https://developer.mozilla.org/en-US/docs/Learn/Server-side/Express_Nodejs/routes
+//https://www.npmjs.com/package/spotify-web-api-node
+
+
 var SpotifyWebApi = require('spotify-web-api-node');
 
 var clientId = '233be0ff6eec4286a17021b15024c094',
@@ -24,8 +28,6 @@ const path = require("path");
 
 
 app.set("view engine", "hbs");
-//app.set('views', path.join(__dirname, 'views'));
-app.set("views", __dirname + "/views");
 
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -34,6 +36,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
+//app.set('views', path.join(__dirname, 'views'));
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/favicon.ico", express.static('public/img/beer.ico'));
 hbs.registerPartials(__dirname + '/views/partials');
@@ -62,7 +65,7 @@ app.get('/artists', (req, res, next) => {
         //console.log(result);
         data.consult = result.body.artists.items;
         data.found = data.consult.length <= 0 ? false : true;
-        //data.artist = req.query.artist;
+        data.artist = req.query.artist;
         res.render('artists', {data});
       })
       .catch(err => {res.send(err)});
@@ -79,7 +82,8 @@ app.get('/artists', (req, res, next) => {
 
 
 app.get('/artists/:artistId/albums', (req, res, next) => {
-  console.log(req.params);
+  //console.log(req.params);
+  console.log(req.query);
   let data = {
     name: "albums",
     albums: true,
@@ -88,7 +92,9 @@ app.get('/artists/:artistId/albums', (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(result => {
       data.consult = result.body.items;
+      // console.log(data.consult);
       data.artistId = req.params.artistId;
+      data.artistName = req.query.artistName;
       data.found = data.consult.length <= 0 ? false : true;
       res.render('albums', {data});
     })
@@ -97,6 +103,7 @@ app.get('/artists/:artistId/albums', (req, res, next) => {
 
 
 app.get('/artists/:artistId/albums/:albumId/tracks', (req, res, next) => {
+  console.log(req.query)
   let data = {
     name: "tracks",
     tracks: true,
@@ -108,6 +115,7 @@ app.get('/artists/:artistId/albums/:albumId/tracks', (req, res, next) => {
       //console.log(data.consult)
       //data.artistId = req.params.artistId;
       //data.albumId = req.params.artistId;
+      data.albumName = req.query.albumName;
       data.found = data.consult.length <= 0 ? false : true;
       res.render('tracks', {data});
     })

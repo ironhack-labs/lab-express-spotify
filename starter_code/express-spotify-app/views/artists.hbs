@@ -1,11 +1,13 @@
 {{#if data.found}}
-  <div class="artistBox">
+  <div class="box artistsBox">
+  <div class="boxConsult consultName"><span class="textConsult">{{data.artist}}</span> artists</div>
     {{#each data.consult}}
       <div class="artist">{{> artist}}</div>
     {{/each}}
   </div>
 {{else}}
   <div class="notFound">
-    ARTIST NOT FOUND
+    <p class="textNF">Could not find any results for <span class="artistNF">{{data.artist}}</span></p>
+    <span><a href="/" class="btn goBack">Go back</a></span>
   </div>
 {{/if}}

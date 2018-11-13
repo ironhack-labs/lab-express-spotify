@@ -1,0 +1,85 @@
+.main_container
+  .container
+    &.tracks_container
+      .tracksBox
+        width: 80%
+        margin: 4em auto
+        .track
+          +flex-row
+          margin-bottom: 2em
+          padding: 1em
+          background-color: $darkGrey
+          border-radius: 10em
+          &:last-child
+            margin-bottom: 0
+          .info
+            +flex-column_fs
+            .name
+              margin-left: 1em
+              a.underline
+                max-width: 17em
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+            .dur
+              opacity: .5
+              margin-left: 1em
+
+
+
+@media (max-width: 796px)
+
+  .main_container
+    .container
+      &.tracks_container
+        .tracksBox
+          .track
+            .info
+              .name
+                a.underline
+                  max-width: 10em
+
+
+@media (max-width: 650px)
+
+  .main_container
+    .container
+      &.tracks_container
+        .tracksBox
+          width: 90%
+          .track
+            .info
+              .name
+                a.underline
+                  max-width: 7em
+
+
+@media (max-width: 513px)
+
+  .main_container
+    .container
+      &.tracks_container
+        .tracksBox
+          width: 90%
+          .track
+            .info
+              font-size: .8em
+              .name
+                a.underline
+
+
+@media (max-width: 489px)
+
+  .main_container
+    .container
+      &.tracks_container
+        .tracksBox
+          width: 90%
+          .track
+            +flex_column_fs
+            border-radius: 0
+            .info
+              margin-bottom: 1em
+              font-size: 1em
+            audio
+              width: 100%

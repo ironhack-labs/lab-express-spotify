@@ -1,0 +1,53 @@
+.main_container
+  .container
+    &.artists_container, &.albums_container
+      +flex-row_cen
+      .box
+        &.albumsBox
+          width: 80%
+        &.artistsBox
+          +flex-row
+          width: 70%
+          margin: 4em auto
+      .notFound
+        +flex-column
+        text-align: center
+        width: 80%
+        margin: 0 auto
+        .textNF
+          font-size: calc(1vw + 1vh + 1em)
+          margin-bottom: .5em
+        span
+          height: 3em
+
+
+@media (max-width: 980px)
+
+  .main_container
+    .container
+      &.artists_container, &.albums_container
+        .box
+          &.artistsBox
+            width: 80%
+            margin: 2em auto
+
+
+@media (max-width: 767px)
+
+  .main_container
+    .container
+      &.artists_container, &.albums_container
+        .box
+          &.albumsBox
+            width: 90%
+
+
+@media (max-width: 560px)
+
+  .main_container
+    .container
+      &.artists_container, &.albums_container
+        .box
+          &.artistsBox
+            width: 90%
+            margin: 2em auto

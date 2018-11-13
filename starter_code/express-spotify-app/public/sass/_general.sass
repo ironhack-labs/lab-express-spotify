@@ -9,7 +9,7 @@ html, body
   color: $white
   background-color: $background
   font-family: Circular, Helvetica, Arial, sans-serif
-  font-weight: black
+  font-weight: 800
 
 ul
   margin: 0
@@ -24,11 +24,11 @@ p
 button
 	outline: none
 
-a
+a.underline
 	display: inline-block
 	color: white
 	text-decoration: none
-	opacity: .4
+	opacity: 1
 	+transition_default
 	&:hover
 		opacity: .6
@@ -42,17 +42,69 @@ a
 		display: block
 		background: white
 		width: 0px
-		height: .1em
+		height: .15em
 		margin-top: .03em
 		+transition_default
 	&:hover::after
 		width: 100%
 
-a.noEffect
+a
 	display: inline-block
 	text-decoration: none
+	color: white
 	opacity: 1
 	&:hover
 		opacity: .5
 	&::after
 		content: none
+
+.btn
+	text-align: center
+	cursor: pointer
+	font-size: 1.2em
+	font-weight: 800
+	padding: .5em
+	min-width: 7em
+	border-radius: 5em
+	color: $white
+	background-color: $green
+	border: .1em solid transparent
+	+transition_default
+	&:hover
+		color: $green
+		border: 3px solid $green
+		background-color: $darkGrey
+		+hover_scale
+
+.btnA
+	text-align: center
+	cursor: pointer
+	font-size: .9em
+	font-weight: 800
+	padding: .3em
+	min-width: 9em
+	height: 2em
+	line-height: 1.2em
+	border-radius: 5em
+	color: $black
+	background-color: $green
+	border: .1em solid transparent
+	+transition_default
+	&:hover
+		height: 2em
+		line-height: 1em
+		color: $green
+		border: 3px solid $green
+		background-color: $background
+		+hover_scale
+
+.main_container
+  min-height: 100vh
+  .container
+    min-height: 100vh
+    height: max-content
+		.box
+			.boxConsult
+				width: 100%
+				font-size: calc(2vw + 2vh + 1em)
+				margin-bottom: .5em

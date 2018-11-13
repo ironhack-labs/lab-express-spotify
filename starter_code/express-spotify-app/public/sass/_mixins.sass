@@ -1,3 +1,4 @@
+$red: #ff5252
 $green: #1ed760
 $white: #fff
 $grey: #616467
@@ -48,10 +49,22 @@ $background: #0f0f0f
   justify-content: center
   align-items: center
 
-=flex_center
+=flex_column_fs
+  display: flex
+  flex-flow: column nowrap
+  justify-content: flex-start
+  align-items: flex-start
+
+=flex_row
   display: flex
   flex-flow: row wrap
   justify-content: space-between
+  align-items: center
+
+=flex_row_cen
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
   align-items: center
 
 

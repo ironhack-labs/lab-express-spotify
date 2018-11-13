@@ -10,49 +10,49 @@
 @font-face {
   font-family: 'Circular';
   font-style: normal;
-  font-weight: normal;
+  font-weight: 200;
   src: local("Circular Std Book"), url("../fonts/CircularStd-Book.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
   font-style: italic;
-  font-weight: normal;
+  font-weight: 200;
   src: local("Circular Std Book Italic"), url("../fonts/CircularStd-BookItalic.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
   font-style: normal;
-  font-weight: medium;
+  font-weight: 400;
   src: local("Circular Std Medium"), url("../fonts/CircularStd-Medium.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
-  font-style: medium;
-  font-weight: italic;
+  font-style: normal;
+  font-weight: 400;
   src: local("Circular Std Medium Italic"), url("../fonts/CircularStd-MediumItalic.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
   font-style: normal;
-  font-weight: bold;
+  font-weight: 600;
   src: local("Circular Std Bold"), url("../fonts/CircularStd-Bold.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
   font-style: italic;
-  font-weight: bold;
+  font-weight: 600;
   src: local("Circular Std Bold Italic"), url("../fonts/CircularStd-BoldItalic.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
   font-style: normal;
-  font-weight: black;
+  font-weight: 800;
   src: local("Circular Std Black"), url("../fonts/CircularStd-Black.woff") format("woff"); }
 
 @font-face {
   font-family: 'Circular';
   font-style: italic;
-  font-weight: black;
+  font-weight: 800;
   src: local("Circular Std Black Italic"), url("../fonts/CircularStd-BlackItalic.woff") format("woff"); }
 
 * {
@@ -65,7 +65,7 @@ html, body {
   color: #fff;
   background-color: #0f0f0f;
   font-family: Circular, Helvetica, Arial, sans-serif;
-  font-weight: black; }
+  font-weight: 800; }
 
 ul {
   margin: 0;
@@ -80,122 +80,174 @@ p {
 button {
   outline: none; }
 
-a {
+a.underline {
   display: inline-block;
   color: white;
   text-decoration: none;
-  opacity: .4;
+  opacity: 1;
   transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
   -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-  a:hover {
+  a.underline:hover {
     opacity: .6;
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-  a.active {
+  a.underline.active {
     opacity: 1; }
-    a.active::after {
+    a.underline.active::after {
       width: 100%; }
-  a::after {
+  a.underline::after {
     content: '';
     display: block;
     background: white;
     width: 0px;
-    height: .1em;
+    height: .15em;
     margin-top: .03em;
     transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
     -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-  a:hover::after {
+  a.underline:hover::after {
     width: 100%; }
 
-a.noEffect {
+a {
   display: inline-block;
   text-decoration: none;
+  color: white;
   opacity: 1; }
-  a.noEffect:hover {
+  a:hover {
     opacity: .5; }
-  a.noEffect::after {
+  a::after {
     content: none; }
+
+.btn {
+  text-align: center;
+  cursor: pointer;
+  font-size: 1.2em;
+  font-weight: 800;
+  padding: .5em;
+  min-width: 7em;
+  border-radius: 5em;
+  color: #fff;
+  background-color: #1ed760;
+  border: .1em solid transparent;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .btn:hover {
+    color: #1ed760;
+    border: 3px solid #1ed760;
+    background-color: #222326;
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+
+.btnA {
+  text-align: center;
+  cursor: pointer;
+  font-size: .9em;
+  font-weight: 800;
+  padding: .3em;
+  min-width: 9em;
+  height: 2em;
+  line-height: 1.2em;
+  border-radius: 5em;
+  color: black;
+  background-color: #1ed760;
+  border: .1em solid transparent;
+  transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+  -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+  .btnA:hover {
+    height: 2em;
+    line-height: 1em;
+    color: #1ed760;
+    border: 3px solid #1ed760;
+    background-color: #0f0f0f;
+    -webkit-transform: scale(1.1, 1.1);
+    -moz-transform: scale(1.1, 1.1);
+    -ms-transform: scale(1.1, 1.1);
+    -o-transform: scale(1.1, 1.1);
+    transform: scale(1.1, 1.1);
+    transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
+    -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
 
 .main_container {
   min-height: 100vh; }
-  .main_container .container.home_container {
+  .main_container .container {
     min-height: 100vh;
-    height: max-content;
+    height: max-content; }
+  .main_container .box .boxConsult {
+    width: 100%;
+    font-size: calc(2vw + 2vh + 1em);
+    margin-bottom: .5em; }
+
+.main_container .container.home_container {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center; }
+  .main_container .container.home_container .formBox {
     display: flex;
     flex-flow: column nowrap;
     justify-content: center;
-    align-items: center; }
-    .main_container .container.home_container .formBox {
+    align-items: center;
+    border-radius: 1em;
+    padding: 3em;
+    background-color: #222326; }
+    .main_container .container.home_container .formBox a.animate-logo {
+      animation: animUp 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
+      margin-bottom: 2em; }
+      .main_container .container.home_container .formBox a.animate-logo img {
+        width: 20em; }
+    .main_container .container.home_container .formBox form.searchForm {
+      position: relative;
       display: flex;
       flex-flow: column nowrap;
       justify-content: center;
-      align-items: center;
-      border-radius: 1em;
-      padding: 3em;
-      background-color: #222326; }
-      .main_container .container.home_container .formBox a.animate-logo {
-        animation: animUp 300ms cubic-bezier(0.175, 0.885, 0.32, 1.275) infinite alternate;
-        margin-bottom: 2em; }
-        .main_container .container.home_container .formBox a.animate-logo img {
-          width: 20em; }
-      .main_container .container.home_container .formBox form.searchForm {
-        display: flex;
-        flex-flow: column nowrap;
-        justify-content: center;
-        align-items: center; }
-        .main_container .container.home_container .formBox form.searchForm label.formTitle {
-          font-size: 2em;
-          margin-bottom: 1em; }
-        .main_container .container.home_container .formBox form.searchForm input.searchArtist {
-          border: 2px solid white;
-          border-radius: 5em;
-          outline: none;
-          width: 100%;
-          padding: 1em 2em;
-          margin-bottom: 1em;
-          background-color: transparent;
-          color: #fff;
-          font-size: 1em; }
-        .main_container .container.home_container .formBox form.searchForm span {
-          height: 3em; }
-          .main_container .container.home_container .formBox form.searchForm span button.searchBtn {
-            cursor: pointer;
-            font-size: 1.2em;
-            font-weight: bold;
-            padding: .5em;
-            min-width: 7em;
-            border-radius: 5em;
-            color: #fff;
-            background-color: #1ed760;
-            border: .1em solid transparent;
-            transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-            -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
-            .main_container .container.home_container .formBox form.searchForm span button.searchBtn:hover {
-              color: #1ed760;
-              border: 3px solid #1ed760;
-              background-color: #222326;
-              -webkit-transform: scale(1.1, 1.1);
-              -moz-transform: scale(1.1, 1.1);
-              -ms-transform: scale(1.1, 1.1);
-              -o-transform: scale(1.1, 1.1);
-              transform: scale(1.1, 1.1);
-              transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-              -webkit-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-              -moz-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-              -ms-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1);
-              -o-transition: all 300ms cubic-bezier(0.4, 0, 0.2, 1); }
+      align-items: center; }
+      .main_container .container.home_container .formBox form.searchForm label.formTitle {
+        font-size: 2em;
+        margin-bottom: 1em; }
+      .main_container .container.home_container .formBox form.searchForm .error {
+        position: absolute;
+        font-size: .8em;
+        font-weight: 200;
+        top: 10.2em;
+        left: 1.5em;
+        color: #ff5252; }
+      .main_container .container.home_container .formBox form.searchForm input.searchArtist {
+        border: 2px solid white;
+        border-radius: 5em;
+        outline: none;
+        width: 100%;
+        padding: 1em 2em;
+        margin-bottom: 2em;
+        background-color: transparent;
+        color: #fff;
+        font-size: 1em; }
+      .main_container .container.home_container .formBox form.searchForm span {
+        height: 3em; }
 
 @media (max-width: 767px) {
   .main_container .container.home_container .formBox {
@@ -207,10 +259,167 @@ a.noEffect {
     .main_container .container.home_container .formBox a.animate-logo img {
       width: 17em; }
     .main_container .container.home_container .formBox form.searchForm label.formTitle {
-      font-size: 1.8em; } }
+      font-size: 1.8em; }
+    .main_container .container.home_container .formBox form.searchForm .error {
+      top: 9.6em; } }
 
 @media (max-width: 360px) {
   .main_container .container.home_container .formBox a.animate-logo img {
     width: 15em; }
   .main_container .container.home_container .formBox form.searchForm label.formTitle {
-    font-size: 1.4em; } }
+    font-size: 1.4em; }
+  .main_container .container.home_container .formBox form.searchForm .error {
+    top: 8.4em; } }
+
+.main_container .container.artists_container, .main_container .container.albums_container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-items: center; }
+  .main_container .container.artists_container .box.albumsBox, .main_container .container.albums_container .box.albumsBox {
+    width: 80%; }
+  .main_container .container.artists_container .box.artistsBox, .main_container .container.albums_container .box.artistsBox {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+    margin: 4em auto; }
+  .main_container .container.artists_container .notFound, .main_container .container.albums_container .notFound {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 80%;
+    margin: 0 auto; }
+    .main_container .container.artists_container .notFound .textNF, .main_container .container.albums_container .notFound .textNF {
+      font-size: calc(1vw + 1vh + 1em);
+      margin-bottom: .5em; }
+    .main_container .container.artists_container .notFound span, .main_container .container.albums_container .notFound span {
+      height: 3em; }
+
+@media (max-width: 980px) {
+  .main_container .container.artists_container .box.artistsBox, .main_container .container.albums_container .box.artistsBox {
+    width: 80%;
+    margin: 2em auto; } }
+
+@media (max-width: 767px) {
+  .main_container .container.artists_container .box.albumsBox, .main_container .container.albums_container .box.albumsBox {
+    width: 90%; } }
+
+@media (max-width: 560px) {
+  .main_container .container.artists_container .box.artistsBox, .main_container .container.albums_container .box.artistsBox {
+    width: 90%;
+    margin: 2em auto; } }
+
+.main_container .container.artists_container .box.artistsBox .artist {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  text-align: center;
+  margin: 1em 1em 1em 0; }
+  .main_container .container.artists_container .box.artistsBox .artist .img {
+    width: 80%; }
+    .main_container .container.artists_container .box.artistsBox .artist .img.imgArtist {
+      border-radius: 40em;
+      overflow: hidden; }
+    .main_container .container.artists_container .box.artistsBox .artist .img img {
+      width: 100%; }
+  .main_container .container.artists_container .box.artistsBox .artist .info .name {
+    width: 10em;
+    margin: .8em 0 .5em;
+    font-size: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .main_container .container.artists_container .box.artistsBox .artist .info .btnArtist {
+    height: 2em; }
+
+.album {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  text-align: center; }
+  .album .info.infoAlbum .name {
+    max-width: 10em;
+    margin: .8em 0 .5em;
+    font-size: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis; }
+  .album .info.infoAlbum .btnAlbum {
+    height: 3em; }
+
+@media (max-width: 980px) {
+  .main_container .container.artists_container .box.artistsBox .artist {
+    width: 45%; } }
+
+@media (max-width: 560px) {
+  .main_container .container.artists_container .box.artistsBox .artist {
+    width: 100%;
+    margin-bottom: 2em; } }
+
+.main_container .container.tracks_container .tracksBox {
+  width: 80%;
+  margin: 4em auto; }
+  .main_container .container.tracks_container .tracksBox .track {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2em;
+    padding: 1em;
+    background-color: #222326;
+    border-radius: 10em; }
+    .main_container .container.tracks_container .tracksBox .track:last-child {
+      margin-bottom: 0; }
+    .main_container .container.tracks_container .tracksBox .track .info {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start; }
+      .main_container .container.tracks_container .tracksBox .track .info .name {
+        margin-left: 1em; }
+        .main_container .container.tracks_container .tracksBox .track .info .name a.underline {
+          max-width: 17em;
+          overflow: hidden;
+          white-space: nowrap;
+          text-overflow: ellipsis; }
+      .main_container .container.tracks_container .tracksBox .track .info .dur {
+        opacity: .5;
+        margin-left: 1em; }
+
+@media (max-width: 796px) {
+  .main_container .container.tracks_container .tracksBox .track .info .name a.underline {
+    max-width: 10em; } }
+
+@media (max-width: 650px) {
+  .main_container .container.tracks_container .tracksBox {
+    width: 90%; }
+    .main_container .container.tracks_container .tracksBox .track .info .name a.underline {
+      max-width: 7em; } }
+
+@media (max-width: 513px) {
+  .main_container .container.tracks_container .tracksBox {
+    width: 90%; }
+    .main_container .container.tracks_container .tracksBox .track .info {
+      font-size: .8em; } }
+
+@media (max-width: 489px) {
+  .main_container .container.tracks_container .tracksBox {
+    width: 90%; }
+    .main_container .container.tracks_container .tracksBox .track {
+      display: flex;
+      flex-flow: column nowrap;
+      justify-content: flex-start;
+      align-items: flex-start;
+      border-radius: 0; }
+      .main_container .container.tracks_container .tracksBox .track .info {
+        margin-bottom: 1em;
+        font-size: 1em; }
+      .main_container .container.tracks_container .tracksBox .track audio {
+        width: 100%; } }

@@ -1,0 +1,66 @@
+.main_container
+  .container
+    &.artists_container
+      .box
+        &.artistsBox
+          .artist
+            +flex-column
+            width: 30%
+            text-align: center
+            margin: 1em 1em 1em 0
+            .img
+              width: 80%
+              &.imgArtist
+                border-radius: 40em
+                overflow: hidden
+              img
+                width: 100%
+            .info
+              &.infoArtist
+              .name
+                width: 10em
+                margin: .8em 0 .5em
+                font-size: 1.2em
+                overflow: hidden
+                white-space: nowrap
+                text-overflow: ellipsis
+              .btnArtist
+                height: 2em
+
+.album
+  +flex-column
+  text-align: center
+  .info
+    &.infoAlbum
+      .name
+        max-width: 10em
+        margin: .8em 0 .5em
+        font-size: 1.2em
+        overflow: hidden
+        white-space: nowrap
+        text-overflow: ellipsis
+      .btnAlbum
+        height: 3em
+
+
+@media (max-width: 980px)
+
+  .main_container
+    .container
+      &.artists_container
+        .box
+          &.artistsBox
+            .artist
+              width: 45%
+
+
+@media (max-width: 560px)
+
+  .main_container
+    .container
+      &.artists_container
+        .box
+          &.artistsBox
+            .artist
+              width: 100%
+              margin-bottom: 2em

@@ -1,9 +1,6 @@
 .main_container
-  min-height: 100vh
   .container
     &.home_container
-      min-height: 100vh
-      height: max-content
       +flex_column
       .formBox
         +flex_column
@@ -17,38 +14,30 @@
             width: 20em
         form
           &.searchForm
+            position: relative
             +flex_column
             label.formTitle
               font-size: 2em
               margin-bottom: 1em
+            .error
+              position: absolute
+              font-size: .8em
+              font-weight: 200
+              top: 10.2em
+              left: 1.5em
+              color: $red
             input.searchArtist
               border: 2px solid white
               border-radius: 5em
               outline: none
               width: 100%
               padding: 1em 2em
-              margin-bottom: 1em
+              margin-bottom: 2em
               background-color: transparent
               color: $white
               font-size: 1em
             span
               height: 3em
-              button.searchBtn
-                cursor: pointer
-                font-size: 1.2em
-                font-weight: bold
-                padding: .5em
-                min-width: 7em
-                border-radius: 5em
-                color: $white
-                background-color: $green
-                border: .1em solid transparent
-                +transition_default
-                &:hover
-                  color: $green
-                  border: 3px solid $green
-                  background-color: $darkGrey
-                  +hover_scale
 
 
 @media (max-width: 767px)
@@ -69,6 +58,8 @@
             &.searchForm
               label.formTitle
                 font-size: 1.8em
+              .error
+                top: 9.6em
 
 
 @media (max-width: 360px)
@@ -84,3 +75,5 @@
             &.searchForm
               label.formTitle
                 font-size: 1.4em
+              .error
+                top: 8.4em

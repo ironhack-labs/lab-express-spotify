@@ -1,13 +1,13 @@
 <div class="formBox">
-  <a href="http://www.spotify.com" class="noEffect animate-logo">
+  <a href="http://www.spotify.com" class="animate-logo">
     <img src="img/spotify-logo.png" alt="spotify-logo" class="logo">
   </a>
   <form class="searchForm" method="GET" action="/artists">
     <label class="formTitle">Search for an artist</label>
+    {{#if data.error}}
+      <div class="error">*You must write an artist</div>
+    {{/if}}
     <input class="searchArtist" type="text" name="artist">
-    <span><button class="searchBtn">search</button></span>
+    <span><button class="btn searchBtn">search</button></span>
   </form>
-  {{#if data.error}}
-    <div class="error">ERRORRRRRRRR</div>
-  {{/if}}
 </div>

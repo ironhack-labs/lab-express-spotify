@@ -1,3 +1,13 @@
-<div class="img imgArtist"><img src="{{this.images.0.url}}" alt=""></div>
-<div class="name nameArtist">{{this.name}}</div>
-<div class="button buttonArtist"><a href="/artists/{{this.id}}/albums">view albums</a></div>
+<div class="img imgArtist">
+  {{#if this.images.0.url}}
+    <img src="{{this.images.0.url}}" alt="">
+  {{else}}
+    <img src="/img/default-user.png" alt="">
+  {{/if}}
+</div>
+<div class="info infoArtist">
+  <div class="name nameArtist">{{this.name}}</div>
+  <div class="btnArtist">
+    <a class="btnA" href="/artists/{{this.id}}/albums">view albums</a>
+  </div>
+</div>

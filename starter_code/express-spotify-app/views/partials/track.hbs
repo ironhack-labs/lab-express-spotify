@@ -1,8 +1,12 @@
-<div class="name nameTrack">{{this.name}}</div>
-<div class="name durationTrack">{{this.duration_ms}}</div>
+<div class="info infoTrack">
+  <div class="name nameTrack"><a class="underline" href="{{this.external_urls.spotify}}" target="_blank">{{this.name}}</a></div>
+  <div class="dur durationTrack">{{this.duration_ms}}</div>
+</div>
 <audio controls>
   <source src="{{this.external_urls.spotify}}">
-Your browser does not support the audio element.
+  {{!-- <source src="{{this.preview_url}}"> --}}
+  {{!-- <source src="{{this.href}}"> --}}
+  Your browser does not support the audio element
 </audio>
 {{!-- <iframe src="{{this.external_urls.spotify}}" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> --}}
 {{!-- <iframe src="https://open.spotify.com/embed/user/sumarenta/playlist/6wjbCfwMAklYGSEnnp0zXc" width="300" height="380" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe> --}}

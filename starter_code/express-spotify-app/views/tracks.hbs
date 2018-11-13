@@ -1,11 +1,12 @@
 {{#if data.found}}
-  <div class="tracksBox">
+  <div class="box tracksBox">
+    <div class="boxConsult albumName"><span class="albumConsult">{{data.albumName}}</span> tracks</div>
     {{#each data.consult}}
       <div class="track">{{> track}}</div>
     {{/each}}
   </div>
 {{else}}
   <div class="notFound">
-    TRACKS NOT FOUND
+    <p class="textNF">Could not find any tracks</span></p>
   </div>
 {{/if}}
