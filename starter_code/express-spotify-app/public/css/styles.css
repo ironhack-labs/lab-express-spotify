@@ -283,6 +283,7 @@ a {
     flex-flow: row wrap;
     justify-content: space-between;
     align-items: center;
+    justify-content: flex-start;
     width: 70%;
     margin: 4em auto; }
   .main_container .container.artists_container .notFound, .main_container .container.albums_container .notFound {

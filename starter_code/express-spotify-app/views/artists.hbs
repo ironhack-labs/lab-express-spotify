@@ -1,6 +1,6 @@
 {{#if data.found}}
   <div class="box artistsBox">
-  <div class="boxConsult consultName"><span class="textConsult">{{data.artist}}</span> artists</div>
+  <div class="boxConsult consultName">Search for <span class="textConsult">{{data.artist}}</span> artists</div>
     {{#each data.consult}}
       <div class="artist">{{> artist}}</div>
     {{/each}}
