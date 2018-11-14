@@ -55,3 +55,5 @@ app.get('/artists', (req, res) => {
         console.log(e);
       });
     });
+
+    app.listen(3000);

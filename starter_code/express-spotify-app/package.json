@@ -12,6 +12,7 @@
   "dependencies": {
     "express": "^4.16.4",
     "handlebars": "^4.0.12",
+    "nodemon": "^1.18.6",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^4.0.0"
   }
