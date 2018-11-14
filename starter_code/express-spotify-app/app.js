@@ -34,12 +34,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use("/favicon.ico", express.static('public/img/favicon.ico'));
 hbs.registerPartials(__dirname + '/views/partials');
 
-app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
-//app.set('views', path.join(__dirname, 'views'));
-app.use(express.static(path.join(__dirname, "public")));
-app.use("/favicon.ico", express.static('public/img/beer.ico'));
-hbs.registerPartials(__dirname + '/views/partials');
 
 
 app.get("/", (req, res, next) => {
