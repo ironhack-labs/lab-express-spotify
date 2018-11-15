@@ -1,3 +1,9 @@
+const app = express();
+
+const hbs = require('hbs');
+const express = require('express');
+
+
 var SpotifyWebApi = require('spotify-web-api-node');
 
 // Remember to paste your credentials here
