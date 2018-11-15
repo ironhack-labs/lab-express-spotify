@@ -1,0 +1,42 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#home-container{
+    background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+    background: cover no-repeat fixed ;
+    background-size: 100% 100%;
+    height: 100vh;
+   display: flex;
+   
+   justify-content: center;
+   flex-wrap: wrap;
+   align-items: center;
+   align-content: center;
+}
+.home-button{
+background-color: rgb(255, 102, 102);
+color: white;
+height: 40px;
+width: 200px;
+margin-top: 10px;
+font-size: 15px;
+border-radius: 5px;
+
+}
+
+.home-input{
+width: 500px;
+height: 35px;
+font-size: 15px;
+border-radius: 5px;
+padding: 5px;
+}
+.full{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+
+
