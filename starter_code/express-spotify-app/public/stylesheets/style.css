@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+  font-family: Roboto;
+}
+
+.artist-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-evenly;
+  margin: 0 10rem;
+}
+
+.artist {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 2rem 0;
+  width: 30%;
+  background: rgb(50, 50, 50);
+}
+
+.artist img {
+  width: 100%;
+}
+
+.artist p {
+  margin: 0.5rem;
+  color: white;
+}
+
+.artist button {
+  
+  margin: 0.5rem;
+  padding: 0.5rem 0.75rem;
+  background: rgb(240, 94, 94);
+  color: white;
+  border-radius: 5px;
+  box-shadow: 0 0 0 black;
+  border: none;
+}
