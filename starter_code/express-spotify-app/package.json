@@ -2,14 +2,15 @@
   "name": "express-spotify-app",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "index.js",
   "scripts": {
-    "dev": "nodemon app.js , hbs app.js", 
+    "dev": "nodemon app.js , hbs app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "body-parser": "^1.18.3",
     "express": "^4.16.4",
     "handlebars": "^4.0.12",
     "nodemon": "^1.18.6",
