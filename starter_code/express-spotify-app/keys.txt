@@ -1,0 +1,4 @@
+{
+clientID: c987df232b6949a084d033b6bdde9e4f,
+clientSecret: 10f5875eeb4c44b6837c8f925af42c2a
+}
