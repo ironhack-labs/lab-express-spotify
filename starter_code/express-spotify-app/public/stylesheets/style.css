@@ -39,3 +39,36 @@ input{
     padding: .5rem 1rem;
     margin-bottom: 1rem;
 }
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.card{
+    flex: 0 0 calc(33% - 3rem);
+    background-color: #4e4e4e;
+    color: white;
+    margin: 1.5rem;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.card p{
+    margin: .5rem;
+    font-weight: 700;
+}
+img{
+    width: 100%;
+}
+
+.card .btn-pink {
+    border-radius: 5px;
+    font-size: .9rem;
+    text-decoration: none;
+    padding: .3rem .5rem;
+    margin-bottom: 1rem;
+}
