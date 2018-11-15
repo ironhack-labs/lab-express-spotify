@@ -45,10 +45,21 @@ app.post("/artist", (req, res, next) => {
     .catch(err => {
       // ----> 'HERE WE CAPTURE THE ERROR'
     })
+});
 
-    var asdf
-    {asdf}
-
+app.get('/albums/:artistId', (req, res) => {
+  
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
+    function(data) {
+      const x = data.body.items;
+      console.log('Artist albums', {x});
+      res.render("albums", {x});
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+  
 });
 
 app.listen(3000);
