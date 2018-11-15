@@ -1,10 +1,8 @@
 <div class="artist">
     {{#each this}}
+    <div>
     <img src="{{this.images.0.url}}" alt="">
     <div class"artist-box">
         <p>{{this.name}}</p>
-        <a href="/albums/{{this.id}}">View More</a>
-    </div>
     {{/each}}
 </div>
-
