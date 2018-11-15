@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.get('/artists', (req, res) => {
   spotifyApi.searchArtists(req.query.artist)
-    .then(data => {
+    .then((data) => {
       let artistsArray = [];
       data.body.artists.items.forEach(e => {
         artistsArray.push(e);
