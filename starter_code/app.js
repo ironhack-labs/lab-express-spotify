@@ -34,16 +34,20 @@ app.get('/', (req, res) => {
   });
 
 app.post('/artist', (req, res) => {
-    //
+    
     spotifyApi.searchArtists(req.body.artist)
-    .then(data => {
-        console.log(data.body.artists.items);
+    .then(dataRaw => {
+        // const data = {artist: dataRaw.body.artists.items[0].name, 
+        //             image: dataRaw.body.artists.items.images,
+        //             }
+    //console.log(data);
+     res.render('layout/artist', {data: dataRaw.body.artists.items});
+        //console.log(data);
     })
     .catch(err => {
         console.log(`Error en la búsqueda del artista ${err}`);
     })
-∫
-   // res.render('layout/artist'  );
+    
   });
 
     app.listen(3000, ()=> console.log('Escuchando puerto 3000'))
