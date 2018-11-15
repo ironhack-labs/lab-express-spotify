@@ -49,5 +49,20 @@ app.post("/artists", (req, res, next) => {
         })
 })
 
+app.get("/albums/:artistsId", (req, res, next) => {
+    // console.log(req.params.artistsId)
+    spotifyApi.getArtistAlbums(req.params.artistsId).then(
+        function (data) {
+            var albums = data.body.items;
+
+             console.log(albums);
+            res.status(200).render("albums",{albums})
+        },
+        function (err) {
+            console.error(err);
+        }
+    )
+});
+
 
 app.listen(3000)
