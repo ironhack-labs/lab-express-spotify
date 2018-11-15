@@ -1,0 +1,13 @@
+<div>
+  {{#each tracks}}
+  <label for="t-rex-roar">{{this.name}}</label>
+
+<audio
+    id="t-rex-roar"
+    controls
+    src="{{this.preview_url}}">
+    Your browser does not support the <code>{{this.uri}}</code>
+</audio>
+{{/each}}
+
+</div>

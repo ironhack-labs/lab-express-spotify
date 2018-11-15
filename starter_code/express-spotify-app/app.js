@@ -41,7 +41,6 @@ app.get("/", function(req, res) {
 
 app.post("/artist", function(req, res) {
   let artist = req.body.artist;
-
   return spotifyApi.searchArtists(artist)
   .then(data => {
     console.log(data.body.artists.items);
@@ -57,6 +56,18 @@ app.get("/albums/:albumID", (req, res) => {
   .then(data => {
     console.log(data.body.items[0]);
     res.render("albums", { albums: data.body.items });
+  }).catch(err => {
+    console.log (err);
+  })
+  
+});
+
+app.get("/tracks/:trackid", (req, res) => {
+  const id = req.params.trackid;
+  return spotifyApi.getAlbumTracks(id, {limit : 5 , offset: 1})
+  .then(data => {
+    
+    res.render("tracks", { tracks: data.body.items });
   }).catch(err => {
     console.log (err);
   })
