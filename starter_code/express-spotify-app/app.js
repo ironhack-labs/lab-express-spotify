@@ -38,9 +38,22 @@ app.get('/albums/:artistId', (req, res, next) => {
     let id = req.params.artistId;
     spotifyApi.getArtistAlbums(id)
         .then(data => {
-            console.log('Artist albums', data.body.items[0]);
             const albums = data.body.items;
             res.render('albums', { albums })
+        })
+        .catch(err => {
+            console.error(err);
+        })
+
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+    let id = req.params.albumId;
+    spotifyApi.getAlbumTracks(id, { limit : 5, offset : 1 })
+        .then(data => {
+            
+            const tracks = data.body.items;
+            res.render('tracks', { tracks })
         })
         .catch(err => {
             console.error(err);
@@ -54,7 +67,6 @@ app.post('/artists', (req, res, next) => {
         .then(data => {
 
             const artists = data.body.artists.items;
-            //console.log(artists)
             res.render('artists', { artists })
         })
         .catch(err => {
