@@ -1,0 +1,8 @@
+{{#each this}}
+<p>
+    {{this.name}}
+    <audio controls="controls" id="audio_player">
+        <source src="{{this.preview_url}}" type="audio/mp3">
+    </audio>
+</p>
+{{/each}}

@@ -43,11 +43,8 @@ app.get("/artists", function(req, res) {
 });
 
 app.get("/albums/:artistId", (req, res) => {
-  const id = req.params.artistId;
-
-  spotifyApi.getArtistAlbums(id).then(
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
     function(data) {
-      console.log("Artist albums", data.body);
       res.render("albums", data.body.items);
     },
     function(err) {
@@ -55,5 +52,16 @@ app.get("/albums/:artistId", (req, res) => {
     }
   );
 });
+
+app.get("/tracks/:albumId", (req, res) => {
+    spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(function(data) {
+      res.render("tracks", data.body.items);
+    }, function(err) {
+      console.log('Something went wrong!', err);
+    });
+  });
+
+
 
 app.listen(3000, () => console.log("Example app listening on port 3000!"));
