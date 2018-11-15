@@ -37,9 +37,9 @@ app.get("/", (req, res, next) => {
 });
 
 app.post("/artist", (req, res, next) => {
-  spotifyApi.searchArtists( "beatles"/*'HERE GOES THE QUERY ARTIST'*/)
+  spotifyApi.searchArtists(req.body.search)
     .then(data => {
-      var items = data.body.artists.items
+      const items = data.body.artists.items
       res.render("artist", {items});
     })
     .catch(err => {
