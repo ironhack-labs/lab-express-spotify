@@ -42,12 +42,22 @@ app.post('/artist', (req, res) => {
         //             }
     //console.log(data);
      res.render('layout/artist', {data: dataRaw.body.artists.items});
-        //console.log(data);
+
     })
     .catch(err => {
         console.log(`Error en la búsqueda del artista ${err}`);
     })
     
+  });
+
+  app.get('/album/:artistId', (req, res) => {
+    console.log(req.params.artistId)
+    spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(albums => {
+        console.log(albums.body.items[0].artists[0].name)
+        res.render('layout/album', {data: albums.body.items, artist: albums.body.items[0].artists[0].name});
+    })
+    //
   });
 
     app.listen(3000, ()=> console.log('Escuchando puerto 3000'))
