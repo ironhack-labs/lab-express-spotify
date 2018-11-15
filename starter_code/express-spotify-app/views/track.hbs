@@ -1,8 +1,11 @@
+{{#each this}}
 <label for="t-rex-roar">Listen to the T-Rex:</label>
 
+<p>{{this.name}}</p>
 <audio
     id="t-rex-roar"
     controls
-    src="{{this.track}}">
+    src="{{this.preview_url}}">
     Your browser does not support the <code>audio</code> element.
 </audio>
+{{/each}}

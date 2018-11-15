@@ -54,20 +54,23 @@ app.get("/albums/:artistId", (req, res) => {
     spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(data => {
-        console.log(data.body.items);
+    
       res.render("albumViews", data.body.items);
     })
     .catch(err => console.log(err));
 });
 
 
-app.get("track/:trackId", (req,res)=>{
-    spotifyApi.getAlbumTracks(req.params.trackId)
-    console.log(data.body.items)
+app.get("/track/:trackId", (req,res)=>{
+    console.log(req.params.trackId)
+    spotifyApi.
+    getAlbumTracks(req.params.trackId)
     .then(data => {
+        console.log(data)
         res.render('track', data.body.items)
     }) 
-      console.log(data.body)
+    
+      //console.log(data.body)
   })
 /////////////////////////////////////////////////////////////////////////////////////
 app.listen(PORT, () => {
