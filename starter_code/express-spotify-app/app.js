@@ -47,7 +47,7 @@ app.get("/artists", (req, res, next) => {
     });
 });
 
-app.get("/:albums/:id", (req, res, next) => {
+app.get("/albums/:id", (req, res, next) => {
   let artistChoosen = req.params.id;
   spotifyApi
     .getArtistAlbums(artistChoosen)
@@ -60,14 +60,15 @@ app.get("/:albums/:id", (req, res, next) => {
     });
 });
 
-app.get("/:viewTracks/:id", (req, res, next) => {
-  let artistChoosen = req.params.id;
+app.get("/viewTracks/:id", (req, res, next) => {
+  console.log(req.params.id);
   spotifyApi
-    .getAlbumTracks(artistChoosen)
+    .getAlbumTracks(req.params.id)
     .then(data => {
       console.log(data);
       const data3 = data.body.items;
       res.render("viewTracks", { data3 });
+      console.log(data3)
     })
     .catch(err => {
       console.log(err);
