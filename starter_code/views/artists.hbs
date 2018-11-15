@@ -1,0 +1,11 @@
+<section class="artists">
+    {{#each artistas}}
+    <div class="artistCard">
+        <img src=" {{this.images.0.url}}" alt="">
+        <div class="footerCard">
+            <h1>{{this.name}}</h1>
+            <button class="buttonCard" onclick="location.href=`/albums/{{this.id}}`">View Albums</button>
+        </div>
+    </div>
+    {{/each}}
+</section>

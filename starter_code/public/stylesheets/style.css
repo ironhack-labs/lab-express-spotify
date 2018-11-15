@@ -1,0 +1,115 @@
+html, body {
+    padding: 0;
+    margin: 0;
+    
+}
+
+#mainPage {
+    background: url('/images/concert.jpg');
+    background-size: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+.formArtist{
+    width: 50vw;
+    height: 30vh;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+   
+}
+
+.inputForm {
+    display: block;
+    width: 500px;
+    height: 30px;
+}
+
+form {
+    text-align: center;
+}
+
+.buttonForm{
+    width: 200px;
+    height: 40px;
+    font-size: 20px;
+    margin-top: 20px;
+    background-color: red;
+    color:white;
+}
+
+.artists {
+    padding: 20px 200px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.artistCard {
+    width: 400px;
+    height: 550px;
+}
+
+.artistCard img {
+    width: 400px;
+    margin-bottom: -4px;
+
+}
+
+.footerCard {
+    text-align: center;
+    background: #4E4E4E;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.footerCard h1 {
+    color: white;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.buttonCard{
+    font-size: 15px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: rgb(170, 10, 10);
+    border: 0;
+    border-radius: 10px;
+    color:white;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+}
+
+.track {
+    display: flex;
+    flex-direction: row;
+    background: rgb(221, 221, 221);
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 80px;
+    margin-bottom: 5px;
+}
+
+.titleTracks {
+    padding: 0px 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 30px;
+    font-weight: bold;
+    color: white;
+    height: 10vh;
+    background: #4E4E4E;
+}
