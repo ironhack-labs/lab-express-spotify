@@ -1,0 +1,85 @@
+
+
+
+
+
+
+//////////////////////
+
+{ href: 'https://api.spotify.com/v1/artists/4DFhHyjvGYa9wxdHUjtDkc/albums?offset=0&limit=20&include_groups=album,single,compilation,appears_on',
+  items: 
+   [ { album_group: 'album',
+       album_type: 'album',
+       artists: [Array],
+       available_markets: [Array],
+       external_urls: [Object],
+       href: 'https://api.spotify.com/v1/albums/3Jr1RhAyndBxtyi8rJs3Op',
+       id: '3Jr1RhAyndBxtyi8rJs3Op',
+       images: [Array],
+       name: 'Eat The Elephant',
+       release_date: '2018-04-20',
+       release_date_precision: 'day',
+       total_tracks: 12,
+       type: 'album',
+       uri: 'spotify:album:3Jr1RhAyndBxtyi8rJs3Op' },
+
+/////////////////////////////////////////
+
+data.body.artists.items
+
+///////////////////
+ items: 
+   [ { external_urls: [Object],
+       followers: [Object],
+       genres: [Array],
+       href: 'https://api.spotify.com/v1/artists/1EXjXQpDx2pROygh8zvHs4',
+       id: '1EXjXQpDx2pROygh8zvHs4',
+       images: [Array],
+       name: 'Melendi',
+       popularity: 75,
+       type: 'artist',
+       uri: 'spotify:artist:1EXjXQpDx2pROygh8zvHs4' } ],
+
+/////////////////////////////
+
+{ body: 
+   { artists: 
+      { href: 'https://api.spotify.com/v1/search?query=asd&type=artist&offset=0&limit=20',
+        items: [Array],
+        limit: 20,
+        next: null,
+        offset: 0,
+        previous: null,
+        total: 5 } },
+  headers: 
+   { 'content-type': 'application/json; charset=utf-8',
+     'cache-control': 'public, max-age=7200',
+     'access-control-allow-origin': '*',
+     'access-control-allow-headers': 'Accept, Authorization, Origin, Content-Type, Retry-After',
+     'access-control-allow-methods': 'GET, POST, OPTIONS, PUT, DELETE, PATCH',
+     'access-control-allow-credentials': 'true',
+     'access-control-max-age': '604800',
+     'content-encoding': 'gzip',
+     date: 'Thu, 15 Nov 2018 17:11:09 GMT',
+     via: '1.1 google',
+     'alt-svc': 'clear',
+     connection: 'close',
+     'transfer-encoding': 'chunked' },
+  statusCode: 200 }
+{ data: 
+   { body: { artists: [Object] },
+     headers: 
+      { 'content-type': 'application/json; charset=utf-8',
+        'cache-control': 'public, max-age=7200',
+        'access-control-allow-origin': '*',
+        'access-control-allow-headers': 'Accept, Authorization, Origin, Content-Type, Retry-After',
+        'access-control-allow-methods': 'GET, POST, OPTIONS, PUT, DELETE, PATCH',
+        'access-control-allow-credentials': 'true',
+        'access-control-max-age': '604800',
+        'content-encoding': 'gzip',
+        date: 'Thu, 15 Nov 2018 17:11:09 GMT',
+        via: '1.1 google',
+        'alt-svc': 'clear',
+        connection: 'close',
+        'transfer-encoding': 'chunked' },
+
