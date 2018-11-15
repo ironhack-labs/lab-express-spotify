@@ -1,4 +1,4 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
@@ -40,6 +40,8 @@ app.get('/artists', (req, res) => {
     })
     .catch(e => {
      console.log(e);
+    });
+  });
 
      app.get('/albums/:artistId', (req, res) => {
       spotifyApi.getArtistAlbums(req.params.artistId)
@@ -56,4 +58,18 @@ app.get('/artists', (req, res) => {
       });
     });
 
+    app.get('/tracks/:albumId', (req, res) => {
+      spotifyApi.getAlbumTracks(req.params.albumId)
+      .then((data) => {
+        // console.log(data)
+        let tracksArray = [];
+        data.body.items.forEach(e => {
+          tracksArray.push(e);
+        });
+        res.render('tracks', {tracksArray});
+      })
+      .catch(e => {
+        console.log(e);
+      });
+    });
     app.listen(3000);

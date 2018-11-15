@@ -21,4 +21,9 @@
     background-color: rgba(255, 255, 255, 0.5);
      width: 40vw;
 }
-.
+.img-fluid{
+    width:auto;
+}
+.song-text{
+    width: 20vh;
+}
