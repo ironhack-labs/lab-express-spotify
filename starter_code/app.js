@@ -51,14 +51,24 @@ app.post('/artist', (req, res) => {
   });
 
   app.get('/album/:artistId', (req, res) => {
-    console.log(req.params.artistId)
+
     spotifyApi.getArtistAlbums(req.params.artistId)
     .then(albums => {
-        console.log(albums.body.items[0].artists[0].name)
         res.render('layout/album', {data: albums.body.items, artist: albums.body.items[0].artists[0].name});
     })
     //
   });
+  
+  app.get('/track/:trackId', (req, res) => {
 
-    app.listen(3000, ()=> console.log('Escuchando puerto 3000'))
+    spotifyApi.getAlbumTracks(req.params.trackId)
+    .then(track => {
+
+        res.render('layout/track', {data: track.body.items});
+    })
+    //
+  });
+
+
+app.listen(3000, ()=> console.log('Escuchando puerto 3000'))
 
