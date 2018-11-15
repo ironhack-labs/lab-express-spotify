@@ -1,0 +1,8 @@
+<div id="tracks-container">
+    {{#each tracks}}
+    <label for="t-rex-roar">{{name}}</label>
+    <audio id="t-rex-roar" controls src="{{preview_url}}">Your browser does not support the element
+        <code>{{uri}}</code>
+    </audio>
+    {{/each}}
+</div>
