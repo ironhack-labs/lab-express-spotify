@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 const hbs = require("hbs")
-
+const path = require("path");
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
@@ -21,3 +21,15 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
+app.set("view engine","hbs");
+app.set("views",__dirname+"/views")
+app.use(express.static(path.join(__dirname,"public")))
+
+hbs.registerPartials(__dirname+"/views/partials")
+
+app.get("/",(req,res, next)=>{
+    res.render("home")
+})
+
+app.listen(3000)

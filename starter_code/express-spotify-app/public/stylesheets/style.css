@@ -1,0 +1,41 @@
+.home{
+    background-image: url(/images/background.jpeg);
+    min-height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+body{
+    min-height: 100vh;
+}
+
+.btn-pink{
+    color: white;
+    background-color: #ff465a;
+    border: 1px solid #ff465a;    
+    padding: .5rem 1rem;
+    font-size: 18px;
+    width: fit-content;
+    transition: all .2s ease;
+}
+
+.btn-pink:hover{
+    background-color: white;
+    color: #ff465a;
+}
+
+form{
+    background-color: rgba(255,255,255, .6);
+    padding: 4rem 5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input{
+    width: 20rem;
+    padding: .5rem 1rem;
+    margin-bottom: 1rem;
+}
