@@ -80,3 +80,27 @@ font-weight: 700;
 text-align: center;
 margin: 1.5rem 1rem;
 }
+table{
+    width: 100%;
+}
+th:nth-child(2) {
+    width: fit-content;
+    text-align: center;
+}
+td:nth-child(2) {
+    text-align: right;
+    width: fit-content;
+    padding: 1rem;
+}
+td{
+    vertical-align: middle;
+    padding: 1rem;
+    font-weight: 700;
+}
+th{
+    background-color: #4b4b4b;
+    color: #c2c2c2;
+    font-size: 2rem;
+    font-weight: 800;
+    padding: 2rem 1.5rem;
+}

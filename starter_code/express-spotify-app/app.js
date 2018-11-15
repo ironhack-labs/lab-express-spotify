@@ -55,8 +55,8 @@ app.get("/albums/:artistsId", (req, res, next) => {
         function (data) {
             var albums = data.body.items;
 
-             console.log(albums);
-            res.status(200).render("albums",{albums})
+            // console.log(albums);
+            res.status(200).render("albums", { albums })
         },
         function (err) {
             console.error(err);
@@ -64,5 +64,19 @@ app.get("/albums/:artistsId", (req, res, next) => {
     )
 });
 
+app.get("/tracks/:albumsId", (req, res, next) => {
+    console.log(req.params.albumsId)
+    spotifyApi.getAlbumTracks(req.params.albumsId).then(
+        function (data) {
+            var tracks = data.body.items;
+
+            console.log(tracks);
+            res.status(200).render("tracks", { tracks })
+        },
+        function (err) {
+            console.error(err);
+        }
+    )
+});
 
 app.listen(3000)
