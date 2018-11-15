@@ -1,0 +1,14 @@
+body{
+    /*background-image: url(../images/img.jpg);*/
+    height: 100%;
+    margin: 100%;
+}
+
+.shearch{
+    margin: 100%
+}
+
+.img{
+    height: 200px;
+    width: 200px;
+}

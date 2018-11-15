@@ -1,0 +1,10 @@
+<h1>hola esto es la leche</h1>
+
+{{#each albums.items}}
+    {{this.name}}
+    <img src="{{this.images.0.url}}" alt="">
+    <a href="/albums/track/{{this.id}}">Link</a>
+{{/each}}
+
+    
+
