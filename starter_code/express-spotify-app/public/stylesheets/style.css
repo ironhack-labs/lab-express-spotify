@@ -7,14 +7,14 @@ body {
   font-family: Roboto;
 }
 
-.artist-container {
+.container {
   display: flex;
   flex-flow: row wrap;
   justify-content: space-evenly;
   margin: 0 10rem;
 }
 
-.artist {
+.item {
   display: flex;
   flex-flow: column nowrap;
   justify-content: center;
@@ -24,30 +24,52 @@ body {
   background: rgb(50, 50, 50);
 }
 
-.artist img {
+.item img {
   width: 100%;
+  height: 50%;
 }
 
-.artist p {
+.item p {
   margin: 0.5rem;
   color: white;
 }
 
-.artist a {
-  text-decoration: none;
-  color: white;
-}
-
-.artist button {
+.item a {
+  height: 20px;
+  width: 100px;
   margin: 0.5rem;
   padding: 0.5rem 0.75rem;
   background: rgb(240, 94, 94);
   color: white;
   border-radius: 5px;
-  box-shadow: 0 0 0 black;
   border: none;
+  text-decoration: none;
+  color: white;
 }
 
-.artist button:hover {
+.item button:hover {
   cursor: pointer;
+}
+
+.list {
+  display: flex;
+  flex-flow: column nowrap;
+  width: 100%;
+}
+
+.title {
+  display: flex;
+  justify-content: space-between;
+  background: rgb(50, 50, 50);
+  color: gray;
+  padding: 1rem 2rem;
+}
+
+.track {
+  padding: 0.25rem 0rem;
+  margin: 0.25rem 0;
+  display: flex;
+  justify-content: space-between;
+  background: lightgray;
+  width: 100%;
 }

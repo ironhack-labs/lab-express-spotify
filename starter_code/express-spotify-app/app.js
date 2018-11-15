@@ -66,5 +66,18 @@ app.get('/albums/:id', (req, res) => {
     });
 });
 
+app.get('/tracks/:id', (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.id)
+    .then((data) => {
+      const tracks = data.body.items.map(elem => ({
+        name: elem.name,
+        preview: elem.preview_url,
+      }));
+      return res.render('tracks', { tracks });
+    })
+    .catch((err) => {
+      console.log('Something went wrong when retrieving the artists', err);
+    });
+});
 
 app.listen(3000, () => console.log('Running'));
