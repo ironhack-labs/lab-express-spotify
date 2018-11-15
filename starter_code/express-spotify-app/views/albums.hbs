@@ -1,10 +1,9 @@
-
 <div class="artist-container">
-  {{#each artists}}
+  {{#each albums}}
   <div class="artist">
     <img src="{{this.images.url}}" alt="Image">
     <p>{{this.name}}</p>
-    <button value="{{this.id}}"><a href="/albums/{{this.id}}">View Albums</a></button>
+    <button href="/albums/{{this.id}}"value="{{this.id}}">View Albums</button>
   </div>
   {{/each}}
 </div>

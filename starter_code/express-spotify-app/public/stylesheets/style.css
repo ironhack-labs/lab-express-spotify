@@ -33,8 +33,12 @@ body {
   color: white;
 }
 
+.artist a {
+  text-decoration: none;
+  color: white;
+}
+
 .artist button {
-  
   margin: 0.5rem;
   padding: 0.5rem 0.75rem;
   background: rgb(240, 94, 94);
@@ -42,4 +46,8 @@ body {
   border-radius: 5px;
   box-shadow: 0 0 0 black;
   border: none;
+}
+
+.artist button:hover {
+  cursor: pointer;
 }

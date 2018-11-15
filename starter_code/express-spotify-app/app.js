@@ -39,16 +39,32 @@ app.get('/', (req, res, next) => {
 app.post('/artists', (req, res, next) => {
   spotifyApi.searchArtists(req.body.searchQuery)
     .then((data) => {
-      const viewData = data.body.artists.items.map(elem => ({
+      const artists = data.body.artists.items.map(elem => ({
         name: elem.name,
         images: elem.images[0],
+        id: elem.id,
       }));
-      return res.render('artists', { viewData });
+      return res.render('artists', { artists });
     })
     .catch((err) => {
       console.log('Something went wrong when retrieving the artists', err);
     });
 });
 
-// spotifyApi.searchArtists('/artists');
+app.get('/albums/:id', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.id)
+    .then((data) => {
+      const albums = data.body.items.map(elem => ({
+        name: elem.name,
+        images: elem.images[0],
+        id: elem.id,
+      }));
+      return res.render('albums', { albums });
+    })
+    .catch((err) => {
+      console.log('Something went wrong when retrieving the artists', err);
+    });
+});
+
+
 app.listen(3000, () => console.log('Running'));
