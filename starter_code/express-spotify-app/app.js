@@ -57,13 +57,26 @@ app.get('/albums/:artistId', function (req, res) {
     spotifyApi.getArtistAlbums(req.params.artistId)
         .then((data) => {
             console.log('Entra tb');
-            console.log(data.body.items[0]);
+            console.log(data.body);
             res.render('albums', { album: data.body.items });
         })
         .catch(() => {
             console.log('Error while loading albums.');
         })
 });
+
+app.get('/albums/tracks/:albumId', function (req, res) {
+    console.log('entra tb tb');
+
+    spotifyApi.getAlbumTracks(req.params.albumId)
+        .then(function (data) {
+            console.log(data.body);
+            res.render('tracks', { track: data.body.items });
+
+        }, function (err) {
+            console.log('Something went wrong when trying to get the tracks!', err);
+        });
+})
 
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
