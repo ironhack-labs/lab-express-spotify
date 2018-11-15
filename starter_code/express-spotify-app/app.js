@@ -40,7 +40,6 @@ app.get("/artists", (req, res, next) => {
     .searchArtists(artist)
     .then(data => {
       const data1 = data.body.artists.items;
-      //console.log(data1);
       res.render("artists", { data1 });
     })
     .catch(err => {
@@ -48,20 +47,31 @@ app.get("/artists", (req, res, next) => {
     });
 });
 
-app.get("/:albums", (req, res, next) => {
-  let album  = req.params.artist;
-  console.log(album);
-  spotifyApi.getArtistAlbums(
-    album,
-    { limit: 10, offset: 20 },
-    function(err, data) {
-      if (err) {
-        console.error("Something went wrong!");
-      } else {
-        console.log(data.body);
-      }
-    }
-  );
+app.get("/:albums/:id", (req, res, next) => {
+  let artistChoosen = req.params.id;
+  spotifyApi
+    .getArtistAlbums(artistChoosen)
+    .then(data => {
+      const data2 = data.body.items;
+      res.render("albums", { data2 });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/:viewTracks/:id", (req, res, next) => {
+  let artistChoosen = req.params.id;
+  spotifyApi
+    .getAlbumTracks(artistChoosen)
+    .then(data => {
+      console.log(data);
+      const data3 = data.body.items;
+      res.render("viewTracks", { data3 });
+    })
+    .catch(err => {
+      console.log(err);
+    });
 });
 
 const port = 3000;
