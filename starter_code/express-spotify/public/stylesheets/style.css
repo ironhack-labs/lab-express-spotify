@@ -1,0 +1,97 @@
+*{
+  padding:0;
+  margin:0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+body {
+  width: 100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+.container{
+  height: 100vh;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items: center;
+  background: url(/images/computer-devices-electronics-159376.jpg) no-repeat center center fixed;
+  /* background: url(/express-spotify/public/images/computer-devices-electronics-159376.jpg) no-repeat center center fixed; */
+  background-size: cover;
+}
+
+/* .form{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+} */
+
+.form-container{
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction:column;
+  background-color: rgba(0,0,0,0.1)
+}
+
+.btn{
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: white;
+  background: rgb(214, 46, 46);
+  border: none;
+  height: 40px;
+  width: 150px;
+  border-radius: 2px;
+  margin:  10px 20px 20px;
+}
+
+.btn:hover{
+  outline: none;
+  box-shadow: 0 0 3px rgba(124, 36, 36, 0.63);
+}
+
+.text-input{
+  text-align: left;
+  border: none;
+  width: 300px;
+  height: 40px;
+  font: 17px "Lucida Grande", Helvetica, Arial, sans-serif;
+  border-radius: 30px; 
+  margin: 20px;
+  padding: 0 15px;
+}
+
+.text-input:focus{
+  outline: none;
+  box-shadow: 0 0 3px rgba(68, 68, 68, 0.63);
+}
+
+.artist{
+  width: 300px;
+  background: #333;
+  margin: 10px;
+  color: white;
+  text-align: center;
+}
+
+.artist img{
+  width: 100%;
+}
+
+.artist h2{
+  font-size: 17px;
+  margin: 2px 0;
+}
+
+.artist-container{
+  margin: 0 12.5%;
+  width: 75%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+}
