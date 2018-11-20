@@ -1,8 +1,19 @@
 <div class="artist-container">
     {{#each info}}
     <div class="artist">
-        <img src={{this.images.1.url}} alt="">
+        <img src='{{this.images.1.url}}' alt="">
         <h2>{{this.name}}</h2>
+        {{#if ../button}}
+        <form action="/" method='post'>
+         <input type="hidden" id="custId" name="searchAlbum" value='{{this.id}}'>
+            <input type="submit" class='btn-sm' value='{{../button}}'>
+        </form>
+        {{else}}
+        <form action="/songs" method='post'>
+         <input type="hidden" id="custId" name="searchAlbum" value='{{this.id}}'>
+            <input type="submit" class='btn-sm' value='View Songs'>
+        </form>
+        {{/if}}
     </div>
     {{/each}}
 </div>

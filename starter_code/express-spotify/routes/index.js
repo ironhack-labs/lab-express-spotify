@@ -1,16 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var SpotifyWebApi = require('spotify-web-api-node');
 
-// Remember to paste your credentials here
-var clientId = 'cb898361ea19473a8b041f0c17122ff1',
-    clientSecret = '7727fdd2681c4fc6b24e8720b6957eac';
-
-var spotifyApi = new SpotifyWebApi({
-  clientId : clientId,
-  clientSecret : clientSecret
-});
-
+var spotifyApi = require('./spotifyApi')
 
 /* GET home page. */
 router.get('/', (req, res, next)=> {
@@ -20,12 +11,18 @@ router.get('/', (req, res, next)=> {
 router.post('/', (req,res,next)=>{
 
   console.log('##################',req.body.searchArtist)
+
 if(req.body.searchArtist){
     spotifyApi.searchArtists(req.body.searchArtist)
     .then((data)=> {
       // debugger
       console.log(data.body.artists.items)
-      res.render('artists', { title: 'Express', info: data.body.artists.items });
+      res.render('artists', 
+                    { title: 'Express',
+                      info: data.body.artists.items,
+                      button: "View Albums" 
+                    }
+      );
     })
     .catch((err)=> {
 
@@ -33,23 +30,25 @@ if(req.body.searchArtist){
       res.send("ERROR");
 
     })
+}else if(req.body.searchAlbum){
+  spotifyApi.getArtistAlbums(req.body.searchAlbum).then(
+    (data)=>{
+      debugger
+      console.log('Artist albums', data.body);
+      res.render('artists', { title: 'Express', info: data.body.items })
+    },
+    (err)=>{
+      console.error('ALBUM ERROR',err);
+    }
+  );
 }else{
   res.redirect('/')
 }
- 
+
+
 
 })
 
-spotifyApi.clientCredentialsGrant()
-.then((data)=> {
-  spotifyApi.setAccessToken(data.body['access_token'])
 
-  return spotifyApi
-}).catch((err)=> {
 
-  console.log(err)
-  res.send("ERROR");
-
-})
-
-module.exports = router;
+module.exports = router

@@ -1,0 +1,9 @@
+
+<div class="song-container">
+{{#each info}}
+<div class="song">
+    <p>{{this.name}}   <span>{{#if this.explicit}} (explicit) {{/if}}</span></p>
+    <p> ({{this.duration_ms}}) </p>
+</div>
+{{/each}}
+</div>

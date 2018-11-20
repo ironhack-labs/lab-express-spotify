@@ -95,3 +95,73 @@ a {
   flex-wrap: wrap;
   justify-content:space-around;
 }
+
+.btn-sm{
+  background-color: #F86967;
+  width: 100px;
+  border: none;
+  border-radius: 4px;
+  color: white;
+  height: 25px;
+  margin: 5px 0 10px;
+}
+
+.btn-sm:hover{
+  outline: none;
+  box-shadow: 0 0 3px #F86967;
+  cursor:pointer;
+}
+
+.song{
+  display:flex;
+  border: 1px solid rgb(82, 82, 82);
+  background: rgb(73, 73, 73);
+  color: white;
+  height: 40px;
+  align-items: center;
+}
+
+.song-container{
+  margin: 50px 25%;
+  width: 50%;
+}
+
+.song p{
+  margin: 0 10px;
+}
+
+@media only screen and (max-width: 500px) {
+  .artist-container{
+    margin: 0 12.5%;
+    width: 90%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-around;
+  }
+
+  .artist{
+    width: 600px;
+    background: #333;
+    margin: 10px;
+    color: white;
+    text-align: center;
+  }
+
+  .form-container{
+    width: 100vh;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction:column;
+    background-color: rgba(0,0,0,0.1)
+  }
+
+  form{
+    width: 100%;
+  }
+
+  .btn{
+    background-color: green;
+  }
+
+}
