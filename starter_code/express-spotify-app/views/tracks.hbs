@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Document</title>
+</head>
+<body>
+  {{> nav}}
+
+  <h1 class="header bg"> {{{ nameAlbum }}} Tracks</h1>
+
+  <div class="tracks-container">
+    {{#each albumTracks}}
+      <div class="tracks-container">
+        <p style="text-align: center">{{this.name}}</a></p>
+        {{#if this.preview_url}}
+          <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mpeg">
+          </audio>
+        {{else}}
+          <p class="p-style">Sorry, preview unavailable</p>
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+
+</body>
+</html>

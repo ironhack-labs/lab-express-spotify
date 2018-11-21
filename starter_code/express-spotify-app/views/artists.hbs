@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Spotify Search</title>
+</head>
+<body>
+  {{> nav}}
+  
+  <h1 class="header bg"> {{{artistName}}} search results</h1>
+
+  <div class="results-container-row">
+    {{#each artistList}}
+      <div class="results-container">
+        {{#if this.images.0.url}}
+          <img class="image-resize" src="{{this.images.0.url}}" alt="{{this.name}} picture">
+          <p><a href={{this.external_urls.spotify}} target="_blank">{{this.name}}</a></p>
+          
+          <button class="input-button" type="submit"><a href="/artists/albums/{{this.id}}">View Albums</a></button>
+          <br>
+        {{else}}
+          <div class="error-container">
+          <img class="small-image" src="/images/sad.png">
+          <p>Sorry, picture unavailable</p>
+          </div>
+    
+          <p><a href={{this.external_urls.spotify}} target="_blank">{{this.name}}</a></p>
+          
+          <button class="input-button" type="submit"><a href="/artists/albums/{{this.id}}">View Albums</a></button>
+          <br>
+
+        {{/if}}
+      </div>
+    {{/each}}
+  </div>
+
+</body>
+</html>

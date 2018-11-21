@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  padding: 0;
+  width:100%;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+.bg { 
+  background-image: url("../images/concert-background.jpg");
+  height: 100%; 
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+nav {
+  margin: 0;
+  height: 30px;
+  background: darkcyan;
+}
+
+nav p {
+  margin: 0;
+  padding: 5px 0 0 5%;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+button {
+  background-color: rgb(238, 229, 229);
+  border-radius: 20px;
+}
+
+.header {
+  color: blue;
+  margin: 0 auto;
+  padding: 2% 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: calc(16px + (14 * ((100vw - 320px) / (1200 - 320))));
+}
+
+.form-container {
+  margin:0 auto;
+  width: 50%;
+  height: 200px;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background-color: rgba(211,211,211,0.6)
+}
+
+.form-container-column {
+  margin:0;
+  width: 50%;
+  height: 200px;
+  display:flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.input-field {
+  width: 100%;
+  line-height: 2em;
+}
+
+.input-button {
+  color: white;
+  background: red;
+  line-height: 2em;
+  border-radius: 20px;
+}
+
+.results-container {
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  background: gray;
+  margin-bottom: 3%;
+  margin-top:3%;
+  width:300px;
+}
+
+.results-container-row {
+  background: white;
+  height: 100%;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  align-content: center;
+}
+
+.image-resize {
+  width: 300px;
+  height: 300px;
+}
+
+.small-image{
+  width: 100px;
+  height: 100px;
+}
+
+.error-container {
+  width:300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.tracks-container {
+  margin: 0 auto;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  border-top: 1px solid darkgray;
+  background: white;
+  margin-bottom: 5%;
+  width:300px;
+}
+
+.p-style {
+  font-size: 0.8em;
+  color: red;
+}

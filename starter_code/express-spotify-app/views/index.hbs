@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html class="bg" lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+  <title>Spotify Search</title>
+</head>
+<body>
+  {{> nav}}
+  <h1 class="header">Search Artists on Spotify</h1>
+
+  <div class="form-container">
+    <form class="form-container-column" action="/artists" method="POST">
+      <input class="input-field" id="searchArtist" type="text" name="artist" placeholder="artist">
+      <br>
+      <input class="input-button" type="submit" value="Search for an Artist">
+    </form>
+  </div>
+
+</body>
+</html>
+
+
+
