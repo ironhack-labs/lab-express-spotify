@@ -1,0 +1,111 @@
+
+body {
+  background-image: url('/images/music.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+
+/* -----home----- */
+
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20vh;
+}
+
+.title-bar {
+  font-family: 'Overpass Mono', monospace;
+  margin-bottom: 10vh;
+  color: #4d4d4d;
+  font-size: 4vw;
+}
+
+.list-word {
+  /* margin: 0 auto;
+  display: block;
+  width: 100%; */
+  display: flex;
+  justify-content: center;
+  margin-top: 2vh;
+  font-family: 'Overpass Mono', monospace;
+  font-size: 3vw;
+  font-weight: bold;
+  color: #ffa600;
+}
+
+/* -----artists----- */
+
+.wrapper-artist, .wrapper-album {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.item-container {
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  text-align: center;
+  margin: 3vh 3vw;
+}
+
+.artist-box {
+  background-size: cover;
+  height: 300px;
+  width: 350px;
+}
+
+.footer-artist {
+  display: flex;
+  flex-direction: column;
+  background-color: rgba(0,0,0,0.7);
+  color: #fff;
+  width:  350px;
+  background-size: cover;
+
+}
+
+.no-result {
+  width: 100%;
+  text-align: center;
+  margin-top: 5vh;
+}
+
+.btn-link-artist {
+  color: white;
+  list-style-type: none;
+}
+
+.btn-link-artist:hover {
+  list-style-type: none;
+}
+
+.container-artists {
+  border-radius: 10px;
+  
+}
+
+/* -----albums----- */
+.album-title {
+  text-align: center;
+  margin: 5vh 0;
+}
+
+/* -----tracks----- */
+.track-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10vh;
+}
+
+.track-item-box {
+  margin: 3vh 0;
+  border: 2px dotted #ffa600;
+  border-radius: 25px;
+  padding: 1vh 1vw;
+  width: 33vw;
+
+}
+

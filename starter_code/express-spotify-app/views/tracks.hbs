@@ -1,0 +1,17 @@
+ <h1 class="album-title"> {{albumName}} Tracks</h1>  
+<div class="track-container">
+  {{#each album}}
+    <div class="track-item-box">
+      {{this.name}} <br> 
+      {{#if this.preview_url}}
+      <audio controls>
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+      </audio>
+        {{else}}
+        <h3>Sorry, this track has no preview</h3>
+      {{/if}}
+      <br>
+    </div>
+    
+  {{/each}}
+</div>

@@ -1,0 +1,22 @@
+
+  <div class="wrapper-artist">
+   
+      {{#each data}}
+        <div class="item-container">
+           <br>
+          {{#if this.images.1.url}}
+            <div class="artist-box" style="background-image: url('{{this.images.1.url}}');"></div>
+             {{!-- <img src="{{this.images.2.url}}" width="140" height="140"> --}}
+          {{else}}
+            <div class="artist-box" style="background-image: url('/images/default.jpg');"></div>
+          {{/if}}
+          <br>
+          <div class="footer-artist">
+            <h5 class="artist-name"> {{this.name}} </h5>
+            <button type="button" class="btn btn-info"> <a class="btn-link-artist" href="/artist/albums/{{this.id}}">View albums</a> </button>
+        </div>
+        
+        </div>
+      {{/each}}
+    </div>
+
