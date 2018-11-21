@@ -1,0 +1,93 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+h2 {
+  color: white;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+  height: 200px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+.search-box {
+  width: 70%;
+}
+
+.wrapper {
+  width: 100%;
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.flex-container {
+  width: 400px;
+  height: 400px;
+  margin: 20px;
+  display: flex;
+  flex-direction: column-reverse;
+  justify-content: space-between;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 10px;
+  -webkit-box-shadow: -2px 6px 23px 7px rgba(143,143,143,1);
+  -moz-box-shadow: -2px 6px 23px 7px rgba(143,143,143,1);
+  box-shadow: -2px 6px 23px 7px rgba(143,143,143,1);  
+  
+}
+.card-footer {
+  text-align: center;
+  width: 100%; 
+  height: 25%; 
+  background-color: #4D4D4D;
+  border-bottom-left-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.card-footer button {
+  color: white;
+  font-size: 16px;
+  background-color: #EF6866;
+  border: 1px solid #EF6866;
+  border-radius: 5px;
+}
+.track-list {
+  display: flex;
+  justify-content: center;
+}
+
+.track-row {
+  font-weight: bold;
+  background-color: #F1F3F4;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.track-header {
+  font-weight: bold;
+  background-color: black;
+  color: white;
+  padding-left: 20px;
+  margin-bottom: 5px;
+  display: flex;
+  justify-content: space-between;
+  height: 40%;
+  width: 100%;
+}

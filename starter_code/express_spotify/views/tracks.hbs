@@ -1,0 +1,17 @@
+    <div class="track-header">
+        <h2>TRACKS</h2>
+        <h2 style="padding-right: 13%;">LISTEN</h2>
+    </div>
+
+    {{#each result}}
+    <div class="track-row">
+        <div style="margin: auto 0;">
+            {{this.name}}
+        </div>
+        <div>
+            <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+            </audio>
+        </div>
+    </div>      
+    {{/each}}

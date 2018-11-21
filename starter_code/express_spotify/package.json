@@ -1,0 +1,21 @@
+{
+  "name": "express-spotify",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "dependencies": {
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "cookie-parser": "~1.4.3",
+    "debug": "~2.6.9",
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "http-errors": "~1.6.2",
+    "morgan": "^1.9.1",
+    "prettyjson": "^1.2.1",
+    "query-string": "^6.2.0",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

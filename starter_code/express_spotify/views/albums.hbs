@@ -1,0 +1,16 @@
+<div class="wrapper"> 
+    {{#each result}}
+        {{#if this.images.1.url}}
+            <div class="flex-container" style="background-image: url({{this.images.1.url}});"> 
+            {{else}}
+            <div class="flex-container" style="background-image: url('./images/default-placeholder.png');"> 
+        {{/if}}
+            <div class="card-footer">
+                <h2>{{this.name}}</h2>
+                <a href="/tracks/{{this.id}}">
+                    <button>Views tracks</button> 
+                </a>
+            </div>
+        </div>
+    {{/each}}
+ </div>
