@@ -1,0 +1,47 @@
+body {
+    color: white;
+    font-family: 'Montserrat', sans-serif;
+    background-color: rgb(49, 50, 49)
+}
+.searchBar {
+    background-color: rgb(31, 31, 31);
+}
+.btn {
+    border-radius: 100px 100px 100px 100px;
+    color: rgb(250, 249, 249);
+    font-weight: bold;
+    background-color: yellowgreen;
+}
+input[type=text] {
+    width: 40%;
+    padding: 6px 10px;
+    margin: 10px 10px;
+    border-radius: 100px 100px 100px 100px;
+    appearance: none;
+    background-color: rgb(164, 163, 163);
+    border: 2px solid #ccc;
+}
+input:focus, textarea:focus, select:focus{
+    outline: none;
+}
+.column {
+    background-color: rgb(67, 66, 66);
+    padding: 10px;
+    margin: 4px;
+    width: 260px;
+    height: 280px;
+    text-align: center;
+}
+h4 {
+    font-weight: bold;
+    font-size: 16px;
+    padding: 10px;
+
+}
+a:link {
+    color: rgb(250, 249, 249); 
+}
+a:hover {
+    color: yellowgreen;
+    text-decoration: none;
+}
