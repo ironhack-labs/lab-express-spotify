@@ -1,0 +1,16 @@
+
+{{#each search}}
+<div class="fotoContainer">
+  {{#if this.images.1.url}}
+ <img src="{{this.images.1.url}}">
+  {{else}}
+ <img src="./images/default-placeholder.png" class="placeholderImage">
+ {{/if}}
+  <div class="bottom">
+    <p>{{this.name}}</p>
+   <a href="index/albums/{{this.id}}"><button>View Albums</button></a>
+  </div>
+
+</div>
+{{/each}}
+

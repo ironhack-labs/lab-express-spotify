@@ -1,0 +1,159 @@
+body,html {
+height: 100%;
+margin: 0;
+
+}
+
+a {
+  color: #00B7FF;
+}
+
+#searchContainer{
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: 70%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+#searchForm{
+  background: rgba(255,255,255, 0.5);
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 80px;}
+
+#searchQuery{
+  display: block;
+  height: 50px;
+  width: 100%;
+  padding-left: 20px;
+}
+
+
+#submitButton{
+  margin: 0 auto;
+  width: 30%;
+  padding: 15px;
+  background-color:#F97D7B;
+  font-size: 16px;
+  border: none;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+#submitButton:hover{
+  background-color: white;
+  color: #F97D7B;
+  border: 1px solid rgba(0,0,0,0.5);
+}
+
+.containerFotos{
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-around;
+  align-content: space-around;
+  width: 70%;
+  margin: 50px auto 0 auto;
+}
+
+.fotoContainer{
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: flex-end;  
+  width: 400px;
+  margin-bottom: 20px;
+}
+.fotoContainer > img{
+  width: 400px;
+  height: 400px;
+}
+
+.bottom{
+  background-color: rgba(0,0,0,0.5);
+  width: 100%;
+  text-align:center;
+  font-family: Arial;
+  font-weight: 700;
+}
+
+.bottom > p{
+  color: white;
+  font-size: 20px;
+  margin-bottom: 3%;
+  font-weight: 600;
+}
+
+.bottom > a > button{
+  margin-bottom: 8%;
+  padding: 7px;
+  background-color:#F97D7B;
+  border: none;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+.placeholderImage{
+width: 400px;
+height: 400px;
+}
+
+.rowContainer{
+  width: 60%;
+  margin: 0 auto;
+}
+
+.row{ 
+width: 100%;
+background-color: #F6F6F6;
+height: 70px;
+display: flex;
+flex-flow: row nowrap;
+align-items: center;
+margin-bottom: 2px;}
+
+.rowHeader{
+  width: 100%;
+  background-color: #4A4A4A;
+  height: 80px;
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+}
+
+.title{
+  font-size: 20px;
+  color: white;
+  margin-left: 30px;
+  font-family: Arial;
+}
+
+.listen{
+  position: absolute;
+  right: 32%;
+  font-size: 20px;
+  color: white;
+  margin-left: 30px;
+  font-family: Arial;
+}
+
+.row > audio{ 
+  position: absolute;
+  right: 22%;
+}
+
+.row > .label {
+  font-size: 16px;
+  font-family: Arial;
+  font-weight: 900;
+  margin-left: 30px;
+  
+}
+
+

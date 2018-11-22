@@ -1,0 +1,6 @@
+ <div class="rowContainer">
+    <div class="rowHeader"><span class="title">Title</span><span class="listen">Listen</span></div>
+    {{#each track}}
+        <div class="row"><span class="label">{{this.name}}</span> <audio src="{{this.preview_url}}" controls></audio></div>
+      {{/each}}
+  </div>
