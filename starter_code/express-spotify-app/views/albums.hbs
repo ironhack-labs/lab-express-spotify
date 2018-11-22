@@ -1,12 +1,12 @@
 <div>
-    <h1>Artistas</h1>
-    {{#each artists}}
+    <h1>Albums</h1>
+    {{#each albums}}
         <p>{{this.name}}</p>
        {{#if this.images.[0].url}} 
         <img src="{{this.images.[0].url}}" alt="artist picture" width="100px">
         {{else}}
         <img src="" alt="">
         {{/if}}
-        <a id="album-button" href="/albums/{{this.id}}">View Album</a>
+        <a id="album-button" href="/tracks/{{this.id}}">View Tracks</a>
     {{/each}}   
 </div>

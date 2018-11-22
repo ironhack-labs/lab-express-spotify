@@ -1,8 +1,7 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+var SpotifyWebApi = require('spotify-web-api-node')
 const express = require('express')
 const router = express.Router()
 
-// Remember to paste your credentials here
 var clientId = '5a4842ba39bd45a5b95f9b12f7be1a54',
     clientSecret = '92cef8bf488d4f6d995ab69f7e4f3c7b';
 
@@ -19,27 +18,44 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-//Muestra formulario
-router.get('/',(req,res)=>{
-  const {search} = req.query
-  const busqueda = {
-    name:search
-  }
-  if(search){
-    spotifyApi.searchArtists(search,{limit:3})
-    .then(data => {
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      console.log(data)
-      let artists = data.body.artists.items
-      res.render('artists',{artists}) 
-    })
-    .catch(err => {
-      // ----> 'HERE WE CAPTURE THE ERROR'
-      console.log(err)
-    })
-  } else {
-    res.render('home')
-  }
+router.get('/', (req,res) => {
+    const {search} = req.query
+    if(search){
+        spotifyApi.searchArtists(search)
+        .then( data => {
+        let artists = data.body.artists.items
+        res.render('artists',{artists})
+        })
+        .catch( error => {
+            console.log(error)
+        })
+        
+    } else{
+        res.render('home')
+    }
 })
 
+router.get('/albums/:id', (req,res) => {
+    const {id} = req.params
+    spotifyApi.getArtistAlbums(id)
+    .then( data => {
+        let albums = data.body.items
+        res.render('albums',{albums})
+    })
+    .catch( e => {
+        res.send(e)
+    })
+})
+
+router.get('/tracks/:id', (req,res) => {
+    const {id} = req.params
+    spotifyApi.getAlbumTracks(id)
+    .then( data => {
+        let tracks = data.body.items
+        res.render('tracks',{tracks})
+    })
+    .catch( e => {
+        res.send(e)
+    })
+})
 module.exports = router
