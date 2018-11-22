@@ -27,9 +27,11 @@ router.get('/', (req,res)=>{
     //name:search
   //}
   if(search){
-    spotifyApi.searchArtists(search, {limit:2})
+    spotifyApi.searchArtists(search, {limit:1})
       .then(data=>{
-        console.log(data)
+        let artist = data.body.artists.items
+          res.render('artists', {artist})
+        //console.log(data)
       }).catch(error =>{
           console.log(error)
       })
