@@ -1,4 +1,4 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+var SpotifyWebApi = require("spotify-web-api-node")
 
 // Hiding credentials
 var apiConfig = require("./config")

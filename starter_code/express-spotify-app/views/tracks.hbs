@@ -1,21 +1,17 @@
 
-    <div class = "tracks-title">
-      <h1 style="display: inline; float: left">Title</h1>
-      <h1 style="display: inline; float: right">Listen</h1>
+<div class = "container">
+  <div class="row header-row">
+    <span class="col-lg-8">Title</span>
+    <span class="col-lg-4">Listen</span>
+  </div>
+  {{#each tracks}}
+    <div class="row track-item">
+      <div class="col-lg-8">
+        <p>{{this.name}}</p>
+      </div>
+      <div class="col-lg-4">
+        <audio controls="" name="media"><source src={{this.preview_url}} type="audio/mpeg"></audio>
+      </div>
     </div>
-    {{#each tracks}}
-    <div class="tracks">
-      <p style="float: left">{{this.name}}</p>
-      <audio style="float: left" controls> <source src={{this.preview_url}}></audio>
-
-      {{!-- <div class="col-lg-4 artist-container">  
-          <img src={{this.images.1.url}} alt="artist image" class="artist-img">     
-        <div class="artist-info-container">
-          <p>{{this.name}}</p>
-          <a href="/albums/{{this.id}}">View Albums</a>
-        </div>
-      </div> --}}
-    </div>
-    <br>
-    <hr>
-    {{/each}}
+  {{/each}}
+</div>
