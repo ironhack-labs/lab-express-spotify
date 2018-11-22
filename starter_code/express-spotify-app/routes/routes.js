@@ -1,16 +1,6 @@
 var SpotifyWebApi = require('spotify-web-api-node');
-const express = require('express');
-const app = express();
-const hbs = require('hbs');
-
-app.use(express.static('public'))
-
-app.set('views', __dirname + '/views')
-app.set('view engine', 'hbs')
-
-//conectar routes.js con app, que usare este archivo para todas las rutas
-const spotifyRoutes = require('./routes/routes')
-app.use('/', spotifyRoutes)
+const express = require('express')
+const router = express.Router()
 
 // Remember to paste your credentials here
 var clientId = '3197ad10c1284cd1bcf921cf280c12ee',
@@ -29,11 +19,20 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', err);
 });
 
-//comprobar que funcione el puerto
-// app.get('/',(req,res)=>{
-//     res.send('Ironhack Spotify')
-// })
+router.get('/', (req,res)=>{
+    const {search} = req.query
+    if(search) {
+        spotifyApi.searchArtists(search, {limit:2})
+        .then(data =>{
+            console.log(data)
 
-app.listen(3000, () =>{
-    console.log('Conectando')
+        })
+        .catch(error=>{
+            console.log(error)
+        })
+    }else {
+        res.render('home')
+    }
 })
+
+module.exports = router
