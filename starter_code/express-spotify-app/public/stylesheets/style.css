@@ -1,0 +1,46 @@
+*{
+    margin:0;
+    padding:0;
+}
+#contenedor{
+    background-image: url('../images/concierto.jpg');
+    background-size: cover;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    width:100%;
+    height: 600px;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+#registro{
+    width:70%;
+    height:250px;
+    background-color: rgba(255, 255, 255, 0.548)
+    
+
+}
+form{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 100px;
+
+}
+#texto{
+    height:30px;
+    width:300px;
+    margin-right:40px;
+    border-radius: 3px;
+
+}
+#someter{
+    height:30px;
+    background-color: red;
+    text-align: center;
+    padding:3px 5px;
+    color:white;
+    font-size: 15px;
+    font-weight:500;
+
+}
