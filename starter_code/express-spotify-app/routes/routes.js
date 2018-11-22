@@ -27,10 +27,14 @@ router.get('/', (req,res)=>{
     //name:search
   //}
   if(search){
-    spotifyApi.searchArtists(search, {limit:1})
+    spotifyApi.searchArtists(search, {limit:3})
       .then(data=>{
-        let artist = data.body.artists.items
-          res.render('artists', {artist})
+        //let artist = data.body.artists.items
+        let artistList= data.body.artists.items
+        //let img = data.body.artists.items.images[0]
+        //let info = {artist, img}
+
+          res.render('artists', {artistList})
         //console.log(data)
       }).catch(error =>{
           console.log(error)
