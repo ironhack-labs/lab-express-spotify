@@ -1,0 +1,25 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #192904;
+}
+form{
+width: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+position: relative;
+height: 500px;
+top: 36%;
+}
+table{
+  border: 2px solid red;
+border-radius: 14px;
+width: 34%;
+text-align: center;
+background: black;
+color: white;
+}
+

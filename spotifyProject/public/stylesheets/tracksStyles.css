@@ -1,0 +1,23 @@
+*{
+  margin: 0px;
+  padding: 0px;
+
+}
+body{
+  background-color: #192904;
+}
+ul{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style-type: none;
+  height: 910px;
+  flex-wrap: wrap;
+}
+li{
+  margin-bottom: 34px;
+}
+h2{
+  color: wheat;
+  margin: 20px;
+}

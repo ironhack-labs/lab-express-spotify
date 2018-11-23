@@ -1,0 +1,41 @@
+*{
+  padding: 0px;
+  margin: 0px;
+}
+
+body{
+ width:100%;
+ font-family: 'Arial', sans-serif;
+ background-color: #192904;
+}
+ul{
+  width: 72%;
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+  position: relative;
+  left: 15%;
+}
+li{
+  margin-top: 5px;
+  margin-bottom: 5px;
+  width: 30%
+}
+img{
+  max-width: 80%
+}
+figcaption{
+  text-align: center;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+  width: 78%;
+}
+figcaption:hover{
+  color: black;
+  background-color: white;
+}

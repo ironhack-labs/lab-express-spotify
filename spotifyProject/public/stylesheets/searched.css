@@ -1,0 +1,37 @@
+*{
+  margin: 0px;
+  padding: 0px;
+}
+body{
+  background-color: #192904;
+}
+form{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 872px;
+  text-align: center;
+}
+
+img{
+  max-width: 35%;
+}
+div{
+  width: 100%;
+}
+a{
+  display: block;
+  margin: 35px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: white;
+  background-color: black;
+}
+a:hover{
+  color: black;
+  background-color: white;
+}
+form > div{
+  width: 30%;
+}
