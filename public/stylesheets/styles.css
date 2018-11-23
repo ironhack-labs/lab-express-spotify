@@ -1,0 +1,11 @@
+.cards-container {
+  display: flex;
+  padding: 10% 20%;
+  justify-content: space-around;
+  flex-wrap: wrap
+}
+
+.song-container {
+  display: flex;
+  justify-content: space-around;
+}
