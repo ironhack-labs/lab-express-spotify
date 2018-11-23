@@ -1,18 +1,28 @@
-var SpotifyWebApi = require('spotify-web-api-node');
 
-// Remember to paste your credentials here
-var clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
 
-var spotifyApi = new SpotifyWebApi({
-    clientId : clientId,
-    clientSecret : clientSecret
-});
+const express = require('express')
+const hbs = require('hbs')
+const mongoose = require('mongoose')
+const bodyParser = require('body-parser')
 
-// Retrieve an access token.
-spotifyApi.clientCredentialsGrant()
-    .then(function(data) {
-        spotifyApi.setAccessToken(data.body['access_token']);
-    }, function(err) {
-        console.log('Something went wrong when retrieving an access token', err);
-    });
+
+//connect db
+mongoose.connect('mongodb://localhost/mongoosebikes')
+//app
+const app = express()
+app.use(bodyParser.urlencoded({extended:true}))
+
+//statics
+app.use(express.static('public'))
+
+//views
+app.set('views',__dirname + '/views')
+app.set('view engine','hbs')
+
+//routes
+const musicRoutes = require('./routes/music')
+app.use('/',musicRoutes)
+
+app.listen(3000,()=>{
+    console.log('app running on p 3000')
+})

@@ -1,0 +1,80 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+body{
+
+}
+body section:first-child{
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/images/spotify.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.card-container{
+    background-color: rgba(255,255,255,.6);
+    height: 30vh;
+    width: 65vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.card-container *{
+    margin: 5px;
+}
+
+.card-container button{
+    background-color: tomato;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+}
+
+.artist-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 30vh;
+    width: 10vw;
+    margin: 5px;
+    flex-wrap: wrap;
+    background-color: rgba(255,255,255,.7);
+}
+
+.album-card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20vh;
+    width: 10vw;
+    margin: 5px;
+    flex-wrap: wrap;
+}
+
+.track-container{
+    color: white;
+    background-color: rgba(0,0,0,.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    height: 20vh;
+    width: 10vw;
+    margin: 5px;
+    flex-wrap: wrap;
+}
