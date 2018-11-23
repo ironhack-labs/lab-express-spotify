@@ -1,12 +1,14 @@
-<div>
-    <h1>Albums</h1>
+<h1>Albums</h1>
+<div class="artist">
     {{#each albums}}
-        <p>{{this.name}}</p>
+    <div class="artist-card">
        {{#if this.images.[0].url}} 
         <img src="{{this.images.[0].url}}" alt="artist picture" width="100px">
         {{else}}
-        <img src="" alt="">
+        <img src="https://compote.slate.com/images/140b3525-0681-406a-9aa4-f3d1745f220d.png?width=780&height=520&rect=1560x1040&offset=0x0" alt="" width="200px" height="200px">
         {{/if}}
+        <h3>{{this.name}}</h3>
         <a id="album-button" href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
     {{/each}}   
 </div>

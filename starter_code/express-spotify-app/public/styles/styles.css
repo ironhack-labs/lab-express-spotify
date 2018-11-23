@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+}
+
+body {
+  background-color: white;
+}
+
+.home {
+  background: url('../images/concert.jpg');
+  height:100vh;
+}
+
+.home form {
+  padding: 350px;
+  /* height: 300px;
+  width: 500px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.home form .input {
+  height: 30px;
+  width: 400px;
+  margin: 10px;
+}
+
+.home form .submit {
+  height: 50px;
+  width: 200px;
+  background-color: rgba(150,0,0,0.7);
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.artist {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+.artist-card {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 30vw;
+  margin: 10px;
+  text-align: center;
+}
+
+.artist-card img {
+  margin: 10px;
+}
+
+.artist-card h3 {
+  margin: 10px;
+  color: white;
+}
+
+.artist-card a {
+  background-color: Crimson;  
+  border-radius: 5px;
+  color: white;
+  padding: .5em;
+  text-decoration: none;
+  width: 100px;
+  margin: 10px;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  background-color: lightgrey;
+  margin-bottom: 10px;
+}
+
+.tracks p{
+  width: 60vw;
+  margin: 10px 50px;
+}
+
+.tracks audio{
+  width: 20vw;
+}
+
+.header {
+  width: 80vw;
+  margin-left: 10vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
