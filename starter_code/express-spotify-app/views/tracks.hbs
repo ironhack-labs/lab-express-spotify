@@ -1,0 +1,26 @@
+<div class="container mt-5">    
+	<h1 class="element" style="display: inline"></h1>
+	<br><br>
+{{#each tracks}}
+	<div class="row">
+<div class="col-lg-6">
+	<p>{{this.name}}</p>
+		</div>
+		<div class="col-lg-6 text-right">
+    <audio name="media" controls="">
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+    </audio>
+			</div>
+	</div>
+    {{/each}}
+	
+    </div>
+</div> 
+<script>
+var options = {
+  strings: ["{{albumname}}"],
+  typeSpeed: 40
+}
+
+var typed = new Typed(".element", options);
+</script>

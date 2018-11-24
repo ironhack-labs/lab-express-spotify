@@ -1,0 +1,335 @@
+@charset "utf-8";
+/* CSS Document */
+
+body {
+  margin: 0; background-color: black!important; font-family: 'Montserrat', sans-serif!important;
+}
+
+h1 { color:white!important; font-family: 'Kumar One Outline', cursive!important; padding-bottom:30px }
+.typed-cursor {color:white; font-size: 44px; }
+.container p { color: white; }
+/* Global */
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+.single-item {
+  display: inline-block;
+  padding: 0;
+  margin: 0;
+  height: 450px;
+  margin: 15px 12px;
+  width: 31%;
+}
+
+.single-item img {
+  width: 100%;
+  height: 350px;
+  position: relative;
+}
+
+.single-item h3 {
+  font-size: 22px;
+  margin: 0;
+}
+
+.item-footer {
+  width: 100%;
+  background-color: #4d4d4d;
+  color: white;
+  padding: 10px;
+}
+
+.item-footer a {
+  color: white;
+  margin-top: 8px;
+  background-color: #ff6666;
+}
+
+.view-more {
+  border: 1px solid black;
+}
+
+/* Home Page */
+.home-container {
+/*  background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");*/
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+	z-index: 2;
+}
+
+.home-search {
+  margin-top: 10px;
+  border-radius: 0;
+  color: white;
+}
+
+.home-search:hover, .home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.form-wrapper {
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.artist-container {
+  padding: 10px 40px;
+
+}
+
+.artist-img {
+  width: 100%;
+}
+
+.artist-info-container {
+  background-color: #4D4D4D;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artist-info-container p {
+  color: #fff;
+  font-size: 16px;
+  margin: 0;
+}
+
+.artist-info-container a {
+  color: #fff;
+  font-size: 12px;
+  background-color: #18d85f;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+.track-item {
+  background-color: #F6F6F6;
+  margin-bottom: 2px;
+  padding: 10px 0;
+}
+
+.track-item p {
+  margin-bottom: 0;
+}
+
+.header-row {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+}
+
+.btn-primary {
+    color: #fff!important;
+    background-color: #18d85f!important;
+    border-color: #019638!important;
+}
+
+.form-control { border: 2px solid #18d85f!important; font-size: 1.2rem!important; border-radius: .65rem!important; }
+
+input { background: rgba(0,0,0,0.5)!important; color: white!important; text-align: center!important; box-shadow: 0 0 5px rgba(0, 0, 0, 1); }
+
+input[type=text], textarea {
+  -webkit-transition: all 0.30s ease-in-out;
+  -moz-transition: all 0.30s ease-in-out;
+  -ms-transition: all 0.30s ease-in-out;
+  -o-transition: all 0.30s ease-in-out;
+  outline: none;
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 0px solid #18d85f;
+}
+ 
+input[type=text]:focus, textarea:focus {
+  box-shadow: 0 0 28px rgba(24, 216, 95, 1);
+  padding: 3px 0px 3px 3px;
+  margin: 5px 1px 3px 0px;
+  border: 3px solid rgba(24, 216, 95, 1);
+}
+
+::placeholder {
+    color: #18d85f!important;
+    opacity: 1; /* Firefox */
+}
+
+:-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #18d85f!important;
+}
+
+::-ms-input-placeholder { /* Microsoft Edge */
+   color: #18d85f!important;
+}
+
+.col-lg-4 img { width:100%!important; }
+
+
+  .ui-autocomplete {
+    position: absolute;
+    top: 100%;
+    left: 20px;
+    z-index: 1000;
+	color: white;
+    float: left;
+    display: none;
+    min-width: 160px;   
+    padding: 8px 15px;
+    margin: 0px!important;
+    list-style: none;
+    background-color: rgba(0,0,0,0.5)!important;
+    border-color: #ccc;
+    border-color: rgba(0, 0, 0, 0.2);
+    border-style: solid;
+    border-width: 1px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -moz-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    *border-right-width: 2px;
+    *border-bottom-width: 2px;
+}
+
+.ui-menu-item > a.ui-corner-all {
+    display: block;
+    padding: 3px 15px;
+    clear: both;
+    font-weight: normal;
+    line-height: 18px;
+    color: #555555;
+    white-space: nowrap;
+    text-decoration: none;
+}
+
+.ui-state-hover, .ui-state-active {
+    color: #18d85f;
+    text-decoration: none;
+    background-color: transparent;
+    border-radius: 0px;
+    -webkit-border-radius: 0px;
+    -moz-border-radius: 0px;
+    background-image: none;
+}
+
+.ui-menu .ui-menu-item {
+    cursor: pointer;
+}
+
+.ui-helper-hidden-accessible { display:none!important; }
+
+/**************  LOGO  **************/
+
+@keyframes scale-to-full {
+  0%,
+  1% {
+    transform: scale(0);
+  }
+  70%,
+  100% {
+    transform: scale(1);
+  }
+}
+@keyframes show-bars {
+  0%,
+	30% {
+    opacity: 0;
+    transform: scaley(0.78);
+  }
+  70%,
+  92.8% {
+    opacity: 1;
+    transform: scaley(1);
+  }
+  93%,
+  100% {
+    opacity: 0;
+    transform: scaley(0.78);
+  }
+}
+@keyframes dash {
+  0% {
+    fill-opacity: 0;
+    stroke-width: 1px;
+  }
+  37% {
+    fill-opacity: 0;
+  }
+  50% {
+    stroke-width: 1px;
+  }
+  100% {
+    fill-opacity: 1;
+    stroke-dashoffset: 0;
+    stroke-width: 0;
+  }
+}
+#wrapper-svg {
+  align-items: center;
+  display: flex;
+  
+  justify-content: center;
+ 
+}
+#wrapper svg {
+  height: 80vh!important;
+  max-width: 90vw!important;
+  width: auto!important;
+}
+
+#logo--circle {
+  animation: dash 4s infinite, scale-to-full 4s infinite;
+  fill: #1ED760;
+  stroke: #1ED760;
+  stroke-dasharray: 90;
+  stroke-dashoffset: 90;
+  transform-origin: 84px 50%;
+  transition: fill-opacity 0.3s ease, transform 0.1s ease;
+}
+#logo--circle .logo--circle--bar {
+  animation: show-bars 4s infinite;
+  fill: white;
+  opacity: 0;
+  transform: scaley(0.78);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+#logo--circle #logo--circle--bar-1 {
+  animation-delay: 0.25s;
+}
+#logo--circle #logo--circle--bar-2 {
+  animation-delay: 0.7s;
+}
+#logo--circle #logo--circle--bar-3 {
+  animation-delay: 1s;
+}
+
+#logo--name path {
+  animation: dash 4s infinite;
+  fill: #1ED760;
+  stroke: #1ED760;
+  stroke-dasharray: 600;
+  stroke-dashoffset: 600;
+  transition: fill-opacity 0.3s ease;
+}
+
