@@ -43,7 +43,7 @@ spotifyApi.clientCredentialsGrant()
 	});
 
 //app.use('/', index);
-
+// Pass token as URL parameter for the autocomplete function of the search input field.
 app.get('/', function (req, res, next) {
 	res.redirect("/index?" + querystring.stringify({
 		access_token: token
