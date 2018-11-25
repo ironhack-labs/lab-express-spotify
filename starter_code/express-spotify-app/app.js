@@ -88,9 +88,7 @@ spotifyApi.getAlbum(req.params.albumId,
 		spotifyApi
         .getAlbumTracks(req.params.albumId)
         .then(data => {            
-            tracks = data.body.items;
-			console.log("laatste kans: ") + albumname;		
-			debugger
+            tracks = data.body.items;		
 			res.render('tracks', { tracks: tracks, albumname: albumname })           
         })
         .catch(err => {
