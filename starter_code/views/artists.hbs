@@ -1,7 +1,9 @@
 <div class="container">
   <div class="row">
-    {{#each artists}}
-    {{> artistcards}}
+    {{#each list }}
+    {{> artistcards this}}
     {{/each}}
   </div>
 </div>
+
+<p>test</p>
