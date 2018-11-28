@@ -24,13 +24,13 @@ app.set('view engine','hbs');
 app.get('/artists', function (req, res) {
     spotifyApi.searchArtists(req.query.artists)
     .then(data => {
-        var searchlist = {artistList : data.body.artists.items}
+        var searchlist = {artists : data.body.artists.items}
         res.render('artists', searchList)
-        console.log(data.body.artists.items)
+        console.log('ok')
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
-      console.log('err')
+      console.log('pas bon')
     })
 })
 
