@@ -1,0 +1,17 @@
+<div class="d-flex flex-row flex-wrap">
+    {{#each albumsList}}
+    <div class="card-container pl-5 pr-5">
+        <div class="card " style="width: 18rem;">
+            <img class="card-img-top" src={{this.images.0.url}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}} </h5>
+                    <div class="card-body">
+                    <a href="/tracks/{{this.id}} " class="card-link btn-success">View Tracks</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    {{else}}
+        {{err}}
+    {{/each}}
+</div>

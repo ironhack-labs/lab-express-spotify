@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Lab express Spotify</title>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+        <link rel="stylesheet" href="./stylesheets/style.css">
+    </head>
+    <body>
+
+<div class="d-flex flex-row flex-wrap">
+    {{log artistsList}}
+    {{#each artistsList}}
+        <div class="card-container  pl-5 pr-5">
+            <div class="card " style="width: 18rem;">
+            <img class="card-img-top" src={{this.images.0.url}} alt="Card image cap">
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}} </h5>
+                <div class="card-body">
+                    <a href="/albums/{{this.id}} " class="card-link btn-success">View Albums</a>
+                </div>
+            </div>
+            </div>
+        </div>
+    {{else}}
+        {{err}}
+    {{/each}}
+</div>
