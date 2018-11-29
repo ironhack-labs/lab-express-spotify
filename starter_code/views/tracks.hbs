@@ -12,15 +12,15 @@
 </head>
 
 <body>
-    <ul class="d-flex justify-content-around flex-wrap">
-        {{#each list}}
-        <div class="card" style="width: 400px;">
-            <img class="card-img-top" src=" {{images.1.url}}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>
-                <a href="/albums/{{id}}" class="btn btn-primary">View album</a>
-            </div>
-        </div>
+    <div class="row header-row">
+        <span class="col-lg-8">Title</span>
+        <span class="col-lg-4">Listen</span>
+    </div>
+    <ul>
+        {{#each track}}
+        <p>{{name}}</p>
+        <audio controls="" name="media">
+            <source src="{{preview_url}}" type="audio/mpeg"></audio>
         {{/each}}
     </ul>
 </body>

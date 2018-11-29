@@ -8,17 +8,17 @@
     <title>Artist</title>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="./style.css">
+    <link rel="stylesheet" type="text/css" href="../style.css">
 </head>
 
 <body>
     <ul class="d-flex justify-content-around flex-wrap">
-        {{#each list}}
-        <div class="card" style="width: 400px;">
-            <img class="card-img-top" src=" {{images.1.url}}" alt="Card image cap">
+        {{#each artistAlbums}}
+        <div class="card" style="width: 18rem;">
+            <img class="card-img-top" src=" {{this.images.0.url}}" alt="Card image cap">
             <div class="card-body">
-                <h5 class="card-title">{{name}}</h5>
-                <a href="/albums/{{id}}" class="btn btn-primary">View album</a>
+                <h5 class="card-title">{{this.name}}</h5>
+                <a href="/tracks/{{this.id}}">View Tracks</a>
             </div>
         </div>
         {{/each}}

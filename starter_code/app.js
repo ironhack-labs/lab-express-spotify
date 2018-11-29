@@ -26,6 +26,7 @@ const path = require("path");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
+app.use(express.static("public"));
 
 app.get("/", function(req, res) {
   res.render("index");
@@ -35,12 +36,38 @@ app.get("/artists", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-      var searchArtists = data.body.artists.items;
+      let searchArtists = data.body.artists.items;
       // console.log(data);
       res.render("artists", { list: searchArtists });
     })
     .catch(err => {
-      console.log("A error occurred");
+      console.log("An error occurred");
+    });
+});
+
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+      let album = data.body.items;
+      res.render("albums", { artistAlbums: album });
+    })
+    .catch(err => {
+      console.log("An error occurred", err);
+      next();
+    });
+});
+
+app.get("/tracks/:albumId", (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      let tracksList = data.body.items;
+      res.render("tracks", { track: tracksList });
+    })
+    .catch(err => {
+      console.log("An error occurred", err);
+      next();
     });
 });
 
