@@ -50,3 +50,18 @@ app.get("/artists", function(req, res, next) {
         console.log(error);
     });
 });
+
+// // New route for /albums a terminer
+// app.get("/albums", function(req, res, next) {
+//   // res.render("artists"),
+//     spotifyApi.searchArtists(req.query.artist)
+//       .then(data => {
+//       var searchArtists = data.body.artists.items;
+//       console.log(data.body.artists.items);
+
+//       res.render("albums", {list : searchArtists})
+//       })
+//       .catch(err => {
+//         console.log(error);
+//     });
+// });
