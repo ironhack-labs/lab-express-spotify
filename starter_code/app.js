@@ -9,7 +9,7 @@ app.set("view engine", "hbs");
 
 // Remember to paste your credentials here
 var clientId = "92d5540ea4bb44dc9b20e4056128a2e3",
-clientSecret = "ccb8ff0fd35440b092abf1bcda1dc104";
+  clientSecret = "ccb8ff0fd35440b092abf1bcda1dc104";
 
 var spotifyApi = new SpotifyWebApi({
   clientId: clientId,
@@ -30,7 +30,7 @@ spotifyApi.clientCredentialsGrant().then(
 
 app.use(express.static(path.join(__dirname, "public")));
 
-hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + "/views/partials");
 
 app.get("/", function(req, res) {
   res.render("index");
@@ -38,30 +38,30 @@ app.get("/", function(req, res) {
 
 // New route for /artists
 app.get("/artists", function(req, res, next) {
-  // res.render("artists"),
-    spotifyApi.searchArtists(req.query.artist)
-      .then(data => {
+  spotifyApi
+    .searchArtists(req.query.artist)
+    .then(data => {
       var searchArtists = data.body.artists.items;
       console.log(data.body.artists.items);
 
-      res.render("artists", {list : searchArtists})
-      })
-      .catch(err => {
-        console.log(error);
+      res.render("artists", { list: searchArtists });
+    })
+    .catch(err => {
+      console.log(err);
     });
 });
 
-// // New route for /albums a terminer
-// app.get("/albums", function(req, res, next) {
-//   // res.render("artists"),
-//     spotifyApi.searchArtists(req.query.artist)
-//       .then(data => {
-//       var searchArtists = data.body.artists.items;
-//       console.log(data.body.artists.items);
+// New route for /albums
+app.get("/albums/:artistId", function(req, res, next) {
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+      var getArtistAlbums = data.body.items;
+      console.log(getArtistAlbums);
 
-//       res.render("albums", {list : searchArtists})
-//       })
-//       .catch(err => {
-//         console.log(error);
-//     });
-// });
+      res.render("albums", { list: getArtistAlbums });
+    })
+    .catch(err => {
+      console.log(err);
+    });
+});
