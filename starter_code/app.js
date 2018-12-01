@@ -6,6 +6,7 @@ var SpotifyWebApi = require("spotify-web-api-node");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
+app.use(express.static(path.join(__dirname, 'public')));
 
 // Remember to paste your credentials here
 var clientId = "92d5540ea4bb44dc9b20e4056128a2e3",
@@ -16,7 +17,7 @@ var spotifyApi = new SpotifyWebApi({
   clientSecret: clientSecret
 });
 
-app.listen(3000);
+app.listen(3000,() => console.log('Spotify app listening on port 3000!'));
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant().then(
