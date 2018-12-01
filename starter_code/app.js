@@ -6,7 +6,7 @@ var SpotifyWebApi = require("spotify-web-api-node");
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
-app.use(express.static(path.join(__dirname, 'public')));
+app.use(express.static(path.join(__dirname, "public")));
 
 // Remember to paste your credentials here
 var clientId = "92d5540ea4bb44dc9b20e4056128a2e3",
@@ -17,7 +17,7 @@ var spotifyApi = new SpotifyWebApi({
   clientSecret: clientSecret
 });
 
-app.listen(3000,() => console.log('Spotify app listening on port 3000!'));
+app.listen(3000, () => console.log("Spotify app listening on port 3000!"));
 
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant().then(
@@ -28,8 +28,6 @@ spotifyApi.clientCredentialsGrant().then(
     console.log("Something went wrong when retrieving an access token", err);
   }
 );
-
-app.use(express.static(path.join(__dirname, "public")));
 
 hbs.registerPartials(__dirname + "/views/partials");
 
@@ -48,7 +46,7 @@ app.get("/artists", function(req, res, next) {
       res.render("artists", { list: searchArtists });
     })
     .catch(err => {
-      console.log(err);
+      console.log("Something went wrong!", err);
     });
 });
 
@@ -63,6 +61,21 @@ app.get("/albums/:artistId", function(req, res, next) {
       res.render("albums", { list: getArtistAlbums });
     })
     .catch(err => {
-      console.log(err);
+      console.log("Something went wrong!", err);
+    });
+});
+
+// New route for /tracks
+app.get("/tracks/:albumId", function(req, res, next) {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      var getAlbumTracks = data.body.items;
+      console.log(getAlbumTracks);
+
+      res.render("tracks", { list: getAlbumTracks });
+    })
+    .catch(err => {
+      console.log("Something went wrong!", err);
     });
 });
