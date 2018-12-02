@@ -1,5 +1,8 @@
-<div>
-    <img class="card-img" src="{{this.image[0]}}">
-    <p class="card-title">{{this.name}} </p>
-    <p class="card-genre">{{this.genres}}</p>
+<div class="single-item">
+    <img src="{{images.0.url}}">
+    
+    <div class="item-footer">
+        <h3>{{this.name}} </h3>
+        <a href="/albums/{{this.id}}"class="view-more"> View albums</a>
+        </div>
 </div>
