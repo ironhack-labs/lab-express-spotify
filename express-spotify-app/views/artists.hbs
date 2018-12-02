@@ -1,5 +1,21 @@
-<div class="artistsContainer">
-    {{#each artists}}
-        {{this.name}}
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">	  
+    <title>Artist</title>	   
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
+        crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./style.css">
+</head>	
+
+<h1> {{artistsResults.[0].name}}</h1>
+<div class="card">
+    {{#each artistsResults}}
+    {{>artistpartial}}
+    <h3>{{this.name}}</h3>
+
+         <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+          {{!-- <form action="albums.hbs" method="GET"></form>
+  <button type="submit" name="albums" id="" >VIEW ALBUM</button> --}}
+   
     {{/each}}
 </div> 
