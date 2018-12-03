@@ -1,28 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Artist</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-        crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="../style.css">
-</head>
-
-<body>
-    <ul class="d-flex justify-content-around flex-wrap">
-        {{#each artistAlbums}}
-        <div class="card" style="width: 18rem;">
-            <img class="card-img-top" src=" {{this.images.0.url}}" alt="Card image cap">
-            <div class="card-body">
-                <h5 class="card-title">{{this.name}}</h5>
-                <a href="/tracks/{{this.id}}">View Tracks</a>
-            </div>
+<ul class="d-flex justify-content-around flex-wrap">
+    {{#each artistAlbums}}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src=" {{this.images.0.url}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
         </div>
-        {{/each}}
-    </ul>
-</body>
-
-</html>
+    </div>
+    {{/each}}
+</ul>
