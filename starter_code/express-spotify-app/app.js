@@ -14,13 +14,9 @@ app.use (bodyParser.urlencoded({extended:true}));
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 
-app.get('/', function (req, res) {
-    res.render ('index') //afficher l'index
-})
+app.use (express.static('public')) //pour que n'importe quel user ait acces au repertoire public
 
-app.get('/artists', function (req, res,next) {
-    res.render ('index',{artist}) //afficher l'index
-})
+hbs.registerPartials(__dirname + '/views/partials')
 
 // Remember to paste your credentials here
 
@@ -39,6 +35,22 @@ spotifyApi.clientCredentialsGrant()
   }, function(err) {
     console.log('Something went wrong when retrieving an access token', err);
 });
+
+
+app.get('/', function (req, res) {
+    res.render ('index') //afficher l'index
+})
+
+app.get('/artists', (req, res,next) => {
+    spotifyApi.searchArtists(req.query.artist) //pour récuperer la requete sur l'url
+    .then(response => {
+        res.render ('artist',response.body.artists.items);
+    })
+    .catch(error => {
+        console.log(error)
+    })
+})
+
 
 app.listen(3000, () => console.log('Example app listening on port 3000!'))
 
