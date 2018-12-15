@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>Spotify Ironhack</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
+    crossorigin="anonymous">
+  <link rel="stylesheet" href="stylesheets/styles.css">
+</head>
+
+<body>
+  <ul>
+    {{#each artists}}
+    <li>{{this.name}}<img src={{this.images.0.url}}><button type="submit">View albums</button></li>
+    {{/each}}
+  </ul>
+</body>
+
+</html>
