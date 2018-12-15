@@ -1,0 +1,31 @@
+* {
+  font-family: Arial, Helvetica, sans-serif;
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.artistImage {
+  width:200px;
+  height:200px;
+  margin:20px;
+} 
+
+.artistImage img {
+  max-width:200px;
+  max-height:200px;
+  display:block;
+  margin:auto;
+}
+
+.container {
+  width:250px;
+  float:left;
+}
+
+.artistName {
+  height:50px;
+  margin:10px;
+  text-align:center;
+  /* background-color:grey; */
+}

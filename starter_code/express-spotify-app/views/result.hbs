@@ -1,0 +1,21 @@
+<head>
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+
+{{#each this}}
+<div class="container">
+  <div class="artistImage">
+    <a target="_blank" href="{{this.external_urls.spotify}}">
+    <img src="{{this.images.0.url}}" alt="Image">
+    </a>
+  </div>
+   <div class="artistName">
+    <h3>{{name}}</h3>
+  </div>
+    {{!-- <li>{{id}}</li>
+    <li>{{name}}</li>
+ --}}
+</div>
+{{/each}}
+</body>
