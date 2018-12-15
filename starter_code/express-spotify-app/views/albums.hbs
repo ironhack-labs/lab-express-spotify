@@ -1,0 +1,19 @@
+<div class="container">
+
+    <h1>Albums</h1>
+    <div class="albums cnt">
+        {{#each items}}
+        {{#if this.images.0.url}}
+        <div class="card">
+            <img src="{{this.images.0.url}}" alt="" width="200">
+            <div class="info">
+                <p>{{this.name}}</p>
+                <form action="/tracks/{{this.id}}" method="GET">
+                    <button type="submit" class="btn">View Tracks</button>
+                </form>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+</div>

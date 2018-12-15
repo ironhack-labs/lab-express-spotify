@@ -1,0 +1,23 @@
+<div class="container">
+    <h1>Artist</h1>
+    <div class="artists cnt">
+         {{#each items}}
+                <div class="card">
+                    <div class="imgContainer">
+                        {{#if this.images.0.url}}
+                            <img src="{{this.images.0.url}}" alt="" width="200">
+                        {{else}}
+                            <img src="/images/levels.png" alt="" width="100">
+                        {{/if}}
+                    </div>
+                    <div class="info">
+                        <p>{{this.name}}</p>
+                        <form action="/albums/{{this.id}}" method="GET">
+                            <button type="submit" class="btn">View Albums</button>
+                        </form>
+                        </div>
+                </div>
+        {{/each}}
+    </div>
+   
+</div>
