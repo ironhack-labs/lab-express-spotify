@@ -1,0 +1,5 @@
+.artist-container {
+  display: flex;
+  padding: 5%;
+  justify-content: space-around;
+}

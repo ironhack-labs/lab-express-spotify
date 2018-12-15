@@ -1,0 +1,13 @@
+<html>
+    <body>
+      <h1>My Artists</h1>
+        <ul>
+        {{#each artists}}
+            <li>Artist Name: {{name}}</li>
+            <li>Genres: {{genres}}</li>
+            <img width="300px" src="{{image.url}}">
+            <br>
+        {{/each}}
+        </ul>
+    </body>
+</html>
