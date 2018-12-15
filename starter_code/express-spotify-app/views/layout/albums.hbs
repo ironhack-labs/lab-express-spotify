@@ -10,11 +10,11 @@
 </head>
 
 <body>
-  <ul>
-    {{#each artists}}
-    <li>{{this.name}}<img src={{this.images.0.url}}><button type="submit"><a href="/albums/{{{this.id}}}">View albums</a></button></li>
-    {{/each}}
-  </ul>
+  {{#each albums}}
+  {{this.name}}
+  <br>
+  <img src={{this.images.0.url}}><button type="submit"><a href="/albums/{{{this.id}}}">View tracks</a></button><br>
+  {{/each}}
 </body>
 
 </html>

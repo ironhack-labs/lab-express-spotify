@@ -33,10 +33,10 @@ app.get("/", function(req, res) {
   res.render("index");
 });
 
-app.post("/artists", function(req, res) {
+app.get("/artists", function(req, res) {
   // res.send(req.body.artist);
   spotifyApi
-    .searchArtists(req.body.artist)
+    .searchArtists(req.query.artist)
     .then(data => {
       // res.send(data);
       let artists = data.body.artists.items.map(artist => {
@@ -45,6 +45,20 @@ app.post("/artists", function(req, res) {
       res.render("artists", { artists });
     })
 
+    .catch(err => {
+      console.log(err);
+    });
+});
+
+app.get("/albums/:artistId", (req, res) => {
+  // res.send(req.params.artistId);
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+      // res.send(data.body);
+      let albums = data.body.items;
+      res.render("albums", { albums });
+    })
     .catch(err => {
       console.log(err);
     });
