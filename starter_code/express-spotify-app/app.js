@@ -2,6 +2,7 @@ const SpotifyWebApi = require("spotify-web-api-node");
 const express = require("express");
 const app = express();
 const hbs = require("hbs");
+const path = require("path");
 
 const bodyParser = require("body-parser");
 
@@ -35,19 +36,23 @@ app.get("/", function(req, res) {
 
 app.get("/artists", function(req, res) {
   // res.send(req.body.artist);
-  spotifyApi
-    .searchArtists(req.query.artist)
-    .then(data => {
-      // res.send(data);
-      let artists = data.body.artists.items.map(artist => {
-        return artist;
-      });
-      res.render("artists", { artists });
-    })
+  if (req.query.artist !== "") {
+    spotifyApi
+      .searchArtists(req.query.artist)
+      .then(data => {
+        // res.send(data);
+        let artists = data.body.artists.items.map(artist => {
+          return artist;
+        });
+        res.render("artists", { artists, search: req.query.artist });
+      })
 
-    .catch(err => {
-      console.log(err);
-    });
+      .catch(err => {
+        console.log(err);
+      });
+  } else {
+    res.render("index");
+  }
 });
 
 app.get("/albums/:artistId", (req, res) => {
@@ -66,12 +71,22 @@ app.get("/albums/:artistId", (req, res) => {
 
 app.get("/tracks/:albumId", (req, res) => {
   // res.send(req.params.artistId);
+
+  var album = "";
+
   spotifyApi
     .getAlbumTracks(req.params.albumId)
+    .then(
+      spotifyApi.getAlbum(req.params.albumId).then(data => {
+        // res.send(data.body.name);
+        album = data.body.name;
+      })
+    )
     .then(data => {
-      // res.send(data.body);
+      //res.send(data.body);
       let tracks = data.body.items;
-      res.render("tracks", { tracks });
+      console.log(album);
+      res.render("tracks", { tracks, album });
     })
     .catch(err => {
       console.log(err);

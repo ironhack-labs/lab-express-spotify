@@ -1,20 +1,24 @@
-<!DOCTYPE html>
-<html lang="en">
+{{#if album}}
+<h3>Tracks on "{{album}}"</h3>
+{{else}}
+<h3>Tracks on this album</h3>
+{{/if}}
 
-<head>
-  <meta charset="utf-8">
-  <title>Spotify Ironhack</title>
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css" integrity="sha384-Zug+QiDoJOrZ5t4lssLdxGhVrurbmBWopoEl+M6BdEfwnCJZtKxi1KgxUyJq13dy"
-    crossorigin="anonymous">
-  <link rel="stylesheet" href="stylesheets/styles.css">
-</head>
 
-<body>
-  <ul>
+
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Listen on Spotify</th>
+    </tr>
+  </thead>
+  <tbody>
     {{#each tracks}}
-    <li>{{this.name}}<br><a href={{this.external_urls.spotify}}>Listen on Spotify</a></li>
+    <tr>
+      <td>{{this.name}}</td>
+      <td><a href={{this.external_urls.spotify}}>Listen</a></td>
+    </tr>
     {{/each}}
-  </ul>
-</body>
-
-</html>
+  </tbody>
+</table>
