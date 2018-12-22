@@ -1,0 +1,9 @@
+	{{#each albums as |album|}}
+	<div>
+    <img src="{{ album.images.0.url }}" alt="">
+    <p> {{ album.name }} </p>
+    <a href="/albums/{{album.id}}">View Tracks</a>
+    {{!-- {{album.name}} --}}
+  </div>
+
+	{{/each}}	
