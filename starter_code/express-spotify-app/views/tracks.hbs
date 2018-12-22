@@ -1,0 +1,13 @@
+
+<div class="container">
+  <div class="col-12">
+    <ul>
+      {{#each tracks as |track|}}
+      <li>{{track.track_number}}. {{track.name}} </li>
+      <audio controls>
+        <source src="{{track.preview_url}}" type="audio/mpeg">
+      </audio>
+      {{/each}}
+    </ul>
+  </div>
+</div>
