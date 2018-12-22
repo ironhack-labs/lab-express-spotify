@@ -1,0 +1,10 @@
+<ul>
+{{#each tracks as |track| }}
+    <li>
+        {{ track.name }}
+        <audio controls>
+            <source src="{{ track.preview_url }}" type="audio/mp3">
+        </audio>
+    </li>
+{{/each}}
+</ul>
