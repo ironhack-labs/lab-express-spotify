@@ -4,7 +4,7 @@ const app = express();
 const hbs = require('hbs');
 const PORT = process.env.PORT || 3000;
 const bodyParser = require('body-parser');
-
+require('dotenv').config();
 
 app.use(express.static(__dirname + '/public'));
 
@@ -62,7 +62,7 @@ app.get('/albums/:albumId', (req, res) => {
 
 // Remember to paste your credentials here
 const clientId = 'dc9c03247316444aa3ef87d846c84fe3',
-    clientSecret = 'bc08aac7fe63438c8f62cb9933e70d83';
+    clientSecret = process.env.SECRET_KEY;
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -78,7 +78,6 @@ spotifyApi.clientCredentialsGrant()
 });
 
 app.listen(PORT, () => {
-  console.info("ya está operativo")
 })
 
 
