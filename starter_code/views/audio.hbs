@@ -1,0 +1,25 @@
+<div class="container">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col-lg-8">Name</th>
+      <th scope="col"></th>
+      <th scope="col-lg-4">Song</th>
+      {{!-- <th scope="col"></th> --}}
+    </tr>
+  </thead>
+  <tbody>
+    {{#each audios}}
+    <tr>
+      <th scope="row">{{this.name}}</th>
+      <td></td>
+      <td>  
+        <audio controls>
+          <source src="{{this.preview_url}}">
+        </audio>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
