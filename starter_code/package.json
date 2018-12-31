@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "start": "node app",
-    "dev": "nodemon -e js,hbs,css app"
+    "dev": "nodemon -e js,hbs,css,env app"
   },
   "repository": {
     "type": "git",
@@ -19,6 +19,7 @@
   "homepage": "https://github.com/CarlosDiazGirol/lab-express-spotify#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "hbs": "^4.0.1",
     "morgan": "^1.9.1",

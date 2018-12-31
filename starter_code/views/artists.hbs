@@ -1,9 +1,13 @@
-<ul>
+<h1>Artists</h1>
+<div class="card-container">
 {{#each artists as |artist| }}
-    <li>
-        {{ artist.name }}
-        <img src="{{ artist.images.2.url }}" alt="">
-        <a href="/artists/{{artist.id}}">View Albums</a>
-    </li>
+<div class="card">
+        <img src="{{ artist.images.1.url }}" alt="" onerror="if (this.src != 'https://www.nfscars.net/static/img/not-found.png') this.src = 'https://www.nfscars.net/static/img/not-found.png';">
+    <div class="card-info">
+        <h5 class="card-title">{{ artist.name }}</h5>
+        <a href="/artists/{{artist.id}}" class="btn btn-primary">View Albums</a>
+    </div>
+</div>
 {{/each}}
-</ul>
+</div>
+

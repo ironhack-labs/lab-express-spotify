@@ -1,9 +1,13 @@
-<ul>
+<h1>Albums</h1>
+<div class="card-container">
 {{#each albums as |album| }}
-    <li>
-        {{ album.name }}
-        <img src="{{ album.images.2.url }}" alt="">
-        <a href="/albums/{{album.id}}">View Tracks</a>
-    </li>
+<div class="card bg-light">
+    <img src="{{ album.images.1.url }}" alt="">
+    <div class="card-info">
+        <h5 class="card-title">{{ album.name }}</h5>
+        <a href="/albums/{{album.id}}" class="btn btn-primary">View Tracks</a>
+    </div>
+</div>
 {{/each}}
-</ul>
+</div>
+

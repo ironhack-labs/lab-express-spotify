@@ -2,6 +2,7 @@ const SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
+const dotenv = require('dotenv').config();
 const PORT = process.env.PORT || 3000;
 
 
@@ -14,13 +15,9 @@ hbs.registerPartials(__dirname + '/views/partials')
 
 app.use(express.static(__dirname + '/public'));
 
-
-const clientId = 'XXX',
-     clientSecret = 'XXX';
-
 const spotifyApi = new SpotifyWebApi({
-  clientId : clientId,
-  clientSecret : clientSecret
+  clientId : process.env.CLIENT_ID,
+  clientSecret : process.env.CLIENT_SECRET
 });
 
 // Retrieve an access token.
