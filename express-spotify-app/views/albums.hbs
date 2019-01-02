@@ -1,0 +1,9 @@
+<div class="container mt-4">
+      <ul class="flex-container">
+        {{#each albums as |album|}}
+        <li class="flex-item">{{album.name}} <img src="{{ album.images.0.url }}"></li>
+        <a href="/albums/{{album.id}}">View Tracks</a>
+        {{/each}}
+      </ul>
+      <a href="/" class="back">Back search menu</a>
+</div>
