@@ -47,21 +47,38 @@ app.get('/albums/:artistId', (req, res, next) => {
     })
     .catch(err => {console.log(err)
     });
-    // res.send("holi")
+    
 })
+
+
+// app.get('/playlist/:albumId', (req, res, next) => {
+// spotifyApi.getAlbumTracks(req.params.albumId)
+//   .then(data => {
+//     console.log(data.body.items[0]);
+//     res.render("audio", {
+//     audios: data.body.items});
+//   })
+//   .catch(err => {
+//     console.log('Something went wrong!', err);
+//   });
+
+// })
 
 app.get('/playlist/:albumId', (req, res, next) => {
-spotifyApi.getAlbumTracks(req.params.albumId)
-  .then(data => {
-    console.log(data.body.items);
-    res.render("audio", {
-    audios: data.body.items});
+  spotifyApi.getAlbum(req.params.albumId)
+    .then(data => {
+      console.log(data.body);
+      res.render("audio", {
+      audios: data.body.tracks.items,
+      tittle: data.body,
+      //artists: data.body.artists
+    });
+    })
+    .catch(err => {
+      console.log('Something went wrong!', err);
+    });
+  
   })
-  .catch(err => {
-    console.log('Something went wrong!', err);
-  });
-
-})
 
 
 // Remember to paste your credentials here

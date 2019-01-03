@@ -39,6 +39,12 @@
   height: 80px;
 }
 
-.tittle-audio h3 {
+.tittle-text {
   margin-left: 20px;
+}
+.tittle-text h3{
+  margin: 0px;
+}
+.tittle-text p{
+  margin: 0px;
 }

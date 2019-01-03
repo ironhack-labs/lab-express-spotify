@@ -1,6 +1,11 @@
 <div class="tittle-audio">
-  <img src="http://lorempixel.com/400/200/" alt="">
-  <h3>Nombre del album{{albums.name}}</h3>
+  <img src="{{tittle.images.0.url}}" alt="">
+  <div class="tittle-text">
+    <h3>{{tittle.name}} -  {{tittle.artists.0.name}}</h3>
+    <p>{{tittle.label}}</p>
+    <p>{{tittle.release_date}}</p>
+  </div>
+
 </div>
 
 <div class="col-12">
