@@ -1,0 +1,75 @@
+/*************styles for index.hbs***************/
+.index-container {
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.index-container .form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.index-container .home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+/*******************styles for artists.hbs & albums.hbs**************/
+.artist-container {
+  padding: 10px 40px;
+}
+
+.artist-container img {
+  vertical-align: middle;
+  border-style: none;
+  width: 100%;
+}
+
+.artist-container .info {
+  background-color: #4D4D4D;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artist-container .info p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+.artist-container .info a {
+  color: #fff;
+  font-size: 12px;
+  background-color: #F86967;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+/************styles for tracks.hbs************************/
+.tracks-container .header-row {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+}
+
+.tracks-container .track-item {
+  background-color: #F6F6F6;
+  margin-bottom: 2px;
+  padding: 10px 0;
+}
+
+.track-item p {
+  margin: auto;
+}

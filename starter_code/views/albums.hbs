@@ -1,9 +1,17 @@
-	{{#each albums as |album|}}
-	<div>
-    <img src="{{ album.images.0.url }}" alt="">
-    <p> {{ album.name }} </p>
-    <a href="/albums/{{album.id}}">View Tracks</a>
-    {{!-- {{album.name}} --}}
-  </div>
-
-	{{/each}}	
+<div class="container">
+  <div class="row">
+    {{#each albums as |album|}}
+      <div class="col-lg-4 artist-container">
+        {{#if album.images.0.url}}
+          <img src="{{album.images.0.url}}" alt="{{album.name}}">
+        {{else}}
+          <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="{{artist.name}}">
+        {{/if}}
+        <div class="info">
+          <p>{{album.name}}</p>
+          <a href="/albums/{{album.id}}">View Tracks</a>
+        </div>
+      </div>
+    {{/each}}	
+  </div> 
+</div>
