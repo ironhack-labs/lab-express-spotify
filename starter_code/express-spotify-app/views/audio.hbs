@@ -1,0 +1,18 @@
+<div class="tittle-audio">
+  <img src="http://lorempixel.com/400/200/" alt="">
+  <h3>Nombre del album{{albums.name}}</h3>
+</div>
+
+<div class="col-12">
+  <ul class="list-group">
+  {{#each audios}}
+  <li class="item-audio">
+    <p>{{this.name }}</p>
+    <audio controls>
+      <source src="{{this.preview_url}}">
+    </audio>
+  </li>
+  {{/each}}
+</ul>
+</div>
+

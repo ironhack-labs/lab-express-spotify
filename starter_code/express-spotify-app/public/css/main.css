@@ -1,0 +1,44 @@
+.image {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+  
+}
+
+.image img {
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+}
+
+.button {
+
+}
+
+.item-audio {
+  list-style: none;
+  display: flex;
+  align-items: flex-end;
+  background-color: lightgray;
+  padding: 10px 50px;
+  margin: 2px 100px;
+  justify-content: space-between;
+}
+
+.tittle-audio {
+  display: flex;
+  margin: 30px 0 10px 115px;
+  align-items: center;
+}
+
+.tittle-audio img{
+  height: 80px;
+}
+
+.tittle-audio h3 {
+  margin-left: 20px;
+}
