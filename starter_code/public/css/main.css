@@ -1,0 +1,19 @@
+.image {
+  width: 300px;
+  height: 300px;
+  display: flex;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.image img {
+  object-fit: cover;
+  width: auto;
+  height: 100%;
+}
+
+.button {
+
+}

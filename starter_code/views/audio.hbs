@@ -1,0 +1,9 @@
+<ul class="list-group">
+  {{#each audios}}
+  <span> {{this.name}} </span>
+  <audio controls>
+    <source src="{{this.preview_url}}">
+  </audio>
+  {{/each}}
+
+</ul>
