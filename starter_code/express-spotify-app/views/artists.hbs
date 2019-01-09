@@ -10,11 +10,7 @@
 
 <body>
   <div class="artists-container">
-    {{data}}
-    {{data.body}}
-    {{data.body.artists}}
-    {{data.body.artists.items.0.name}}
-    {{#each data.body.artists.items}}
+    {{#each subset}}
     {{> artistsPartial this}}
     {{/each}}
   </div>
