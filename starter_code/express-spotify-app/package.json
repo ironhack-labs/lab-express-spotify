@@ -10,7 +10,6 @@
     "start": "nodemon app.js"
   },
   "author": "Jesús Zúñiga y Diego Rodríguez",
-  "author": "Jesus",
   "license": "ISC",
   "dependencies": {
     "body-parser": "^1.18.3",
