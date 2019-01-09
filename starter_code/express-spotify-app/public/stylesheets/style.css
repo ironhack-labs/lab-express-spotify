@@ -1,0 +1,66 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: red;
+}
+
+
+/*Layout*/
+nav {
+    background: rgb(187, 181, 181);
+}
+
+nav a {
+    color: #f7f9f9;
+}
+
+footer {
+    background: #052d47;
+    color: #f7f9f9;
+}
+
+
+/*Index*/
+#index-body {
+    background-image: url(/images/back.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* Search Page*/
+#container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Albums Page */
+.albums {
+    margin-bottom: 50px;
+}
+
+.card {
+    width: 300px;
+    height: 300px;
+}
+
+.card img {
+    width: 50%;
+    margin-left: 70px;
+    margin-top: 20px;
+}
+
+.card a {
+    margin-left: 6rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h6 {
+    text-align: center;
+    color: black;
+}
