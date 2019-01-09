@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Artists</title>
+</head>
+
+<body>
+  <div class="artists-container">
+    {{data}}
+    {{data.body}}
+    {{data.body.artists}}
+    {{data.body.artists.items.0.name}}
+    {{#each data.body.artists.items}}
+    {{> artistsPartial this}}
+    {{/each}}
+  </div>
+</body>
+
+</html>
