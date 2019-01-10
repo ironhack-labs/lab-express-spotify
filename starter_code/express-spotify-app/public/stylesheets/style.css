@@ -27,6 +27,17 @@ footer {
     background-size: cover;
 }
 
+.form-group {
+    height: 18vh;
+    padding: 2vh 2vw;
+    background-color: rgba(0, 0, 0, 0.4);
+    border-radius: 6px;
+    box-shadow: 1px 1px 3px 1px black;
+}
+
+#artist-search-btn {
+    margin: 2vh;
+}
 
 /* Search Page*/
 #container {
@@ -63,4 +74,30 @@ h1 {
 h6 {
     text-align: center;
     color: black;
+}
+
+/* Tracks page */
+
+.long-blue-bar {
+    height: 10vh;
+    width: 100%;
+    margin: 1vh 0;
+    background-color: #052d47;
+    color: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.track-name {
+    font-size: 14pt;
+    display: inline-block;
+    margin: 0;
+}
+
+audio {
+    display: block;
+    width: 300px;
+    margin: 0 2.5vw 0 1vw;
 }

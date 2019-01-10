@@ -3,7 +3,7 @@
         <div class="row">
             {{#each tracks}}
             <div class="col-md-12">
-                <div>
+                <div class="long-blue-bar">
                     {{#if this.preview_url}}
                     <audio controls>
                         <source src={{this.preview_url}} type="audio/ogg">
@@ -11,10 +11,10 @@
                     {{else}}
                     <img src="/images/place.png" alt="image not found" style="width:100%">
                     {{/if}}
-                </div>
-                <h6>
+                <h6 class="track-name">
                     {{this.track_number}}-{{this.name}}
                 </h6>
+                </div>
             </div>
             {{/each}}
         </div>

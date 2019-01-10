@@ -18,29 +18,6 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(path.join(__dirname, "public")));
 
-//Spotify Api credentials
-const clientId = "6c4c1b57e7db440cb3737ea1eb4a401a";
-const clientSecret = "8a7b26ca70dd4bc0a726ca459d465828";
-
-let spotifyApi = new SpotifyWebApi({
-  clientId: clientId,
-  clientSecret: clientSecret
-});
-
-//Retrieve an access token in es6
-spotifyApi.clientCredentialsGrant().then(
-  data => {
-    spotifyApi.setAccessToken(data.body["access_token"]);
-    console.log("logged to spotify");
-  },
-  err =>
-  console.log("Something went wrong when retrievinf an access token", err)
-);
-
-// Remember to paste your credentials here
-// let clientId = process.env.CLIENTID;
-// let clientSecret = process.env.CLIENTSECRET;
-
 let clientId = '04f3b20f3d064bfea97e62570d43938b';
 let clientSecret = 'c24c2e09731543ed886bcfb385dcffa6';
 
@@ -95,7 +72,7 @@ app.get("/albums/:artistId", (req, res) => {
       offset: 1
     })
     .then(data => {
-      res.render("Albums", {
+      res.render("albums", {
         albums: data.body.items
       });
 

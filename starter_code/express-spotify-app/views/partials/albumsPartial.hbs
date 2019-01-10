@@ -1,0 +1,16 @@
+<div class="col-md-4">
+    <div class="card text-black bg-light mb-2 shadow-sm image">
+        {{#if this.images.0.url}}
+        <img src="{{this.images.0.url}}" alt="test">
+        {{else}}
+        <img src="/images/place.png" alt="image not found" style="width:50%; width:74%">
+        {{/if}}
+        <h6>
+            {{this.name}}
+        </h6>
+        <div class="col-md-4 text-center">
+            <a href="/tracks/{{this.id}}" class="btn btn-sm  btn-danger">View
+                Tracks</a>
+        </div>
+    </div>
+</div>

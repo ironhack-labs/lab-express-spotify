@@ -1,6 +1,16 @@
-<div class="artist-card">
-  <img src={{this.images.0.url}} alt={{this.name}}>
-  <h2 class="artist-name">{{this.name}}</h2>
-  {{!-- Checar esto --}}
-  <a href={{link "/albums/" this.id)}} class="btn-albums">View Albums</a>
-</div>
+<div class="col-md-4 artist-card">
+                <div class="card text-black bg-light mb-2 shadow-sm image">
+                    {{#if this.images.0.url}}
+                    <img src="{{this.images.0.url}}" alt="test">
+                    {{else}}
+                    <img src="/images/place.png" alt="image not found" id="album-image">
+                    {{/if}}
+                    <h6>
+                        {{this.name}}
+                    </h6>
+                    <div class="col-md-4 text-center">
+                        <a href="/albums/{{this.id}}" class="btn btn-sm  btn-danger">View
+                            Albums</a>
+                    </div>
+                </div>
+            </div>
