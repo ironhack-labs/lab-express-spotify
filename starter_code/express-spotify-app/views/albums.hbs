@@ -1,26 +1,27 @@
 <div class="py-5 albums">
     <div class="container">
         <div class="row">
+
             <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                <h1>Search Results</h1>
+                <h1>{{this.name}} Albums</h1>
                 <hr>
             </div>
         </div>
         <div class="row">
-            {{#each artists}}
+            {{#each albums}}
             <div class="col-md-4">
                 <div class="card text-black bg-light mb-2 shadow-sm image">
                     {{#if this.images.0.url}}
                     <img src="{{this.images.0.url}}" alt="test">
                     {{else}}
-                    <img src="/images/place.png" alt="image not found" id="album-image">
+                    <img src="/images/place.png" alt="image not found" style="width:50%; width:74%">
                     {{/if}}
                     <h6>
                         {{this.name}}
                     </h6>
                     <div class="col-md-4 text-center">
-                        <a href="/albums/{{this.id}}" class="btn btn-sm  btn-danger">View
-                            Albums</a>
+                        <a href="/tracks/{{this.id}}" class="btn btn-sm  btn-danger">View
+                            Tracks</a>
                     </div>
                 </div>
             </div>
@@ -28,6 +29,3 @@
         </div>
     </div>
 </div>
-
-
-</html>

@@ -1,8 +1,8 @@
 {
   "name": "express-spotify-app",
   "version": "1.0.0",
-  "description": "Paquete de prueba de Ironhack Spotify",
-  "main": "app.js",
+  "description": "",
+  "main": "index.js",
   "scripts": {
     "test": "nodemon app.js"
   },

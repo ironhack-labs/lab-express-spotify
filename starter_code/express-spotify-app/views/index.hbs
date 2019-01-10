@@ -1,17 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Ironhack Express Spotify</title>
-</head>
-<body>
-  <div class="white-box">
-    <form action="/artists" method="POST">
-    <input type="text" name="artist" value="Los Cadetes de Linares">
-    <button type="submit">Search for an Artist</button>
-    </form>
-  </div>
+<body id="index-body">
+    <section id="cover" style="background='/images/back.jpg';">
+        <div id="cover-caption">
+            <div id="container" class="container">
+                <div class="row" id="index-search">
+                    <div class="col-sm-6 offset-sm-3 text-center">
+                        <div class="info-form">
+                            <form action="/artists" class="form-inlin justify-content-center" method="POST" id="frm-index">
+
+                                <div class="form-group">
+                                    <label class="sr-only">Email</label>
+                                    <input type="text" class="form-control" placeholder="Artist" name="artist" required>
+                                </div>
+                                <button type="submit" class="btn btn-success ">Search for an Artist!</button>
+                            </form>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 </body>
-</html>
