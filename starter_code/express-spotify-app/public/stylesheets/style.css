@@ -1,0 +1,92 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+
+body {
+  padding: 0px;
+  margin: 0px;
+  font: 12px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+  background: url("/images/mainBackground.jpeg") no-repeat center;
+  background-size: cover;
+}
+
+.search-artist{
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 600px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+
+
+#search-button{
+  background: #ff6666;
+  width: 166px;
+  height: 38px;
+  color: white;
+  align-self: center;
+  margin-top: 20px;
+  font-size: 15px;
+}
+
+#search-bar-artist{
+  width: 432px;
+  height: 38px;
+  margin-left: 90px;
+  border-radius: 2px;
+  border-style: none;
+}
+
+::placeholder{
+  font-size: 15px;
+  padding-left: 10px;
+}
+
+#artist-images{
+  padding: 20px;
+  margin: 40px;
+}
+
+.album-button{
+  background: #ff6666;
+  width: 140px;
+  height: 38px;
+  color: white;
+  align-self: center;
+  font-size: 15px;
+  border-radius: 4px;
+}
+
+.album-card{
+  width: 300px;
+  height: 300px;
+  background: blue;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+}
+
+.image-style{
+  width: 300px;
+  height: 200px;
+}
+
+p{
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+  color: white;
+}
