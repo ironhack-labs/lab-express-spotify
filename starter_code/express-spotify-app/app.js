@@ -33,7 +33,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 app.get("/", (req, res, next) =>{
-  res.render("index")
+
+  res.render('index');
 })
 
 app.get("/artists", (req, res, next) =>{
@@ -41,12 +42,33 @@ app.get("/artists", (req, res, next) =>{
   spotifyApi.searchArtists(artist)
     .then(data => {
       let artistInfo = data.body.artists.items
-      // console.log(artistInfo[0].name);
       res.render("artists", {artistInfo})
     })
     .catch(err => {
       console.log(err);
     })
+})
+
+
+app.get("/albums/:artistId", (req, res) =>{
+  let artistId = req.params.artistId
+
+  spotifyApi.getArtistAlbums(artistId)
+  .then(data =>{
+    res.render("albums", { albums: data.body.items})
+  })
+  .catch(err => console.log(err))
+})
+
+app.get("/tracks/:trackId", (req, res) =>{
+
+  let trackId = req.params.trackId;
+
+  spotifyApi.getAlbumTracks( trackId , {limit :50,  offset: 0})
+  .then(data =>{
+    res.render("tracks", {tracks: data.body.items})
+  })
+  .catch(err => console.log(err))
 })
 
 app.listen(3000, ()=>{

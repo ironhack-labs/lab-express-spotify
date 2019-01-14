@@ -1,6 +1,6 @@
-<div class="album-card">
+<div class="album-card" style="width=310px">
   <img src="{{this.images.0.url}}" alt="{{this.image}}" class="image-style">
-  <p>{{this.name}}</p>
-  <button type="submit" class="album-button">View albums</button>
+  <p style="padding-top:10px">{{this.name}}</p>
+  <a href="/albums/{{this.id}}" class="btn btn-sm  btn-danger custom-btn">View albums</a>
   {{!-- <a href="/albums" class="btn btn-info custom-btn" role="button">View albums</a> --}}
 </div>

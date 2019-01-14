@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="/images/ironhackLogo.jpg" width="50" height="50" alt="" >
+  </a>
+</nav>
+<div class="track-container">
+  {{#each tracks}}
+    
+<div id="track-bar">
+    <h6 style="margin-top: 10px;">
+      {{this.track_number}}-{{this.name}}
+    </h6>
+    <audio controls="controls">
+      <source src="{{this.preview_url}}" type="audio/ogg">
+    </audio>  
+    
+</div>
+<br>
+  {{/each}}
+</div>

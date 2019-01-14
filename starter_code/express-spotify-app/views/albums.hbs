@@ -1,0 +1,20 @@
+<nav class="navbar navbar-light bg-light sticky-top">
+  <a class="navbar-brand" href="#">
+    <img src="/images/ironhackLogo.jpg" width="50" height="50" alt="" >
+  </a>
+</nav>
+
+
+{{#each albums}}
+  <div class="album-container">
+    {{#if this.images.0.url}}
+      <img src="{{this.images.1.url}}" class="album-image">
+    {{else}}
+      <img src="/images/ironhackLogo.jpg" class="album-image" style="height: 225px">
+    {{/if}}
+    <br>
+      <h6>{{this.name}}</h6>
+      <a href="/tracks/{{this.id}}" class="btn btn-sm btn-danger custom-btn" >View Tracks</a>
+      <br>
+  </div>
+{{/each}}

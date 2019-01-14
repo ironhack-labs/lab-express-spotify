@@ -57,7 +57,7 @@ a {
 
 #artist-images{
   padding: 20px;
-  margin: 40px;
+  margin-left: 440px;
 }
 
 .album-button{
@@ -72,21 +72,55 @@ a {
 
 .album-card{
   width: 300px;
-  height: 300px;
-  background: blue;
+  height: 335px;
+  background: #4d4d4d;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-align: center;
+  margin-left: 50px;
 }
 
 .image-style{
   width: 300px;
-  height: 200px;
+  height: 225px;
 }
 
 p{
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   color: white;
+}
+
+.custom-btn{
+  width: 200px;
+  margin-left: 50px;
+}
+
+.album-container{
+  width: 300px;
+  height: 320px;
+  color: white;
+  background: #4d4d4d;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 500px; 
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.album-image{
+  width: 300px;
+  height: 225px;
+}
+
+.track-container{
+  margin: 40px;
+}
+
+#track-bar{
+  margin-left: 100px;
+  width: 1200px;
+  display: flex;
+  justify-content: space-between;
 }
