@@ -1,0 +1,16 @@
+
+  <div class="container pt-4 album-covers">
+    <div class="row">
+      {{#each albums}}
+        <div class="col-md-4">
+          <div class="card mb-4 shadow-sm image">
+          <img class="card-img-top" 
+          src="{{ this.images.0.url }}" alt="...">
+          </div> 
+          <a href="/tracks/{{this.id}}" class=" btn-primary btn-lg active 
+          btn btn-outline-secondary track-name">{{this.name}}</a>   
+        </div>
+      {{/each}}
+  </div>
+
+  <img src="https://eshop.macsales.com/Reviews/Tips/jukebox2/images/desktop.jpg" alt="">
