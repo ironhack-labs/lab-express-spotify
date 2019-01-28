@@ -1,0 +1,8 @@
+
+{{#each tracks as |track|}}
+<p>{{track.name}}</p>
+<audio controls="">
+  <source src="{{ track.preview_url }}" type="audo/mpeg">
+</audio>
+{{/each}}
+
