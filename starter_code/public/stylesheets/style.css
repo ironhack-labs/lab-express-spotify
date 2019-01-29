@@ -9,7 +9,7 @@ body {
   background-color:black;
 }
 .mainpage-container {
-  background-image: url(https://www.oneproavl.com/wp-content/uploads/2017/11/142077-new-concert-background-1920x1200.jpg);
+  background-image: url(https://wallpapertag.com/wallpaper/full/7/a/3/10913-amazing-music-background-2560x1600-smartphone.jpg);
   background-size: 100% 100%;
   background-repeat: no-repeat;
   height: 100vh;
@@ -82,8 +82,8 @@ body {
   background-color: black;
   border-radius: 0;
   color: white;
-  background-color: #ff6666;
-  border: 1px solid #ff6666;
+  background-color: black;
+  border: 1px solid black;
 }
 
 .artist-list{
@@ -95,4 +95,8 @@ body {
 
 .album-covers {
   list-style: none;
+}
+
+.track-group {
+  margin: 50px;
 }

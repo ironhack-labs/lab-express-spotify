@@ -40,6 +40,8 @@ require('dotenv').config();
   })
 
   router.get('/albums/:artistId', (req, res, next) => {
+  //                        place holder: artistId    
+  //                                        ||
     spotifyApi.getArtistAlbums(req.params.artistId)
       .then(data => {
         console.log('Artist albums', data.body.items)
@@ -50,6 +52,8 @@ require('dotenv').config();
   })
 
   router.get('/tracks/:albumName', (req, res, next) => {
+    //                     place holder: albumName     
+    //                                      ||
     spotifyApi.getAlbumTracks(req.params.albumName)
     .then(data => {
       console.log('Artist tracks', data.body.items)
