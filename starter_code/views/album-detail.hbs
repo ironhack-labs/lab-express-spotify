@@ -1,0 +1,8 @@
+{{!-- <h1>{{album.name}}</h1> --}}
+{{#each albums}}
+    {{this.name}}
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+{{/each}}
+{{!-- <span>{{album.author}}</span> --}}
+{{!-- <p>{{album.description}}</p>
+<a href="/artist">Return</a> --}}
