@@ -1,0 +1,10 @@
+<div class="d-flex flex-justify-between">
+    <span>Title</span>
+    <span>Listen</span>
+</div>
+{{#each list}}
+    <div class="track">
+        <span>{{name}}</span>        
+        <audio controls="controls" src="{{preview_url}}"></a></audio>
+    </div>
+{{/each}}

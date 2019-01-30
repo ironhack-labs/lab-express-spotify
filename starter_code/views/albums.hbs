@@ -1,0 +1,11 @@
+<div class="cards-container">
+    {{#each list}}
+    <div class="card">
+        <img src="{{images.1.url}}">
+        <h3>{{name}}</h3>
+        <form action="/tracks/{{id}}">
+            <button type="submit" class="btn btn-success">View Tracks</button>
+        </form>
+    </div>
+    {{/each}}
+</div>
