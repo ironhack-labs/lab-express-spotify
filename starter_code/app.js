@@ -31,43 +31,40 @@ spotifyApi.clientCredentialsGrant()
 
 // the routes go here:
 app.get("/", function(req, res) {
-  console.log("INDEX");
   res.render("index");
 });
 
 app.get("/artists", (req, res) => {
   spotifyApi.searchArtists(req.query.artist)
     .then(data => {
-      let artistList = data.body.artist.items;
-      res.render("artists", { artistList });
+      res.render("artists", {  
+        artists: data.body.artists.items
+      });
     })
     .catch(err => {
       console.log("an error occured!" + err);
     });
 });
 
-app.get("/albums/:artistId", (req, res) => {
+app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(
-      function(data) {
-        let albumsObj = data.body.items;
-        res.render("albums", { albumsObj });
-      },
-      function(err) {
-        console.error(err);
+      data => {
+        console.log("The received data from the API ALBUM: ", data.body)
+        res.render("albums", { 
+          albums: data.body.items
+        });
     });
 });
 
 app.get("/tracks/:trackId", (req, res) => {
   spotifyApi.getAlbumTracks(req.params.trackId).then(
-    function(data) {
-      let tracksObj = data.body.items;
-      res.render("tracks", { tracksObj });
-    },
-    function(err) {
-      console.log("Something went wrong!", err);
-    }
-  );
+    data => {
+      "The received data from the API ALBUM: ", data.body
+      res.render("tracks", { 
+        tracks: data.body.items
+      });
+    });
 });
 
 app.listen(3000, () =>
