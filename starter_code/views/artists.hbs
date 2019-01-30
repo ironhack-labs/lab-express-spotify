@@ -1,0 +1,13 @@
+{{#each artistList}}
+   {{this.name}}
+
+
+{{#if this.images.0.url}}
+<img src="{{this.images.0.url}}" width="200" height="200">
+{{/if}}
+
+<form action="/albums/{{this.id}}">
+<input type="submit" value="albums"></input>
+</form>
+
+  {{/each}}
