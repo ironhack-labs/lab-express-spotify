@@ -1,9 +1,9 @@
-{{#each albumsObj}}
-  {{this.name}}
-
-  <img src="{{this.images.0.url}}" width="200" height="200">
-
-  <form action="/tracks/{{this.id}}">
-  <input type="submit" value="view tracks">
-  </form>
-{{/each}}
+<div class="container">
+  {{#each albumDetails}}
+    <div class="one-item">
+        <img src="{{this.images.0.url}}" alt="album-img">
+        <span>{{this.name}}</span>
+        <a href="/tracks/{{this.id}}">View Tracks</a>   
+    </div>
+  {{/each}}
+</div>
