@@ -1,0 +1,25 @@
+<div class="Albums">
+  
+  {{!-- Loop on beers --}}
+  {{#each albums}}
+    <div>
+      {{!-- this = the current beer (object); this.name = current name  --}}
+      <h3>{{this.name}}</h3>
+      <img src="{{this.images.0.url}}" alt="">
+      <a href="/tracks/{{this.id}}">View Tracks</a>
+
+    </div>
+  {{/each}}
+</div>
+ {{#each tracks}}
+ <figure>
+    <figcaption>{{this.name}}</figcaption>
+    <audio
+        controls
+        src="{{this.preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+ {{/each}}
