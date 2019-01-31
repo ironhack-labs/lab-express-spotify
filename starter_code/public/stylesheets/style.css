@@ -1,0 +1,12 @@
+.home {
+  background-color: white;
+  opacity: 0.5;
+  width: 600px;
+  height: 300px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+}
+body {
+  background-color: brown;
+}
