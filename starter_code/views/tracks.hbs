@@ -1,9 +1,13 @@
-<div class="collection-container">
+<h2>Tracks</h2>
+
+<div class="d-flex flex-column">
   {{#each tracks}}
-  <span>{{name}}</span>
-  <audio id="" controls src="{{preview_url}}" type="audio/mp3">
-  </audio><br>
-  {{!-- <img src="{{images.[0].url}}" alt=""> --}}
-  {{!-- <a href="/tracks/{{id}}">View Tracks</a><br> --}}
+  <div class="block">
+    <h6>{{name}}</h6>
+    {{#if preview_url}}
+    <audio id="" controls src="{{preview_url}}" type="audio/mp3">
+    </audio><br>
+    {{/if}}
+  </div>
   {{/each}}
 </div>

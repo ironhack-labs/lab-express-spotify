@@ -1,7 +1,15 @@
-<div class="collection-container">
+<h2>Albums</h2>
+
+<div class="d-flex flex-wrap">
   {{#each albums}}
-  <span>{{name}}</span>
-  <img src="{{images.[0].url}}" alt="">
-  <a href="/tracks/{{id}}">View Tracks</a><br>
+  <div class="block d-flex flex-column justify-content-around align-items-center">
+    <h6>{{name}}</h6>
+    {{#if images.[0]}}
+    <img src="{{images.[0].url}}" alt="">
+    {{else}}
+    <img src="/images/default-artist.png" alt="">
+    {{/if}}
+    <a href="/tracks/{{id}}">View Tracks</a><br>
+  </div>
   {{/each}}
 </div>

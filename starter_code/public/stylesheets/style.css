@@ -2,6 +2,16 @@ main {
   margin: 50px;
 }
 
-.collection-container img {
+h3 {
+  color: red;
+}
+
+.block {
+  margin: 10px;
   height: 200px;
+}
+
+.block img {
+  max-height: 150px;
+  max-width: 150px;
 }

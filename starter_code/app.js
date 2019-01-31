@@ -30,27 +30,33 @@ spotifyApi
 app.get("/", (req, res) => {
   res.render("index");
 });
+
 app.get("/artists", (req, res) => {
-	// console.log("TCL: req.params", req.query);
+  // console.log("TCL: req.params", req.query);
   spotifyApi
-    .searchArtists(req.query["artist-name"])
+    .searchArtists(req.query.search)
     .then(data => {
-			// console.log("TCL: data.body.artists.items", data.body.artists.items);
+      // console.log("TCL: data.body.artists.items", data.body.artists.items);
       res.render("artists", {
-        artists: data.body.artists.items
+        search: req.query.search,
+        artists: data.body.artists.items,
+        JSON: JSON.stringify(data.body.artists.items, null, 2)
       });
       // res.send(data.body.artists.items)
+      // // option 2, to send data
+      // res.locals.search = req.query.search;
+      // res.render("artists");
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     });
 });
 app.get("/albums/:artistId", (req, res) => {
-	// console.log("TCL: req.params", req.params);
+  // console.log("TCL: req.params", req.params);
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(data => {
-			// console.log("TCL: data.body.items", data.body.items);
+      // console.log("TCL: data.body.items", data.body.items);
       res.render("albums", {
         albums: data.body.items
       });
@@ -58,14 +64,17 @@ app.get("/albums/:artistId", (req, res) => {
     })
     .catch(err => {
       console.log("The error while searching albums occurred: ", err);
+      res.render("error", {
+        message: "Sorry, an error happend while searching for an album!"
+      });
     });
 });
 app.get("/tracks/:albumId", (req, res) => {
-	// console.log("TCL: req.params", req.params);
+  // console.log("TCL: req.params", req.params);
   spotifyApi
     .getAlbumTracks(req.params.albumId)
     .then(data => {
-			// console.log("TCL: data.body.items", data.body.items);
+      // console.log("TCL: data.body.items", data.body.items);
       res.render("tracks", {
         tracks: data.body.items
       });
@@ -73,8 +82,10 @@ app.get("/tracks/:albumId", (req, res) => {
     })
     .catch(err => {
       console.log("The error while searching albums occurred: ", err);
+      res.render("error", {
+        message: "Sorry, an error happend while searching for album tracks!"
+      });
     });
 });
-
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🔊"));
