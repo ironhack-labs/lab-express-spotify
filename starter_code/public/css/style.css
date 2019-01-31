@@ -1,0 +1,9 @@
+.titles-container {
+  display: flex;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.titles-container > img {
+  width: 100px;
+  height: 100px;
+}
