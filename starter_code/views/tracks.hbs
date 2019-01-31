@@ -1,10 +1,14 @@
-<div class="d-flex flex-justify-between">
-    <span>Title</span>
-    <span>Listen</span>
-</div>
-{{#each list}}
-    <div class="track">
-        <span>{{name}}</span>        
+<div class="d-flex flex-column">
+    <div class="tracks-title">
+        <ul class="d-flex justify-content-between">
+            <li>TITLE</li>
+            <li>LISTEN</li>
+        </ul>        
+    </div>
+    {{#each list}}
+    <div class="track d-flex justify-content-between">
+        <span>{{name}}</span>
         <audio controls="controls" src="{{preview_url}}"></a></audio>
     </div>
-{{/each}}
+    {{/each}}
+</div>
