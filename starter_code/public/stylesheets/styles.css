@@ -1,16 +1,39 @@
 body {
+    background: url(/images/pexels-photo-167605.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
     font-family: sans-serif, arial;
 }
 a {
     color: #fff;
     text-decoration: none;
 }
+.search-container {
+    align-items: center;
+    background: rgba(255,255,255,0.7);
+    display: flex;
+    height: 200px;
+    justify-content: center;
+    margin: 180px auto;
+    width: 500px;
+}
+form {
+    margin: 0 auto;
+    width: 80%;
+}
+input {
+    border-style: none;
+    border-radius: 8px;
+    margin: 5px;
+    padding: 5px;
+    width: 60%;
+}
 .artists-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     margin: 0 auto;
-    width: 100%;
+    width: 80%;
 }
 .artists-card {
     background: #4d4d4d;
@@ -32,7 +55,7 @@ a {
     padding: 0;
     text-align: center;
 }
-.artists-container .button {
+.button {
     background: tomato;
     border-radius: 5px;
     border-style: none;
@@ -40,7 +63,6 @@ a {
     cursor: pointer;
     font-size: 12px;
     margin: 5px auto;
-    padding: 5px 0;
+    padding: 5px 10px;
     text-align: center;
-    width: 100px;
 }

@@ -37,7 +37,6 @@ app.get('/', (req, res, next) => {
     .searchArtists(req.query.artist)
     .then(data => {
         let items = data.body.artists.items
-        
         res.render('artists', {
             list: items
         })
@@ -48,12 +47,17 @@ app.get('/', (req, res, next) => {
     spotifyApi
      .getArtistAlbums(req.params.artistId)
      .then(data => {
-      let album = data.body.items;
-      res.render("albums", { artistAlbums: album });
+      let album = data.body.items
+      res.render("albums", {
+           artistAlbums: album 
+        });
      })
      .catch(err => {
       console.log("An error occurred ARTISTID", err);
       next();
      });
    });
+   app.get('/tracks/:albumId', (req, res) => {
+    res.send('TODO')
+   })
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
