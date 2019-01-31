@@ -1,1 +1,8 @@
-<h1>hola</h1>
+
+<div>
+    {{#each data.body.artists.items}}
+    <img src="{{this.images.0.url}}">
+    <h5>{{this.name}}</h5>
+    <button>View Albums</button>
+    {{/each}}
+</div>

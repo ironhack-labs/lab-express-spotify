@@ -1,9 +1,11 @@
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node')
+const bodyParser = require('body-parser');
 
 const app = express();
 
+app.use(bodyParser.urlencoded({ extended: true }));
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
@@ -32,16 +34,18 @@ app.get('/', (req, res, next)=>{
 
 
 app.get('/artist', (req, res, next) => {
-  spotifyApi.searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
+
+  spotifyApi.searchArtists(req.query.artist)
       .then(data => {
   
-        console.log("The received data from the API: ", data.body);
-        // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+        console.log("The received data from the API: ", data.body.artists.items);
+
+        res.render('artist', {data})
+
       })
       .catch(err => {
         console.log("The error while searching artists occurred: ", err);
       })
-  res.send(req.query)
 })
 
 
