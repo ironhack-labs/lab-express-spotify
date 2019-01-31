@@ -1,8 +1,8 @@
 
 <div>
-    {{#each data.body.artists.items}}
+    {{#each arr}}
     <img src="{{this.images.0.url}}">
     <h5>{{this.name}}</h5>
-    <button>View Albums</button>
+    <a href="/albums/{{this.id}}">View Albums</a>
     {{/each}}
 </div>
