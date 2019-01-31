@@ -1,0 +1,96 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.home-container {
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.search-form form {
+  padding: 100px;
+}
+
+.search-form form button {
+  background-color: #ff6666;
+  border: none;
+  padding: 10px 30px;
+  display: block;
+  color: #fff;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.container {
+  width: 80%;
+  margin: auto;
+  margin-top: 100px;
+  display: flex;
+  flex-flow: wrap;
+  justify-content: space-between;
+}
+
+.card {
+  width: 30%;
+  background-color: #333;
+  border: 1px solid #333;
+  margin-bottom: 30px;
+}
+
+.card img {
+  max-width: 100%;
+}
+
+.card p {
+  text-align: center;
+  color: #fff;
+}
+
+.card a {
+  display: block;
+  background-color: #ff6666;
+  color: #fff;
+  padding: 5px 10px;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 4px;
+  margin: auto;
+  margin-bottom: 20px;
+  width: 50%;
+}
+
+.audio-top {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+}
+
+.audio-top h3 {
+  color: #fff;
+}
+
+.audio-container {
+  width: 80%;
+  margin: auto;
+  margin-top: 30px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
