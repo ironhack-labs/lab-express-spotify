@@ -1,0 +1,18 @@
+<div class="Albums">
+    {{#each albums}}
+    <div>
+
+        <h3>{{this.name}}</h3>
+        <img src="{{this.images.0.url}}" alt="">
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+
+    </div>
+    {{/each}}
+</div>
+{{#each tracks}}
+<figure>
+    <figcaption>{{this.name}}</figcaption>
+    <audio controls src="{{this.preview_url}}">
+    </audio>
+</figure>
+{{/each}}
