@@ -1,0 +1,25 @@
+*{
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+input {
+    display: flex;
+    padding: 5px;
+    width: 300px;
+}
+
+button{
+    background-color: red;
+    padding: 10px;
+    color: white;
+    margin: 20px;
+}
+
+form {
+    margin: 50px;
+}

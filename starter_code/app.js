@@ -35,7 +35,6 @@ app.get('/', (req, res, next)=>{
 app.get('/artist', (req, res, next) => {
   spotifyApi.searchArtists(req.query.artist)
       .then(data => {
-        console.log("The received data from the API: ", data.body.artists.items);
         let arr = data.body.artists.items;
         res.render('artist', {arr})
       })
@@ -45,17 +44,27 @@ app.get('/artist', (req, res, next) => {
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
-  console.log(req.params)
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then(data =>  {
-      console.log('Artist albums', data.body);
       let arr2 = data.body.items;
       res.render('albums', {arr2})
     })
     .catch(err => {
       console.error(err);
     })
-    // .getArtistAlbums() code goes here
+});
+
+app.get('/track/:trackId', (req, res, next) => {
+  console.log(req.params)
+  spotifyApi.getAlbumTracks(req.params.trackId)
+    .then(data => {
+      console.log(data.body);
+      let arr3 = data.body.items;
+      res.render('track', {arr3})
+    })
+    .catch(err => {
+      console.log('Something went wrong!', err);
+    });
 });
 
 
