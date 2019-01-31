@@ -2,8 +2,10 @@
     {{#each artistsDetails}}
     <div class="one-item">
         <img src="{{images.0.url}}" alt="artist-img">
-        <span>{{name}}</span>
-        <a href="/albums/{{id}}">View Albums</a>   
+        <div class="one-item-text">
+            <span>{{name}}</span>
+            <a href="/albums/{{id}}">View Albums</a> 
+        </div> 
     </div>
     {{/each}}
 </div>

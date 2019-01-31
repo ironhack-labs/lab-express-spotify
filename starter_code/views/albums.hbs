@@ -2,8 +2,10 @@
     {{#each albumDetails}}
     <div class="one-item">
         <img src="{{this.images.0.url}}" alt="album-img">
-        <span>{{this.name}}</span>
-        <a href="/tracks/{{this.id}}">View Tracks</a>   
+        <div class="one-item-text">
+            <span>{{this.name}}</span>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+        </div>    
     </div>
     {{/each}}
 </div>

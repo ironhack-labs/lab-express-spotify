@@ -1,0 +1,111 @@
+body {
+    margin: 0;
+}
+.search{
+    height: 100vh;
+    background-image: url('/images/landing.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search .form-container {
+    height: 200px;
+    width: 500px;
+    background-color:rgba(255,255,255,0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    height: 30px;
+    width: 250px;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.one-item {
+    width: 300px;
+    height: 400px;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color:#4d4d4d;
+    color: white;
+}
+
+.one-item img {
+    max-width: 100%;
+    max-height: 90%;
+}
+
+.one-item-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+    height: 25%;
+}
+
+.one-item-text a, .search form button{
+    background-color: #f16762;
+    border-radius: 5px;
+    padding: 10px;
+    text-decoration: none;
+    color: white;
+}
+.track-container {
+    margin: 0;
+}
+
+.track {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5px;
+    background-color: #f1f3f4;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.track p {
+    margin-left: 10px;
+}
+.track audio {
+    max-width: 30%;
+}
+
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: #4d4d4d;
+    margin: 0;
+    justify-content: space-between;
+}
+.header p {
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
