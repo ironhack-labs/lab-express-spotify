@@ -1,5 +1,9 @@
-<div class="artist-container wrap">
-  {{#each artistsArray}}
-  {{> artistPartial this}}
-  {{/each}}
+<div class="mx-auto">
+  <div class="card-deck row">
+    {{#each artistsArray}}
+    <div class="col-md-4 p-5">
+      {{> artistPartial this}}
+    </div>
+    {{/each}}
+  </div>
 </div>
