@@ -8,7 +8,7 @@
 
 [Spotify](https://www.spotify.com/us/) is a super cool music streaming service that provides you access to tons of music without ever having to buy an album.
 
-Today, we're going to build an Express app to search spotify for artists, albums, and tracks. In addition, we'll be able to play a preview of some of these songs.
+Today, we're going to build an Express app to search Spotify for artists, albums, and tracks. In addition, we'll be able to play a preview of some of these songs.
 
 To see the final product check out the deployed version: https://spotify-lab.herokuapp.com.
 
@@ -66,7 +66,7 @@ The following screens might be outdated since Spotify changed its interface rece
 You're pretty much given *almost* empty `starter_code` folder and that's because in the next couple of steps you'll create all the files you need. So far you have some basic setup in `app.js` but that's not quite enough. As you remember, in order to get some packages (including express one) in our app, we have to create `package.json` file. So let's start listing the steps:
 1. create `package.json` (or as we can say: let's initialize our project :wink: )
 2. `npm install --save express hbs spotify-web-api-node prettyjson`
-3. require *spotify-web-api-node*
+3. inside the `app.js` file, require *spotify-web-api-node*
   ```js
   const SpotifyWebApi = require('spotify-web-api-node');
   ```
@@ -82,7 +82,7 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret : clientSecret
 });
 
-// Retrieve an access token.
+// Retrieve an access token
 spotifyApi.clientCredentialsGrant()
   .then( data => {
     spotifyApi.setAccessToken(data.body['access_token']);
