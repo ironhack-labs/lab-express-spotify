@@ -30,34 +30,39 @@ spotifyApi
 
 // the routes go here:
 
+// INDEX ROUTE
 app.get("/", (req, res, next) => {
   res.render("index");
 });
 
+// ARTIST ROUTE - linked to artist.hbs - receiving the user input through artistName
 app.get("/artist", (req, res, next) => {
-  const {userInput} = req.query;
+  const {artistName} = req.query;
   spotifyApi
-    .searchArtists(userInput)
+    .searchArtists(artistName)
     .then(data => {
-      // res.json(data);
-      console.log("The received data from the API: ", data.body);
-      res.locals.musicData = data.body.artists.items;
-
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist");
+      // res.json(data); // To check the data structure received from the API
+      console.log("The received data from the API: ", data.body); 
+      res.locals.artistList = data.body.artists.items; // To pass the data to the .hbs
+      res.render("artist"); // Call the .hbs template
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     });
 });
 
+// ALBUM ROUTE - linked to albums.hbs - receiving the ID from the URL
+// "/album/:id" tells to express to recover the parameter from the URL, passed by the link <a> in artist.hbs
+// req.params method is used to get that parameters and pass it to the API
 app.get("/albums/:id", (req, res, next) => {
   const { id } = req.params;
   spotifyApi
     .getArtistAlbums(id)
     .then(data => {
       //res.json(data.body.items);
-      res.locals.albums = data.body.items;
+      // BE carefull : the structure has changed from what we recover in the previous route
+      // Always check the data structure fetched using the above command (res.json(data))
+      res.locals.albums = data.body.items; 
       console.log("Artist albums", data.body);
       res.render("albums")
     })
@@ -66,6 +71,9 @@ app.get("/albums/:id", (req, res, next) => {
     });
 });
 
+// TRACKS ROUTE - linked to tracks.hbs - receiving the ID from the URL
+// "/tracks/:id" tells to express to recover the parameter from the URL, passed by the link <a> in artist.hbs
+// req.params method is used to get that parameters and pass it to the API
 app.get("/tracks/:id",(req,res,next) => {
   const {id} = req.params;
   spotifyApi
@@ -73,7 +81,6 @@ app.get("/tracks/:id",(req,res,next) => {
     .then(data => {
       // res.json(data.body.items);
       res.locals.tracks = data.body.items;
-      res.locals.duration = (data.body.items.duration_ms / 1000);
       console.log("Artist albums", data.body);
       res.render("tracks")
     })
@@ -81,6 +88,7 @@ app.get("/tracks/:id",(req,res,next) => {
       console.log("The error while searching artists occurred: ", err);
     });
 })
+
 
 app.listen(5555, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
