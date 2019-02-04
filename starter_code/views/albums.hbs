@@ -1,5 +1,13 @@
-{{#each albums}}
-<p class="subtitle is-3">Album : {{this.name}}</p>
-<img src=" {{this.images.1.url}} " alt="">
-<a href="/tracks/{{this.id}}" class="button">View Tracks</a>
-{{/each}}
+<section class="section">
+  <div class="container">
+    <div class="columns">
+      <div class="column">
+      {{#each albums}}
+        <p class="subtitle is-3">Album : {{this.name}}</p>
+        <img src=" {{this.images.1.url}} " alt="">
+        <a href="/tracks/{{this.id}}" class="button">View Tracks</a>
+      {{/each}}
+      </div>
+    </div>
+  </div>
+</section>
