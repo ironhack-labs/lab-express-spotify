@@ -64,8 +64,26 @@ app.get("/", (request, response, next) => {
 // );
 
 app.get("/artists", (request, response, next) => {
-  spotifyApi.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE").then(
+  const { search_query } = request.query;
+  spotifyApi.searchArtists(search_query).then(
     function(data) {
+      response.locals.artistsData = data.body.artists.items;
+      // response.json(data.body.artists.items);
+      console.log("Artist albums", data);
+      response.render("artists.hbs");
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+});
+
+app.get("/albums/:artistId", (request, response, next) => {
+  console.log("COUCOU");
+  const { artistId } = request.params;
+  spotifyApi.getArtistAlbums(artistId).then(
+    function(data) {
+      response.render("albums.hbs");
       console.log("Artist albums", data);
     },
     function(err) {
