@@ -82,10 +82,25 @@ app.get("/albums/:artistId", (request, response, next) => {
   const { artistId } = request.params;
   spotifyApi.getArtistAlbums(artistId).then(
     function(data) {
-      response.locals.artistAlbumsId = data.body;
+      response.locals.artistAlbumsId = data.body.items;
       console.log("Artist albums", data);
-      response.json(data.body.items);
+      // response.json(data.body.items);
       response.render("albums.hbs");
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+});
+
+app.get("/tracks/:albumId", (request, response, next) => {
+  const { albumId } = request.params;
+  spotifyApi.getAlbumTracks(albumId).then(
+    function(data) {
+      response.locals.albumTrackId = data.body.items;
+      console.log("Albums tracks", data);
+      // response.json(data.body.items);
+      response.render("tracks.hbs");
     },
     function(err) {
       console.error(err);

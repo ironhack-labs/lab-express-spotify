@@ -1,9 +1,7 @@
 <h2>Discography</h2>
 
-<p>{{artistAlbumsId}}</p>
-
 {{#each artistAlbumsId}}
 <p>Albums Name: {{this.name}}</p>
-{{!-- <p>Image: <img src={{this.images.[0].url}} alt=""></p>
-<p><a href="/albums/{{this.id}}"><button>View Albums</button></a></p> --}}
+<p>Image: <img src={{this.images.[0].url}} alt=""></p>
+<p><a href="/tracks/{{this.id}}"><button>View Tracks</button></a></p>
 {{/each}}
