@@ -1,10 +1,10 @@
 const express = require("express");
+const app = express();
 const hbs = require("hbs");
 
 // require spotify-web-api-node package here:
 
 const SpotifyWebApi = require("spotify-web-api-node");
-const app = express();
 
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
@@ -35,3 +35,41 @@ spotifyApi
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
+
+// Routes
+// ----------------------------------------------------------------------------------------------------------
+
+app.get("/", (request, response, next) => {
+  response.render("index.hbs");
+});
+
+// spotifyApi
+//   .searchArtists("Nine Inch Nails")
+//   .then(data => {
+//     console.log("The received data from the API: ", data.body);
+//     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+//   })
+//   .catch(err => {
+//     console.log("The error while searching artists occurred: ", err);
+//   });
+
+// get Elvis' albums, using Promises through Promise, Q or when
+// spotifyApi.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE").then(
+//   function(data) {
+//     console.log("Artist albums", data);
+//   },
+//   function(err) {
+//     console.error(err);
+//   }
+// );
+
+app.get("/artists", (request, response, next) => {
+  spotifyApi.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE").then(
+    function(data) {
+      console.log("Artist albums", data);
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+});
