@@ -49,6 +49,7 @@ app.get("/artists", (request, response, next) => {
 
       console.log("The received data from the API:", data.body);
       response.locals.artistElements = data.body.artists.items;
+      response.locals.chien = artistList;
       response.render("artists.hbs");
     })
     .catch(err => {
