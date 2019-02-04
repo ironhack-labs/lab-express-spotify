@@ -1,0 +1,16 @@
+<h3>Name </h3>
+<p>{{#each userText}}</p>
+
+<p>{{this.name}}</p>
+
+
+
+<img src="{{this.images.0.url}}" alt="">
+
+<p>
+  You searched for <b>{{userText}}</b>
+  <p>
+
+    <button><a href="/albums/{{this.id}}">View Albums</a></button>
+
+    {{/each}}
