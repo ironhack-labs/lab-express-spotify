@@ -79,12 +79,13 @@ app.get("/artists", (request, response, next) => {
 });
 
 app.get("/albums/:artistId", (request, response, next) => {
-  console.log("COUCOU");
   const { artistId } = request.params;
   spotifyApi.getArtistAlbums(artistId).then(
     function(data) {
-      response.render("albums.hbs");
+      response.locals.artistAlbumsId = data.body;
       console.log("Artist albums", data);
+      response.json(data.body.items);
+      response.render("albums.hbs");
     },
     function(err) {
       console.error(err);
