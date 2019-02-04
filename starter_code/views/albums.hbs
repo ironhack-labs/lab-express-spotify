@@ -1,0 +1,10 @@
+<h2>albums</h2>
+
+<ul>
+  {{#each album}}
+  {{>albumPartial}}
+  <form action="/tracks/{{this.id}}" method="GET">
+    <button>View Tracks</button>
+  </form>
+  {{/each}}
+</ul>

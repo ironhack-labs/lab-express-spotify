@@ -1,0 +1,10 @@
+<h2>artists</h2>
+
+<ul>
+  {{#each artist}}
+  {{>artistPartial}}
+  <form action="/albums/{{this.id}}" method="GET">
+    <button>View Albums</button>
+  </form>
+  {{/each}}
+</ul>
