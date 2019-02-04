@@ -1,0 +1,13 @@
+<h3>Find an artist</h3>
+<ul>
+  {{#each artistsList}}
+  <li>
+    <h3>{{this.name}}</h3>
+    {{#with this.images.[0] }}
+    <img src="{{this.url}}" width="50px" height="50px" />
+    {{/with}}
+    <hr>
+    <a class="btn btn-danger" href="/albums/{{this.id}}">View Albums</a>
+  </li>
+  {{/each}}
+</ul>
