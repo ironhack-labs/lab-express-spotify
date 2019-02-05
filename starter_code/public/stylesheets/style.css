@@ -1,3 +1,23 @@
-/* .search-box {
-  background-color: rgba(255, 255, 255, 0.5);
-} */
+body {
+  background-image: url("/images/concert.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+button {
+  font-size: medium;
+  color: white;
+  background: #ef6561;
+}
+
+.searchbox {
+  margin: auto;
+  margin-top: 200px;
+  /* border: 3px solid green; */
+  padding: 50px;
+  width: 500px;
+  height: 100px;
+  background: white;
+  opacity: 0.7;
+  text-align: center;
+}
