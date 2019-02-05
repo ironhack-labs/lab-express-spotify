@@ -1,13 +1,13 @@
 <section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="column">
+    <div class="columns" style="display: flex; flex-wrap: wrap;">
       {{#each artistList}}
-        <p class="subtitle is-3">Artist : {{this.name}} </p>
-        <img src=" {{this.images.1.url}} " alt="" />
-        <a href=" /albums/{{this.id}} " class="button">View Albums</a>
-      {{/each}}
+      <div class="column is-one-third">
+        <p class="subtitle is-3 has-text-centered">Album : {{this.name}}</p>
+        <img src=" {{this.images.1.url}} " alt="" style="margin: auto;display: block;padding: 10px;">
+        <a href="/albums/{{this.id}}" class="button is-fullwidth">View Albums</a>
       </div>
+      {{/each}}
     </div>
   </div>
 </section>

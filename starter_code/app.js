@@ -30,7 +30,7 @@ spotifyApi
 
 // the routes go here:
 
-// INDEX ROUTE
+// INDEX ROUTE - Homepage
 app.get("/", (req, res, next) => {
   res.render("index");
 });
@@ -72,7 +72,7 @@ app.get("/albums/:id", (req, res, next) => {
 });
 
 // TRACKS ROUTE - linked to tracks.hbs - receiving the ID from the URL
-// "/tracks/:id" tells to express to recover the parameter from the URL, passed by the link <a> in artist.hbs
+// "/tracks/:id" tells to express to recover the parameter from the URL, passed by the link <a> in albums.hbs
 // req.params method is used to get that parameters and pass it to the API
 app.get("/tracks/:id",(req,res,next) => {
   const {id} = req.params;

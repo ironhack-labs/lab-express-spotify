@@ -1,13 +1,45 @@
 <section class="section">
   <div class="container">
-    <div class="columns">
-      <div class="column">
+    <div class="columns" style="display: flex; flex-wrap: wrap;">
       {{#each albums}}
-        <p class="subtitle is-3">Album : {{this.name}}</p>
-        <img src=" {{this.images.1.url}} " alt="">
-        <a href="/tracks/{{this.id}}" class="button">View Tracks</a>
-      {{/each}}
+      <div class="column is-one-third">
+        <p class="subtitle is-3 has-text-centered">Album : {{this.name}}</p>
+        <img src=" {{this.images.1.url}} " alt="" style="margin: auto;display: block;padding: 10px;">
+        <a href="/tracks/{{this.id}}" class="button is-fullwidth">View Tracks</a>
       </div>
+      {{/each}}
     </div>
   </div>
 </section>
+
+{{!-- <div class="tile is-ancestor">
+  {{#each albums}}
+  <div class="tile is-parent">
+    <article class="tile is-child box">
+      <p class="title is-6"> {{this.name}} </p>
+      <figure class="image">
+        <img src=" {{this.images.1.url}} " alt="">
+      </figure>
+      <a href="/tracks/{{this.id}}" class="button">View Tracks</a>
+    </article>
+  </div>
+  {{/each}}
+</div> --}}
+
+{{!-- <div class="tile is-parent">
+  <article class="tile is-child box">
+    <p class="title">Foo</p>
+    <p class="subtitle">Bar</p>
+  </article>
+</div>
+<div class="tile is-parent">
+  <article class="tile is-child box">
+    <p class="title">Third column</p>
+    <p class="subtitle">With some content</p>
+    <div class="content">
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor
+        vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+    </div>
+  </article>
+</div>
+</div> --}}

@@ -2,12 +2,13 @@
   display: flex;
   justify-content: center;
 }
+
 .hero {
   background-image: url('https://cdn.dribbble.com/users/441326/screenshots/3165191/spotify-gif---oliver-keane.gif');
   background-size: cover;
 }
 
-.artist {
-  display: flex;
-  flex-wrap: wrap;
+.columns {
+  display: flex !important;
+  flex-wrap: wrap !important;
 }
