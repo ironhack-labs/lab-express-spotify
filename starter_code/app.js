@@ -31,7 +31,7 @@ spotifyApi
 
 // the routes go here:
 
-app.listen(3000, () =>
+app.listen(1234, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
 
@@ -72,8 +72,9 @@ app.get("/albums/:artistId", (request, response, next) => {
 app.get("/tracks/:artistId", (request, response, next) => {
   const { artistId } = request.params;
   spotifyApi
-    .getAlbumTracks(artistId)
+    .getAlbumTracks(artistId, { limit: 10, offset: 1 })
     .then(data => {
+      // response.json(data.body.items);
       response.locals.search_query = data.body.items;
       response.render("track-info.hbs");
       console.log(data.body);
