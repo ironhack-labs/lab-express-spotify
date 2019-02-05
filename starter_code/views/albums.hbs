@@ -1,0 +1,12 @@
+<div class="title">
+  <h2>Albums from this artist</h2>
+  <h3>- {{artistName}} -</h3>
+</div>
+
+<div class="results-container">
+  <ul>
+    {{#each albumsList}}
+    <li>{{>albumPartial}}</li>
+    {{/each}}
+  </ul>
+</div>

@@ -1,0 +1,22 @@
+<div class="title">
+  <h2>Tracks from album</h2>
+  <h3>- {{albumName}} -</h3>
+</div>
+
+<div class="tracks-container">
+  <div class="sm-title">
+    <div>
+      <h4>Title</h4>
+    </div>
+    <div>
+      <h4>Listen</h4>
+    </div>
+  </div>
+  <div>
+    <ul>
+      {{#each tracksList}}
+      <li>{{>trackPartial}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>

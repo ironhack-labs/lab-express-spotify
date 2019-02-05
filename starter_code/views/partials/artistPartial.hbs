@@ -1,0 +1,11 @@
+<div class="card">
+  {{#if this.images.0.url}}
+  <div class="card-img"><img src="{{this.images.0.url}}" alt="{{this.name}}"></div>
+  {{else}}
+  <div class="card-img"><img src="/images/placeholder.png" alt="{{this.name}}"></div>
+  {{/if}}
+  <div class="card-text">
+    <h6>{{this.name}}</h6>
+    <a href="/albums/{{this.id}}/{{this.name}}"><button>View Albums</button></a>
+  </div>
+</div>

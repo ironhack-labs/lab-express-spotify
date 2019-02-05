@@ -1,0 +1,12 @@
+<div class="title">
+  <h2>Artists who matched your request</h2>
+  <h3>- {{searchedArtist}} -</h3>
+</div>
+
+<div class="results-container">
+  <ul>
+    {{#each artistsList}}
+    <li>{{>artistPartial}}</li>
+    {{/each}}
+  </ul>
+</div>

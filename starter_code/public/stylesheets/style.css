@@ -1,0 +1,161 @@
+body {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+}
+
+.index-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.index-container form {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-container input {
+  display: block;
+  margin: 10px auto;
+  width: 100%;
+  font-size: 1.2rem;
+}
+
+.index-container button {
+  background-color: #fa6762;
+  color: white;
+  font-size: 0.8rem;
+  padding: 8px 15px;
+}
+
+.title {
+  width: 50%;
+  margin: 25px auto;
+  text-align: center;
+  background-color: #fa6762;
+  padding: 5px 20px;
+}
+
+.title h2,
+.title h3 {
+  color: white;
+  margin: 5px auto;
+}
+
+.results-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.results-container ul {
+  padding-left: 0;
+  margin-top: 60px;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card {
+  margin: 10px 20px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: stretch;
+  text-align: center;
+}
+
+.card img {
+  height: 200px;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.card-text {
+  background-color: #4d4d4d;
+}
+
+.card h6 {
+  margin: 5px auto 2px;
+  color: white;
+}
+
+.card button {
+  background-color: #fa6762;
+  color: white;
+  font-size: 0.6rem;
+  padding: 3px 8px;
+  border-radius: 5px;
+  margin-bottom: 5px;
+  border: 1px solid #fa6762;
+}
+
+.card button:hover {
+  background-color: white;
+  color: #fa6762;
+}
+
+.tracks-container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.sm-title {
+  width: 80%;
+  height: 3rem;
+  margin: 0 auto;
+  background-color: #4a4a4a;
+  color: grey;
+  padding: 0 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tracks-container ul {
+  padding-left: 0;
+  margin-top: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.tracks-container li {
+  width: 80%;
+  background-color: #f6f6f6;
+  padding: 0 20px;
+  margin: 2px auto;
+  font-size: 1.2rem;
+}
+
+.tracks-container h6 {
+  margin: 0 auto;
+}
+
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.track audio {
+  height: 40px;
+}
