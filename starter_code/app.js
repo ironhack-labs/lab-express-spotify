@@ -43,26 +43,6 @@ app.get("/", (request, response, next) => {
   response.render("index.hbs");
 });
 
-// spotifyApi
-//   .searchArtists("Nine Inch Nails")
-//   .then(data => {
-//     console.log("The received data from the API: ", data.body);
-//     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-//   })
-//   .catch(err => {
-//     console.log("The error while searching artists occurred: ", err);
-//   });
-
-// get Elvis' albums, using Promises through Promise, Q or when
-// spotifyApi.getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE").then(
-//   function(data) {
-//     console.log("Artist albums", data);
-//   },
-//   function(err) {
-//     console.error(err);
-//   }
-// );
-
 app.get("/artists", (request, response, next) => {
   const { search_query } = request.query;
   spotifyApi.searchArtists(search_query).then(
