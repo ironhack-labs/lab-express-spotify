@@ -49,10 +49,42 @@ app.get("/artists", (request, response, next) => {
 
       console.log("The received data from the API:", data.body);
       response.locals.artistElements = data.body.artists.items;
-      response.locals.chien = artistList;
+      response.locals.artistName = artistList;
       response.render("artists.hbs");
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
+    });
+});
+
+app.get("/albums/:artistId", (request, response, next) => {
+  const { artistId } = request.params;
+
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then(data => {
+      console.log("Artist albums", data.body);
+      response.locals.artistAlbums = data.body.items;
+      response.render("albums.hbs");
+    })
+    .catch(err => {
+      console.log("Something went wrong!", err);
+    });
+});
+
+app.get("/tracks/:albumId", (request, response, next) => {
+  const { albumId } = request.params;
+
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then(data => {
+      // response.json(data);
+
+      console.log(data.body);
+      response.locals.albumsTracks = data.body.items;
+      response.render("tracks.hbs");
+    })
+    .catch(err => {
+      console.log("Something went wrong!", err);
     });
 });
