@@ -1,0 +1,11 @@
+<h2>Tracks</h2>
+<section>
+{{#each body.items}}
+<div class="card">
+  <h3>{{this.name}}</h3>
+  <img src="{{this.images.[0].url}}" alt="">
+  <p><audio controls src="{{this.preview_url}}">
+           </audio></p>
+</div>
+{{/each}}
+</section>

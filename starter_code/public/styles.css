@@ -1,0 +1,13 @@
+section {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+}
+
+.card {
+  width: 30%
+}
+
+.card img {
+  width: 200px;
+}
