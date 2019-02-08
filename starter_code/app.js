@@ -16,6 +16,7 @@ app.use(express.static(__dirname + "/public"));
 const clientId = "8800457b3a8b4c0d805de66d5022b414",
   clientSecret = "c200dd81280340c6a3ab209b46bb7209";
 
+
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
   clientSecret: clientSecret
@@ -45,6 +46,6 @@ app.get("/artists", (req, res) => {
     .catch(err => console.log("The error while searching artists occurred: ", err))
 });
 
-app.listen(3001, () =>
-  console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
+app.listen(3000, () =>
+  console.log(`My Spotify project running on port 3000 🎧 🥁 🎸 🔊`)
 );

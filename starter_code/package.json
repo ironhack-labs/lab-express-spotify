@@ -20,6 +20,7 @@
   "homepage": "https://github.com/CGuillotG/lab-express-spotify#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "dotenv": "^6.2.0",
     "express": "^4.16.4",
     "hbs": "^4.0.1",
     "mongoose": "^5.4.10",

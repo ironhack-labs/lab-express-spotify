@@ -1,10 +1,13 @@
 body{
     margin:0;
+
+}
+.background{
     min-height: 100vh;
     display:flex;
     justify-content: center;
     align-items: center;
-}
-.home{
-    height:100%;
+    background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
 }
