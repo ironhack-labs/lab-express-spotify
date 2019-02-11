@@ -1,0 +1,9 @@
+<div>
+  <ul>
+    {{#each items as |item|}}
+    <li>{{item.name}} <img src="{{item.images.0.url}}"></li>
+    <a href="/artists/{{item.id}}">View albums</a>
+    {{/each}}
+  </ul>
+  <a href="/">Back search menu</a>
+</div>
