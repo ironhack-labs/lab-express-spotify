@@ -17,6 +17,9 @@
   },
   "homepage": "https://github.com/fischerjack/lab-express-spotify#readme",
   "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.1",
+    "prettyjson": "^1.2.1",
     "spotify-web-api-js": "^1.2.0"
   }
 }
