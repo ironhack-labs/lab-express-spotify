@@ -17,8 +17,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 //Inserting credentials
-const clientId = '665bc553b6bf45428e46d261854c3969',
-  clientSecret = 'bfe565f44c854c218b1ffd7f8dcb1cf5';
+const clientId = /*'ENTER YOUR CLIENT ID HERE'*/,
+  clientSecret = /*'ENTER YOUR CLIENT SECRET'*/;
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -36,7 +36,43 @@ spotifyApi.clientCredentialsGrant()
 
 
 // the routes go here:
+app.get('/', (req, res, next) => {
+  res.render('index');
+})
+
+app.get('/artist', (req, res, next) => {
+  spotifyApi.searchArtists(req.query.artist)
+    .then(data => {
+      res.render('artist', data.body.artists);
+    })
+    .catch(err => {
+      console.log('an error occurred while searching for the artist', err);
+    });
+});
+
+app.get('/albums', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.query.artistId, { limit: 10})
+  .then( data => {
+    res.render('albums', data.body);
+  })
+  .catch(err => {
+    console.log("There was an error while retrieving albums", err);
+  });
+});
+
+app.get('/tracks', (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.query.albumId)
+  .then( data => {
+    console.log(data.body);
+    res.render('tracks', data.body);
+  })
+  .catch( err => {
+    console.log("There was an error while retrieving tracks", err);
+  });
+});
 
 
 
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+
+
+app.listen(3000, () => console.log("My Spotify project running on port 3000"));
