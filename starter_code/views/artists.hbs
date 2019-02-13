@@ -1,6 +1,11 @@
-<div>
-    {{#each myArtists}}
-    <p>{{this.name}}</p>
-    {{/each}}
+<div class="container">
+    <div class="row">
+            {{#each myArtists}}
+            <div class="col-md-4">
+                <p>{{this.name}}</p>
+                <img src="{{this.images.0.url}}" height="200" alt="no-image">
+            </div>
+            {{/each}}
+    </div>
 </div>
     

@@ -27,10 +27,7 @@ app.get('/artists', (req, res, next) => {
     console.log(req.body, req.params, req.query);
     spotifyApi.searchArtists(req.query.artist)
     .then(data => {
-        console.log(data.body.artists.items);
-        //console.log("The received data from the API: ", data.body);
-        // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-        //res.send(data.body.artists.items[0].name);
+        console.log(data.body.artists.items[0].images);
         res.render('artists', {myArtists: data.body.artists.items})
     })
     .catch(err => {
