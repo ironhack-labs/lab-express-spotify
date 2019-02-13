@@ -20,7 +20,7 @@ const spotifyApi = new SpotifyWebApi({
 });
 
 app.get('/', (req, res, next) => {
-    res.render('layout');
+    res.render('index');
 });
 
 app.get('/artists', (req, res, next) => {
