@@ -1,3 +1,65 @@
-body {
-  background: darkblue;
+.search-container {
+  background-image: url(https://media3.giphy.com/media/3o7TKyL1IgyDtHlg6A/source.gif);
+  background-repeat: round;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container input {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.form-container button {
+  height: 31px;
+  width: 150px;
+  font-size: 1rem;
+  margin-top: 10px;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  border-radius: 5px;
+}
+
+.artist-container {
+  height: 100vh;
+  weight: 100vw;
+}
+
+.artist-partial-container {
+  height: 300px;
+  width: 150px;
+}
+
+.artist-partial-container img {
+  height: 100%;
+  width: 100%;
 }
