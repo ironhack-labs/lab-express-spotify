@@ -2,11 +2,14 @@
     <div class="row">
             {{#each myArtists}}
             <div class="col-md-4">
-                <p>{{this.name}}</p>
-                <img src="{{this.images.0.url}}" height="200" alt="no-image"><br>
-                <a href="/albums/{{this.id}}">See Albums</a>
+                <div class="artist-image-container">
+                    <img src="{{this.images.0.url}}" class="artist-image" onerror="if (this.src != 'error.jpg') this.src = '../images/artist.png';"><br>
+                </div>
+                <div class="artist-info">
+                    <p class="artist-title">{{this.name}}</p>
+                    <a href="/albums/{{this.id}}">See Albums</a>
+                </div>
             </div>
             {{/each}}
     </div>
 </div>
-    

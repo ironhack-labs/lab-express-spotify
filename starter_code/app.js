@@ -35,6 +35,30 @@ app.get('/artists', (req, res, next) => {
     })
 });
 
+app.get('/albums/:artistId', (req, res, next) => {
+    console.log('jhgjhghjjhg',req.params.artistId);
+    spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(data => {
+      res.render('albums', {myAlbums: data.body.items});
+      console.log(data.body);
+    })
+    .catch(err => {
+      console.log("The error while searching artists occurred: ", err);
+    })
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+  console.log('look this up', req.params.albumId);
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(data => {
+    res.render('tracks', {myTracks: data.body.items});
+    console.log(data.body.items);
+  })
+  .catch(err => {
+    console.log("The error while searching artists occurred: ", err);
+  })
+});
+
 // Retrieve an access token
 spotifyApi.clientCredentialsGrant()
   .then( data => {

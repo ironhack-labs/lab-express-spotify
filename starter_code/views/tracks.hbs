@@ -1,6 +1,11 @@
+<div style="background-color: black;">
+    <p>Tracks</p>
+</div>
 {{#each myTracks}}
-    <p>{{this.name}}</p>
-    <audio controls>
-        <source src="{{this.preview_url}}"/>
-    </audio>
+    <div class="track">
+        <p>{{this.name}}</p>
+        <audio controls>
+            <source src="{{this.preview_url}}"/>
+        </audio>
+    </div>
 {{/each}}

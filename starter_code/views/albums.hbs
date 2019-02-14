@@ -1,11 +1,15 @@
 <div class="container">
+    <h1 id="albums-page-title">Available Albums</h1>
     <div class="row">
             {{#each myAlbums}}
-            <div class="col-md-4">
-                <p>{{this.name}}</p>
-                <img src="{{this.images.0.url}}" height="200" alt="no-image"><br>
-                <a href="/tracks/{{this.id}}">View Tracks</a>
-                {{!-- <a href="/albums/{{this.id}}">See Albums</a> --}}
+            <div class="col-md-4 album">
+                <div class="album-image-container">
+                    <img src="{{this.images.0.url}}" height="200" class="album-image" alt="no-image">
+                </div>
+                <div class="album-info">
+                    <p class="album-title">{{this.name}}</p>
+                    <a href="/tracks/{{this.id}}">View Tracks</a>
+                </div>
             </div>
             {{/each}}
     </div>

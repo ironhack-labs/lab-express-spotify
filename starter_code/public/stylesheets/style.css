@@ -35,3 +35,24 @@
 .info {
     background-color: white;
 }
+.album {
+    margin-bottom: 30px;
+}
+.album-image-container, .artist-image-container, .album-info, .artist-info{
+    text-align: center;
+}
+.album-info, .artist-info {
+    color: white;
+    background-color: #4A4A4A;
+}
+.album-title, .artist-title {
+    margin-bottom: 0px;
+}
+#albums-page-title {
+    margin-bottom: 40px;
+    text-align: center;
+}
+.album-image, .artist-image {
+    height: auto;
+    width: 100%;
+}
