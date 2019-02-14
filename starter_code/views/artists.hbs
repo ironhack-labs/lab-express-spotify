@@ -1,0 +1,11 @@
+<div class=“d-flex justify-content-around flex-wrap”>
+  
+  {{#each myArtists}}
+  <div class="d-flex align-content-center">
+    <img src="{{this.images.1.url}}">
+    <h3>{{this.name}}</h3>
+    <a href="/albums/{{this.id}}">View Albums</a>
+  </div>
+  {{/each}}
+
+</div>
