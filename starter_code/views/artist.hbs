@@ -1,8 +1,16 @@
-<h1>Artist Page</h1>
-{{#each items}}
-  <p>{{this.name}}</p>
-  <img src="{{this.images.0.url}}" alt="{{this.name}}" style="max-height: 50px; width: auto;">
-  <a href="/albums?artistId={{this.id}}" style="padding: 10px 15px; border: blue solid 1px; border-radius: 5px;">View Albums</a>
-  <br>
-  <br>
-{{/each}}
+<div class="container artist">
+  <h1>Artist Page</h1>
+  <div class="row">
+    {{#each items}}
+      <div class="col-md-4">
+        <div class="card" style="width: 18rem;">
+          <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
+          <div class="card-body">
+            <h4 class="card-title">{{this.name}}</h4>
+            <a href="/albums?artistId={{this.id}}" class="btn btn-primary">View Albums</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

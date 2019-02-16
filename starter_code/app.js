@@ -17,8 +17,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 //Inserting credentials
-const clientId = /*'ENTER YOUR CLIENT ID HERE'*/,
-  clientSecret = /*'ENTER YOUR CLIENT SECRET'*/;
+const clientId = '665bc553b6bf45428e46d261854c3969',
+  clientSecret = 'bfe565f44c854c218b1ffd7f8dcb1cf5';
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,

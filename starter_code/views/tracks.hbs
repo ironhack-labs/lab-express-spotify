@@ -1,7 +1,17 @@
-<h1>Tracks Page</h1>
-{{#each items}}
-  <p>{{this.name}}</p>
-  <audio src="{{this.preview_url}}" controls></audio>
-  <br>
-  <br>
-{{/each}}
+
+
+<div class="container track">
+  <h1>Tracks Page</h1>
+  <div class="row">
+    {{#each items}}
+      <div class="col-md-4">
+        <div class="card">
+          <div class="card-body">
+            <h4 class="card-title">{{this.name}}</h4>
+            <audio src="{{this.preview_url}}" controls></audio>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
