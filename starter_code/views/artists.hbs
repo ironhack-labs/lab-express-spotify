@@ -1,8 +1,25 @@
-{{#each items}}
+{{!-- {{#each items}}
   <div>
     <img src="{{images.0.url}}" width="350px" height="350px" alt="{{name}}">
     {{name}}
     <a href="/albums/{{id}}" type="button" class="home-search">View Albums</a>
   </div>
+{{/each}} --}}
+
+{{#each items}}
+    <div class="container">
+  <div class="row">
+    
+      <div class="col-lg-4 artist-container">
+        
+          <img src="{{images.0.url}}" width="350px" height="350px" alt="{{name}}">
+        
+        <div class="artist-info-container">
+          <a href="/albums/{{id}}" type="button" class="home-search">View Albums</a>
+        </div>
+      </div>
+      
+  </div>
+</div>
 {{/each}}
 
