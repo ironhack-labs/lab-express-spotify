@@ -1,6 +1,6 @@
 const express       = require('express');
 const hbs           = require('hbs');
-const SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-js');
 
 
 
@@ -37,7 +37,7 @@ spotifyApi.clientCredentialsGrant()
 });
 
 app.get("/", (req, res) => {
-  res.render("index")
+  res.render("homepage")
 })
 
 app.get("/artists", (req, res) => {

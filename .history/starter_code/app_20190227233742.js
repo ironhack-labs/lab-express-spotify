@@ -1,6 +1,6 @@
 const express       = require('express');
 const hbs           = require('hbs');
-const SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require('spotify-web-api-js');
 
 
 
@@ -25,32 +25,20 @@ redirectUri = 'localhost:3000/callback';
 
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: clientId,
-  clientSecret: clientSecret
-})
-
-spotifyApi.clientCredentialsGrant()
-  .then(function(data) {
-    spotifyApi.setAccessToken(data.body['access_token']);
-  }, function(err) {
-    console.log('Something went wrong when retrieving an access token', err);
+clientId : clientId,
+clientSecret : clientSecret,
+redirectUri : redirectUri
 });
+const code = 'MQCbtKe23z7YzzS44KzZzZgjQa621hgSzHN';
 
-app.get("/", (req, res) => {
-  res.render("index")
+
+// Retrieve an access token
+spotifyApi.clientCredentialsGrant(code)
+.then( data => {
+  spotifyApi.setAccessToken(data.body['access_token']);
 })
-
-app.get("/artists", (req, res) => {
-
-  spotifyApi.searchArtists(req.query.artist)
-  .then(data => {
-    let resultArray = data.body.artists.items
-    res.render("artistresult", {resultArray})
-  })
-  .catch(err => {
-   console.log("an error occured!" + err)
-  })
-
+.catch(error => {
+  console.log('Something went wrong when retrieving an access token', error);
 })
 
 

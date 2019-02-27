@@ -37,7 +37,7 @@ spotifyApi.clientCredentialsGrant()
 });
 
 app.get("/", (req, res) => {
-  res.render("index")
+  res.render("homepage")
 })
 
 app.get("/artists", (req, res) => {

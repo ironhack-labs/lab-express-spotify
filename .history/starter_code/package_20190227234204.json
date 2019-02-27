@@ -24,6 +24,7 @@
     "morgan": "^1.9.1",
     "nodemon": "^1.18.10",
     "prettyjson": "^1.2.1",
+    "spotify-web-api-js": "^1.2.0",
     "spotify-web-api-node": "^4.0.0"
   }
 }
