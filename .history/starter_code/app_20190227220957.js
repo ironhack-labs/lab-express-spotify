@@ -1,5 +1,5 @@
 const express = require('express');
-const hbs = require('hbs');
+// const hbs = require('hbs');
 const Spotify = require('spotify-web-api-js');
 const spoty = new Spotify();
 

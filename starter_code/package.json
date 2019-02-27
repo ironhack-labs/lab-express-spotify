@@ -19,6 +19,7 @@
   "homepage": "https://github.com/konstantin0s/lab-express-spotify#readme",
   "dependencies": {
     "express": "^4.16.4",
+    "hbs": "^4.0.2",
     "nodemon": "^1.18.10",
     "spotify-web-api-js": "^1.2.0"
   }
