@@ -36,29 +36,36 @@ router.post('/artists', function (req, res, next) {
   // Search tracks whose name, album or artist contains 'Love'
   spotifyApi.searchArtists(req.body.artistSearch)
     .then(function (data) {
-      res.render('artists', {data, artistSearch: req.body.artistSearch})
+      res.render('artists', {
+        data,
+        artistSearch: req.body.artistSearch
+      })
     }, function (err) {
       console.error(err);
     });
 });
 
-router.get('/albums/*', (req,res) => {
+router.get('/albums/*', (req, res) => {
   spotifyApi.getArtistAlbums(req.params[0])
-  .then(function(data) {
-    res.render('albums', {data})
-  }, function(err) {
-    console.error(err);
-  });
+    .then(function (data) {
+      res.render('albums', {
+        data
+      })
+    }, function (err) {
+      console.error(err);
+    });
 })
 
-router.get('/tracks/*', (req,res) => {
+router.get('/tracks/*', (req, res) => {
   spotifyApi.getAlbumTracks(req.params[0])
-  .then(function(data) {
-    
-    res.render('tracks', {data})
-  }, function(err) {
-    console.log('Something went wrong!', err);
-  });
+    .then(function (data) {
+
+      res.render('tracks', {
+        data
+      })
+    }, function (err) {
+      console.log('Something went wrong!', err);
+    });
 })
 
 module.exports = router;
