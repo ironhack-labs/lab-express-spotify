@@ -9,7 +9,7 @@ a {
     position: relative;
     top: 100px;
     padding-bottom: 100px;
-    left: 38%;
+    left: 30%;
   }
 .nav-link {
   color: white;
@@ -17,11 +17,22 @@ a {
 
 }
 
+.form {
+  position: relative;
+  top: 100px;
+  width: 40%;
+  left: 30%;
+}
+
+img {
+  position: relative;
+  width: 300px;
+    height: 300px;
+}
+
 #form {
   margin: 30px auto;
   width: 380px;
-  position: relative;
-  top: 500px;
 }
 
 #form label {

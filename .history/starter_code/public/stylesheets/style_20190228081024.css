@@ -9,13 +9,20 @@ a {
     position: relative;
     top: 100px;
     padding-bottom: 100px;
-    left: 38%;
+    left: 30%;
   }
 .nav-link {
   color: white;
   position: relative;
 
 }
+
+/* .form {
+  position: relative;
+  top: 100px;
+  width: 40%;
+  left: 30%;
+} */
 
 #form {
   margin: 30px auto;
