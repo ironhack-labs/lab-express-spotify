@@ -1,8 +1,44 @@
 body {
-  padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0;
 }
-
+h1{
+  margin: 0;
+}
 a {
   color: #00B7FF;
+}
+
+.container{
+  background-color: blanchedalmond;
+  text-align: center;
+}
+
+.content{
+  padding: 50px;
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+  min-height: 100vh;
+}
+
+input#artistSearch{
+  padding: 20px;
+}
+
+ul{
+  list-style: none;
+}
+.result{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.resultBox{
+  flex: 1;
+  background-color: grey;
+  width: 20%;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
 }

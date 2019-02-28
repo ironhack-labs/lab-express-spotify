@@ -1,9 +1,11 @@
-<h2>here are the albums</h2>
-<ul>
-{{#each data.body.items}}
-  <li>
+<h2>Albums from the Artist: "{{data.body.items.0.artists.0.name}}"</h2>
+<div class="result">
+  {{#each data.body.items}}
+  <div class="resultBox">
     {{this.name}}
-    <a href="/tracks/{{this.id}}">View Albums</a>
-  </li>
-{{/each}}
-</ul>
+     <img src="{{this.images.0.url}}" width="100" alt="{{this.name}}">
+    <br>
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+  </div>
+  {{/each}}
+</div>
