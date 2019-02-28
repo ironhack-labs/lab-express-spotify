@@ -1,0 +1,12 @@
+<div class="artist-card">
+    {{#if this.images.0.url}}
+        <img src="{{this.images.0.url}}">
+    {{else}}
+        <img src="images/meme.png">
+    {{/if}}
+    <div class="artist-info">
+        <h2>{{this.name}}</h2>
+        <a href="albums/{{this.id}}"><button type="text">View tracks</button></a>
+    </div>
+</div>
+

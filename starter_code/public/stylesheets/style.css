@@ -1,0 +1,93 @@
+.search-page {
+    height: 100vh; 
+    background: url("../images/concert.jpg") no-repeat;
+    background-size: 100% 100%;
+}
+
+.search-container {
+    padding: 40px;
+    background-color: rgba(225,225,225,0.6);
+    position: absolute;
+    top: 50%; 
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -280px;
+    width: 40%;
+}
+
+.search-container form {
+    text-align: center;
+}
+.search-container input, .search-container button {
+    display:block;
+    margin-bottom: 10px;
+}
+
+.search-container button {
+padding: 5px;
+background-color: salmon;
+border: 1px solid salmon;
+color: white;
+margin-left: 20px;
+}
+
+.flex-container {
+    margin: 40px auto;
+    width: 80%;
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.artist-card {
+    width: 30%;
+    margin: 5px;
+    padding: 10px;
+}
+
+.artist-card img {
+    width: 100%;
+}
+
+.artist-card h2 {
+    font-size: 18px;
+    text-align: center;
+}
+
+.artist-card button {
+    display:block;
+    margin: 0 auto;
+    background-color: salmon;
+    border: 1px solid salmon;
+    color: white;
+}
+
+.artist-card a {
+    text-decoration:none;
+}
+
+.artist-info {
+    background-color: lightgray;
+    padding: 10px;
+}
+
+.tracks-container {
+    margin: 40px;
+    display:flex;
+    flex-direction: column;
+}
+
+.tracks-header {
+    padding: 20px;
+    background-color: darkslateblue;
+    color: darkgrey;
+    display:flex;
+    justify-content: space-between;
+}
+
+.track {
+    margin-bottom: 2px;
+    background-color: rgba(240,240,240,0.8);
+    padding: 20px;
+    display:flex;
+    justify-content: space-between;
+}
