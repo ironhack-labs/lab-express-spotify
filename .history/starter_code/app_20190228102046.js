@@ -45,11 +45,11 @@ app.get("/artists", (req, res) => {
 
   spotifyApi.searchArtists(req.query.artist)
   .then(data => {
-    // let resultArray = data.body.artists.items
+    let resultArray = data.body.artists.items
     // console.log(data.body.artists.items);
-    res.render("artists", {artists: data.body.artists.items
-    })
-    // console.log(artists);
+    res.render("artists", {resultArray: resultArray})
+    console.log(resultArray.name);
+    console.log(resultArray.type);
   })
   .catch(err => {
    console.log("an error occured!" + err)

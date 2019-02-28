@@ -49,7 +49,7 @@ app.get("/artists", (req, res) => {
     // console.log(data.body.artists.items);
     res.render("artists", {artists: data.body.artists.items
     })
-    // console.log(artists);
+    console.log(artists);
   })
   .catch(err => {
    console.log("an error occured!" + err)

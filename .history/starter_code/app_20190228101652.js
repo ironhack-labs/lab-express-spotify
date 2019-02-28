@@ -45,17 +45,17 @@ app.get("/artists", (req, res) => {
 
   spotifyApi.searchArtists(req.query.artist)
   .then(data => {
-    // let resultArray = data.body.artists.items
+    let resultArray = data.body.artists.items
     // console.log(data.body.artists.items);
-    res.render("artists", {artists: data.body.artists.items
-    })
-    // console.log(artists);
+    res.render("artistfound", {resultArray})
+    console.log(resultArray);
   })
   .catch(err => {
    console.log("an error occured!" + err)
   })
 
 })
+
 
 // the routes go here:
 const index = require('./routes/index');

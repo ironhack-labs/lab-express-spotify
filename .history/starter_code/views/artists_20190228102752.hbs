@@ -1,0 +1,17 @@
+
+{{!-- 
+<h3>ARtist: {{resultArray.name}}</h3>
+<h3>Popularity: {{resultArray.popularity}}</h3>
+<h3>Type: {{resultArray.type}}</h3>
+<h3>Http: {{resultArray.href}}</h3>
+
+{{resultArray}} --}}
+
+
+
+  <div class="cards">
+     {{#each artists}}
+    <div class="card">
+    <li class="list-group-item"><a href="/recipe/{{this._id}}">{{this.name}}</a></li>
+    </div>
+     {{/each}}
