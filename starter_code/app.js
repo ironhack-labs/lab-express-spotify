@@ -23,8 +23,6 @@ const debug = require('debug')(`${app_name}:${path.basename(__filename).split('.
 
 const app = express();
 
-
-
 // Middleware Setup
 app.use(logger('dev'));
 app.use(bodyParser.json());
@@ -39,24 +37,18 @@ app.use(require('node-sass-middleware')({
   sourceMap: true
 }));
       
-
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
-
-
 // default value for title local
 app.locals.title = 'Express - Generated with IronGenerator';
-
-
 
 const index = require('./routes/index');
 app.use('/', index);
 
 const artists = require("./routes/artists")
 app.use("/", artists);
-
 
 module.exports = app;

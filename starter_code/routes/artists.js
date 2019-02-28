@@ -1,10 +1,6 @@
 const express = require("express");
 const Router = express.Router();
 const SpotifyWebApi = require('spotify-web-api-node');
-
-// const Artist = require('../models/Artist')
-
-
 const clientId = process.env.CLIENTID
 const clientSecret = process.env.CLIENTSECRET
 
@@ -44,27 +40,5 @@ Router.get('/tracks/:id', (req, res) => {
     res.render('tracks', {tracks:tracks.body.items})
   })
 })
-  
-//   Artist.find()
-//  .then(artists => {
-//    console.log(artists)
-//    res.render("artist", {artists});
-//  })
-//  .catch(err => console.log('Error', err))
-
-
-// Router.get("/:id", (req, res) => {
-//  console.log(req.params.id);
-
-//  Artist.findById(req.params.id)
-//    .then(artist=> {
-//      console.log(artist);
-//      res.render("book-info", {artist})
-//    })
-
-
-// })
-
-
 
 module.exports = Router;
