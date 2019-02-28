@@ -19,8 +19,7 @@ const clientId = '4e00e7b6dc75438d85abd08fdeb95344',
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
   clientId: clientId,
-  clientSecret: clientSecret,
-  redirectUri: redirectUri
+  clientSecret: clientSecret
 });
  
 
@@ -28,25 +27,17 @@ var authorizeURL = spotifyApi.createAuthorizeURL(scopes);
 
 app.get('/auth/spotify', (req, res) => {
  res.redirect(authorizeURL)
- console.log(authorizeURL);
 });
 
-app.get('/users/auth/spotify/redirect', (req, res) => {
-  debugger
+app.get('/callback/redirect', (req, res)=> {
   spotifyApi.authorizationCodeGrant(req.query.code).then(
     function(data) {
       console.log('The token expires in ' + data.body['expires_in']);
       console.log('The access token is ' + data.body['access_token']);
       console.log('The refresh token is ' + data.body['refresh_token']);
    
-      // Set the access token on the API object to use it in later calls
       spotifyApi.setAccessToken(data.body['access_token']);
       spotifyApi.setRefreshToken(data.body['refresh_token']);
-      spotifyApi.getMe()
-      .then(function(data) {
-        res.render('callback', {data})
-        console.log(data);
-      }) 
     },
     function(err) {
       console.log('Something went wrong!', err);

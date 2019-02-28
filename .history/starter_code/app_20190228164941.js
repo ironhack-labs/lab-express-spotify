@@ -45,7 +45,6 @@ app.get('/users/auth/spotify/redirect', (req, res) => {
       spotifyApi.getMe()
       .then(function(data) {
         res.render('callback', {data})
-        console.log(data);
       }) 
     },
     function(err) {

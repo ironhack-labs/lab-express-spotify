@@ -14,47 +14,15 @@ app.use(express.static(__dirname + '/public'));
 const clientId = '4e00e7b6dc75438d85abd08fdeb95344',
         scopes = ['user-read-private', 'user-read-email'],
   clientSecret =  '983c8a38e9534cdeb562c48d3f3f26f6',
-   redirectUri = 'http://localhost:3000/users/auth/spotify/redirect';
+   redirectUri = 'localhost:3000/callback/';
+
  
 // Create the api object with the credentials
 var spotifyApi = new SpotifyWebApi({
   clientId: clientId,
-  clientSecret: clientSecret,
-  redirectUri: redirectUri
+  clientSecret: clientSecret
 });
  
-
-var authorizeURL = spotifyApi.createAuthorizeURL(scopes);
-
-app.get('/auth/spotify', (req, res) => {
- res.redirect(authorizeURL)
- console.log(authorizeURL);
-});
-
-app.get('/users/auth/spotify/redirect', (req, res) => {
-  debugger
-  spotifyApi.authorizationCodeGrant(req.query.code).then(
-    function(data) {
-      console.log('The token expires in ' + data.body['expires_in']);
-      console.log('The access token is ' + data.body['access_token']);
-      console.log('The refresh token is ' + data.body['refresh_token']);
-   
-      // Set the access token on the API object to use it in later calls
-      spotifyApi.setAccessToken(data.body['access_token']);
-      spotifyApi.setRefreshToken(data.body['refresh_token']);
-      spotifyApi.getMe()
-      .then(function(data) {
-        res.render('callback', {data})
-        console.log(data);
-      }) 
-    },
-    function(err) {
-      console.log('Something went wrong!', err);
-    }
-  );
-})
-
-
 // Retrieve an access token.
 spotifyApi.clientCredentialsGrant().then(
   function(data) {
@@ -62,12 +30,42 @@ spotifyApi.clientCredentialsGrant().then(
     console.log('The access token is ' + data.body['access_token']);
  
     // Save the access token so that it's used in future calls
-    spotifyApi.setAccessToken(data.body['access_token']);
+    // spotifyApi.setAccessToken(data.body['access_token']);
   },
   function(err) {
     console.log('Something went wrong when retrieving an access token', err);
   }
 );
+
+// spotifyApi.authorizationCodeGrant().then(
+//   function(data) {
+//     console.log('The token expires in ' + data.body['expires_in']);
+//     console.log('The access token is ' + data.body['access_token']);
+//     console.log('The refresh token is ' + data.body['refresh_token']);
+ 
+    // Set the access token on the API object to use it in later calls
+//     spotifyApi.setAccessToken(data.body['access_token']);
+//     spotifyApi.setRefreshToken(data.body['refresh_token']);
+//   },
+//   function(err) {
+//     console.log('Something went wrong!', err);
+//   }
+// );
+
+
+var authorizeURL = spotifyApi.createAuthorizeURL(scopes);
+ 
+// https://accounts.spotify.com:443/authorize?client_id=5fe01282e44241328a84e7c5cc169165&response_type=code&redirect_uri=https://example.com/callback&scope=user-read-private%20user-read-email&state=some-state-of-my-choice
+// console.log(authorizeURL);
+
+app.get('/callback', (req, res) => {
+  res.redirect(authorizeURL)
+});
+
+// app.get('/callback/redirect', (req, res)=> {
+//      res.render('callback/');
+// })
+
 
 //get
 app.get("/artists", (req, res) => {

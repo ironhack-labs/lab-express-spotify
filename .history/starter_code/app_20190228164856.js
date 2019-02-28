@@ -31,7 +31,7 @@ app.get('/auth/spotify', (req, res) => {
  console.log(authorizeURL);
 });
 
-app.get('/users/auth/spotify/redirect', (req, res) => {
+app.get('/auth/spotify/redirect', (req, res) => {
   debugger
   spotifyApi.authorizationCodeGrant(req.query.code).then(
     function(data) {
@@ -45,7 +45,6 @@ app.get('/users/auth/spotify/redirect', (req, res) => {
       spotifyApi.getMe()
       .then(function(data) {
         res.render('callback', {data})
-        console.log(data);
       }) 
     },
     function(err) {
