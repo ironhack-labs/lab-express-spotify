@@ -1,5 +1,22 @@
+<div class="cards">
+        
+    <h2>Albums For: {{albumArray.[0].artists.[0].name}}</h2>
 
-  <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+<ul class="album-list"></ul>
+    {{#each albumArray}}
+        <li class="list-group-item">
+            <img src="{{this.images.[1].url}}">
+            <h3>{{this.name}}</h3>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </li>
+        
+    {{/each}}
+</ul>
+ </div>  
+
+
+ {{#if albumArray}}
+      <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -15,13 +32,5 @@
   </ul>
     </div>
   </nav>
-      
-          
-      <form action="/artists" method="GET" id="form"  class="form-inline mt-2 mt-md-0">
-        <input class="form-control mr-sm-2" id="search-query" name="artist" type="text" placeholder="Search Artist" aria-label="Search">
-        <button class="btn btn-outline-success my-2 my-sm-0" id="quicksearch" type="submit">Search</button>
-      </form> 
 
-<h1>Welcome to Spotify!</h1>
-
-
+     {{/if}}

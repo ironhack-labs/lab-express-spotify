@@ -1,0 +1,23 @@
+{{!-- <div class="cards">
+    <div class="card">
+      <h2>Name: {{artist.name}}</h2>   
+      <h3>Popularity: {{artist.popularity}}</h3>
+      <p>Type: {{artist.type}}</p>
+        <img src="{{artist.images.[1].url}}" alt="">
+     {{!-- <button class="btn btn-default"> <a href="/recipe/edit/{{recipe.id}}">Edit</a></button>
+      <a href="#" class="btn btn-danger delete-recipe" data-id="{{recipe.id}}">Delete</a> --}}
+    </div> --}}
+
+
+    <h2>Albums For: {{albumArray.[0].artists.[0].name}}</h2>
+
+<ul class="artist-list">
+    {{#each albumArray}}
+        <li>
+            <img src="{{this.images.[1].url}}">
+            <h3>{{this.name}}</h3>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </li>
+        
+    {{/each}}
+</ul>

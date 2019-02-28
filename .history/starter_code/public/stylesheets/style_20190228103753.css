@@ -74,13 +74,12 @@ a {
 
 .cards {
   position: relative;
-  top: 100px;
-  left: 500px;
+  top: 200px;
+  left: 100px;
 }
 
- .card {
+.list-group-item,  {
   width: 40%;
 }
-
 
 /*# sourceMappingURL=style.css.map */

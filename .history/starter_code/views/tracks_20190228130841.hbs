@@ -1,0 +1,14 @@
+<h1>List of Tracks:</h1>
+
+
+
+<ul class="album-list"></ul>
+    {{#each tracksArray}}
+        <li class="list-group-item">
+          <audio src="{{this.preview_url}}"></audio>
+          <h3>{{this.name}}
+        </li>
+        
+    {{/each}}
+</ul>
+ </div>  

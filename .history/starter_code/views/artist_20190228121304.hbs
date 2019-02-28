@@ -1,0 +1,9 @@
+<div class="cards">
+    <div class="card">
+      <h2>Name: {{artist.title}}</h2>   
+      <h3>Cuisine: {{artist.cuisine}}</h3>
+      <p>Made by: {{artist.creator}}</p>
+        <img src="{{artist.image}}" alt="">
+     <button class="btn btn-default"> <a href="/recipe/edit/{{recipe.id}}">Edit</a></button>
+      <a href="#" class="btn btn-danger delete-recipe" data-id="{{recipe.id}}">Delete</a>
+    </div>

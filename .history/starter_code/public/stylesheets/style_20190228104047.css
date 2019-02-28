@@ -75,12 +75,15 @@ a {
 .cards {
   position: relative;
   top: 100px;
-  left: 500px;
+  left: 400px;
 }
 
  .card {
   width: 40%;
 }
-
+/* 
+.list {
+  width: 40%;
+} */
 
 /*# sourceMappingURL=style.css.map */

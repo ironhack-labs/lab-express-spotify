@@ -1,13 +1,25 @@
 
+    followers: { href: null, total: 2 },
+    genres: [],
+    href: 'https://api.spotify.com/v1/artists/21nZNjp3bfVcJrJg0HmMkh',
+    id: '21nZNjp3bfVcJrJg0HmMkh',
+    images: [ [Object], [Object], [Object] ],
+    name: 'Juam Rovinick',
+    popularity: 0,
+    type: 'artist',
+    uri: 'spotify:artist:21nZNjp3bfVcJrJg0HmMkh' }
 
                          
                          <h1>List of Artists:</h1>
     <div class="cards">
      {{#each artists}}
     <div class="card">
-    <li class="list-group-item">{{this.name}} <a href="/albums/{{this.id}}">View More</a></li>
-       {{!-- <a class="list" href="/artist/">{{this.name}}</a> --}}
-   <img class="img" src="{{this.images.[1].url}}">
+    <li class="list-group-item"><a class="list" href="/artist/{{this._id}}">{{this.name}}</a></li>
+      {{#if this.images[0]}}
+          <img class="img-db" src="{{this.images[0].url}}" alt="">
+       {{#/if }}
+   
+    {{this.popularity}}
     </div>
      {{/each}}
 

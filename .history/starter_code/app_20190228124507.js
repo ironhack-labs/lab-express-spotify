@@ -37,7 +37,7 @@ spotifyApi.clientCredentialsGrant().then(
   }
 );
 
-//get
+//get artists
 app.get("/artists", (req, res) => {
 
   spotifyApi.searchArtists(req.query.artist)
@@ -63,18 +63,6 @@ app.get('/albums/:artistId', (req, res, next) => {
   .catch(err => next(err));
 });
 
-//get album track
-app.get('/tracks/:trackId', (req, res, next) => {
-  const { trackId } = req.params;
-
-  spotifyApi.getAlbumTracks(trackId)
-  .then(data => {
-      // res.send(data);
-      res.locals.tracksArray = data.body.items
-      res.render("tracks");
-  }) 
-  .catch(err => next(err));
-});
 
 // the routes go here:
 const index = require('./routes/index');

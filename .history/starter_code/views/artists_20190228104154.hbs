@@ -1,0 +1,11 @@
+
+
+
+                         
+                         <h1>List of Artists:</h1>
+    <div class="cards">
+     {{#each artists}}
+    <div class="card">
+    <li class="list-group-item"><a class="list" href="/artist/{{this._id}}">{{this.name}}</a></li>
+    </div>
+     {{/each}}

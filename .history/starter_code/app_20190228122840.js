@@ -37,11 +37,13 @@ spotifyApi.clientCredentialsGrant().then(
   }
 );
 
-//get
+
 app.get("/artists", (req, res) => {
 
   spotifyApi.searchArtists(req.query.artist)
   .then(data => {
+    // let resultArray = data.body.artists.items
+    // console.log(data.body.artists.items);
     res.render("artists", {artists: data.body.artists.items})
     console.log(data.body.artists.items);
   })
@@ -51,30 +53,16 @@ app.get("/artists", (req, res) => {
 
 })
 
-//get albums
-app.get('/albums/:artistId', (req, res, next) => {
-  const { artistId } = req.params;
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi.getArtist(req.query.artist)
+  .then(function(data) {
+    res.render("artist", {artist: data.body.artist.items})
+    console.log('Artist information', artist);
+  }, function(err) {
+    console.error(err);
+  });
+  });
 
-  spotifyApi.getArtistAlbums(artistId)
-  .then(data => {
-      res.locals.albumArray = data.body.items
-      res.render('album');
-  })
-  .catch(err => next(err));
-});
-
-//get album track
-app.get('/tracks/:trackId', (req, res, next) => {
-  const { trackId } = req.params;
-
-  spotifyApi.getAlbumTracks(trackId)
-  .then(data => {
-      // res.send(data);
-      res.locals.tracksArray = data.body.items
-      res.render("tracks");
-  }) 
-  .catch(err => next(err));
-});
 
 // the routes go here:
 const index = require('./routes/index');

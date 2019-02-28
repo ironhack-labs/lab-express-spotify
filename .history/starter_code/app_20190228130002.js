@@ -64,17 +64,14 @@ app.get('/albums/:artistId', (req, res, next) => {
 });
 
 //get album track
-app.get('/tracks/:trackId', (req, res, next) => {
-  const { trackId } = req.params;
-
-  spotifyApi.getAlbumTracks(trackId)
-  .then(data => {
-      // res.send(data);
-      res.locals.tracksArray = data.body.items
-      res.render("tracks");
-  }) 
-  .catch(err => next(err));
-});
+app.get('/tracks', (req, rest, next) => {
+  spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
+  .then((data) => {
+    console.log(data.body);
+  }, (err) => {
+    console.log('Something went wrong!', err);
+  });
+})
 
 // the routes go here:
 const index = require('./routes/index');
