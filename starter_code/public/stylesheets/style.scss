@@ -1,8 +1,31 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 a {
   color: #00B7FF;
+}
+
+#band-input{
+  margin-top: 75px;
+  width: 300px;
+}
+
+#band-form{
+  text-align: center;
+  margin-top: 200px;
+  background-color: white;
+  width: 600px;
+  height: 200px;
+}
+
+#button-submit{
+  background-color: #E86A44;
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  margin-top: 10px;
 }
