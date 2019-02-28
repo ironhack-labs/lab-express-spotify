@@ -2,4 +2,7 @@
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
 
+# No published
+.env
+
 
