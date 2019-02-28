@@ -1,0 +1,9 @@
+<h2>Albums from: {{albums.0.artists.0.name}}</h2>
+<div class="container">
+  <div class="row">
+    {{#each albums}}
+      {{> albumcard this}}
+    {{/each}}
+  </div>
+</div>
+
