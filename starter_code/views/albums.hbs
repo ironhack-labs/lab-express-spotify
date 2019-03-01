@@ -1,0 +1,15 @@
+<div class="artist-wrapper">
+    {{#each data.body.items }}
+        <div class="artist-container">
+            <div class="img-div">
+                {{#if images.[0].url }}
+                    <img src="{{ images.[0].url }}" alt="">
+                {{else}}
+                    <img src="/images/default.jpg" alt="">
+                {{/if}}
+            </div>
+            <h2>{{ name }}</h2>
+            <button><a href="/tracks/{{ id }}">View tracks</a></button>
+        </div>
+    {{/each}}
+</div>
