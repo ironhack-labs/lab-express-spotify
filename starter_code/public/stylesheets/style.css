@@ -1,0 +1,56 @@
+
+body {
+    background: url(../images/night-party-background-7.jpg) no-repeat center center fixed; 
+    background-size: cover;
+    font-size: 20px;
+    color: whitesmoke;
+}
+
+#artist-search-form {
+    width: 25%;
+    margin: 10% auto;
+    background-color: rgba(240, 255, 255, 0.8 );
+    border-radius: 2px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    margin: 50px 100px;    
+}
+
+h1 {
+    width: 20%;
+    margin: 100px auto;
+  }
+
+
+.artists-container, .artist-albums-container {
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+} 
+
+.artist, .album {
+ width: 30%;
+ height: auto;
+}
+
+.img-container {
+
+    width: 80%;
+    height: auto;
+  }
+
+ img {
+     max-width: 100%;
+     max-height: 100%;
+ } 
+
+ .img-noface {
+    min-height: 50%;
+ }

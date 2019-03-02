@@ -1,0 +1,24 @@
+<div class="artists-container">
+
+    {{#each artists}}
+    <div class="artist">
+        <h2>{{name}}</h2>
+
+
+        <div class="img-container">
+            {{#if images.[1].url}}
+            <img src="{{images.[1].url}}" />
+            {{else}}
+            <img class="img-noface" src="images/NoFace.jpg" />
+            {{/if}}
+        </div>
+
+        <button><a href="albums?id={{id}}" /> Albums </a></button>
+
+    </div>
+    {{/each}}
+
+
+
+
+</div>

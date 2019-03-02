@@ -1,0 +1,12 @@
+<div class="albumtracks-container">
+
+    {{#each albumtracks}}
+    <div class="albumtrack">
+        <h3>{{name}}</h3>
+        <audio controls>
+            <source src="{{preview_url}}" type="audio/mpeg">
+        </audio>
+    </div>
+    {{/each}}
+
+</div>
