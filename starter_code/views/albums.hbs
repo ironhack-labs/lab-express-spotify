@@ -1,0 +1,13 @@
+{{!-- display information about albums --}}
+<div class="container-fluid">
+  <div class="row">
+      {{#each result}}
+        <div class="col-md-4">
+          <img class ="album-image"src="{{ this.images.0.url }}">
+            <div class="album-information">
+              <p>{{this.name}}</p>
+              <a href="/albums/{{this.id}}">View Tracks</a>
+        </div>
+      </div>
+    {{/each}}
+</div> 

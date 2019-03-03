@@ -1,0 +1,15 @@
+
+<div class="container-fluid">
+  <div class="row">
+    {{#each items as |item|}}
+      <div class="col-md-4">
+        <img class= "item-image" src="{{ item.images.2.url }}">
+          <div class = "title">
+            <p class="card-title">{{item.name}}</p>
+            <a href="/artists/{{this.id}}">View albums</a>
+          </div>
+        </div>
+    {{/each}}
+  </div>
+</div>
+     

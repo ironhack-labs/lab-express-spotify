@@ -1,0 +1,140 @@
+body {
+        font-family: sans-serif, arial;
+}
+
+/* general configurations */
+button{
+    
+	background-color:#a73f2d;
+	border:1px solid #a73f2d;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:12px;
+	font-weight:bold;
+	padding:9px 23px;
+	text-decoration:none;
+}
+
+a{
+        background-color:#a73f2d;
+        border:1px solid #a73f2d;
+        border-radius: 10px;
+        display:inline-block;
+        cursor:pointer;
+        color:#ffffff;
+        font-family:Arial;
+        font-size:12px;
+        font-weight:bold;
+        padding:9px 23px;
+        text-decoration:none;
+}
+
+/* Main page */
+.background-main {
+        background-image: url('../images/concert-background-02-thebeach.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        height: -webkit-fill-available;
+}
+.main{
+        align-items: center;
+        display: flex;
+        height: 500px;  
+        justify-content: center;
+        padding: 30px 30px 30px 30px;
+        opacity: 0.7;
+}
+
+.inter{
+        background-color: white;
+        padding: 50px;
+        width: 50%;
+}
+
+.form-control{
+        margin-bottom: 10px;
+        
+}
+
+
+/* artist page */
+
+.album-image{
+        width: 100%;
+        height: 300px;
+        max-width: 100%;
+}
+
+.title{
+        color:white;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+}
+
+/* albums page */
+
+.album-information{
+        color:white;
+        background-color: gray;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        margin-bottom: 10px;
+        padding-left: 10px;
+}
+
+.col-sm-4{
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+}
+
+.item-image{
+        width: 100%;
+        height: 300px;
+        max-width: 100%;
+}
+
+.col-md-4{
+        margin-top: 10px;
+        margin-bottom: 10px;
+}
+
+/* tracks page */
+
+.track-container{
+        background-color: gray;
+        display: flex;
+        justify-content: space-around;
+        color: whitesmoke;
+}
+
+.tracks{
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        padding: 20px;
+        flex-wrap: wrap;
+        background-color: lightgray;
+}
+
+.test{
+        padding: 10px;
+        width: 50%
+
+}
+
+
+
+
