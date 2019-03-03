@@ -1,0 +1,18 @@
+<div class="row">
+    <div class="col-6">
+        <h1>Title</h1>
+        <h5>
+            {{#each myData}}
+                <p>{{name}}</p>
+            {{/each}}
+        </h5>
+    </div>
+    <div class="col-6">
+        <h1>Listen</h1>
+        <h5>
+            {{#each myData}}
+                <p><audio controls src={{preview_url}}> Your browser does not support the <code>audio</code> element.</audio></p>
+            {{/each}}
+        </h5>
+    </div>
+</div>

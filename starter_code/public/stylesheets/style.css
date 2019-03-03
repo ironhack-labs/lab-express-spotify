@@ -1,0 +1,41 @@
+.cover {
+    background: black url('../images/pexels-photo-167605.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    position: absolute;
+    height: 100%;
+}
+
+.search-container {
+    background: rgba(200, 200, 200, 0.4);
+    text-align: center;
+}
+
+.row {
+    padding: 0 15px;
+}
+
+.row h1 {
+    background: #343a40;
+    color: white;
+    padding: 20px;
+}
+
+.row p {
+    background: #f8f9fa;
+    padding: 15px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.col-6 {
+    padding: 0;
+}
+
+.card-body h5,
+.card-body p {
+    display: flex;
+    justify-content: center;
+}
