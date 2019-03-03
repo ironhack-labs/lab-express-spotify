@@ -9,15 +9,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
 
-// setting the spotify-api goes here:
-// Remember to insert your credentials here
-const clientId = 'f778d861597c40dbb242c97a3cd4bc1e',
-    clientSecret = 'd81e9953739a4df8a83c051285cb8ced';
 
-const spotifyApi = new SpotifyWebApi({
-    clientId: clientId,
-    clientSecret: clientSecret
-});
 
 // Retrieve an access token
 spotifyApi.clientCredentialsGrant()
