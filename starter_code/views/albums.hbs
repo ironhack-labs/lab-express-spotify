@@ -1,13 +1,7 @@
-<!-- Cada partial se nutre de los datos variables -->
-<div class="artist" style="width: 20%;">
-
-      <img class="artist-img" src="{{this.images.1.url}}" alt="Card image cap">
-
-      <div class="card-body">
-        <h5 class="card-title">{{this.name}}</h5>
-        <a class="card-text" href="/albums/{{this.id}}">View albums</a>
-      </div>
+<div>
+  {{#each albums}}
+  <h2>{{name}}</h2>
+  <img src="{{images.0.url}}">
+  <a href="/tracks/{{id}}">View Tracks</a> 
+  {{/each}}
 </div>
-
-{{!-- artista individual. no valen los corchetes para traer imagenes de un array.
-hay que poner .1.url --}}

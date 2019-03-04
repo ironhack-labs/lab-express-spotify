@@ -1,8 +1,6 @@
-<div class="artists-container"> 
-  {{#each artist}} 
-    {{> singleArtist this}}
-{{/each}}
-
-</div>
-  
-{{!-- iteramos sobre los items de los artistas para que los pinte en singleArtist.hbs --}}
+<div>
+  {{#each data}}
+  <h1>{{name}}</h1>
+  <img src="{{images.0.url}}">
+  <a href="/albums/{{id}}">View Albums</a>
+  {{/each}}
