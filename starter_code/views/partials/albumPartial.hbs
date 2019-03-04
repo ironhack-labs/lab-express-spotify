@@ -1,0 +1,10 @@
+<div class="col-lg-4 artist-container">
+  {{#unless images.0.url}}
+    <img src="../images/not-found.jpg" class="artist-img">
+  {{/unless}}
+  <img src="{{images.0.url}}" class="artist-img"> 
+  <div class="artist-info-container">
+    <p>{{{name}}}</p>
+    <a href="../tracks/{{{id}}}">view tracks</a>
+  </div>
+</div>
