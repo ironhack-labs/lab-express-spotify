@@ -1,0 +1,18 @@
+body {
+
+}
+
+.index {
+  background: url("../images/noiseporn-247586-unsplash.jpg");
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+}
+
+#artist-search {
+  background-color: #fff;
+  opacity: 0.5;
+
+  height: 250px;
+  width: 250px;
+}

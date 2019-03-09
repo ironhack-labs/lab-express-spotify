@@ -4,22 +4,17 @@ const path = require('path')
 const bodyParser = require('body-parser')
 
 const app = express()
+
+app.set("views", path.join(__dirname, "views"));
+app.set("view engine", "hbs");
+app.use(express.static(path.join(__dirname, "public")));
+
 app.use(bodyParser.urlencoded({ extended: true }));
-
-app.set('views', path.join(__dirname, 'views'));
-app.set('view engine', 'hbs');
-
-
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(path.join(__dirname, 'public')));
-
 
 ///////// SPOTIFY API START /////////
 
 var SpotifyWebApi = require('spotify-web-api-node');
 
-// Remember to paste here your credentials
 var clientId = '5ce9908f8b9a44e8b7a902ed54757c16',
   clientSecret = '21f027aa582d4673ba00a65da3a4dde8';
 
@@ -56,7 +51,7 @@ app.post('/artists', function (req, res, next) {
       res.render('artists', artists);
     })
 })
-images: data.body.artists.items.images
+/* images: data.body.artists.items.images */
 
 
 app.listen(3000, () => console.log('listening to port 3000'));
