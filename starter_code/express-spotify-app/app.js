@@ -35,23 +35,22 @@ spotifyApi.clientCredentialsGrant()
 
 app.get('/', function (req, res) {
   res.render('index')
-})
+});
 
 app.post('/artists', function (req, res, next) {
-  console.log(req.body.artists);
-
   spotifyApi.searchArtists(req.body.artists)
     .then(data => {
-
-      artists = {
-        search: req.body.artists,
-        artists: data.body.artists.items,
-      }
-      console.log(artists)
-      res.render('artists', artists);
+      let artists = data.body.artists.items.map((artist) => ({
+        id: artist. id,
+        name: artist.name,
+        image: artist.images[0] ? artist.images[0].url : null 
+      }));
+      
+      res.render('artists', { artists });
     })
-})
-/* images: data.body.artists.items.images */
-
+    .catch(err => {
+      console.log("An error occured while searching for artists: ", err);
+    });
+});
 
 app.listen(3000, () => console.log('listening to port 3000'));
