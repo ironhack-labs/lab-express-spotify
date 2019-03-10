@@ -1,13 +1,13 @@
 <section class="container">
   <div class="cards">
-  {{#each artists}}
-  <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{image}}" alt="artist-image">
-    <div class="card-body">
-      <h5 class="card-title">{{name}}</h5>
-      <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+    {{#each artists}}
+    <div class="card" style="width: 18rem;">
+      <img class="card-img-top" src="{{image}}" alt="artist-image">
+      <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+      </div>
     </div>
-  </div>
-  {{/each}}
+    {{/each}}
   </div>
 </section>

@@ -2,6 +2,7 @@ const express = require('express')
 const hbs = require('hbs')
 const path = require('path')
 const bodyParser = require('body-parser')
+const fetch = require('node-fetch')
 
 const app = express()
 
@@ -42,8 +43,10 @@ app.get('/albums/:id', function (req, res, next) {
 
   spotifyApi.getArtistAlbums(artistId)
     .then(data => {
+      console.log(data.body.items)
 
       const albums = data.body.items.map(album => ({
+        id: album.id,
         name: album.name,
         image: album.images[0].url
       }));
@@ -53,15 +56,35 @@ app.get('/albums/:id', function (req, res, next) {
     .catch(err => {
       console.log("An error happend while looking for albums :", err);
     });
-}); 
+});
+
+app.get('/tracks/:id', function (req, res, next) {
+  const albumId = req.params.id;
+
+  const options = {
+    "headers": {
+      "authorization": "Bearer BQC61XmSqejC_oR2z_bU_2sOieHZGiSYnJtWL-yOK0-khAydrpxT_BOexe39hlvJHqzZ5BAK8khAzf2bV57w9c4VCgrghyTCsJG9JmgHxG7Xjw40ztcY_KMaoh24sB2YzkGlGQtRjMU2TFgAo_6t0jUWqVAeoqcwdw",
+    }
+  };
+
+  fetch('https://api.spotify.com/v1/albums/' + albumId + '/tracks', options)
+    .then(data => {
+      console.log("data", data)
+      res.render('tracks', { data })
+    })
+    .catch(err => {
+      console.log("While fetching tracks an error occure: ", err);
+    });
+
+});
 
 app.post('/artists', function (req, res, next) {
   spotifyApi.searchArtists(req.body.artists)
     .then(data => {
       let artists = data.body.artists.items.map((artist) => ({
-        id: artist. id,
+        id: artist.id,
         name: artist.name,
-        image: artist.images[0] ? artist.images[0].url : null 
+        image: artist.images[0] ? artist.images[0].url : null
       }));
 
       res.render('artists', { artists });
