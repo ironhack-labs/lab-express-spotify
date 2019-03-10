@@ -16,3 +16,9 @@ body {
   height: 250px;
   width: 250px;
 }
+
+.cards {
+  display: inline-flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}

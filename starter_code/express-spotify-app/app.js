@@ -37,6 +37,24 @@ app.get('/', function (req, res) {
   res.render('index')
 });
 
+app.get('/albums/:id', function (req, res, next) {
+  const artistId = req.params.id;
+
+  spotifyApi.getArtistAlbums(artistId)
+    .then(data => {
+
+      const albums = data.body.items.map(album => ({
+        name: album.name,
+        image: album.images[0].url
+      }));
+
+      res.render('albums', { albums });
+    })
+    .catch(err => {
+      console.log("An error happend while looking for albums :", err);
+    });
+}); 
+
 app.post('/artists', function (req, res, next) {
   spotifyApi.searchArtists(req.body.artists)
     .then(data => {
@@ -45,7 +63,7 @@ app.post('/artists', function (req, res, next) {
         name: artist.name,
         image: artist.images[0] ? artist.images[0].url : null 
       }));
-      
+
       res.render('artists', { artists });
     })
     .catch(err => {
