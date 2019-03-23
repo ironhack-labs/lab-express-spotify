@@ -4,18 +4,15 @@ const SpotifyWebApi = require('spotify-web-api-node')
 // loading env
 require('dotenv').config();
 
-
+// setting express app
 const app = express();
-
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-
 // setting the spotify-api goes here:
 const clientId = process.env.CLIENT_ID; // from .env
 const clientSecret = process.env.CLIENT_SECRET; // from .env
-
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
   clientSecret : clientSecret
@@ -30,9 +27,7 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong with receiving access token', error);
   });
 
-
-
-// the routes go here:
+// routes - logging urls
 app.use('/', (req, res, next) => {
   console.log(req.url);
   next();
@@ -47,11 +42,10 @@ app.get('/', (req, res, next) => {
 app.get('/artists' , (req, res, next) => { 
   spotifyApi.searchArtists(req.query.searchArtist)
     .then(result => {
-      console.log(result.body.artists) 
+      // console.log(result.body.artists) 
       res.render('artists.hbs', {artist : result.body.artists.items})
     })
-    .catch(err => {console.log(err)})
-  // res.send(req.query); 
+    .catch(err => {console.log(err)}) 
 });
 
 // albums
@@ -59,8 +53,7 @@ app.get('/albums/:artistId', (req, res, next) => {
   console.log(req.params);
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(albumsFound => {
-      // console.log(albumsFound.body.items);
-      // console.log(albumsFound.body.items[0].artists[0].name) 
+      // console.log(albumsFound.body.items[0]); 
       res.render('albums.hbs', {album : albumsFound.body.items})
     })
     .catch(err => {console.log(err)})
@@ -71,7 +64,7 @@ app.get('/tracks/:trackId', (req, res, next) => {
   console.log(req.params);
   spotifyApi.getAlbumTracks(req.params.trackId)
     .then(tracksFound => {
-      console.log(tracksFound.body.items[0]);
+      // console.log(tracksFound.body.items[0]);
       res.render('tracks.hbs', {track : tracksFound.body.items})
     })
 })

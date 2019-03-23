@@ -1,6 +1,6 @@
 <div class="page-title">
-  {{!-- Doesn't work because it should be in the each loop then --}}
-  <h1>Albums for: {{artists.[0].name}}</h1>
+  {{!-- Taking first artist of first album --}}
+  <h1>Albums for: {{album.[0].artists.[0].name}}</h1>
 </div>
 <div class="container-items">
 
