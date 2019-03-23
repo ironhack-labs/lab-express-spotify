@@ -1,10 +1,14 @@
 # Express Spotify Searcher
 
+![](./public/images/readme-preview.png)
+
+
 ## Instructions
 - Set the .env with your Spotify API credentials
 
-CLIENT_ID=
-CLIENT_SECRET=
+  CLIENT_ID=
+  
+  CLIENT_SECRET=
 
 - $ node app.js
 
