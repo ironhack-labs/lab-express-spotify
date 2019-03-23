@@ -2,6 +2,7 @@
 
 ## Instructions
 - Set the .env with your Spotify API credentials
+
 CLIENT_ID=
 CLIENT_SECRET=
 
