@@ -1,0 +1,26 @@
+{
+  "name": "20190323-lab-express-spotify",
+  "version": "1.0.0",
+  "description": "Spotify assignment ",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fedduh/lab-express-spotify.git"
+  },
+  "author": "Fedde",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fedduh/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/Fedduh/lab-express-spotify#readme",
+  "dependencies": {
+    "dotenv": "^7.0.0",
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

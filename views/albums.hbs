@@ -1,0 +1,19 @@
+<div class="page-title">
+  {{!-- Doesn't work because it should be in the each loop then --}}
+  <h1>Albums for: {{artists.[0].name}}</h1>
+</div>
+<div class="container-items">
+
+  {{#each album}}
+  <div class="item-found"> 
+    {{#if images.[0].url}}
+      <img src="{{images.[0].url}}" alt="Album cover of {{name}}">
+    {{else}}
+      <img src="/images/album_not_found.jpg" alt="Album img not found">
+    {{/if}}
+      <h3>{{name}}</h3>
+      <a class = "button" href="/tracks/{{id}}">View Tracks</a>
+  </div>
+  {{/each}}
+
+</div>
