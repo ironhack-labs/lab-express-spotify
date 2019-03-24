@@ -38,20 +38,49 @@ app.get("/",(req,res)=>{
     res.render("index");
 });
 
-
-app.get("/artist",(req,res)=>{
-    console.log(req.query.artist)
-    spotifyApi.searchArtists(req.query.artist)
-    .then(data => {
-        res.render("artist", data);
-      console.log("The received data from the API: ", data.body);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-    })
-    .catch(err => {
-      console.log("The error while searching artists occurred: ", err);
-    })
-    res.json (req.params.artist);
-    
+app.get('/artist', (req, res, next) => {
+  const {artist} = req.query;
+  spotifyApi.searchArtists(artist)
+      .then(data => {
+        const items = data.body.artists.items;
+        res.render('artist',{items});
+        console.log({items});
+      })
+      .catch(err => {
+     console.log("fail" + err);
+      });
 });
+
+// ver la info de los albumes del artista
+
+app.get('/artist/:Id', (req, res) => {
+  const Id = req.params.Id;
+  spotifyApi.getArtistAlbums(Id)
+      .then(data => {
+          const albums = data.body.items;
+          console.log(albums);
+          res.render('albums', {albums});
+      })
+      .catch(err => {
+        console.error(err);
+      });
+});
+
+// para obtener la lista de canciones:
+
+app.get('/albums/:ID', (req,res) =>{
+  const ID = req.params.ID;
+  console.log(ID);
+  spotifyApi.getAlbumTracks(ID)
+      .then(data =>{
+          const tracks = data.body.items;
+          console.log(tracks)
+          res.render('tracks', {tracks});
+      })
+      .catch(err =>{
+          console.log(err);
+      });
+});
+
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
