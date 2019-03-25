@@ -44,3 +44,69 @@
   border: none;
   color: white;
 }
+
+.artists-list-cont {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  margin: 50px 0 50px 0;
+}
+
+.artists-list {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+}
+
+.artists-list img {
+  height: 250px;
+  width: auto;
+}
+
+#artists-detail-cont {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#artists-detail-cont button {
+  background-color: red;
+  width: 100px;
+  height: 35px;
+  color: white;
+  margin-top: 5px;
+}
+
+a:link {
+  color: white;
+  text-decoration: none;
+}
+
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+
+.albums-list-cont {
+  width: 100vw;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-self: center;
+  margin: 50px 0 50px 0;
+}
+
+.albums-list {
+  width: 350px;
+  height: 350px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 10px;
+}

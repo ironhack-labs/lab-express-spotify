@@ -1,9 +1,13 @@
-<ul>
+<div class="albums-list-cont">
   {{#each artistAlbums as |album|}}
-  <li>
+  <div class="albums-list">
+    <div>
     <img src="{{album.images.1.url}}" alt="album cover">
+    </div>
+    <div>
     <h3>{{album.name}}</h3>
     <button><a href="/tracks/{{album.id}}">See tracks</a></button>
-    </li>
+    </div>
+  </div>
   {{/each}}
-</ul>
+</div>

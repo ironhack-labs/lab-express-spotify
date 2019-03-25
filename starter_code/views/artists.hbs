@@ -1,9 +1,17 @@
-<ul class="artists-list">
-  <li>
-      {{#each searchedArtists as |artist|}}
+<div class="artists-list-cont">
+  {{#each searchedArtists as |artist|}}
+  <div class="artists-list">
+      <div id="artist-img-cont">
+      {{#if artist.images.1.url}}
       <img src="{{artist.images.1.url}}" alt="artist">
+      {{else}}
+      <img src="/images/no_cover.jpg" alt="artist">
+      {{/if}}
+      </div>
+      <div id="artists-detail-cont">
       <h3>{{artist.name}}</h3>
       <button><a href="/albums/{{artist.id}}">View Albums</a></button>
-      {{/each}}
-  </li>
-</ul>
+      </div>
+    </div>
+    {{/each}}
+</div>
