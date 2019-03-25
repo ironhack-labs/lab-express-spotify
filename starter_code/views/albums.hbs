@@ -1,4 +1,4 @@
-<h1>Albums for: {{a}}</h1>
+<h1 class="d1">Albums for: {{artist}}</h1>
 
 <div class="container-fluid">
   <div class="row">
@@ -7,8 +7,8 @@
           <img class ="album-image"src="{{ a.images.0.url }}">
             <div class="album-information">
               <p>{{a.name}}</p>
-              <a href="/albums/{{a.id}}">View Tracks</a>
-        </div>
+              <a class="a-links2" href="/albums/{{a.id}}">View Tracks</a>
+            </div>
       </div>
     {{/each}}
 </div> 

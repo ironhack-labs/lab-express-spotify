@@ -1,10 +1,15 @@
 <div class="track-container">
-  <h2>Title</h2>
-  <h2>Listen</h2>
+  <div>
+    <span class="ti">Title</span>
+  </div>
+  <div>
+    <span class="li">Listen</span>
+  </div>
+</div>
 
-</div>  
   <div class="tracks">
     {{#each tracks}}
+    <div class="pair">
       <div class='test'>
         {{this.name}}
       </div>
@@ -13,5 +18,6 @@
             <source src="{{this.preview_url}}" type="audio/mpeg">
           </audio>
       </div>
+    </div>
       {{/each}}
     </div>

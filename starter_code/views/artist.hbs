@@ -1,11 +1,11 @@
-<div class="listaartistas">
+<div>
   <div class="arregloartistas">
     {{#each items as |i|}}
       <div class="col-md-4">
-        <img class= "item-image" src="{{ i.images.2.url }}">
-          <div>
+        <img class= "album-image" src="{{ i.images.2.url }}">
+          <div class="listas">
             <p>{{i.name}}</p>
-            <a href="/artist/{{i.id}}">View albums</a>
+            <a class="a-links" href="/artist/{{i.id}}">View albums</a>
           </div>
         </div>
     {{/each}}
