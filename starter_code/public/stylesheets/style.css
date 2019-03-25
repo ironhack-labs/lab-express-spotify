@@ -110,3 +110,57 @@ a:visited {
   align-items: center;
   margin: 10px 10px;
 }
+
+.albums-list img {
+  height: 250px;
+  width: auto;
+}
+
+#albums-detail-cont {
+  text-align: center;
+  margin-top: 5px;
+}
+
+#albums-detail-cont button {
+  background-color: red;
+  width: 100px;
+  height: 35px;
+  color: white;
+  margin-top: 5px;
+}
+
+.tracks-header {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 200px 0 200px;
+  align-items: center;
+  background-color: gray;
+  height: 55px;
+}
+
+.tracks-header h3 {
+  margin: 0 50px;
+  color: lightgray;
+}
+
+.tracks-list {
+  width: 100%;
+  margin: 2px 0 50px 0;
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
+
+.tracks-list li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+  margin: 1px 200px;
+}
+
+.tracks-list h3 {
+  margin-left: 50px;
+}
