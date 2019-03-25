@@ -1,0 +1,9 @@
+<ul>
+  {{#each artistAlbums as |album|}}
+  <li>
+    <img src="{{album.images.1.url}}" alt="album cover">
+    <h3>{{album.name}}</h3>
+    <button><a href="/tracks/{{album.id}}">See tracks</a></button>
+    </li>
+  {{/each}}
+</ul>
