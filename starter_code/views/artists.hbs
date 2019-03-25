@@ -1,0 +1,12 @@
+
+
+{{!-- data.body.artist.items --}}
+{{#each artists.items}}  
+  
+  <img src="{{this.images.[0].url}}" alt="" width="250px">
+  <p>{{this.name}}</p>
+  
+  <a style="display: block; margin-bottom: 80px" href="/albums/{{this.id}}">View Albums</a>
+
+
+{{/each}}
