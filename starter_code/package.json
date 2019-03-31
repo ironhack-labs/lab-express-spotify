@@ -1,0 +1,29 @@
+{
+  "name": "lab-express-spotify",
+  "version": "1.0.0",
+  "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
+  "main": "index.js",
+  "scripts": {
+    "start": "node app",
+    "dev": "nodemon -e js,hbs,css app"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/carlosgsm/lab-express-spotify.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/carlosgsm/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/carlosgsm/lab-express-spotify#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  }
+}

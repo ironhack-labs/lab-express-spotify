@@ -1,0 +1,24 @@
+.container ul li {
+    list-style-type: none;
+  }
+  
+  .container ul li img {
+    width: 50%;
+    height: 50%;
+  }
+  
+  .container a {
+    color: white;
+    background-color: coral;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    border: 1px solid coral;
+  }
+  
+  .container a:hover {
+    text-decoration: none;
+    color: coral;
+    background-color: white;
+    border: 1px solid coral;
+  }
