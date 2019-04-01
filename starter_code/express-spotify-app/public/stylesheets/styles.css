@@ -3,7 +3,7 @@
 body{
     font-family: Arial, Helvetica, sans-serif;
     background-image: url(../images/landing.jpg);
-    background-size: cover;
+    background-size: 100% 100%;
     background-repeat: no-repeat;
     display: flex;
     flex-direction: column;
@@ -12,8 +12,13 @@ body{
     color: #212121; 
 }
 
-h1{
-    color: white;
+h2{
+    color: #fff;
+    text-align: center;
+}
+
+.btn {
+    text-align: center;
 }
 
 a:link{
@@ -48,18 +53,28 @@ a:link{
 }
 
 .artists{
-    background-color: red;
+    background-image: url(../images/bg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    max-width: 1200px;
-    margin: 2rem 0;
+}
+
+.paco{
+    display: flex;
+    justify-content: center;
+    align-content: flex-end; 
 }
 
 .artists-card{
-    flex: 0 0 33%;
-    padding: 1.5rem;
+    flex: 0 0 25%;
+    padding: 1rem;
     box-sizing: border-box;
+    border: 1px solid lightgreen;
+    box-shadow: 0px 0px 24px 0px rgba(0,0,0,1);   
+    border-radius: 5px;
+    margin: 1rem;
 }
 
 .artists-card img{
