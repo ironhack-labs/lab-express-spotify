@@ -9,6 +9,11 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+app.use((req, res, next) => {
+    res.locals.path = req.path.slice(1).replace('/', '-');
+    next()
+})
+
 hbs.registerPartials(__dirname + '/views/partials');
 
 const SpotifyWebApi = require('spotify-web-api-node');

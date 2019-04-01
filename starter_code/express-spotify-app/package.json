@@ -2,10 +2,10 @@
   "name": "express-spotify-app",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "start":"nodemon -e 'js|handlebars|hbs|html'"
+    "start": "node app",
+    "dev": "nodemon -e js,css,hbs app"
   },
   "author": "",
   "license": "ISC",
@@ -16,5 +16,8 @@
     "morgan": "^1.9.1",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }

@@ -1,0 +1,130 @@
+
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    background-image: url(../images/landing.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    overflow-x: hidden;
+    color: #212121; 
+}
+
+h1{
+    color: white;
+}
+
+a:link{
+    text-decoration: none;
+}
+
+.content{
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index-container{
+    display: flex;
+    flex-direction: column
+}
+
+.index-container img{
+    object-fit: contain;
+    max-height: 15rem;
+    margin: 2rem; 
+}
+
+.index-container a{
+    width: fit-content;
+    margin: .5rem auto;
+    padding: .7rem 1rem;
+    box-shadow: 0px 3px 7px rgba(145, 145, 145, 0.481);
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.artists{
+    background-color: red;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 2rem 0;
+}
+
+.artists-card{
+    flex: 0 0 33%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.artists-card img{
+    height: 15rem;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.albums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 2rem 0;
+}
+
+.albums-card{
+    flex: 0 0 33%;
+    padding: 1.5rem;
+    box-sizing: border-box;
+}
+
+.albums-card img{
+    height: 15rem;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.container-index img{
+    height: 5rem;
+    display: block;
+    margin: 0 auto 2rem;
+}
+
+.title{
+    font-size: 1.3rem;
+    font-weight: 900;
+}
+
+.tagline{
+    color: #C4C6C6;
+    margin: .5rem 0 1rem;
+    font-weight: 900;
+}
+
+.random-beer{
+    display: flex;
+    margin: 3rem;
+    max-width: 900px;
+}
+
+.random-beer .img-col img{
+    height: 20rem;
+    margin: 0 5rem;
+}
+
+.random-beer .title{
+    margin: 1.5rem 0;
+}
+
+
+footer{
+    background-color: #0A2C42;
+    width: 100vw;
+    color: #fff;
+    padding: 1rem;
+    box-sizing: border-box;
+}
