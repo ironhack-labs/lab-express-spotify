@@ -15,5 +15,8 @@
     "hbs": "^4.0.3",
     "prettyjson": "^1.2.1",
     "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
   }
 }
