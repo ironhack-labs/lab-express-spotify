@@ -21,16 +21,27 @@ module.exports.main = (req, res, next) => {
   res.render('main.hbs');
 }
 
-module.exports.detail = (req, res, next) => {
-  const artist = req.query;
-  spotifyApi.searchArtists()
+module.exports.list = (req, res, next) => {
+  const artist = req.query.name;
+  spotifyApi.searchArtists(artist)
     .then(data => {
 
       console.log("The received data from the API: ", data.body);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render('artist.hbs');
+      res.render('artist.hbs', data.body);
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     })
+}
+
+module.exports.albums = (req, res, next) => {
+  const artist = req.params.id;
+  console.log(artist)
+  spotifyApi.getArtistAlbums(artist)
+  .then(function(data) {
+    console.log('Artist albums', data);
+    console.log(data.body.items[0])
+  }, function(err) {
+    console.error(err);
+  });
 }

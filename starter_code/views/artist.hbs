@@ -1,1 +1,8 @@
-llegue
+{{#each artists.items as |item|}}  
+  <div>
+    <img src="{{item.images.[0].url}}" alt="albun artist image" width="250px">
+    <p>{{item.name}}</p>
+
+    <a href="/albums/{{item.id}}">View Albums</a>
+  </div>
+{{/each}}
