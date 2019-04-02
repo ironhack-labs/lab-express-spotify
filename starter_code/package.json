@@ -1,0 +1,19 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "testing",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "nodemon -e js, css, hbs app"
+  },
+  "author": "Josué",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}
