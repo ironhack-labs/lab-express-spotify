@@ -1,0 +1,29 @@
+.bkg-concert {
+  background-image: url(../images/concert.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.form-container {
+  background-color: rgb(255, 255, 255, 0.7);
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  width: 40%;
+}
+
+.main-search {
+  padding: 80px
+}
+
+.main-input {
+  display: block;
+  margin: 20px auto;
+  width: 100%;
+}
+
+.main-btn {
+  display: block;
+  margin: 0 auto;
+}
