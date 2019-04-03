@@ -9,10 +9,10 @@ app.set('views', __dirname + '/views');
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-app.use((req, res, next) => {
-    res.locals.path = req.path.slice(1).replace('/', '-');
-    next()
-})
+// app.use((req, res, next) => {
+//     res.locals.path = req.path.slice(1).replace('/', '-');
+//     next()
+// })
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -36,15 +36,23 @@ spotifyApi.clientCredentialsGrant()
 
 
 app.get('/', (req, res, next) => {
-    res.render('index');
+    res.render('index', { 
+        hideNavbar: true
+    });
+   
 });
 
+
+
 app.get('/albums/:artistId', (req, res, next) => {
+
     let id = req.params.artistId;
     spotifyApi.getArtistAlbums(id)
         .then(data => {
             const albums = data.body.items;
-            res.render('albums', { albums })
+            res.render('albums', { 
+                albums 
+            });
         })
         .catch(err => {
             console.error(err);
@@ -54,11 +62,16 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 app.get('/tracks/:albumId', (req, res, next) => {
     let id = req.params.albumId;
-    spotifyApi.getAlbumTracks(id, { limit : 5, offset : 1 })
+    spotifyApi.getAlbumTracks(id, { 
+        limit : 5, 
+        offset : 1 
+    })
         .then(data => {
             
             const tracks = data.body.items;
-            res.render('tracks', { tracks })
+            res.render('tracks', { 
+                tracks 
+            });
         })
         .catch(err => {
             console.error(err);
@@ -72,10 +85,12 @@ app.post('/artists', (req, res, next) => {
         .then(data => {
 
             const artists = data.body.artists.items;
-            res.render('artists', { artists })
+            res.render('artists', { 
+                artists 
+            })
         })
         .catch(err => {
-            console.log(`Error en el Seachr a la api ${err}`);
+            console.log(`Error al buscar en la api ${err}`);
         })
 })
 
