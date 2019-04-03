@@ -1,8 +1,9 @@
-{{#each items as |item|}}  
-  <div>
-    <img src="{{item.images.[0].url}}" alt="album image" width="250px">
-    <p>{{item.name}}</p>
 
-    <a href="/albums/{{item.artistid}}/{{item.id}}">View tracks</a>
-  </div>
-{{/each}}
+  {{#each items as |item|}}  
+    <div>
+      <img src="{{item.images.[0].url}}" alt="album image" width="250px">
+      <p>{{item.name}}</p>
+
+      <a href="/tracks/{{item.id}}">View tracks</a>
+    </div>
+  {{/each}}

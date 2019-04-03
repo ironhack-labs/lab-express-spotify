@@ -40,11 +40,23 @@ module.exports.albums = (req, res, next) => {
   spotifyApi.getArtistAlbums(artist)
   .then(albums => {
     console.log('Artist albums', albums);
-    console.log('HOLAAAAAAAAAAAAA', albums.body.items[0])
+    console.log('MIRA AQUUUUUUUUUUUUUUUUIIIIIIIIIIII', albums.body.items[0]);
     res.render('albums.hbs', albums.body);
   })
   .catch(err => {
-    console.log("The error while searching artists occurred: ", err);
+    console.log("The error while searching albums occurred: ", err);
   })
 }
 
+module.exports.tracks = (req, res, next) => {
+  const album = req.params.id;
+  console.log(album)
+  spotifyApi.getAlbumTracks(album, { limit : 10, offset : 0 })
+  .then( tracks => {
+    console.log('MIRA AQUUUUUUUUUUUUUUUUIIIIIIIIIIII', tracks.body);
+    res.render('tracks.hbs', tracks.body);
+  })
+  .catch(err => {
+    console.log("The error while searching tracks occurred: ", err)
+  })
+}

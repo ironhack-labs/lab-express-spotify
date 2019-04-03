@@ -27,3 +27,23 @@
   display: block;
   margin: 0 auto;
 }
+
+.main-artist-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artist-container{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 30%;
+}
+
+.tittle-wrapper{
+  background-color: grey;
+  color: white;
+}
