@@ -1,8 +1,11 @@
+<div class="title-section">
+  <h1>These are the artists containing your query</h1>
+</div>
 <div class="main-artist-container">
   {{#each items as |item|}}  
     <div class="artist-container">
       <div>
-        <img src="{{item.images.[0].url}}" alt="album artist image" width="250px">
+        <img src="{{item.images.[0].url}}" alt="album artist image" width="100%">
       </div>
       <div class="title-wrapper">
         <p>{{item.name}}</p>

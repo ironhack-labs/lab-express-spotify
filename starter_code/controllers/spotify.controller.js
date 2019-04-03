@@ -40,7 +40,6 @@ module.exports.albums = (req, res, next) => {
   spotifyApi.getArtistAlbums(artist)
   .then(albums => {
     console.log('Artist albums', albums);
-    console.log('MIRA AQUUUUUUUUUUUUUUUUIIIIIIIIIIII', albums.body.items[0]);
     res.render('albums.hbs', albums.body);
   })
   .catch(err => {

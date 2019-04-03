@@ -1,9 +1,16 @@
-
+<div class="title-section">
+  <h1>These are the albums of {{items.[0].name}}</h1>
+</div>
+<div class="main-artist-container">
   {{#each items as |item|}}  
-    <div>
-      <img src="{{item.images.[0].url}}" alt="album image" width="250px">
-      <p>{{item.name}}</p>
-
-      <a href="/tracks/{{item.id}}">View tracks</a>
+    <div class="artist-container">
+      <div>
+        <img src="{{item.images.[0].url}}" alt="album image" width="100%">
+      </div>
+      <div class="title-wrapper">
+        <p>{{item.name}}</p>
+        <a class="btn btn-danger" href="/tracks/{{item.id}}">View tracks</a>
+      </div>
     </div>
   {{/each}}
+</div>
