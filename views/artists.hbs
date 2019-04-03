@@ -1,1 +1,9 @@
-<p>{{artist}}</p>
+<div class="container">
+  <div class="row">
+  {{#each data as |datas|}}
+    {{>datas datas=datas }}
+  {{else}}
+  <p>Empty List :(</p>
+  {{/each}}
+</div>
+

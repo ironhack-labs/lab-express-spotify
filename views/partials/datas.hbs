@@ -1,0 +1,19 @@
+
+
+{{#each datas.artists.items as |datos|}}
+<div class="col-lg-4 artist-container">
+  {{#if datos.images.0.url}}
+  <img class="artist-img" src="{{datos.images.0.url}}">
+  {{else}}
+    <img class="artist-img" src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg
+">
+  {{/if}}
+  <div class="artist-info-container">
+    <p>{{datos.name}}</p>
+    <a href="#">View Albums</a>
+  </div>
+
+</div>
+{{/each}}
+
+
