@@ -1,0 +1,22 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.3",
+    "mongoose": "^5.4.20",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.10"
+  },
+  "scripts": {
+    "start": "node",
+    "dev": "DEBUG=starter_code:* nodemon -e hbs,js,css"
+  },
+  "author": "",
+  "license": "ISC"
+}
