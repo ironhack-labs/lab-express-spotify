@@ -27,21 +27,24 @@ module.exports.list = (req, res, next) => {
     .then(data => {
 
       console.log("The received data from the API: ", data.body);
-      res.render('artist.hbs', data.body);
+      res.render('artist.hbs', data.body.artists);
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     })
-}
+  }
 
 module.exports.albums = (req, res, next) => {
   const artist = req.params.id;
   console.log(artist)
   spotifyApi.getArtistAlbums(artist)
-  .then(function(data) {
-    console.log('Artist albums', data);
-    console.log(data.body.items[0])
-  }, function(err) {
-    console.error(err);
-  });
+  .then(albums => {
+    console.log('Artist albums', albums);
+    console.log('HOLAAAAAAAAAAAAA', albums.body.items[0])
+    res.render('albums.hbs', albums.body);
+  })
+  .catch(err => {
+    console.log("The error while searching artists occurred: ", err);
+  })
 }
+
