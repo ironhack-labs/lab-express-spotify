@@ -1,0 +1,46 @@
+* {
+    border: solid 1px black;
+}
+
+body {
+    background-image: url('../image/pexels-photo-167605.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+div.row {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center
+}
+
+.artist-containeer {
+    display: flex;
+    width: 100%;
+}
+
+.sm2 {
+    width: 80%;
+    align-content: center;
+    justify-content: center;
+}
+
+.sm1 .sm3 {
+    width: 10%;
+}
+
+.artist-containeer {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.btn-artist{
+    margin-top:1em;
+}
