@@ -1,0 +1,10 @@
+{{#each album.items as |albumes|}}
+<div class="col-lg-4 artist-container">
+<img class="artist-img"  src="{{albumes.images.0.url}}">
+  <div class="artist-info-container">
+    <p>{{albumes.name}}</p>
+    <a href="">View Tracks</a>
+  </div>
+
+</div>
+{{/each}}

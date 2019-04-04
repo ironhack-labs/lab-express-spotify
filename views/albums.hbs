@@ -1,0 +1,9 @@
+
+<div class="container">
+  <div class="row">
+  {{#each data as |album|}}
+    {{>album album=album }}
+  {{else}}
+  <p>Empty List :(</p>
+  {{/each}}
+</div>

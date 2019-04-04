@@ -16,14 +16,11 @@ spotifyApi.clientCredentialsGrant()
 
 module.exports.home = (req, res, next) => {
   res.render('index');
-  console.log('adios')
 };  
 
 module.exports.list = (req,res,next) => {
-console.log('hola')
   spotifyApi.searchArtists(req.query.artist)
       .then(data => {
-  
         console.log("The received data from the API: ", data.body);
         // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
         res.render('artists', {data});
@@ -32,3 +29,14 @@ console.log('hola')
         console.log("The error while searching artists occurred: ", err);
       })
   };
+
+module.exports.albums = (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    console.log('Artist albums', data.body);
+    res.render('albums',{data});
+  })
+  .catch(err => {
+    console.log("The error while searching artist's albums occurred: ", err);
+  })
+}

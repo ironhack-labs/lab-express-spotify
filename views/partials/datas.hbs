@@ -1,5 +1,3 @@
-
-
 {{#each datas.artists.items as |datos|}}
 <div class="col-lg-4 artist-container">
   {{#if datos.images.0.url}}
@@ -10,7 +8,7 @@
   {{/if}}
   <div class="artist-info-container">
     <p>{{datos.name}}</p>
-    <a href="#">View Albums</a>
+    <a href="/albums/{{datos.id}}">View Albums</a>
   </div>
 
 </div>
