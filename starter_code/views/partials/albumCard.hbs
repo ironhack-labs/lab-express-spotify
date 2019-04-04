@@ -1,9 +1,13 @@
-  <div class="col-sm-4">
-    <div class="card">
-      <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
-      <div class="card-body">
-        <h5 class="card-title">{{this.name}}</h5>
-        <a href="/tracks/{{this.id}}" class="btn btn-primary">View tracks</a>
-      </div>
-    </div>
+<div class="row">
+
+  <div class="col-lg-4 artist-container">
+
+  <img src="{{this.images.0.url}}" alt="" class="artist-img">
+
+  <div class="artist-info-container">
+  <p>{{this.name}}</p>
+  <a href="/tracks/{{this.id}}">View Tracks</a>
   </div>
+  </div>
+
+</div>

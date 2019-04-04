@@ -31,8 +31,8 @@ app.get('/artists', (req, res, next) => {
 
 app.get('/albums/:artistId', (req, res, next) => {
 
-  apiSpotify.getArtists(req.query.artist).then(data =>{
-    res.render('albums', { data });
+  apiSpotify.getAlbums(req.params.artistId).then(data =>{
+    res.render('album', { data });
    }).catch(error =>{
     console.log(error)
    })
