@@ -46,3 +46,16 @@ module.exports.albums = (req,res,next) => {
       console.log("The error while searching albums occurred: ", err);
     })
 };
+
+module.exports.tracks = (req,res,next) => {
+  const criteria = req.params.id;
+  spotifyApi.getAlbumTracks(criteria, {limit:10, offset:0})
+    .then(data => {
+      res.render('artists/tracks', data.body);
+      // res.send(data)
+    })
+    .catch(err => {
+      console.log("The error while searching tracks occurred: ", err);
+    })
+}
+

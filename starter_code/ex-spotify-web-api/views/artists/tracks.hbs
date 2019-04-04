@@ -1,0 +1,8 @@
+<div class="tracks-title-section">
+  <p class="p1">Title</p><p class="p2">Listen</p>
+</div>
+{{#each items as |item|}}  
+  <div class="tracks-track-section">
+    <p class="p1">{{item.name}}</p><p class="p2"><audio controls volume src="{{item.preview_url}}"></audio></p>
+  </div>
+{{/each}} 
