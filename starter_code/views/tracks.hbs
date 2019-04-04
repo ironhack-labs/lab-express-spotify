@@ -1,0 +1,11 @@
+<div class="cards-container">
+  <ul class="track-list">
+    <li class="track-header">
+      <p class="track-text">Title</p>
+      <p class="track-text">Listen</p>
+    </li>
+    {{#each items}}
+        {{> trackCard this}}
+    {{/each}}
+  </ul>
+</div>

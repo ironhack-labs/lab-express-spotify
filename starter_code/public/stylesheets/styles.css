@@ -1,0 +1,164 @@
+* {
+  padding: 0;
+  margin: 0;
+}
+
+#main {
+  background: url(/images/show.jpg) no-repeat;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#main form {
+  display: flex;
+  margin: 0 auto;
+  background-color: rgba(200, 200, 200, 0.5);
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+  padding: 5% 0;
+  position: fixed;
+  top: 35%;
+  left: 35%;
+}
+
+#main form input {
+  width: 300px;
+  padding: 2% 1%;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+#main form button {
+  margin-top: 2%;
+  padding: 2%;
+  background-color: red;
+  border: none;
+  border-radius: 5px;
+  color: white;
+}
+
+.cards-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1% 1.5%;
+  align-items: center;
+  background-color: dimgray;
+  box-sizing: border-box;
+}
+
+.artist-img {
+  width: 500px;
+  height: 500px;
+  display: block;
+}
+
+.artist-info {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 500px;
+  color: white;
+}
+
+.artist-info a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  padding: 3% 0;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.artist-info p {
+  word-wrap: break-word;
+}
+
+
+
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: 1% 0.8%;
+  align-items: center;
+  background-color: dimgray;
+  box-sizing: border-box;
+}
+
+.album-img {
+  display: block;
+  width: 250px;
+  height: 250px;
+}
+
+.album-info {
+  text-align: center;
+  padding-bottom: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  width: 250px;
+  color: white;
+}
+
+.album-info a {
+  text-decoration: none;
+  color: white;
+  display: block;
+  width: 150px;
+  margin: 0 auto;
+  padding: 5% 0;
+  background-color: red;
+  border-radius: 10px;
+}
+
+.album-info p {
+  word-wrap: break-word;
+}
+
+.track-list {
+  list-style-type: none;
+  width: 60%;
+  display: block;
+  margin: 0 auto;
+  background-color: lightgray;
+  padding: 0 5%;
+  padding-bottom: 10px;
+}
+
+.track-header {
+  display: flex;
+  justify-content: space-around;
+  background-color: darkgray;
+  margin: 0 -8.3%;
+}
+
+.track-text {
+  font-size: 2em;
+  font-family: 'Courier New', Courier, monospace;
+}
+
+.track-header .track-text:nth-child(2) {
+  margin-left: 250px;
+}
+
+.track-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-top: 10px;
+}
+
+.track-item p {
+  font-size: 1em;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
