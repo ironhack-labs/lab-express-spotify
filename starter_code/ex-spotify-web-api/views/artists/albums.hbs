@@ -1,0 +1,11 @@
+<div class="d-flex flex-row flex-wrap m-3 justify-content-between">
+  {{#each items as |item|}}
+  <div class="card mb-4" style="width: 18rem;">
+    <img src={{item.images.[0].url}} class="card-img-top" alt={{item.name}} style="height: 20rem;">
+    <div class="card-body text-center">
+      <h5 class="card-title">{{item.name}}</h5>
+      <a href="artist/albums/tracks/{{item.id}}" class="btn btn-primary">View tracks</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
