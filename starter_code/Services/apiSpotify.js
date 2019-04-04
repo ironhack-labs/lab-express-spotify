@@ -44,4 +44,16 @@ spotifyApi.clientCredentialsGrant()
         
     }
 
-    module.exports = {getAlbums,getArtists}
+    function tracks(params){
+
+      return  spotifyApi.getAlbumTracks(params)
+      .then((data) => {
+        return  data
+      })
+      .catch((err) => {
+        console.error(err);
+      });
+
+    }
+
+    module.exports = {getAlbums,getArtists,tracks}
