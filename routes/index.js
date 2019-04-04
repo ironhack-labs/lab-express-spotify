@@ -1,12 +1,9 @@
 const express = require('express');
 const router = express.Router();
+const artistsController = require('../controllers/artists.controller')
 
 //Home
-router.get('/', function(req, res, next) {
-  res.render('../views/index')
-})
-//router.get('/artists', function(req,res,next) {
-//  res.render('../views/artists', req.query)
-//})
+router.get('/', artistsController.home); 
+router.get('/artists', artistsController.list);
 
 module.exports = router;
