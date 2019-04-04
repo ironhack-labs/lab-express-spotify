@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row header-row">
+    <span class="col-lg-8">Title</span>
+    <span class="col-lg-4">Listen</span>
+    </div>
+{{#each data as |track|}}
+{{>track track=track }}
+{{else}}
+  <p>Empty List :(</p>
+  {{/each}}
+</div>

@@ -15,6 +15,7 @@ hbs.registerPartials(__dirname + '/views/partials');
 app.get('/', indexRouter);
 app.get('/artists', indexRouter);
 app.get('/albums/:artistId', indexRouter);
+app.get('/tracks/:tracksId', indexRouter);
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
 

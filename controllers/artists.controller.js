@@ -40,3 +40,14 @@ module.exports.albums = (req, res, next) => {
     console.log("The error while searching artist's albums occurred: ", err);
   })
 }
+
+module.exports.tracks = (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.tracksId, { limit : 5, offset : 1 })
+    .then(data => {
+    console.log(data.body);
+    res.render('tracks', {data});
+  })
+    .catch(err => {
+    console.log('Something went wrong!', err);
+  })
+}

@@ -1,0 +1,11 @@
+{{#each track.items as |tracking|}}
+<div class="row track-item">
+  <div class="col-lg-8">
+    <p>{{tracking.name}}</p>
+  </div>
+  
+    <div class="col-lg-4">
+      <audio controls="" name="media"><source src="{{tracking.preview_url}}" type=""></audio>
+    </div>
+</div>
+{{/each}}

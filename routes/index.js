@@ -6,6 +6,7 @@ const artistsController = require('../controllers/artists.controller')
 router.get('/', artistsController.home); 
 router.get('/artists', artistsController.list);
 router.get('/albums/:artistId', artistsController.albums);
+router.get('/tracks/:tracksId', artistsController.tracks);
 
 module.exports = router;
 

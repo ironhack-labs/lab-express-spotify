@@ -143,3 +143,25 @@ img {
   padding: 4px 10px;
   text-decoration: none;
 }
+
+.header-row {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+}
+
+.row {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
+}
+
+.track-item {
+  background-color: #F6F6F6;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
