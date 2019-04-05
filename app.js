@@ -2,10 +2,12 @@ const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node')
 const app = express();
+const bodyParser = require('body-parser')
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 hbs.registerPartials(__dirname + '/views/partials');
 
@@ -16,21 +18,31 @@ app.get('/', (req, res, next) => {
 
 app.post('/artist', (req, res, next) => {
 
-    res.render('artist');
+    let search = req.body.busca;
 
-    // console.log(req);    
-
-    spotifyApi.searchArtists('Anitta')
+    spotifyApi.searchArtists(search)
         .then(data => {
-
-            console.log("The received data from the API: ", data.body);
-            // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+            // console.log(data.body.artists.items[0].id);
+            let items = data.body.artists.items;
+            res.render('artist', { items });
         })
         .catch(err => {
             console.log("The error while searching artists occurred: ", err);
         })
 
 });
+
+app.get('/albums/:artistId', (req, res, next) => {
+    let search = req.params.artistId;
+    spotifyApi.getArtistAlbums(search)
+        .then(function (data) {
+            // console.log(data.body.items);
+            let albums = data.body.items;
+            res.render('albums',{albums});
+        }, function (err) {
+            console.error(err);
+        });
+})
 
 // Remember to insert your credentials here
 const clientId = '464408e226ea494aaa688215dad64cc4',

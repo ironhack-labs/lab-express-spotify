@@ -1,16 +1,57 @@
 html {
     height: 100%;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 body {
     background-color: black;
-    display: flex;
-    justify-content: center;
-    align-items: center;
     height: 100%;
 }
 
 .modal {
     background-color: rgba(255, 255, 255, .5);
     padding: 30px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.modal-artist {
+    background-color: rgba(255,255,255, .5);
+    margin-top: 25px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 30%;
+    height: 500px;
+    margin: 15px;
+    background-color:rgba(0, 0, 0, .5);
+    color: white;
+}
+
+.artists h2 {
+    font-size: 20px;
+}
+
+.artists img {
+    width: 100%;
+}
+
+.btn-album {
+    padding: 15px;
+    background-color: rgb(117, 27, 27);
+    width:80%;
+    text-align: center;
+}
+
+.btn-album:hover {
+    background-color: rgb(161, 39, 39);
 }
