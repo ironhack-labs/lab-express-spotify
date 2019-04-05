@@ -14,8 +14,8 @@ app.use(express.static(__dirname + '/public'));
 
 
 // setting the spotify-api goes here:
-const clientId = '1c30624cba6742dcb792991caecae571',
-    clientSecret = '746977b1e77240faa9d0d2411c3e0efe';
+const clientId = '19e472cd6cfc429c9c0f36dafc865df4',
+    clientSecret = 'b2a14cc767b94366900515ee45e22f63';
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -40,24 +40,36 @@ app.get('/', (req, res, next) => {
     res.render('index');
   });
 
-app.get('/artists', (req, res, nest) => {
-    spotifyApi.searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-    .then(data => {
-    console.log("The received data from the API: ", data.body);
-    res.render('artist', { artists })
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-})
-.catch(err => {
-    console.log("The error while searching artists occurred: ", err);
-})
+app.get('/artists', (req, res, next) => {
+    spotifyApi.searchArtists(req.query.artists)
+        .then(data => {
+        console.log("The received data from the API: ", data.body);
+        res.render('artist', { artists })
+    })
+    .catch(err => {
+        console.log("The error while searching artists occurred: ", req.query.artists);
+    })
+res.render('artists')
 });
+
 
 app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi.getArtistAlbums()
     .then(data => {
         console.log("The received data from the API: ", data.body);
         res.render('album', { albums })
-        // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    })
+    .catch(err => {
+        console.log("The error while searching artists occurred: ", err);
+    })
+    }); 
+
+
+app.get('/tracks/:tracksId', (req, res, next) => {
+    spotifyApi.getArtistAlbums()
+    .then(data => {
+        console.log("The received data from the API: ", data.body);
+        res.render('track', { tracks })
     })
     .catch(err => {
         console.log("The error while searching artists occurred: ", err);

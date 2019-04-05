@@ -1,5 +1,7 @@
 <div class="album-colums mt-3">
     {{#each albumPartial as |album|}}
       {{>albumPartial album=album}}
+      {{else}}
+        <p>Empty List</p>
     {{/each}}
 </div>

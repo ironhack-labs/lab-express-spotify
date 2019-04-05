@@ -1,7 +1,7 @@
 <div class="container">
     <div class="row">
-      {{#each artists as |artist|}}
-        {{>artistsPartials artist=artist}}
+      {{#each tracks as |track|}}
+        {{>tracksPartials track=track}}
         {{else}}
         <p>Empty List</p>
         {{/each}}
