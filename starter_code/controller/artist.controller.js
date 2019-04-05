@@ -21,9 +21,9 @@ spotifyApi.clientCredentialsGrant()
 
 module.exports.list = (req, res, next) => {
   const criteria = req.query.artist;
-  console.log(criteria)
   spotifyApi.searchArtists(criteria)
     .then(data => {
+      // console.log("The received data from the API: ", data.body.artists.items[1].images);
       console.log("The received data from the API: ", data.body.artists.items);
       res.render('artist', {artists: data.body.artists.items})
     })
