@@ -1,11 +1,15 @@
-{{#each tracks as |track|}}
-  <figure>
-      <figcaption>Listen to the :{{track.name}}</figcaption>
-      <audio
-          controls
-          src="{{track.preview_url}}">
-              Your browser does not support the
-              <code>audio</code> element.
-      </audio>
-  </figure>
-{{/each}}
+<div class="list-group">
+  {{#each tracks as |track|}}
+    <div class="list-group-item">
+      <figure>
+        <figcaption>Listen to the :{{track.name}}</figcaption>
+        <audio
+            controls
+            src="{{track.preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+      </figure>
+    </div>
+  {{/each}}
+ </div>
