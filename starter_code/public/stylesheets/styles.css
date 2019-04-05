@@ -44,3 +44,22 @@ div.row {
 .btn-artist{
     margin-top:1em;
 }
+.container-artist{
+    display: flex;
+    width: 500px;
+    height: 500px;
+    flex-wrap: wrap;
+}
+div.row{
+    position: relative;
+}
+.album{
+    margin-bottom: 200;
+    width: 100px;
+    height: 100px; 
+    align-content: center;
+}
+.img-album {
+    width: 100px;
+    height: 100px;
+}
