@@ -58,7 +58,7 @@ app.get("/albums/:albumsId", (req, res) => {
     .then(
     data => {
       const albumInfo = data.body.items;
-      console.log (albumInfo);
+      res.render("albumInfo", {albumInfo});
     },
     err => {
       console.error(err);
