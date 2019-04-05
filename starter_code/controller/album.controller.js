@@ -4,7 +4,7 @@ module.exports.details = (req, res, next) => {
   const id = req.params.id;
   spotifyApi.getArtistAlbums(id)
     .then(data => {
-      console.log(data.body.items)
+      // console.log(data.body.items)
       res.render('album', {albums : data.body.items})
     })
     .catch(err => {

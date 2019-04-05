@@ -1,6 +1,7 @@
 const express = require('express');
 const artistRouter = require('./routes/artist.routes');
 const albumRouter = require('./routes/album.routes');
+const tracksRouter = require('./routes/tracks.routes');
 
 const hbs = require('hbs');
 
@@ -27,5 +28,6 @@ app.get('/', (req, res, next) => {
 });
 app.use('/artist', artistRouter);
 app.use('/albums', albumRouter);
+app.use('/tracks', tracksRouter);
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧  🥁  🎸  🔊"));
