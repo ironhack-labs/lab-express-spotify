@@ -1,1 +1,5 @@
-<h1>Soy el album {{id}}</h1>
+  {{#each albums as |album|}}
+    <p>{{album.name}}</p>
+    <img src="{{album.images.[2].url}}">
+    <a href="/tracks/{{album.id}}">View Albums</a>
+  {{/each}}
