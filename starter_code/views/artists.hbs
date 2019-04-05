@@ -1,0 +1,11 @@
+<div class="d-flex flex-wrap justify-content-between pl-5 pr-5">
+  {{#each artists as |artist|}}
+  <div class="card ml-2 mr-2 mt-2 mb-2" style="width: 18rem;">
+    <img src={{artist.image}} class="card-img-top" alt={{movie.name}}>
+    <div class="card-body text-center">
+      <h5 class="card-title">{{artist.name}}</h5>
+      <a href="/movies/{{movie.id}}">View Album</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
