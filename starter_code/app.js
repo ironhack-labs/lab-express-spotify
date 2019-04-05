@@ -26,6 +26,6 @@ app.get('/', (req, res, next) => {
   res.render('index');
 });
 app.use('/artist', artistRouter);
-app.use('/album', albumRouter);
+app.use('/albums', albumRouter);
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧  🥁  🎸  🔊"));
