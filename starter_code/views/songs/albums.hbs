@@ -1,0 +1,12 @@
+
+ <div class="d-flex flex-wrap justify-content-between pl-5 pr-5">
+{{#each albums as |album|}} 
+    <div class="card ml-2 mr-2 mt-2 mb-2">
+      <img src="{{album.images.0.url}}" class="card-img-top b-primary" alt={{album.name}}>
+      <div class="card-body text-center bg-dark">
+        <h5 class="card-title text-white">{{album.name}}</h5>
+        <a href="/tracks/{{album.id}}" class="btn btn-danger btn-sm">View Track</a>
+      </div>
+    </div>
+{{/each}}
+  </div>

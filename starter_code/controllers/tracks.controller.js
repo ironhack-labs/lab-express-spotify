@@ -2,11 +2,10 @@ const createError = require('http-errors');
 const spotifyApi = require('../configs/db.config')
 
 module.exports.list = (req, res, next) => {
-  spotifyApi.searchArtists(req.query.search)
+  spotifyApi.getAlbumTracks(req.params.idAlbum)
         .then(data => {
-          data.body.artists.items.forEach(element => console.log(`The received data from API - Artists:`,element));
-          res.render('songs/list',{
-            artists: data.body.artists.items
+          res.render('songs/tracks',{
+            tracks: data.body.items,
           })
         })
         .catch(err => {

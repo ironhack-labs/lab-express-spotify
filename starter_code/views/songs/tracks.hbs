@@ -1,0 +1,17 @@
+<div class="card w-75 mx-auto mt-5">
+  <div class="card-header d-flex flex-wrap justify-content-between bg-dark text-white">
+    <h3 class="w-75  font-weight-bold">Title</h3>
+    <h3 class="w-25 text-center font-weight-bold">Listen</h3>
+  </div>
+  <div class="card-body">
+  {{#each tracks as |track|}}
+    <div class="d-flex flex-wrap justify-content-between mt-3">
+      <div class="w-75">{{track.track_number}}- {{track.name}}</div>
+      <audio class="w-25" controls>
+        <source src="{{track.preview_url}}"></audio>
+    </div>
+      <footer class="blockquote-footer border-bottom border-dark pb-2">{{#each track.artists as |artist|}}{{artist.name}} -{{/each}}
+      </footer>
+    {{/each}}
+  </div>
+</div>

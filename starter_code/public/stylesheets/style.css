@@ -8,11 +8,15 @@ a {
 
 body {
   background-image: url('/images/header.jpg');
-  background-repeat: no-repeat;
-  background-size: 100%
+  background-size: 100% 100%;
+  background-attachment: fixed;
 }
 
 .index-search {
   margin-top: 20%;
   background-color: rgba(200, 200, 200, 0.6)
+}
+
+.card {
+  width: 18rem;
 }
