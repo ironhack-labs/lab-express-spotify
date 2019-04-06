@@ -50,7 +50,7 @@ app.get('/albums/:id', (req, res, next) => {
 app.get('/tracks/:id', (req, res, next) => {
   spotifyApi.getAlbumTracks(req.params.id)
     .then( data => { 
-      console.log("The received data from the API: ", data.body.items[0].name);
+      console.log("The received data from the API: ", data.body.items[0]);
       res.render('tracks', { title: 'Tracks', data });
     })
     .catch( err => { console.log("The error while searching tracks occurred: ", err); } )

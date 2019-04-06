@@ -1,18 +1,17 @@
-<nav class="navbar navbar-light bg-light justify-content-around">
-  <span class="navbar-text">Title</span>
-  <span class="navbar-text">Listen</span>
+<nav class="navbar navbar-light bg-info justify-content-around">
+  <span class="navbar-text"><h5>Title</h5></span>
+  <span class="navbar-text"><h5>Listen</h5></span>
 </nav>
 
 <div class="d-flex flex-column">
   {{#each data.body.items as |track|}}
-    <div class="pb-2">
-    <div class="card text-center border-light" style="width: 100%;">
-      <div class="card-body">
-        <h5 class="card-title">{{track.name}}</h5>
-        <h5 class="card-title">{{track.preview_url}}</h5>
-        <audio controls src="{{track.preview_url}}">Your browser does not support the <code>audio</code> element.</audio>
+    <div class="pb-2 pt-2">
+      <div class="d-flex justify-content-around align-items-center bg-light pb-1 pt-1" style="width: 100%;">
+        <h6 class="col-md-8">{{track.name}}</h6>
+        <span class="col-md-4">
+          <audio controls src="{{track.preview_url}}">Your browser does not support the <code>audio</code> element.</audio>
+        </span>
       </div>
-    </div>
     </div>
   {{/each}}
 </div>
