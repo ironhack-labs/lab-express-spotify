@@ -1,0 +1,18 @@
+<nav class="navbar navbar-light bg-light justify-content-around">
+  <span class="navbar-text">Title</span>
+  <span class="navbar-text">Listen</span>
+</nav>
+
+<div class="d-flex flex-column">
+  {{#each data.body.items as |track|}}
+    <div class="pb-2">
+    <div class="card text-center border-light" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">{{track.name}}</h5>
+        <h5 class="card-title">{{track.preview_url}}</h5>
+        <audio controls src="{{track.preview_url}}">Your browser does not support the <code>audio</code> element.</audio>
+      </div>
+    </div>
+    </div>
+  {{/each}}
+</div>

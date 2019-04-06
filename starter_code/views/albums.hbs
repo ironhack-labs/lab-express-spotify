@@ -1,0 +1,13 @@
+<div class="d-flex flex-wrap justify-content-around pt-5 pl-5 pr-5">
+  {{#each data.body.items as |album|}}
+    <div class="pb-4">
+    <div class="card text-center border-light" style="width: 16rem;">
+      <img src="{{album.images.0.url}}" class="card-img-top" alt="{{album.name}}" height="300">
+      <div class="card-body">
+        <h5 class="card-title">{{album.name}}</h5>
+        <a href="/tracks/{{album.id}}" class="btn btn-primary">View Tracks</a>
+      </div>
+    </div>
+    </div>
+  {{/each}}
+</div>  
