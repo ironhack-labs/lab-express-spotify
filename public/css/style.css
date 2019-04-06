@@ -8,6 +8,10 @@ body {
     height: 100%;
 }
 
+a {
+    color: inherit;
+}
+
 .modal {
     background-color: rgba(255, 255, 255, .5);
     padding: 30px;
@@ -23,6 +27,11 @@ body {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+}
+
+.title {
+    text-align: center;
+    color: white;
 }
 
 .artists {

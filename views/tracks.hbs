@@ -1,0 +1,18 @@
+<div class="title">
+    <h1>Tracks</h1>
+</div>
+<div class="modal-artist">
+    <table>
+        <thead>
+            <tr>
+                <th>Nome</th>
+                <th>Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tracksData}}
+            {{>singleTrack}}
+            {{/each}}
+        </tbody>
+    </table>
+</div>

@@ -38,11 +38,26 @@ app.get('/albums/:artistId', (req, res, next) => {
         .then(function (data) {
             // console.log(data.body.items);
             let albums = data.body.items;
-            res.render('albums',{albums});
+            res.render('albums', { albums });
         }, function (err) {
             console.error(err);
         });
-})
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+    let albumId = req.params.albumId;
+    // console.log(albumId)
+    spotifyApi
+        .getAlbum(albumId)
+        .then(function (data) {
+            let tracksData = data.body.tracks.items;
+            res.render('tracks', {tracksData})
+            console.log(tracksData);
+        })
+        .catch(function (error) {
+            console.error(error);
+        });
+});
 
 // Remember to insert your credentials here
 const clientId = '464408e226ea494aaa688215dad64cc4',
