@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="col-12">
+            <h1>songs</h1>
+
+    <ul>
+       {{#each songs as |songs|}}
+      <li>{{songs.track_number}}. {{songs.name}} </li>
+       <audio controls>
+        <source src="{{songs.preview_url}}" type="audio/mpeg">
+      </audio>
+    {{/each}}
+
+    </ul>
+  </div>
+</div>
+

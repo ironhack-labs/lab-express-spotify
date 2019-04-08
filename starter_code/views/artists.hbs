@@ -1,8 +1,10 @@
 <div class="container">
   <div class="col-12">
     <ul>
+      <h1>Artits suggested</h1>
       {{#each items as |item|}}
       <li>{{item.name}} <img src="{{ item.images.2.url }}"></li>
+      <li>{{item.popularity}} </li>
       <a href="/artists/{{item.id}}">View albums</a>
       {{/each}}
     </ul>
