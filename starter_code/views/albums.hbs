@@ -1,7 +1,14 @@
-<div class="album-colums mt-3">
-    {{#each albumPartial as |album|}}
-      {{>albumPartial album=album}}
+<div class="container">
+  <div class="col-12">
+            <h1>albums</h1>
+
+    <ul>
+       {{#each albums as |album|}}
+      <li>{{album.name}} <img src="{{ album.images.[0].url }}"></li>
+      {{!-- <a href="/albums/{{album.id}}">View Tracks</a> --}}
       {{else}}
         <p>Empty List</p>
-    {{/each}}
+      {{/each}}
+    </ul>
+  </div>
 </div>

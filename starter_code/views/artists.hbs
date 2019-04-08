@@ -1,9 +1,18 @@
-<div class="container">
-    <div class="row">
+{{!-- todo lo que queremos saber da cada artist --}}
+<ul class="container">
+    <li class="row">
+        {{!--artist para aclarar lo q busco pero nombre inventado.. --}}
       {{#each artists as |artist|}}
-        {{>artistsPartials artist=artist}}
+        <div class="artist-container">
+            {{!-- [1]pero podemos elegir entre 3 que hay y .url porque es un array donde están --}}
+            <img class="artist-img" src="{{artist.images.[1].url}}" alt="Artist image">
+            <p class="artist-name">{{artist.name}}</p>
+            <a href="/albums/{{artist.id}}">View Albums</a>
+        </div>
+        {{!-- {{>artistsPartials artist=artist}} --}}
         {{else}}
         <p>Empty List</p>
         {{/each}}
-    </div>
-</div>
+    </li>
+</ul>
+

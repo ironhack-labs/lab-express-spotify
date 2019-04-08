@@ -31,33 +31,36 @@ spotifyApi.clientCredentialsGrant()
     console.log('Something went wrong when retrieving an access token', error);
   })
 
-
-
-
-
 // the routes go here:
 app.get('/', (req, res, next) => {
     res.render('index');
   });
 
 app.get('/artists', (req, res, next) => {
-    spotifyApi.searchArtists(req.query.artists)
+    //con req.query (me traigo info a consola)
+    console.log(req.query)
+    //solicito info del "name"(.artist porq es el valor q hemos puesto en name en el index.hbs) q haya puesto en el input
+    spotifyApi.searchArtists(req.query.artist)
         .then(data => {
-        console.log("The received data from the API: ", data.body);
-        res.render('artist', { artists })
+        //artist.items porque al mirar por consola, era un array. ej de images[1] por comprobar que se imprimía.
+        console.log("The received data from the API: ", data.body.artists.items[0].images[1]);
+        //data.body.artists.items necesito los datos de los artist, pero por regla si no "igualo" con : a algo, no me lee esa cadena.
+        res.render('artists', { artists : data.body.artists.items })
     })
     .catch(err => {
-        console.log("The error while searching artists occurred: ", req.query.artists);
+        console.log("The error while searching artists occurred: ", err);
     })
-res.render('artists')
 });
 
-
 app.get('/albums/:artistId', (req, res, next) => {
-    spotifyApi.getArtistAlbums()
+    console.log('p');
+    console.log(req.params)
+    const artistId = req.params.artistId;
+    console.log(artistId) //
+    spotifyApi.getArtistAlbums(artistId)
     .then(data => {
-        console.log("The received data from the API: ", data.body);
-        res.render('album', { albums })
+        // console.log("The received data from the API: ", data.body);
+        res.render('albums', { albums : data.body.items })
     })
     .catch(err => {
         console.log("The error while searching artists occurred: ", err);
@@ -65,16 +68,16 @@ app.get('/albums/:artistId', (req, res, next) => {
     }); 
 
 
-app.get('/tracks/:tracksId', (req, res, next) => {
-    spotifyApi.getArtistAlbums()
-    .then(data => {
-        console.log("The received data from the API: ", data.body);
-        res.render('track', { tracks })
-    })
-    .catch(err => {
-        console.log("The error while searching artists occurred: ", err);
-    })
-    }); 
+// app.get('/tracks/:tracksId', (req, res, next) => {
+//     spotifyApi.getArtistAlbums()
+//     .then(data => {
+//         console.log("The received data from the API: ", data.body);
+//         res.render('track', { tracks })
+//     })
+//     .catch(err => {
+//         console.log("The error while searching artists occurred: ", err);
+//     })
+//     }); 
 
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
