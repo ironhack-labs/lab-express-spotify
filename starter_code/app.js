@@ -1,7 +1,8 @@
-const express = require('express');
-const hbs = require('hbs');
+const express = require('./node_modules/express');
+const hbs = require('./node_modules/hbs/lib/hbs');
 
 // require spotify-web-api-node package here:
+const SpotifyWebApi = require('./node_modules/spotify-web-api-node/src/server');
 
 
 
@@ -13,13 +14,37 @@ app.use(express.static(__dirname + '/public'));
 
 
 // setting the spotify-api goes here:
+// Remember to insert your credentials here
+const clientId = '9d95380e468b4001a15050c906d3d90d',
+    clientSecret = '566268d5a8ff433ea54f27df7f4fb44e';
 
+const spotifyApi = new SpotifyWebApi({
+  clientId : clientId,
+  clientSecret : clientSecret
+});
+
+// Retrieve an access token
+spotifyApi.clientCredentialsGrant()
+  .then( data => {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  })
+  .catch(error => {
+    console.log('Something went wrong when retrieving an access token', error);
+  })
 
 
 
 
 
 // the routes go here:
+
+app.get("/", (req, res)=>{
+  res.render("home.hbs");
+});
+
+app.get("/artists", (req, res)=>{
+  res.render("artists.hbs");
+});
 
 
 
