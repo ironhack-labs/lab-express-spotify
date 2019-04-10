@@ -37,6 +37,8 @@ app.get("/", (req, res) => {
   res.render("home.hbs");
 });
 
+
+// to get the artist page when search and click on the button
 app.get("/artists", (req, res) => {
   // return console.log("here", req.query)
   spotifyApi.searchArtists(req.query.artistname)
@@ -53,6 +55,7 @@ app.get("/artists", (req, res) => {
     })
 });
 
+//To get the album page when click on view album button
 app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(albums => {
@@ -65,9 +68,23 @@ app.get('/albums/:artistId', (req, res, next) => {
       console.log("The error while searching albums occurred: ", err);
     })
   // console.log("hey", req.params)
-  // spotifyApi.getArtistAlbums()
 });
 
+
+//To get the tracks page when click on view tracks button
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(tracks => {
+      // res.json(tracks)
+      res.render("tracks.hbs", {
+        tracks
+      });
+    })
+    .catch(err => {
+      console.log("The error while searching tracks occurred: ", err);
+    })
+  // console.log("hey", req.params)
+});
 
 
 
