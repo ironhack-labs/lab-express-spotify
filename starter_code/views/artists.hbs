@@ -1,5 +1,8 @@
 <div>
   {{#each data.body.artists.items}}
+  <div id="artist-container">
+    <img class="artist-image" src="{{this.images.0.url}}">
  <h2 class="artist-name">{{this.name}}</h2>  
+ </div>
  {{/each}}
 </div>
