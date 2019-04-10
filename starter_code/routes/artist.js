@@ -7,11 +7,11 @@ const app = express();
 router.get('/', (req, res, next) => {
 
   spotifyApi.searchArtists(req.query.artist)
-  .then(function(data) {
-    console.log('Search artists by param:');
-  }, function(err) {
-    console.error(err);
-  });
+    .then(data => {
+      console.log(data.body.artists);
+      res.json(data.body.artists)
+    })
+    .catch(next);
 });
 
 
