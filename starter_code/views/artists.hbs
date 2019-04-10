@@ -1,9 +1,11 @@
-<div>
+<div class="artist-container">
   {{#each data.body.artists.items}}
-  <div id="artist-container">
+  <div id="artist" class="artist">
     <img class="artist-image" src="{{this.images.0.url}}">
- <h2 class="artist-name">{{this.name}}</h2>  
- <button id="albums-btn"><a href="/albums/{{this.id}}">View Albums</a></button>
- </div>
- {{/each}}
+    <div class="info-container">
+      <h2 class="artist-name">{{this.name}}</h2>  
+      <button id="albums-btn"><a href="/albums/{{this.id}}">View Albums</a></button>
+    </div>
+  </div>
+  {{/each}}
 </div>

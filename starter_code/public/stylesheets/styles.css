@@ -36,7 +36,6 @@
   color: white;
   background-color: #FF6666;
   border: 1px solid #FF6666;
-
   padding: .5rem .75rem;
   margin-top: 10px;
 }
@@ -50,4 +49,44 @@
 #artist-name {
   padding: .5rem .75rem;
   border-radius: .25rem;
+}
+
+.artist-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* margin: 0 15px 15px 0; */
+}
+
+.artist {
+  flex: 0 0 33.33%;
+  max-width: 33%;
+  margin: 0 0 10px 0;
+  padding: 0;
+  background-color: #4D4D4D;
+}
+
+.artist-image {
+  width: 100%;
+  margin: 0;
+}
+
+.info-container {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 10px 40px;
+}
+
+#albums-btn {
+  color: white;
+  background-color: #FF6666;
+  border: 1px solid #FF6666;
+  border-radius: .25rem;
+  padding: 2px;
+}
+
+#albums-btn a {
+  color: white;
+  text-decoration: none;
 }
