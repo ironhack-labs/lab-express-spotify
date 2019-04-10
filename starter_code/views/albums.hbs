@@ -1,0 +1,13 @@
+{{> head}}
+
+<body>
+  <div class="album-card">
+    {{#albums}}
+    <img src="{{this.images.2.url}}" alt="{{this.name}}">
+    <ul>
+      <li> {{this.name}}</li>
+    </ul>
+    <button><a href="/tracks/{{this.id}}">View Tracks </a></button>
+    {{/albums}}
+  </div>
+</body>

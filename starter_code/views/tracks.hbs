@@ -1,0 +1,15 @@
+{{> head}}
+
+<body>
+  <div class="album-card">
+    <table>
+      <th>Title</th>
+      <th>Listen</th>
+      {{#tracks}}
+      <tr> {{this.name}} </tr>
+      <br>
+      <audio src="{{this.preview_url}}"></audio>
+    </table>
+    {{/tracks}}
+  </div>
+</body>
