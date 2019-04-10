@@ -53,6 +53,21 @@ app.get("/artists", (req, res) => {
     })
 });
 
+app.get('/albums/:artistId', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+    .then(albums => {
+      // res.json(albums)
+      res.render("albums.hbs", {
+        albums
+      });
+    })
+    .catch(err => {
+      console.log("The error while searching albums occurred: ", err);
+    })
+  // console.log("hey", req.params)
+  // spotifyApi.getArtistAlbums()
+});
+
 
 
 
