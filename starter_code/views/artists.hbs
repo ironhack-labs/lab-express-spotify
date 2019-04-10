@@ -1,3 +1,5 @@
 <div id="artists-container">
-	hello
+	{{#each artists}}
+		{{> artistPartials this}}
+	{{/each}}
 </div>
