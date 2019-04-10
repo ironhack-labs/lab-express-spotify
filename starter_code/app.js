@@ -3,7 +3,8 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node')
 const path = require('path');
 
-const indexRouter= require ('./routes/index.routes');
+const indexRouter= require ('./routes/index');
+const artistRouter= require ('./routes/artist');
 
 // require spotify-web-api-node package here:
 
@@ -41,6 +42,7 @@ spotifyApi.clientCredentialsGrant()
 // the routes go here:
 
 app.use('/', indexRouter);
+app.use('/artist', artistRouter);
 
 
 
