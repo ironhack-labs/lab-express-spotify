@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+  line-height: 1.15;
+  font-size: 1rem;
+}
+
+.home-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+
+.wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+#artist-search {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+#search-btn {
+  color: white;
+  background-color: #FF6666;
+  border: 1px solid #FF6666;
+
+  padding: .5rem .75rem;
+  margin-top: 10px;
+}
+
+#search-btn:hover {
+  color: #FF6666;
+  background-color: white;
+  border: 1px solid #FF6666;
+}
+
+#artist-name {
+  padding: .5rem .75rem;
+  border-radius: .25rem;
+}
