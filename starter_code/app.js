@@ -53,10 +53,27 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(data => {
+      // res.json(data);
       // console.log("The received data from the API: ", data.body);
       let albums = data.body.items;
-      console.log(albums);
+      // console.log(albums);
       res.render("albums", { albums });
+    })
+    .catch(err => {
+      console.log("The error while searching artists occurred: ", err);
+    });
+});
+
+app.get("/tracks/album/:idAlbum", (req, res, next) => {
+  // return console.log(req.params);
+  spotifyApi
+    .getAlbumTracks(req.params.idAlbum)
+    .then(data => {
+      // res.json(data);
+      // console.log("The received data from the API: ", data.body);
+      let tracks = data.body.items;
+      console.log("hey", tracks);
+      res.render("tracks", { tracks });
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
@@ -66,32 +83,3 @@ app.get("/albums/:artistId", (req, res, next) => {
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
-
-// { artists:
-//    { href: 'https://api.spotify.com/v1/search?query=the+beatles&type=artist&offset=0&limit=20',
-//      items: [ [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object],
-//         [Object] ],
-//      limit: 20,
-//      next:
-//       'https://api.spotify.com/v1/search?query=the+beatles&type=artist&offset=20&limit=20',
-//      offset: 0,
-//      previous: null,
-//      total: 41 } }
