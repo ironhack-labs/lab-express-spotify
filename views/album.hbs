@@ -1,0 +1,9 @@
+<div class="album-page">
+    {{#albums}}
+    <img class="album-image" src="{{this.images.1.url}}" alt="albumpic"></img>
+    <p>{{this.name}}</p>
+    <button class="trackView">
+        <a href="/track/{{this.id}}">View Sound Track!</a>
+    </button>
+    {{/albums}}
+</div>

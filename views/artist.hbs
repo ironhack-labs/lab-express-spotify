@@ -1,0 +1,11 @@
+<div class="artist-page">
+    {{#each spotifyList}}
+    <img class="artist-image" src="{{this.images.1.url}}" alt="artitspic"></img>
+    <p class="artist-name">{{this.name}}</p>
+    <button class="albumView" name="album">
+        <a href="/album/{{this.id}}">View albums!</a>
+    </button>
+    {{!-- <p>szhbszjbzjshb</p> --}}
+    {{!-- <a class="album-list" href="{{this.artist.name}}"></a> --}}
+    {{/each}}
+</div>
