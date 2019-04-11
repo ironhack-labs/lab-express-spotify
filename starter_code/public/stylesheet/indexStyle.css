@@ -1,27 +1,47 @@
 .home-container {
     background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
     display:flex;
-    flex-direction: column;
-    align-items: center;
     background-size: 100% 100%;
     background-repeat: no-repeat;
     height: 100vh;
+    justify-content: center;
+    align-items: center;
 }
 
 .form-wrapper{
     background-color: rgba(255, 255, 255, 0.6);
-    width: 750px;
+    width: 450px;
     height: 200px;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 5px;
+   
+    
+  
+    
    
 }
 
 
 #imput-index{
-    width: 400px;
+    width: 300px;
     height: 40px;
-    border-radius: 5px;
     text-align: center;
+    display: block;
+
+    
     
    
 
+}
+.btn-index{
+    width: 150px;
+    height: 40px;
+    background-color: hsl(0, 50%, 50%);
+    color:white;
+    border-radius:5px;
+    margin-top:10px;
+    margin-left:70px;
 }
