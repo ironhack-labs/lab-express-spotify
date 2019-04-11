@@ -1,5 +1,6 @@
 const express = require('express');
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -10,6 +11,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({extended: true}));
 
 
 // setting the spotify-api goes here:
@@ -39,8 +41,8 @@ app.get("/", (req, res) =>{
   res.render("index");
 });
 
-app.get("/artists", (req, res) =>{
-    var data = {name : req.query.name}
+app.post("/artists", (req, res) =>{
+    var data = {name : req.body.name}
     spotifyApi.searchArtists(data.name)
     .then(data => {
 
@@ -54,12 +56,26 @@ app.get("/artists", (req, res) =>{
     
   });
 
-  app.get('/albums/:id', (req, res, next) => {
+  app.get('/artists/:id', (req, res, next) => {
     console.log(req.params.id)
     spotifyApi.getArtistAlbums(req.params.id)
         .then((data) => 
         {
+          data.artistId = req.params.id;
           res.render("albums",data);
+             //res.json(data)
+        })
+        .catch((err) =>
+        {
+            console.log("error", err)
+        })
+  });
+
+  app.get('/albums/:albumid', (req, res, next) => {
+    spotifyApi.getAlbumTracks(req.params.albumid)
+        .then((data) => 
+        {
+          res.render("tracks",data);
             // res.json(data)
         })
         .catch((err) =>
