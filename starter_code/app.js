@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require("express");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
@@ -10,8 +12,8 @@ app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
-const clientId = "cd3c2166a5fa422aa2c51ba6d1405c4f",
-  clientSecret = "d8a9ab6f6aa947cd84425a429e770eee";
+const clientId = process.env.CLIENTID,
+  clientSecret = process.env.CLIENTSECRET
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
