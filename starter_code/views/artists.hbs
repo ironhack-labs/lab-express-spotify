@@ -1,3 +1,9 @@
-<h1>
-    {{name}}
-</h1>
+{{#each body.artists.items}}
+     <img src="{{images.2.url}}"/>   
+    <h2>
+        {{name}}
+    </h2>
+    <button>
+        Views Albums
+    </button>
+{{/each}}
