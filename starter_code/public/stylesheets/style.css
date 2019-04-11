@@ -1,0 +1,57 @@
+/* https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg */
+
+*{
+    margin: 0; 
+    padding: 0;
+}
+
+.container-home {
+    height: 100vh;
+    background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;   
+}
+
+.form-input {
+    background-color: rgba(255, 255, 255, 0.5); 
+    width: 50vw;
+    height: 30vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-input form {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    align-items: center;
+}
+
+.form-input input {
+    padding: 10px 0 10px 10px;
+    border-radius:5px;
+    border: 0; 
+    width: 100%;
+    margin-bottom:10px; 
+    font-size:1rem; 
+}
+
+.form-input button {
+    border:0; 
+    background-color: rgba(255, 0,0, 0.5);
+    padding: 10px ; 
+    color: #ffffff;
+    cursor: pointer;
+    font-size:1rem; 
+    transition: background 0.2s ease;
+} 
+
+.form-input button:hover{
+    background-color: rgba(255, 255,255, 0.5);
+    color: #000000;
+}
