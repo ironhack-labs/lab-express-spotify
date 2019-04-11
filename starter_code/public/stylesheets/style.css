@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body {
+    font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+.home_container {
+    display: flex;
+    background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form_group {
+    margin-top: 300px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 30vw;
+    height: 20vh;
+}
+
+.field {
+    display: block;
+    width: 15vw;
+    height: 4vh;
+    background-color: white;
+}
+
+.btn {
+    background-color: #ff6666;
+    color: white;
+    /* width: 10vw; */
+    height: 4vh;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 15px;
+}
