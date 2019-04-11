@@ -1,0 +1,62 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+div {
+  outline: 1px solid silver;
+}
+
+
+body { 
+  /* background: url(../images/my-paco-candela.jpg) no-repeat center center fixed;  */
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+/* .formcontainer{
+  width:700px;
+  height:250px;
+  margin:0 auto;
+  background:#f7f7f7;
+
+  position:absolute;
+  left:50%;
+  top:50%;
+
+  
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  opacity:0.5;
+} */
+
+.formcontainer{
+  width: 50%;
+  height: 50%;
+  
+  position: fixed;
+  top: 0; left: 0; bottom: 0; right: 0;
+  z-index: 999;    
+  margin: auto;
+  border:1px transparent;
+  background-color:#f7f7f7;
+  padding : 50px;  
+  opacity:0.5;
+
+  
+}
+
+#searchform{
+  display: inline-block;
+}
+
+.artistlist{
+  background-color: white ;
+}

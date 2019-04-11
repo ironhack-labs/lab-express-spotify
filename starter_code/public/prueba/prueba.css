@@ -1,0 +1,11 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 10px;
+}
+
+.indexback{
+  background-image: url(../images/my-paco-candela.jpg);
+}
