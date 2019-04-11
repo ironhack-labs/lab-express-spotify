@@ -12,3 +12,23 @@
     width: 600px;
     height: 200px;
 }
+*{
+    box-sizing: border-box;
+}
+html{
+    font-size: 62.5%;
+    /* margin: 0;
+    padding: 0; */
+}
+
+body{
+    font-size: 1.6rem;
+}
+.btn{
+    background-color: hsl(0, 50%, 50%);
+    text-decoration: none;
+    padding: 1rem .5rem;
+    color: #FAFAFA;
+    border-radius: .5rem;
+    font-weight: bold;
+}

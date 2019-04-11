@@ -1,0 +1,29 @@
+.artists-list{
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.artist{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #666;
+  color: #FAFAFA;
+  padding-bottom: 1rem;
+  margin: 2rem 1rem;
+}
+
+.artist img{
+  width: 25rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.artist h2{
+  margin: 0;
+  padding: .5rem;
+  font-size: 1.8rem;
+}
