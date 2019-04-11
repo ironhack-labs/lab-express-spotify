@@ -54,11 +54,13 @@ app.get("/artists", (req, res) =>{
     
   });
 
-  app.get('/albums/:artistId', (req, res, next) => {
-    spotifyApi.getArtistAlbums(req.param.id)
+  app.get('/albums/:id', (req, res, next) => {
+    console.log(req.params.id)
+    spotifyApi.getArtistAlbums(req.params.id)
         .then((data) => 
         {
-            res.json(data)
+          res.render("album",data);
+            // res.json(data)
         })
         .catch((err) =>
         {
