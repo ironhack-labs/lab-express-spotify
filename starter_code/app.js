@@ -35,9 +35,8 @@ spotifyApi.clientCredentialsGrant()
 
 
 // the routes go here:
-app.get("/", (req, res) =>
-{
-    res.render("index")
+app.get("/", (req, res) =>{
+  res.render("index");
 });
 
 
