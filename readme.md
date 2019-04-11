@@ -156,7 +156,7 @@ In order to display the found artists information, create `artists.hbs` file ins
 On the `artists.hbs` page we created the `View albums` button/link and the users should be taken to *some other page* after clicking on it and there be able to see all the albums of that particular artist. **Hint**: the URL should include artist's `id` 🤓 and should change dynamically.
 
 ```html
-<a href="/albums/someAbumsIdGoesHere">View Albums</a>
+<a href="/albums/someArtistIdGoesHere">View Albums</a>
 ```
 So let's create a new page - `albums.hbs` where all the results will be displayed. Make sure you display the name and the cover of each album and add a button/link to see the tracks (next iteration). 
 
