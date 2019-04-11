@@ -59,7 +59,7 @@ app.get("/artists", (req, res) =>{
     spotifyApi.getArtistAlbums(req.params.id)
         .then((data) => 
         {
-          res.render("album",data);
+          res.render("albums",data);
             // res.json(data)
         })
         .catch((err) =>
