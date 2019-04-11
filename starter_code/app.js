@@ -76,7 +76,7 @@ app.post("/artists", (req, res) =>{
         .then((data) => 
         {
           res.render("tracks",data);
-            // res.json(data)
+            //  res.json(data)
         })
         .catch((err) =>
         {
