@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.fondo{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("https://images.unsplash.com/photo-1470229722913-7c0e2dbbafd3?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1650&q=80");
+}
+.blanco{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    height: 20%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.blanco form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.blanco form button{
+    color: white;
+    padding: 10px;
+    padding: 10px;
+    margin-top: 20px;
+    background-color: brown;
+}
+.blanco form input{
+    width: 200%;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.tarjeta img {
+    width: 150px;
+    height: 150px;
+}
+.tarjeta{
+    width: 33%;
+}
+.tarjeta p, .tarjeta a{
+    padding: 10px;
+}
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+}

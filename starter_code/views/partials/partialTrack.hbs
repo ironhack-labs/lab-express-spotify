@@ -1,0 +1,13 @@
+{{#each this}}
+<div class="tarjeta">
+    <p>"{{this.track_number}}</p>
+    <p>{{this.name}}</p>
+    <audio
+        controls
+        src={{this.preview_url}}>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+    {{!-- <a href="/tracks/{{this.id}}">More info about {{this.name}} ❤</a> --}}
+</div>
+{{/each }}
