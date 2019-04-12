@@ -1,12 +1,12 @@
 <div class="d-flex flex-wrap justify-content-between pl-2 pr-2">
-  {{#each items as |artist|}}
+  {{#each items as |album|}}
   <div class="card ml-2 mr-2 mt-2 mb-2" style="width: 18rem;">
-    <img src={{artist.images.[0].url}} class="card-img-top" alt={{artist.name}}>
+    <img src={{album.images.[0].url}} class="card-img-top" alt={{album.name}}>
     <div class="card-body text-center">
-      <h5 class="card-title">{{artist.name}}</h5>
-      <form action="/albums/{{artist.id}}">
+      <h5 class="card-title">{{album.name}}</h5>
+      <form action="/{{album.id}}/tracks">
             <button type="submit" class="btn btn-danger btn-sm text-white mr-3">
-              View Album
+              View Tracks
             </button>
           </form>
       {{!-- <a href="/albums/{{artist.id}}">View Album</a> --}}
