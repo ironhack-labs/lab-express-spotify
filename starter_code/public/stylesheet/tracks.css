@@ -1,0 +1,35 @@
+.table-heading{
+  padding: 2rem 1.5rem;
+  background-color: #333;
+  display: flex;
+}
+
+.table-column{
+  color: #FAFAFA;
+  flex-basis: 25%;
+  font-size: 2.4rem;
+}
+
+.table-column:first-child{
+  flex-basis: 75%;
+}
+
+.track{
+  background-color: #ddd3;
+  margin-bottom: .2rem;
+  display: flex;
+  flex-basis: 25%;
+  align-items: center;
+  padding: 0 1rem;
+  justify-content: space-between;
+  color: #333;
+  font-weight: bold;
+}
+
+.track:first-child{
+  flex-basis: 75%;
+}
+
+.track audio{
+  border-radius: .5rem;
+}

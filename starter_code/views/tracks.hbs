@@ -1,13 +1,22 @@
-{{#each this.body.items}}
-    <div>
-        <div>
-            {{name}}
-        </div>
-        <div>
-            <audio src="{{preview_url}}" controls>
-                
-            </audio>
-        </div>
+<div class="table-heading">
+    <div class="table-column">
+        Title
     </div>
-
-{{/each}}
+    <div class="table-column">
+        Listen
+    </div>
+</div>
+<div class="tracks-list">
+    {{#each this.body.items}}
+        <div class="track">
+            <div>
+                {{name}}
+            </div>
+            <div>
+                <audio src="{{preview_url}}" controls>
+                    
+                </audio>
+            </div>
+        </div>
+    {{/each}}
+</div>
