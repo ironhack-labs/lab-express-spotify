@@ -2,18 +2,9 @@ const express = require('express');
 const router = express.Router();
 const spotifyApi= require('../config/spoti.config')
 const app = express();
- 
+const artist= require ('../controllers/artist.controller')
 
-router.get('/', (req, res, next) => {
-
-  spotifyApi.searchArtists(req.query.artist)
-    .then(data => {
-      console.log(data.body.artists);
-      res.json(data.body.artists)
-    })
-    .catch(next);
-});
-
+router.get('/', artist);
 
 
 
