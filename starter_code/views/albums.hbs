@@ -1,0 +1,9 @@
+<div>
+<h1>Albums for {{ albumData.0.artists.0.name }}</h1>
+</div>
+<br>
+<div>
+  {{#each albumData }}
+    {{> albumspartial}}
+  {{/each}}
+</div>

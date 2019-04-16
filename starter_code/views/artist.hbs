@@ -1,0 +1,30 @@
+
+{{#each artists}}
+  {{> artistpartial}}
+{{/each}}
+
+
+
+{{!-- {{#each artists as |artist|}}
+  <li>
+    <img src="{{ artist.images.1.url }}" alt="{{artist.name}}">
+    <h2>{{artist.name}}</h2>
+    <button><a href="{{artist.id}}">View Albums</a></button> 
+  </li>
+<br>
+{{/each}} --}}
+{{!-- {{#each artists as |artist|}}
+  <li>
+    {{#each artist.images as | image |}}
+    <li><img src="{{ image.url }}" alt="{{artist.name}}"></li>
+    {{/each}}<br> ,
+    <h2>{{artist.name}}</h2><br> 
+    <button><a href="{{artist.id}}">View Albums</a></button> 
+  </li>
+<br>
+{{/each}} --}}
+
+
+{{!-- 
+url del ARTISTA
+https://open.spotify.com/artist/2hazSY4Ef3aB9ATXW7F5w3 --}}

@@ -1,0 +1,10 @@
+<div>
+<h1>{{ tracksData.0.artists.0.name }}</h1>
+<h2>{{ albumData.name}}</h2>
+</div>
+<br>
+<div>
+  {{#each tracksData }}
+    {{> trackspartial }}
+  {{/each}}
+</div>
