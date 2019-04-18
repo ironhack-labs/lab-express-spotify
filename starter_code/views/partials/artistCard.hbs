@@ -1,0 +1,11 @@
+{{#with this}}
+<article class="card">
+  {{#if images.0.url}}
+  <img src="{{images.0.url}}" alt="{{name}}">
+  {{else}}
+  <img src="http://images.onlinelabels.com/images/clip-art/BenBois/BenBois_Vinyl_records_thumb.png" alt="{{name}}">
+  {{/if}}
+  <h2>{{name}}</h2>
+  <a href="/albums/{{id}}">See Albums</a>
+</article>
+{{/with}}

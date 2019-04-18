@@ -1,0 +1,88 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.cover {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('/hero.jpg');
+  background-size: cover;
+  background-position-y: center;
+}
+
+.cover input {
+  border: 3px solid #f86563;
+  width: 55vw;
+  font-size: 2em;
+}
+
+.cover button {
+  border: 3px solid #c73634;
+  background: #f86563;
+  font-size: 2em;
+  padding: 0 10px;
+  color: white;
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  margin: 50px 20px;
+}
+
+.card {
+  width: 20vw;
+  background-color: #4e4e4e;
+  margin-bottom: 25px;
+  box-shadow: 1px 1px 10px black;
+  transition: all 0.2s ease-in;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card img {
+  width: 100%;
+}
+
+.card h2 {
+  color: #ffffff;
+  font-size: 1.2em;
+}
+
+.card a {
+  display: inline-block;
+  color: #ffffff;
+  background-color: #f86563;
+  text-decoration: none;
+  padding: 6px 10px;
+  font-weight: bold;
+  border: 1px solid black;
+  border-radius: 7px;
+}
+
+.tracks {
+  font-size: 1.8em;
+  width: 90vw;
+  text-align: center;
+  vertical-align: middle;
+  border-collapse: collapse;
+}
+
+.tracks th {
+  background: #f86563;
+  color: #ffffff;
+  border: 2px solid #ffffff;
+}
+
+.tracks td {
+  border: 2px solid #f86563;
+}

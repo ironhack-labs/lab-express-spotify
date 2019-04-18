@@ -1,26 +1,25 @@
 const express = require('express');
+const bodyParser = require('body-parser');
 const hbs = require('hbs');
 
-// require spotify-web-api-node package here:
+const routes = require('./routes');
 
+// config
+const port = 3000;
 
-
+// declarations
 const app = express();
 
-app.set('view engine', 'hbs');
+// middlewares
+hbs.registerPartials(__dirname + '/views/partials');
 app.set('views', __dirname + '/views');
+app.set('view engine', 'hbs');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
+// routes
+app.use('/', routes);
 
-// setting the spotify-api goes here:
-
-
-
-
-
-
-// the routes go here:
-
-
-
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+app.listen(port, () =>
+  console.log(`My Spotify project running on port ${port} 🎧 🥁 🎸 🔊`)
+);

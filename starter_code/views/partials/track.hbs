@@ -1,0 +1,12 @@
+{{#with this}}
+<tr>
+  <td>{{name}}</td>
+  <td>
+    {{#if preview_url}}
+    <audio src="{{preview_url}}" controls></audio>
+    {{else}}
+    Not available
+    {{/if}}
+  </td>
+</tr>
+{{/with}}
