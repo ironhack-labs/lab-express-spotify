@@ -1,9 +1,13 @@
 
 <div class="cards-container">
 
-{{#each artists}}
+{{#each artists as |artist|}}
 
-{{> artistsPartials}}
+    <h2>{{artist.name}}</h2>
+
+    <img src='{{artist.images.[0].url}}' alt='{{artist.name}}'width='200'>
+
+    <button type="button" class="btn btn-danger" href="/albums/{{artist.id}}">View Albums</button>
 
 {{/each}}
 
