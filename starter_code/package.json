@@ -1,0 +1,23 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "pair lab spotify",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "pair"
+  ],
+  "author": "deredhuzent",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "path": "^0.12.7",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

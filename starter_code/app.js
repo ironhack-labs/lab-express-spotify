@@ -1,26 +1,20 @@
 const express = require('express');
 const hbs = require('hbs');
+const path = require('path');
 
-// require spotify-web-api-node package here:
-
-
-
+//definitions
 const app = express();
 
+//middlewares
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
-
-
-// setting the spotify-api goes here:
+app.set('views',`${__dirname}/views`);
+app.use(express.static(path.join(__dirname, '/public')));
 
 
 
 
+//rutas
+app.use('/', require('./routes'))
 
-
-// the routes go here:
-
-
-
+//port
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
