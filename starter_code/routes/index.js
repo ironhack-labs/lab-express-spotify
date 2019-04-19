@@ -29,8 +29,8 @@ router.get('/artists', (req, res) => {
     spotifyApi.searchArtists(req.query.artist)
     .then(data => {
         console.log("The received data from the API: ", data.body);
-        //res.send(data)
-        res.render('artists', {data.body.artists.items})
+        res.send(data)
+        //res.render('artists', {data.body.artist.items})
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
