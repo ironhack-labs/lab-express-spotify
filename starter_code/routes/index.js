@@ -20,17 +20,23 @@ spotifyApi.clientCredentialsGrant()
   })
 
 
+///////////////////////////////////
+//ROUTES:
+
 //home
 router.get('/', (req, res) => {
     res.render('index')
 })
 
-//artists route
+//artists
 router.get('/artists', (req, res) => {
-    spotifyApi.searchArtists(req.query.artist)
+  const {artist} = req.body
+
+    spotifyApi.searchArtists(artist)
+
     .then(data => {
       const artists = data.body.artists.items
-        //res.send(data)
+       //res.send(data)
         res.render('artists', {artists})
     })
     .catch(err => {
@@ -38,7 +44,36 @@ router.get('/artists', (req, res) => {
     })
   });
 
+  //albums
+router.get('(albums/:id', (req, res) => {
+    const {id} = req.params
 
+    spotifyApi.searchArtistAlbums(id)
 
+    .then(data => {
+      const albums = data.body.items
+       //res.send(data)
+      res.render('albums', {albums})
+    })
+    .catch(err => {
+      console.log("The error while searching albums occurred: ", err);
+    })
+})
+
+//tracks
+router.get('/tracks:id', (req, res) => {
+  const {id} = req.params
+
+  spotifyApi.getAlbumTracks(id)
+
+  .then(data => {
+    const tracks = data.body.itemes
+    //res.send(data)
+    res.render('tracks', {tracks})
+  })
+  .catch(err => {
+    console.log("The error while searching tracks occurred: ", err);
+  })
+})
 
 module.exports = router
