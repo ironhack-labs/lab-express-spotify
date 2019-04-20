@@ -1,7 +1,10 @@
-<ul>
-    {{#each items as |artist|}}
-      <li>{{artist.name}}</li>
-      <img width="100" src={{artist.images.[0].url}}>
-      <a href="/albums/{{artist.id}}">View albums</a>  
-    {{/each}}
-</ul>
+{{#each items as |artist|}}
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src={{artist.images.[0].url}} alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{artist.name}}</h5>
+          <a href="/albums/{{artist.id}}" class="btn btn-primary">View albums</a>
+       </div>
+    </div>
+{{/each}}
+

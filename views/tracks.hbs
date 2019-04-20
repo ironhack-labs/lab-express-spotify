@@ -1,6 +1,8 @@
-<ul>
-    {{#each items as |track|}}
-      <li>{{track.name}}</li>
-      <audio src={{track.preview_url}} controls></audio>
-    {{/each}}
-</ul>
+ {{#each items as |track|}}
+    <div class="card" style="width: 30rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{track.name}}</h5>
+          <audio src={{track.preview_url}} controls></audio>
+       </div>
+    </div>
+{{/each}}

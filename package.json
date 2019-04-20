@@ -21,6 +21,8 @@
   "homepage": "https://github.com/VictoriaPl/lab-express-spotify#readme",
   "dependencies": {
     "body-parser": "^1.18.3",
+    "boostrap": "^2.0.0",
+    "bootstrap": "^4.3.1",
     "express": "^4.16.4",
     "hbs": "^4.0.4",
     "prettyjson": "^1.2.1",

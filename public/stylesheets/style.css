@@ -1,0 +1,28 @@
+.full {
+  background: url('https://images.ecosia.org/7qRhyOOkRD8ZJPgBXeZzgqj0_nw=/0x390/smart/http%3A%2F%2Fwww.freejpg.com.ar%2Fasset%2F900%2F2d%2F2da0%2FF100008044.jpg') no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  background-size: cover;
+  -o-background-size: cover;
+  height:100vw;
+}
+
+.artistName {
+  position: absolute;
+  margin-left: 30%;
+  margin-top: 20%; 
+  padding-top: 5px;
+  padding-left: 5px;
+  padding-right: 300px;
+  border: none;
+}
+
+.artistButton {
+  position: absolute;
+  margin-left: 40%;
+  margin-top: 23%;
+  background-color: #d34e25;
+  color: white;
+  padding: 8px 15px;
+  border: #d34e25;
+}
