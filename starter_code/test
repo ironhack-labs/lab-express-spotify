@@ -1,0 +1,11 @@
+[ { external_urls:
+     { spotify: 'https://open.spotify.com/artist/2zdltFpDvvbjQSW1AbhmKl' },
+    followers: { href: null, total: 15 },
+    genres: [],
+    href: 'https://api.spotify.com/v1/artists/2zdltFpDvvbjQSW1AbhmKl',
+    id: '2zdltFpDvvbjQSW1AbhmKl',
+    images: [ [Object], [Object], [Object] ],
+    name: 'Danilo Vidotti',
+    popularity: 0,
+    type: 'artist',
+    uri: 'spotify:artist:2zdltFpDvvbjQSW1AbhmKl' } ]
