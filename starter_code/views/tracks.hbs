@@ -1,0 +1,7 @@
+<h2>{{artist.name}}</h2>
+    {{#each items as |track|}}
+    <article>
+      <h4>{{track.name}}</h4>
+      <audio src={{track.preview_url}} Controls></audio>
+      </article>
+    {{/each}}
