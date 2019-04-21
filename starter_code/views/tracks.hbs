@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row header-row">
+    <span class="col-lg-8">Title</span>
+    <span class="col-lg-4">Listen</span>
+  </div> 
+  <div class="row track-item containerTracks"></div>   
+    {{#each search.items}}
+       {{> tracks_partials this}}       
+    {{/each}}   
+  </div>
+    
+</div>
+
