@@ -1,15 +1,17 @@
 <div class="row">
-<table class="col s12 m12 offset-s2 offset-m2 highlight">
+<table class="col s10 m10 offset-s1 offset-m1 white highlight">
   <thead>
     <tr>
       <th>Song</th>
+      <th>Artist</th>
       <th>Listen</th>
     </tr>
   </thead>
   <tbody>
       {{#each items as |track|}}
       <tr>
-        <td>{{track.name}}</td>
+        <td> {{track.name}}</td>
+        <td>{{track.artists.[0].name}}</td>
         <td>
           <audio src="{{track.preview_url}}" controls>
           </audio>
