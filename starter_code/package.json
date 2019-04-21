@@ -1,0 +1,19 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "Felipe, Humberto",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "hbs": "^4.0.4",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}
