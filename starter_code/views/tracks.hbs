@@ -1,0 +1,21 @@
+<div class="row">
+<table class="col s12 m12 offset-s2 offset-m2 highlight">
+  <thead>
+    <tr>
+      <th>Song</th>
+      <th>Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each items as |track|}}
+      <tr>
+        <td>{{track.name}}</td>
+        <td>
+          <audio src="{{track.preview_url}}" controls>
+          </audio>
+        </td>
+      </tr>
+      {{/each}}
+  </tbody>
+</table>
+</div>
