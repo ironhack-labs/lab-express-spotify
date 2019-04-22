@@ -1,5 +1,4 @@
-[ { external_urls:
-     { spotify: 'https://open.spotify.com/artist/2zdltFpDvvbjQSW1AbhmKl' },
+[ { external_urls: { spotify: 'https://open.spotify.com/artist/2zdltFpDvvbjQSW1AbhmKl' },
     followers: { href: null, total: 15 },
     genres: [],
     href: 'https://api.spotify.com/v1/artists/2zdltFpDvvbjQSW1AbhmKl',
@@ -9,3 +8,16 @@
     popularity: 0,
     type: 'artist',
     uri: 'spotify:artist:2zdltFpDvvbjQSW1AbhmKl' } ]
+
+
+    [ { height: 640,
+        url: 'https://i.scdn.co/image/364ce5bbcd49357c881b8ce52782317734f6df05',
+        width: 640 },
+
+       { height: 300,
+         url:'https://i.scdn.co/image/cef5a49ac46d0afb8bbb80c37a0dfe2f2555022b',
+         width: 300 },
+
+       { height: 64,
+         url:'https://i.scdn.co/image/f64f36d8dd32d04f4d6f1ac15d9e471f9dcea64a',
+         width: 64 } ]
