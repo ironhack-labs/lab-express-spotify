@@ -1,0 +1,79 @@
+
+
+body {
+  background-image: linear-gradient(90deg, #C074B2, #8AB5E8);
+}
+
+.holder {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.spotlogo {
+  width: 400px;
+  height: auto;
+}
+
+.logohold {
+  text-align: center;
+  width: 100%;
+}
+
+.formhold {
+  position: relative;
+  bottom: 100px;
+  justify-content: center;
+  width: 100%;
+}
+
+input.transparent-input { 
+  border:none !important
+}
+
+.transparent-input {
+ background-color: rgba(0, 0, 0, 0);
+ border:none;
+ 
+}
+
+input.transparent-input{
+     background-color:rgba(0, 0, 0, 0.2) !important;
+     border:none !important;
+     width: 400px;
+     height: 60px;
+  }
+
+  ::placeholder {
+    color: white !important;
+  }
+
+  .crdimg {
+    height: 300px;
+  }
+
+  .card {
+    margin: 30px;
+    background-color: #272727;
+    color: white;
+    text-align: center;
+  }
+
+  .btn-primary {
+    background-color: #21B955;
+    border-color: #21B955;
+  }
+
+  .btn:hover {
+    background-color: #21B955;
+    border-color: #21B955;
+  }
+
+  .tracklist {
+    justify-content: center;
+  }
+
+  audio {
+    display: flex;
+  }
