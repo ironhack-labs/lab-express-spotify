@@ -42,7 +42,7 @@ app.use(express.static(__dirname + '/public'));
 
 // the routes go here:
 app.get('/', (req, res, next) => {
-  res.render('layout');
+  res.render('index');
 });
 
 
