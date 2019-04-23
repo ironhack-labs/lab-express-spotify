@@ -1,0 +1,23 @@
+<h1 class='center-align'>{{albums.0.artists.0.name}}</h1>
+<div class='container'>
+    <div class="row">
+        {{#each albums}}
+        <div class="col s4 m4">
+            <div class="card">
+                <div class="card-image">
+                    {{#if this.images.0.url}}
+                    <img src={{this.images.0.url}}>
+                    {{else}}
+                    <img src='https://www.apollochorus.org/wp-content/uploads/2018/06/Placeholder-Man-img.jpg'>
+
+                    {{/if}}
+                </div>
+                <p class="center-align flow-text truncate">{{this.name}}</p>
+                <div class="card-action center-align">
+                    <a href="/tracks/{{this.id}}">View Tracks</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

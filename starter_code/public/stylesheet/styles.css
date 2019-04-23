@@ -1,0 +1,33 @@
+.home {
+  margin-top: 20%;
+  color: red;
+}
+
+.bg-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  overflow: hidden;
+}
+.bg-image > img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 110%;
+  filter: brightness(55%) blur(5px) saturate(80%);
+  margin: -9% -1%;
+}
+
+.card-image {
+  height: 45% !important;
+}
+
+#waveform {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+}
+.void {
+  height: 120px;
+}
