@@ -1,0 +1,25 @@
+* {
+  border: 1px solid red;
+  background-image: url("../images/landing.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#searchBox {
+  margin: auto;
+}
+
+#landing {
+  margin: auto;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background: rgba(252, 245, 245, 0.4);
+  height: 300px;
+  width: 400px;
+}
+
+.artist-image {
+  width: 100px;
+}
