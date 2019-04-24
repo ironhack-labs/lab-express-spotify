@@ -1,0 +1,13 @@
+body {
+  background-image: url("../images/landing.jpg");
+  background-size: cover;
+  /* background-repeat: no-repeat; */
+  /* color: white; */
+}
+
+.white-box{
+  background-color: rgba(255, 255, 255, 0.63);
+  width: 300px;
+  height: 150px;
+  text-align: center;
+}

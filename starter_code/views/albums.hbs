@@ -1,0 +1,7 @@
+{{#each items}}
+    <img style="width:100px;" src="{{this.images.[0].url}}" />
+    {{!-- Images not working --}}
+    {{!-- {{this.name}} --}}
+    <a href="/tracks/{{this.id}}">{{this.name}}</a>
+  {{/each}}
+</ul>
