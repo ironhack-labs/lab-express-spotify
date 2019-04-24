@@ -2,13 +2,14 @@
     {{#each data}}
     <div id="box">
         <h2>{{this.name}}</h2>
+        <audio controls>
+            <source src="{{this.preview_url}}">
+        </audio>
         {{!-- {{#each this.images}} --}}
-        <img width="150px" class="artist-img" src={{this.images.[0].url}}>
-        <button onclick="window.location.href='/albums/{{this.id}}'">View albums</button>
         {{!-- {{/each}} --}}
     </div>
     {{/each}}
+
     {{!-- {{data.[0].name}}
     <img src={{data.[0].images.[0].url}}> --}}
-
 </div>

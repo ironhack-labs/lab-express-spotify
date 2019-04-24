@@ -1,10 +1,15 @@
-{{#each data}}
-<img width="150px" class="artist-img" src={{this.images.[0].url}}>
+<div class="artist-container">
+    {{#each data}}
+    <div id="box">
+        <img width="150px" class="artist-img" src={{this.images.[0].url}}>
 
-{{this.name}}
-<br />
+        {{this.name}}
+        <br />
 
+        <button onclick="window.location.href='/albums/tracks/{{this.id}}'">View tracks</button>
 
-<br />
-<br />
-{{/each}}
+        <br />
+        <br />
+    </div>
+    {{/each}}
+</div>
