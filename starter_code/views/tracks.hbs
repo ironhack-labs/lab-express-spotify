@@ -1,0 +1,21 @@
+<div class="container-fluid">
+    <div class="row text-center">
+        <div class="col-sm-6 backg">
+            <h1 class="song-name">Song Name</h1>
+        </div>
+        <div class="col-sm-6 backg">
+            <h1 class="song-name">Audio Clip</h1>
+        </div>
+    </div>
+    {{#each items}}
+    <div class="row text-center">
+        <div class="col-sm-6 text-white">
+            <p>{{this.name}}</p>
+        </div>
+        <div class="col-sm-6">
+            <audio controls="" name="media">
+                <source src="{{this.preview_url}}" type="audio/mpeg"></audio>
+        </div>
+    </div>
+    {{/each}}
+</div>

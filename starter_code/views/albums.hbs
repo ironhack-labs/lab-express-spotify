@@ -1,0 +1,11 @@
+<div class="container-fluid">
+    <div class="row album-container">
+
+        {{#each items}}
+        <div id="album-boxes" class="col-md-4 text-center ">
+            <img class="artist-img" src="{{this.images.0.url}}">
+            <h5 class="artist-name text-white">{{this.name}}</h5>
+            <a class="album-link" href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
+        {{/each}}
+    </div>
