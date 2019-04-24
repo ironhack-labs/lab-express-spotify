@@ -3,34 +3,26 @@
   <head>     
     <meta charset=“utf-8”>     
     <title>Spotify Artists</title>     
-    <link rel= "stylesheet" 
-    href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" 
-    integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
-    crossorigin="anonymous">     <link rel="stylesheet" href="/stylesheets/style.css">   
+   <link rel="stylesheet" href="/stylesheets/style.css">   
     </head>   
-    <body>      
-      <div class=“container”>         
+    <body>   
+       <div class="container">   
+        <div class = "artists">         
         <div class=“row”>           
           {{#each items}}             
           <div class=“col-lg-4 artist-container”>             
             <img src={{this.images.[0].url}} alt=“” class=“artist-img”>             
             <div class=“artist-info-container”>            
                <p>{{this.name}}</p>             
-               <button><a href={{this.external_urls.spotify}}>View Albums</a></button>      
+               <button><a href= "/albums/{{this.id}}">View Albums</a></button>      
                 </div>      
                  </div>         
                  {{/each}}   
                  </div> 
-                 </div>    
+                 </div>   
+                 </div> 
                   </body> 
                   </html>
 
                   {{this.name}} 
 
-<!---{{#each items}}
-  
-  <li>{{name}} {{id}} {{href}}</li>
-   
-{{/each}}
-
-<button><a href="/albums/artist">View Albums</a></button> -->

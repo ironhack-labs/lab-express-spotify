@@ -4,3 +4,21 @@
   background-image: url(../images/spotify-home.png);
 }
 
+.container{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.artists{
+width: 30%;
+display: flex;
+flex-direction: row;
+}
+
+.albums{
+width: 30%;
+display: flex;
+flex-direction: row;
+width: 150px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html> <html>   
+  <head>     
+    <meta charset=“utf-8”>     
+    <title>Artist's Albums</title>     
+    <link rel="stylesheet" href="/stylesheets/style.css">   
+    </head>   
+    <body>      
+      <div class=“container”> 
+        <div class = "albums">        
+        <div class=“row”>    
+
+          {{#each albums}}             
+          <div class=“col-lg-4 artist-container”>             
+            <img src={{this.images.[0].url}} alt=“” class=“albums-img”>             
+            <div class=“albums-info-container”>            
+               <p>{{this.name}}</p>             
+               <button><a href="/tracks/{{this.id}}">View Tracks</a></button>      
+                </div>      
+                 </div>         
+                 {{/each}}   
+                 </div> 
+                 </div>
+                 </div>    
+                  </body> 
+                  </html>
+
+                

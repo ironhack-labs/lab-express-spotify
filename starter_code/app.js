@@ -13,17 +13,20 @@ app.use(express.static(__dirname + '/public'));
 
 
 
+require('dotenv').config() 
 
 // setting the spotify-api goes here:
 
-// Remember to insert your credentials here
-//require('dotenv').configure()
-//console.log()
-
 const spotifyApi = new SpotifyWebApi({
-  clientId : clientId,
-  clientSecret : clientSecret
+  clientId : 'f802c36829c14e638d0f2ec1af178394',
+  clientSecret : process.env.clientSecret
 });
+
+// Remember to insert your credentials here
+
+// console.log(process.env.clientId, process.env.clientSecret)
+
+
 
 // Retrieve an access token
 spotifyApi.clientCredentialsGrant()
@@ -60,21 +63,42 @@ app.get('/search', (req, res, next) => {
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch(err => {
-      console.log("The error while searching artists occurred: ", err);
+      console.log("Something went wrong!", err);
     })
 })
 
 
 //Albums
 
-app.get('/albums/:artistId', (req, res, next) => {
-  spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
-  .then(function(data) {
-    console.log('Artist albums', data.body);
-  }, function(err) {
-    console.error(err);
-  });
+ app.get("/albums/:artistId", (req, res, next) => {
+  let artistId = req.params.artistId;
+  spotifyApi.getArtistAlbums(artistId).then(
+    function(data) {
+      let albums = data.body.items;
+      albums = { ...albums };
+      res.render("albums", { albums });
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
 });
-    
+ 
+
+//Tracks
+
+app.get("/tracks/:albumId", (req, res, next) => {
+  let albumId = req.params.albumId;
+
+  spotifyApi.getAlbumTracks(albumId, { limit: 20, offset: 0 }).then(
+    function(data) {
+      let tracks = data.body.items;
+      res.render("tracks", { tracks });
+    },
+    function(err) {
+      console.log("Something went wrong!", err);
+    }
+  );
+});
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
