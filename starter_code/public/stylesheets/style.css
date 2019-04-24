@@ -1,0 +1,12 @@
+.home-page {
+  display: flex;
+  align-self: center;
+}
+
+.home-page-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  /* background-color: orange; */
+  background-image: url("./images/landing.jpg");
+}
