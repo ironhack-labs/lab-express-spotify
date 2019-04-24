@@ -1,0 +1,41 @@
+body{
+  background-image: url('https://files.slack.com/files-pri/T02CQ4EN4-FJ69WDR47/landing.jpg');
+  background-repeat: no-repeat;
+  background-size:cover;
+  font-family:'Helvetica';
+}
+form{
+  justify-content: center;
+  background: rgba(230, 228, 228, 0.753) ;
+  padding:50px 210px;
+  margin: 280px;
+  margin-left:350px;
+  margin-right:350px;
+}
+input#submit-button{
+  background:rgb(245, 99, 83);
+  color:white;
+  margin: 10px;
+  padding: 8px;
+}
+img{
+  display:flex;
+  justify-content: center;
+  width:300px;
+}
+a.btn.btn-primary{
+  background:rgb(245, 99, 83);
+  color:white;
+  margin: 10px;
+  padding: 8px;
+  outline:rgb(245, 99, 83);
+  border-radius:3px;
+  margin-left:100px;
+}
+li{
+  color:white;
+  list-style-type: none;
+  margin-left:100px;
+  font-size:x-large;
+  margin-top:50px;
+}
