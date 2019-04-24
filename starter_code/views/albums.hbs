@@ -1,10 +1,16 @@
-This is my albums page
+<div class="container">
+    <div class="row artist-container">
+        {{#each items}}
+        <div class="col-sm-4">
+            <image height="350vh" width="100%" src="{{images.0.url}}"></image>
+            <div class="artist">
 
-
-<ul>
-    {{#each items}}
-    <li>{{name}}</li>>
-    <a href="../tracks/{{id}}">view tracks</a>
-    {{/each}}
-
-</ul>
+                <h2>{{name}}</h2>
+                <button class="btn btn-danger btn-album" type="button">
+                    <a href="../tracks/{{id}}">View Tracks</a>
+                </button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,5 +1,16 @@
-{{#each data}}
-<h2>{{this.name}}</h2>
-<image src="{{this.images.0.url}}"></image>
-<button type="button"><a href="/albums/{{this.id}}">View Albums</a></button>
-{{/each}}
+<div class="container">
+    <div class="row artist-container">
+        {{#each data}}
+        <div class="col-sm-4">
+            <image height="350vh" width="100%" src="{{this.images.0.url}}"></image>
+            <div class="artist">
+
+                <h2>{{this.name}}</h2>
+                <button class="btn btn-danger btn-album" type="button">
+                    <a href="/albums/{{this.id}}">View Albums</a>
+                </button>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

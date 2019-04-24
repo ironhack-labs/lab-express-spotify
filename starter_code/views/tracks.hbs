@@ -1,8 +1,25 @@
-<ul>
-    {{#each items}}
-    <li>{{name}}</li>
-    <audio controls>
-        <source src="{{preview_url}}" />
-    </audio>
-    {{/each}}
-</ul>
+<div class="tracks-container">
+    <div class="center">
+
+        <div class="tracks-header">
+            <h2 id="song-title">Title</h2>
+            <div id="listen">
+                <h2>Listen</h2>
+            </div>
+        </div>
+        <div>
+            <ul>
+                <div class="song-container">
+                    {{#each items}}
+                    <div class="song">
+                        <li><b>{{name}}</b></li>
+                        <audio controls>
+                            <source src="{{preview_url}}" />
+                        </audio>
+                    </div>
+                    {{/each}}
+                </div>
+            </ul>
+        </div>
+    </div>
+</div>
