@@ -1,0 +1,9 @@
+{{#each albums}}
+<h1>{{name}}</h1>
+{{#if images.1.url}}
+  <img src={{images.1.url}} />
+  {{else}}
+  <img src='http://s3.amazonaws.com/37assets/svn/765-default-avatar.png' style='width : 300px;'/>
+  {{/if}}
+  <a href='/tracks/{{id}}' >View Tracks</a>
+{{/each}}
