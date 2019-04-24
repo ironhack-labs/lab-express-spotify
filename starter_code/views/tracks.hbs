@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>My First Website</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+  </head>
+  <body>
+
+    <div class="container">
+      <div class="row header-row">
+        <span class="col-lg-8">Track Name</span>
+        <span class="col-lg-4">Play</span>
+      </div>
+    
+    {{#each this.items}}
+
+    
+    <div class="row track-item">
+      <div class="col-lg-8">
+        <p>{{this.name}}</p>
+      </div>
+      <div class="col-lg-4">
+        <audio controls="" name="media"><source src="{{this.preview_url}}" type="audio/mpeg"></audio>
+      </div>
+    </div>
+  {{/each}}
+
+</div>
+  
+
+</body>
+</html>

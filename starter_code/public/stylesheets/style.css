@@ -39,7 +39,7 @@ body {
 .item-footer a {
   color: white;
   margin-top: 8px;
-  background-color: #ff6666;
+  background-color: #16e038;
 }
 
 .view-more {
@@ -68,14 +68,14 @@ body {
   background-color: black;
   border-radius: 0;
   color: white;
-  background-color: #ff6666;
-  border: 1px solid #ff6666;
+  background-color: #16e038;
+  border: 1px solid #16e038;
 }
 
 .home-search:hover, .home-search:active {
-  color: #ff6666;
+  color: #16e038;
   background-color: white;
-  border: 1px solid #ff6666;
+  border: 1px solid #16e038;
 }
 
 .form-wrapper {
@@ -112,7 +112,7 @@ body {
 .artist-info-container a {
   color: #fff;
   font-size: 12px;
-  background-color: #F86967;
+  background-color: #16e038;
   border-radius: 5px;
   padding: 4px 10px;
 }
