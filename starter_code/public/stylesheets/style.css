@@ -1,0 +1,100 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background-image: url(/images/landing.jpg);
+}
+
+.input {
+  margin: 300px;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 25px;
+}
+
+.search {
+  height: 30px;
+  width: 280px;
+  border-radius: 25px;
+  color: purple;
+  font-size: 18px;
+  padding: 5px;
+}
+
+.submit {
+  height: 40px;
+  width: 140px;
+  border-radius: 25px;
+  background-color: black;
+  color: white;
+}
+
+.info {
+  background-color: black;
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  line-height: 30px;
+  border-radius: 25px;
+  color: white;
+  font-weight: bolder;
+  padding: 5px 0 5px 0;
+}
+
+.info > h4 {
+  padding: 15px 0;
+  text-align: center;
+}
+
+.info > a {
+  text-decoration: none;
+  border-radius: 25px;
+  background-color: white;
+  padding: 5px;
+  color: purple;
+  font-weight: bolder;
+}
+
+.artists {
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.container {
+  display: flex;
+
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.title {
+  background-color: white;
+  color: purple;
+  font-size: 34px;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 200px;
+  border-radius: 25px;
+}
+
+.trackContainer {
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 60px;
+  font-size: 25px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 25px;
+  background: black;
+  padding: 20px 60px;
+  align-items: center;
+}
