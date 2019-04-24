@@ -1,7 +1,7 @@
 {{#each items}}
-    <img style="width:100px;" src="{{this.images.[0].url}}" />
-    {{!-- Images not working --}}
-    {{!-- {{this.name}} --}}
-    <a href="/tracks/{{this.id}}">{{this.name}}</a>
-  {{/each}}
+<ul>
+  <img style="width:150px;" src="{{this.images.[0].url}}" />
+  <a href="/tracks/{{this.id}}">{{this.name}}</a>
+  <li></li>
 </ul>
+{{/each}}

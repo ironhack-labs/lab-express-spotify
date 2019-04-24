@@ -1,19 +1,20 @@
 const express = require("express");
 const hbs = require("hbs");
-const path = require("path"); 
+const path = require("path");
 const SpotifyWebApi = require("spotify-web-api-node");
-const bodyParser = require("body-parser"); //HERE------
+const bodyParser = require("body-parser");
 // require spotify-web-api-node package here:
 const app = express();
+require('dotenv').config()
 
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "hbs");
 app.use(express.static(path.join(__dirname, "public")));
-app.use(bodyParser.urlencoded({ extended: true })); //HERE.---------
+app.use(bodyParser.urlencoded({ extended: true })); 
 
 // Remember to insert your credentials here
-const clientId = "539221b5b8ee48aa873c80d3dd391490",
-  clientSecret = "47954c37b9c0452382b3e780c8018ce4";
+const clientId = process.env.clientId
+  clientSecret = process.env.clientSecret
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
@@ -49,8 +50,6 @@ app.get("/artists", (req, res, next) => {
     });
 });
 
-
-
 // Artist Albums
 app.get("/albums/:ID", (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.ID).then(data => {
@@ -64,8 +63,6 @@ app.get("/tracks/:ID", (req, res, next) => {
     res.render("tracks", { items: data.body.items });
   });
 });
-
-
 
 //Port Listener
 app.listen(3000, () =>
