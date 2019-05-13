@@ -1,0 +1,43 @@
+body {
+    background-image: url('/images/pexels-photo-167605.jpeg');
+    background-size: 100% 100%;
+   
+    height: 100vh;
+}
+
+p {
+    margin: 0;
+}
+
+.card-img-top {
+    height: 30vh;
+    
+}
+
+.list-group {
+    margin-bottom: 14px;
+}
+
+.content {
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.margins {
+    margin-top: 20px;
+}
+
+.track-container {
+    background-color: #343a40;
+    color: #fff;
+}
+
+.track-title {
+    display: flex;
+    align-items: center;
+    
+}

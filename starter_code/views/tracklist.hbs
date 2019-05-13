@@ -1,0 +1,14 @@
+<div class="container">
+    {{#each tracks}}
+    <div class="row margins track-container">
+        <div class="col-lg-8 track-title">
+            <p>{{name}}</p>
+        </div>
+        <div class="col-lg-4">
+            <audio controls name="media">
+                <source src="{{preview_url}}" type="audio/mpeg" > 
+            </audio>
+        </div>
+    </div>
+    {{/each}}
+</div>
