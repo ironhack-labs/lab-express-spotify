@@ -2,7 +2,7 @@
     <div class="row margins">
         {{#each artists}}
             <div class="card text-white bg-dark col-12 col-lg-4" style="width: 18rem;">
-                <img src="{{images.0.url}}" class="card-img-top" alt="...">
+                <img src="{{images.0.url}}" onError="this.onerror=null; this.src='https://placeimg.com/350/350/people/grayscale'" class="card-img-top" alt="...">
                 <div class="card-body">
                     <h5 class="card-title">{{name}}</h5>
                     {{!-- <ul class="list-group list-group-flush">
