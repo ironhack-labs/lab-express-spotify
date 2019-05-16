@@ -10,10 +10,13 @@ const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
   clientSecret: clientSecret
 });
+/* const Spotify = require('spotify-web-api-js');
+const s = new Spotify() */
 
 // Retrieve an access token
 spotifyApi.clientCredentialsGrant()
   .then(data => {
+    console.log(data)
     spotifyApi.setAccessToken(data.body['access_token']);
   })
   .catch(error => {
@@ -22,7 +25,6 @@ spotifyApi.clientCredentialsGrant()
 
 
 const app = express();
-
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
@@ -36,6 +38,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 // the routes go here:
+app.get('/', (req, res, next) => res.render('home'))
 
 
 
