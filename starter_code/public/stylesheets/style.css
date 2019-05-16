@@ -1,15 +1,53 @@
 a {
-  display: inline-block;
+    display: inline-block;
 }
 
 img {
-  width: 300px;
+    width: 300px;
 }
 
 .track-header {
-  display: flex;
-  justify-content: space-between;
-  background-color: rgb(17, 17, 17);
-  color: rgb(207, 207, 207);
-  padding: 30px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(17, 17, 17);
+    color: rgb(207, 207, 207);
+    padding: 30px;
+}
+
+.box {
+    margin: 50px 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+.home {
+    background: url(/images/andre-benz-290011-unsplash.jpg) center no-repeat/ cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    width: 700px;
+    height: 300px;
+    background: #ffffff42;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+button {
+    background: #f64c4c;
+    color: white;
+    border: none;
+    width: 40%;
+    height: 50px;
+}
+
+input[type="search"] {
+    width: 80%;
 }
