@@ -22,13 +22,11 @@ spotifyApi.clientCredentialsGrant()
     })
 
 
-
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-
-// setting the spotify-api goes here:
+hbs.registerPartials(__dirname + '/views/partials')
 
 
 
@@ -43,9 +41,9 @@ app.get('/artists', (req, res) => {
     console.log(req.query.artist)
     spotifyApi.searchArtists(req.query.artist)
         .then(data => {
-            console.log("The received data from the API: ", data.body.artists);
+            //console.log("The received data from the API: ", data.body.artists);
             const artists = data.body.artists.items
-            console.log('url imagen', artists[0].images[0].url)
+            //console.log('url imagen', artists[0].images[0].url)
             //console.log(artists)
             res.render('artists', {
                 artists
@@ -55,4 +53,30 @@ app.get('/artists', (req, res) => {
             console.log("The error while searching artists occurred: ", err);
         })
 })
+
+
+app.get('/albums/:id', (req, res) => {
+    //console.log(req.params.id)
+    spotifyApi.getArtistAlbums(req.params.id, {
+            limit: 10
+        })
+        .then(data => {
+            console.log(data.body.items[0].artists)
+            const albums = data.body.items
+            res.render('albums', {
+                albums
+            })
+            /* const albumsIds = data.body.items.map(function (a) {
+                return a.id;
+            });
+            console.log(albumsIds) */
+        })
+    /*         .then( albums=> {
+                return spotifyApi.getAlbums(albums);
+            }) */
+    /* .then(data => {
+        console.log(data.body);
+    }); */
+})
+
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
