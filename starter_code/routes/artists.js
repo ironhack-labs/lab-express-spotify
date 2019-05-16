@@ -36,6 +36,19 @@ router.get('/', (req, res, next) => {
     })
 })
 
+router.get('/albums/:id', (req, res, next) => {
+  console.log(req.params)
+  const id = req.params.id
+  spotifyApi.getArtistAlbums(id)
+    .then(albums => {
+      console.log(albums)
+      res.render('albums', { albums: albums.body.items })
+    })
+    .catch(err => {
+      console.log("The error while searching albums occurred: ", err);
+    })
+})
+
 
 
 
