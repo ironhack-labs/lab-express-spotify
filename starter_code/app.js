@@ -57,10 +57,33 @@ app.get('/artists', (req, res) => {
     })
 })
 app.get('/albums/:id', (req, res, next) => {
-  console.log("El id es", req)
-  // .getArtistAlbums() code goes here
+  // console.log("El id es", req.params)
+  spotifyApi.getArtistAlbums(req.params.id, { limit: 10, offset: 20 })
+    .then(
+      function (data) {
+        let items = data.body.items
+        let artist = req.params.artist
+        console.log('Album information', data.body);
+        // console.log("EL ARTISTA ES", req.params.artist)
+        res.render('albums', { items })
+      },
+      function (err) {
+        console.error(err);
+      }
+    );
 });
-
+app.get('/tracks/:id', (req, res, next) => {
+  console.log(req.params.id)
+  spotifyApi.getAlbumTracks(req.params.id, { limit: 5, offset: 1 })
+    .then(function (data) {
+      console.log(data.body);
+      let items = data.body.items
+      console.log("*******ITEMS", items)
+      res.render('tracks', { items })
+    }, function (err) {
+      console.log('Something went wrong!', err);
+    });
+})
 
 
 
