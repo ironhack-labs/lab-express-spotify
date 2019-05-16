@@ -22,11 +22,11 @@ spotifyApi.clientCredentialsGrant()
   })
 
 router.get('/', (req, res, next) => {
-  console.log(req.query)
+  // console.log(req.query)
   spotifyApi.searchArtists(req.query.name)
     .then(data => {
 
-      console.log("The received data from the API: ", data.body.artists.items);
+      // console.log("The received data from the API: ", data.body.artists.items);
       res.render('artists', { artists: data.body.artists.items })
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
 
@@ -41,14 +41,32 @@ router.get('/albums/:id', (req, res, next) => {
   const id = req.params.id
   spotifyApi.getArtistAlbums(id)
     .then(albums => {
-      console.log(albums)
+      // console.log(albums)
+      // console.log({ albums: albums.body.items })
       res.render('albums', { albums: albums.body.items })
+
     })
     .catch(err => {
       console.log("The error while searching albums occurred: ", err);
     })
 })
 
+
+router.get('/tracks/:id', (req, res, next) => {
+
+  console.log("Entro")
+
+  spotifyApi.getAlbumTracks(req.params.id)
+
+    .then(tracks => {
+/*       console.log("SOY EL BUENOOOOOO", tracks)
+      console.log({ tracks: tracks.body.items })
+ */      res.render('tracks', { tracks: tracks.body.items })
+    })
+    .catch(err => {
+      console.log("The error while searching tracks occurred: ", err);
+    })
+})
 
 
 
