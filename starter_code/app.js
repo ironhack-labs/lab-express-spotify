@@ -66,17 +66,23 @@ app.get('/albums/:id', (req, res) => {
             res.render('albums', {
                 albums
             })
-            /* const albumsIds = data.body.items.map(function (a) {
-                return a.id;
-            });
-            console.log(albumsIds) */
         })
-    /*         .then( albums=> {
-                return spotifyApi.getAlbums(albums);
-            }) */
-    /* .then(data => {
-        console.log(data.body);
-    }); */
+        .catch(err => {
+            console.log("The error while searching artists occurred: ", err);
+        })
+})
+
+app.get('/tracks/:id', (req, res) => {
+    spotifyApi.getAlbumTracks(req.params.id)
+        .then(data => {
+            const tracks = data.body.items
+            res.render('tracks', {
+                tracks
+            })
+        })
+        .catch(err => {
+            console.log("The error while searching artists occurred: ", err);
+        })
 })
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
