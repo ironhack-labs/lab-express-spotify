@@ -1,0 +1,12 @@
+<div>
+  <h2>{{name}}</h2>
+  {{!-- NAME, IMAGE, BUTTON OR LINK --}}
+  <div>
+    {{#if images}}
+    <img src="{{images.1.url}}" alt="">
+    {{else}}
+    <img src="https://www.meme-arsenal.com/memes/5b2cdc7eac6b7ae637f72ee3f3709076.jpg">
+    {{/if}}
+  </div>
+  <a href="/artist/{{id}}">View Albums</a>
+</div>
