@@ -48,8 +48,7 @@ app.post('/artists', (req, res) => {
 
   spotifyApi.searchArtists(artist)
     .then(data => {
-      // console.log('Imagen', data.body.artists.items[0].images[0])
-      // console.log("The received data from the API: ", data.body.artists.items);
+      console.log("The received data from the API: ", data.body.artists.items);
       res.render("artists", { artists: data.body.artists.items })
 
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
@@ -65,9 +64,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 
   spotifyApi.getArtistAlbums(req.params.artistId)
     .then(data => {
-      // console.log(data.body.items[0].images[0].url)
+      // console.log(data.body.items)
       res.render('albums', { albums: data.body.items })
-      // console.log('Artist albums', data);
     })
     .catch(err => {
       console.error(err);
@@ -75,7 +73,18 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 });
 
+app.get('/albums/tracks/:albumId', (req, res, next) => {
 
+  spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(data => {
+      console.log(data.body.items)
+      res.render('tracks', { tracks: data.body.items })
+    })
+    .catch(err => {
+      console.error(err);
+    })
+
+});
 
 
 
