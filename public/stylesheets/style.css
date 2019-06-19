@@ -1,0 +1,90 @@
+:root{
+  --primary-color: #1DB954;
+  --white: #ffffff;
+  --black: #222326;
+}
+
+ html {
+  box-sizing: border-box;
+}
+
+ *, *:before, *:after {
+  box-sizing: inherit;
+}
+
+ body {
+  font-family: "Lucida Grande", Helvetica, Arial, sans-serif;
+  color: var(--black);
+  font-size: 16px;
+  line-height: 147%;
+  margin: 0;
+  padding: 0;
+}
+
+ h1{
+  color: var(--primary-color);
+  text-align: center;
+}
+
+ a {
+  color: var(--primary-color);
+}
+
+ ul, li{
+  margin: 0;
+  padding: 0;
+}
+
+ li{
+  list-style: none;
+}
+
+ .text-truncate {
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+ section, article {
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+
+ .container {
+  margin: 0 auto;
+  max-width: 1024px;
+}
+
+ .search-box{
+  display: flex;
+  justify-content: center;
+}
+
+ .search-input{
+  margin-right: 2rem;
+}
+
+ .btn{
+  color: var(--white);
+  background: var(--primary-color);
+  padding: 0.75rem 3rem;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  border: 1px solid transparent;
+  border-radius: 500px;
+  cursor: pointer;
+}
+
+ .cards{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+ .card{
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 0.75rem;
+}
