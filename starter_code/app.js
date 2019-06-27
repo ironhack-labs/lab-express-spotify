@@ -15,8 +15,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 
 // setting the spotify-api goes here:
-const clientId = process.env.API_CLIENT,
-    clientSecret = process.env.API_SECRET;
+const clientId = process.env.API_CLIENT;
+const clientSecret = process.env.API_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
     clientId: clientId,
@@ -35,7 +35,9 @@ spotifyApi.clientCredentialsGrant()
 
 
 // the routes go here:
-
+app.get('/', (req, res) => {
+    res.render('layout')
+})
 
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
