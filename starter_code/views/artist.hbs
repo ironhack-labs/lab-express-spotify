@@ -1,0 +1,12 @@
+<h1>Artists</h1>
+
+{{#each arrayArtists}}
+<div class="ventana">
+  <img src="{{this.images.0.url}}" alt="">
+  <h3>{{this.name}}</h3>
+ 
+  <a href="/albums/{{this.id}}">View Albums</a>
+
+</div>
+
+{{/each}}
