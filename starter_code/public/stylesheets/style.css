@@ -1,0 +1,6 @@
+.listAlbums .listArtists {
+  display: flex;
+  flex-flow: wrap;
+  width: 200px;
+  height: 200px;
+}
