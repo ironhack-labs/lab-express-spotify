@@ -1,0 +1,15 @@
+<h1>Result for artist "{{search}}"</h1>
+
+<div class="gallery">
+{{#each artists}}
+<div class="card">
+{{#if this.images.[0].url}}
+<img src="{{this.images.[0].url}}" class="card__img">
+{{else}}
+<img src="/images/default.jpeg">
+{{/if}}
+    <h3 class="card__title">{{this.name}}</h3>
+    <a class="button" href="/albums/{{this.id}}">View Albums</a>
+</div>
+{{/each}}
+</div>
