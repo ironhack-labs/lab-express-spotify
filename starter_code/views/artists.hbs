@@ -1,0 +1,16 @@
+{{!-- sacar los datos y luego con un each sacar los datos aquí --}}
+
+{{#each dataToRender}}
+
+{{!-- {{>artistPartial}} --}}
+
+<div>
+
+<img src={{this.images.0.url}}>
+<h3>{{this.name}}</h3>
+<a href="/albums/{{this.id}}" alt="">View Albums</a>
+
+
+</div>
+
+{{/each}}
