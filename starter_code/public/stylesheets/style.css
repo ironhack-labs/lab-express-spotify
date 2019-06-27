@@ -1,0 +1,27 @@
+img {
+    width:200px;
+}
+
+.container {
+    display:flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.artistCard {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.albumCard {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.tracksCard {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
