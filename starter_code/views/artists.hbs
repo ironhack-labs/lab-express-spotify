@@ -1,0 +1,8 @@
+{{!-- display name, image, and button (or link) to show the albums for a particular 
+artist on a new view (for now just create
+ the button/link and we will take care of the rest in the next step) --}}
+
+{{#each items as |artist|}}
+ {{> artistPartial this}}
+{{/each}}
+
