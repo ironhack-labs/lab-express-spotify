@@ -1,4 +1,7 @@
 <div class = "artist">
-  <img src = "{{this.image_url}}" alt = "Artist img" class = "image"/>
+  <img src = "{{this.images.[1].url}}" alt = "Artist img" class = "image"/>
   <h2 class = "name">{{this.name}}</h2>
+  <a href="/albums/{{this.id}}">
+    <button type = "submit">View albums</button>
+  </a>
 </div>
