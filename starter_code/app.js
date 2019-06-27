@@ -1,9 +1,25 @@
+require('dotenv').config()
 const express = require('express');
 const hbs = require('hbs');
+const spotifyWebApi= require ('spotify-web-api-node')
 
 // require spotify-web-api-node package here:
+const clientId = process.env.CLIENT
+const clientSecret = process.env.CLIENTSECRET
+//instancia del API con las credenciales
+const spotifyApi = new spotifyWebApi({
+  clientId,
+  clientSecret 
+});
 
-
+spotifyApi.clientCredentialsGrant()
+  .then( data => {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  })
+  .catch(error => {
+    console.log('Something went wrong when retrieving an access token', error);
+   
+  })
 
 const app = express();
 
