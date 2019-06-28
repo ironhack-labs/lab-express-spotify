@@ -5,11 +5,6 @@
  *
  */
 
-
-
-import {Application, Request, Response} from "express";
-
-
 const express = require('express');
 
 const app = express();
@@ -22,4 +17,4 @@ app.get("/debug", function (req, res) {
 });
 
 const port = 4001;
-app.listen(port, () => console.log(`app  on port ${port}!`));
+app.listen(port, () => console.log(`static server running on port ${port}!`));
