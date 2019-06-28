@@ -1,0 +1,11 @@
+<header>
+  <div class="header-track">
+    <p>Title</p>
+    <p>Listen</p>
+  </div>
+</header>
+{{#each trackList  as |track|}}
+<small>{{track.name}}</small>
+<audio controls>
+  <source src="{{track.preview_url}}"></audio>
+{{/each}}
