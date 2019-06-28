@@ -12,17 +12,32 @@ const spotifyApi = new SpotifyWebApi(clavesSpotify);
 //Paso 1 solicitar token de autoriacion, ponerlo como function proque se puede volver a necesitar
 
 
+// Retrieve an access token
 const solicitarToken = async () => {
 
-   // Retrieve an access token
    return spotifyApi.clientCredentialsGrant()
        .then((data: any) => {
           spotifyApi.setAccessToken(data.body['access_token']);
+       }).catch((error: Error) => {
+          console.log('Error al solicitar token');
+          throw error;
        })
 };
 
-const buscarArtista = async () => {
+const buscarArtista = async (texto: string): Promise<any> => {
 
+   return spotifyApi.searchArtists(texto)
+       .then((data: any) => {
+
+          console.log("datos recibidos del api:", data.body);
+
+          return data.body;
+
+       })
+       .catch((error: Error) => {
+          console.log("The error while searching artists occurred: ", error);
+          throw error;
+       })
 };
 
 export default {
