@@ -22,12 +22,12 @@ function routerBuilder(app: Application) {
    });
 
 
-   app.get("/api/artist-albums/:texto/:pagina", function (req: Request, res: Response) {
+   app.get("/api/artist-albums/:texto/:pagina?", function (req: Request, res: Response) {
 
-      let texto: string = req.params.texto || null;
-      let pagina: string = req.params.pagina || null;
+      let idArtista: string = req.params.texto || null;
+      let pagina: string = req.params.pagina || "1";
 
-      ArtistAlbumsAction.execute(res, texto, pagina);
+      ArtistAlbumsAction.execute(res, idArtista, pagina);
    });
 
 }

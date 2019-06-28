@@ -1,6 +1,7 @@
 "use strict";
 
-const clavesSpotify = require('../../../../../../app/credenciales-spotify.json');
+const clavesSpotify = require('../../../../../app/credenciales-spotify.json');
+//const clavesSpotify = require('../../../../../../app/credenciales-spotify.json');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 //confirmar que se len las claves desde el path
