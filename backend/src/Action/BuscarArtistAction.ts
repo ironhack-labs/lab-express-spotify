@@ -1,15 +1,15 @@
 "use strict";
 
 import {Response} from "express";
-import SpotifiCX from "./PromiseFactory/SpotifiCX";
-import SendRespuestaError from "./Routes/SendResponseError";
+import SendRespuestaError from "../Routes/SendResponseError";
+import SpotifiCX from "../Servicios/SpotifiCX";
+
 
 
 const BuscarArtistAction = {
 
 
    validarParamTexto: function (texto: string): boolean {
-
 
       // existe el parametro
       let isValid = !(texto === undefined || texto.trim() === '' || texto === null);
@@ -33,7 +33,6 @@ const BuscarArtistAction = {
 
       texto = texto.toLowerCase();
 
-
       SpotifiCX.buscarArtista(texto)
           .then((data: any) => {
              const success: boolean = true;
@@ -44,7 +43,6 @@ const BuscarArtistAction = {
              SendRespuestaError(res, error.message);
           })
       ;
-
 
    }
 };

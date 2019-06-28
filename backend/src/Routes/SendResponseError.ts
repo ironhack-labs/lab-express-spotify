@@ -8,4 +8,4 @@ const SendRespuestaError = function (res: Response, msg: string) {
 
 
 export default SendRespuestaError;
-;
+
