@@ -1,0 +1,87 @@
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  overscroll-behavior: none;
+  overflow-x: hidden;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.index-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+}
+
+.form-container {
+  display: inherit;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+}
+
+.form-group {
+  width: 50%;
+  text-align: center;
+} 
+
+.form-input {
+  display: block;
+  width: 100%;
+  padding: .5rem .75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0,0,0,.15);
+  border-radius: .25rem;
+  transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+
+.search-button {
+  margin-top: 10px;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  padding: .5rem .75rem;
+}
+
+.artists-container, .album-container {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+}
+
+.singer {
+  width: 33.3%;
+  text-align: center;
+}
+
+.singer img {
+  width: 100%;
+  height: 400px;
+  object-fit: contain;
+  padding: 40px;
+}
+
+.tracks-container {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 0;
+}
