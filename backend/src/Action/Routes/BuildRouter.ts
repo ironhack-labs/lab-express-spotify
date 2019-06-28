@@ -1,6 +1,6 @@
 import {Application, Request, Response} from "express";
 import HomeAction from "../HomeAction";
-import XArtistAction from "../XArtistAction";
+import BuscarArtistAction from "../BuscarArtistAction";
 
 
 function routerBuilder(app : Application ){
@@ -11,15 +11,13 @@ function routerBuilder(app : Application ){
 
 
     app.get("/", function (req: Request, res: Response) {
-        HomeAction.execute(req,res);
+       res.send('im backend :)')
     });
 
-    app.get("/home", function (req: Request, res: Response) {
-        HomeAction.execute(req,res);
-    });
 
-    app.get("/xartist", function (req: Request, res: Response) {
-        XArtistAction.execute(req,res);
+
+    app.get("/buscar-artista/:texto", function (req: Request, res: Response) {
+        BuscarArtistAction.execute(req,res);
     });
 
 }

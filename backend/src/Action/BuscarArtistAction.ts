@@ -3,7 +3,7 @@
 import {Application, Request, Response} from "express";
 
 
-const XArtistAction = {
+const BuscarArtistAction = {
     execute: (req: Request, res: Response) => {
 
         res.json({ope:"ok"});
@@ -11,4 +11,4 @@ const XArtistAction = {
 };
 
 
-export default XArtistAction;
+export default BuscarArtistAction;
