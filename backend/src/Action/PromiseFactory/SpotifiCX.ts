@@ -28,11 +28,7 @@ const buscarArtista = async (texto: string): Promise<any> => {
 
    return spotifyApi.searchArtists(texto)
        .then((data: any) => {
-
-          console.log("datos recibidos del api:", data.body);
-
           return data.body;
-
        })
        .catch((error: Error) => {
           console.log("The error while searching artists occurred: ", error);

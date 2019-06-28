@@ -1,8 +1,9 @@
 'use strict';
 import {Application, Request, Response} from "express";
 
-import routerBuilder from "./Action/Routes/BuildRouter";
+
 import SpotifiCX from "./Action/PromiseFactory/SpotifiCX";
+import routerBuilder from "./Routes/BuildRouter";
 
 
 const express = require('express');

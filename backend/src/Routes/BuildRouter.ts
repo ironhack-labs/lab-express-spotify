@@ -1,6 +1,7 @@
 import {Application, Request, Response} from "express";
+import BuscarArtistAction from "../Action/BuscarArtistAction";
 
-import BuscarArtistAction from "../BuscarArtistAction";
+
 
 
 function routerBuilder(app : Application ){
@@ -16,7 +17,7 @@ function routerBuilder(app : Application ){
 
 
 
-    app.get("/buscar-artista/:texto", function (req: Request, res: Response) {
+    app.get("/api/buscar-artista/:texto", function (req: Request, res: Response) {
 
         let texto: string = req.params.texto || null;
 
