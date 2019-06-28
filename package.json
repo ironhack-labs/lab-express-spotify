@@ -2,9 +2,11 @@
   "name": "lab-express-spotify",
   "version": "1.0.0",
   "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
-  "main": "index.js",
+  "main": "dist/server.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "rebuild": "tsc",
+    "nodemon": "nodemon /dist/server.js localhost 3010",
+    "test": "mocha --timeout 20000 test/"
   },
   "repository": {
     "type": "git",
@@ -22,7 +24,8 @@
     "hbs": "^4.0.4",
     "nodemon": "^1.19.1",
     "path": "^0.12.7",
-    "puppeteer": "^1.18.1"
+    "puppeteer": "^1.18.1",
+    "spotify-web-api-node": "^4.0.0"
   },
   "nodemonConfig": {
     "ignore": [
