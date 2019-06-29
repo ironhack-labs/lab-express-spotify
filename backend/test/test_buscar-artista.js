@@ -34,6 +34,7 @@ describe('get /api/buscar-artista', function () {
                 let dataRespuesta = c.data;
 
                 assert(dataRespuesta.texto === "michael jackson", "no es el texto buscado");
+
                 assert(dataRespuesta.next === "http:/localhost:3010/apibuscar-artista/michael jackson/2", "next incorrecto");
 
                 assert(dataRespuesta.total > 0, "items totales  incorrectos");
