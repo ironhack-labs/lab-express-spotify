@@ -16,10 +16,12 @@ function routerBuilder(app: Application) {
    });
 
 
-   app.get("/api/buscar-artista/:texto", function (req: Request, res: Response) {
+   app.get("/api/buscar-artista/:texto/:pagina?", function (req: Request, res: Response) {
 
       let texto: string = req.params.texto || null;
-      BuscarArtistAction.execute(res, texto);
+      let pagina: string = req.params.pagina || "1";
+
+      BuscarArtistAction.execute(res, texto, pagina);
    });
 
 
@@ -36,7 +38,7 @@ function routerBuilder(app: Application) {
 
       let idArtista: string = req.params.idArtista || null;
       let pagina: string = req.params.pagina || "1";
-      TracksAction.execute(res, idArtista,pagina);
+      TracksAction.execute(res, idArtista, pagina);
    });
 
 

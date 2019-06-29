@@ -6,7 +6,7 @@
   "scripts": {
     "rebuild": "tsc",
     "nodemon": "nodemon /dist/server.js localhost 3010",
-    "test": "mocha --timeout 20000 test/"
+    "test": "mocha --timeout 20000 test/test.js"
   },
   "repository": {
     "type": "git",
@@ -30,5 +30,8 @@
       "test/*"
     ],
     "delay": "2500"
+  },
+  "devDependencies": {
+    "supertest": "^4.0.2"
   }
 }
