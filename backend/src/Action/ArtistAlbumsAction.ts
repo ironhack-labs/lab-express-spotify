@@ -38,9 +38,25 @@ const ArtistAlbumsAction = {
 
       SpotifiCX.artistAlbums(idArtista, numPagina)
           .then((data: any) => {
-             const success: boolean = true;
-             const msg = "";
-             res.json({id_artista: idArtista, data, success, msg});
+              const success: boolean = true;
+              const msg = "";
+
+
+              const total: number = data.artists.total;
+
+              const paginaSiguiente: number = numPagina + 1;
+              const next: string = data.artists.next === "" ? "" : urlApi + urlRel + `/${texto}/${paginaSiguiente}`;
+
+              let d = {
+                  idArtista,
+                  next,
+                  total: data.artists.total,
+                  items: data.artists.items
+              };
+
+
+              res.json({data: d, success, msg});
+
           })
           .catch((error: Error) => {
              SendRespuestaError(res, error.message);
