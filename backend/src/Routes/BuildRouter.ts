@@ -1,6 +1,7 @@
 import {Application, Request, Response} from "express";
 import BuscarArtistAction from "../Action/BuscarArtistAction";
 import ArtistAlbumsAction from "../Action/ArtistAlbumsAction";
+import TracksAction from "../Action/TracksAction";
 
 
 function routerBuilder(app: Application) {
@@ -22,13 +23,22 @@ function routerBuilder(app: Application) {
    });
 
 
-   app.get("/api/artist-albums/:texto/:pagina?", function (req: Request, res: Response) {
+   app.get("/api/artist-albums/:idArtista/:pagina?", function (req: Request, res: Response) {
 
-      let idArtista: string = req.params.texto || null;
+      let idArtista: string = req.params.idArtista || null;
       let pagina: string = req.params.pagina || "1";
 
       ArtistAlbumsAction.execute(res, idArtista, pagina);
    });
+
+
+   app.get("/api/tracks/:idAlbum/:pagina?", function (req: Request, res: Response) {
+
+      let idArtista: string = req.params.idArtista || null;
+      let pagina: string = req.params.pagina || "1";
+      TracksAction.execute(res, idArtista,pagina);
+   });
+
 
 }
 

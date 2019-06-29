@@ -9,7 +9,7 @@ import SpotifiCX from "../Servicios/SpotifiCX";
 const BuscarArtistAction = {
 
 
-   validarParamTexto: function (texto: string): boolean {
+   validarParams: function (texto: string): boolean {
 
       // existe el parametro
       let isValid = !(texto === undefined || texto.trim() === '' || texto === null);
@@ -26,7 +26,7 @@ const BuscarArtistAction = {
    execute: function (res: Response, texto: string) {
 
 
-      if (!this.validarParamTexto(texto)) {
+      if (!this.validarParams(texto)) {
          SendRespuestaError(res, "Parámetro texto inválido");
          return;
       }

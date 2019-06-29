@@ -37,11 +37,13 @@ const buscarArtista = async (texto: string): Promise<any> => {
        })
 };
 
+
 const artistAlbums = async (idArtista: string, numPagina : number): Promise<any> => {
 
-   const offset = numPagina-1;
+   const numItemsXPagina :number = 10;
+   const offset : number = (numPagina-1)*numItemsXPagina;
 
-   return spotifyApi.getArtistAlbums(idArtista, {limit:10, offset})
+   return spotifyApi.getArtistAlbums(idArtista, {limit:numItemsXPagina, offset})
        .then((data: any) => {
           return data.body;
        })
@@ -51,8 +53,26 @@ const artistAlbums = async (idArtista: string, numPagina : number): Promise<any>
        })
 };
 
+
+const tracks = async (idAlbum:string, numPagina: number): Promise<any> => {
+
+   const numItemsXPagina :number = 10;
+   const offset = (numPagina-1)*numItemsXPagina;
+
+   return spotifyApi.getAlbumTracks(idAlbum, { limit : numItemsXPagina, offset : offset })
+       .then((data: any) => {
+          return data.body;
+       })
+       .catch((error: Error) => {
+          console.log("The error while searching artists occurred: ", error);
+          throw error;
+       })
+};
+
+
 export default {
    solicitarToken,
    buscarArtista,
-   artistAlbums
+   artistAlbums,
+   tracks
 }
