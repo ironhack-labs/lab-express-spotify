@@ -1,0 +1,481 @@
+{
+  "data": {
+    "texto": "michael jackson",
+    "next": "http:/localhost:3010/apibuscar-artista/michael jackson/2",
+    "total": 39,
+    "items": [
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3fMbdgg4jU18AjLCKBhRSm"
+        },
+        "followers": {
+          "href": null,
+          "total": 10695476
+        },
+        "genres": [
+          "pop"
+        ],
+        "href": "https://api.spotify.com/v1/artists/3fMbdgg4jU18AjLCKBhRSm",
+        "id": "3fMbdgg4jU18AjLCKBhRSm",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/51dad9aaabe5643818840207a9a8957c2ad91bf2",
+            "width": 640
+          },
+          {
+            "height": 320,
+            "url": "https://i.scdn.co/image/2e6f35b90c131c137669d06e3c36b1a5d3172864",
+            "width": 320
+          },
+          {
+            "height": 160,
+            "url": "https://i.scdn.co/image/4ba613bd55b4954a027377b70b8c6d48639fd70b",
+            "width": 160
+          }
+        ],
+        "name": "Michael Jackson",
+        "popularity": 86,
+        "type": "artist",
+        "uri": "spotify:artist:3fMbdgg4jU18AjLCKBhRSm"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4WwJ1B8pIgerhgbFpaCLah"
+        },
+        "followers": {
+          "href": null,
+          "total": 20
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/4WwJ1B8pIgerhgbFpaCLah",
+        "id": "4WwJ1B8pIgerhgbFpaCLah",
+        "images": [],
+        "name": "Michael Jackson Jr",
+        "popularity": 14,
+        "type": "artist",
+        "uri": "spotify:artist:4WwJ1B8pIgerhgbFpaCLah"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3kvgmC7OQA6BGBvvZO7zpw"
+        },
+        "followers": {
+          "href": null,
+          "total": 1262
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3kvgmC7OQA6BGBvvZO7zpw",
+        "id": "3kvgmC7OQA6BGBvvZO7zpw",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/82e991bf6c2276957e59e911176e4e732ebc14fc",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/225fe99e21da72314de911b0ad35d60953c6a6d5",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/0bca00383aabe47cd5bd3a708d23d0a62e81ba01",
+            "width": 64
+          }
+        ],
+        "name": "Fran London feat. Michael Jackson",
+        "popularity": 10,
+        "type": "artist",
+        "uri": "spotify:artist:3kvgmC7OQA6BGBvvZO7zpw"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3CxB1yhYjeDK8H1DrSicc2"
+        },
+        "followers": {
+          "href": null,
+          "total": 440
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3CxB1yhYjeDK8H1DrSicc2",
+        "id": "3CxB1yhYjeDK8H1DrSicc2",
+        "images": [],
+        "name": "Michael Jackson",
+        "popularity": 2,
+        "type": "artist",
+        "uri": "spotify:artist:3CxB1yhYjeDK8H1DrSicc2"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7LI0TvOBQdTaOMBsywCk1u"
+        },
+        "followers": {
+          "href": null,
+          "total": 503
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/7LI0TvOBQdTaOMBsywCk1u",
+        "id": "7LI0TvOBQdTaOMBsywCk1u",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/e39126bd2e6a141782a0d1b702f4a57717c89b77",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/af7b35fe998ac3948c4dfc706839eca6e76852b5",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/3aa9eaa5bdff0ad043d1ba4eb721334ae67e2f58",
+            "width": 64
+          }
+        ],
+        "name": "Jackson Michael",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:7LI0TvOBQdTaOMBsywCk1u"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/19CjkeoxK1wLE0mk6R2rxj"
+        },
+        "followers": {
+          "href": null,
+          "total": 54
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/19CjkeoxK1wLE0mk6R2rxj",
+        "id": "19CjkeoxK1wLE0mk6R2rxj",
+        "images": [
+          {
+            "height": 600,
+            "url": "https://i.scdn.co/image/dd27797d5a769245f55703bf88501fc508205b39",
+            "width": 600
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/1198f519c4bb440246ed8ad79c6e26984a6ef07b",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/21262ffad09e487187c5ca91edb78cd1fd750afc",
+            "width": 64
+          }
+        ],
+        "name": "Nona-michael Jackson",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:19CjkeoxK1wLE0mk6R2rxj"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/27sfvc84RtbRO2YTBOwqFd"
+        },
+        "followers": {
+          "href": null,
+          "total": 24
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/27sfvc84RtbRO2YTBOwqFd",
+        "id": "27sfvc84RtbRO2YTBOwqFd",
+        "images": [],
+        "name": "Jackson & Michael",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:27sfvc84RtbRO2YTBOwqFd"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/2B23haEzypWbf1HnyM31k3"
+        },
+        "followers": {
+          "href": null,
+          "total": 24
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/2B23haEzypWbf1HnyM31k3",
+        "id": "2B23haEzypWbf1HnyM31k3",
+        "images": [],
+        "name": "Michael Joe Jackson",
+        "popularity": 7,
+        "type": "artist",
+        "uri": "spotify:artist:2B23haEzypWbf1HnyM31k3"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/349ymR3M8bnpdXdLrmbGVu"
+        },
+        "followers": {
+          "href": null,
+          "total": 88
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/349ymR3M8bnpdXdLrmbGVu",
+        "id": "349ymR3M8bnpdXdLrmbGVu",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/f4bd45d48e25f739ac9e0232eead8626ec705f74",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/f742b5d18c9ee3b13890ca0db8bb9ceec1d4f9de",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/58fe9d569c7fca3eb6cfc729e5c4477e8ed246a3",
+            "width": 64
+          }
+        ],
+        "name": "Michael Lee Jackson",
+        "popularity": 8,
+        "type": "artist",
+        "uri": "spotify:artist:349ymR3M8bnpdXdLrmbGVu"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3DGM74QZ4tNTQ29JRyDuTI"
+        },
+        "followers": {
+          "href": null,
+          "total": 21
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3DGM74QZ4tNTQ29JRyDuTI",
+        "id": "3DGM74QZ4tNTQ29JRyDuTI",
+        "images": [],
+        "name": "Michael Kurt Jackson",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:3DGM74QZ4tNTQ29JRyDuTI"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3s9XxUSCzrvScn1ZZ4q2sK"
+        },
+        "followers": {
+          "href": null,
+          "total": 10
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3s9XxUSCzrvScn1ZZ4q2sK",
+        "id": "3s9XxUSCzrvScn1ZZ4q2sK",
+        "images": [],
+        "name": "Jeffrey Michael Jackson",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:3s9XxUSCzrvScn1ZZ4q2sK"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3yOrthye1mHA8bZzQ60AoU"
+        },
+        "followers": {
+          "href": null,
+          "total": 3
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3yOrthye1mHA8bZzQ60AoU",
+        "id": "3yOrthye1mHA8bZzQ60AoU",
+        "images": [],
+        "name": "Michael Wayne Jackson",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:3yOrthye1mHA8bZzQ60AoU"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6JSJhj2pDiCF323KJoL02Q"
+        },
+        "followers": {
+          "href": null,
+          "total": 2
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/6JSJhj2pDiCF323KJoL02Q",
+        "id": "6JSJhj2pDiCF323KJoL02Q",
+        "images": [],
+        "name": "MICHAEL K. JACKSON",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:6JSJhj2pDiCF323KJoL02Q"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/6q7G8AEHZh3WB8Dzsw0wMQ"
+        },
+        "followers": {
+          "href": null,
+          "total": 10
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/6q7G8AEHZh3WB8Dzsw0wMQ",
+        "id": "6q7G8AEHZh3WB8Dzsw0wMQ",
+        "images": [],
+        "name": "Michael C. Jackson",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:6q7G8AEHZh3WB8Dzsw0wMQ"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7JkKjjETxHibLaVCudBaxZ"
+        },
+        "followers": {
+          "href": null,
+          "total": 156
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/7JkKjjETxHibLaVCudBaxZ",
+        "id": "7JkKjjETxHibLaVCudBaxZ",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/ceaeb7dd059a49f191dde9f228d1996fe9fde29d",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/3b6ab7ebb95094f585b94a98b8d9861f30e92502",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/9ba7f1e9cd734259e57a29285b4bca6a9ad47418",
+            "width": 64
+          }
+        ],
+        "name": "Michael Jackson Montgomery",
+        "popularity": 0,
+        "type": "artist",
+        "uri": "spotify:artist:7JkKjjETxHibLaVCudBaxZ"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7ch97wQcmoFJGx1RN5Gss7"
+        },
+        "followers": {
+          "href": null,
+          "total": 132
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/7ch97wQcmoFJGx1RN5Gss7",
+        "id": "7ch97wQcmoFJGx1RN5Gss7",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/36c456171c19a214a52e6dad19039cc5d883e37d",
+            "width": 640
+          },
+          {
+            "height": 320,
+            "url": "https://i.scdn.co/image/796cba802c87eaf3dcca71f7098b517f0a18ed7e",
+            "width": 320
+          },
+          {
+            "height": 160,
+            "url": "https://i.scdn.co/image/91cbe2fffc221d1b27f6be3ff6757107f9786c02",
+            "width": 160
+          }
+        ],
+        "name": "Michael Gregory Jackson",
+        "popularity": 2,
+        "type": "artist",
+        "uri": "spotify:artist:7ch97wQcmoFJGx1RN5Gss7"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/7laaeJcmU9FPO4OdhFelEN"
+        },
+        "followers": {
+          "href": null,
+          "total": 95
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/7laaeJcmU9FPO4OdhFelEN",
+        "id": "7laaeJcmU9FPO4OdhFelEN",
+        "images": [
+          {
+            "height": 640,
+            "url": "https://i.scdn.co/image/2cc3ebed590be55c9426153194b898e977878a11",
+            "width": 640
+          },
+          {
+            "height": 300,
+            "url": "https://i.scdn.co/image/cf2af9974650de58c4aa03bb243d14af8d6fb9a7",
+            "width": 300
+          },
+          {
+            "height": 64,
+            "url": "https://i.scdn.co/image/0105fb9905b2db41d40c3255a330cf3b84d12faa",
+            "width": 64
+          }
+        ],
+        "name": "David Michael Jackson",
+        "popularity": 1,
+        "type": "artist",
+        "uri": "spotify:artist:7laaeJcmU9FPO4OdhFelEN"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3VRLTDqSCTDEwEZggtdVeh"
+        },
+        "followers": {
+          "href": null,
+          "total": 2
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3VRLTDqSCTDEwEZggtdVeh",
+        "id": "3VRLTDqSCTDEwEZggtdVeh",
+        "images": [],
+        "name": "Adedoyin, Michael Jackson Jr",
+        "popularity": 2,
+        "type": "artist",
+        "uri": "spotify:artist:3VRLTDqSCTDEwEZggtdVeh"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/3w5e6DbyrkfRUF588Ekotj"
+        },
+        "followers": {
+          "href": null,
+          "total": 130
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/3w5e6DbyrkfRUF588Ekotj",
+        "id": "3w5e6DbyrkfRUF588Ekotj",
+        "images": [],
+        "name": "Michael Jackson & 2Pac",
+        "popularity": 6,
+        "type": "artist",
+        "uri": "spotify:artist:3w5e6DbyrkfRUF588Ekotj"
+      },
+      {
+        "external_urls": {
+          "spotify": "https://open.spotify.com/artist/4Q3aSZGYDiFjmeoilPa8zE"
+        },
+        "followers": {
+          "href": null,
+          "total": 143
+        },
+        "genres": [],
+        "href": "https://api.spotify.com/v1/artists/4Q3aSZGYDiFjmeoilPa8zE",
+        "id": "4Q3aSZGYDiFjmeoilPa8zE",
+        "images": [],
+        "name": "Michael Jackson For Siegfried",
+        "popularity": 6,
+        "type": "artist",
+        "uri": "spotify:artist:4Q3aSZGYDiFjmeoilPa8zE"
+      }
+    ]
+  },
+  "success": true,
+  "msg": ""
+}
