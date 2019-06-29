@@ -3,67 +3,78 @@
 import {Response} from "express";
 import SendRespuestaError from "../Routes/SendResponseError";
 import SpotifiCX from "../Servicios/SpotifiCX";
+import ServerConfig from "../Config";
+import UrlApi from "../Routes/UrlApi";
 
+
+const urlRel :string  = UrlApi.BuscarArtista;
 
 const BuscarArtistAction = {
 
+    getUrl: function (texto: string, pagina: string): string {
+       return ServerConfig.urlApi + urlRel + `/${texto}/${pagina}`;
+    }
+    ,
+    validarParams: function (texto: string, pagina: string): boolean {
 
-   validarParams: function (texto: string, pagina :string ): boolean {
+       // existe el parametro
+       let isValid = !(texto === undefined || texto.trim() === '' || texto === null);
 
-      // existe el parametro
-      let isValid = !(texto === undefined || texto.trim() === '' || texto === null);
-
-      if (isValid) {
-         //tiene longitud correcta
-         isValid = texto.length < 30;
-      }
-
-
-      if (isValid) {
-         isValid = parseInt(pagina) > 0;
-      }
+       if (isValid) {
+          //tiene longitud correcta
+          isValid = texto.length < 30;
+       }
 
 
-      //TODO agrgar mensaje que describa el error de validacion
-      return isValid;
-
-   },
-   execute: function (res: Response, texto: string, pagina:string) {
+       if (isValid) {
+          isValid = parseInt(pagina) > 0;
+       }
 
 
-      if (!this.validarParams(texto,pagina)) {
-         SendRespuestaError(res, "Parámetro texto inválido");
-         return;
-      }
+       //TODO agrgar mensaje que describa el error de validacion
+       return isValid;
 
-      texto = texto.toLowerCase();
-
-      const numPagina = parseInt(pagina);
-
-      SpotifiCX.buscarArtista(texto, numPagina)
-          .then((data: any) => {
-             const success: boolean = true;
-             const msg = "";
+    }
+    ,
+    execute: function (res: Response, texto: string, pagina: string) {
 
 
-             const total :number = data.artists.total;
+       if (!this.validarParams(texto, pagina)) {
+          SendRespuestaError(res, "Parámetro texto inválido");
+          return;
+       }
+
+       texto = texto.toLowerCase();
+
+       const numPagina = parseInt(pagina);
+
+       SpotifiCX.buscarArtista(texto, numPagina)
+           .then((data: any) => {
+              const success: boolean = true;
+              const msg = "";
 
 
-             let d = {
-                total: data.artists.total,
-                items: data.artists.items
-             };
+              const total: number = data.artists.total;
+
+              const next: string = data.artists.next === "" ? "" : ""
+
+              let d = {
+                 total: data.artists.total,
+                 items: data.artists.items,
+                 raw: data
+              };
 
 
-             res.json({texto, data: d, success, msg});
-          })
-          .catch((error: Error) => {
-             SendRespuestaError(res, error.message);
-          })
-      ;
+              res.json({texto, data: d, success, msg});
+           })
+           .catch((error: Error) => {
+              SendRespuestaError(res, error.message);
+           })
+       ;
 
-   }
-};
+    }
+ }
+;
 
 
 export default BuscarArtistAction;
