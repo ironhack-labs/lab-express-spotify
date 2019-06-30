@@ -1,0 +1,92 @@
+* {
+     margin: 0;
+     padding: 0;
+     box-sizing: border-box;
+}
+
+body {
+     font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+     font-size: 1rem;
+     font-weight: 400;
+     line-height: 1.5;
+     color: #212529;
+}
+
+.home-container {
+     background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+     background-size: 100% 100%;
+     background-repeat: no-repeat;
+     height: 100vh;
+}
+
+.form-wrapper {
+     background-color: rgba(255, 255, 255, 0.6);
+     width: 50%;
+     height: 200px;
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+}
+
+.home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.home-search {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+}
+
+.artist-img {
+    width: 100%;
+}
+
+img {
+    vertical-align: middle;
+    border-style: none;
+}
+
+.artist-container {
+    padding: 10px 40px;
+}
+
+.artist-info-container {
+    background-color: #4D4D4D;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.artist-info-container p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+.artist-info-container a {
+    color: #fff;
+    font-size: 12px;
+    background-color: #F86967;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.header-row {
+    background-color: #4A4A4A;
+    padding: 20px 10px;
+    color: #F6F6F6;
+    font-size: 20px;
+}
