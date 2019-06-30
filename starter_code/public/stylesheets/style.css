@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Garamound';
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form {
+  background-image: url('https://cdn.cnn.com/cnnnext/dam/assets/170612142756-02-best-of-iceland.jpg');
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form input {
+  width: 30vw;
+  height: 40px;
+  font-size: 1.3em;
+  margin: 10px;
+  padding: 5px 15px;
+}
+
+.search-form button {
+  margin: 10px;
+  padding: 5px 15px;
+  height: 40px;
+  font-size: 1.1em;
+  border-radius: 5px;
+}
+
+
+.artist-cards-container {
+  width: 80vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist-card {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: darkblue;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.artist-card img {
+  width: 100%;
+}
+
+h1, h2, h3 {
+  margin: 20px;
+}
+
+.artist-card a, .album-card a {
+  height: 25px;
+  color: white;
+  background-color: maroon;
+  border-radius: 5px;
+  text-align: center;
+  padding: 10px 10px 5px 10px;
+  margin: 0 10px 25px 10px;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.album-cards-container {
+  width: 80vw;
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.album-card {
+  width: calc(33.33% - 20px);
+  margin: 10px;
+  background-color: blanchedalmond;
+  color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.album-card img {
+  width: 100%;
+}
+
+.track-rows-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.track-row, .row {
+  display: flex;
+  flex-direction: row;
+  width: 80vw;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.track-row h2 {
+  font-weight: 300;
+}
+
+.row :last-child {
+  margin-right: 200px;
+}
+
+.row {
+  background-color: darkblue;
+  height: 100px;
+  color: white;
+  margin-bottom: 10px;
+}

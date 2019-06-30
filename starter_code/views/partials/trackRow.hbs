@@ -1,0 +1,8 @@
+<div class="track-row">
+  <h2>{{ name }}</h2>
+  {{#if preview_url }}
+  <audio controls="controls" src={{preview_url}}></audio>
+  {{ else }}
+  <h2>No preview</h2>
+  {{/if }}
+</div>
