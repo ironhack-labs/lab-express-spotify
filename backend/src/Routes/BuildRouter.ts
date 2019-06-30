@@ -38,7 +38,7 @@ function routerBuilder(app: Application) {
 
 
    //tracks
-   app.get(`/api/${UrlApi.Tracks}/:idAlbum/:pagina`, function (req: Request, res: Response) {
+   app.get(`/api/${UrlApi.Tracks}/:idAlbum/:pagina?`, function (req: Request, res: Response) {
 
       let idAlbum: string = req.params.idAlbum || "";
       let pagina: string = req.params.pagina || "1";

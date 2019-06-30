@@ -57,7 +57,7 @@ const BuscarArtistAction = {
                     const total: number = data.artists.total;
 
                     const paginaSiguiente: number = numPagina + 1;
-                    const next: string = data.artists.next === "" ? "" : urlApi + urlRel + `/${texto}/${paginaSiguiente}`;
+                    const next: string = data.artists.next === "" ? "" : urlApi + "/"+urlRel + `/${texto}/${paginaSiguiente}`;
 
                     let d = {
                         texto,

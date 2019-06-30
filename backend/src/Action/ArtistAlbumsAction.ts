@@ -9,7 +9,7 @@ import ServerConfig from "../Config";
 import UrlApi from "../Routes/UrlApi";
 
 
-const urlRel: string = UrlApi.BuscarArtista;
+const urlRel: string = UrlApi.Albums;
 const urlApi = ServerConfig.urlApi;
 
 const ArtistAlbumsAction = {
@@ -53,7 +53,7 @@ const ArtistAlbumsAction = {
               const total: number = data.total;
 
               const paginaSiguiente: number = numPagina + 1;
-              const next: string = data.next === "" ? "" : urlApi + urlRel + `/${idArtista}/${paginaSiguiente}`;
+              const next: string = data.next === "" ? "" : urlApi +"/"+ urlRel + `/${idArtista}/${paginaSiguiente}`;
 
               let d = {
                   idArtista,

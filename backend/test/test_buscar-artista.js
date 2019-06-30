@@ -35,7 +35,7 @@ describe('get /api/buscar-artista', function () {
 
                 assert(dataRespuesta.texto === "michael jackson", "no es el texto buscado");
 
-                assert(dataRespuesta.next === "http:/localhost:3010/apibuscar-artista/michael jackson/2", "next incorrecto");
+                assert(dataRespuesta.next === "http://localhost:3010/api/buscar-artista/michael jackson/2", "next incorrecto");
 
                 assert(dataRespuesta.total > 0, "items totales  incorrectos");
 
