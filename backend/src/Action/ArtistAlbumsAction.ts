@@ -5,8 +5,18 @@ import SendRespuestaError from "../Routes/SendResponseError";
 import SpotifiCX from "../Servicios/SpotifiCX";
 
 
+import ServerConfig from "../Config";
+import UrlApi from "../Routes/UrlApi";
+
+
+const urlRel: string = UrlApi.BuscarArtista;
+const urlApi = ServerConfig.urlApi;
+
 const ArtistAlbumsAction = {
 
+   getUrl: function (idArtista: string, pagina: string): string {
+      return ServerConfig.urlApi + urlRel + `/${idArtista}/${pagina}`;
+   },
    validarParams: function (idArtista: string, pagina: string): boolean {
 
       // existe el parametro
@@ -33,7 +43,6 @@ const ArtistAlbumsAction = {
          return;
       }
 
-
       const numPagina = parseInt(pagina);
 
       SpotifiCX.artistAlbums(idArtista, numPagina)
@@ -41,17 +50,16 @@ const ArtistAlbumsAction = {
               const success: boolean = true;
               const msg = "";
 
-
-              const total: number = data.artists.total;
+              const total: number = data.total;
 
               const paginaSiguiente: number = numPagina + 1;
-              const next: string = data.artists.next === "" ? "" : urlApi + urlRel + `/${texto}/${paginaSiguiente}`;
+              const next: string = data.next === "" ? "" : urlApi + urlRel + `/${idArtista}/${paginaSiguiente}`;
 
               let d = {
                   idArtista,
                   next,
-                  total: data.artists.total,
-                  items: data.artists.items
+                  total: data.total,
+                  items: data.items
               };
 
 
