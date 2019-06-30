@@ -1,0 +1,37 @@
+.search-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+.container, .row {
+    width: 80%;
+}
+.artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    color: white;
+    width: 33.33%;
+}
+.img-artist {
+    width: 200px;
+}
+.p-2 {
+
+}
+.search-main {
+    background-image: url('/images/spotify-cover-image.jpeg');
+}
+.search-div {
+    background: rgba(255, 255, 255, 0.514);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 15%;
+    width: 30%;
+}
