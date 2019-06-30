@@ -90,3 +90,9 @@ img {
     color: #F6F6F6;
     font-size: 20px;
 }
+
+.track-item {
+    background-color: #F6F6F6;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}

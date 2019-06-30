@@ -19,9 +19,9 @@
                <span class="col-lg-4 text-center">LISTEN</span>
           </div>
           {{#each trackList}}
-          <div class="row">
+          <div class="row track-item">
                <span class="col-lg-8 font-weight-bold">{{name}}</span>
-               <audio controls class="col-lg-4">
+               <audio controls="" name="media" class="col-lg-4">
                     <source src="{{preview_url}}" type="audio/mpeg">
                     Your browser does not support the audio element.
                </audio>
