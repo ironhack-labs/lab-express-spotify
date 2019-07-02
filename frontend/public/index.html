@@ -1,20 +1,48 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8">
+   <meta charset="utf-8">
 
-    <title>Lab Express Spotify</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
+   <title>Lab Express Spotify</title>
+   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css"
+         integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <div class="home-container">
-    <div class="form-wrapper">
-        <form action="/artists" class="form-group home-form">
-            <input placeholder="Search for an artist!" class="form-control home-input" type="text" name="artist" id="artist-input">
-            <button class="btn btn-primary home-search" type="submit">Search for an Artist</button>
-        </form>
-    </div>
+
+   <div id="app">
+
+      <div class="form-wrapper" v-show="vista==='buscar'">
+         <div class="form-group home-form">
+            <input placeholder="Search for an artist!"
+                   class="form-control home-input"
+                   type="text"
+                   v-model="textobuscado"
+                   />
+            <button class="btn btn-primary home-search"
+                    @click="onBuscarArtista"
+                    type="submit"
+            >Search for an Artist
+            </button>
+         </div>
+      </div>
+
+      <div v-show="vista==='resultados-buscar'">
+         {{resultadosBuscarArtista}}
+      </div>
+
+      <div v-show="vista==='tracks'">
+         trackas
+      </div>
+
+
+   </div>
+
 </div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/vue-resource@1.5.1"></script>
+<script src="appVue.js"></script>
 </body>
 </html>

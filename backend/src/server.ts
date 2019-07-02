@@ -7,9 +7,12 @@ import SpotifiCX from "./Servicios/SpotifiCX";
 import ServerConfig from "./Config";
 
 
+var cors = require('cors');
+
 const express = require('express');
 const app: Application = express();
 
+app.use(cors());
 
 SpotifiCX.solicitarToken( null)
     .then(
