@@ -18,16 +18,66 @@ const app = new Vue({
       },
       textobuscado: "michael jackson",
       listaArtistas: [],
-      resultadosBuscarArtista: {texto: '', next: '', total: 0, items: []}
+      resultadosBuscarArtista: {texto: '', next: '', total: 0, items: []},
+      nextBuscar: ''
    },
    methods: {
+
+      onBuscarAlbums: function ($event, artista, urlNext = '') {
+
+         const idArtista = artista.id;
+
+         let url = this.Url.albums + idArtista;
+
+
+         if (urlNext) {
+            url = urlNext;
+         } else {
+            artista.listaAlbums = [];
+         }
+
+
+         let fnSuccess = (respuesta) => {
+
+            const data = respuesta.data.data;
+            console.log(data);
+
+            let lista = data.items;
+
+            lista.forEach(item => {
+               artista.listaAlbums.push(item);
+            });
+
+         };
+
+
+         let fnError = (data) => {
+            alert('Error');
+         };
+
+
+         this.RequestGet(url, fnSuccess, fnError);
+
+      },
       onShowFormBuscar: function () {
          this.vista = 'buscar';
       },
-      onBuscarArtista: function () {
-         if (this.textobuscado.trim() === "") {
-            alert('Falta texto');
-            return;
+      onBuscarArtista: function (event, urlNext = '') {
+
+
+         let url = this.Url.buscar + encodeURI(this.textobuscado.trim());
+
+
+         if (urlNext) {
+            url = urlNext;
+         } else {
+
+            if (this.textobuscado.trim() === "") {
+               alert('Falta texto');
+               return;
+            }
+
+            this.listaArtistas = [];
          }
 
 
@@ -41,24 +91,26 @@ const app = new Vue({
             this.resultadosBuscarArtista.next = data.next;
             this.resultadosBuscarArtista.items = data.items;
 
-            this.listaArtistas = this.resultadosBuscarArtista.items;
+            this.nextBuscar = data.next;
 
-            this.listaArtistas.forEach(item => {
+            let lista = this.resultadosBuscarArtista.items;
+
+            lista.forEach(item => {
                if (item.images && item.images.length > 0) {
                   item.urlImage = item.images[0].url ? item.images[0].url : null;
                }
+
+               this.listaArtistas.push(item);
             });
 
          };
-
-         this.listaArtistas = [];
 
 
          let fnError = (data) => {
             alert('Error');
          };
 
-         const url = this.Url.buscar + encodeURI(this.textobuscado);
+
          this.RequestGet(url, fnSuccess, fnError);
 
       },

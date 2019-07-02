@@ -18,7 +18,7 @@
                    class="form-control home-input"
                    type="text"
                    v-model="textobuscado"
-                   />
+            />
             <button class="btn btn-primary home-search"
                     @click="onBuscarArtista"
                     type="submit"
@@ -29,22 +29,39 @@
 
       <div v-show="vista==='resultados-buscar'" id="panResultados" style="background-color: #fff">
 
-         <div style="text-align: center" >
-            <button @click="onShowFormBuscar">
+         <div style="text-align: center; margin: 10px">
+            <button @click="onShowFormBuscar($event,null)">
                Buscar Artista
             </button>
 
          </div>
 
-         <div v-for="item in listaArtistas" class="itemArtista">
-            <h3>{{item.name}}</h3>
-            <img  :src="item.urlImage"  style="width: 250px" />
+         <div v-for="(item, index) in listaArtistas" class="itemArtista">
+            <div>
+               <h3>{{index+1}}) {{item.name}}</h3>
+               <img :src="item.urlImage" style="width: 250px"/>
+            </div>
+            <div style="margin-left: 20px">
+               <!--  Lista de albums-->
+               <button @click="onBuscarAlbums($event,item, false)">Buscar Albums</button>
+               <div v-for ="(album, index) in item.listaAlbums" class="albumItem">
+                  {{album}}
+               </div>
 
-            <hr>
+            </div>
+
+
          </div>
+
+
+         <div style="text-align: center; margin: 10px" v-show="nextBuscar">
+            <button @click="onBuscarArtista($event,nextBuscar)">
+               Más Artistas
+            </button>
+
+         </div>
+
       </div>
-
-
 
 
    </div>
