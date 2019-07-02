@@ -3,40 +3,58 @@
 /**
  * Created by David on 27/06/2019.
  */
-const urlApi='http://localhost:3010/api/';
+const urlApi = 'http://localhost:3010/api/';
 
 
-const app= new Vue({
-   el:"#app",
-   data:{
-      isDebug:true,
-      vista:'buscar',
-      Url:{
+const app = new Vue({
+   el: "#app",
+   data: {
+      isDebug: true,
+      vista: 'buscar',
+      Url: {
          "buscar": urlApi + "buscar-artista/",
          "albums": urlApi + "artist-albums/",
          "tracks": urlApi + "buscar-artista/"
       },
-      textobuscado:"michael jackson",
-      resultadosBuscarArtista:{ texto:'', next:'', total:0, items:[]}
+      textobuscado: "michael jackson",
+      listaArtistas: [],
+      resultadosBuscarArtista: {texto: '', next: '', total: 0, items: []}
    },
-   methods:{
-      onBuscarArtista:function(){
-         if(this.textobuscado.trim() === ""){
-             alert('Falta texto');
-             return ;
+   methods: {
+      onShowFormBuscar: function () {
+         this.vista = 'buscar';
+      },
+      onBuscarArtista: function () {
+         if (this.textobuscado.trim() === "") {
+            alert('Falta texto');
+            return;
          }
 
-         let fnSuccess = (data)=>{
+
+         let fnSuccess = (respuesta) => {
+
+            const data = respuesta.data.data;
             console.log(data);
 
-            this.vista='resultados-buscar';
-            this.resultadosBuscarArtista.texto = data.data.texto;
-            this.resultadosBuscarArtista.next = data.data.next;
-            this.resultadosBuscarArtista.items = data.data.items;
+            this.vista = 'resultados-buscar';
+            this.resultadosBuscarArtista.texto = data.texto;
+            this.resultadosBuscarArtista.next = data.next;
+            this.resultadosBuscarArtista.items = data.items;
+
+            this.listaArtistas = this.resultadosBuscarArtista.items;
+
+            this.listaArtistas.forEach(item => {
+               if (item.images && item.images.length > 0) {
+                  item.urlImage = item.images[0].url ? item.images[0].url : null;
+               }
+            });
+
          };
 
+         this.listaArtistas = [];
 
-         let fnError = (data)=>{
+
+         let fnError = (data) => {
             alert('Error');
          };
 
@@ -54,7 +72,6 @@ const app= new Vue({
                formData.append(property, data[property]);
             }
          }
-
 
 
          if (this.isDebug) {
@@ -101,7 +118,7 @@ const app= new Vue({
              );
       },
    },
-   mounted(){
+   mounted() {
 
       console.log('mounted');
    }
