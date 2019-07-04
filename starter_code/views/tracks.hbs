@@ -1,0 +1,11 @@
+{{#each items}}
+  <div>
+    <div>Track name: {{name}}
+      <audio controls>
+        <source src="{{preview_url}}" type="audio/ogg">
+        <source src="{{preview_url}}" type="audio/mpeg">
+        This track does not have a preview.
+      </audio>
+    </div>
+  </div>
+{{/each}}
