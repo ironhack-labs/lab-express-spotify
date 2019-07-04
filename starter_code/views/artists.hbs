@@ -1,0 +1,8 @@
+<div class="artist">
+  <h3 class="artist__title">Albums for: {{items.0.artists.0.name}}</h3>
+  <div class="artist__albums">
+    {{#each items }}
+    {{> albumPartial this}}
+    {{/each}}
+  </div>
+</div>

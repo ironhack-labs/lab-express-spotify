@@ -1,26 +1,21 @@
 const express = require('express');
 const hbs = require('hbs');
+const path = require('path');
 
-// require spotify-web-api-node package here:
-
-
+hbs.registerPartials(__dirname + '/views/partials');
+const viewController = require('./controllers/viewController');
 
 const app = express();
 
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static(path.join(__dirname, 'public')));
 
+app.get('/', viewController.index);
+app.get('/artist', viewController.search);
+app.get('/album/:artistId', viewController.artist);
+app.get('/tracks/:album', viewController.albums);
 
-// setting the spotify-api goes here:
-
-
-
-
-
-
-// the routes go here:
-
-
-
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+app.listen(3000, () => {
+	console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊');
+});

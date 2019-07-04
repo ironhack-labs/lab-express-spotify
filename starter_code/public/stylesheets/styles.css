@@ -1,0 +1,182 @@
+body {
+	padding: 0;
+	margin: 0;
+}
+
+.btn {
+	width: 200px;
+	height: 35px;
+	margin: 3px;
+	text-align: center;
+	padding: 5px;
+	border-radius: 5px;
+	background-color: blue;
+	color: white;
+}
+
+.main {
+	height: 100vh;
+	width: 100vw;
+	background-image: url(/images/background.jpeg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-content: center;
+}
+
+.main__input {
+	height: 300px;
+	width: 600px;
+	align-self: center;
+	align-content: center;
+	display: flex;
+	justify-content: center;
+	background-color: rgba(255, 255, 255, 0.6);
+}
+
+.main__input__input {
+	padding: 15px;
+	margin: 20px;
+}
+
+.main__input__label,
+.main__input__input,
+.main__input__button {
+	height: 50px;
+	display: inline-block;
+	align-self: center;
+	justify-self: center;
+}
+
+.search {
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.search__title {
+	margin: 0;
+	padding: 0;
+	text-transform: uppercase;
+	width: 300px;
+}
+
+.search__container {
+	padding: 20px;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: start;
+}
+
+.search__container__element {
+	display: flex;
+	flex-direction: column;
+	align-self: center;
+	justify-content: center;
+	margin: 20px;
+}
+
+.search__container__element__image {
+	height: 250px;
+	border-radius: 3px;
+}
+
+.search__container__element__band-name {
+	margin: 10px auto;
+}
+.search__container__element__band-album {
+	margin: 10px auto;
+}
+
+.artist {
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.artist__title {
+	text-align: center;
+	margin: 30px auto;
+	text-transform: uppercase;
+}
+
+.artist__albums {
+	display: flex;
+	flex-wrap: wrap;
+	width: 80%;
+	margin: 0 auto;
+}
+
+.artist__albums__info {
+	width: 30%;
+	margin: 0 auto;
+	padding: 5px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+.artist__albums__info__image {
+	height: 250px;
+	width: 250px;
+	margin: 0 auto;
+}
+
+.artist__albums__info__name {
+	text-transform: uppercase;
+	margin: 0 auto;
+}
+.artist__albums__info__tracks-link {
+	margin: 0 auto;
+	text-decoration: none;
+	color: white;
+	padding: 10px;
+	background-color: blue;
+	line-height: 20px;
+	border: 1px solid blue;
+}
+
+.artist__albums__info__tracks-link:hover {
+	border: 1px solid blue;
+	background-color: white;
+	color: blue;
+	text-decoration: none;
+}
+
+.albums {
+	margin: 0 auto;
+	padding: 30px;
+}
+
+.albums__title {
+	text-align: center;
+	margin: 30px auto;
+	text-transform: uppercase;
+}
+.albums__tracks {
+	padding: 0px;
+	margin: 0;
+	list-style: none;
+	width: 750px;
+	border: 1px solid black;
+}
+
+.albums__tracks__song > p {
+	margin: 0;
+}
+.albums__tracks__song {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding-left: 20px;
+	padding-right: 20px;
+	height: 80px;
+}
+
+.albums__tracks__song:nth-child(even) {
+	background: #ccc;
+}
+
+.albums__tracks__song:nth-child(odd) {
+	background: #fff;
+}
