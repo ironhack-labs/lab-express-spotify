@@ -1,5 +1,4 @@
 const express = require('express');
-const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -38,13 +37,9 @@ app.get('/', (req, res) => {
 
 app.get('/artists', (req, res) => {
   const artistSearch = req.query;
-  console.log(artistSearch.artist);
   spotifyApi.searchArtists(artistSearch.artist)
     .then((data) => {
       const theArtist = data.body.artists.items;
-      // console.log('The received data from the API: ', theArtist);
-
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render('artists', { theArtist });
     })
     .catch((err) => {
@@ -54,11 +49,8 @@ app.get('/artists', (req, res) => {
 
 app.get('/albums/:artistId', (req, res, next) => {
   const artID = req.params.artistId;
-  console.log(artID);
-  // .getArtistAlbums() code goes here
   spotifyApi.getArtistAlbums(artID)
-    .then((data) => {
-      // console.log('Artist albums', data.body);
+    .then((data) => {;
       const theAlbums = data.body.items;
       res.render('albums', { theAlbums });
     })
@@ -69,11 +61,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 app.get('/albumtracks/:albumId', (req, res, next) => {
   const albID = req.params.albumId;
-  console.log(albID);
-  // .getArtistAlbums() code goes here
   spotifyApi.getAlbumTracks(albID)
     .then((data) => {
-      console.log('Album tracks', data.body);
       const theTracks = data.body.items;
       res.render('albumtracks', { theTracks });
     })
