@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/artists', (req, res) => {
-console.log("requested : " + req.query.artistx);
+// console.log("requested : " + req.query.artistx);
 
 spotifyApi.searchArtists(req.query.artistx)
     .then(data => {
@@ -42,15 +42,59 @@ spotifyApi.searchArtists(req.query.artistx)
       // console.log("The received data from the API: ", JSON.stringify( data.body.artists.items));
 
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      // let theartists = [3,4,5,6];
+      
       let theartists = data.body.artists.items;
-      console.log(JSON.stringify(theartists));
-      res.render('artists', {ARTISTS: theartists});
+      // console.log(JSON.stringify(theartists));
+      res.render('artists', {theartists});
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     })
 
+});
+
+app.get('/albums/:artistid', (req, res) => {
+  console.log("artist id: " + req.params.artistid);
+
+  
+    spotifyApi.getArtistAlbums(req.params.artistid)
+      .then(function(data) {
+        // console.log('Artist albums', JSON.stringify (data.body.items));
+        let albums = data.body.items;
+        res.render('albums', {albums} );
+      }, function(err) {
+        console.error(err);
+      });
+
+  
+});
+
+app.get('/viewtracks/:albumid', (req, res) => {
+  console.log("albumid from tracks id: " + req.params.albumid);
+  let albumid = req.params.albumid;
+
+  spotifyApi.getAlbum(albumid)
+  .then(function(data) {
+    console.log("Data from ==== " + JSON.stringify(data.body.tracks.items[0]));
+    // let somearr = [2,4,6,8];
+    let other = JSON.stringify(data.body.tracks.items);
+     res.render('viewtracks', {trackArray: data.body.tracks.items} );
+    //  return data.body.tracks.map(function(t) { return t.id; });
+  })
+  // .then(function(trackIds) {
+  //   return spotifyApi.getTracks(trackIds);
+  // })
+  // .then(function(tracksInfo) {
+  //   console.log(tracksInfo);
+  // })
+  .catch(function(error) {
+    console.error(error);
+  });
+
+
+
+  
+  
 });
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
