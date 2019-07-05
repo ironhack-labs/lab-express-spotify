@@ -1,0 +1,193 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat|Work+Sans&display=swap');
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Work Sans';
+  font-weight: 700;
+}
+
+/* ----- NAV BAR ----- */
+nav {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+
+  font-family: 'Montserrat';
+  position: fixed;
+  justify-content: space-between;
+  background-color: #fff;
+  padding: 12.5px 25px;
+  height: 70px;
+  width: 100vw;
+  max-width: 100%;
+  z-index: 9;
+}
+nav figure {
+  width: 120px;
+}
+
+#logo-nav {
+  height: auto;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;  
+  font-size: 1rem;
+  font-weight: 10;
+
+}
+
+nav ul>li {
+  display: inline;
+  margin: 8px;
+}
+
+nav li>a {
+  text-decoration: none;
+  color: #000;
+}
+
+.nav-padding {
+  padding-top: 75px;
+}
+
+/* ---------------------- */
+
+/*----- cardsPartials.hbs -----*/
+img {
+  width: 100%;
+  height: auto;
+}
+
+figure {
+  width: 100%;
+}
+
+#artist-card {
+  width: 25%;
+  margin: 15px 15px 40px;
+  height: 400px;
+}
+
+#artist-info {
+  display: flex;
+  flex-flow: column nowrap;
+  align-items: center;
+  justify-content: space-around;
+
+  text-align: center;
+  color: white;
+  font-size: 0.8rem;
+  width: 100%;
+  height: 25%;
+  margin-top: -4px;
+  background-color: #4d4d4d;
+}
+
+#artist-info p {
+  padding: 10px;
+}
+
+#artist-info a {
+  width: 100px;
+
+  background-color: #ef6866;
+  border-radius: 5px;
+  padding: 3px;
+
+  text-align: center;
+  text-decoration: none;
+  color:white;
+  font-size: 0.7rem;
+}
+
+/*----- artists.hbs and albums.hbs -----*/
+.cards-container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+  align-content: flex-start;
+
+  width: 100vw;
+  max-width: 100%;
+  height: 100vh;
+}
+
+/*----- index.hbs -----*/
+#form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background-image: url('../images/landing.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
+#search-form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+  width: 40%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+#search-form input {
+  border-radius: 5px;
+  border: 1px solid #A9A9A9;
+  padding: 5px 0 5px 10px;
+  font-size: 0.8rem;
+  width: 70%;
+  margin-bottom: 15px;
+}
+
+#search-form button {
+  border-radius: 5px;
+  padding: 5px;
+  background-color: #ef6866;
+  border: none;
+  width: 35%;
+  height: auto;
+  color: white;
+}
+
+/*----- tracksPartials.hbs ----- */
+#tracks-container header {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #494949;
+  width: 100%;
+  padding: 30px 150px 20px 20px;
+  color: #c2c2bf;
+  font-size: 1.1rem;
+
+}
+
+#tracks-container {
+  width: 80%;
+}
+
+#body-tracks {
+  display: flex;
+  justify-content: center;
+}
+
+
+#individual-track-container {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  background-color: #f6f6f6;
+  padding: 10px 20px;
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+}

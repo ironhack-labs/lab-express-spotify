@@ -1,0 +1,17 @@
+<div id="artist-card">
+  <figure>
+    {{#if images.0.url}}
+    <img src="{{images.0.url}}"/>
+    {{else}}
+    <img src="../../images/no-photo.png"/>
+    {{/if}}
+  </figure>
+  <div id="artist-info">
+    <p>{{name}}</p>
+    {{#if album_type}}
+    <a href="/tracks/{{id}}">View Tracks</a>
+    {{else}}
+    <a href="/albums/{{id}}">View Albums</a>
+    {{/if}}
+  </div>
+</div>
