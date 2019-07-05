@@ -1,0 +1,13 @@
+{{#each data.body.artists.items}} 
+
+  <div class="artist-info">
+
+    <img src="{{this.images.[1].url}}" alt="artist-image">
+    <h2>{{this.name}}</h2>
+    <form action="/albums" method="GET">
+    <input type="button" value="View Albums">
+    </form>
+
+  </div>
+
+{{/each}}
