@@ -1,0 +1,11 @@
+<div class="album">
+    {{#each artists}}
+        <div>
+            <img src={{this.images.0.url}} alt="Image not found" onerror="this.src='/images/no-img.jpg';">
+            <div>
+                <h2>{{this.name}}</h2>
+                <a href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

@@ -1,0 +1,119 @@
+html, body{
+    margin: 0px;
+    padding: 0px;
+}
+
+.welcome-screen{
+    background: url(/images/concert.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 750px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.welcome-screen form{
+    background: rgba(255, 255, 255, 0.75);
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+}
+
+#searchBar{
+    width: 50%;
+    height: 25px;
+    padding: 0px 5px;
+    margin: 20px;
+    text-align: center;
+}
+
+.welcome-screen form button{
+    background: blueviolet;
+    width: 150px;
+    height: 40px;
+    color: white;
+    font-size: 16px;
+    font-family: 'Avenir';
+    border: none;
+    border-radius: 20px;
+}
+
+.welcome-screen form button:hover{
+    cursor: pointer;
+    background: rgb(204, 159, 247);
+}
+
+/* ARTIST LIST */
+.artist-container{
+    background: blueviolet;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.artist-list{
+    width: 75%;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.artist-listing{
+    background: gray;
+    width: 30%;
+    height: auto;
+    margin: 1.5%;
+    float: left;
+    border-radius: 4px;
+}
+
+.artist-listing img{
+    width: 100%;
+    float: left;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.contet-bar{
+    width: 100%;
+    height: auto;
+    padding: 0px 0px 20px 0px;
+    float: left;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.contet-bar h2{
+    width: 100%;
+    color: white;
+    font-family: 'Avenir';
+    font-size: 18px;
+    font-weight: 200;
+    text-align: center;
+}
+
+.contet-bar a{
+    background: blueviolet;
+    width: 100px;
+    height: auto;
+    padding: 12px 20px;
+    border-radius: 4px;
+    color: white;
+    font-family: 'Avenir';
+    font-size: 14px;
+    font-weight: 400;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contet-bar a:hover{
+    background: rgb(204, 159, 247);
+}

@@ -1,0 +1,13 @@
+<div class="artist-container">
+    <div class="artist-list">
+        {{#each artists}}
+            <div class="artist-listing">
+                <img src={{this.images.0.url}} alt="Image not found" onerror="this.src='/images/no-img.jpg';">
+                <div class="contet-bar">
+                    <h2>{{this.name}}</h2>
+                    <a href="/albums/{{this.id}}">View Albums</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
