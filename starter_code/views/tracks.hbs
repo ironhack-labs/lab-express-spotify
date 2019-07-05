@@ -1,0 +1,10 @@
+<div class="row">
+  {{#each items}}
+  <div class="cards-container">
+    <h2>{{this.name}}</h2>
+    <audio controls>
+      <source src="{{preview_url}}"/>
+    </audio>
+ </div>
+  {{/each}}
+</div>
