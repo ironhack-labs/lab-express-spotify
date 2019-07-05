@@ -1,0 +1,10 @@
+<div class="artists">
+  {{#each artist}}
+  <div class="artists-box">
+    <h2>{{this.name}} </h2>
+    <img src="{{this.images.0.url}}">
+    <h2>Spotify popularity: {{this.popularity}} </h2>
+    <a href="albums/{{this.id}}" name=""><button>View Albums</button></a>
+  </div>
+  {{/each}}
+</div>
