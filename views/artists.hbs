@@ -1,0 +1,13 @@
+<div style="margin-left: 40%">
+  {{#each Art}}
+  <img style="width:300px" src="{{images.0.url}}">
+  <h2>
+    {{ name }}
+  </h2>
+  <p>
+    <button>
+      <a href="/albums/{{id}}">Link</a>
+    </button>
+  </p>
+  {{/each}}
+</div>
