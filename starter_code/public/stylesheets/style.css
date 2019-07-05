@@ -1,0 +1,99 @@
+.home{
+    background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+    background-size:cover;
+    height:800px;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+}
+
+.input-div{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.6);
+    width:600px;
+    height:200px;
+}
+
+.input-div > button{
+    font-size:15px;
+    font-weight: bold;
+    font-family: inherit;
+    margin-top: 10px;
+    background-color: #ff6666;
+    color: white;
+    padding:10px;
+}
+
+.input-div > input{
+    width:300px;
+    height:25px;
+}
+
+.each-album{
+    display: inline-block;
+    height:425px;
+    width:300px;
+    margin:30px;
+    padding: 10px 40px;
+}
+.each-album > img{
+    height:300px;
+    width:300px;
+}
+.each-album > div{
+    text-align: center;
+    background-color:#4D4D4D;
+    height:80px;
+    margin-top:0;
+    padding:10px;
+}
+
+.each-album h1{
+    font-size: 18px;
+    color:white;
+    margin-top:0;
+}
+
+.each-album a{
+    background-color: #ff6666;
+    text-decoration: none;
+    color:white;
+    padding:5px;
+    border-radius:4px;
+    margin-top:20px;
+}
+
+nav{
+    background-color: #4D4D4D;
+    color:white;
+    height:70px;
+}
+
+nav > ul{
+    display:flex;
+    justify-content: space-between;
+    list-style:none;
+    width:90%;
+    margin:auto 10px;
+    padding:20px 13px;
+}
+
+nav > ul > li{
+    font-size: 30px;
+    color:lightgray;
+}
+
+.track{
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    padding:10px;
+    margin-bottom: 3px;
+}
+
+.track > h1{
+    font-size:20px;
+}
