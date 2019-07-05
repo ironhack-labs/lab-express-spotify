@@ -1,7 +1,9 @@
 body {
-  /* padding: 5%; */
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
+}
+h3 {
+  text-align: center;
 }
 .home-container {
   background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
@@ -13,10 +15,10 @@ body {
   background-color: rgba(255, 255, 255, 0.6);
   width: 50%;
   height: 200px;
-  /* position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); */
+}
+.album-img,
+.artist-img {
+  width: 100%;
 }
 .search-div,
 .search-div form,
@@ -29,12 +31,14 @@ body {
 .search-div form {
   width: 60%;
 }
-.search-btn {
+.btn {
   background-color: #ff6666;
   color: #fff;
   padding: 8px 12px;
   border: solid 1px #ff6666;
-  margin-top: 10px;
+  margin-bottom: 15px;
+  font-weight: bold;
+  text-decoration: none;
 }
 .search-bar {
   padding: 8px 12px;
@@ -47,17 +51,62 @@ body {
 .albums-div {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  padding: 2%;
 }
 .each-artist-div,
 .each-albums-div {
   display: flex;
-  justify-content: center;
   align-items: center;
   flex-flow: column;
   width: 30%;
   margin: 5px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
+  background-color: #4d4d4d;
+  color: #fff;
 }
 .albums-title {
   text-align: center;
+}
+.tracks-div {
+  display: flex;
+  flex-flow: column;
+  width: 90%;
+  margin: 0 auto;
+}
+.tracks-header.each-track-div {
+  background-color: #4a4a4a;
+  color: #f6f6f6;
+  font-size: 20px;
+}
+.each-track-div {
+  width: 100%;
+  display: flex;
+  background-color: #f6f6f6;
+  padding: 5px 0;
+}
+
+.track-title {
+  width: 70%;
+  padding-left: 20px;
+}
+
+@media screen and (max-width: 750px) {
+  .each-artist-div,
+  .each-albums-div {
+    width: 40%;
+  }
+  .each-track-div {
+    flex-flow: column;
+    border: 1px solid darkgrey;
+  }
+  .tracks-header.each-track-div {
+    flex-flow: row;
+  }
+}
+@media screen and (max-width: 650px) {
+  .each-artist-div,
+  .each-albums-div {
+    width: 80%;
+  }
 }

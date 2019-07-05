@@ -1,14 +1,24 @@
 {{!-- <h1 class="albums-title">Albums for: {{albums.[0].artists.[0].name}}</h1> --}}
-<div class="albums-div">
+<div class="tracks-div">
+    <div class="each-track-div tracks-header">
+        <div class="track-title">
+            <h4>Title</h4>
+        </div>
+        <div class="track-preview">
+            <h4>Listen</h4>
+        </div>
+    </div>
     {{#each tracks}}
-    <div class="each-albums-div">
-        {{!-- <img src="{{this.images.[1].url}}"> --}}
-        <h3>{{this.name}}</h3>
-        <audio controls src="{{this.preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-        </audio>
-        {{!-- <a href="/tracks/{{this.id}}">View tracks</a> --}}
+    <div class="each-track-div">
+        <div class="track-title">
+            <p>{{this.name}}</p>
+        </div>
+        <div class="track-preview">
+            <audio controls src="{{this.preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </div>
     </div>
     {{/each}}
 </div>
