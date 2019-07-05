@@ -1,0 +1,14 @@
+{{!-- <h1 class="albums-title">Albums for: {{albums.[0].artists.[0].name}}</h1> --}}
+<div class="albums-div">
+    {{#each tracks}}
+    <div class="each-albums-div">
+        {{!-- <img src="{{this.images.[1].url}}"> --}}
+        <h3>{{this.name}}</h3>
+        <audio controls src="{{this.preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+        {{!-- <a href="/tracks/{{this.id}}">View tracks</a> --}}
+    </div>
+    {{/each}}
+</div>

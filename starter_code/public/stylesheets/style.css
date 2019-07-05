@@ -1,0 +1,63 @@
+body {
+  /* padding: 5%; */
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0;
+}
+.home-container {
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.search-div {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  /* position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); */
+}
+.search-div,
+.search-div form,
+.home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+}
+.search-div form {
+  width: 60%;
+}
+.search-btn {
+  background-color: #ff6666;
+  color: #fff;
+  padding: 8px 12px;
+  border: solid 1px #ff6666;
+  margin-top: 10px;
+}
+.search-bar {
+  padding: 8px 12px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+  width: 100%;
+}
+
+.artists-div,
+.albums-div {
+  display: flex;
+  flex-wrap: wrap;
+}
+.each-artist-div,
+.each-albums-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  width: 30%;
+  margin: 5px;
+  border: 1px solid black;
+}
+.albums-title {
+  text-align: center;
+}
