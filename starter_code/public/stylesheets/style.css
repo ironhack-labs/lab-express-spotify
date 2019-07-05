@@ -12,7 +12,122 @@
   justify-content: center;
   align-content: center;
 }
-#homepage > form{
-  height: 600px;
+#homepage form{
   align-self: center;
+}
+.block{
+  background-color: rgba(255,255,255,0.5);
+  width: 40vw;
+  height: 30vh;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+.block input{
+  line-height: 20px;
+  padding: 5px;
+}
+.block button{
+  background-color: black;
+  color: white;
+  height: 35px;
+  padding: 5px;
+}
+.display-artists{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 30%;
+  margin-right: 3%;
+  margin-bottom: 10%;
+}
+.artist-info{
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.artist-info *{
+  align-self: center;
+}
+.display-artists img{
+  height: 100%;
+  width: 100%;
+}
+#all-artists{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5% 10%;
+}
+.all-albums{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 5% 10%;
+}
+.each-album{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  width: 30%;
+  margin-right: 3%;
+  margin-bottom: 10%;
+}
+.each-album img{
+  height: 400px;
+}
+.album-info{
+  background-color: grey;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-content: center;
+}
+.album-info *{
+  align-self: center;
+}
+.album-info a{
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: white;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+}
+.artist-info a{
+  width: 200px;
+  margin: 5px 0;
+  border-radius: 5px;
+  background-color: white;
+  color: grey;
+  text-align: center;
+  text-decoration: none;
+}
+.songs{
+  margin: 5% 10%;
+}
+.top{
+  height: 50px;
+  background-color: darkgrey;
+  color: white;
+  text-align: center;
+  text-transform: uppercase;
+}
+.each-song{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  height: 80px;
+  padding:0 10px;
+}
+.each-song:nth-child(even){
+  background-color: grey;
+  color: white;
 }
