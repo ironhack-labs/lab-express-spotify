@@ -1,0 +1,19 @@
+<section>
+    <div class="container albums-container">
+        {{#each items}}
+            <div class="card">
+                <div class="card-image">
+                    {{#if this.images.[0].url }}
+                        <img src={{{this.images.[0].url}}}>
+                    {{else}}
+                        <img src="images/album-img.jpg">    
+                    {{/if}}    
+                </div>
+                <div class="card-content">
+                    <span class="card-title">{{this.name}}</span>
+                    <a class="btn" href="/albums/{{id}}">View Albums</a>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</section>

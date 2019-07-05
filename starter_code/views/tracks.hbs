@@ -1,0 +1,23 @@
+<nav>
+    <div class="nav-container">
+        <h3>Title</h3>
+        <h3>Listen</h3>
+    </div>
+</nav>
+
+<section>
+    <div class="tracks-container">
+        {{#each tracks}}
+            {{#if this.preview_url}}
+                <div class="row">
+                    <div class="col s5">
+                        <p class="track-name">{{this.name}}</p>
+                    </div>
+                    <div class="col s3 push-s4">
+                        <audio src={{this.preview_url}} controls></audio>
+                    </div>
+                </div>
+            {{/if}}
+        {{/each}}
+    </div>
+</section>
