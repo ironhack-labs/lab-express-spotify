@@ -1,0 +1,85 @@
+body{
+  margin: 0 auto;
+  font-family: 'Times New Roman', Times, serif;
+}
+
+.header{
+  background-image: url("/images/concertheader.jpeg");
+  background-size: cover;
+  height: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main .container{
+  border: 1px solid white;
+  padding: 20px 20px;
+  width: 600px;
+  height: 200px;
+  background-color: rgb(255,255 ,255,0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  line-height: 5px;
+}
+.container form{
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container input{
+  width: 400px;
+  height: 20px;
+}
+
+.container button{
+  margin-top: 20px;
+  width:155px;
+  height: 30px;
+  color: white;
+  font-size: 15px;
+  background-color: #FA6862;
+ }
+
+ .artistBox{
+   width: 200px;
+   height: 100px;
+   border: 1px solid white;
+   position: relative;
+ }
+
+ .blackbox {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 255px;
+  height: 64px;
+  background-color: gray;
+  color: white;
+  margin-top: -4px;
+}
+
+.blackbox button{
+  width: 110px;
+  color: white;
+  font-size: 12px;
+  background-color: #FA6862;
+}
+
+.blackbox h5{
+    padding: 0 0;
+    margin-bottom: 5px;
+    margin-top: 2px;
+}
+
+
+.artistBox img{
+   width: 255px;
+   height: 300px;
+ }
