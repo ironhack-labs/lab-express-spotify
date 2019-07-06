@@ -30,25 +30,69 @@
       <div v-show="vista==='resultados-buscar'" id="panResultados" style="background-color: #fff">
 
          <div style="text-align: center; margin: 10px">
-            <button @click="onShowFormBuscar($event,null)">
+            <button @click="onShowFormBuscar($event,null)" >
                Buscar Artista
             </button>
 
          </div>
 
-         <div v-for="(item, index) in listaArtistas" class="itemArtista">
+         <div v-for="(artista, index) in listaArtistas" class="itemArtista">
             <div>
-               <h3>{{index+1}}) {{item.name}}</h3>
-               <img :src="item.urlImage" style="width: 250px"/>
+               <h3>{{index+1}}) {{artista.name}}</h3>
+               <p>id: {{artista.id}}</p>
+               <img :src="artista.urlImage" style="width: 250px"/>
             </div>
-            <div style="margin-left: 20px">
+            <div style="margin-left: 20px" >
                <!--  Lista de albums-->
-               <button @click="onBuscarAlbums($event,item, false)">Buscar Albums</button>
-               <div v-for ="(album, index) in item.listaAlbums" class="albumItem">
-                  {{album}}
+
+               <p v-show="artista.numAlbums>0">{{artista.numAlbums}} Albums</p>
+
+               <div v-for ="(album, indexAlbum) in artista.albums" class="albumItem"
+                  style="border-bottom: 1px solid #c3c3c3; "
+               >
+
+                  <h5>{{indexAlbum+1}}) {{album.name}} </h5>
+                  <p>id: {{album.id}}</p>
+                  <div style="display: flex; margin:5px">
+                     <div>
+
+                        <img :src="album.images[0].url" style="width: 150px">
+                     </div>
+                     <div style="padding-left: 5px">
+
+                        <p v-show="album.numTracks>0">{{album.numTracks}} Tracks</p>
+
+                        <div v-for="(t, indexTrack) in album.tracks">
+
+                           {{indexTrack+1}}) {{t.name}}<br/>
+                           <audio controls>
+                              <source :src="t.preview_url" type="audio/mpeg">
+                           </audio>
+
+                           <hr/>
+                        </div>
+
+
+
+                        <button @click="onBuscarTracks($event,album,false)">
+                           Ver <span v-show="album.numTracks>0">más</span> Tracks
+                        </button>
+
+                     </div>
+                  </div>
+
+
+
                </div>
 
+               <button @click="onBuscarAlbums($event,artista, false)">
+                  Mostrar
+                  <span v-show="artista.numAlbums>0">más</span>
+                  Albums
+               </button>
+
             </div>
+
 
 
          </div>
