@@ -5,9 +5,20 @@
   <div class="formback">
   <form action="/artists" method="GET" >
     {{!-- <label for="artistx">Search</label> --}}
-    <input class="col-12" id="artistx" type="text" name="artistx" value="The Beatles">
+    <div class="container pt-5">
+      <div class="row">
+        <div class="col-2"></div>
+        <input class="col-8" id="artistx" type="text" name="artistx" value="The Beatles">
+        <div class="col-2"></div>
 
-    <input class="btn btn-danger col-12 mt-3" type="submit" value="Search for an artist">
+      </div>
+      <div class="row">
+        <div class="col-4"></div>
+        <input class="btn btn-danger col-4 mt-3" type="submit" value="Search for an artist">
+        <div class="col-4"></div>
+
+      </div>
+    </div>
   </form>
 </div>
 
