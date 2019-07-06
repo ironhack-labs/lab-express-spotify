@@ -1,24 +1,43 @@
-<h1>view tracks ..</h1>
+
 
 <div class="container">
+  <div class="row"><h1>View tracks</h1></div>
   <div class="row">
-    {{!-- <div class="card-deck"> --}}
-        {{#each trackArray }}
-      
-          {{!-- {{> _onealbum this }} --}}
-         
-         <figure>
-    <figcaption>Listen to the T-Rex: {{ this.name }}</figcaption>
-    <audio
-        controls
-        src="{{ this.preview_url }}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</figure>
-<p>{{ this.preview_url }}</p>
-        {{/each}}
+   <table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title </th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each trackArray }}
+    <tr>
+      {{!-- <th scope="row"></th> --}}
+      <td>{{ this.name }}</td>
+      <td> <audio
+             controls
+                  src="{{ this.preview_url }}">
+                  Your browser does not support the
+                  <code>audio</code> element.
+          </audio>
+      </td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
 
-    {{!-- </div> --}}
+    {{!-- {{#each trackArray }}
+      <figure>
+        <figcaption>Listen to the {{ this.name }}</figcaption>
+          <audio
+             controls
+                  src="{{ this.preview_url }}">
+                  Your browser does not support the
+                  <code>audio</code> element.
+          </audio>
+      </figure>
+         
+    {{/each}} --}}
   </div>
 </div>
