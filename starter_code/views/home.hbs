@@ -1,8 +1,16 @@
-<h1>I am home!</h1>
+{{!-- <h1>Home Page!</h1> --}}
+<div class="container-fluid">
+  <div class="row d-flex justify-content-center align-items-center home-back" >
 
-<form action="/artists" method="GET">
-  {{!-- <label for="artistx">Search</label> --}}
-  <input id="artistx" type="text" name="artistx" value="beatles">
+  <div class="formback">
+  <form action="/artists" method="GET" >
+    {{!-- <label for="artistx">Search</label> --}}
+    <input class="col-12" id="artistx" type="text" name="artistx" value="The Beatles">
 
-  <input type="submit" value="Search for an artist">
-</form>
+    <input class="btn btn-danger col-12 mt-3" type="submit" value="Search for an artist">
+  </form>
+</div>
+
+</div>
+</div>
+</div>

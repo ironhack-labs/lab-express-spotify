@@ -1,0 +1,15 @@
+.home-back {
+  height: 700px;
+  width: auto;
+  /* background-color: blue; */
+  background-image: url(/images/concert.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+
+}
+
+.formback {
+  height: 150px;
+  width: 600px;
+  background-color:white;
+}
