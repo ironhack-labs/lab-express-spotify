@@ -1,0 +1,10 @@
+poner en el directorio superior
+
+credenciales-spotify.json
+
+con el contenido
+
+{
+    "clientId": x,
+    "clientSecret": x
+}
