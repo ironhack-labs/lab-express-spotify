@@ -1,0 +1,20 @@
+
+
+<div class="track-container">
+
+
+    <div class="track-header">
+      <h2 id="title">Title</h2>
+      <h2 id="listen">Listen</h2>
+    </div>
+
+     {{!-- <div class="tracks"> --}}
+      {{#each tracks}}
+        <div class="each-track">
+          <p>{{this.name}}</p>
+          <audio controls src="{{this.preview_url}}"></audio>
+        </div>
+      {{/each}}
+    {{!-- </div> --}}
+
+</div>

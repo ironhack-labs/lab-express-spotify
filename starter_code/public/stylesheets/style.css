@@ -1,0 +1,228 @@
+body{
+  margin: 0 auto;
+  font-family: 'Roboto';
+}
+
+.search-page{
+  background-image: url(/images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg);
+  height: 57vw;
+  width: 100vw;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-page > form{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.425);
+  width: 775px;
+  height: 200px;
+}
+
+#submit{
+  background-color: rgb(250, 98, 81);
+  color: white;
+  padding: 10px;
+  margin-top: 10px;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+#search{
+  width: 380px;
+  height: 32px;
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* .body-div{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  align-items: center;
+} */
+
+.artist-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+.artist-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: baseline; */
+  align-content: center;
+  /* align-items: center; */
+  width: 450px;
+  height: 600px;
+  padding: 40px;
+}
+
+.artist-info > img{
+  width: 450px;
+  height: 450px;
+}
+
+
+.album-link{
+  background-color: rgb(73, 73, 73);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 15px;
+  text-align: center;
+}
+
+.album-link > h3{
+  font-size: 27px;
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+
+.album-link > button{
+  background-color: rgb(250, 98, 81);
+  padding: 10px;
+  border: none;
+  margin-top: 40px;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.album-link > button > a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+
+.album-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin-top: 80px;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.album-info{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* justify-content: baseline; */
+  align-content: center;
+  /* align-items: center; */
+  width: 450px;
+  height: 600px;
+  padding: 40px;
+}
+
+.album-info > img{
+  width: 450px;
+  height: 450px;
+}
+
+
+.track-link{
+  background-color: rgb(73, 73, 73);
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: fit-content;
+  padding: 15px;
+  text-align: center;
+}
+
+.track-link > h3{
+  font-size: 27px;
+  margin-top: 0;
+  margin-bottom: 75px;
+}
+
+.track-link > button{
+  background-color: rgb(250, 98, 81);
+  padding: 10px;
+  border: none;
+  margin-top: 40px;
+  border-radius: 8px;
+  position: absolute;
+}
+
+.track-link > button > a{
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+}
+
+
+
+
+
+
+
+.track-container{
+  margin: 0 20px;
+}
+
+.track-header{
+  background-color: rgb(73, 73, 73);
+  /* float: top;
+  position: static; */
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#listen{
+  margin: 0;
+  padding: 0 100px;
+  color: rgb(201, 200, 200);
+  font-size: 38px;
+}
+
+#title{
+  margin: 0;
+  padding: 0 125px;
+  color: rgb(201, 200, 200);
+  font-size: 38px;
+}
+
+.each-track{
+  background-color: rgb(247, 242, 242);
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  align-items: center;
+}
+
+.each-track > p{
+  font-size: 30px;
+  font-weight: bold;
+  padding-left: 25px;
+  color: rgb(31, 30, 30);
+}
+
+.each-track > audio{
+  margin-right: 10px;
+}
+
+
+
+
+
