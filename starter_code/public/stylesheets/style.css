@@ -1,9 +1,9 @@
-body{
+body {
   margin: 0 auto;
-  font-family: 'Times New Roman', Times, serif;
+  font-family: open Arial, Helvetica, sans-serif;
 }
 
-.header{
+.header {
   background-image: url("/images/concertheader.jpeg");
   background-size: cover;
   height: 800px;
@@ -12,18 +12,19 @@ body{
   align-items: center;
 }
 
-main .container{
+main .container {
   border: 1px solid white;
   padding: 20px 20px;
   width: 600px;
   height: 200px;
-  background-color: rgb(255,255 ,255,0.5);
+  background-color: rgb(255, 255, 255, 0.5);
   display: flex;
   justify-content: center;
   align-items: center;
   line-height: 5px;
 }
-.container form{
+
+.container form {
   width: 200px;
   display: flex;
   flex-direction: column;
@@ -31,28 +32,26 @@ main .container{
   align-items: center;
 }
 
-.container input{
+.container input {
   width: 400px;
   height: 20px;
 }
 
-.container button{
+.container button {
   margin-top: 20px;
-  width:155px;
+  width: 155px;
   height: 30px;
   color: white;
   font-size: 15px;
   background-color: #FA6862;
- }
+}
 
- .artistBox{
-   width: 200px;
-   height: 100px;
-   border: 1px solid white;
-   position: relative;
- }
+.artistBox {
+  border: 1px solid white;
+  padding: 0 0;
+}
 
- .blackbox {
+.blackbox {
   display: flex;
   justify-content: center;
   align-content: center;
@@ -60,26 +59,31 @@ main .container{
   flex-direction: column;
   width: 255px;
   height: 64px;
-  background-color: gray;
+  background-color: #4D4D4D;
   color: white;
   margin-top: -4px;
 }
 
-.blackbox button{
+.blackbox button {
   width: 110px;
   color: white;
   font-size: 12px;
   background-color: #FA6862;
+  border-radius: 5px;
+  border: 1px solid #FA6862;
 }
 
-.blackbox h5{
-    padding: 0 0;
-    margin-bottom: 5px;
-    margin-top: 2px;
+.blackbox h5 {
+  padding: 0 0;
+
 }
 
 
-.artistBox img{
-   width: 255px;
-   height: 300px;
- }
+.artistBox img {
+  width: 255px;
+  height: 300px;
+}
+
+/* .eachartists{
+   width: 700px;
+ } */

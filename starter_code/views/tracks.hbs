@@ -1,0 +1,11 @@
+
+
+{{#each data.body.items}}
+<div>
+    <span> Listen to {{this.artist}}</span>
+    <audio
+        controls
+        src="{{this.preview_url}}">
+    </audio>
+</div>
+{{/each}}
