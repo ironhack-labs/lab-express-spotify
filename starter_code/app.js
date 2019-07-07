@@ -41,9 +41,10 @@ app.post('/artists', (req, res, next) => {
  
   spotifyApi.searchArtists(req.body.artistSearch)
     .then(data => {
-      console.log("The received data from the API: ", data.body);
+      console.log("The received data from the API: ", data.body.artists.items);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render('artists', {artist: data.body.artists.items});
+      
+      res.render('artists', {artist: data.body.artists.items });
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);

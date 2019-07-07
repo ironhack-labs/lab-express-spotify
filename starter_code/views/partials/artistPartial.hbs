@@ -1,8 +1,14 @@
-<figure class="artist-result" style="background-image: url({{ this.images.0.url }})">
-    <figcaption>
+<div class="container-box">
+    {{#if this.images.0.url}}
+    <img class="image-result" src="{{this.images.0.url}}">
+    {{else}}
+    <img class="image-result" src="https://developer.spotify.com/assets/branding-guidelines/icon1@2x.png">
+    {{/if}}
+    
+    <div class="description">
         <p>{{ this.name }}</p>
         <button>
             <a href="/albums/{{ this.id }}">View Albums</a>
-            </button>
-    </figcaption>
-</figure>
+        </button>
+    </div>
+</div>

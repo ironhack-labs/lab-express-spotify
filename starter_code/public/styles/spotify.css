@@ -1,5 +1,6 @@
 * {
     font-family: "Helvetica";
+    margin: 0;
 }
 
 main.home {
@@ -11,6 +12,13 @@ main.home {
     justify-content: center;
     text-align: center;
     align-items: center;
+}
+
+.container-box {
+    display: inline-block;
+    width: 20%;
+    margin: 2.5%;
+    height: 25vw;
 }
 
 .search {
@@ -37,13 +45,56 @@ main.home {
 }  
 
 .artist-list {
-    width: 100%;
     /* display: flex; */
+    padding: 1% 5%;
+    text-align: center;
 }
 
-.artist-result {
+.image-result {
+    width: 100%;
+    display: block;
+}
+
+.description {
+    width: 100%;
+    background-color: #4d4d4d;
+    color: white;
+    font-weight: bold;
+    padding: 2.5% 0;
+    font-size: 20px;
+}
+
+.description button {
+    background-color: #FA6862;
+    border: none;
+    padding: 2.5%;
+    border-radius: 5px;
+    font-size: 80%;
+}
+
+.description a {
+    color: white;
+    text-decoration: none;
+}
+
+.top-bar {
+    background-color: #4a4a4a;
+    color: #c3c3c3;
+    display: flex;
+    justify-content: space-between;
+    padding: 2.5%;
+}
+
+/* .top-bar h2 {
     width: 20%;
-    height: 20vw;
-    display: inline-block;
-    background-size: cover;
+    text-align: center;
+} */
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    margin: 1% 0;
+    align-items: center;
+    padding: 0 1.5%;
 }
