@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Spotify</title>
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/4.0/examples/cover/cover.css">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+
+<body class="text-center" data-gr-c-s-loaded="true">
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+
+
+        <main role="main" class="inner cover">
+            <ul class="flex-container-track">
+                {{#each track}}
+                <li class="flex-item-track">
+                    <h2> {{{this.name}}}</h2>
+                   
+                    <figure>
+                    
+                        <audio
+                            controls
+                            src="{{this.preview_url}}">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                        </audio>
+                    </figure>
+                    
+                    
+                    
+                </li>
+                {{/each}}
+            </ul>
+        </main>
+
+
+    </div>
+
+
+
+</body>
+
+</html>
