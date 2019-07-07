@@ -1,0 +1,106 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  font-family: sans-serif;
+}
+
+.home {
+  background-image: linear-gradient(rgba(0, 0, 0, .5), rgba(0, 0, 0, .5)), url('../images/spotify-bg.jpeg');
+  background-position: center center;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home input {
+  width: 30rem;
+  height: 3rem;
+  padding: 1rem;
+}
+
+.home button {
+  height: 3rem;
+  padding: 0 1rem;
+  background: #1db954;
+  border: none;
+  color: #fff;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+article {
+  min-height: 100%;
+}
+
+.content-wrapper {
+  padding: 3rem 20%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.artists-albums {
+  text-align: center;
+  margin: 2rem;
+}
+
+.artists-albums img {
+  width: 250px;
+}
+
+.artists-albums p {
+  width: 250px;
+  margin: 0 auto;
+  background: #1db954;
+  color: #fff;
+  padding: .5rem 1rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+  font-weight: 600;
+}
+
+h1 {
+  padding: 2rem 5rem;
+}
+
+.view {
+  color: #fff;
+  text-decoration: none;
+  display: block;
+  padding: .5rem;
+  background: #1d1d1d;
+  border-radius: 0 0 1rem 1rem;
+}
+
+.tracks {
+  width:  100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background: #1db954;
+  /* border-radius: 0 2rem 2rem 0; */
+  padding: 1rem;
+  border-bottom: 2px solid #fff;
+}
+
+.tracks p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.tracks audio {
+  width: 50%;
+}
+

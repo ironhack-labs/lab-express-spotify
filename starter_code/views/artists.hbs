@@ -1,0 +1,17 @@
+<article>
+  <h1>Resultados:</h1>
+  <div class="content-wrapper">
+    {{#each artists}}
+      <section class="artists-albums"> 
+        {{#if this.images.[1]}}
+          <img src="{{this.images.[1].url}}" alt="">
+        {{else}}
+        <img src="../images/not-found.png" alt="">
+        {{/if}}
+
+        <p>{{this.name}}</p>
+        <a class="view" href="/albums/{{this.id}}">View Albums</a>
+      </section>
+    {{/each}}
+  </div>
+</article>    

@@ -1,0 +1,23 @@
+{{!-- {{#each albums}}
+  <p>{{this.name}}</p>
+  <img src="{{this.images.[1].url}}" alt="">
+  <a href="/tracks/{{this.id}}">View Tracks</a>
+{{/each}} --}}
+
+
+<article>
+  <h1>Albums:</h1>
+  <div class="content-wrapper">
+    {{#each albums}}
+    <section class="artists-albums">
+      {{#if this.images.[1].url}}
+      <img src="{{this.images.[1].url}}" alt="">
+      {{else}}
+      <img src="../images/not-found.png" alt="">
+      {{/if}}
+      <p>{{this.name}}</p>
+      <a class="view" href="/tracks/{{this.id}}">View tracks</a>
+    </section>
+    {{/each}}
+  </div>
+</article>
