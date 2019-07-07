@@ -2,9 +2,9 @@
   <h1>
     Albums for: The Beatles
   </h1>
-  <div>
-    <img src="{{this.images.0.url}}" alt="">
-    <h4>{{this.name}}</h4>
-    <a class="album-button" href="/albums/:artistId">View Tracks</a>
-  </div>
+
+  {{#each theAlbums}}
+  {{>albumsPartials}}
+  {{/each}}
+
 </div>
