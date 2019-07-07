@@ -1,0 +1,137 @@
+@import url("https://fonts.googleapis.com/css?family=Lato&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Lato", sans-serif;
+}
+
+.home {
+  background-image: linear-gradient(
+      rgba(228, 228, 228, 0.2),
+      rgba(228, 228, 228, 0.2)
+    ),
+    url("/images/concert.jpg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search {
+  background-color: rgba(255, 255, 255, 0.75);
+  padding: 50px 150px 75px 150px;
+  border-radius: 5px;
+}
+
+.search form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.search form input {
+  width: 350px;
+  padding: 10px 20px;
+  margin: 20px 0;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: none;
+}
+
+button,
+input:focus {
+  outline: none;
+}
+button {
+  width: 150px;
+  padding: 15px;
+  background-color: #664482;
+  color: #fff;
+  border-radius: 10px;
+  border: none;
+  font-size: 15px;
+}
+
+button a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.artist,
+.albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px;
+  border-radius: 5px;
+}
+
+.artist img {
+  width: 300px;
+}
+
+.albums img {
+  width: 300px;
+}
+.image-container,
+.album-img {
+  width: 300px;
+  height: 300px;
+  overflow: hidden;
+  border-radius: 5px 5px 0px 0px;
+}
+.artist-content,
+.album-content {
+  background-color: #474747;
+  width: 300px;
+  text-align: center;
+  color: #fff;
+  padding-bottom: 20px;
+  border-radius: 0 0 5px 5px;
+}
+
+.artist-content h2 {
+  margin: 10px;
+}
+.all-artists,
+.all-albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* background-color: #664482; */
+}
+
+.all-albums {
+  border-radius: 10px;
+  margin: 0;
+}
+
+.track-title {
+  display: flex;
+  justify-content: space-evenly;
+  background-color: #474747;
+  color: #fff;
+}
+
+.music {
+  display: flex;
+  justify-content: space-between;
+  width: 50%;
+  background-color: #979696;
+  color: #fff;
+  padding: 20px;
+  margin: 10px;
+  border-radius: 10px;
+}
+
+.all-music {
+  display: flex;
+  justify-content: flex-start;
+  flex-direction: column;
+  align-items: center;
+  background-color: #664482;
+  min-height: 100vh;
+  padding-top: 10px;
+}
