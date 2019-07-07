@@ -84,6 +84,24 @@ main .container {
   height: 300px;
 }
 
-/* .eachartists{
-   width: 700px;
- } */
+.greybox{
+ border: 1px solid #4D4D4D;
+ height: 100px;
+ font-size: 30px;
+ color: white;
+ background-color: #4D4D4D;
+ display: flex;
+ justify-content: space-between;
+ align-items: center;
+ 
+}
+
+.greybox span{
+  margin: 0px 60px;
+}
+
+.music{
+  display: flex;
+  justify-content: space-between;
+  margin: 30px 20px;
+}

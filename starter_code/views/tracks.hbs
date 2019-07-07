@@ -1,11 +1,10 @@
-
-
-{{#each data.body.items}}
-<div>
-    <span> Listen to {{this.artist}}</span>
-    <audio
-        controls
-        src="{{this.preview_url}}">
-    </audio>
+<div class="greybox">
+  <span>Title</span>
+  <span>Listen</span>
 </div>
+
+<div class="hello">
+{{#each track}}
+{{> tracksPartial}}
 {{/each}}
+</div>
