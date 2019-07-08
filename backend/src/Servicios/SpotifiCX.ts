@@ -56,7 +56,7 @@ const buscarArtista = async (texto: string, numPagina: number): Promise<any> => 
        })
        .catch((error: Error) => {
 
-          if (error.message === "X") {
+          if (error.message === "Unauthorized") {
              isTokenSet = false;
              return buscarArtista(texto, numPagina);
           }
@@ -83,7 +83,7 @@ const artistAlbums = async (idArtista: string, numPagina: number): Promise<any> 
        })
        .catch((error: Error) => {
 
-          if (error.message === "X") {
+          if (error.message === "Unauthorized") {
              isTokenSet = false;
              return artistAlbums(idArtista, numPagina);
           }
@@ -110,7 +110,7 @@ const tracks = async (idAlbum: string, numPagina: number): Promise<any> => {
        })
        .catch((error: Error) => {
 
-          if (error.message === "X") {
+          if (error.message === "Unauthorized") {
              isTokenSet = false;
              return tracks(idAlbum, numPagina);
           }
