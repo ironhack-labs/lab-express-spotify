@@ -73,7 +73,7 @@ app.post('/artists', (req, res, next) => {
       spotifyApi.getAlbumTracks(newID)
       .then(function(data) {
         console.log(data.body);
-        res.render('tracks', {track: data.body});
+        res.render('tracks', {track:data});
       }, function(err) {
         console.log('Something went wrong!', err);
       });

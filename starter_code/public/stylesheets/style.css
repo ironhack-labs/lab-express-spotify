@@ -49,6 +49,7 @@ main .container {
 .artistBox {
   border: 1px solid white;
   padding: 0 0;
+  margin-top: 50px;
 }
 
 .blackbox {
@@ -58,7 +59,7 @@ main .container {
   align-items: center;
   flex-direction: column;
   width: 255px;
-  height: 64px;
+  height: 80px;
   background-color: #4D4D4D;
   color: white;
   margin-top: -4px;
@@ -73,8 +74,20 @@ main .container {
   border: 1px solid #FA6862;
 }
 
+.eachbox  {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 30px 210px;
+
+  justify-content: space-evenly;
+  
+}
+
+
 .blackbox h5 {
   padding: 0 0;
+  margin-bottom: 5px;
 
 }
 
