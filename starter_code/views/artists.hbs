@@ -2,16 +2,15 @@
 <div>
   
   <img src="{{this.images.[0].url}}" alt="">
+  <p>{{this.id}}</p>
   <h2>{{this.name}}</h2>
-   <form action="/albums/:{{this.id}}" method="GET"  ></form>
+   {{!-- <form action="/albums/{{this.id}}" method="GET">
     <input type="submit" value="Albums">
-  </form>
+  </form> --}}
 
-    {{!-- This gives us all the images and theri URLS --}}
-    {{!-- {{#each this.images}}
-      <p>{{this.url}}</p>
-      <img src="{{this.url}}" alt="">
-    {{/each}} --}}
+   <a href="/albums/{{this.id}}">Albums</a>
+
+
 
 </div>
 {{/each}}
