@@ -1,0 +1,59 @@
+html {
+  height: 100%;
+}
+
+body {
+  height: 100%;
+  padding: 0;
+  margin:0;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+
+.landingpage-container{
+  height: 100%;
+  
+  padding: 0;
+  margin: 0;
+  background-image: url('../images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg');
+  background-size: cover;
+  background-position: center center;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.artist-search-form{
+  height: 125px;
+  width: 50%;
+  background-color: rgba(255,255,255,0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-search-form form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+}
+
+.artist-search-form .search-input{
+  margin-bottom: 5px;
+  width: 100%;
+}
+
+.artist-search-form .search-button{
+  /* width: 35%; */
+  background-color: #FA6862;
+  border: 1px #FA6862 solid;
+  color: white;
+  padding: 5px 7px;
+}
+
+
+

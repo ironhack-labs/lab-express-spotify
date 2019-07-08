@@ -1,12 +1,9 @@
-<h1>This is a Homepage</h1>
 
-<div>
-  <form action="/artists" method="GET"  >
-  {{!-- <label >Search Terms:</label> --}}
-  <input type="text" name="artist">
-
-
-  <input type="submit" value="Search">
-  {{!-- <button type="submit">Search</button> --}}
-</form>
+<div class="landingpage-container">
+  <div class="artist-search-form">
+    <form action="/artists" method="GET"  >
+      <input class="search-input" type="text" name="artist" placeholder="The Doors">
+      <input class="search-button" type="submit" value="Search for an Artist">
+  </form>
+  </div>
 </div>
