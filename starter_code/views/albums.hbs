@@ -1,10 +1,13 @@
-{{!-- <h1>Yeet Albums for  {{data.body.items.[0].artists.[0].name}}</h1> --}}
-
-{{#each data.body.items}}
-<div>
-  <img src="{{this.images.[0].url}}" alt="album cover goes here">
-  <h2>{{this.name}}</h2>
-  <a href="/tracks/{{this.id}}">tracks</a>
+<div class="artists-list-container">
+  {{#each data.body.items}}
+  <div class="artist-card">
+    <img src="{{this.images.[0].url}}" alt="album cover goes here">
+    <div class="artist-card-footer">
+      <h2>{{this.name}}</h2>
+      <a href="/tracks/{{this.id}}">tracks</a>
+    </div>
+  </div>
+  {{/each}}
 </div>
-{{/each}}
+
 

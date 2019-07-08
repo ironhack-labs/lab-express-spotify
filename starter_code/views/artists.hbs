@@ -1,16 +1,17 @@
-{{#each data.body.artists.items}}
-<div>
-  
-  <img src="{{this.images.[0].url}}" alt="">
-  <p>{{this.id}}</p>
-  <h2>{{this.name}}</h2>
-   {{!-- <form action="/albums/{{this.id}}" method="GET">
-    <input type="submit" value="Albums">
-  </form> --}}
+<div class="artists-list-container">
+  {{#each data.body.artists.items}}
+    <div class="artist-card">
+      
+      <img src="{{this.images.[0].url}}" alt="">
+      <div class="artist-card-footer">
+        <h2>{{this.name}}</h2>
+        {{!-- <form action="/albums/{{this.id}}" method="GET">
+          <input type="submit" value="Albums">
+        </form> --}}
 
-   <a href="/albums/{{this.id}}">Albums</a>
-
-
+        <a href="/albums/{{this.id}}">Albums</a>
+      </div>
+    </div>
+  {{/each}}
 
 </div>
-{{/each}}

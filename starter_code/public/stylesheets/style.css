@@ -9,10 +9,15 @@ body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
 }
 
+a{
+  text-decoration: none;
+  color:white;
+}
+
 
 .landingpage-container{
   height: 100%;
-  
+
   padding: 0;
   margin: 0;
   background-image: url('../images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg');
@@ -55,5 +60,69 @@ body {
   padding: 5px 7px;
 }
 
+.artists-list-container{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 10%;
 
+}
 
+.artist-card{
+  width: 27.3333%;
+  /* height: ; */
+  margin: 10px 3%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-end;
+  text-align: center;
+}
+
+.artist-card img {
+  width: 100%;
+}
+
+.artist-card-footer{
+  background-color: #4d4d4d;
+  width: 100%;
+  /* height: 80px; */
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.artist-card h2{
+  font-size: 1.3vw;
+  color: white;
+}
+
+.artist-card a{
+  padding: 2px 4px;
+  background-color: #FA6862;
+  width: 32%;
+  border-radius: 5px;
+  font-size: 1vw;
+  margin-bottom: 10px;
+}
+
+.tracks-header{
+  padding: 0 12% 0 10%;
+  display: flex;
+  justify-content: space-between;
+  background-color: #4a4a4a;
+  color: #BDC1c3;
+}
+
+.tracks-row{
+  padding:5px 2.5% 5px 5%;
+  display: flex;
+  justify-content: space-between;
+  border: 1px rgba(0,0,0,0.1) solid;
+}
+
+.tracks-row span{
+  display: flex;
+  align-items: center;
+}
