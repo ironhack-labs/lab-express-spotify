@@ -13,10 +13,11 @@ const SpotifyWebApi = require('spotify-web-api-node');
 //confirmar que se len las claves desde el path
 //console.log(clavesSpotify);
 const spotifyApi = new SpotifyWebApi(clavesSpotify);
-let numIntentoReconexion = 0;
 //Paso 1 solicitar token de autoriacion, ponerlo como function proque se puede volver a necesitar
+let isTokenSet = false;
 // Retrieve an access token
 const solicitarToken = (callback) => __awaiter(this, void 0, void 0, function* () {
+    let numIntentoReconexion = 0;
     return spotifyApi.clientCredentialsGrant()
         .then((data) => {
         numIntentoReconexion = 0;
@@ -29,9 +30,13 @@ const solicitarToken = (callback) => __awaiter(this, void 0, void 0, function* (
         throw error;
     });
 });
+let numIntentoReconexion = 0;
 const buscarArtista = (texto, numPagina) => __awaiter(this, void 0, void 0, function* () {
     const numItemsXPagina = 20;
     const offset = (numPagina - 1) * numItemsXPagina;
+    if (!isTokenSet) {
+        yield solicitarToken(null);
+    }
     return spotifyApi.searchArtists(texto, { limit: numItemsXPagina, offset })
         .then((data) => {
         return data.body;
@@ -44,6 +49,9 @@ const buscarArtista = (texto, numPagina) => __awaiter(this, void 0, void 0, func
 const artistAlbums = (idArtista, numPagina) => __awaiter(this, void 0, void 0, function* () {
     const numItemsXPagina = 10;
     const offset = (numPagina - 1) * numItemsXPagina;
+    if (!isTokenSet) {
+        yield solicitarToken(null);
+    }
     return spotifyApi.getArtistAlbums(idArtista, { limit: numItemsXPagina, offset })
         .then((data) => {
         return data.body;
@@ -56,6 +64,9 @@ const artistAlbums = (idArtista, numPagina) => __awaiter(this, void 0, void 0, f
 const tracks = (idAlbum, numPagina) => __awaiter(this, void 0, void 0, function* () {
     const numItemsXPagina = 10;
     const offset = (numPagina - 1) * numItemsXPagina;
+    if (!isTokenSet) {
+        yield solicitarToken(null);
+    }
     return spotifyApi.getAlbumTracks(idAlbum, { limit: numItemsXPagina, offset: offset })
         .then((data) => {
         return data.body;
@@ -65,17 +76,10 @@ const tracks = (idAlbum, numPagina) => __awaiter(this, void 0, void 0, function*
         throw error;
     });
 });
-const reintentarConexion = function (callback) {
-    numIntentoReconexion++;
-    if (numIntentoReconexion < 3) {
-        solicitarToken(callback);
-    }
-};
 exports.default = {
     solicitarToken,
     buscarArtista,
     artistAlbums,
-    tracks,
-    reintentarConexion
+    tracks
 };
 //# sourceMappingURL=SpotifiCX.js.map

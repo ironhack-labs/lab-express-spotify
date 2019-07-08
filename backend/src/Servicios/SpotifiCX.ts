@@ -10,20 +10,22 @@ const SpotifyWebApi = require('spotify-web-api-node');
 
 const spotifyApi = new SpotifyWebApi(clavesSpotify);
 
-let numIntentoReconexion = 0;
 
 //Paso 1 solicitar token de autoriacion, ponerlo como function proque se puede volver a necesitar
 
+let isTokenSet = false;
+let numIntentoReconexion = 0;
+
 
 // Retrieve an access token
-const solicitarToken = async (callback:any) => {
+const solicitarToken = async (callback: any) => {
 
    return spotifyApi.clientCredentialsGrant()
        .then((data: any) => {
           numIntentoReconexion = 0;
           spotifyApi.setAccessToken(data.body['access_token']);
 
-          if(callback){
+          if (callback) {
              callback();
           }
 
@@ -33,16 +35,31 @@ const solicitarToken = async (callback:any) => {
        })
 };
 
-const buscarArtista = async (texto: string, numPagina:number): Promise<any> => {
+let setTokenSet = () => {
+   isTokenSet = true;
+};
+
+const buscarArtista = async (texto: string, numPagina: number): Promise<any> => {
+
 
    const numItemsXPagina: number = 20;
    const offset: number = (numPagina - 1) * numItemsXPagina;
 
-   return spotifyApi.searchArtists(texto,{limit: numItemsXPagina, offset})
+   if (!isTokenSet) {
+      await solicitarToken(setTokenSet);
+   }
+
+   return spotifyApi.searchArtists(texto, {limit: numItemsXPagina, offset})
        .then((data: any) => {
           return data.body;
        })
        .catch((error: Error) => {
+
+          if (error.message === "X") {
+             isTokenSet = false;
+             return buscarArtista(texto, numPagina);
+          }
+
           console.log("The error while searching artists occurred: ", error);
           throw error;
        })
@@ -51,14 +68,24 @@ const buscarArtista = async (texto: string, numPagina:number): Promise<any> => {
 
 const artistAlbums = async (idArtista: string, numPagina: number): Promise<any> => {
 
+
    const numItemsXPagina: number = 10;
    const offset: number = (numPagina - 1) * numItemsXPagina;
+
+   if (!isTokenSet) {
+      await solicitarToken(setTokenSet);
+   }
 
    return spotifyApi.getArtistAlbums(idArtista, {limit: numItemsXPagina, offset})
        .then((data: any) => {
           return data.body;
        })
        .catch((error: Error) => {
+
+          if (error.message === "X") {
+             isTokenSet = false;
+             return artistAlbums(idArtista, numPagina);
+          }
 
           console.log("The error while searching artists occurred: ", error);
           throw error;
@@ -68,24 +95,28 @@ const artistAlbums = async (idArtista: string, numPagina: number): Promise<any> 
 
 const tracks = async (idAlbum: string, numPagina: number): Promise<any> => {
 
+
    const numItemsXPagina: number = 10;
    const offset = (numPagina - 1) * numItemsXPagina;
+
+   if (!isTokenSet) {
+      await solicitarToken(setTokenSet);
+   }
 
    return spotifyApi.getAlbumTracks(idAlbum, {limit: numItemsXPagina, offset: offset})
        .then((data: any) => {
           return data.body;
        })
        .catch((error: Error) => {
+
+          if (error.message === "X") {
+             isTokenSet = false;
+             return tracks(idAlbum, numPagina);
+          }
+
           console.log("The error while searching artists occurred: ", error);
           throw error;
        })
-};
-
-const reintentarConexion = function ( callback:any) {
-   numIntentoReconexion++;
-   if(numIntentoReconexion<3){
-      solicitarToken(callback);
-   }
 };
 
 
@@ -93,6 +124,5 @@ export default {
    solicitarToken,
    buscarArtista,
    artistAlbums,
-   tracks,
-   reintentarConexion
+   tracks
 }
