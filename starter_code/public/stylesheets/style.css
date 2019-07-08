@@ -21,6 +21,7 @@
   height: 30vh;
   align-self: center;
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-content: center;
 }
