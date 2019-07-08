@@ -1,0 +1,24 @@
+body {
+ margin: 0;
+ padding: 0;
+}
+
+.searchbox {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  background-image: url('/images/background.jpg');
+  background-size: cover;
+}
+
+.searchbox-bg {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: lightgray;
+  opacity: 0.7;
+  padding: 60px 140px;
+}
