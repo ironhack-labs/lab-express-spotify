@@ -3,7 +3,8 @@
 /**
  * Created by David on 27/06/2019.
  */
-const urlApi = 'http://localhost:3010/api/';
+const urlApi = 'http://52.37.165.46:3001/api/';
+//const urlApi = 'http://localhost:3001/api/';
 
 
 const app = new Vue({
