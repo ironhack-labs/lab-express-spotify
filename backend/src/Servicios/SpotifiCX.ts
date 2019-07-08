@@ -1,6 +1,6 @@
 "use strict";
 
-const clavesSpotify = require('../../../../../app/credenciales-spotify.json');
+const clavesSpotify = require('../../../../../apps/credenciales-spotify.json');
 
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -23,6 +23,7 @@ const solicitarToken = async (callback: any) => {
    return spotifyApi.clientCredentialsGrant()
        .then((data: any) => {
           numIntentoReconexion = 0;
+          console.log("Token Recibido");
           spotifyApi.setAccessToken(data.body['access_token']);
 
           if (callback) {
