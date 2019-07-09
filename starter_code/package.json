@@ -14,6 +14,7 @@
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "prettyjson": "^1.2.1",
-    "spotify-web-api-js": "^1.2.0"
+    "spotify-web-api-js": "^1.2.0",
+    "spotify-web-api-node": "^4.0.0"
   }
 }

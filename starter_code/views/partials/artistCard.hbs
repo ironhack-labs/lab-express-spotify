@@ -1,7 +1,22 @@
-<div class="artist-card" >
-  <img class="card-img" src="{{this.images.0.url}}" alt="{{this.name}}">
-  <div class="card-text">
-    <h4 class="card-title">{{this.name}}</h4>
-    <a href="/albums/{{this.id}}">View Albums</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+<body>
+  <div class="artist-card">
+    {{#if this.images.0.url}}
+      <img class="artist-card-img" src="{{this.images.0.url}}" alt="{{this.name}}">
+    {{else}}
+      <img class="artist-card-img" src="/images/unavailable-image.jpg" alt="{{this.name}}">
+    {{/if}}
+    <div class="artist-card-text">
+      <h4 class="artist-card-title">{{this.name}}</h4>
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
   </div>
-</div>
+</body>
+</html>

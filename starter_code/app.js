@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
 const bodyParser = require('body-parser');
@@ -14,8 +15,8 @@ hbs.registerPartials(__dirname + '/views/partials');
 
 
 const spotifyApi = new SpotifyWebApi({
-  clientId: credentials.clientId,
-  clientSecret: credentials.clientSecret,
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
 });
 
 // Retrieve an access token
