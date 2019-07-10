@@ -16,6 +16,8 @@ const spotifyApi = new SpotifyWebApi(clavesSpotify);
 //Paso 1 solicitar token de autoriacion, ponerlo como function proque se puede volver a necesitar
 let isTokenSet = false;
 let numIntentoReconexion = 0;
+let tsToken = 0;
+let lapso = 1000 * 60 * 30;
 // Retrieve an access token
 const solicitarToken = (callback) => __awaiter(this, void 0, void 0, function* () {
     return spotifyApi.clientCredentialsGrant()
@@ -37,7 +39,8 @@ let setTokenSet = () => {
 const buscarArtista = (texto, numPagina) => __awaiter(this, void 0, void 0, function* () {
     const numItemsXPagina = 20;
     const offset = (numPagina - 1) * numItemsXPagina;
-    if (!isTokenSet) {
+    let tsNow = (new Date).getTime();
+    if ((tsNow - tsToken) > lapso) {
         yield solicitarToken(setTokenSet);
     }
     return spotifyApi.searchArtists(texto, { limit: numItemsXPagina, offset })
@@ -45,18 +48,21 @@ const buscarArtista = (texto, numPagina) => __awaiter(this, void 0, void 0, func
         return data.body;
     })
         .catch((error) => {
-        if (error.message === "X") {
+        if (error.message === "Unauthorized") {
             isTokenSet = false;
             return buscarArtista(texto, numPagina);
         }
-        console.log("The error while searching artists occurred: ", error);
-        throw error;
+        else {
+            console.log("The error while searching artists occurred: ", error);
+            throw error;
+        }
     });
 });
 const artistAlbums = (idArtista, numPagina) => __awaiter(this, void 0, void 0, function* () {
     const numItemsXPagina = 10;
     const offset = (numPagina - 1) * numItemsXPagina;
-    if (!isTokenSet) {
+    let tsNow = (new Date).getTime();
+    if ((tsNow - tsToken) > lapso) {
         yield solicitarToken(setTokenSet);
     }
     return spotifyApi.getArtistAlbums(idArtista, { limit: numItemsXPagina, offset })
@@ -64,18 +70,21 @@ const artistAlbums = (idArtista, numPagina) => __awaiter(this, void 0, void 0, f
         return data.body;
     })
         .catch((error) => {
-        if (error.message === "X") {
+        if (error.message === "Unauthorized") {
             isTokenSet = false;
             return artistAlbums(idArtista, numPagina);
         }
-        console.log("The error while searching artists occurred: ", error);
-        throw error;
+        else {
+            console.log("The error while searching artists occurred: ", error);
+            throw error;
+        }
     });
 });
 const tracks = (idAlbum, numPagina) => __awaiter(this, void 0, void 0, function* () {
     const numItemsXPagina = 10;
     const offset = (numPagina - 1) * numItemsXPagina;
-    if (!isTokenSet) {
+    let tsNow = (new Date).getTime();
+    if ((tsNow - tsToken) > lapso) {
         yield solicitarToken(setTokenSet);
     }
     return spotifyApi.getAlbumTracks(idAlbum, { limit: numItemsXPagina, offset: offset })
@@ -83,12 +92,14 @@ const tracks = (idAlbum, numPagina) => __awaiter(this, void 0, void 0, function*
         return data.body;
     })
         .catch((error) => {
-        if (error.message === "X") {
+        if (error.message === "Unauthorized") {
             isTokenSet = false;
             return tracks(idAlbum, numPagina);
         }
-        console.log("The error while searching artists occurred: ", error);
-        throw error;
+        else {
+            console.log("The error while searching artists occurred: ", error);
+            throw error;
+        }
     });
 });
 exports.default = {

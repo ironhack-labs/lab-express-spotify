@@ -5,10 +5,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const BuildRouter_1 = __importDefault(require("./Routes/BuildRouter"));
 const Config_1 = __importDefault(require("./Config"));
-var cors = require('cors');
+const cors = require('cors');
 const express = require('express');
 const app = express();
 app.use(cors());
 BuildRouter_1.default(app);
-app.listen(Config_1.default.port, () => console.log(`backend on  ${Config_1.default.urlBase}!`));
+app.listen(Config_1.default.backPort, () => console.log(`backend on  ${Config_1.default.urlApi}!`));
 //# sourceMappingURL=server.js.map

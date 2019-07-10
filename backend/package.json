@@ -5,7 +5,7 @@
   "main": "dist/server.js",
   "scripts": {
     "rebuild": "tsc",
-    "nodemon": "nodemon /dist/server.js localhost 3010",
+    "nodemon": "nodemon /dist/server.js localhost 3001",
     "test": "mocha --timeout 2000",
     "test1": "mocha --timeout 20000 test/test-artist-albums.js",
     "test2": "mocha --timeout 20000 test/test-tracks.js"
