@@ -43,6 +43,7 @@ const buscarArtista = (texto, numPagina) => __awaiter(this, void 0, void 0, func
     if ((tsNow - tsToken) > lapso) {
         yield solicitarToken(setTokenSet);
     }
+    tsToken = tsNow;
     return spotifyApi.searchArtists(texto, { limit: numItemsXPagina, offset })
         .then((data) => {
         return data.body;
@@ -65,6 +66,7 @@ const artistAlbums = (idArtista, numPagina) => __awaiter(this, void 0, void 0, f
     if ((tsNow - tsToken) > lapso) {
         yield solicitarToken(setTokenSet);
     }
+    tsToken = tsNow;
     return spotifyApi.getArtistAlbums(idArtista, { limit: numItemsXPagina, offset })
         .then((data) => {
         return data.body;
@@ -87,6 +89,7 @@ const tracks = (idAlbum, numPagina) => __awaiter(this, void 0, void 0, function*
     if ((tsNow - tsToken) > lapso) {
         yield solicitarToken(setTokenSet);
     }
+    tsToken = tsNow;
     return spotifyApi.getAlbumTracks(idAlbum, { limit: numItemsXPagina, offset: offset })
         .then((data) => {
         return data.body;

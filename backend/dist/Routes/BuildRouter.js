@@ -7,11 +7,13 @@ const BuscarArtistAction_1 = __importDefault(require("../Action/BuscarArtistActi
 const ArtistAlbumsAction_1 = __importDefault(require("../Action/ArtistAlbumsAction"));
 const TracksAction_1 = __importDefault(require("../Action/TracksAction"));
 const UrlApi_1 = __importDefault(require("./UrlApi"));
+const SpotifiCX_1 = __importDefault(require("../Servicios/SpotifiCX"));
 function routerBuilder(app) {
     app.get("/debug", function (req, res) {
         res.send('yea baby');
     });
     app.get("/", function (req, res) {
+        SpotifiCX_1.default.solicitarToken(null);
         res.send('i´m backend :)');
     });
     //'buscar-artista'

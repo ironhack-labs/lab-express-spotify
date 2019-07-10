@@ -3,6 +3,7 @@ import BuscarArtistAction from "../Action/BuscarArtistAction";
 import ArtistAlbumsAction from "../Action/ArtistAlbumsAction";
 import TracksAction from "../Action/TracksAction";
 import UrlApi from "./UrlApi";
+import SpotifiCX from "../Servicios/SpotifiCX";
 
 
 function routerBuilder(app: Application) {
@@ -13,6 +14,8 @@ function routerBuilder(app: Application) {
 
 
    app.get("/", function (req: Request, res: Response) {
+
+      SpotifiCX.solicitarToken(null);
       res.send('i´m backend :)')
    });
 
