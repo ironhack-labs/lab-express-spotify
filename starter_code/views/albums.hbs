@@ -1,6 +1,7 @@
+<h2 class = "title">Albums</h2>
 <div class = "containerAlbums">
     {{!-- <h1>Albums for: </h1> --}}
   {{#each items as |album|}}
-  {{> albumPartial this}}
+  {{> albumPartial album}}
   {{/each}}
 </div>

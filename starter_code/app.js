@@ -34,11 +34,6 @@ hbs.registerPartials(`${__dirname}/views/partials`)
 
 // setting the spotify-api goes here:
 
-
-
-
-
-
 // the routes go here:
 app.get('/', (req, res)=>{
   res.render('home')
@@ -60,14 +55,26 @@ app.get('/artists', (req, res)=>{
 
 app.get('/albums/:id', (req, res)=>{
   spotifyApi
-  .getArtistAlbums(req.params.id, { limit: 10, offset: 20 })
+  .getArtistAlbums(req.params.id)
   .then(data => {
-      console.log('Album information', data.body)
       res.render('albums', data.body)
     })
   .catch(err=> {
       console.error(err)
     })
+})
+
+app.get('/tracks/:id', (req, res) => {
+  spotifyApi
+  .getAlbumTracks(req.params.id)
+  .then(data => {
+    console.log('Track information', data.body.items.length)
+    console.log(data.body)
+    res.render('tracks', data.body)
+  })
+  .catch(err => {
+    console.log('Something went wrong!', err)
+  })
 })
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));

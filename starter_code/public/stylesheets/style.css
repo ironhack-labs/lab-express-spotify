@@ -1,0 +1,107 @@
+*{
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home{
+  background-image: url(/images/Concert.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+
+.home form {
+  text-align: center;
+  background: rgba(255, 255, 255, 0.486);
+  width: 40%;
+  height: 20%;
+  padding-top: 6%;
+  margin:0 auto;
+}
+
+.home form input {
+  width: 70%;
+  border: solid 1px lightgrey;
+  height: 20%;
+  border-radius: 3px;
+}
+
+.home form button {
+  padding: 1% 2%;
+  background-color: #df894f;
+  color: white;
+  border: none;
+  margin-top: 2%;
+}
+
+.home form button:hover {
+  cursor: pointer;
+}
+
+.containerAlbums, .container{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin: 1% 15%;
+}
+
+.image {
+  width: 100%;
+}
+
+.artist{
+  width: 30%;
+  height: 35%;
+  text-align: center;
+  margin: 10px;
+}
+
+.gray{
+  text-align: center;
+  background: rgb(83, 83, 83);
+  color: white;
+  padding: 5px;
+}
+
+.gray a button{
+  background: salmon;
+  color: white;
+  border-radius: 3px;
+  border:none;
+  padding: 1px 3px;
+}
+
+.gray a button:hover{
+  cursor: pointer;
+}
+
+.title {
+  text-align: center;
+}
+
+.nav{
+  display: flex;
+  justify-content: space-around;
+  width: 95vw;
+  height: 10vh;
+  color: lightgray;
+  background: rgb(59, 59, 59);
+  padding: 15px 50px;
+  align-content: center;
+  align-items: center;
+}
+
+.audioControls{
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  color: rgb(83, 83, 83);
+  background: rgb(241, 241, 241);
+  padding: 0 10px;
+  margin:5px;
+}
