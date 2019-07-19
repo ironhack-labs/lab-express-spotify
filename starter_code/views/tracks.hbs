@@ -1,0 +1,19 @@
+<div class="trackHeader">
+    <h2 id="num">Track #</h2>
+    <h2 id="name">Title</h2>
+    <h2 id="music">Listen</h2>
+</div>
+
+<div class="allTracks">
+
+    {{#each data.body.tracks.items}}
+        <div class="tracksPartial">
+            <p id="trackNum">{{this.track_number}}</p>
+            <p id="trackName">{{this.name}}</p>
+            <audio controls>
+                <source src="{{this.preview_url}}">
+            </audio>
+        </div>
+    {{/each}}
+
+</div>

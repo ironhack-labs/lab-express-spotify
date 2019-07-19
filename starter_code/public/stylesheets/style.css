@@ -1,0 +1,136 @@
+body{
+    margin: 0;
+}
+
+p{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 1em;
+    margin: 0;
+}
+
+#trackName, #name{
+    width: 600px;
+}
+
+#trackNum, #num{
+    width: 130px;
+}
+
+audio, #music{
+    width: 400px;
+}
+
+h2{
+    display: flex;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    color: white;
+    margin: 5px;
+    margin-bottom: 0;
+}
+
+.home{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    background-image: url(../images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+.homeInput{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 70%;
+    height: 70%;
+}
+
+.homeInput input{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 10px;
+    padding: 10px;
+    width: 80%;
+}
+
+.homeInputContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    height: 30%;
+    background-color: rgb(255, 255, 255, 0.5);
+}
+
+.homeInput button, .artistPartialInput button, .albumsPartialInput button{
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 5px;
+    padding: 8px;
+    border: 0;
+    background-color: #CD5C5C;
+    text-decoration: none;
+    color: white;
+}
+
+.allArtists, .allAlbums{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 1em;
+}
+
+.artistPartial, .albumsPartial{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 30%;
+    background-color: #4B4B4B;
+    margin: 1em;
+}
+
+.artistPartial img, .albumsPartial img{
+    width: 100%;
+}
+
+.allTracks{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+}
+
+.trackHeader{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    background-color: #4B4B4B;
+    padding-right: 20px;
+    padding-left: 35px;
+}
+
+.trackHeader h2{
+    color: #eee;
+    font-size: 25px;
+}
+
+.tracksPartial{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    height: 10%;
+    background-color: #eee;
+    margin: 5px;
+    padding: 10px;
+}

@@ -1,0 +1,14 @@
+<div class="allArtists">
+
+    {{#each data.body.artists.items}}
+        <div class="artistPartial">
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            <h2>{{this.name}}</h2>
+            <form class="artistPartialInput" action="/albums" method="GET">
+            <input type="hidden" name="id" value={{this.id}}>
+            <button type="submit">View Albums</button>
+            </form>
+        </div>
+    {{/each}}
+
+</div>
