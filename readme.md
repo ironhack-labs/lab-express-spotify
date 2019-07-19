@@ -63,14 +63,12 @@ The following screens might be outdated since Spotify changed its interface rece
 
 ## Iteration 1 | Spotify API Setup
 
-You're pretty much given *almost* empty `starter_code` folder and that's because in the next couple of steps you'll create all the files you need. So far you have some basic setup in `app.js` but that's not quite enough. As you remember, in order to get some packages (including express one) in our app, we have to create `package.json` file. So let's start listing the steps:
-1. create `package.json` (or as we can say: let's initialize our project :wink: )
-2. `npm install --save express hbs spotify-web-api-node prettyjson`
-3. inside the `app.js` file, require *spotify-web-api-node*
+
+1. inside the `app.js` file, require *spotify-web-api-node*
   ```js
   const SpotifyWebApi = require('spotify-web-api-node');
   ```
-4. inside the `app.js` file, you'll find the comment where to paste the following code:
+2. inside the `app.js` file, you'll find the comment where to paste the following code:
 
 ```javascript
 // Remember to insert your credentials here
