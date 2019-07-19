@@ -90,8 +90,6 @@ spotifyApi.clientCredentialsGrant()
   })
 ```
 
-:fire: *Styling should be the last thing you focus on. Functionality first!* 🙏🏻
-
 ## Iteration 2 | Express Setup
 
 Now let's add a couple of folders and files in our app. Please follow the following set up:
