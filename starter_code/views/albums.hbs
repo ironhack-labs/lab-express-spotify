@@ -1,0 +1,18 @@
+<div class="container">
+    <h1>Albums</h1>
+
+    <div class="row">
+        {{#each albums}}       
+            <div class="col-md-4">
+                <div class="album">
+                    <img class="album-img-top" src="{{images.2.url}}" alt="{{name}}"> 
+                    <div class="album-body">
+                        <h5 class="album-title">{{name}}</h5>
+                          <button type="submit" class="btn-dark"> <a href="albums/{{id}}">View Albums</a></button>
+    
+                    </div>
+                </div>
+            </div> 
+        {{/each}}
+    </div>
+</div>

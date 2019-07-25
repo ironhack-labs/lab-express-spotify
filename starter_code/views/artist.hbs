@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>Artistas</h1>
+
+    <div class="row">
+        {{#each data}}       
+            <div class="col-md-4">
+                <div class="album">
+                    <img class="album-img-top" src="{{images.0.url}}" alt="{{name}}"> 
+                    <div class="album-body">
+                        <h5 class="album-title">{{name}}</h5>
+
+                        <form action="/albums">
+                            <button type="submit" class="btn-dark"> <a href="albums/{{id}}">View Albums</a></button>
+                        </form>
+
+                    </div>
+                </div>
+            </div> 
+        {{/each}}
+    </div>
+</div>
