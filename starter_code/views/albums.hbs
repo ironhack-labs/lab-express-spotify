@@ -1,0 +1,7 @@
+<h1>Albums</h1>
+
+{{#each data}}
+<p>{{this.name}}</p>
+<img src="{{this.images.0.url}}" alt="">
+<a href="/tracks/{{this.id}}">Cancioones</a>
+{{/each}}
