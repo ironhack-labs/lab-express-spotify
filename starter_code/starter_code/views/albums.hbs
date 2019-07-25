@@ -1,0 +1,7 @@
+<h1>Soy la lista de los albumes</h1>
+
+{{#each data}}
+<img src="{{images.0.url}}" alt="la puñetera imagen del disco este"> {{!--en hbs un array se indexa con .  --}}
+<p>{{name}}</p>
+<a href="/tracks/{{id}}">View Tracks</a>
+{{/each}}
