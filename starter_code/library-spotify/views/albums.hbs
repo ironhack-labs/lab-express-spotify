@@ -1,0 +1,18 @@
+<h3>Estos son los albums</h3>
+
+<div class="container">
+   <h1>All albums</h1>
+    <div class="row">
+        {{#each albums}}
+            <div class="col-md-4 flexbox">
+                <div class="card">
+                    <div class="card-body">
+                    <h4 class="card-title">{{name}}</h4>
+                    <img class="card-img-top" src="{{images.2.url}}" alt="">
+                        <a href="/tracks">Listen songs</a>
+                    </div>
+                </div>
+            </div>      
+        {{/each}}
+    </div>
+</div>

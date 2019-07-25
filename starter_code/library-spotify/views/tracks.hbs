@@ -1,0 +1,18 @@
+<h3>Estos son los tracks del album</h3>
+
+<div class="container">
+   <h1>All tracks</h1>
+    <div class="row">
+        {{#each tracks}}
+            <div class="col-md-4 flexbox">
+                <div class="card">
+                    <div class="card-body">
+                    <h4 class="card-title">{{name}}</h4>
+                    <img class="card-img-top" src="{{images.2.url}}" alt="">
+                        <a href="/tracks"></a>
+                    </div>
+                </div>
+            </div>      
+        {{/each}}
+    </div>
+</div>

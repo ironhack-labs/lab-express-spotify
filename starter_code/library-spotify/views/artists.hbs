@@ -1,0 +1,18 @@
+<h1>Lista de artistas</h1>
+
+<div class="container">
+   <h1>All artist</h1>
+    <div class="row">
+        {{#each data}}
+            <div class="col-md-4 flexbox">
+                <div class="card">
+                    <div class="card-body">
+                    <h4 class="card-title">{{name}}</h4>
+                    <img class="card-img-top" src="{{images.0.url}}" alt="">
+                        <a href="/albums/{{id}}">View Albums</a>
+                    </div>
+                </div>
+            </div>      
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,25 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+.card {
+  border: 1px dotted darkmagenta;
+  margin: 10px;
+  padding-bottom: 10px;
+  max-height: 600px; }
+
+.card-img-top {
+  object-fit: contain;
+  height: 300px;
+  margin-top: 10px; }
+
+.fondo {
+  background-image: url("/images/concierto.jpg");
+  background-position: center;
+  height: 400px;
+  background-repeat: no-repeat; }
+
+/*# sourceMappingURL=style.css.map */
