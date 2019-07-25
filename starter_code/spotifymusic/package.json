@@ -1,0 +1,26 @@
+{
+  "name": "spotifymusic",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www",
+    "dev": "DEBUG=spotifymusic:* nodemon ./bin/www",
+    "dev-windows": "nodemon ./bin/www"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "cookie-parser": "^1.4.3",
+    "dotenv": "^6.0.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "mongoose": "^5.2.10",
+    "morgan": "^1.9.0",
+    "node-sass-middleware": "^0.11.0",
+    "prettyjson": "^1.2.1",
+    "serve-favicon": "^2.5.0",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.12.1"
+  }
+}
