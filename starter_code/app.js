@@ -9,7 +9,7 @@ const app = express()
 app.set('view engine', 'hbs')
 app.set('views', __dirname + '/views')
 app.use(express.static(__dirname + '/public'))
-
+hbs.registerPartials(__dirname + '/views/partials')
 const spotifyApi = new SpotifyWebApi({
   clientId : process.env.clientId,
   clientSecret : process.env.clientSecret
@@ -27,14 +27,14 @@ spotifyApi.clientCredentialsGrant()
 // the routes go here:
 const indexRoutes = require("./routes/index.routes");
 app.use("/", indexRoutes);
-const artistsRoutes = require("./routes/artists.routes");
-app.use("/artists", artistsRoutes)
+// const artistsRoutes = require("./routes/artists.routes");
+// app.use("/artists", artistsRoutes)
 
 app.get('/artists', (req, res) => {
     spotifyApi.searchArtists(req.query.artist)
       .then(function(data) {
-        console.log("The received data from the API: ", data.body)
-        res.render('artist', data.body)
+        console.log("The received data from the API: ", data.body.artists.items)
+        res.render('artists', data.body)
       }, function(err) {
         console.error(err)
       })
