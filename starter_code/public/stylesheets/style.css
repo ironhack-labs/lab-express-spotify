@@ -1,0 +1,5 @@
+.portada {
+    background-image: url("/img/background.png") cover center;
+    background-repeat: no-repeat;
+    background-size: 100%, 100%;
+   }
