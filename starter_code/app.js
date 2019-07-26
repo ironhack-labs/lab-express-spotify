@@ -33,14 +33,33 @@ app.use("/", indexRoutes);
 app.get('/artists', (req, res) => {
     spotifyApi.searchArtists(req.query.artist)
       .then(function(data) {
-        console.log("The received data from the API: ", data.body.artists.items)
-        res.render('artists', data.body)
+        res.render('artists', {data: data.body.artists.items})
       }, function(err) {
         console.error(err)
       })
-    
-    console.log(req.query.artist)
 })
+
+app.get('/albums', (req, res) => {
+  spotifyApi.getArtistAlbums(req.query.album)
+    .then(function(data) {
+      res.render('albums', {album: data.body.items})
+    }, function(err) {
+      console.error(err)
+    })
+
+})
+
+app.get('/tracks', (req, res) => {
+  spotifyApi.getAlbumTracks(req.query.track)
+    .then(function(data) {
+      console.log("Track: ", data.body)
+      res.render('tracks', {track: data.body.items})
+    }, function(err) {
+      console.error(err)
+    })
+
+})
+
 
 
   

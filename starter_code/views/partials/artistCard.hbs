@@ -1,11 +1,12 @@
 <div class="col-md-3">
+<form action="/albums" method="get">
    <div class="card">
-       <img class="card-img-top" src="{{images}}" alt="">
+     <img class="card-img-top" src={{images.0.url}} alt=""> 
        <div class="card-body">
            <h5 class="card-title">{{name}}</h5>
-           <p class="card-text">{{type}}</p>
+           <input name="album" type="hidden" value={{id}}>
+           <button type = "submit" href = "/albums" class="btn btn-dark">View albums</p>           
        </div> 
    </div>
+   </form>
 </div> 
-
-<p>esto es el parcial</p>

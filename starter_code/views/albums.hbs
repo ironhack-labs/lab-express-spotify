@@ -1,8 +1,9 @@
 <div class="container">
     <div class="row">
-        {{#each data}}
-        {{>artistCard this}}
-        <br>
+        {{#each album}}
+        {{>albumCard this}}
         {{/each}}
     </div>
 </div>
+        
+{{>albumCard this}}
