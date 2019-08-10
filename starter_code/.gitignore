@@ -2,4 +2,8 @@
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
 
+#spotify ID
+const clientId = '9fc842dd88264ae4853bfd9c58a6e766',
+    clientSecret = '42dda478497c45e4b630e867e230d237';
+
 
