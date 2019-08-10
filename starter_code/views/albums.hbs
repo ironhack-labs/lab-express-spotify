@@ -1,0 +1,14 @@
+<div>
+  {{#each items}}
+  <div>
+<img src={{this.images.0.url}} alt="">
+  </div>
+  <div>
+    <h1>{{this.name}}</h1>
+    <h1>{{this.id}}</h1>
+    <button onclick="window.location.href = '/tracks/{{this.id}}';">View tracks</button>
+  </div>
+  {{/each}}
+  </div> 
+
+
