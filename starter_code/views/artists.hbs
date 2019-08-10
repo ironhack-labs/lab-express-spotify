@@ -1,0 +1,12 @@
+ <div>
+
+   {{#each this}}
+   <li>
+   <h3>{{this.name}}</h3>
+   <img src="{{this.images.1.url}}" height="320px" width="300px">
+   <button><a href="/albums/{{this.id}}">View Albums</a></button>
+   </li>
+    {{/each}}
+ </div>
+
+ 
