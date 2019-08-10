@@ -1,0 +1,28 @@
+.artistPicture{
+    width: 320px;
+    height: 340px;
+}
+
+.artistContainer{
+    margin: 0px 50px;
+}
+
+.artistCard{
+    font-weight: bold;
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    height: 445px;
+    width: 320px;
+    margin: 20px 70px 0px 70px;
+    display: inline-block;
+    background-color: rgba(10, 9, 9, 0.664);
+}
+.artistCard a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid orangered;
+    background-color: orangered;
+    padding: 5px 10px;
+    border-radius: 7%;
+}
