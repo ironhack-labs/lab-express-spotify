@@ -55,8 +55,8 @@ app.get('/artists', (req, res, next) => {
 app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then(data => {
-    res.render('albums', { theAlbum: data.body.items} )
-  // console.log("The info received was: ", data.body.items[0]);
+    res.render('albums', { theAlbum: data.body.items, theArtistName: data.body.items[0].artists[0].name} )
+  // console.log("The info received was NAME: ", data.body.items[0].artists[0].name);
   // console.log("The Album ID is: ", data.body.items[0].id);
   })
   .catch(err => console.log("The error while searching albums occurred: ", err))

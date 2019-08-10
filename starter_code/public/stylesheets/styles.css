@@ -26,3 +26,40 @@
     padding: 5px 10px;
     border-radius: 7%;
 }
+
+
+.albumTitle{
+    text-align: center;
+    font-family: Helvetica;
+}
+
+.albumContainer{
+    margin: 0px 120px;
+}
+
+.albumPicture{
+    width: 380px;
+    height: 340px;
+}
+.albumCard{
+    font-size: 12px;
+    font-weight: bold;
+    font-family: Helvetica;
+    color: white;
+    text-align: center;
+    height: 430px;
+    width: 380px;
+    margin: 10px 10px 0px 10px;
+    display: inline-block;
+    background-color: rgba(10, 9, 9, 0.664);
+    border: 1px solid black;
+    vertical-align: top;
+}
+.albumCard a{
+    text-decoration: none;
+    color: white;
+    border: 1px solid orangered;
+    background-color: orangered;
+    padding: 5px 10px;
+    border-radius: 7%;
+}
