@@ -13,8 +13,8 @@ app.use(express.static(__dirname + '/public'));
 // setting the spotify-api goes here:
 
 // Remember to insert your credentials here
-const clientId;
-    clientSecret;
+const clientId = "9fc842dd88264ae4853bfd9c58a6e766",
+    clientSecret = "42dda478497c45e4b630e867e230d237";
 
 const spotifyApi = new SpotifyWebApi({
   clientId : clientId,
@@ -63,7 +63,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 app.get('/tracks/:trackId', (req, res, next) =>{
   spotifyApi.getAlbumTracks(req.params.trackId, { limit : 5, offset : 1 })
   .then(data => {
-     console.log(data.body)
+    res.render('tracks',data.body.items )
+     console.log(data.body.items)
   })
   .catch(err => {console.log('Something went wrong!'), err})
 })
