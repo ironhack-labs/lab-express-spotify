@@ -1,3 +1,14 @@
 <div>
   
+  <ul>
+    {{#each this}}
+    <li>
+      <h3>Title: {{this.name}}</h3>
+      <audio controls>
+        <source src="{{this.preview_url}}">
+      </audio>
+    </li>
+      {{/each}}
+  </ul>
+
 </div>
