@@ -1,11 +1,14 @@
-<div>
-  {{#each items}}
-  <div>
-<img src={{this.images.0.url}} alt="">
-  </div>
-  <div>
-    <h1>{{this.name}}</h1>
-    <button onclick="window.location.href = '/albums/{{this.id}}';">View Albums</button>
-  </div>
-  {{/each}}
-  </div> 
+
+{{#each artists}}
+<div class="container">
+    <div>
+        <img src="{{ this.images.0.url }}" alt="" > 
+    </div>
+    <div>
+        <h1>{{this.name}}</h1>
+        <button onclick="window.location.href = '/albums/{{this.id}}';">View Albums</button>
+    </div>
+</div> 
+{{/each}} 
+
+
