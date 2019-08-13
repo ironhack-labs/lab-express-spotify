@@ -48,7 +48,7 @@ app.get('/artists',(req,res) => {
   });
 });
 
-//Render all albums by given artis
+//Render all albums by given artist
 app.get('/albums/:artistId',(req,res) => {
   let artist = req.params.artistId;
   spotifyApi.getArtistAlbums(artist)
