@@ -1,5 +1,6 @@
 body{
-  margin: 0 4vw;
+  margin: 0 3.5vw;
+  background-color:black;
 }
 .wrapper{
   display:flex;
@@ -11,17 +12,20 @@ h1{
   width:100%;
   text-align: center;
   display:block;
+  color:#aaa;
 }
 
 .container{
   position:relative;
   margin: 0 50px;
   width:340px;
-  height:420px;
+  height:430px;
   margin-top:40px;
   background-color:#4D4D4D;
   text-align: center;
   color:white;
+  border:groove 2px #aaa;
+  border-radius: 3px;
 }
 
 .track-button{

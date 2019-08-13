@@ -10,7 +10,7 @@ body{
 .home-input{
     margin-top:28vh; 
     background-color: rgba(255,255,255,0.7);
-    min-width: 550px;
+    min-width: 400px;
     width:55vw;
     min-height: 300px;
     display:flex;
@@ -18,7 +18,7 @@ body{
     align-items: center;
 }
 input{
-  width:450px;
+  width:350px;
   height:35px;
   display: block;
   margin-bottom:10px;

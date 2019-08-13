@@ -1,10 +1,16 @@
 
-  
+<link rel="stylesheet" href="/stylesheets/track.css"> 
+  <div class="ribbon" >
+      <h2>Title</h2>
+      <h2>Listen</h2>
+  </div>
   {{#each tracks}}
-  <audio controls>
-  <source src="{{this.preview_url}}" type="audio/mpeg">
-  Your browser does not support the audio element.
-  </audio>
+    <div class="container">
+      <p>{{this.name}}</p>
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg">
+      </audio>
+    </div>
   {{/each}}
 
 

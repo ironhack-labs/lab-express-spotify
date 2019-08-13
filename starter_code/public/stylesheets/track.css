@@ -1,0 +1,27 @@
+body{
+  background-image: url('../images/tracks.png'); 
+  margin: 15px 0;
+  margin-right:60px;
+  margin-left: 65px;
+}
+.ribbon{
+  background-color:#4D4D4D;
+  color:#F1F3F4;;
+  display:flex;
+  justify-content: space-between;
+  align-items:center;
+  padding-right: 160px;
+  padding-left:40px;
+  height:80px;
+  opacity:0.8;
+}
+
+.container{
+  background-color:#F1F3F4;
+  padding-right:5px;
+  padding-left:20px;
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 0;
+  opacity:0.85;
+}

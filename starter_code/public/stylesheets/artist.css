@@ -3,17 +3,20 @@ body{
   flex-wrap: wrap;
   justify-content: flex-start;
   margin: 0 8vw;
+  background-color:black;
 }
 
 .container{
   position:relative;
-  margin: 0 50px;
+  margin: 0 48px;
   width:300px;
   height:390px;
   margin-top:20px;
   background-color:#4D4D4D;
   text-align: center;
   color:white;
+  border:groove 2px #aaa;
+  border-radius: 3px;
 }
 
 .album-button{
