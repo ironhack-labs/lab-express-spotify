@@ -1,0 +1,7 @@
+{{#each albums}}
+   <p> {{ this.name }}</p>
+   <br>
+   <img src='{{this.images.0.url}}' alt='{{this.name}}' width='160px'>
+    {{!-- to see the tracks we need to provide the ID in the URL so it gets picked up by req.params in the route --}}
+    <a href="/tracks/{{ this.id }}">View tracks</a>
+{{/each}}
