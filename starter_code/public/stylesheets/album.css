@@ -1,0 +1,54 @@
+body{
+  margin: 0 4vw;
+}
+.wrapper{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+
+h1{
+  width:100%;
+  text-align: center;
+  display:block;
+}
+
+.container{
+  position:relative;
+  margin: 0 50px;
+  width:340px;
+  height:420px;
+  margin-top:40px;
+  background-color:#4D4D4D;
+  text-align: center;
+  color:white;
+}
+
+.track-button{
+  position:absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom:10px;
+  width:105px;
+  font-size: 0.8em;
+  padding:5px;
+  border-radius: 8px;
+  color:white;
+  background-color:#EB6561;
+
+}
+
+.album-img > img{
+  margin: 0 auto;
+  display: block;
+  width:340px;
+  height:340px;
+  object-fit: scale-down;
+}
+
+h4{
+  margin: 0;
+  margin-top:10px;
+}

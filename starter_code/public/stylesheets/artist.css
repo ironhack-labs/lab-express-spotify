@@ -1,0 +1,46 @@
+body{
+  display:flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  margin: 0 8vw;
+}
+
+.container{
+  position:relative;
+  margin: 0 50px;
+  width:300px;
+  height:390px;
+  margin-top:20px;
+  background-color:#4D4D4D;
+  text-align: center;
+  color:white;
+}
+
+.album-button{
+  position:absolute;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  bottom:10px;
+  width:105px;
+  font-size: 0.8em;
+  padding:5px;
+  border-radius: 8px;
+  color:white;
+  background-color:#EB6561;
+
+}
+
+.artist-img > img{
+  margin: 0 auto;
+  display: block;
+  width:300px;
+  height:300px;
+  object-fit: scale-down;
+}
+
+h4{
+  margin: 0;
+  margin-top:10px;
+}
