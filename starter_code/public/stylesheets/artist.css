@@ -12,11 +12,9 @@ body{
   width:300px;
   height:390px;
   margin-top:20px;
-  background-color:#4D4D4D;
+  background-color:#0B0B0B;
   text-align: center;
   color:white;
-  border:groove 2px #aaa;
-  border-radius: 3px;
 }
 
 .album-button{
@@ -31,7 +29,7 @@ body{
   padding:5px;
   border-radius: 8px;
   color:white;
-  background-color:#EB6561;
+  background-color:#0B0B0B;
 
 }
 

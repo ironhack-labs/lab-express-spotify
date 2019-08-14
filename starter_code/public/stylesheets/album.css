@@ -21,11 +21,9 @@ h1{
   width:340px;
   height:430px;
   margin-top:40px;
-  background-color:#4D4D4D;
+  background-color:#0B0B0B;
   text-align: center;
   color:white;
-  border:groove 2px #aaa;
-  border-radius: 3px;
 }
 
 .track-button{
@@ -40,7 +38,7 @@ h1{
   padding:5px;
   border-radius: 8px;
   color:white;
-  background-color:#EB6561;
+  background-color:#0B0B0B;
 
 }
 

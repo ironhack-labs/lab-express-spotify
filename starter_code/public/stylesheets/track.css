@@ -1,8 +1,8 @@
 body{
-  background-image: url('../images/tracks.png'); 
   margin: 15px 0;
   margin-right:60px;
   margin-left: 65px;
+  margin-bottom:0;
 }
 .ribbon{
   background-color:#4D4D4D;
