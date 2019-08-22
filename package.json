@@ -1,0 +1,29 @@
+{
+  "name": "lab-express-spotify",
+  "version": "1.0.0",
+  "description": "Express Spotify Searcher",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/camachoroberto/lab-express-spotify.git"
+  },
+  "keywords": [
+    "Spotify",
+    "Searcher"
+  ],
+  "author": "Roberto Camacho",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/camachoroberto/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/camachoroberto/lab-express-spotify#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "prettyjson": "^1.2.1",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}
