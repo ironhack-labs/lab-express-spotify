@@ -1,0 +1,25 @@
+body {
+  margin: 0;
+}
+.home-container {  
+  background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.form-group {
+  margin-bottom: 1rem;
+}
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+.artists {
+  display: flex;
+  width: 200px;
+  margin: 100px;
+}
