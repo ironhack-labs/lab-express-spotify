@@ -1,11 +1,13 @@
 const express = require('express');
 const app = express();
-const { beersRoute, randomBeerRoute, index } = require('../controlers/beerRoutes.controler')
+const { artistsRoute, albumsRoute, tracksRoute, index } = require('../controllers/musicsRoutes.controller')
 
 app.get('/', index);
 
-app.get('/beers', beersRoute);
+app.post('/artists', artistsRoute);
 
-app.get('/random-beers', randomBeerRoute);
+app.get('/albums/:artistId', albumsRoute);
+
+app.get('/tracks/:albumId', tracksRoute);
 
 module.exports = app;
