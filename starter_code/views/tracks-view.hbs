@@ -1,6 +1,13 @@
-{{#each arrayTracks}}
-  <div class="container row d-flex justify-content-around"></div>
-    <h1 class="artist-name">{{this.name}}</h1>
-    <audio controls src="{{this.preview_url}}"><code>audio</code>element</audio>
-  </div>
-{{/each}}
+<div class="container">
+  <ul>
+    {{#each items}}
+      <li class="row d-flex justify-content-around">
+        <h5 class="artist-name">{{this.name}}</h5>
+        <audio controls src="{{this.preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+          <code>audio</code> element
+        </audio>
+    </li>
+    {{/each}}
+  </ul>
+</div>
