@@ -1,0 +1,44 @@
+  {{!-- <div class="artist-container">
+    {{#each items}}
+      
+    <img src="{{this.images.0.url}}">
+    <p>{{this.name}}</p>
+    <button><a href="/albums/" + {{this.id}}>View Albums</a></button>
+
+    {{/each}}
+  </div> --}}
+
+
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand"><i class="fab fa-spotify mr-2"></i>Spotify Express</a>
+        </div>
+    </nav>
+
+    {{!-- <section id="header" class="jumbotron text-center">
+        <h1 class="display-4">Artists Albums</h1> --}}
+        <!-- <p class="lead">LoremLorem LoremLoremLorem LoremLoremLorem LoremLorem</p>
+        <a href="#" class="btn btn-primary">Do Something</a>
+        <a href="#" class="btn btn-success">Another Thing</a> -->
+    {{!-- </section> --}}
+
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+              {{#each items}}
+                <div class="col-lg-4 mb-3">
+                    <div class="card">
+                        <img src="{{this.images.1.url}}" alt="capa" class="card-img-top">
+                        <div class="card-body justify-content-center bg-secondary">
+                            <h5 class="card-title text-center text-white">{{this.name}}</h5>
+                            <div class=" row justify-content-center">
+                              <a href="/albums/{{this.id}}" class="btn btn-danger btn-sm">View Albums</a>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+ 

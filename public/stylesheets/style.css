@@ -1,0 +1,29 @@
+body {
+  background: url('/images/concert-3387324_1920.jpg')
+}
+
+#search-container {
+  margin-top: 350px;
+  background-color: rgba(255, 255, 255, 0.5);
+  height: 200px; 
+  width: 70%;
+  
+}
+
+#search-container button {
+  display: block;
+  margin: 0 auto;
+}
+
+#track {
+  height: 80px;
+}
+
+#trackHeading {
+  background-color: #3d3636;
+  height: 80px
+}
+
+#trackHeading p {
+  font-size: 1.5rem;
+}

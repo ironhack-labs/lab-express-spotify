@@ -1,0 +1,26 @@
+    <nav class="navbar bg-dark navbar-dark">
+        <div class="container">
+            <a href="/" class="navbar-brand"><i class="fab fa-spotify mr-2"></i>Spotify Express</a>
+        </div>
+    </nav>
+
+    <section id="gallery">
+        <div class="container">
+            <div class="row">
+              {{#each items}}
+                <div class="col-lg-4 mb-3">
+                    <div class="card">
+                        <img src="{{this.images.1.url}}" alt="capa" class="card-img-top">
+                        <div class="card-body justify-content-center bg-secondary">
+                            <h5 class="card-title text-center text-white">{{this.name}}</h5>
+                            <div class=" row justify-content-center">
+                              <a href="/tracks/{{this.id}}" class="btn btn-danger btn-sm">View Tracks</a>                    
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+    </section>
+ 

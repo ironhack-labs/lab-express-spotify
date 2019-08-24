@@ -1,0 +1,16 @@
+{{!-- <form action="/artists" method="POST">
+  <label for="">Artist</label>
+  <input type="text" name="artist" id="">
+  <button type="submit">Search for an Artist</button>
+</form> --}}
+
+<div class="container d-flex flex-row justify-content-center">
+  <div id="search-container" class="row justify-content-center align-items-center border border-dark">
+      <form action="/artists" method="POST" class="col-8">
+        <div class="form-group">
+          <input type="text" class="form-control" id="artistName" aria-describedby="artist name" placeholder="Search for an artist!" name="artist">
+          <button type="submit" class="btn btn-danger mt-3">Search for an Artist</button>
+        </div>
+      </form>
+  </div>
+</div>
