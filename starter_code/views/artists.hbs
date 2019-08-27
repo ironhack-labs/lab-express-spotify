@@ -1,0 +1,27 @@
+<nav>
+  <button type="button" value="Go Back" onclick="history.back()" id="go-back">
+    <i class="fas fa-arrow-alt-circle-left"></i> Go Back
+  </button>
+  <a href="/">Back to Search</a>
+</nav>
+
+<h1>Artists</h1>
+
+<div class="container">
+
+  {{#each theArtist}}
+  <div class="card">
+
+    <div class="artist-image-container">
+      <img src="{{images.0.url}}" alt="{{name}} image" onerror="this.style.display='none'">
+    </div>
+
+    <div class="details-container">
+      <h3>{{name}}</h3>
+      <a href="/albums/{{id}}">View Albums</a>
+    </div>
+
+  </div>
+  {{/each}}
+
+</div>

@@ -1,0 +1,40 @@
+<nav>
+  <button type="button" value="Go Back" onclick="history.back()" id="go-back">
+    <i class="fas fa-arrow-alt-circle-left"></i> Go Back
+  </button>
+  <a href="/">Back to Search</a>
+</nav>
+
+<h1>Tracks</h1>
+
+<div class="container">
+
+  <div class="title-row">
+    <div class="column">
+      <h2>Title</h2>
+    </div>
+    <div class="column">
+      <h2>Listen</h2>
+    </div>
+  </div>
+
+
+  {{#each theTracks}}
+
+  <div class="preview-row">
+    <div class="column">
+      <div>
+        {{name}}
+      </div>
+    </div>
+
+    <div class="column">
+      <audio controls>
+        <source src="{{preview_url}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </div>
+  </div>
+
+  {{/each}}
+</div>
