@@ -1,0 +1,72 @@
+body {
+  height: 100%;
+  width: 100%;
+}
+
+.container-home {
+  background-image: url("/images/concert.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 750px;
+  width: auto;
+}
+
+form {
+  display: flex;
+  width: 500px;
+  flex-direction: column;
+  align-items: center;
+}
+
+form .btn {
+  background-color: lightcoral;
+  border: none;
+  width: 200px;
+  margin-top: 20px;
+}
+
+form .btn a:hover {
+  background-color: coral
+}
+
+/* Artist Page & Album Page */
+.cards-container {
+  display: flex;
+  padding: 10% 20%;
+  justify-content: space-between;
+  align-items: space-between;
+  flex-wrap: wrap;
+}
+
+.cards-container img {
+  object-fit: fill;
+  object-position: center;
+  height: 200px;
+}
+
+.card {
+  width: 30%;
+  margin: 10px;
+}
+
+.btn-primary {
+  background-color: lightcoral;
+  border: none;
+}
+a:hover{
+  color: coral
+}
+/* Tracks Page */
+
+.tracks-table {
+  margin: 50px;
+  padding: 20px;
+}
+
+.tracks-rows{
+  display: flex;
+  justify-content: space-between;
+}

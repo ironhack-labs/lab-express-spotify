@@ -1,0 +1,15 @@
+<div class="card">
+  {{#if images.0.url}}
+  <img src="{{images.0.url}}" class="card-img-top" alt="artist-image">
+  {{else}}
+  <img src="/images/avatar.png" class="card-img-top" alt="artist-image">
+   {{/if}}
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+  </div>
+</div>
+
+
+
+

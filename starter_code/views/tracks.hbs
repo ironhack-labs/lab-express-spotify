@@ -1,0 +1,22 @@
+<table class="table tracks-table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col-6">Title</th>
+      <th scope="col-6">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tracksData}}
+    <tr>
+      <td>{{name}}</td>
+      <td><audio
+        controls
+        src= "{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+    </td>
+    {{/each}}
+    </tr>
+  </tbody>
+</table>
