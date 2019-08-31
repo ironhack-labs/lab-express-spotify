@@ -32,13 +32,11 @@ spotifyApi.clientCredentialsGrant()
 
 // the routes go here:
 app.get('/', (req, res, next) => {
-  console.log("running")
   res.render('index')
 })
 
 app.get('/artists', (req, res, next) => {
   let artist = req.query.artist
-  console.log(req.query.artist)
 
   spotifyApi.searchArtists(artist)
     .then(data => {
