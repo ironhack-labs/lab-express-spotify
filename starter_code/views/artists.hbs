@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row">
+        {{#each myItems}}
+        <div class="col-lg-4 artist-container">
+
+            <img src="{{this.images.[1].url}}" alt="" width="50%" class="artist-img">
+
+            <div class="artist-info-container">
+                <p>{{this.name}}</p>
+                <a href="/albums?artistId={{this.id}}">View Albums</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

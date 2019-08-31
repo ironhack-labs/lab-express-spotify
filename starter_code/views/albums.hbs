@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        {{#each myItems}}
+        <div class="col-lg-4 artist-container">
+
+            <img src="{{this.images.[1].url}}" alt="" width="50%" class="album-img">
+
+            <div class="artist-info-container">
+                <p>{{this.name}}</p>
+
+                <figure>
+                    <figcaption>Preview tracks</figcaption>
+                    <audio controls src="{{preview_url}}">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+                </figure>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
