@@ -1,0 +1,16 @@
+<div class="cards-container">
+    <div class="row">
+        {{#each this.artists}}
+        <div class="col-6 col-sm-4">
+            <h2> {{this.name}}</h2>
+        </div>
+        <div class="col-6 col-sm-4"><img src="{{this.images.[1].url}}">
+        </div>
+        {{/each}}
+        <div class="col-6 col-sm-4">
+            <button type="button" class="btn btn-primary">
+                <a href="/albums/" {{this.id}}>View Albums</a></button>
+        </div>
+    </div>
+</div>
+{{!-- data.body. --}}
