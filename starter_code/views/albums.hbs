@@ -1,0 +1,11 @@
+<p>Album page</p>
+
+<div class="cards-container">
+  {{#each data.body.items}}
+
+  <img src="{{this.images.[1].url}}">
+  <h2> {{this.name}}</h2>
+
+  {{/each}}
+
+</div>
