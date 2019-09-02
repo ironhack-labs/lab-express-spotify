@@ -1,4 +1,4 @@
-{{#each this.body.artists.items}}
+{{#each this.artists.items}}
 <p>{{this.name}}</p>
-<a href="/albums/{{this.id}}">View Albums</a>
+<a href="/artist/{{this.id}}/albums/">View Albums</a>
 {{/each}}

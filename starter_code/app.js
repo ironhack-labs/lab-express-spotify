@@ -39,26 +39,26 @@ app.get('/', (req, res, next) => {
     res.render('index');
 });
 
-app.get('/artists', (req, res, next) => {
-    let artistName = req.query.name // localhost:3000/artists?name=blah
+app.get('/search', (req, res, next) => {
+    let artistName = req.query.name // localhost:3000/search?name=blah
     spotifyApi.searchArtists(artistName)
         .then(data => {
 
             console.log("The received data from the API: ", data.body.artists.items);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('artists', data);
+            res.render('artists', data.body);
         })
         .catch(err => {
             console.log("The error while searching artists occurred: ", err);
         })
 });
 
-app.get('/albums/:artist_id', (req, res, next) => {
+app.get('/artist/:artist_id/albums', (req, res, next) => {
     let artistId = req.params.artist_id // localhost:3000/albums/oi12z38162tgd
 
     spotifyApi.getArtistAlbums(artistId)
         .then(data => {
-            console.log('Artist albums', data.body.items);
+            console.log('Artist albums', data);
             res.render('albums', data); // baut unser HTML aus den Daten die wir brauchten
         }, function (err) {
             console.error(err);
@@ -66,16 +66,15 @@ app.get('/albums/:artist_id', (req, res, next) => {
 
 });
 
-app.get('/albums/:artist_id', (req, res, next) => {
-    let artistId = req.params.artist_id // localhost:3000/albums/oi12z38162tgd
-    let albumId =
-        spotifyApi.Constr.getAlbumTracks(albumId)
-            .then(data => {
-                console.log('Artist albums', data.body.items.tracks);
-                res.render('albums', data); // baut unser HTML aus den Daten die wir brauchten
-            }, function (err) {
-                console.error(err);
-            });
+app.get('/artist/albums/:album_id/tracks', (req, res, next) => {
+    let albumId = req.params.album_id // localhost:3000/albums/oi12z38162tgd
+    spotifyApi.getAlbumTracks(albumId)
+        .then(data => {
+            console.log('Artist albums tracks', data.body.items);
+            res.render('tracks', data); // baut unser HTML aus den Daten die wir brauchten
+        }, function (err) {
+            console.error(err);
+        });
 
 });
 
