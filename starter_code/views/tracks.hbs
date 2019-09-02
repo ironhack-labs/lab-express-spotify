@@ -1,0 +1,15 @@
+<div class="cards-container">
+  <p>Tracks for: {{data.body.items.artists}}</p>
+  {{#each data.body.items}}
+  <figure>
+    <figcaption>Listen to <h2>{{this.name}}</h2>:</figcaption>
+    <audio controls src="{{this.preview_url}}">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+  </figure>
+
+  {{/each}}
+</div>
+
+{{!-- if preview url = null --}}

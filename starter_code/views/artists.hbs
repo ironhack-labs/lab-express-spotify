@@ -1,8 +1,7 @@
 <div class="cards-container">
   {{#each data.body.artists.items}}
-  <h2> {{this.name}}</h2>
-
   <img src="{{this.images.[1].url}}">
+  <h2> {{this.name}}</h2>
   <a href="/albums/{{this.id}}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true">View
     Albums</a>
   {{/each}}
