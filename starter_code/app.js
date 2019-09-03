@@ -60,14 +60,15 @@ app.get('/albums/:artistId', (req, res, next) => {
 });
 
 app.get('/tracks/:albumId'), (req, res, next) => {
-  spotifyApi.getAlbumTracks(req.params.albumId)
+  spotifyApi.getAlbumTracks(req.params.albumId, { limit: 5, offset: 1 })
     .then(data => {
-      console.log(data.body)
       res.render('tracks', { trackSearchResults: data.body.items })
       console.log(trackSearchResults)
+
     }).catch(error => {
       console.log('Error while searching albums:', error)
     })
 }
-
+// then(data => {
+//   res.render('tracks', { data })
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
