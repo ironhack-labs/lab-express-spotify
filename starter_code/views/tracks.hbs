@@ -1,0 +1,16 @@
+<div class="cards-container">
+    <p>Tracks for: {{data.body.items.artists}}</p>
+    {{#each data.body.items}}
+    <div class="a-field">
+        <figure>
+            <figcaption>Listen to <h2>{{this.name}}</h2>:</figcaption>
+            <audio controls src="{{this.preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+        {{!-- <a href="/tracks/{{this.[2].preview_url}}">View Albums</a>
+    <a href="/tracks/{{this.id}}">View Tracks</a> --}}
+        {{/each}}
+    </div>
+</div>

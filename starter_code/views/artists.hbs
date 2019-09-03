@@ -1,0 +1,36 @@
+{{!-- <p>Hello, I'm an artist</p>
+<div class="container">
+    <div class="row">
+        <div class="card column" style="width: 20.333%;">
+            {{#each data.body.artists.items}}
+            <img class="card-img-top" src="{{this.images.[1].url}}" alt="Card image cap">
+            <div class="card-body">
+                <h2 class="card-title">{{this.name}} </h2>
+
+
+                <a class="card-title" href="/albums/{{this.id}}">View Albums</a>
+                {{/each}}
+            </div>
+        </div>
+    </div> --}}
+
+<div class="artists-page">
+    {{!-- <div class="container"> --}}
+
+    <div class="artist"></div>
+    {{#each  data.body.artists.items}}
+</div>
+<div class="a-field">
+    <img class="artist-img" src="{{this.images.[1].url}}" alt="cannot display image">
+    <div class="card-body">
+        <h2 class="a-name">{{this.name}} </h2>
+        <button>
+            <a class="a-albums" href="/albums/{{this.id}}">View Albums</a>
+        </button>
+    </div>
+</div>
+{{/each}}
+
+
+{{!-- </div> --}}
+</div>

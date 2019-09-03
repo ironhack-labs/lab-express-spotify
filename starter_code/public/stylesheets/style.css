@@ -1,0 +1,57 @@
+.landing-page {
+  background-image: url("../images/vishnu-r-nair-m1WZS5ye404-unsplash.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  display: flex;
+}
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.field {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  background-color: whitesmoke;
+  padding: 20px;
+  border: 1px solid rgb(43, 3, 3);
+  border-radius: 2px;
+}
+.artists-page {
+  background-color: rgb(201, 102, 36);
+  width: 2000px;
+  display: flex;
+}
+.a-field {
+  display: flex;
+  flex-direction: row;
+  align-content: center;
+  background-color: whitesmoke;
+  padding: 20px;
+  border: 1px solid rgb(43, 3, 3);
+  border-radius: 2px;
+  width: 500px;
+}
+.artist {
+  display: flex;
+  flex-direction: row;
+  align-content: space-between;
+}
+.artist-img {
+  height: 200px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-content: space-around;
+  width: 200px;
+}
+/* .container {
+      display: flex;
+  flex-direction: column;
+  align-content: space-around;
+} */

@@ -1,0 +1,13 @@
+<div class="cards-container">
+    <p>Albums for: {{data.body.items.artists.name}}</p>
+    {{#each data.body.items}}
+
+    <div class="a-field">
+        <img src="{{ this.images.[1].url }}">
+        <div class="card-body">
+            {{this.name}}
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
