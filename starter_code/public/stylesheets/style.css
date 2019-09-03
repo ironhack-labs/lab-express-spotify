@@ -1,3 +1,102 @@
-* {
-  background-color: aqua;
+/* #84bd00	Spotify Green Hex: #84bd00 RGB: 132, 189, 0
+#000000	Spotify Black Solid Hex: #000000 RGB: 0, 0, 0
+#828282	Spotify Grey Solid Hex: #828282 RGB: 130, 130, 130
+#ecebe8	Spotify Sand Solid Hex: #ecebe8 RGB: 236, 235, 232
+#ffffff	Spotify White Solid Hex: #ffffff RGB: 255, 255, 255 */
+ /* artists.hbs */ 
+ .nav {
+    background-color: black;
+    color: rgba(236, 235, 232);
+ }
+.artists-album {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
+.btn-secondary {
+    background-color: #4CAF50;
+}
+.goback {
+     text-decoration: none;
+ }
+.artists {
+    background-color: rgba(132, 189, 0);
+
+  }
+.artists-bg a, h1 {
+  color: rgba(130, 130, 130);  
+}
+.artists-bg h2 {
+    color: green;
+  }
+  /* index.hbs */ 
+  .home-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+    background-image: url("https://www.tokkoro.com/picsup/3015014-artist_guitar_guitarist_instrument_music_musician_performance_performer_playing.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+  height: 100vh;
+  margin:0;
+  }
+  .search-container {
+  display: flex;
+  box-shadow: 0 4px 10px 0 rgba(0,0,0,0.2);
+  }
+  
+  .card {
+    background: white;
+    box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.2), 0 4px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 300px;
+    width: 300px;
+    height: 430px;
+    margin: 10px;
+  }
+  
+  .card img {
+    width: 100% !important;
+    min-height: 300px;
+    max-height: 300px;
+    object-fit: cover;
+    background: url("/images/spot-bg.jpg");
+  }
+  
+  /* tracks.hbs*/
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+  }
+  
+  .title-row {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    width: 100%;
+    height: 53px;
+    background: #333;
+    color: white;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+  }
+  
+  .preview {
+    display: flex;
+    align-items: center;
+    align-content: space-around;
+    width: 100%;
+    height: 53px;
+    background: #f1f1f1;
+    margin-bottom: 8px;
+    padding: 8px 12px;
+  }
+  
+  
+  .column {
+    width: 50%;
+  }
+  /* artists.hbs /* 
+  .artists-album {
+   margin-left: 8px;
+  }
+  

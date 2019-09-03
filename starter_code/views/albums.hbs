@@ -1,12 +1,21 @@
-<div class="cards-container">
-    <div class="row">
+<nav class="nav">
+    <button type="button" value="Back" onclick="history.back()">
+        <i class="fas fa-arrow-alt-circle-left"></i>
+    </button> <a href="/">Go Back</a>
+    <h1>Albums for...</h1>
+</nav>
+
+<div class="container">
+    <div class="card">
         {{#each data.body.items}}
-        <div class="col-6 col-sm-4">
-            <h2> {{this.name}}</h2>
+        <i>{{this.name}}</i>
+
+        <div class="image-container"><img src="{{this.images.[1].url}}">
         </div>
-        <div class="col-6 col-sm-4"><img src="{{this.images.[1].url}}">
-        </div>
-        {{/each}}
+
+        <a href="/tracks/{{this.id}}" class="btn btn-secondary btn-lg active redOrange" role="button"
+            aria-pressed="true">View
+            Tracks</a>
     </div>
 </div>
-{{!-- data.body. --}}
+{{/each}}

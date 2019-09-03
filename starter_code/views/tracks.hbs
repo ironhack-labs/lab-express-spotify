@@ -1,0 +1,39 @@
+<nav class="nav">
+    <button type="button" value="Back" onclick="history.back()" class="goback">
+        <a href="/"><i class="fas fa-arrow-alt-circle-left"></i></a>
+    </button>
+    <h1>Tracks</h1>
+</nav>
+
+<div class="container">
+
+    <div class="title-row">
+        <div class="column">
+            <h2>Title</h2>
+        </div>
+        <div class="column">
+            <h2>Listen</h2>
+        </div>
+    </div>
+    {{#each data.body.items}}
+    {{!-- items.0.name = name
+items.0.preview_url --}}
+    <div class="preview">
+        <div class="column">
+            <div>
+                <h2> {{this.name}}</h2>
+            </div>
+        </div>
+        <div class="column">
+
+            <figure>
+
+                <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg">
+                </audio>
+            </figure>
+        </div>
+
+    </div>
+    {{/each}}
+</div>

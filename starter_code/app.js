@@ -42,16 +42,6 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
-
-app.get('/albums/:artistId', (req, res) => {
-    spotifyApi.getArtistAlbums(req.params.artistId) // localhost:3000/albums/1236i61523itei765
-        .then(data => {
-            res.render('albums', { data })
-            // res.send(data)
-        });
-})
-
-
 app.get('/artists', (req, res) => {
     //important    console.log('i am artist')
     console.log('i am artist', req.query)
@@ -61,13 +51,34 @@ app.get('/artists', (req, res) => {
             // res.send(data)
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
 
-            res.render('artists', { artists: data.body.artists.items })
+            res.render('artists', { data })
+            //res.send(data)
         })
         .catch(err => {
             console.log("The error while searching artists occurred: ", err);
         })
 })
-//query
+
+app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi.getArtistAlbums(req.params.artistId) // localhost:3000/albums/1236i61523itei765
+        .then(data => {
+            res.render('albums', { data })
+            // res.send(data)
+        });
+})
+
+app.get('/tracks/:albumsId', (req, res, next) => {
+    spotifyApi.getAlbumTracks(req.params.albumsId)
+        .then(data => {
+            res.render('tracks', { data })
+
+        });
+})
+// // Get tracks in an album
+// spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
+
+//   });
+
 
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));

@@ -1,10 +1,28 @@
-Hello!
-<div>
+<div class="home-container">
     <div class="search-container">
-        <form class="form" action="/artists" method="GET">
-            <input class="search-box" type="text" name="artistName" placeholder="Search for Artist here…">
-            <button class="search-button" type="submit"> Search for an Artist
-            </button>
-        </form>
+        <br />
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-10 col-lg-8">
+                <form class="card card-sm" action="/artists" method="GET">
+                    <div class="card-body row no-gutters align-items-center">
+                        <div class="col-auto">
+                        </div>
+                        <!--end of col-->
+                        <div class="col">
+
+                            <input class="form-control form-control-lg form-control-borderless search-query" type="text"
+                                name="artistName" placeholder="Search for an Artist">
+                        </div>
+                        <!--end of col-->
+                        <div class="col-auto">
+                            <button class="btn btn-lg btn-success" type="submit"><i
+                                    class="fas fa-search h4 text-body"></i></button>
+                        </div>
+                        <!--end of col-->
+                    </div>
+                </form>
+            </div>
+            <!--end of col-->
+        </div>
     </div>
 </div>

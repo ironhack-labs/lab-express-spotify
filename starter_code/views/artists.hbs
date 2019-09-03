@@ -1,16 +1,26 @@
-<div class="cards-container">
-    <div class="row">
-        {{#each this.artists}}
-        <div class="col-6 col-sm-4">
-            <h2> {{this.name}}</h2>
-        </div>
-        <div class="col-6 col-sm-4"><img src="{{this.images.[1].url}}">
+{{!--https://www.computerhope.com/issues/ch000317.htm --}}
+<div class="artists-bg">
+    <nav class="nav">
+        <button type="button" value="Back" onclick="history.back()">
+            <i class="fas fa-arrow-alt-circle-left"></i>
+        </button> <a href="/">Go Back</a>
+        <h1>Artists</h1>
+    </nav>
+    <div class="container artists">
+        {{!-- data.body.items.artists.name
+ --}}
+        {{#each data.body.artists.items}}
+        <h2> {{this.name}}</h2>
+        <div class="card">
+
+            <img src="{{this.images.[1].url}}">
+
+            <div class="artists-album">
+                <a href="/albums/{{this.id}}" class="btn btn-secondary btn-lg active redOrange" role="button"
+                    aria-pressed="true">View Albums</a>
+            </div>
         </div>
         {{/each}}
-        <div class="col-6 col-sm-4">
-            <button type="button" class="btn btn-primary">
-                <a href="/albums/" {{this.id}}>View Albums</a></button>
-        </div>
     </div>
 </div>
 {{!-- data.body. --}}
