@@ -1,0 +1,37 @@
+header {
+    background-image: url('/images/musicbg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat; 
+    height: 80vh;
+    display:flex;
+    align-items: center;
+  }
+
+  header form {
+    text-align: center;
+    width:100%;
+    font-size: 2em;
+    color: white;
+    /* background-color: white; */
+  }
+
+  .card{  
+    border: none;
+}
+  .albums {    
+    display: flex;
+    flex-direction: row;
+    /* justify-content: center; */
+    justify-content: space-around;
+    flex-wrap: wrap; 
+    margin-top:3em;
+    align-items: center;
+  }
+
+  .albums img {
+    display: block;
+    margin: auto;
+    height: 200px;
+    width: auto;
+  }
