@@ -1,0 +1,16 @@
+<h1>Artists:</h1>
+
+{{#each items }}
+
+<img src={{ this.images.1.url }} />
+
+<ul><li>{{ this.name }}</li></ul>
+ 
+
+<ul><li>{{ this.href }}</li></ul>
+
+  <p class="card-text"><a href="/tracks/{{this.id}}">View tracks</a></p>
+
+
+{{/each}}
+

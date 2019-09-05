@@ -10,9 +10,11 @@
 
 <ul><li>{{ this.href }}</li></ul>
 
-<form action={{this.uri}}>
-    <input type="submit" value="View albums" />
-</form>
+  <p class="card-text"><a href="/albums/{{this.id}}">View albums</a></p>
+
+{{!-- <form action='/albums/'>
+    <input type="submit" id="album" name="{{this.id}}" value="View albums" />
+</form> --}}
 
 {{/each}}
 
