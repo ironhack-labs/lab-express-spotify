@@ -1,0 +1,17 @@
+<div class="card" style="width: 25rem;">
+  {{!-- <div class="img-card-wrapper">
+    <img src="{{this.images.[1].url}}" class="card-img-top" alt="Album Picture">
+  </div> --}}
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <figure>
+      <audio controls src={{this.preview_url}}>
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </figure>
+    {{!-- <form action="/search" method="GET">
+      <a href="/albums/{{this.id}}" class="btn btn-primary">Show Tracks</a>
+    </form> --}}
+  </div>
+</div>

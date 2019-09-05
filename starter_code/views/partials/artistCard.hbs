@@ -1,0 +1,11 @@
+<div class="card" style="width: 25rem;">
+  <div class="img-card-wrapper">
+    <img src="{{this.images.[1].url}}" class="card-img-top" alt="Artist Picture">
+  </div>
+  <div class="card-body">
+    <h3 class="card-title">{{this.name}}</h3>
+    <form action="/search" method="GET">
+      <a href="/albums/{{this.id}}" class="btn btn-primary">Show Albums</a>
+    </form>
+  </div>
+</div>
