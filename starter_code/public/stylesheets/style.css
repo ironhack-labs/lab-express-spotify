@@ -1,0 +1,45 @@
+
+.index-container {
+  display: flex;
+  min-height: 50vh;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.beer-image {
+  max-width: 30%;
+}
+
+.navbar {
+  background-color: #2081C3;
+}
+
+.nav-link, .nav-item {
+  color: white;
+}
+
+.footer {
+  padding: 30px;
+}
+
+.searchResults {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card-image {
+  height: 300px;
+}
+.card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+}
+
+.card {
+  margin: 10px;
+}

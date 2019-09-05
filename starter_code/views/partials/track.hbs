@@ -1,0 +1,8 @@
+<div class="row">
+  <div class="col-md-6">{{this.name}}</div>
+  <div class="col-md-6">
+    {{#if this.preview_url}}
+      <audio controls src={{this.preview_url}}>Your browser does not support the <code>audio</code> element.</audio>
+    {{/if}}
+  </div>
+</div>
