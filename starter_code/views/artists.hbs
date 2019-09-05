@@ -1,0 +1,18 @@
+<h1>Artists:</h1>
+
+{{#each body.artists.items }}
+
+<ul><li>{{ this.name }}</li></ul>
+
+
+<img src={{ this.images.1.url }} />
+ 
+
+<ul><li>{{ this.href }}</li></ul>
+
+<form action={{this.uri}}>
+    <input type="submit" value="View albums" />
+</form>
+
+{{/each}}
+
