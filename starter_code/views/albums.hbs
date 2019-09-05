@@ -1,3 +1,17 @@
+
+{{!-- {{#each dataList}}
+<h3 class="album-title">Albums for: {{this.name}} </h3><br>
+{{/each}} --}}
+
+<div class="albums">
+   
 {{#each albumList}}
-<p>{{ this.name }}</p>
+<div class="card col-4" style="width: 18rem;">
+  <img src="{{this.images.[0].url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{ this.name }}</h5>
+    <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
+  </div>
+</div>
 {{/each}}
+</div>

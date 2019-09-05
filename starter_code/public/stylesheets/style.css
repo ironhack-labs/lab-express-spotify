@@ -3,35 +3,67 @@ header {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat; 
-    height: 80vh;
+    height: 100vh;
     display:flex;
     align-items: center;
   }
 
   header form {
     text-align: center;
-    width:100%;
-    font-size: 2em;
-    color: white;
-    /* background-color: white; */
   }
 
+  input{
+    width: 80%;
+    margin-bottom: 10px;
+  }
+
+  .fristpage{
+    margin: auto;
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 40%;
+    padding: 4em;
+  }
   .card{  
     border: none;
 }
   .albums {    
     display: flex;
     flex-direction: row;
-    /* justify-content: center; */
     justify-content: space-around;
     flex-wrap: wrap; 
     margin-top:3em;
     align-items: center;
+    padding-left: 100px;
+    padding-right: 50px;
   }
 
   .albums img {
     display: block;
-    margin: auto;
-    height: 200px;
+    margin-right: 50px;
+    height: 300px;
     width: auto;
   }
+
+  .card-body{
+    text-align: center;
+  }
+
+  .album-title{
+    margin-top: 40px;
+    text-align: center;
+  }
+  .track-container{
+    margin: auto 200px;
+  }
+  table th{
+    height: 2.5em;
+    font-size: 1.5em;
+    color: grey;
+  }
+  .th2{
+    text-align: center;
+  }
+  .td2{
+    text-align: right;
+  }
+  

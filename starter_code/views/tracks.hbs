@@ -1,0 +1,21 @@
+
+<div class="table-responsive-xl track-container">
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th>Title</th>
+      <th class="th2">Listen</th>
+    </tr>
+  </thead>
+  {{#each trackList}}
+  <tbody>
+    <tr>
+      <td>{{ this.name }}</td>
+      <td class="td2"><audio controls src={{this.preview_url}}>Code not supported
+    <code>audio</code> element.</audio></td>
+    </tr>
+  
+  </tbody>
+  {{/each}}
+</table>
+</div>

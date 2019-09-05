@@ -1,19 +1,14 @@
 
 <div class="albums">
 {{#each dataList}}
-<div class="card" style="width: 18rem;">
+<div class="card col-4" style="width: 18rem;">
   <img src="{{this.images.[0].url}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{ this.name }}</h5>
-    {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p> --}}
-    <a href="/albums/:artistId" class="btn btn-danger">View Albums</a>
+    <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
   </div>
 </div>
 {{/each}}
 </div>
 
 
-{{!-- {{#each dataList}}
-<img src="{{this.images.[0].url}}" alt="">
-<p>{{this.name}}</p>
-{{/each}} --}}
