@@ -1,0 +1,30 @@
+body{
+    background-image: url('/images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-div{
+    padding-top: 50px;
+    margin-top: 200px;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-direction: row;
+    height: 200px;
+    width: 500px;
+    background-color: rgba(250, 253, 253, 0.685);
+}
+
+#search-input{
+    margin: 0 auto;
+    display: inline-block;
+}
+
+button.btn.btn-primary{
+    background-color: red;
+    margin: 10px;
+}
