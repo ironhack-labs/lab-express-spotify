@@ -1,27 +1,16 @@
-
-.index-container {
+.bandimg {
+  background-image: url(https://images.unsplash.com/photo-1459749411175-04bf5292ceea?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2100&q=80);
+  background-size: cover;
+  min-height: 100vh;
   display: flex;
-  min-height: 50vh;
-  flex-direction: column;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
-  margin: 30px 0;
 }
 
-.beer-image {
-  max-width: 30%;
-}
-
-.navbar {
-  background-color: #2081C3;
-}
-
-.nav-link, .nav-item {
-  color: white;
-}
-
-.footer {
-  padding: 30px;
+.content{
+  width: 90%;
+  padding: 5%;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 .searchResults {
