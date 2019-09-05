@@ -1,0 +1,10 @@
+.container {
+  background-image: url("/images/musicBg.jpg");
+  background-size: cover;
+  height: 850px;
+}
+
+#artists {
+  display: flex;
+  justify-content: center;
+}
