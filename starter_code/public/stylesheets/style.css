@@ -1,0 +1,25 @@
+.parent {
+    background-image: url('/images/landing.jpg');
+    background-size: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#searchbutton {
+    background-color: red;
+    color: white;
+    padding: 1em;
+    border: none;
+}
+
+.search {
+    padding: 40px 70px;
+    background-color: hsla(0, 0%, 100%, 0.325);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 200px;
+}
