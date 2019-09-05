@@ -1,0 +1,17 @@
+<h1> Results for the search "{{search}}"</h1>
+
+<div class="gallery">
+    {{#each artists}}
+    <div class="card">
+        {{!-- if there is a card, it will be displayed, if not, we'll show a default image --}}
+        {{#if this.images.[0]}}            
+        <img src="{{this.images.[0].url}}" alt="" class="card__img">
+        {{else}}
+        <img src="{{this.images.[0].url}}" alt="" class="card__img">
+        {{/if}}
+        <h1 class="card__title">{{this.name}}</h1>
+    </div>
+        {{!-- this <a> will redirect to GET /albums, and add the id value to the url, wich will be used later in the backEnd --}}
+    {{/each}}
+          <a class="button" href="/albums/{{this.id}}">View Albums</a>
+</div>

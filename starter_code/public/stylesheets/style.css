@@ -1,0 +1,50 @@
+* {
+    box-sizing: border-box;
+    margin: 0
+  }
+  
+  body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  .card {
+    background-color: #4d4d4d;
+    color: white;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    padding-bottom: 10px;
+  }
+
+  .homepage__background {
+    background-image: url("../images/spotifybackground.jpg");
+    background-size: cover;
+    height: 100vh;
+    width: 100vw
+  }
+  
+  .card__img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+  }
+  
+  .card__title {
+    margin: 10px;
+  }
+  
+  .button {
+    background-color: #ef6866;
+    color: white;
+    text-decoration: none;
+    padding: 10px 12px;
+    border-radius: 5px;
+    display: inline-block;
+  }
+  
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    margin: auto;
+    justify-content: center;
+  }
