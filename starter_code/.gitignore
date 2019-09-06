@@ -1,4 +1,4 @@
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 .env
-node_modules
+/node_modules
