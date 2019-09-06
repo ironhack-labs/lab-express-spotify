@@ -1,0 +1,9 @@
+{{#each items as |track|}}
+<div class="main">
+  <div class="container">
+    <span><strong>{{track.name}}</strong></span>
+    <audio controls src="{{track.uri}}">Browser not supported</audio>
+
+  </div>
+</div>
+{{/each}}
