@@ -1,0 +1,9 @@
+<div class="artist-container">
+
+    {{#each foundArtist as |child|}}
+    {{#> artistCard }}
+    {{child.value}}
+    {{/artistCard}}
+    {{/each}}
+
+</div>

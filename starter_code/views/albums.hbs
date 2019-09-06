@@ -1,0 +1,9 @@
+<div class="albums-container">
+
+    {{#each albums as |child|}}
+    {{#> albumCard }}
+    {{child.value}}
+    {{/albumCard}}
+    {{/each}}
+
+</div>

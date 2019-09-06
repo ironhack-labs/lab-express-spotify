@@ -1,0 +1,14 @@
+<div class="tracks-container">
+
+    <div class="track-text">
+        <h2>Title</h2>
+        <h2>Listen</h2>
+    </div>
+
+    {{#each tracks as |child|}}
+    {{#> trackCard }}
+    {{child.value}}
+    {{/trackCard}}
+    {{/each}}
+
+</div>

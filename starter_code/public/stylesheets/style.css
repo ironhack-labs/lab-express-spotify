@@ -1,0 +1,169 @@
+* {
+    padding: 0;
+    margin: 0;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
+}
+
+/* ############    INDEX   ############ */
+
+.home {
+    height: 100vh;
+    background-image: url("/images/landing.jpg");
+    background-position: center;
+    background-size: cover;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-form {
+    display: flex;
+    height: 100px;
+    padding: 20px;
+    width: 400px;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.3);
+}
+
+.home-form input {
+    border-radius: 3px;
+    border: none;
+    height: 25px;
+    width: 300px;
+    outline: none;
+}
+
+
+.home-form button {
+    background-color: #FA6862;
+    color: white;
+    height: 20px;
+    border: none;
+    height: 30px;
+    width: 150px;
+    outline: none;
+}
+
+
+/* ############    ARTISTS   ############ */
+
+.artist-container {
+    min-height: calc(100vh - 80px);
+    width: calc(100vw - 120px);
+    padding: 40px 60px;
+    background: rgba(218, 162, 162, 0.3);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ############    ARTIST-CARD   ############ */
+
+.artistcard-container {
+    display: flex;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-image {
+    height: 200px;
+    width: 200px;
+}
+
+.artist-text {
+    background: #4D4D4D;
+    width: 200px;
+    padding: 5px 0 10px 0;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center
+}
+
+.artist-text h5 {
+    padding: 5px;
+}
+
+.artist-text a {
+    text-decoration: none
+}
+
+
+.artist-text button {
+    color: white;
+    background-color: #FA6862;
+    height: 20px;
+    border-radius: 3px;
+    border: none;
+    width: 100%;
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    outline: none;
+}
+
+
+/* ############    ALBUMS   ############ */
+
+.albums-container {
+    min-height: calc(100vh - 80px);
+    width: calc(100vw - 120px);
+    padding: 40px 60px;
+    background: rgba(218, 162, 162, 0.3);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* ############    ALBUM CARD   ############ */
+
+
+.albumcard-container {
+    display: flex;
+    flex: 3;
+    padding: 30px;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/* ############    TRACKS   ############ */
+
+
+.albums-container {
+    min-height: calc(100vh - 80px);
+    width: calc(100vw - 120px);
+    padding: 40px 60px;
+    background: rgba(218, 162, 162, 0.3);
+
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.track-text {
+    display: flex;
+    flex-direction: row;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: space-around;
+    color: #C3C3C3;
+    background-color: #4D4D4D;
+}
+
+/* ############    TRACK CARD   ############ */
+
+.track-info {
+    display: flex;
+    padding: 20px 300px;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #F6F6F6;
+    margin: 4px 0;
+}
