@@ -10,8 +10,6 @@ app.use(express.static(__dirname + '/public'));
 // the routes go here:
 app.use('/', require('./routes'))
 
-
-
 ///
 const PORT = process.env.PORT
 app.listen(PORT, () => {
