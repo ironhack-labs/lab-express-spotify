@@ -29,7 +29,7 @@ router.get('/artists', (req, res) => {
 
   spotifyApi.searchArtists(artist)
     .then(data => {
-      console.log(data.body.artists.items)
+      //console.log(data.body.artists.items)
       res.render('artists', {
         artists: data.body.artists.items
       })
@@ -40,14 +40,13 @@ router.get('/artists', (req, res) => {
     })
 })
 
-
-
-
 router.get('/albums/:artistId', (req, res) => {
   const id = req.params.artistId
+
   spotifyApi.getArtistAlbums(id)
     .then(data => {
       res.render('albums', data.body)
+      console.log(data.body)
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
@@ -55,6 +54,18 @@ router.get('/albums/:artistId', (req, res) => {
     })
 })
 
+router.get('/tracks/:id', (req, res) => {
+  const id = req.params.id
 
+  spotifyApi.getAlbumTracks(id)
+    .then(data => {
+      res.render('tracks', data.body)
+      //console.log(data.body)
+    })
+    .catch(err => {
+      console.log("The error while searching artists occurred: ", err);
+      res.render('tracks')
+    })
+})
 
 module.exports = router
