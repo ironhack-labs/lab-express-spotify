@@ -1,0 +1,8 @@
+<div>
+    <ol>
+        {{#each data}}
+        <li>{{>trackscard this}} <audio controls src="{{preview_url}}"></audio></li>
+
+        {{/each}}
+    </ol>
+</div>
