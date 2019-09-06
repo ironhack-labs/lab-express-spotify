@@ -1,0 +1,12 @@
+<h1>ARTISTS</h1>
+<section>
+  <div class="artists-container">
+    {{#each artists}}
+    <img src="{{this.images.[1].url}}" alt="name">
+    {{this.name}}
+    <a href="/albums/:artistId">
+      <button>View Albums</button>
+    </a>
+    {{/each}}
+  </div>
+</section>

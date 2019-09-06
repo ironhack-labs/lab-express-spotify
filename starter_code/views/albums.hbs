@@ -1,0 +1,10 @@
+<h1>ALBUMS</h1>
+<section>
+  <div class="artists-container">
+    {{#each artists}}
+    <img src="{{this.images.[1].url}}" alt="name">
+    {{this.name}}
+    <button>View Albums</button>
+    {{/each}}
+  </div>
+</section>
