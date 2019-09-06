@@ -1,0 +1,98 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+form{
+    width: 100%;
+}
+.input-search{
+    width: 100%;
+    font-size: 18px;
+}
+.search{
+    background-color: rgba(235, 199, 199, 0.386);
+    width:30vw;
+    /* height: 15vh; */
+    display:flex;
+    justify-content: center;
+    margin:  auto;
+    align-items: center;
+    padding: 3% 5%;
+}
+input{
+    display: block;
+}
+
+.div-container{
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    background-image: url("../images/fondoSpotify.jpeg");
+    background-size: cover;
+}
+
+.boton-search{
+    background-color: #fb6863;
+    border-radius: 10px;
+    color:white;
+    padding:10px 20px;
+    margin-top: 20px;
+    margin: 20px auto;
+}
+
+.artist , .album{
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    margin: 3%;
+}
+.img1{
+    display: block;
+    min-width: 100%;
+    height: 16rem;
+    object-fit: cover; 
+    overflow: hidden;
+}
+.artist-image, .album-image{
+    width: 100%;
+}
+.fondo-gris{
+    background-color: gray;
+    text-align: center;
+    padding: 15px;
+    box-sizing: border-box;
+}
+.name {
+    color:white;
+    margin:0;
+    
+}
+.container-artist{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 5%;
+    justify-content: center;
+}
+.boton2{
+    background-color: #fb6863;
+    border-radius: 10px;
+    color:white;
+    border:none;
+    padding: 5px 20px;
+    margin-top: 10px;
+}
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(242, 242, 242);
+    margin: .5% 3%;
+    padding: 0 15px;
+}
+.header{
+    background-color: #5a5a5a;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 0 30px;
+}
