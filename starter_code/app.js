@@ -63,9 +63,17 @@ app.get('/album/:id', (req, res) => {
     })
 })
 
-// setting the spotify-api goes here:
-
-// the routes go here:
+app.get('/tracks', (req, res) => {
+  spotifyApi
+    .getAlbumTracks()
+    .then(data => {
+      console.log('The received data from the API: ', data.body)
+      res.render('tracks')
+    })
+    .catch(err => {
+      console.log('The error while searching artists occurred: ', err)
+    })
+})
 
 const PORT = process.env.PORT
 
