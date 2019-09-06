@@ -1,0 +1,28 @@
+body {
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  margin: 0%;
+}
+
+a {
+  color: #00B7FF; }
+
+#home{
+  min-height: 100vh;
+  background-image: url(https://www.romania-insider.com/sites/default/files/styles/article_large_image/public/2019-06/music_festival_-_pexels.com_.jpg);
+  background-size: 100% 100%;
+}
+
+.mainbutton{
+  position: absolute;
+  margin: auto;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  width: 100px;
+  height: 100px;
+}
+
+.find{
+  
+}

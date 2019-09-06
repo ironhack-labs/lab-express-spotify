@@ -1,0 +1,14 @@
+<ul>
+    {{#each allTheArtists}}
+    <li>
+        {{ this.name }}
+        <br>
+        <img src="{{ this.images.0.url }}" alt="" width="160px" >  
+    <br>
+    {{!-- app.get('/albums/:artistId'....) --}}
+    <a href="/albums/{{this.id}}">See the albums</a>
+    </li>
+
+    {{/each}}
+
+</ul>
