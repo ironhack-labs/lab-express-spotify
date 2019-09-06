@@ -1,26 +1,18 @@
+require('dotenv').config();
+
+const path = require('path');
 const express = require('express');
 const hbs = require('hbs');
-
-// require spotify-web-api-node package here:
-
-
+const router = require('./routes/index');
 
 const app = express();
 
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set('views', path.join(__dirname, 'views'));
+app.use(express.static('public'));
 
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
 
-// setting the spotify-api goes here:
+app.use('/', router);
 
-
-
-
-
-
-// the routes go here:
-
-
-
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+app.listen(process.env.PORT, () => console.log(`Server up on http://localhost:${process.env.PORT}`));

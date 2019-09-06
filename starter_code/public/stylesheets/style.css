@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto&display=swap');
+
+html {
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+* {
+  box-sizing: inherit;
+}
+body {
+  padding: 0;
+  margin: 0;
+  font-size: 16px;
+}
+
+.search-container {
+  background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form > input {
+  margin-bottom: 15px;
+}
+
+form > input:first-child {
+  width: 500px;
+  padding: 10px 5px;
+}
+
+form > input:last-child {
+  background-color: #ff6666;
+  border: none;
+  color: white;
+  border-radius: 5px;
+  padding: 8px 8px;
+}
+
+.albums-container,
+.artists-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 30px;
+  justify-content: center;
+  align-content: center;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.album-card,
+.artist-card {
+  width: 25%;
+  margin: 20px 40px;
+}
+
+.album-card > div:last-child,
+.artist-card > div:last-child {
+  width: 100%;
+  overflow: hidden;
+  background-color: dimgray;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 15px;
+  margin-top: 5px;
+}
+
+a {
+  padding: 10px 20px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+  background-color: #ff6666;
+}
+
+.tracks-container {
+  width: 99vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.track-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 60px;
+  margin: 5px;
+  background-color: #f1f3f4;
+  width: 100%;
+  font-weight: bold;
+}
+
+h1 {
+  text-align: center;
+}
+
+.track-item:first-child {
+  background-color: #444;
+  color: #fff;
+}
