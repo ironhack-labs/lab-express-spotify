@@ -1,0 +1,33 @@
+<section class="section">
+    <div class="container">
+        <h1>Tracks</h1>
+        <div class="tracks">
+            <table class="table is-striped is-hoverable is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>
+                            Title
+                        </th>
+                        <th>
+                            Listen
+                        </th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each tracks}}
+                    <tr>
+                        <td>{{this.name}}</td>
+                        <td>
+                            <audio controls src="{{this.preview_url}}">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                            </audio>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</section>

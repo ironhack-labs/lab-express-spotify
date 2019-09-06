@@ -1,0 +1,14 @@
+<section class="section">
+	<div class="container">
+		<h1>Albums</h1>
+		<div class="albums">
+			{{#each albums}}
+			<div class="album">
+				<div class="album-image" style="background-image: url('{{this.images.[1].url}}')"></div>
+				<span class="album-title">{{this.name}}</span>
+				<a class="album-link" href="/tracks/{{this.id}}">view tracks</a>
+			</div>
+			{{/each}}
+		</div>
+	</div>
+</section>

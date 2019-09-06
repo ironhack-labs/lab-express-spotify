@@ -1,0 +1,192 @@
+html {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font: 16px 'Lucida Grande', Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00b7ff;
+}
+a:hover {
+  color: brown;
+}
+
+h1 {
+  font-size: 32px;
+}
+
+.space {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  width: 100%;
+}
+
+.section {
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.section.home {
+  background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+}
+
+.home {
+  height: 100vh;
+}
+
+.main-cont {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 100%;
+}
+
+/* ARTIST */
+.artists {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.artist {
+  background-color: #555;
+  display: flex;
+  margin: 3%;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  width: 20%;
+  height: auto;
+}
+.artist-detail {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+}
+
+.artist-image {
+  background-color: black;
+  background-position: center;
+  color: white;
+  height: 294px;
+  width: 230px;
+}
+
+.artist-link {
+  margin: 4% auto;
+  background-color: tomato;
+  display: inline;
+  max-width: 112px;
+  border-radius: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.artist-link:hover {
+  background-color: darkred;
+  color: white;
+}
+
+/* ALBUM*/
+.albums {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 100%;
+  width: 100%;
+  flex-wrap: wrap;
+  align-items: flex-start;
+}
+
+.album {
+  background-color: #555;
+  display: flex;
+  margin: 3%;
+  flex-direction: column;
+  color: white;
+  text-align: center;
+  width: 24%;
+  height: auto;
+}
+.album-detail {
+  display: flex;
+  margin: auto;
+  flex-direction: column;
+  width: 40%;
+  height: auto;
+}
+
+.album-image {
+  background-color: black;
+  background-position: center;
+  color: white;
+  height: 294px;
+  width: 100%;
+}
+
+.album-link {
+  margin: 3% auto;
+  background-color: tomato;
+  display: inline;
+  max-width: 112px;
+  border-radius: 40px;
+  color: white;
+  font-weight: bold;
+  font-size: 12px;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 2% 5%;
+}
+
+.album-link:hover {
+  background-color: darkred;
+  color: white;
+}
+
+.album-title {
+  margin: 3% auto;
+}
+
+.tracks {
+  background-color: #a1988f;
+}
+
+.track {
+  background-color: aliceblue;
+}
+
+.table {
+  margin: 2% auto;
+}
+
+.table thead {
+  background-color: #555;
+}
+
+.table th,
+.table th:not([align]) {
+  padding: 2%;
+  font-size: 20px;
+  color: white;
+}
