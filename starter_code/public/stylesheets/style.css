@@ -1,0 +1,98 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+.home-bg {
+  background-image: url("/images/yvette-de-wit-NYrVisodQ2M-unsplash.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  height: 50;
+  padding: 80px;
+}
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form input {
+  width: 300px;
+  height: 20px;
+  border-radius: 5px;
+}
+
+.btn, .btn-home {
+  background-color: #ee706b;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+  color: white;
+  font-weight: bold;
+}
+
+.btn-home:hover {
+  background-color: white;
+  color: #ee706b;
+  border: 1px solid #ee706b;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-wrap: wrap;
+}
+
+.artist-container{
+    padding:30px;
+    
+}
+
+.text-btn-container{
+    background-color: grey;
+    width:300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    color: white;
+
+    
+}
+
+.card-img{
+    width:300px;
+
+}
+
+.track-nav{
+    color:white;
+ background-color: grey;  
+ display: flex;
+ justify-content: space-between; 
+ padding: 20px 200px 20px 70px;
+}
+
+.track-wrapper{
+    margin: 0px 130px;
+}
+
+.track-content{
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: #F5F5F5;
+}
+
+
