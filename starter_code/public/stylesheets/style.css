@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    
+}
+
+.index {
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-image: url(https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1296&q=60);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.search-form {
+    background-color: rgba(255, 255, 255, 0.582);
+    width: 60vw;
+    height: 25vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form button {
+    background-color: red;
+    color: white;
+}
+
+.artist-card{
+    width: 200px;
+    height: 265px;
+    background-color: rgb(109, 109, 109);
+    color: white;
+    margin: 4%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+
+}
+
+.artist-card button {
+    background-color: red;
+    color: white;
+    padding: 3px;
+    margin-bottom: 7px;
+}
+
+.artist-card img{
+    width: 200px;
+    height: auto;
+
+}
+
+.artist {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tab-trackers {
+    background-color: gray;
+    height: 8vh;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: rgba(255, 255, 255, 0.733)
+}
+
+.tab-trackers h2{
+    color: rgba(255, 255, 255, 0.733);
+    padding: 0 25px;
+}    
+/* 
+.trackers{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 15px;
+    background-color: rgba(248, 36, 36, 0.219)
+} */
+
+.track-info {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.055);
+    align-items: center;
+}
