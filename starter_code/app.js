@@ -95,7 +95,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
     let searchedTracks = req.params.albumId
 
     spotifyApi.getAlbumTracks(searchedTracks, {
-            limit: 5,
+            limit: 50,
             offset: 1
         })
         .then(data => {
