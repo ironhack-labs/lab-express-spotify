@@ -1,0 +1,20 @@
+body {
+  display: flex;
+  background: url(/public/images/bg.jpg) no-repeat center center fixed;
+  background-size: cover;
+}
+
+.card {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 250px;
+  height: 100px;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.all-artists{
+  flex-flow: row wrap;
+  align-content: baseline;
+  justify-content: space-around;
+}

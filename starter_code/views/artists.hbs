@@ -1,13 +1,10 @@
-
-{{firstartistname}}
-
+{{!-- {{firstartistname}} --}}
 {{#each artists}}
-<div class="card" style="width: 20rem;">
-    {{!-- <img src={{this.href}} class="card-img-top"> --}}
+<div class="card all-artists" style="width: 18rem;">
+  <img src="{{this.images}}" class="card-img-top" alt="...">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}</h5>
-    <h6 class="text-muted"></h6>
-    <p class="card-text"></p>
+    <a href="{{this.eternal_urls}}" class="btn btn-danger">View Albuns</a>
   </div>
 </div>
 {{/each}}
