@@ -1,7 +1,11 @@
-<div>
+<div class="artists-albums-container">
     {{#each artistsToRender}}
-    <h2>{{this.name}}</h2>
-    <img src={{this.images.[0].url}} alt="">
-    <a href="/albums/{{this.id}}"> <button type="submit">View Albums</button></a>
+    <div class="artist-album-card">
+        <img src={{this.images.[0].url}} alt="artist image">
+        <div class="artist-album-info">
+            <h2>{{this.name}}</h2>
+            <a href="/albums/{{this.id}}"> <button type="submit">View Albums</button></a>
+        </div>
+    </div>
     {{/each}}
 </div>

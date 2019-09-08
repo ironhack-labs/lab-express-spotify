@@ -1,0 +1,82 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.form-container {
+    height: 100%;
+    width: 100%;
+    background-image: url(/images/bg-live-1.jpeg);
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container form {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-container input {
+    margin: 10px 50px;
+    width: 300px;
+    height: 25px;
+}
+
+.form-container button {
+    color: white;
+    width: 150px;
+    height: 30px;
+    background-color: red;
+    border: 0;
+    margin: 10px 50px;
+}
+
+.artists-albums-container {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 50px;
+}
+
+.artist-album-card {
+    width: 300px;
+    margin: 10px;
+}
+
+.artist-album-card img {
+    width: 100%;
+    height: auto;
+}
+
+.artist-album-info {
+    width: 100%;
+    background: grey;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-album-card button {
+    background-color: red;
+    margin: 20px;
+    width: 120px;
+    height: 30px;
+    color: white;
+    font-size: 18px;
+    border-radius: 3px;
+    border: none;
+}

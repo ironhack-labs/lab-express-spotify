@@ -1,9 +1,32 @@
-<div>
-    {{#each tracksList}}
-    <h2>{{this.name}}</h2>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
 
-    <audio controls="controls">
-        <source src={{this.preview_url}} type="audio/mpeg" />
-    </audio>
+    .tracks-header {
+        background-color: grey;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .track-line {
+        display: flex;
+        justify-content: space-between;
+    }
+</style>
+
+<header class="tracks-header">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</header>
+<div class="tracks-container">
+    {{#each tracksList}}
+    <div class="track-line">
+        <h2>{{this.name}}</h2>
+        <audio controls="controls">
+            <source src={{this.preview_url}} type="audio/mpeg" />
+        </audio>
+    </div>
     {{/each}}
 </div>

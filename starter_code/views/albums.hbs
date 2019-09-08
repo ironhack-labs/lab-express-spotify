@@ -1,7 +1,54 @@
-<div>
+<style>
+    * {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .artists-albums-container {
+        display: flex;
+        flex-wrap: wrap;
+        padding: 50px;
+    }
+
+    .artist-album-card {
+        width: 300px;
+        margin: 10px;
+    }
+
+    .artist-album-card img {
+        width: 100%;
+        height: auto;
+    }
+
+    .artist-album-info {
+        width: 100%;
+        background: grey;
+        color: white;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .artist-album-card button {
+        background-color: red;
+        margin: 20px;
+        width: 120px;
+        height: 30px;
+        color: white;
+        font-size: 18px;
+        border-radius: 3px;
+        border: none;
+    }
+</style>
+
+<div class="artists-albums-container">
     {{#each albumsList}}
-    <h2>{{this.name}}</h2>
-    <img src={{this.images.[0].url}} alt="">
-    <a href="/tracks/{{this.id}}"> <button type="submit">View Tracks</button></a>
+    <div class="artist-album-card">
+        <img src={{this.images.0.url}} alt="">
+        <div class="artist-album-info">
+            <h2>{{this.name}}</h2>
+            <a href="/tracks/{{this.id}}"> <button type="submit">View Tracks</button></a>
+        </div>
+    </div>
     {{/each}}
 </div>

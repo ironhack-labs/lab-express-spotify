@@ -55,11 +55,11 @@ app.get("/artists", (req, res) => {
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-  const splitted = req.url.split("/");
-  const artistId = splitted[splitted.length - 1];
-  spotifyApi.getArtistAlbums(artistId).then(
+  //   const splitted = req.url.split("/");
+  //   const artistId = splitted[splitted.length - 1];
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
     data => {
-      console.log("Artist albums", data.body.items[0].images);
+      console.log("Artist albums", req.params.artistId);
       const albumsList = data.body.items;
       res.render("albums", {
         albumsList: albumsList
@@ -73,11 +73,8 @@ app.get("/albums/:artistId", (req, res, next) => {
 });
 
 app.get("/tracks/:albumId", (req, res, next) => {
-  const splitted = req.url.split("/");
-  const albumId = splitted[splitted.length - 1];
-  spotifyApi.getAlbumTracks(albumId, { limit: 5, offset: 1 }).then(
+  spotifyApi.getAlbumTracks(req.params.albumId, { limit: 10, offset: 1 }).then(
     data => {
-      console.log(data.body.items);
       const tracksList = data.body.items;
       res.render("tracks", {
         tracksList: tracksList
