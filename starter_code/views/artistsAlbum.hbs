@@ -1,0 +1,13 @@
+
+<h1>Hier Kommen die Alben</h1>
+   
+{{#unless artistsAlb}}
+Alles leer
+    {{/unless}}
+
+    {{#each artistsAlb}}
+    {{> artistsAlb this}}
+    {{/each}}
+
+
+

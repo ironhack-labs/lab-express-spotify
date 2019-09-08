@@ -1,0 +1,11 @@
+.track-box {
+    
+    display: flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+    margin: 20px 20px 20px 20px;
+}
+
+.width {
+    width:45%;
+}

@@ -1,0 +1,10 @@
+
+<h1>Here are all tracks</h1>
+<div class="track-box">
+{{#unless albumtracks}}
+    {{/unless}}
+    {{#each albumtracks}}
+ {{> albumtracks this}}
+    {{/each}}
+</div>
+
