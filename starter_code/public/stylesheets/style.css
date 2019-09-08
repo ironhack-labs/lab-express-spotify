@@ -1,0 +1,23 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-size: 10px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('../images/bg-home.jpg');
+    background-size: cover;
+}
+
+input {
+	padding: 10px;
+	border-width: 1px;
+	border-style: solid;
+	border-color: lightgray;
+    background-color: white;
+}
