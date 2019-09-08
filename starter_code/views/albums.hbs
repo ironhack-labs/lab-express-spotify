@@ -1,19 +1,14 @@
-<h1>Artists:</h1>
+<h1>Album's Page:</h1>
 
-{{#each albumList }}
+{{#each albumsList }}
 
-<img src={{ this.images.1.url }} />
-
-<ul>
-   <li>{{ this.name }}</li>
-</ul>
+<a href="/tracks/{{this.id}}"><img src={{ this.images.1.url }} /></a>
 
 
-<ul>
-   <li>{{ this.href }}</li>
-</ul>
+<h3>{{ this.name }}</h3>
+
+
 
 <p class="card-text"><a href="/tracks/{{this.id}}">View tracks</a></p>
-
 
 {{/each}}
