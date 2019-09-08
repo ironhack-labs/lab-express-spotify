@@ -58,7 +58,7 @@ app.get('/tracks/:albumId', (req, res) => {
       res.render('tracks.hbs', { tracks });
     })
     .catch(err => {
-      console.log("The error while searching album tracks occures: ", err);
+      console.log("The error while searching album tracks occured: ", err);
     })
 });
 
