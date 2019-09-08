@@ -1,0 +1,28 @@
+<h1>Listen in...</h1>
+
+<div class="listen-head">
+    <div class="listen-head-text">Title</div>
+    <div class="listen-head-text">Listen</div>
+</div>
+{{#each body.items}}
+<div class="track">
+    {{name}}
+    <audio controls>
+        <source src={{preview_url}} type="audio/mpeg">
+        <p>Your browser doesn't support HTML5 audio.</p>
+    </audio>
+</div>
+{{/each}}
+{{!-- 
+{{#each body.items}}
+
+<div class="card album-card">
+
+    <img class="card-img album-img" src={{images.1.url}} alt="">
+    <h2 class=" card-name album-name">{{name}}</h2>
+    <a href="/albums/{{id}}">
+        <button class=" btn view-tracks">View Tracks</button>
+    </a>
+</div>
+
+{{/each}} --}}
