@@ -49,7 +49,6 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(albums => {
-      console.log("Artist albums", albums.body);
       res.render("albums", { albumsList: albums.body.items });
     })
     .catch(error => {
@@ -64,7 +63,6 @@ app.get("/tracks/:albumsId", (req, res) => {
       offset: 1
     })
     .then(track => {
-      console.log(track.body);
       res.render("tracks", { tracksList: track.body.items });
     })
     .catch(error => {
