@@ -1,0 +1,10 @@
+<div class="tracksContainer">
+    {{#each body.items}}
+
+
+    <p>{{this.name}}</p>
+    <audio controls>
+        <source src={{preview_url}} type=“audio/mpeg”> <p>Your browser doesn’t support HTML5 audio.</p>
+    </audio>
+    {{/each}}
+</div>

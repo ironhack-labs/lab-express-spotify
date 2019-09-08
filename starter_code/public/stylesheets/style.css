@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: row;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.home-bg {
+    background-image: url("https://images.unsplash.com/photo-1487180144351-b8472da7d491?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2252&q=80");
+    background-repeat: none;
+    background-position: center;
+    background-size: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.wrapper {
+    background-color: rgba(0, 0, 0, 0.3);
+    height: 30%;
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.wrapper form {
+    flex-direction: column;
+    width: 100%;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
+
+#searchBar {
+    width: 70%;
+    text-align: center;
+    font-size: 30px;
+    margin: 5px;
+}
+
+#searchBtn {
+    widows: 60%;
+    margin: 5px;
+    padding: 5px;
+    background-color: #1ed761;
+    color: #ffffff;
+    font-weight: bolder;
+    font-size: 20px;
+    cursor: pointer;
+}
+/*######################################## - ARTISTS CSS - ########################################*/
+.container {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    padding: 15px;
+    justify-content: center;
+    background-color: #1ed761;
+}
+
+.artistCards {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25%;
+    margin: 5px;
+    border: black solid 2px;
+}
+
+#artistImg {
+    width: 100%;
+}
+
+.artistInfo {
+    text-align: center;
+    width: 100%;
+    font-size: 30px;
+    background-color: black;
+    color: white;
+}
+
+#cardBtn {
+    widows: 60%;
+    margin-bottom: 15px;
+    padding: 10px;
+    background-color: white;
+    border-radius: 10%;
+    cursor: pointer;
+}
+
+#cardBtn a {
+    color: black;
+    font-weight: bolder;
+    font-size: 20px;
+    text-decoration: none;
+}
+
+/*######################################## - TRACKS CSS - ########################################*/
+
+.tracksContainer {
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    width: 100%;
+    justify-content: center;
+    align-content: center;
+    background-color: #1ed761;
+}
+
+.tracksContainer p {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bolder;
+}
+
+audio {
+    display: flex;
+    margin: 5px auto;
+}
