@@ -61,7 +61,7 @@ app.get("/albums/:artistId", (req, res) => {
 //GET TRACK PREVIEW
 app.get("/view_tracks/:albumsId", (req, res) => {
   spotifyApi
-    .getAlbumTracks(req.params.albumsId)
+    .getAlbumTracks(req.params.albumsId, { limit: 5, offset: 1 })
     .then(data => {
       res.render("view_tracks", { tracks: data.body.items });
       console.log(data.body.items);
