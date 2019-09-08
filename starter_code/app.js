@@ -33,7 +33,6 @@ app.get('/artists', (req, res) => {
     spotifyApi.searchArtists(req.query.q)
     .then(data => {
       const artists = data.body.artists.items;
-      console.log(artists[0]);
       res.render('artists.hbs', { artists });
     })
     .catch(err => {
