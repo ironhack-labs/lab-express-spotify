@@ -68,9 +68,6 @@ app.get('/tracks/:albumid', (req, res, next) => {
     spotifyApi.getAlbumTracks(albumid, { limit : 10, offset : 1 })
     .then(data => {
         let albumtracks = data.body.items;
-       
-        console.log(albumtracks[0].preview_url);
-        
         res.render("trackselection.hbs", { albumtracks });
 })
 .catch(err => {
