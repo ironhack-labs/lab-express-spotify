@@ -1,3 +1,6 @@
+// setup dotenv package
+require("dotenv").config();
+
 const express = require("express");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
@@ -14,8 +17,8 @@ hbs.registerPartials(__dirname + "/views/partials");
 // setting the spotify-api goes here:
 
 // Remember to insert your credentials here
-const clientId = "af517b5ef4484b92a4c17e9eb4329213",
-  clientSecret = "dfeddeb0b9824d7ebd35ef666cab4db4";
+const clientId = process.env.CLIENT_ID,
+  clientSecret = process.env.CLIENT_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,

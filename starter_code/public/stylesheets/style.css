@@ -37,6 +37,8 @@
   padding: 10px;
   border-radius: 4px;
   width: 15vw;
+  font-size: 16px;
+  border: none;
 }
 
 .search-artist form {
@@ -45,3 +47,16 @@
   align-items: center;
   flex-direction: column;
 }
+
+/* .artist-container { */
+/* display: flex; */
+/* flex-wrap: wrap; */
+/* justify-content: center; */
+/* } */
+
+/* .artists { */
+/* display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center; */
+/* } */
