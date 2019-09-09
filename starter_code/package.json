@@ -4,6 +4,7 @@
   "description": "",
   "main": "app.js",
   "dependencies": {
+    "dotenv": "^8.1.0",
     "express": "^4.17.1",
     "hbs": "^4.0.4",
     "prettyjson": "^1.2.1",

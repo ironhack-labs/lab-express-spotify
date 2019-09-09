@@ -1,5 +1,8 @@
+require("dotenv").config();
+
 const express = require("express");
 const hbs = require("hbs");
+const prettyjson = require("prettyjson");
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
@@ -12,8 +15,8 @@ app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
 
-const clientId = "b93b082597aa4ac4a9a1315bfac4322f",
-  clientSecret = "036e0f3a04224f849e294d5097a9a7c6";
+const clientId = process.env.CLIENT_ID,
+  clientSecret = process.env.CLIENT_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
@@ -39,8 +42,21 @@ app.get("/artists", (req, res) => {
   spotifyApi
     .searchArtists(req.query.q)
     .then(data => {
-      // console.log("The received data from the API: ", data.body.artists.items);
+      const artists = data.body.artists.items;
+
+      console.log(
+        "The received data from the API: ",
+        prettyjson.render(artists)
+      );
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      artists.forEach(artist => {
+        if (!artist.images.length) {
+          artist.images.push({
+            url:
+              "https://media2.fishtank.my/app_themes/hitz/assets/images/default-album-art.png"
+          });
+        }
+      });
       res.render("artists", data);
     })
     .catch(err => {
