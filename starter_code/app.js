@@ -109,4 +109,4 @@ app.get("/", (req, res, next) => {
 
 
 app.listen(3001, () => 
-console.log("My Spotify project running on http://localhost:3000 🎧 🥁 🎸 🔊"));
+console.log("My Spotify project running on http://localhost:3001 🎧 🥁 🎸 🔊"));
