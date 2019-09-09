@@ -1,3 +1,6 @@
+// setup dotenv package
+require("dotenv").config();
+
 const express = require("express");
 const hbs = require("hbs");
 
@@ -10,8 +13,8 @@ app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
-const clientId = "4574f7ffb3c042be8b4a8dc6bb9b2bda",
-    clientSecret = "4ecc40f54169494f9f84192db35dd98a";
+const clientId = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
     clientId: clientId,
@@ -67,6 +70,6 @@ app.get("/tracks/:albumId", (req, res) => {
         });
 });
 
-app.listen(3000, () =>
-    console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
+app.listen(3002, () =>
+    console.log("My Spotify project running on port 3002 🎧 🥁 🎸 🔊")
 );
