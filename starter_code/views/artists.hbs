@@ -10,8 +10,8 @@
         <img src="{{this.images.[0].url}}" alt="" class="card__img">
         {{/if}}
         <h1 class="card__title">{{this.name}}</h1>
+          <a class="button" href="/albums/{{this.id}}">View Albums</a>
     </div>
         {{!-- this <a> will redirect to GET /albums, and add the id value to the url, wich will be used later in the backEnd --}}
     {{/each}}
-          <a class="button" href="/albums/{{this.id}}">View Albums</a>
 </div>

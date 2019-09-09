@@ -56,9 +56,25 @@ app.get("/", (req, res, next) => {
       console.log("The error while searching artists occurred: ", err);
     });
   })
+
+
 // GET albums from specific artist route
 
   app.get("/albums/:artistId", (req, res, next) => {
+// Promise.all solution
+  //   Promise.all([
+  //       spotifyApi.getArtistAlbums(req.params.artistId), //result[0]
+  //       spotifyApi.getArtist(req.params.artistId) //result[1]
+  //   ])
+  //       .then(result => {
+  //           const data = {
+  //               albums: result[0].body.items,
+  //               artistName: result[1].body.name
+  //           }
+  //           res.render("list-albums", data);
+  //       }) 
+  // })
+  // regular solution
     //retrieve Id from the URL and use it in the pre-defined method from the API to get all albums
     spotifyApi.getArtistAlbums(req.params.artistId)
         .then(albumsFromApi => {
@@ -92,5 +108,5 @@ app.get("/", (req, res, next) => {
 
 
 
-app.listen(3000, () => 
+app.listen(3001, () => 
 console.log("My Spotify project running on http://localhost:3000 🎧 🥁 🎸 🔊"));
