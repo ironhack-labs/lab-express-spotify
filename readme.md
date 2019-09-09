@@ -104,12 +104,14 @@ const spotifyApi = new SpotifyWebApi({
 
 To avoid making our API keys public, we don't want to add and commit them. We'll use a package named `dotenv` for that.
 
-It is imported at the very beginning of `app.js`. All that is left to do is to create a `.env` file and add your keys inside:
+It is imported at the very beginning of `app.js`. All that is left to do is to add your keys in the `.env` file.
 
 ```
 CLIENT_ID=<your clientId goes here>
 CLIENT_SECRET=<your clientSecret goes here>
 ```
+
+:zap: The `.env` is referred to in the `.gitignore` file so you're safe!
 
 :fire: _Styling should be the last thing you focus on. Functionality first!_ 🙏🏻
 
