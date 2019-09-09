@@ -1,0 +1,19 @@
+<div class="">
+    {{#each albumsList}}
+    <div class="">
+        <img src="{{images.0.url}}" style="height: 200px">
+        <p>{{name}}</p>
+        <a href="/tracks/{{id}}">View the Track</a>
+    </div>
+    {{/each}}
+</div>
+
+{{!-- <div class="container">
+    {{#each albumsList}}
+    <div class="item-wrapper">
+        <a href="/tracks/{{id}}"><img src="{{images.0.url}}" style="height: 200px;"></a>
+        <p>{{name}}</p>
+        <a href="/tracks/{{id}}" class="link">View Tracks</a>
+    </div>
+    {{/each}}
+</div> --}}
