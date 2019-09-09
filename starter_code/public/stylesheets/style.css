@@ -1,0 +1,47 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.homepage {
+  background-image: url("https://images.unsplash.com/photo-1514525253161-7a46d19cd819?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=2167&q=80");
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-artist {
+  background: linear-gradient(rgba(23, 42, 13, 0.5), rgba(23, 42, 13, 0.5));
+  height: 25vh;
+  width: 50vw;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  margin: 10px;
+  padding: 14px;
+  font-size: 16px;
+  border-radius: 8px;
+  background-color: lightpink;
+  color: white;
+  border: none;
+}
+
+.input {
+  padding: 10px;
+  border-radius: 4px;
+  width: 15vw;
+}
+
+.search-artist form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}

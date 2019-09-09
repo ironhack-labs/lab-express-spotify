@@ -24,6 +24,7 @@ const spotifyApi = new SpotifyWebApi({
 
 // Retrieve an access token
 // spotify-web-api-node documentation
+
 spotifyApi
   .clientCredentialsGrant()
   .then(data => {
