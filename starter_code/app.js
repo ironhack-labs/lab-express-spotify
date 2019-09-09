@@ -1,3 +1,9 @@
+//setup dotenv package
+
+require("dotenv").config();
+
+
+
 const express = require('express');
 const hbs = require('hbs');
 
@@ -14,8 +20,8 @@ hbs.registerPartials(__dirname + "/views/partials");
 
 
 // setting the spotify-api goes here:
-const clientId = '4cbc2fd41b85433b9987c54114e0a2fc',
- clientSecret = '445b2f2c72dc4afa958b61f1a1917a7b';
+const clientId = process.env.CLIENT_ID,
+ clientSecret = process.env.CLIENT_SECRET;
 
  const spotifyApi = new SpotifyWebApi({
     clientId : clientId,
@@ -78,7 +84,7 @@ app.get("/tracks/:album",(req,res)=>{
         console.log(data.body.items);
         let track=data.body.items;
         res.render("tracks.hbs", {track});
-        
+
     }, function(err) {
       console.error(err);
     });
