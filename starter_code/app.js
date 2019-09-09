@@ -1,3 +1,6 @@
+// setup dotenv
+require("dotenv").config();
+
 const express = require("express");
 const hbs = require("hbs");
 
@@ -11,8 +14,8 @@ app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
-const clientId = "ef36ab4c99ad40c184ed49cbb8f2ef5a",
-  clientSecret = "4c33697c40a24a62b0ea0dbd52ea09a4";
+const clientId = process.env.CLIENT_ID,
+  clientSecret = process.env.CLIENT_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
