@@ -1,11 +1,9 @@
-<h1>Album's Page:</h1>
-
-{{#each albumsList }}
-
-<a href="/tracks/{{this.id}}"><img src={{ this.images.1.url }} /></a>
-
-<h3>{{ this.name }}</h3>
-
-<p class="card-text"><a href="/tracks/{{this.id}}">View tracks</a></p>
-
-{{/each}}
+<div class="container">
+   {{#each albumsList}}
+   <div class="item-wrapper">
+      <a href="/tracks/{{id}}"><img src="{{images.0.url}}" style="height: 200px;"></a>
+      <p>{{name}}</p>
+      <a href="/tracks/{{id}}" class="link">View Tracks</a>
+   </div>
+   {{/each}}
+</div>

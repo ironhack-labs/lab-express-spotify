@@ -1,8 +1,10 @@
+// rsetup dorenv plackage
+require("dotenv").config();
+
 const express = require("express");
 const hbs = require("hbs");
-const SpotifyWebApi = require("spotify-web-api-node");
-
 // require spotify-web-api-node package here:
+const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
 
@@ -11,8 +13,8 @@ app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
-const clientId = "eb2a7b7fbc034e03b27da3cde7163d60";
-const clientSecret = "423c35d2a90542e8b3e5b16fe17d77e3";
+const clientId = process.env.CLIENT_ID;
+const clientSecret = process.env.CLIENT_SECRET;
 
 const spotifyApi = new SpotifyWebApi({
   clientId: clientId,
@@ -35,10 +37,22 @@ app.get("/", (req, res) => {
 });
 
 app.get("/artists", (req, res) => {
+  const search = req.query.search;
   spotifyApi
-    .searchArtists(req.query.q)
+    .searchArtists(search)
     .then(data => {
-      res.render("artists", { artistsList: data.body.artists.items });
+      const artists = data.body.artists.items;
+
+      artists.forEach(artist => {
+        if (!artist.images[0]) {
+          artist.images.push({
+            url:
+              "https://media2.fishtank.my/app_themes/hitz/assets/images/default-album-art.png"
+          });
+        }
+      });
+
+      res.render("artists", { artistsList: artists });
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
@@ -46,10 +60,21 @@ app.get("/artists", (req, res) => {
 });
 
 app.get("/albums/:artistId", (req, res) => {
+  const artistsId = req.params.artistId;
   spotifyApi
-    .getArtistAlbums(req.params.artistId)
-    .then(albums => {
-      res.render("albums", { albumsList: albums.body.items });
+    .getArtistAlbums(artistsId)
+    .then(data => {
+      const albums = data.body.items;
+
+      albums.forEach(albums => {
+        if (!albums.images[0]) {
+          albums.images.push({
+            url:
+              "https://media2.fishtank.my/app_themes/hitz/assets/images/default-album-art.png"
+          });
+        }
+      });
+      res.render("albums", { albumsList: albums });
     })
     .catch(error => {
       console.error("Error loading Album");
@@ -57,13 +82,15 @@ app.get("/albums/:artistId", (req, res) => {
 });
 
 app.get("/tracks/:albumsId", (req, res) => {
+  const albumId = req.params.albumsId;
   spotifyApi
-    .getAlbumTracks(req.params.albumsId, {
+    .getAlbumTracks(albumId, {
       limit: 5,
       offset: 1
     })
     .then(track => {
-      res.render("tracks", { tracksList: track.body.items });
+      const tracks = track.body.items;
+      res.render("tracks", { tracksList: tracks });
     })
     .catch(error => {
       console.log("Something went wrong!", err);

@@ -1,0 +1,64 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+.home-container {
+  height: 100vh;
+  background-image: url("https://github.com/ironhack-webdev-squad-the-best-ever/w5d1/blob/master/lab-express-spotify/starter_code/public/images/spotify-cover-image.jpeg?raw=true");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 50%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+form input {
+  min-width: 300px;
+  min-height: 20px;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: rgb(245, 105, 102);
+  color: white;
+  border: none;
+  padding: 8px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.item-wrapper {
+  width: 33.33%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 5%;
+}
+
+.item-wrapper a {
+  padding: 5px;
+  border-radius: 10px;
+}
+
+.link {
+  background-color: rgb(245, 105, 102);
+  color: #fff;
+}
