@@ -1,5 +1,6 @@
 body {
     margin: 0;
+    font-family: sans-serif;
 }
 
 #main {
@@ -8,6 +9,9 @@ body {
     background-position: center;
     height: 100vh;
     width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #search {
@@ -16,9 +20,72 @@ body {
     max-width: 700px;
 }
 
-#search form {
+form {
     display: inline-block;
     box-sizing: border-box;
+    border-radius: 5px;
     background-color: rgba(255, 255, 255, .6);
     padding: 3rem 5rem;
+}
+
+.artistCard {
+    background-color: #4D4D4D;
+    color: white;
+    text-align: center;
+    display: inline-block;
+    padding-bottom: .5rem;
+    margin: .5rem 1rem;
+    box-sizing: border-box;
+}
+
+.artistCard img {
+    width: 200px;
+    height: 200px;
+    padding: 0;
+}
+
+.artistCard h3 {
+    background-color: #4D4D4D;
+    font-size: 1rem;
+    margin: .25rem 1rem;
+    width: 160px;
+}
+
+.artistCard h4 {
+    font-size: .75rem;
+    margin: .25rem 1rem;
+}
+
+.artistCard a {
+    text-decoration: none;
+    padding: .25rem 1rem;
+    border-radius: 5px;
+    background-color: #EF6866;
+    color: white;
+    font-size: .75rem;
+}
+
+.trackHeader {
+    background-color: #4D4D4D;
+    display: flex;
+    justify-content: space-between;
+    color: #C3C3C3;
+}
+
+.trackPage>* {
+    font-size: .8rem;
+    padding: 1rem;
+}
+
+#listen {
+    margin-right: 13rem;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    background-color: #F6F6F6;
+    color: #34353F;
+    margin-bottom: .25rem;
+    padding: .15rem 1rem;
 }
