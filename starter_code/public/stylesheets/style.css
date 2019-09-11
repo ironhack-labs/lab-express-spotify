@@ -59,3 +59,44 @@ p {
 #button {
 	margin: 0 0 0 29%;
 }
+
+.topContainer {
+	color: white;
+	font-weight: bold;
+	font-size: 1.4em;
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(74, 74, 74);
+	height: 80px;
+}
+
+.musicContainer {
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	background-color: rgb(241, 243, 244);
+	margin-bottom: 4px;
+}
+
+.musicBox {
+	margin: 0 25px 0px 25px;
+}
+
+.wholePage {
+	display: flex;
+	background-image: url(https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiIhuOJ48nkAhUk1VkKHSjLDzQQjRx6BAgBEAQ&url=https%3A%2F%2Funsplash.com%2Fsearch%2Fphotos%2Fconcert&psig=AOvVaw130h0lwUL7Nt_e0grZ_zVW&ust=1568325813653024);
+	justify-content: center;
+	justify-items: center;
+	height: 100%;
+	width: 100%;
+}
+
+.artistSearch {
+	margin: auto;
+	width: 200px;
+	height: 100px;
+}
+
+.buttonStart {
+	width: 173px;
+}

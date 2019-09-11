@@ -1,3 +1,10 @@
+<div class="topContainer">
+    <p class="musicBox" >Title</p>
+    <p class="musicBox" >Listen</p>
+</div>
 {{#each results}}
-{{this}}
+<div class="musicContainer">
+    <p class="musicBox" >{{this.name}}</p>
+    <audio src="{{this.preview_url}}" controls></audio>
+</div>
 {{/each}}
