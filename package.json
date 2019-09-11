@@ -1,0 +1,32 @@
+{
+  "name": "lab-express-spotify",
+  "version": "1.0.0",
+  "description": "messing around with spotify api and express",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/justlask/lab-express-spotify.git"
+  },
+  "keywords": [
+    "express",
+    "api",
+    "testing",
+    "fun"
+  ],
+  "author": "justlask",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/justlask/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/justlask/lab-express-spotify#readme",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}

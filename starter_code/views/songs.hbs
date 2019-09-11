@@ -1,0 +1,12 @@
+<h1>Have some songs</h1>
+<div class="artists">
+    {{#each songs}}
+      <div class="single">
+        <h1>{{this.name}}</h1>
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg">
+        </audio>
+      </div>
+      {{/each}}
+
+</div>

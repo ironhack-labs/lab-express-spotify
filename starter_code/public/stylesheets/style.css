@@ -1,0 +1,17 @@
+body {
+  background-color: lime;
+}
+
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.single {
+  background-color: pink;
+  color: black;
+  width: 25vw;
+  height: 100%;
+  margin: 25px;
+  padding: 50px;
+}
