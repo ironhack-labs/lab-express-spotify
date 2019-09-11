@@ -1,16 +1,20 @@
 html{
-  font-size: 16px;  
+  font-size: 16px;
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0%;
   padding: 0%;
 }
 
 body{
+  margin: 0%;
+  padding: 0%;
+}
+
+#home-container{
   width: 100%;
   height: 100%;
   background-image: url("/images/home_background2.jpg");
   background-size: cover;
-  overflow: hidden;
-  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -38,7 +42,105 @@ body{
   width: 30%;
   height: 25px;
   border: none;
-  background: rgb(80, 106, 219);
+  background: #F86967;
   color: white;
   font-size: 1.2 rem;
+}
+
+.cards-container{
+  /* background: beige; */
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  padding: 25px 0px;
+}
+
+.card{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 20%;
+  height: auto;
+  margin: 15px 55px;
+  background: #333;
+  color: white;
+}
+
+.card h4{
+  margin: 0 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.card a{
+  display: block;
+  margin-bottom: 5px;
+  width: 120px;
+  height: 25px;
+  border-radius: 10px;
+  border: none;
+  padding: auto 0;
+  background: #F86967;
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1.2 rem;
+}
+
+.img-wrapper{
+  width: 100%;
+  max-height: 260px;
+  overflow: hidden; 
+}
+
+.img-wrapper > img {
+  width: 100%;
+}
+
+.track-container{
+  display: flex;
+  flex-direction: column;
+}
+
+#track-header{
+  background: #333; 
+  color: white;
+  font-size: 1.2rem;
+}
+
+.track-container > div{
+  background-color: #ddd;
+  width: 70%;
+  display: flex;
+  flex-direction: row;
+  margin-left: 15%;
+  margin-bottom: 1px;
+  padding: 10px 0; 
+  justify-content: space-between;
+}
+/* 
+.track-container> div > p:nth-child(1){
+  margin-left: 15px;
+}
+
+
+
+.track-container> div > audio{
+  right: 0;
+} */
+
+#track-header > p:nth-child(2){
+  padding-right: 25%;
+}
+
+.track-container > div{
+  padding-left: 25px;
+  padding-right: 50px;
+  box-sizing: border-box;
+}
+
+.track-container > audio{
+  background-color: #ddd;
 }
