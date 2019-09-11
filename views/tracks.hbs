@@ -1,0 +1,25 @@
+<header>
+  <div class="row justify-content-between page-header">
+    <div class="col-4 header-tracks">
+      Tracks
+    </div>
+    <div class="col-4 header-play">
+      Play
+    </div>
+  </div>
+</header>
+<div class="container-fluid">
+  {{#each tracks}}
+  <div class="row justify-content-between tracks">
+    <div class="col-1">
+      <span class="album-position">Disc {{ this.disc_number }} Track {{ this.track_number }}</span>
+    </div>
+        <div class="col-7">
+      {{ this.name }}
+    </div>
+    <div class="col-4">
+      <audio src="{{ this.preview_url }}" controls="controls"></audio>
+    </div>
+  </div>
+  {{/each}}
+</div>

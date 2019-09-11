@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway:400,800&display=swap');
+
+.artist-search {
+  top: 40%;
+  left: 30%;
+  position: absolute;
+  max-width: 100%;
+  background: rgb(255, 255, 255, 0.7);
+  border-radius: 10px;
+  padding: 30px 150px;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+}
+
+.background {
+  background-image: url("https://cdn.mos.cms.futurecdn.net/38WNhVt7qradw6zKgzCvfE.jpg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  filter: sepia(50%);
+}
+
+.home-title{
+    position: absolute;
+    top: 25%;
+    left: 40%;
+    text-align: center;
+    font-family: 'Raleway';
+}
+
+.home-title h1{
+    font-weight: 800;
+}
+
+#query {
+  width: 300px;
+  margin-bottom: 10px;
+}
+
+#search {
+  background-color: rgb(241, 93, 48);
+  border: none !important;
+}
+
+#search:hover {
+    background-color: rgb(207, 53, 7);
+    border: none;
+}
+
+.tracks {
+  align-items: center;
+  background-color: #f1f3f4;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.page-header {
+  color: white;
+  height: 80px;
+  background-image: url("https://png.pngtree.com/thumb_back/fw800/background/20190221/ourmid/pngtree-purple-blue-simple-gradient-background-image_16162.jpg");
+  box-shadow: 0 8px 10px -6px black;
+  background-size: cover;
+  align-items: center;
+  padding-left: 10px;
+  margin-bottom: 15px;
+  align-content: normal;
+  font-size: xx-large;
+  margin-top: 0px;
+}
+
+.album-position {
+  color: rgb(189, 189, 189);
+  font-size: 12px;
+}
+
+.col-7 {
+  font-weight: bold;
+}
+
+.artist {
+  max-width: 400px;
+  margin-bottom: 20px;
+  background-color: #f1f3f4;
+  padding-top: 15px;
+  -webkit-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.25);
+  -moz-box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.25);
+  box-shadow: 10px 10px 5px -6px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+}
+
+.artist a {
+    background-color: rgb(241, 93, 48);
+    border: none;
+}
+
+.artist a:hover {
+    background-color: rgb(207, 53, 7);
+    border: none;
+}
