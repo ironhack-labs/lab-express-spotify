@@ -1,0 +1,9 @@
+Welcome to albums page
+<ul>
+{{#each albums}}
+   <li>{{name}}</li>
+   <li>{{release_date}}</li>
+   <li><img src="{{images.[0].url}}"></li>
+   <a href="/tracks/{{id}}">Show tracks</a>
+{{/each}}
+</ul>

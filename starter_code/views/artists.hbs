@@ -1,12 +1,9 @@
 <div class="album">
     <ul>
          {{#each artist}}
-            <li>{{this.name}}</li>
-            {{#each this.images}}
-            <li><img src="{{this}}"></li>
-            {{/each}}
-            
-            <button><a href={{this.uri}}>View Album</a></button>
+            <li>{{name}}</li>
+            <li><img src="{{images.[0].url}}"></li>      
+            <button><a href="/albums/{{id}}">View Album</a></button>
          {{/each}}
     </ul>
    
