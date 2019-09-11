@@ -1,5 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,700&display=swap');
+
 body {
   background-color: lime;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins";
+  color: black;
+  padding-top: 100px;
+}
+
+header,
+footer {
+  background-color: black;
+  color: lime;
+  height: 25px;
+  width: 100vw;
+  font-size: 22px;
+  padding: 25px;
+}
+
+header {
+  position: fixed;
+  top: 0;
+}
+
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: lime;
 }
 
 .artists {
@@ -8,10 +40,57 @@ body {
 }
 
 .single {
-  background-color: pink;
-  color: black;
-  width: 25vw;
+  background-color: black;
+  color: lime;
+  width: 100vw;
+  max-width: 400px;
   height: 100%;
   margin: 25px;
-  padding: 50px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
 }
+
+.single a {
+  padding: 5px 15px;
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  margin-top: 10px;
+}
+
+
+#searching {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 80vh;
+}
+
+#theform {
+  background-color: white;
+  padding: 50px;
+  width: 40vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#theform #artist {
+  padding: 5px 10px;
+  font-size: 20px;
+  border-radius: 8px;
+  background-color: #f0f0f0;
+  margin-right: 25px;
+}
+#theform #button {
+  padding: 5px 10px;
+  font-size: 20px;
+  background-color: lime;
+}
+
+
+
