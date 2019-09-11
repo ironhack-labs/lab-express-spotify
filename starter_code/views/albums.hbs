@@ -1,10 +1,10 @@
 <div class="container">
 <div class="row">
     {{#each albums}} 
-        <div class="col-6">
-        
-       <img width="100px" src="{{this.images.[0].url}}">
+        <div class="col-4">
+       <img width="300px" src="{{this.images.[0].url}}">
        <p>{{this.name}}</p> 
+       <a href="/songs/{{id}}">View Tracks</a>
         </div>
     {{/each}}
 </div>
