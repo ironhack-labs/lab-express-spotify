@@ -1,0 +1,19 @@
+<div class="album">
+    <ul>
+         {{#each artist}}
+            <li>{{this.name}}</li>
+            {{#each this.images}}
+            <li><img src="{{this}}"></li>
+            {{/each}}
+            
+            <button><a href={{this.uri}}>View Album</a></button>
+         {{/each}}
+    </ul>
+   
+</div>
+
+
+
+{{!-- {{#each artist.artists.items}}
+    In the correct artists page {{artist.artists.items.[0].name}}
+{{/each}} --}}
