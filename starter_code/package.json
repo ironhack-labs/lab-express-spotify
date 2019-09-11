@@ -1,0 +1,32 @@
+{
+  "name": "ih-lab-express-spotify",
+  "version": "0.0.1",
+  "description": "Ironhack Express Spotify Lab",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.4",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "console.log(\"The server is starting on 3000.\")"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bobbypwang/lab-express-spotify.git"
+  },
+  "keywords": [
+    "ironhack",
+    "spotify",
+    "express",
+    "ironhack-lab"
+  ],
+  "author": "Bobby Wang",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/bobbypwang/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/bobbypwang/lab-express-spotify#readme"
+}
