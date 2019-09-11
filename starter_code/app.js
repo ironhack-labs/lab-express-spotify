@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 
 
 // setting the spotify-api goes here:
-
+//adding API
 
 
 
