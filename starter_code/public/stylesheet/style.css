@@ -1,0 +1,56 @@
+*, body, html {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.form-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    align-content: center;
+    text-align: center;
+}
+
+form{
+    background-color: rgba(255,255,255,.4);
+    padding: 3rem 4rem;
+}
+
+form input {
+    width: 100%;
+    max-width: 400px;
+    background-color: #ffffff;
+    border: 1px solid #bbbbbb;
+    padding: 1rem 2rem;
+    letter-spacing: 1px;
+}
+
+form button {
+    margin-top: 1rem;
+    padding: 1rem 2rem;
+    background-color: #dc2d27;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    letter-spacing: 1px;
+}
+
+form button:hover {
+    cursor: pointer;
+    background-color: red;
+}
+
+.background {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    background-image: url(../image/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg);
+    background-size: cover;
+    background-position: center center;
+}
