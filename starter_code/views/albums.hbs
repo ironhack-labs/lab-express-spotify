@@ -1,0 +1,11 @@
+<div class="container">
+<div class="row">
+    {{#each albums}} 
+        <div class="col-6">
+        
+       <img width="100px" src="{{this.images.[0].url}}">
+       <p>{{this.name}}</p> 
+        </div>
+    {{/each}}
+</div>
+</div>
