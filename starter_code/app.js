@@ -1,8 +1,8 @@
 require('dotenv').config()
 const express = require('express');
 const hbs     = require('hbs');
-const app     = express();
-const path    = require('path');
+// const app     = express();
+// const path    = require('path');
 const SpotifyWebApi = require("spotify-web-api-node");
 // require spotify-web-api-node package here:
 
