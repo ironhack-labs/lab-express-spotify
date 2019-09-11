@@ -139,5 +139,15 @@ body {
 }
 
 .nuisance{
-    overflow: hidden;
+    overflow: hidden !important;
+    position: relative;
+    height: 100vh;
+}
+
+@media screen and (max-width: 450px){
+    .nuisance{
+        overflow: hidden !important;
+        position: relative;
+        height: 100vh;
+    }
 }
