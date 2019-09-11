@@ -67,10 +67,12 @@ app.get("/albums/:artistId", (req, res, next) => {
     spotifyApi
         .getArtistAlbums(req.params.artistId)
         .then(data => {
-            //console.log('Artist albums =========>>> ', data.body)
+            console.log('Artist albums =========>>> ', data.body.items[0].artists[0].name)
             let artistAlbums = data.body.items
+            let artistName = data.body.items[0].artists[0].name
             res.render('artist-albums', {
-                artistAlbums
+                artistAlbums,
+                artistName
             })
         })
         .catch(err => {
@@ -80,15 +82,16 @@ app.get("/albums/:artistId", (req, res, next) => {
 
 app.get("/album/tracks/:albumId", (req, res, next) => {
     // Get tracks in an album
-    spotifyApi.getAlbumTracks(req.param.albumId)
-        .then(function (data) {
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+        .then(data =>{
             console.log(data.body);
             let albumTracks = data.body.items
             res.render('album-tracks', {
                 albumTracks
             })
         }, function (err) {
-            console.log('Something went wrong!', err);
+            console.log('Something went wrong! While grabbing album tracks', err);
         });
 })
 

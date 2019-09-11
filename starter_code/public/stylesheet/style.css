@@ -2,6 +2,33 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: "Noto Sans KR", Arial, Helvetica, sans-serif;
+    font-size: 13px;
+}
+
+h1 {
+    display: block;
+    width: 100%;
+    font-size: 2rem;
+    color: white;
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    color: #ffffff;
+}
+
+a:link,
+a:visited {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+img {
+    width: 100%;
 }
 
 .form-container {
@@ -15,13 +42,12 @@
 }
 
 form{
+    display: flex;
     background-color: rgba(255,255,255,.4);
     padding: 3rem 4rem;
 }
 
 form input {
-    width: 100%;
-    max-width: 400px;
     background-color: #ffffff;
     border: 1px solid #bbbbbb;
     padding: 1rem 2rem;
@@ -29,13 +55,14 @@ form input {
 }
 
 form button {
-    margin-top: 1rem;
+    margin-left: 3px;
     padding: 1rem 2rem;
     background-color: #dc2d27;
     color: #ffffff;
     text-align: center;
     border: none;
     letter-spacing: 1px;
+    line-height: 32px;
 }
 
 form button:hover {
@@ -53,4 +80,73 @@ form button:hover {
     background-image: url(../image/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg);
     background-size: cover;
     background-position: center center;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2rem auto;
+}
+
+.col {
+    width: 24%;
+    margin: 0 1rem 2rem 0;
+    background-color: #4d4d4d;
+}
+
+.col:last-child {
+    margin-right: 0;
+}
+
+.info {
+    padding: 1rem 4px 0;
+    text-align: center;
+}
+
+.btn {
+    display: inline-block;
+    margin-bottom: 1.4rem;
+    padding: 3px 15px;
+    background-color: #dc2d27;
+    color: #ffffff;
+    text-align: center;
+    border: none;
+    letter-spacing: 1px;
+}
+
+.btn:hover {
+    background-color: red;
+}
+
+.albumTracks {
+    background-color: #4d4d4d;
+    color: lightgray;
+    margin: 2rem auto;
+    width: 90%;
+}
+
+.header,
+.tracks {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 1rem 2rem;
+}
+
+.header .left,
+.header .right {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.tracks {
+    width: 100%;
+    background-color: #f6f6f6;
+    margin-bottom:; 2rem;
+}
+
+.tracks .left {
+    font-size: 1.4rem;
+    color: darkgray;
 }

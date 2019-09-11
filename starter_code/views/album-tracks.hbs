@@ -1,7 +1,9 @@
 <div class="albumTracks container" >
-    {{#each albumTracks}}
-    <div class="col col-4">
-        {{> albumTracksPartial this}}
+    <div class="header">
+        <div class="left">Title</div>
+        <div class="right">Listen</div>
     </div>
+    {{#each albumTracks}}
+    {{> albumTracksPartial this}}
     {{/each}}
 </div>
