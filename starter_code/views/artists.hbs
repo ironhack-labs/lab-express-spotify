@@ -1,0 +1,24 @@
+<div class="view">
+    {{#each results}}
+    <div class="containerResults">  
+        {{#if this.images.length}}
+            <img src="{{this.images.[0].url}}" alt="" class="artistpicture">
+            {{else}}
+            <img src="images/mygreenboi.png">            
+        {{/if}}
+        {{!-- <img src="{{this.images.[0].url}}" alt="" class="artistpicture"> --}}
+
+        <div class="textContainerResults">
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}"><button type="button" class="btn btn-success" id="button" >View Albums</button></a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+
+
+
+
+{{!-- {{results}} --}}

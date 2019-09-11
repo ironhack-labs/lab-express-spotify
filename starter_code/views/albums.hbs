@@ -1,0 +1,11 @@
+<div class="view">
+    {{#each results.body.items }}
+    <div class="containerResults">  
+    <img src="{{this.images.[0].url}}">
+       <div class="textContainerResults">
+            <p>{{this.name}}</p>
+            <a href="/tracks/{{this.id}}"><button type="button" class="btn btn-success" id="button">View tracks</button></a>
+       </div>
+    </div>
+    {{/each}}
+</div>
