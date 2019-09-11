@@ -1,8 +1,11 @@
 <ul>
 {{#each tracks}}
-    <li>{{this.id}}</li>
+    <li>{{id}}</li>
     <li>{{name}}</li>
-    <li><audio src="{{uri}}">TRACK</audio></li>
+    {{!-- <li><a href="{{preview_URL}}">TRACK</audio></a></li> --}}
+    <audio controls="controls" autoplay="autoplay" src="{{preview_url}}">
+    Your browser does not support the HTML5 Audio element.
+</audio>
     {{!-- <button><audio src="{{uri}}"></audio></button> --}}
 {{/each}}
 </ul>
