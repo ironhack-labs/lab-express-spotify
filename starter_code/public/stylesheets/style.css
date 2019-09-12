@@ -1,0 +1,63 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 18px;
+}
+
+.background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url(https://estaticos.elperiodico.com/resources/jpg/8/0/800px-imagen-camilo-sesto-1567928124308.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.white {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+  height: 20vh;
+  background: rgba(255,255,255, 0.3);
+  border-radius: 10px;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.btn-index {
+  margin: 10px;
+  height: 30px;
+  width: 150px;
+  border-radius: 5px;
+}
+
+.input {
+  height: 30px;
+  width: 220px;
+  border-radius: 5px;
+}
+
+.card {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background: rgba(255,255,255, 0.3);
+  border-radius: 10px;
+  width: 300px;
+  /* height: 500px; */
+}
+
+.card img {
+  padding: 20px 0;
+  width: 250px;
+}

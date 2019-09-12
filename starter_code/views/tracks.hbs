@@ -1,10 +1,12 @@
-<div>
+<div class="background">
   <div>
     {{#each tracks}}
-    
-    <p>{{this.name}}</p>
-    <audio src={{preview_url}} controls></audio>
+
+    <div class="card">
+      <p>{{this.name}}</p>
+      <audio src={{preview_url}} controls></audio>
+    </div>
     {{/each}}
-    
+
   </div>
 </div>

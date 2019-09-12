@@ -1,9 +1,11 @@
-<div>
+<div class="background">
   <div>
     {{#each albums}}
-    <img src="{{this.images.0.url}}" alt="artist image">
-    <p>{{this.name}}</p>
-    <a href="tracks/{{this.id}}">View Tracks</a>
+    <div class="card">
+      <img src="{{this.images.0.url}}" alt="artist image">
+      <p>{{this.name}}</p>
+      <a href="tracks/{{this.id}}">View Tracks</a>
+    </div>
     {{/each}}
   </div>
 </div>
