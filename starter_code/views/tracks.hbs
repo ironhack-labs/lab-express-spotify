@@ -1,0 +1,12 @@
+<h1>Tracks</h1>
+<ul>
+{{#each results}}
+    <li>
+    {{this.name}}
+    <audio controls src="{{preview_url}}">
+        your brower does not support 
+    <code>audio</code> element.   
+        </audio>
+    </li>
+{{/each}}
+</ul>

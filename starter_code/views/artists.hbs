@@ -1,0 +1,16 @@
+{{!-- {{#each artists}} --}}
+{{!-- {{/each}} --}}
+<div class = "boxes">
+    <ul>
+{{#each results.artists.items}}
+<li>
+<img src={{this.images.[0]}}>
+{{this.name}}
+<a href="/albums/{{id}}">View albums</a>
+
+</li>
+{{/each}}
+</ul>
+</div>
+{{!-- <h1> {{results.artists.items}}</h1>
+<h1>yooo</h1> --}}
