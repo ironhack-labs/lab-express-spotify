@@ -1,0 +1,11 @@
+
+
+<div>
+{{#each results}}
+<div class="colocar">
+<img style="width: 320px" src="{{this.images.[0].url}}" alt="">
+<p>{{this.name}}</p>
+<a href="/albums/{{this.id}}">View Albums</a>
+</div>
+{{/each}}
+</div>
