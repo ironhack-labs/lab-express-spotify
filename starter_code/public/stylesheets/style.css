@@ -1,4 +1,36 @@
+#background{
+    background-image: url("spotPic.jpg");
+    width: 1358px;
+    height: 641px;
+}
+#id{
+    position: relative;
+    left: 65px;
+    top: 25px;
+    width: 200px;
+    height: 25px;
+}
 div.former{
     display: flex;
     justify-content: center;
+    background-color: white;
+    opacity: 0.5 ;
+    width: 500px;
+    height: 150px;
+    position: relative;
+    top: 250px;
+    left: 380px;
+}
+button{
+    background-color: #FA6863;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 1px;
+    position: relative;
+    top: 80px;
+    right: 105px
+}
+li{
+    font-style: white;
 }
