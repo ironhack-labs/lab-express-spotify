@@ -1,8 +1,14 @@
 Tracks
- <ul>
-{{#each data.body.items}}
 
-   <li><a href ="/tracks/{{this.albumId}}" method = "GET"> {{this.name}} </a></li>
+ <ul>
+{{#each tracksToHbs}}
+
+
+   <li>
+     {{this.name}}
+     <br>
+     <audio src = "{{this.preview_url/:id}}" controls >
+     </audio></li>
 
 {{/each}}
  </ul>

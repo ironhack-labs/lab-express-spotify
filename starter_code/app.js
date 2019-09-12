@@ -58,16 +58,10 @@ app.get("/albums", (req, res, next) => {
   res.render("albums.hbs");
 });
 
-app.get("/tracks", (req, res, next) => {
-  console.log('opened tracks')
-  let albumId = req.params.items;
-  // console.log(req.params)
-  console.log(albumId)
+app.get("/tracks/:trackId", (req, res, next) => {
   spotifyApi
-  .getAlbumTracks(albumId)
-  .then(data => {
-    console.log(data)
-    res.render("tracks.hbs", {data})
+  .getAlbumTracks(req.params.trackId).then(tracks => {
+    res.render("tracks.hbs", {tracksToHbs: tracks.body.items})
 
   }).catch(err => 
     console.log(err))
@@ -77,13 +71,13 @@ app.get("/tracks", (req, res, next) => {
 app.get("/artists", (req, res, next) => {
 
   spotifyApi
-  .searchArtists(req.query.artist)
+  .searchArtists(req.query.artists)
   .then(data => {
     //console.log("Hey")
     //console.log(data.body.artists.items.images)
     ///console.log("The received data from the API: ", data.body);
     //console.log(data.body.artists.items)
-    res.render("artists.hbs", {data});
+    res.render("artists.hbs", {artistsToHbs: data.body.artists.items});
 
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
