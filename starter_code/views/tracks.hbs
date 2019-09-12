@@ -1,0 +1,15 @@
+<ul class="list">
+{{#each tracks}}
+
+<li class="list__item">{{this.name}}
+<figure>
+    <audio
+        controls
+        src="{{this.preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure></li>
+
+{{/each}}
+</ul>

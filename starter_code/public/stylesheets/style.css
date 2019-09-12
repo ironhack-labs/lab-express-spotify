@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.artists {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.artist {
+  width: 230px;
+}
+
+.artist img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.list {
+  display: flex;
+    flex-flow: column;
+    list-style: none;
+}
+
+.list__item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
