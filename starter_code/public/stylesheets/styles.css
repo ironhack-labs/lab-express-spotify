@@ -1,0 +1,120 @@
+html {
+    position: relative;
+    min-height: 100%;
+    margin: 0 0 0 0;
+    padding: 0 0 0 0;
+}
+
+body {
+    background: white;
+    background-image: url("../images/spotify.jpg");
+    background-size: cover;
+    margin: 0 0 0 0;
+}
+
+.navbar-nav {
+    background-color: rgb(228, 180, 164);
+    height: 30px;
+    opacity: .9;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.3rem;
+}
+
+.nav-link {
+    padding-left: 40px;
+    color: white;
+    text-decoration: none;
+}
+
+.button {
+    background-color: rgb(228, 180, 164);
+    border: none;
+    color: white;
+    padding: 10px 22px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 12px;
+    display: flex;
+    justify-content: center;
+}
+
+.search {
+    padding: 10px 22px;
+    border-width: 4px;
+    opacity: .7;
+}
+
+.ArtistDescription {
+    display: flex;
+    flex-direction: column;
+    width: 33%;
+    height: 25%;
+}
+
+.smallLetter {
+    background: black;
+    color: white;
+    font-size: 1em;
+    opacity: .9;
+}
+
+.description {
+    font-size: 0.8em;
+    margin-bottom: .1em;
+}
+
+.artist-name {
+    background: black;
+    color: white;
+    font-weight: 600;
+    font-size: 1.5em;
+    opacity: .9;
+}
+
+.container {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.artistImg {
+    margin: 7vh auto 3vh auto;
+    padding-top: 0;
+    height: 230px;
+}
+
+.container-one {
+    margin-bottom: 10px;
+    padding-bottom: 10px;
+    width: 35%;
+}
+
+a {
+    text-decoration: none;
+}
+
+.form {
+    display: flex;
+    justify-content: center;
+}
+
+.submitt-form {
+    margin-top: 200px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    margin-left: 350px;
+    margin-right: 350px;
+    background: white;
+}
+
+.tracks {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-evenly;
+    color: white;
+    background: black;
+    opacity: .9;
+    font-weight: bold;
+    font-size: 2em;
+}

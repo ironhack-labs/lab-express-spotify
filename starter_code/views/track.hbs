@@ -1,0 +1,17 @@
+<h1 class="h1">Album Tracks </h1>
+{{#each trackToHBS}}
+<figure>
+  <div class ="tracks">
+  {{this.name}}
+      <audio class="audio" controls src="{{preview_url}}">
+            Your browser does not support the
+            <code>
+              audio
+            </code> 
+            element.
+      </audio>
+  </div> 
+</figure>
+{{/each}}
+
+

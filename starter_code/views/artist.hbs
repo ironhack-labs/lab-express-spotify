@@ -1,0 +1,19 @@
+
+
+<div class="container">
+
+
+  <div class="ArtistDescription">
+    {{#each results.artists.items}}
+      <img class="artistImg"src={{this.images.[0].url}}>
+      <p class="artist-name">{{this.name}}</p>
+      <a class="smallLetter" href="/album/{{id}}">View Albums</a>
+    {{/each}}
+
+
+  </div>
+  
+</div>
+
+
+

@@ -1,0 +1,17 @@
+Albums
+
+<div class="container">
+  <div class="ArtistDescription">
+
+    {{#each albumsToHBS}}
+    <img class="artistImg" src="{{this.images.[0].url}}" class="rounded" alt="...">
+    <p class="artist-name">{{this.name}}</p>
+    <a  class="smallLetter" href="/track/{{id}}">VIEW TRACKS</a>
+    <p class="smallLetter">Release Date:{{this.release_date}}</p>
+    
+    
+    {{/each}}
+
+  </div>
+
+</div>
