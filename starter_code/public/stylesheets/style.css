@@ -1,0 +1,111 @@
+* {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+body {
+  font: 1.5rem Arial, Helvetica, sans-serif;
+  background-image: url('../images/bg.jpeg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  height: 100vh;
+  
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+form {
+  width: 40%;
+  padding: 4rem 14rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #ffffff99;
+  
+}
+
+form input {
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+}
+
+form input[type=text] {
+  width: 100%;
+  margin-bottom: 1rem;
+  outline: none;
+  color: #777;
+}
+.btn {
+  background-color: #e86660;
+  color: #fff;
+}
+form input[type=submit] {
+  width: 50%;
+  cursor: pointer;
+}
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  
+}
+li {
+  background-color: #4d4d4d;
+  color: #fff;
+  width: 30%;
+  
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+li h2 {
+  text-align: center;
+  margin: 1rem 0;
+}
+
+ul img {
+  width: 100%;
+}
+
+li a {
+  padding: .5rem 1rem;
+  text-decoration: none;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+  
+}
+
+.tracks {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 1.5rem;
+}
+
+table {
+  border-bottom: 2px solid white;
+}
+
+th {
+  text-align: left;
+  font-weight: bold;
+  background-color: #4a4a4a;
+  color: #bec0c5;
+  font-size: 2rem;
+  padding: 2rem;
+}
+
+td {
+  background-color: #f6f6f6;
+  color: #4a4a4a;
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1.5rem;
+}
