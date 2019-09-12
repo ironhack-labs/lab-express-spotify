@@ -1,0 +1,8 @@
+Tracks
+ <ul>
+{{#each data.body.items}}
+
+   <li><a href ="/tracks/{{this.albumId}}" method = "GET"> {{this.name}} </a></li>
+
+{{/each}}
+ </ul>

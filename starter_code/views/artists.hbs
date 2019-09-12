@@ -1,0 +1,12 @@
+Artists
+
+{{#each data.body.artists.items}}
+<div>
+  <ul>
+<li>{{this.name}} </li>
+<img width ="200px" src = {{this.images.0.url}}>
+<li><a href ="/albums/{{this.id}}" method = "GET"></li>
+  View Albums
+</a>
+</div>
+{{/each}}
