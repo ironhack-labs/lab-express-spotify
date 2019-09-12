@@ -1,12 +1,20 @@
 <div class="container">
     <div class="row">
         {{#each songs}} 
-            <div class="col-4">
-                <img width="300px" src="{{this.images.[0].url}}">
-                <p>{{this.name}}</p>
-                <audio controls>
-                    <source src="{{this.preview_url}}" type="audio/mpeg">
-                </audio> 
+            <div class="col-12">
+                <div class="col tracks row">
+                    <div class="col-4 t-col">
+                        <p><b>Name:&NonBreakingSpace;</b>{{this.name}}</p>
+                    </div>
+                     <div class="col-4 t-col">
+                        <p><b>&#35;:&NonBreakingSpace;</b>{{this.track_number}}</p>
+                    </div>
+                <div class="col-4">
+                     <audio controls>
+                        <source src="{{this.preview_url}}" type="audio/mpeg">
+                    </audio> 
+                </div>
+                </div>
             </div>
         {{/each}}
     </div>

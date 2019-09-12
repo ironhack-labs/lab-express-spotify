@@ -1,6 +1,8 @@
-<form action="/artists" method="GET">
-  <label for="first-name-input">Search Song:</label>
-  <input id="first-name-input" type="text" name="artist">
+<section id="searchDiv">
+  <h4>Search your favorite artist/band</h4>
 
-  <input type="submit" value="save song">
-</form>
+  <form id="search" action="/artists" method="GET">
+    <input id="first-name-input" type="text" name="artist">
+    <input class="btn btn-dark btn-lg" type="submit" value="Search">
+  </form>
+</section>

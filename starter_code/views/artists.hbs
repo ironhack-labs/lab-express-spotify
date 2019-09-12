@@ -1,10 +1,16 @@
 <div class="container">
 <div class="row">
     {{#each artists}} 
-        <div class="col-4">
-        <img width="300px" src="{{this.images.[0].url}}">
-        <p>{{this.name}}</p>
-        <a href="/albums/{{this.id}}">View Albums</a>
+        <div class="col col-4">
+        <img class="img-fluid" src="{{this.images.[0].url}}">
+        <h5 class="text-center">{{this.name}}</h5>
+
+        <p><span><b>Genre(s):</b></span>
+            {{#each this.genres}}
+             {{this}}
+            {{/each}}
+        </p>
+        <a class="btn btn-lg btn-dark" href="/albums/{{this.id}}">View Albums</a>
         </div>
     {{/each}}
 </div>

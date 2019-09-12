@@ -49,7 +49,7 @@ app.get('/', (req, res, next) => {
 
 app.get('/artists', (req, res, next) => {
     console.log('artist is ',req.query)
-    spotifyApi.searchArtists(req.query.artist)  .then(data => {
+    spotifyApi.searchArtists(req.query.artist).then(data => {
         
         console.log("The received data from the API: ", data.body.artists.items);
         // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
