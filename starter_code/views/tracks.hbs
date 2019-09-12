@@ -1,0 +1,14 @@
+<ul>
+
+    {{#each data.body.tracks.items}}
+    <li class="track">
+
+       <span> {{name}}</span>
+        <audio controls>
+
+            <source src="{{preview_url}}" type="audio/mp3">
+        </audio>   
+    </li>
+    {{/each}}
+
+</ul>
