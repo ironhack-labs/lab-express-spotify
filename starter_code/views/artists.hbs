@@ -1,0 +1,18 @@
+{{!-- <button type="submit">
+    <a href="/albums/artistId"> View Albums </a>
+</button>
+ --}}
+
+<div class='artist-wrapper'>
+    {{#each artist}}
+    <div class='artist-card'>
+        <img src="{{this.images.[0].url}}" alt="artist image">
+
+        <div class='artist-text'>
+            {{name}}
+            
+            <a href="/albums/{{id}}"> View Albums </a>
+        </div>
+    </div>
+    {{/each}}
+</div>

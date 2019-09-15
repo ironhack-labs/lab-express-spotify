@@ -1,0 +1,12 @@
+<div class='track-wrapper'>
+    <div class='track-label'>
+        <h3> Title </h3>
+        <h3> Listen </h3>
+    </div>
+    {{#each tracks}}
+    <div class='track-info'>
+        <p> {{name}} </p>
+        <audio controls='controls' autoplay='autoplay' src="{{preview_url}}"></audio>
+    </div>
+    {{/each}}
+</div>

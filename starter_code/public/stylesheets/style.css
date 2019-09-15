@@ -1,0 +1,123 @@
+.navbar {
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.main-container>img {
+    min-height: 100%;
+    min-width: 1024px;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -5;
+}
+
+.main-text {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(234, 241, 241, .6);
+    padding: 70px 120px;
+    position: absolute;
+    top: 35%;
+    left: 30%;
+    border-radius: 10px;
+}
+
+.search-btn {
+    background-color: lightskyblue;
+    border-color: lightskyblue;
+    border-radius: 2px;
+    color: white;
+}
+
+.artist-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.artist-card {
+    margin-top: 5%;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.artist-card>img {
+    width: 100%;
+    height: 80%;
+}
+
+.artist-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.artist-text>a {
+    border: 1px solid black;
+    margin: auto 2.2rem;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+
+}
+
+.album-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.album-card {
+    margin-top: 5%;
+    width: 300px;
+    height: 400px;
+    background-color: rgba(0, 0, 0, .7);
+}
+
+.album-card>img {
+    width: 100%;
+    height: 80%;
+}
+
+.album-text {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+}
+
+.album-text>a {
+    border: 1px solid black;
+    margin: auto 2.2rem;
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+}
+
+.track-wrapper {
+    margin: 3% 10%;
+    width: 75%;
+}
+
+.track-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F6F6F6;
+    margin-top: 5px;
+    padding: 1rem;
+}
+
+.track-label {
+    display: flex;
+    justify-content: space-between;
+    padding: 1.5rem;
+    background-color: #4A4A4A;
+    color: #C3C3C3;
+    padding: auto 1.5rem;
+}

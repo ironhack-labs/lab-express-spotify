@@ -1,0 +1,25 @@
+{{!-- <ul>
+    {{#each albums}}
+    <li> <img width='200' src="{{this.images.[0].url}}" alt="album image"> </li>
+    <li> {{this.name}} </li>
+    <li> {{this.release_date}} </li>
+    <a href="/tracks/{{id}}"> View Track </a>
+    {{/each}}
+</ul> --}}
+
+<div class='album-wrapper'>
+
+    {{#each albums}}
+    <div class='album-card'>
+        {{!-- <img src="{{this.images.[0].url}}" alt="artist image"> --}}
+        <img src="{{this.images.[0].url}}" alt="album image">
+
+        <div class='album-text'>
+            {{name}}
+            <br>
+            {{release_date}}
+            <a href="/tracks/{{id}}"> View Tracks </a>
+        </div>
+    </div>
+    {{/each}}
+</div>
