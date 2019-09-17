@@ -22,9 +22,12 @@ module.exports={
 		 else
 			 item.url="/images/notfound.png";
 		 item.name=data[i].name;
+		 let parts=data[i].uri.split(":");
+		 item.uri=parts[2];
 		 console.log(data[i].name);
 		 console.log(cnt);
 		 myrow.push(item);
+		 
 		 cnt++;
 		 if (cnt==3){
 		   cnt=0;	 

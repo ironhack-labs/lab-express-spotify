@@ -51,11 +51,32 @@ app.get('/artists', (req, res, next) => {
   .then(data => {
 	  
 	  var newData=func.format(data.body.artists.items);
-	  console.log('oco1'+JSON.stringify(newData));
+	  console.log(JSON.stringify(data));
 	  
 	  res.render('artists',newData);
-    console.log("The received data from the API: ", data.body.artists.items[3].images[0].url	);
-	 console.log("The received data from the API: ", data.body.artists.items[4].name	);
+    console.log("The received data from the API: ", data.body.artists.items[0].name	);
+	
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+  })
+  .catch(err => {
+    console.log("The error while searching artists occurred: ", err);
+  });
+  
+})
+
+
+app.get('/albums/:artistId', (req, res, next) => {
+  
+  console.log('get albums artists:'+req.params.artistId);
+  
+   spotifyApi
+  .getArtistAlbums(req.params.artistId)
+  .then(data => {
+	  
+	
+	  console.log(data);
+	  
+	  
 	
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
