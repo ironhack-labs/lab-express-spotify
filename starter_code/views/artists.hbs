@@ -12,43 +12,28 @@
 </head>
 <body>
     
-    
-    <div class="row">
-      <div class="col-sm-4" >
+  {{#each allData}}
+   <div class="row">
+  {{#each myrow}}
+  
+  <div class="myitem col-sm-4" >
 	       <div class='flex'>
-		      <img src='/images/spotify.png' />
+		      <img src='{{this.url}}' />
 			  <div class='dark'>
-			    <p>beafles</p>
+			    <p>{{this.name}}</p>
 				<button  type="button" class="flexCenter btn btn-danger">View Album</button>
 			  </div>
 		   </div>
 	  
 	  </div>
-      <div class="col-sm-4" >
-	   <div class='flex'>
-		      <img src='/images/spotify.png' />
-			  <div class='dark'>
-			    <p>beafles</p>
-				<button  type="button" class="flexCenter btn btn-danger">View Album</button>
-			  </div>
-		   </div>
-	  </div>
-      <div class="col-sm-4" >
-	   <div class='flex'>
-		      <img src='/images/spotify.png' />
-			  <div class='dark'>
-			    <p>beafles</p>
-				<button  type="button" class="flexCenter btn btn-danger">View Album</button>
-			  </div>
-		   </div>
-	  
-	  </div>
-    </div>
-       
-   
     
+  {{/each}}
     
-  </div>
+	</div>
+  {{/each}}
+  
+		
+	
 
 
 </body>

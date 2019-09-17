@@ -52,7 +52,10 @@ text-align:center;
   position:relative;
   left:30%;
 }
+.myitem{
+margin-top:10px;
 
+}
 .flex {
   display: flex;
   flex-direction:column;

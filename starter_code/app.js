@@ -1,9 +1,11 @@
 require('dotenv').config()
 
+
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require("spotify-web-api-node");
 const path    = require('path');
+const func=require('./func');
 
 // require spotify-web-api-node package here:
 
@@ -48,7 +50,10 @@ app.get('/artists', (req, res, next) => {
   .searchArtists(req.query.search)
   .then(data => {
 	  
-	  res.render('artists',data);
+	  var newData=func.format(data.body.artists.items);
+	  console.log('oco1'+JSON.stringify(newData));
+	  
+	  res.render('artists',newData);
     console.log("The received data from the API: ", data.body.artists.items[3].images[0].url	);
 	 console.log("The received data from the API: ", data.body.artists.items[4].name	);
 	
