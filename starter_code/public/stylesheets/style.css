@@ -40,11 +40,23 @@ padding-right:300px;
  width:250px
   
 }
-
-
-p{
+.header-row{
+background-color:black;
 color:white;
-text-align:center;
+height:60px;
+
+}
+.header-row span{
+  
+  line-height:60px;
+}
+
+.track-item{
+background-color:rgb(246,246,246);
+}
+p{
+color:black;
+text-align:left;
 }
 .flexCenter {
   display: flex;
