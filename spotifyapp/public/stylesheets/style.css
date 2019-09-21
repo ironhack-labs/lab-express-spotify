@@ -1,0 +1,33 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+a {
+  color: #00B7FF;
+}
+
+#artistAllContainer,#albumAllContainer{
+  display:flex;
+  flex-flow:row wrap;
+}
+
+#artistContainer{
+  display: flex;
+  flex-flow:column nowrap;
+  width:180px;
+  padding:20px;
+}
+#albumContainer{
+  display: flex;
+  flex-flow:column nowrap;
+  width:350px;
+  padding:5px;
+}
+
+#artistImg{
+  width:150px;
+}
+#artistName{
+  word-wrap: break-word;
+}

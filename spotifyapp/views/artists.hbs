@@ -1,0 +1,15 @@
+<h1>search result for {{searchName}}</h1>
+
+<div id="artistAllContainer">
+{{#each artistsAll}}
+  <div id="artistContainer">
+    {{#if this.images.1.url}}
+    <img id="artistImg"src="{{this.images.1.url}}" alt="">
+    <p id="artistName">{{this.name}}</p>
+    <a href="/albums/{{this.id}}">View Albums</a>
+    {{/if}}
+  </div>
+{{/each}}
+</div>
+
+
