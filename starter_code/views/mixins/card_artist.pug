@@ -1,0 +1,11 @@
+mixin card_artist(item = {})
+
+  //- -let image = item.images.url
+  
+  div(class="artist-item")
+    div(class="artist-image-container")
+      img(src=item.images.url, alt="")
+    p #{item.name}
+    button View Albums
+    //- a(href(`albums/${item.id}`)
+      button View Albums
