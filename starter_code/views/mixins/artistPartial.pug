@@ -1,0 +1,10 @@
+mixin artistPartial( artist = {} )
+
+  - artist.image = '/images/avatar.jpg'
+
+      .artist-card
+        .artist-image
+          img(src= artist.image, alt="Artist image")
+        .text-container
+          h3 #{artist.name}
+          button(type="submit" onclick=`window.location.href = 'http://localhost:3000/albums/${artist.id}'`) View albums

@@ -1,0 +1,9 @@
+extends layout
+include mixins/artistPartial.pug
+
+block content
+
+  .artists
+
+    each artist in items
+      +artistPartial(artist)
