@@ -48,14 +48,24 @@ app.post('/artists', (req, res) => {
     console.log("The received data from the API: ", data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     let { items } = data.body.artists;
+    // let { url } = data.body.artists.items.images
+    //console.log("ESTO ES ITEMS PUTA MADRE ", items.name);
+    console.log( 'This are the keys of Items:',Object.keys(items))
+    //console.log(items[0].images[0].url)
     
-    /*
-    items.forEach( item => {
-      item.image = item.images[0];
-      //item.image_url = JSON.parse(item.image.url)
-    })*/
+
+    items.forEach( artist => {
+      console.log(`This are the IMAGES for ${artist.name}`,artist.images)
+      //console.log('This are the first URLs for every artist',artist.images[0].url)
+      //let { images: image_url } = artist.images
+
+      
+      if ( artist.images.length < 1 ) artist.image = '/images/avatar.jpg'
+      else artist.image = artist.images[0].url;
+      //artist.image_url = JSON.parse(artist.image.url)
+    });
     
-    res.render('artists', {items: items})
+    res.render('artists', {items})
     
     //res.send(items)
 
@@ -73,6 +83,17 @@ app.get('/albums/:artistId', (req, res) => {
   .then( data => {
     console.log('Artist albums', data.body);
     let { items } = data.body;
+
+    items.forEach( album => {
+      //console.log(`This are the IMAGES for ${album.name}`,album.images)
+      //console.log('This are the first URLs for every artist',artist.images[0].url)
+      //let { images: image_url } = artist.images
+
+      
+      if ( album.images.length < 1 ) album.image = '/images/avatar.jpg'
+      else album.image = album.images[0].url;
+      //artist.image_url = JSON.parse(artist.image.url)
+    });
 
     res.render('albums', {items} )
 

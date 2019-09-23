@@ -1,10 +1,9 @@
 mixin albumPartial( album = {} )
 
-  - album.image = '/images/avatar.jpg'
 
-      .artist-card
-        .artist-image
-          img(src= album.image, alt="Artist image")
-        .text-container
-          h3 #{album.name}
-          button(type="submit" onclick=`window.location.href = 'http://localhost:3000/tracks/${album.id}'`) View Tracks
+  .artist-card
+    .artist-image
+      img(src= album.image, alt="Artist image")
+    .text-container
+      h3 #{album.name}
+      button(type="submit" onclick=`window.location.href = 'http://localhost:3000/tracks/${album.id}'`) View Tracks
