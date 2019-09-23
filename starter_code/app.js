@@ -36,14 +36,14 @@ app.get("/", (req, res) => {
 });
 
 app.get("/artists", (req, res) => {
-  console.log("que es", req.query);
+  // console.log("que es", req.query);
   let { search } = req.query;
   // res.send("This is the artists page!");
   spotifyApi
     .searchArtists(search)
     .then(data => {
       // console.log("Este es el body", data);
-      console.log("The received data from the API: ", data.body.artists);
+      // console.log("The received data from the API: ", data.body.artists);
       let { items } = data.body.artists;
       items.search = search;
       items.forEach(item => {
@@ -65,19 +65,45 @@ app.get("/artists", (req, res) => {
     });
 });
 
-// app.get("/albums/:artistId", (req, res) => {
-//   let { artistId } = req.params;
-//   spotifyApi.getArtistAlbums(artistId).then(
-//     data ={
-//       console.log('Artist albums', data.body);
-//     },
-//     function(err) {
-//       console.error(err);
-//     }
-//   );
+app.get("/albums/:artistId", (req, res) => {
+  let { artistId } = req.params;
+  // res.send(artistId);
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then(data => {
+      // console.log("Artist albums", data.body);
+      let { items } = data.body;
+      items.artistName = items[0].artists[0].name;
+      // console.log(items.artistName);
+      items.forEach(item => {
+        if (item.images.length !== 0) {
+          item.images = item.images[1];
+        } else {
+          item.images = {
+            url:
+              "https://vinylboutique.co.uk/wp-content/uploads/2017/05/default-release-cd.png"
+          };
+        }
+      });
+      // res.send(items);
+      res.render("albums", { items });
+    })
+    .catch(err => console.log(err));
+});
 
-//   res.render("albums");
-// });
+app.get("/tracks/:trackId", (req, res) => {
+  let { trackId } = req.params;
+  // res.send(trackId);
+  spotifyApi
+    .getAlbumTracks(trackId)
+    .then(data => {
+      // console.log(data.body);
+      let { items } = data.body;
+      // res.send(items);
+      res.render("tracks", { items });
+    })
+    .catch(err => console.log(err));
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")

@@ -1,0 +1,8 @@
+mixin card_album(item = {})
+
+  div(class="item")
+    div(class="image-container")
+      img(src=item.images.url, alt="")
+      p #{item.name}
+      a(href=`/tracks/${item.id}`)
+        button(class="item-btn") View Tracks

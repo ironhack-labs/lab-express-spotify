@@ -3,8 +3,9 @@ extends layout
 include mixins/card_artist
 
 block content 
-  h1 Albums coincidence for your "#{items.search}" search
+  div(class="title")
+    h1 Artists coincidence for your "#{items.search}" search
   
-   div(class="all-artist-container")
+  div(class="all-artist-container")
     each item in items
             +card_artist(item)

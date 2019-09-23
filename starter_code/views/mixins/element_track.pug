@@ -1,0 +1,6 @@
+mixin element_track(item = {})
+
+  div(class="track-item")
+    p #{item.name}
+    audio(controls)
+      source(src=item.preview_url)

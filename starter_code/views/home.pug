@@ -1,8 +1,9 @@
 extends layout
 
 block content
-  div(class="form-container")
-    form(action="/artists" method="get")
-      input(type="text", name="search", placeholder="Type an arstist name")
-      button(type="submit") Search
+  div(class="all-form-container")
+    div(class="form-container")
+      form(action="/artists" method="get")
+        input(type="text", name="search", placeholder="Type an arstist name")
+        button(type="submit") Search
 

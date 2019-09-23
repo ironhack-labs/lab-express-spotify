@@ -1,3 +1,11 @@
 extends layout
 
-  h1 Seccion de album
+include mixins/card_album
+
+block content 
+  div(class="title")
+    h1 Albums for: #{items.artistName}
+    
+  div(class="all-album-container")
+    each item in items
+      +card_album(item)

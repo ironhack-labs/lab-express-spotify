@@ -2,10 +2,9 @@ mixin card_artist(item = {})
 
   //- -let image = item.images.url
   
-  div(class="artist-item")
-    div(class="artist-image-container")
+  div(class="item")
+    div(class="image-container")
       img(src=item.images.url, alt="")
-    p #{item.name}
-    button View Albums
-    //- a(href(`albums/${item.id}`)
-      button View Albums
+      p #{item.name}
+      a(href=`/albums/${item.id}`)
+        button(class="item-btn") View Albums

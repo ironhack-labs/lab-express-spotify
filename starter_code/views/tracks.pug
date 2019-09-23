@@ -1,0 +1,10 @@
+extends layout
+
+include mixins/element_track
+
+block content
+        div(class="title")
+                h1 Songs in Album selected:
+        div(class="all-tracks-container")
+                each item in items
+                         +element_track(item)
