@@ -1,0 +1,10 @@
+<div class="col-lg-3 col-md-3 col-sm-3" >
+    <span>{{this.name}}</span>
+</div>
+<div class="col-lg-7 col-md-7 col-sm-7 mt-3">
+    {{#if this.preview  }}
+    <audio controls src={{this.preview}}></audio>
+    {{else}}
+    <p>Not available. <i class="fas fa-heart-broken fa-2x"></i></p>
+    {{/if}}
+</div>

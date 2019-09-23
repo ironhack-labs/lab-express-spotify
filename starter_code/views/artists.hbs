@@ -1,0 +1,12 @@
+<main class="wrapper">
+    <div class="row">
+        {{#if package}}
+        {{#each package}}
+        {{> artist this}}
+        {{/each}}
+        {{else}}
+        <p> Artist not available. <i class="fas fa-heart-broken fa-2x"></i></p>
+        <a class="btn button-search btn-lg mr-3" href="/" role="button">Try another artist</a>
+         {{/if}}
+    </div>
+</main>

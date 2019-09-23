@@ -1,0 +1,10 @@
+<main class="wrapper">
+
+    <h1 class="text-center">Albums for: {{name}} </h1>
+    <div class="row">
+
+        {{#each package}}
+        {{> album this}}
+        {{/each}}
+    </div>
+</main>

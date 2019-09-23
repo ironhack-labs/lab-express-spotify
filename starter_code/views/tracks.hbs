@@ -1,0 +1,17 @@
+<main class="wrapper-tracks">
+
+    <div class="row itemHeader">
+        <div class="col-lg-3 col-md-3 col-sm-4">Title</div>
+        <div class="col-lg-7 col-md-7 col-sm-6">Listen</div>
+        <div class="col-lg-2 col-md-3 col-sm-2">
+            <a class="btn button-search mb-5" href="/" role="button">Try other artists!</a>
+        </div>
+
+    </div>
+    <div class="row d-flex align-items-center justify-content-start item">
+        {{!-- <span>The preview is not available. Sorry!</span> --}}
+        {{#each package}}
+        {{> track this}}
+        {{/each}}
+    </div>
+</main>
