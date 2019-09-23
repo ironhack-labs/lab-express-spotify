@@ -92,9 +92,9 @@ app.get('/tracks/:albumId', (req, res) => {
     console.log('Album tracks', data.body);
     let { items } = data.body;
 
-    //res.render('tracks', {items} )
+    res.render('tracks', {items} )
 
-    res.send(items)
+    //res.send(items)
   })
   .catch(err => {
     console.log("The error while searching artists occurred: ", err);

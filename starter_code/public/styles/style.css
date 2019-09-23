@@ -37,6 +37,19 @@ form button {
   margin-top: 2.5%;
 }
 
+.container{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+  overflow: auto;
+  background-image: url("/images/music-background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat
+}
+
 .artists {
   display: flex;
   flex-wrap: wrap;
@@ -44,7 +57,6 @@ form button {
   align-items: center;
   width: 100%;
   height: 100%;
-  background-image: url("/images/music-background.jpg");
 }
 
 .artist-card {
@@ -88,4 +100,52 @@ form button {
   margin-top: 2.5%;
   width: 30%;
   height: 30px
+}
+
+.tracks {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 80%;
+  background-color: rgba(255,255,255,60%)
+}
+
+.tracks .track-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 10%;
+  background-color: rgba(64,64,64,60%);
+}
+
+.tracks .track-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 90%;
+  overflow: auto;
+}
+
+.tracks .tracklist {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 10%
+}
+
+.tracks .tracklist .track {
+  width: 65%;
+}
+
+.tracks .tracklist .track p {
+  margin-left: 10%
+}
+
+.tracks .tracklist .preview {
+  width: 35%;
+  text-align: center
 }

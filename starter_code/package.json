@@ -1,7 +1,6 @@
 {
   "name": "starter_code",
   "version": "1.0.0",
-  "description": "",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js -e js,pug"
@@ -15,5 +14,6 @@
     "express": "^4.17.1",
     "pug": "^2.0.4",
     "spotify-web-api-node": "^4.0.0"
-  }
+  },
+  "description": ""
 }

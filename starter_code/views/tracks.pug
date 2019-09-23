@@ -3,7 +3,13 @@ extends layout
 block content
 
   .tracks
-
-    each track in items
-      ul.tracklist
-        li.track track.name
+    .track-header
+      h3 Title
+      h3 Listen
+    .track-container
+      each track in items
+        .tracklist
+          .track
+            p #{track.name}
+          .preview
+            audio(src=`${track.preview_url}` controls)
