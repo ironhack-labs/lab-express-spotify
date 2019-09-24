@@ -60,7 +60,7 @@ app.post('/artists', (req, res) => {
       //let { images: image_url } = artist.images
 
       
-      if ( artist.images.length < 1 ) artist.image = '/images/avatar.jpg'
+      if ( artist.images.length < 1 ) artist.image = '/images/avatar.png'
       else artist.image = artist.images[0].url;
       //artist.image_url = JSON.parse(artist.image.url)
     });
