@@ -1,0 +1,6 @@
+extends layout
+
+block content
+    form(action="/artists", method="get")
+        input(type="text", name="name")
+        button(type="submit") Search for an Artist

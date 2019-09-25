@@ -1,0 +1,8 @@
+extends layout
+
+include mixins/_artistMixin
+
+block content
+    .artists-container
+        each artist in artists
+            +singleArtist(artist)

@@ -1,0 +1,9 @@
+mixin singleArtist(artist = {})
+  -let image = (artist.items.images.lenght == 0) ? artist.items.images[0].url : '';
+  -let name = artist.items.name;
+
+  .artist-container
+    img(src=image alt=name)
+    
+    h1=name
+    button
