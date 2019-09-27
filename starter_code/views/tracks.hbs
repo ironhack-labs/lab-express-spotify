@@ -1,0 +1,28 @@
+<div class="trackTable">
+<div class="tableTitle">
+  <div class="trackTitle">Title</div>
+  <div class="listenTitle">Listen</div>
+</div>  
+  {{#each items}}
+<div class = "tableContent">
+  <div class="trackName">{{this.name}}</div>
+  <div class="trackAudio">
+    <figure>
+      <audio
+          controls
+          src="{{this.preview_url}}">
+              Your browser does not support the
+              <code>audio</code> element.
+      </audio>
+    </figure>
+  </div>
+</div>    
+  {{/each}}
+</ul>
+<ul class="listenList">
+  
+  {{#each items}}
+
+  {{/each}}
+</ul>
+</div>
