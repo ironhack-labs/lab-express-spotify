@@ -1,0 +1,20 @@
+<div>
+    {{#each items}}
+
+   <h1> {{name}} </h1>
+   <img src ="{{images.0.url}}" alt ="photos">
+   <h2> {{genres}} </h2>
+{{!-- <div class="col-lg-4 mb-3">
+    <div class="card">
+
+        <img src="{{this.images.1.url}}" alt="capa" class="card-img-top">
+        <div class="card-body justify-content-center bg-secondary">
+            <h5 class="card-title text-center text-white">{{this.name}}</h5>
+            <div class=" row justify-content-center">
+                <a href="/albums/{{this.id}}" class="btn btn-danger btn-sm">View Albums</a>
+            </div>
+        </div>
+    </div>
+</div> --}}
+{{/each}}
+</div>
