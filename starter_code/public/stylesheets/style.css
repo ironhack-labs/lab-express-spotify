@@ -1,0 +1,50 @@
+.form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-image: url('/images/photo-1524368535928-5b5e00ddc76b.jpeg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+
+}
+
+.bcg-form {
+  padding: 50px 100px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+
+}
+
+.card {
+  border: 1px solid black;
+  margin: 30px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  background-color: grey;
+}
+
+.name {
+  font-size: 16px;
+  text-align: center;
+}
+
+.button {
+  font-size: 16px;
+  background-color: tomato;
+  color: white;
+  border-radius: 10px;
+  font-size: 12px;
+  border: 1px solid tomato;
+  padding: 5px 15px;
+}
