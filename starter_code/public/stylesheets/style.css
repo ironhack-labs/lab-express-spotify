@@ -6,6 +6,7 @@
 body{
   background-image: url("../images/show.jpg");
   background-size: cover;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
   /* display: flex;
   flex-direction: column;
   justify-content: center;
@@ -45,7 +46,7 @@ button{
   color:white;
   /* height: 20% ; */
   padding: 5px;
-  border-radius: 10px;
+  border-radius: 5px;
   width: 50%;
   text-align: center;
   text-decoration: none;
@@ -78,7 +79,7 @@ button{
 }
 
 .card{
-  width: 30%;
+  width: 20%;
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -93,4 +94,29 @@ h4{
 
 .search-result{
   background: white;
+}
+
+.tracks-list{
+  display: flex;
+  flex-direction: column;
+}
+
+.tracks-info{
+  display: flex;
+  justify-content: space-between;
+  padding: 5px;
+}
+
+.track-header{
+  display: flex;
+  flex-direction: column;
+}
+
+.header{
+  background-color: darkslategray;
+  color:white;
+  height: 40px;
+  padding-bottom: 20px;
+  padding-right: 60px;
+  font-size: 24px;
 }

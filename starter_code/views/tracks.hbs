@@ -1,0 +1,14 @@
+<div class="search-result">
+  <div class="tracks-info header">
+    <p> Title </p>
+    <p> Listen </p>
+  </div>
+  <div class="track-list">
+  {{#each items}}
+    <div class="tracks-info">
+      <h4>{{name}}</h4>
+      <audio src="{{previous_url}}" preload="none" controls></audio>
+    </div>
+  {{/each}}
+  </div>
+</div>

@@ -1,13 +1,13 @@
 <div class="search-result">
   <div class="card-container">
     {{#each items}}
-    <div class="card">
+    <div class="track-card">
       <div>
-      <img src="{{images.0.url}}" alt="" class="album-img">
+        <img src="{{images.0.url}}" alt="" class="album-img">
       </div>
       <div class="info">
         <h4>{{name}}</h4>
-        <a href="/albums/{{id}}" class="view-album">View Albuns</a>
+        <a href="/tracks/{{id}}" class="view-album">View Tracks</a>
       </div>
     </div>
     {{/each}}
