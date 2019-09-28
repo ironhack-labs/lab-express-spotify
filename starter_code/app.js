@@ -40,11 +40,12 @@ app.get('/artists', (req, res, next) => {
     )
     .then(function (data) {
       console.log("The received data from the API: ", data.body);
-      res.render('artists', data.body);
+      res.render('artists', data.body.artists);
+      // res.send(data.body.artists);
     })
     .catch(function (err) {
       console.log("The error while searching artists occurred: ", err);
     });
 });
 
-app.listen(3001, () => console.log("My Spotify project running on port 3001 🎧 🥁 🎸 🔊"));
+app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));

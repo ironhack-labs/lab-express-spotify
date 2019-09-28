@@ -1,3 +1,16 @@
-<h1>
-  Find {{artist.items[0]}}
-</h1>
+<div class="search-result">
+  <div class="card-container">
+    {{#each items}}
+    <div class="card">
+      <div>
+      <img src="{{images.0.url}}" alt="" class="album-img">
+      </div>
+      <div class="info">
+        <h4>{{name}}</h4>
+        {{!-- <a href="/{{}}" class = "view-album">View Albuns</a> --}}
+        <a href="" class="view-album">View Albuns</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
