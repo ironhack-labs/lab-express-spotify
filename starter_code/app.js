@@ -33,12 +33,11 @@ app.get('/', (req, res) => {
 
 app.get('/artists', (req, res) => {
   const {artists} = req.query;
-  console.log('req.query = ', req.query, 'artist = ', artists);
   spotifyApi
     .searchArtists(artists)
     .then(data => {
+      // console.log(data.body.artists);
       const {items} = data.body.artists;
-      console.log(items);
       res.render('artists', {items});
     })
     .catch(err => {
@@ -46,12 +45,34 @@ app.get('/artists', (req, res) => {
     });
 });
 
-app.get('/albums/:artistId', (req, res, next) => {
+app.get('/albums/:artistId', (req, res) => {
   const {artistId} = req.params;
-
-  console.log(artistId);
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then(data => {
+      // console.log(data.body); estrutura
+      const {items} = data.body; //desconstrucao
+      res.render('albuns', {items}); //objeto
+    })
+    .catch(err => {
+      throw new Error(err);
+    });
 });
 
-app.listen(4000, () =>
+app.get('/tracks/:trackId', (req, res) => {
+  const {trackId} = req.params;
+  spotifyApi
+    .getAlbumTracks(trackId)
+    .then(data => {
+      // console.log(data.body); estrutura
+      const {items} = data.body; //desconstrucao
+      res.render('tracks', {items}); //objeto
+    })
+    .catch(err => {
+      throw new Error(err);
+    });
+});
+
+app.listen(5000, () =>
   console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊')
 );
