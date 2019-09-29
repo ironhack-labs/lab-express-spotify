@@ -1,0 +1,9 @@
+<div class="container">
+  {{#each items}}
+  <img src ="{{images.0.url}}" alt ="photos">
+  <form action="/tracks/{{this.id}}" method="GET">
+   <button class="btn-view" type="submit">Sound Tracks</button>
+</form>
+<br><br>
+  {{/each}}
+</div>
