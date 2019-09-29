@@ -1,0 +1,15 @@
+<div class="artistsBg">
+  <div class="cards-container">
+    {{#each items}}
+      {{#if this.images.0.url}}
+      <div class="card">
+        <img src={{this.images.0.url}} alt='{{this.name}} artist image.' class="card__img">
+        <div class="card__infos">
+          <h3 class="card__infos--name">{{this.name}}</h3>
+          <a class="card__btn" href='albums/{{this.id}}'>View Albums</a>
+        </div>
+      </div>
+      {{/if}}
+    {{/each}}
+  </div>
+</div>

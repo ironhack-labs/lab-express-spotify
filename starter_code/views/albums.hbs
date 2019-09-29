@@ -1,0 +1,19 @@
+{{#with data}}
+  <h2 class="albums-title">
+    Albums for: {{items.0.artists.0.name}}
+  </h2>
+
+  <div class="cards-container">
+
+    {{#each items}}
+      <div class="card">
+        <img src={{this.images.0.url}} alt='{{this.name}} album image.' class="card__img">
+        <div class="card__infos">
+          <h3 class="card__infos--name">{{this.name}}</h3>
+          <a class="card__btn" href='/albums/tracks/{{this.id}}'>View Albums</a>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+{{/with}}

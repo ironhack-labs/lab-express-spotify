@@ -1,0 +1,19 @@
+{{#with data}}
+
+  <div class="tracks-header">
+    <h3 class="tracks-header--title">Title</h3>
+    <h3 class="tracks-header--listen">Listen</h3>
+  </div>
+
+  <div class="tracks-container">
+    {{#each items}}
+      <div class="tracks-container__row">
+        <p class="tracks-container__row--name">{{this.name}}</p>
+        <audio controls class="tracks-container__row--audio">
+          <source src={{this.preview_url}} type="audio/mpeg"></source>
+        </audio>
+      </div>
+    {{/each}}
+  </div>
+  
+{{/with}}

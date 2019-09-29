@@ -1,0 +1,151 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  font-family: 'Nunito Sans', sans-serif;
+}
+
+.indexBg {
+  height: 100vh;
+  width: 100vw;
+  background-image: url('../images/indexBg.jpeg');
+  background-size: cover;
+  background-position: center;
+}
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80rem;
+  height: 25rem;
+  background-color: rgba(220,220,220, .6);
+}
+
+.artist-search {
+  font-size: 2rem;
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  width: 45rem;
+  transform: translate(-50%, -50%);
+  padding: 1rem 2rem;
+  border: 1px solid rgba(200,200,200, .8);
+  border-radius: .6rem;
+}
+
+.artist-search__btn {
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #f96763;
+  color: white;
+  padding: 1.2rem 1.5rem;
+  font-size: 1.8rem;
+  font-weight: 700;
+  border: none;
+}
+
+.artistsBg {
+  padding: 1px;
+  /* background-image: linear-gradient(to right,#2c5e92, #55366d); */
+}
+
+.cards-container {
+  margin: 2rem auto;
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
+}
+
+.card {
+  width: 28%;
+  margin: 0 2.6%;
+  margin-bottom: 5rem;
+}
+
+.card__img {
+  width: 100%;
+}
+
+.card__infos {
+  margin-top: -.5rem;
+  background-color: #555;
+  width: 100%;
+  padding: 1px 0 2rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card__infos--name {
+  padding: 0 1rem;
+  color: white;
+  font-size: 3rem;
+  font-weight: 700;
+  margin: .5rem 0 1.5rem 0;
+  text-align: center;
+}
+
+.card__btn {
+  text-decoration: none;
+  color: white;
+  font-size: 1.8rem;
+  font-weight: 700;
+  background-color: #ef6865;
+  padding: .6rem 2rem;
+  border-radius: .6rem;
+}
+
+.albums-title {
+  text-align: center;
+  font-size: 2.8rem; 
+  margin: 2rem 0;
+  color: #333;
+}
+
+.tracks-header {
+  height: 9rem;
+  background-color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tracks-header--title {
+  color: #ccb;
+  font-size: 2.6rem;
+  margin-left: 3rem;
+}
+
+.tracks-header--listen {
+  color: #ccb;
+  font-size: 2.6rem;
+  margin-right: 16rem;
+}
+
+.tracks-container__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #f1f3f4;
+  margin-bottom: 4px;
+}
+
+.tracks-container__row--name {
+  font-size: 1.6rem;
+  color: #444;
+  margin-left: 3rem;
+  font-weight: 700;
+}
+
+.tracks-container__row--audio {
+  margin-right: 2rem;
+}
