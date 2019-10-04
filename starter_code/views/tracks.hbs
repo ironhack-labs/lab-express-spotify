@@ -1,0 +1,12 @@
+<div class="track-nav">
+    <h2>Title</h2>
+    <h2 class="right">Listen</h2>
+</div>
+<div class="track-data">
+    {{#each itemsArray}}
+    <h4>{{this.name}}</h4>
+    <audio class="d-inline" controls>
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+    </audio><br>
+{{/each}}
+</div>

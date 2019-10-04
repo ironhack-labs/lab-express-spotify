@@ -18,3 +18,58 @@ body {
     margin-left: -375px;
     width: 650px;
 }
+
+.card-container{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+.card-img-top {
+    width: 350px !important; 
+    height: 300px;
+}
+
+.card {
+    width: 350px !important;
+    height: 400px;
+    margin-bottom: 50px;
+    margin-left: 30px;
+    margin-right: 30px;
+}
+
+.card-body {
+    background-color: darkslategrey;
+    color: white;
+}
+
+.track-nav {
+    padding: 20px;
+    color: white;
+    display: flex;
+    align-items: center;
+    background-color: darkslategrey;
+}
+
+.right {
+    margin-left: auto;
+}
+
+.track-data {
+    padding: 10px;
+    background-color: lightblue;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.track-data h4 {
+    width: 45%;
+}
+
+.track-data audio {
+    width: 30%;
+    margin-left: auto;
+    margin-bottom: 15px;
+}
