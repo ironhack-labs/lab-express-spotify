@@ -2,8 +2,12 @@ require('dotenv').config()
 
 const express = require('express');
 const hbs = require('hbs');
-
-// require spotify-web-api-node package here:
+const axios = require("axios");
+const qs = require("qs");
+const btoa = require("btoa");
+const clientId = process.env.clientId;
+const clientSecret = process.env.clientSecret;
+global.access_token = "";
 
 
 
@@ -13,16 +17,10 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+const homeRoute = require("./routes/index");
+app.use("/", homeRoute);
 
-// setting the spotify-api goes here:
+const artistRoute = require("./routes/artists");
+app.use("/", artistRoute);
 
-
-
-
-
-
-// the routes go here:
-
-
-
-app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
+app.listen(3000, () => console.log("My Spotify project running on port 3000"));
