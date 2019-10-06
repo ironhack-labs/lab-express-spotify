@@ -1,0 +1,6 @@
+mixin albumTracks(track = {})
+
+    .tracks-container
+        p #{track.name}
+        audio(controls)
+            source(src=track.preview_url)

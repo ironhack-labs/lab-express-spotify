@@ -1,0 +1,8 @@
+extends layout
+
+include mixins/_tracksMixin
+
+block content
+    .track-container
+        each track in items
+            +albumTracks(track)
