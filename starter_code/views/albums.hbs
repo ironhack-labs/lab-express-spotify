@@ -1,0 +1,22 @@
+<section id='albums-page'>
+    <div class='header'>
+        <div class='nav-bar'>
+            <a href='/artists' class='nav-link'>Go back to artists</a>
+            <a href='/' class='nav-link'>Search another artist</a>
+        </div>
+        <div class='page-header'>
+            <h1>Albums for: {{artist.name}}</h1> 
+        </div>
+    </div>
+    <div id='albums-container'>
+            {{#each albums.items}} 
+                <div class='album'>
+                    <img src="{{this.images.0.url}}" alt="" class='album-img'> 
+                    <div class='name-box'>
+                        <h3 class='album-name'>{{this.name}}</h3> 
+                        <a href="/album/{{this.id}}/tracks" class='tracks-btn'>View More</a> 
+                    </div>
+                </div>
+            {{/each}}
+    </div>
+</section>

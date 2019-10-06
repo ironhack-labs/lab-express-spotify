@@ -1,0 +1,31 @@
+<section id='tracks-page'>
+    <div class='header'>
+        <div class='nav-bar'>
+            <a href='/artist/{{artistId}}' class='nav-link'>Go back to albums</a>
+            <a href='/' class='nav-link'>Search another artist</a>
+        </div>
+        <div class='page-header'>
+            <h1>Tracks for: {{album.name}}</h1> 
+        </div>
+    </div>
+    <div id='tracks-container'>
+        <div id='tracks-header'>
+            <h1 id='title'>Title</h1>
+            <h1 id='listen'>Listen</h1>
+        </div>
+        <div id='tracks-box'>
+            {{#each tracks.items}} 
+            <div class='track'>
+                <h3 class='track-name'>{{this.name}}</h3> 
+                {{#if this.preview_url}}
+                    <audio id='track-audio' src='{{this.preview_url}}' controls></audio> 
+                {{else}}
+                    <div class='message'>
+                        <h4 class='no-preview'>No preview available</h4> 
+                    </div>
+                {{/if}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
