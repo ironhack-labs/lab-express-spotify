@@ -1,0 +1,6 @@
+mixin singleAlbum(album = {})
+
+    .album-container
+        img(src=album.images.url alt=album.name)
+        h2 #{album.name}
+        a(href=`/tracks/${album.id}`) View Tracks

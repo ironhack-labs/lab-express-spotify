@@ -1,9 +1,7 @@
-mixin singleArtist(artist = {})
-  -let image = (artist.items.images.lenght == 0) ? artist.items.images[0].url : '';
-  -let name = artist.items.name;
+mixin singleArtist(artist = {})  
 
   .artist-container
-    img(src=image alt=name)
-    
-    h1=name
-    button
+    img(src=artist.images.url alt=artist.name)
+    h2 #{artist.name}
+    a(href=`/albums/${artist.id}`) View Albums
+
