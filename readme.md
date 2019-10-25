@@ -170,7 +170,7 @@ spotifyApi
 ```
 
 In order to display the found artists information, create `artists.hbs` file inside `views` folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let's move to the next step.
-<br>
+<br><br>
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9dc721e76158df1836ef07565b5385c2.png)
 
 ## Iteration 4 | View Albums
