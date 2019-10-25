@@ -1,11 +1,11 @@
 <div class="cards">
-  {{#each this}}
-  {{#if this.id}}
+  <%albums.forEach(album => { %>
   <div class="card">
-    <img src="{{this.images.0.url}}" alt="" class="card-img">
-    {{this.name}}
-    <a href="/tracks/{{this.id}}">View Tracks</a>
+    <%if(album.images){%>
+    <img src="<%=album.images[0].url%>" alt="" class="card-img" />
+    <%}%>
+      <%=album.name %>
+    <a href="/tracks/<%=album.id%>">View Tracks</a>
   </div>
-  {{/if}}
-  {{/each}}
+  <%});%>
 </div>

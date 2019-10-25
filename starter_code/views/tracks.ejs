@@ -1,9 +1,7 @@
-{{#each this}}
+<%for (let i = 0; i < tracks.length; i++){%>
 <div class="track">
-  {{#if this.preview_url}}
-  <p>{{this.name}}</p>
+  <p><%=tracks[i].name%></p>
   <audio controls="" name="media">
-    <source src="{{this.preview_url}}" type="audio/mpeg"></audio>
-  {{/if}}
+    <source src="<%=tracks[i].preview_url%>" type="audio/mpeg"></audio>
 </div>
-{{/each}}
+<%}%>
