@@ -2,15 +2,15 @@ require("dotenv").config();
 
 const express = require("express");
 const hbs = require("hbs");
-
+const port = 3000;
 // require spotify-web-api-node package here:
-const spotifyApi = require("spotify-web-api-node");
+const SpotifyWebApi = require("spotify-web-api-node");
 
+// setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET
 });
-
 // Retrieve an access token
 spotifyApi
   .clientCredentialsGrant()
@@ -27,10 +27,26 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
-// setting the spotify-api goes here:
-
 // the routes go here:
 
-app.listen(3000, () =>
-  console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
+app.get("/", (req, res, next) => {
+  res.render("index");
+});
+
+app.get("/artists", (req, res, next) => {
+  spotifyApi
+    .searchArtists(req.query.artistQuery)
+    .then(data => {
+      // console.log("The received data from the API: ", data.body);
+      // res.send(data.body)
+      res.render("artists", data.body.artists.items);
+      console.log(data.body.artists.items[0].images[0])
+    })
+    .catch(err => {
+      console.log("The error while searching artists occurred: ", err);
+    });
+});
+
+app.listen(`${port}`, () =>
+  console.log(`My Spotify project running on port ${port} 🎧 🥁 🎸 🔊`)
 );
