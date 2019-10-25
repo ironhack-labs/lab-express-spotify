@@ -35,20 +35,20 @@ $ git push origin master
 
 Spotify is great for streaming music from the app, but they also have a [Web Service](https://en.wikipedia.org/wiki/Web_service) for us developers to play with.
 
-For purpose of this exercise we will use [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-js) npm package. This package gives us simple methods to make requests to Spotify, and give us back artists, albums, tracks, and more.
+For purpose of this exercise we will use [`spotify-web-api-node` npm package](https://www.npmjs.com/package/spotify-web-api-js) (this is the link that will take you to the documentation so go ahead and open it). As we can find in the docs, this package gives us simple methods to make requests to Spotify, and give us back artists, albums, tracks, and more.
 
-**In this lab we have two main goals**:
+__In this lab we have two main goals__:
 
-- we are going to apply our knowledge of GET method and when and why to use req.query and req.params and
-- we are going to practice how to read the documentation (of this npm package particularly) and to use the given examples from the docs to successfully finish all the iterations.
+- we are going to apply our knowledge of GET method and when and why to use `req.query` and `req.params` and
+- we are going to practice how to __read the documentation__ (of this npm package particularly) and to use the given examples from the docs to successfully finish all the iterations.
 
 ### Registering the app and getting the credentials
 
-The **Spotify** API will need a `clientId` and `clientSecret` in order to give us permission to make requests and get some data back. In order to get clientId and clientSecret we have to register our app on the official Spotify Developers web site (you won't be charged for this, neither a credit card information will be required). Let's follow these couple of steps:
+The __Spotify__ API will need a `clientId` and `clientSecret` in order to give us permission to make requests and get some data back. In order to get clientId and clientSecret we have to register our app on the official Spotify Developers web site (you won't be charged for this, neither a credit card information will be required). Let's follow these couple of steps:
 
 1. Navigate to [Spotify Developers](https://developer.spotify.com/my-applications/#!/)
 2. Click on the "LOGIN" button. If you do not have an account they will ask you to create one, it´s free :wink:
-3. After the login, click on the **Create an App** button.
+3. After the login, click on the __Create an App__ button.
 
 The following screens might be outdated since Spotify changed its interface recently, but really they don't matter - just follow the steps, you got this!
 
@@ -66,8 +66,8 @@ The following screens might be outdated since Spotify changed its interface rece
 
 You're pretty much given _almost_ empty `starter_code` folder and that's because in the next couple of steps you'll create all the files you need. So far you have some basic setup in `app.js` but that's not quite enough. As you remember, in order to get some packages (including express one) in our app, we have to create `package.json` file. So let's start listing the steps:
 
-1. create `package.json` (or as we can say: let's initialize our project :wink: )
-2. `npm install --save express hbs spotify-web-api-node dotenv`
+1. create `package.json` (or as we can say: let's _initialize_ our project :wink: )
+2. `npm install express hbs spotify-web-api-node dotenv`
 3. inside the `app.js` file, require _spotify-web-api-node_
 
 ```js
@@ -107,8 +107,8 @@ To avoid making our API keys public, we don't want to add and commit them. We'll
 It is imported at the very beginning of `app.js`. All that is left to do is to add your keys in the `.env` file.
 
 ```
-CLIENT_ID=<your clientId goes here>
-CLIENT_SECRET=<your clientSecret goes here>
+CLIENT_ID= your clientId goes here
+CLIENT_SECRET= your clientSecret goes here
 ```
 
 :zap: The `.env` is referred to in the `.gitignore` file so you're safe!
@@ -174,7 +174,7 @@ In order to display the found artists information, create `artists.hbs` file ins
 
 ## Iteration 4 | View Albums
 
-On the `artists.hbs` page we created the `View albums` button/link and the users should be taken to _some other page_ after clicking on it and there be able to see all the albums of that particular artist. **Hint**: the URL should include artist's `id` 🤓 and should change dynamically.
+On the `artists.hbs` page we created the `View albums` button/link and the users should be taken to _some other page_ after clicking on it and there be able to see all the albums of that particular artist. __Hint__: the URL should include artist's `id` 🤓 and should change dynamically.
 
 ```html
 <a href="/albums/someArtistIdGoesHere">View Albums</a>
@@ -184,7 +184,7 @@ So let's create a new page - `albums.hbs` where all the results will be displaye
 
 :zap: Check out the `.getArtistAlbums()` method in the [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) documentation.
 
-**Hint**
+__Hint__:
 
 Your route should look like the following:
 
@@ -202,7 +202,7 @@ This is going good so far so let's finish up with our last iteration.
 
 Make the `View tracks` work on the albums page. This page should take you to a page with a list of all of the tracks on a particular album.
 
-**Note**: :zap: Check out the `.getAlbumTracks()` method in the `spotify-web-api-node` documentation.
+__Note__: :zap: Check out the `.getAlbumTracks()` method in the `spotify-web-api-node` documentation.
 
 A track object comes with a `preview_url`, which is the source for a 30 second preview of a particular song. You can plug this into an HTML [`audio`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag, and it will play the preview.
 
