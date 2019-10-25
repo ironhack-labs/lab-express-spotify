@@ -170,6 +170,7 @@ spotifyApi
 ```
 
 In order to display the found artists information, create `artists.hbs` file inside `views` folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let's move to the next step.
+<br>
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9dc721e76158df1836ef07565b5385c2.png)
 
 ## Iteration 4 | View Albums
@@ -202,7 +203,7 @@ This is going good so far, so let's finish up with our last iteration.
 
 Create the `View tracks` link on the albums page. This link should take you to a page with a list of all of the tracks on a particular album.
 
-__Hint__: The link to the tracks page should have each album's _id_ in it.
+__Hint__: The link to the tracks page should have each album's _id_ in it. <br>
 __Note__: :zap: Check out the `.getAlbumTracks()` method in the `spotify-web-api-node` documentation.
 
 A track object comes with a `preview_url`, which is the source for a 30-second preview of a particular song. You can plug this into an HTML [`audio`](https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio) tag, and it will play the preview.
