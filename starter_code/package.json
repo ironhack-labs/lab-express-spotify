@@ -11,8 +11,10 @@
   "license": "ISC",
   "dependencies": {
     "dotenv": "^8.2.0",
+    "ejs": "^2.7.1",
     "express": "^4.17.1",
-    "hbs": "^4.0.6",
+    "express-ejs-layouts": "^2.5.0",
+    "lru-cache": "^5.1.1",
     "nodemon": "^1.19.4",
     "spotify-web-api-node": "^4.0.0"
   }

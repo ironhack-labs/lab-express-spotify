@@ -1,10 +1,26 @@
 require("dotenv").config();
-
 const express = require("express");
-const hbs = require("hbs");
+const app = express();
+const ejs = require("ejs");
+// const lru = require("lru-cache");
 const port = 3000;
-// require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
+
+const lru = require("lru-cache");
+ejs.cache = new lru(200);
+
+// app.use(express.static(path.join(__dirname, "public")));
+
+// app.set("views", path.join(__dirname, "views"));
+app.set("views", __dirname + "/views");
+app.use(express.static(__dirname + "/public"));
+app.set("view engine", "ejs");
+app.use(require("express-ejs-layouts"));
+
+
+
+
+// require spotify-web-api-node package here:
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -20,13 +36,6 @@ spotifyApi
   .catch(error => {
     console.log("Something went wrong when retrieving an access token", error);
   });
-
-const app = express();
-
-hbs.registerPartials(`${__dirname}/views/components`)
-app.set("view engine", "hbs");
-app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/public"));
 
 // the routes go here:
 
