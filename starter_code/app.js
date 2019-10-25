@@ -37,14 +37,21 @@ app.get("/artists", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artistQuery)
     .then(data => {
-      // console.log("The received data from the API: ", data.body);
-      // res.send(data.body)
       res.render("artists", data.body.artists.items);
-      console.log(data.body.artists.items[0].images[0])
+      console.log(data.body.artists.items[0]);
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     });
+});
+
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId).then(data =>{
+    res.render("albums", data.body.items)
+    console.log(data.body.items)
+  }).catch(err=>{
+    console.log("The error while searching artists occurred: ", err);
+  })
 });
 
 app.listen(`${port}`, () =>
