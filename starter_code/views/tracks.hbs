@@ -1,4 +1,9 @@
 {{#each this}}
-<p>{{this.name}}</p>
-<audio controls="" name="media"><source src="{{this.preview_url}}" type="audio/mpeg"></audio>
+<div class="track">
+  {{#if this.preview_url}}
+  <p>{{this.name}}</p>
+  <audio controls="" name="media">
+    <source src="{{this.preview_url}}" type="audio/mpeg"></audio>
+  {{/if}}
+</div>
 {{/each}}

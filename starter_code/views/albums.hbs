@@ -1,7 +1,11 @@
-{{#each this}}
-<img src="{{this.images.0.url}}" alt="">
-{{this.name}}
-{{#if this.id}}
-<a href="/tracks/{{this.id}}">View Tracks</a>
-{{/if}}
-{{/each}}
+<div class="cards">
+  {{#each this}}
+  {{#if this.id}}
+  <div class="card">
+    <img src="{{this.images.0.url}}" alt="" class="card-img">
+    {{this.name}}
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+  </div>
+  {{/if}}
+  {{/each}}
+</div>

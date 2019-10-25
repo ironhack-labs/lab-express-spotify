@@ -1,9 +1,11 @@
-{{#each this}}
-<div class="artist-card">
-  <img src="{{this.images.0.url}}" alt="">
-  {{this.name}}
+<div class="cards">
+  {{#each this}}
   {{#if this.id}}
-  <a href="/albums/{{this.id}}">View Albums</a>
+  <div class="card">
+    <img src="{{this.images.0.url}}" alt="" class="card-img">
+    {{this.name}}
+    <a href="/albums/{{this.id}}">View Albums</a>
+  </div>
   {{/if}}
+  {{/each}}
 </div>
-{{/each}}

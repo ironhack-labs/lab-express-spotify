@@ -1,6 +1,51 @@
 body {
   margin: 0;
 }
-.artist-card {
-  background-color: red;
+.card {
+  height: 384px;
+  width: 256px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: solid 2px #2c1e30;
+  border-radius: 4px;
+  margin: 24px 0;
+  transition: background-color 0.4s ease;
+}
+
+.card:hover{
+  background-color: aqua;
+}
+
+.card-img {
+  height: 128px;
+  margin: 0 0 24px 0;
+}
+
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.track {
+display: flex;
+margin: 12px 48px;
+justify-content: space-between;
+align-items: center;
+}
+
+.wrapper {
+  background-image: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.3)), url("/images/bg-spotify.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
