@@ -1,0 +1,16 @@
+<div class="cards-container">
+{{#each albums}}    
+
+    <div class="card" >
+        {{!-- <img class="card-img" src="{{this.images}}"> --}}
+  
+        <div class="card-body">
+            <h2 class="card-title">{{this.name}}</h2>
+            {{!-- <span>{{this.tagline}}</span> --}}
+            {{!-- <p class="card-text">{{this.description}}</p> --}}
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
+
+    </div>
+{{/each}}
+</div>

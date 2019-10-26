@@ -1,0 +1,21 @@
+<div class="cards-container">
+{{#each tracks}}    
+
+    <div class="card" >
+        {{!-- <img class="card-img" src="{{this.images}}"> --}}
+  
+        <div class="card-body">
+            <h2 class="card-title">{{this.track_number}}</h2>
+            <h2 class="card-title">{{this.name}}</h2>
+
+            <audio controls  src={{this.preview_url}}>
+                Your browser does not support the <code>audio</code> element.
+            </audio>
+            {{!-- <span>{{this.tagline}}</span> --}}
+            {{!-- <p class="card-text">{{this.description}}</p> --}}
+            {{!-- <a href="/tracks/{{this.id}}">View Tracks</a> --}}
+        </div>
+
+    </div>
+{{/each}}
+</div>
