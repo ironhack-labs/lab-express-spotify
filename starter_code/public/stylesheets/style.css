@@ -36,3 +36,49 @@ input{
     width: 300px;
     height: 20px;
 }
+
+.card{
+    background-color: rgb(88, 85, 85);
+    float:left;
+    width: 300px;
+    height: 370px;
+    margin: 10px;
+}
+
+.card-img{
+    
+    width: 300px;
+    height: 300px;
+}
+
+.card-body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    width:300px;
+    height: 62px;
+    margin: 0px;
+    
+}
+
+.card-title{
+    
+    font-size: 18px;
+    color: #ffffff;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    margin: 0px;
+    
+}
+
+.card-body > a{
+    border-radius: 3px;
+    text-decoration: none;
+    color: #ffffff;
+    background-color: #b60716;
+    padding: 3px;    
+}
+
+.cards-container{
+   width: 1280px;   
+}
