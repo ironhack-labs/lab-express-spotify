@@ -1,0 +1,38 @@
+#back{
+    /* border: 1px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url('/images/background.jpg');
+    height: 790px;    
+}
+
+#form-artist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 200px;
+    background-color: rgba(255, 248, 220, 0.616);
+}
+
+form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 400px;
+}
+
+button{
+    margin-top: 5px;
+    height: 30px;
+    padding: 6px;
+    background: brown;
+    color: cornsilk;
+}
+
+input{
+    width: 300px;
+    height: 20px;
+}
