@@ -1,0 +1,12 @@
+ {{#each items}}
+ 
+ <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{images.0.url}}" onerror="this.src='https://images.clipartlogo.com/files/istock/previews/9422/94222537-compact-cd-disk-dvd-vinyl-record-vector-icon-isolated.jpg'" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+      <p class="card-text"></p>
+      <a href="/albums/{{id}}">View Albums</a>
+    </div>
+  </div>
+
+  {{/each}}
