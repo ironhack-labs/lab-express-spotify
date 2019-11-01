@@ -12,6 +12,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + '/views/partials');
 
 
 const spotifyApi = new SpotifyWebApi({
@@ -45,6 +46,29 @@ app.get('/artists',(req, res) => {
     });
 })
 
+app.get("/albums/:artistId", (req, res, next) => {
+    spotifyApi
+    .getArtistAlbums(`${req.params.artistId}`)
+    .then(data => {
+        //return res.send(data)
+        res.render('albums', data.body)
+    })
+    .catch(err => {
+        console.log("The error while searching albums occurred: ", err);
+    })
+  });
+
+  app.get("/tracks/:albumId", (req, res, next) => {
+    spotifyApi
+    .getAlbumTracks(`${req.params.albumId}`)
+    .then(data => {
+        //return res.send(data)
+        res.render('tracks', data.body)
+    })
+    .catch(err => {
+        console.log("The error while searching albums occurred: ", err);
+    })
+  });
 
 app.get('/',(req, res) => {
     res.render('home')

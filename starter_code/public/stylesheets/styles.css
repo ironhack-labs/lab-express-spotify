@@ -1,0 +1,59 @@
+.cards-container {
+    display: flex;
+    padding: 10% 10%;
+    justify-content: space-around;
+    flex-wrap: wrap
+}
+  
+.cards-container img {
+    object-fit: contain;
+    object-position: center;
+    height: 286px;
+    width: 286px;
+}
+
+.card {
+  margin-bottom: 4%;
+}
+
+.songs-container {
+  padding: 4% 4%;
+  display: flex;
+  flex-direction: column;
+
+}
+.album-title {
+  padding: 2%;
+  margin-bottom: 1%;
+  color: #c3c3c3;
+  background-color: #4a4a4a;
+}
+
+h6 {
+  margin: 0%;
+  margin-block: 0%;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
+  margin-inline: 0%;
+}
+
+figure {
+  margin: 0%;
+  margin-block: 0%;
+  margin-block-end: 0%;
+  margin-block-start: 0%;
+  margin-inline: 0%;
+}
+
+.song-play {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.song-title{
+  padding-left: 2%;
+  margin-bottom: 1%;
+  background-color: #f1f3f4;
+}
