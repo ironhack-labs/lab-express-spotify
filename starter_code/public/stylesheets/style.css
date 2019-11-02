@@ -1,0 +1,23 @@
+.main_wrap{
+  background: url(/images/home_bg.jpg) no-repeat center center;
+  height: 100vh;
+  background-size: cover;
+}
+
+.main_wrap > div { height: 100vh; }
+
+/*form home*/
+.formHome form {
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.61);
+}
+.formHome form .btn {
+  background-color: #1db954;
+  border-radius: 500px;
+  padding: 11px 32px 9px;
+  border-color: #1aa34a;
+}
+.formHome form .btn:hover{
+  background-color: #168d40;
+  border-color: #116e32;
+}
