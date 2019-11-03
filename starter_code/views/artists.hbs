@@ -1,0 +1,33 @@
+{{!-- OPCION 1 
+  EN EL APP.JS SE PASA name: artist.body.artists.items
+  {{#each names}}
+  {{this.name}}
+  {{/each}} --}}
+
+{{!-- OPCION 2
+  EN EL APP.JS SE HACE ESTO
+  res.render('artists', {
+  name: artist.body.artists.items[0].name
+  }) --}}
+
+{{!-- <div class="artist">
+  <img src={{img}}>
+  <h2>{{name}}</h2>
+  <a href="/albums/{{id}}">View Albums</a>
+</div> --}}
+
+<div class="artists">
+  {{#each artists}}
+    <div class="artist">
+      {{#if this.images.0.url}}
+        <img src={{this.images.0.url}} alt="No image available">
+      {{else}}
+        <img src="/images/img-not-available.png" alt="No image available">
+      {{/if}}
+      <div class="artist-album">
+        <h2 class="lbl-name p-3 m-3">{{this.name}}</h2>
+        <a class="btn-view p-3 m-3" href="/albums/{{this.id}}">View Albums</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

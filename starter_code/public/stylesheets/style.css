@@ -1,0 +1,142 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.m-10 {
+  margin: 10px;
+}
+
+.m-3 {
+  margin: 3px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+
+.p-3 {
+  padding: 3px;
+}
+
+html, body {
+  height: 100%;
+  background-color: #669999;
+}
+
+/* HOME PAGE */
+.home {
+  display: flex;
+  background: url('/images/background.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100%;
+}
+
+#home-page {
+  width: 40%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px auto;
+  background-color: rgba(255, 255, 255, 0.5)
+}
+
+#home-page .txt-artist{
+  width: 80%;
+}
+
+#home-page .btn-search {
+  width: 30%;
+  background-color: #ff8080;
+  cursor: pointer;
+}
+
+/* ARTISTS & ALBUMS */
+.artists, .albums {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  height: 100%;
+  width: 80%;
+}
+
+.artist, .album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 33.3%;
+  height: 50%;
+  margin: 10px 0;
+}
+
+.artist img, .album img {
+  height: 80%;
+  width: 70%;
+}
+
+.artist-album, .album-track {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #3d3d5c
+}
+
+.lbl-name {
+  font-weight: bold;
+  font-size: 1rem;
+  color: white;
+  text-shadow: 1px 1px 1px lightyellow;
+}
+
+.btn-view {
+  text-decoration: none;
+  background-color: #00cc66;
+  border-radius: 5px;
+  color: black;
+}
+
+/* TRACKS */
+.tracks-info {
+  display: flex;
+  justify-content: space-between;
+  color: whitesmoke;
+  text-shadow: 1px 1px 1px #33cccc;
+}
+
+.title-info {
+  margin-left: 120px;
+}
+
+.track-info {
+  margin-right: 120px;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background-color: #33cccc;
+  margin-bottom: 8px;
+}
+
+.track h1 {
+  padding-left: 20px;
+}
+
+.track audio {
+  padding-right: 20px;
+}

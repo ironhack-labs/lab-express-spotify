@@ -1,0 +1,15 @@
+<div class="albums">
+  {{#each albums}}
+    <div class="album">
+      {{#if this.images.0.url}}
+        <img src={{this.images.0.url}} alt="No image available">
+      {{else}}
+        <img src="/images/img-not-available.png" alt="No image available">
+      {{/if}}
+      <div class="album-track">
+        <h2 class="lbl-name p-3 m-3">{{this.name}}</h2>
+        <a class="btn-view p-3 m-3" href="/tracks/{{this.id}}">View tracks</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

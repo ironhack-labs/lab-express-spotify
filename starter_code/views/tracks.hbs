@@ -1,0 +1,16 @@
+<div class="tracks-info">
+  <h1 class="title-info">Title</h1>
+  <h1 class="track-info">Track</h1>
+</div>
+
+<div class="tracks">
+  {{#each tracks}}
+  <div class="track">
+    <h1>{{this.name}}</h1>
+    <audio controls="controls" controlsList="nodownload" preload="auto">
+      <source src={{this.preview_url}} type="audio/mpeg">
+      Your browser does not support the <code>audio</code> element.
+    </audio>
+  </div>
+  {{/each}}
+</div>
