@@ -1,7 +1,9 @@
-<form action="/artists">
-  <div class="form-group">
-    <label for="InputArtist">Found an artist</label>
-    <input name="artist_name" type="artist" class="form-control" id="InputArtist" aria-describedby="emailHelp" placeholder="Write the artist">
-  </div>
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+<div class="search-background">
+    <form action="/artists">
+      <div class="form-row form-container">
+          <div class="form-tip col-3"><input name="artist_name" type="artist" class="form-control" id="InputArtist" aria-describedby="emailHelp" placeholder="Artist"></div>
+          <div class="form-tip"><button type="submit" class="btn btn-success">Search for an Artist</button></div>
+      </div>
+    </form>
+</div>
+
