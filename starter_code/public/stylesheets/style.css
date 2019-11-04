@@ -1,3 +1,18 @@
+/*generales*/
+body{
+  color: #b3b3b3;
+  font-family: spotify-circular,spotify-circular-cyrillic,spotify-circular-arabic,spotify-circular-hebrew,Helvetica Neue,Helvetica,Arial,Hiragino Kaku Gothic Pro,Meiryo,MS Gothic,sans-serif;
+  min-height: 100vh;
+  background-color: rgba(0,0,0,.8);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsla(0,0%,100%,.3);
+}
+::-webkit-scrollbar {
+  width: 16px;
+}
+
 .main_wrap{
   background: url(/images/home_bg.jpg) no-repeat center center;
   height: 100vh;
@@ -8,6 +23,7 @@
 
 /*form home*/
 .formHome form {
+  width: 100%;
   padding: 40px;
   background: rgba(0, 0, 0, 0.61);
 }
@@ -21,3 +37,42 @@
   background-color: #168d40;
   border-color: #116e32;
 }
+
+/*artist - albums*/
+.card-columns{ column-count: 4;}
+.card {
+  text-align: center;
+  background: #181818;
+  border: none;
+  -webkit-box-shadow: 0 0 10px rgba(0,0,0,.3);
+  box-shadow: 0 0 10px rgba(0,0,0,.3);
+  transition: none 33ms cubic-bezier(.3,0,.7,1);
+  transition-property: transform,-webkit-transform;
+  cursor: pointer;
+  border-radius: 0;
+}
+.card .card-img-top:hover{
+  filter: brightness(.3);
+}
+.card-title{
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: .015em;
+  font-weight: 700;
+  color: #fff;
+  text-transform: none;
+}
+.card a{
+  color: #fff;
+  opacity: .6;
+  font-weight: 600;
+}
+.card a:hover { opacity: 1;}
+
+/*tracks*/
+.alert:hover{
+  background-color: hsla(0,0%,100%,.1);
+  cursor: pointer;
+}
+audio{ width: 100%;}
+

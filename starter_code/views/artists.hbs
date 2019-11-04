@@ -1,15 +1,15 @@
 <div class="container">
   <div class="row">
-    <div class="artistsSearch col-12">
+    <div class="artistsSearch col-12 mb-4 pb-4">
       {{> artistSearch}}
     </div>
     
-    <hr/>
-</div>
-    <div class="card-columns">
-      {{#each artists as |artist|}} 
-        {{>artistCard artist}}
-      {{/each}}
+    <div class="col-12">
+      <div class="card-columns">
+        {{#each artists as |artist|}} 
+          {{>cardDefault artist}}
+        {{/each}}
+      </div>
     </div>
-  
+  </div>
 </div>

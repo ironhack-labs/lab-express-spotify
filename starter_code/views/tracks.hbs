@@ -1,0 +1,27 @@
+<div class="container">
+  <div class="row justify-content-between align-items-center">
+    <div class="artistsSearch col-12 mb-4 pb-4">
+      {{> artistSearch}}
+    </div>
+
+    <h4>{{this.artists.name}}</h4>
+  
+    {{#each tracks as |track|}}
+      <div class="col-5 mb-4 alert">
+        <h4>{{this.name}}</h4>
+        <hr/>
+
+        {{#if this.preview_url}}
+          <audio controls>
+            <source src="{{this.preview_url}}" type="audio/ogg">
+            <source src="{{this.preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+          </audio>
+        {{else}}
+          preview not avalible
+        {{/if}}
+      </div> 
+    {{/each}}
+      
+    </div>
+</div>
