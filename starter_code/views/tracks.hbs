@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row header-row">
+    <span class="col-lg-8">{{ albums.name }}</span>
+  </div>
+
+  {{#each tracks}}
+    <div class="card d-flex">
+      <div class="row card-body d-flex">
+        <h5 class="card-title col-8 align-self-center">{{ this.name }}</h5>
+        <div class="col-lg-4 justify-content-end">
+          {{#if this.preview_url}}
+            <audio controls="" name="media"><source src="{{ this.preview_url }}" type="audio/mpeg"></audio>
+          {{/if}}
+        </div>
+      </div>
+    </div>
+  {{/each}}

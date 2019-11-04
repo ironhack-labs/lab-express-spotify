@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    {{#each albums}}
+      <div class="col-lg-3 album-container">
+        {{#if this.images.[0]}}
+          <img src="{{ this.images.[0].url }}" alt="" class="album-img">
+        {{else}}
+          <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="" class="album-img">
+        {{/if}}
+        <div class="album-info-container">
+          <a href="/tracks/{{ this.id }}"><p>{{ this.name }}</p></a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

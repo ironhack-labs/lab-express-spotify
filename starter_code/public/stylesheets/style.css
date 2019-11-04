@@ -1,0 +1,148 @@
+
+/* Global */
+* {
+  font-family: 'Montserrat', sans-serif;
+}
+
+body {
+  margin: 0;
+  background-image: url("/images/gradient.jpg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+/* Text */
+h1 {
+  color: #fff;
+  font-weight: 700;
+  margin-top: 7em;
+  height: 1.5em;
+}
+
+h3 {
+  color: #fff;
+  font-weight: 600;
+}
+
+/* Search */
+.home-search {
+  margin-left: 0.7em;
+  border-radius: 35;
+  color: white;
+  font-weight: bold;
+  text-transform: uppercase;
+  background-color: #1cb04a;
+  border: 1px solid #1cb04a;
+  width: 8em;
+  height: 3em;
+}
+
+.home-search:hover, .home-search:active {
+  color: #fff;
+  background-color: #67d36e;
+  border: 1px solid #67d36e;
+}
+
+.item-list {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+#search-form {
+  margin-top: 1em;
+}
+
+.btn, .btn-primary {
+  border-radius: 35px;
+}
+
+.form-control {
+  border-radius: 35px;
+  width: 15em;
+  height: 3em;
+}
+
+.home-input {
+  width: 15em;
+  height: 3em;
+}
+
+.nav-item {
+  font-weight: 800;
+}
+
+/* Albums */
+.album-info-container {
+  background-color: transparent;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.album-info-container p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 1em;
+}
+
+.album-container {
+  padding: 40px 40px;
+}
+
+.album-img {
+  width: 100%;
+}
+
+/* Artists */
+.artist-container {
+  padding: 40px 40px;
+}
+
+.artist-img {
+  width: 100%;
+  border-radius: 100px;
+}
+
+.artist-info-container {
+  background-color: transparent;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artist-info-container p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+  padding-top: 1em;
+}
+
+.artist-info-container a:hover {
+  text-decoration: white underline;
+}
+
+.header-row {
+  background-color: #a5a5a5;
+  margin-top: 40px;
+  margin-bottom: 40px;
+  padding: 30px 15px;
+  color: #F6F6F6;
+  font-size: 1.5em;
+}
+
+/* Tracks */
+.card {
+  margin-bottom: 1.5em;
+  border-radius: 8px;
+}
+
+.card-title {
+  margin-bottom: 0px;
+  font-weight: 600;
+}
+
+.album-info-container a:hover {
+  text-decoration: white underline;
+}
+
