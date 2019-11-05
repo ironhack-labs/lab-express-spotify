@@ -8,7 +8,7 @@ body {
   margin: 0;
   background-image: url("/images/gradient.jpg");
   background-size: 100% 100%;
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   height: 100vh;
 }
 
@@ -123,7 +123,6 @@ h3 {
 }
 
 .header-row {
-  background-color: #a5a5a5;
   margin-top: 40px;
   margin-bottom: 40px;
   padding: 30px 15px;
