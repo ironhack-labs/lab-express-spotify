@@ -102,6 +102,9 @@ button a{
 /*-------------- Albums --------------*/
 
 
+.cards-container{
+    text-align: center;
+}
 
 .card{
     width: 30%;
