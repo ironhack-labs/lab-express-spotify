@@ -13,7 +13,6 @@ app.use(express.static(__dirname + '/public'));
 app.use(bodyParser.urlencoded({ extended: true }));
 hbs.registerPartials(__dirname + '/views/partials');
 
-
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -40,7 +39,12 @@ app.post('/artists/', (req, res, next) => {
   spotifyApi
     .searchArtists(req.body.artistName)
     .then(data => {
-      res.render('artists', { artists: data.body.artists.items} );
+      res.render('artists', { 
+        artists: data.body.artists.items,
+        albums: true
+      });
+
+      console.info(req.path)
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
@@ -52,7 +56,7 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(data => {
-      res.render('albums', {albums: data.body.items});
+      res.render('albums', { albums: data.body.items });
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
