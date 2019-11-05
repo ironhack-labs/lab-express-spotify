@@ -1,0 +1,46 @@
+.home-container {
+  background-image: url(../pexels-photo-167605.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form-wrapper form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.card-body {
+  background-color: dimgrey;
+}
+
+.cards-container {
+  height: 350px;
+  width: 250px;
+}
+
+.cards-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 250px;
+}
+
+.navbar {
+  height: 100px;
+  background-color: dimgray;
+  color: white;
+}
