@@ -51,6 +51,12 @@ app.post('/artists/', (req, res, next) => {
   });
 });
 
+hbs.registerHelper('url', () =>{
+  if(req.path.includes('artists')){
+    return true
+  }
+})
+
 //albums
 app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
