@@ -1,0 +1,184 @@
+.index-back{
+    background-image: url("/images/concert.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    width: 100%;
+    height: 100vh;
+}
+
+.index-form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.index-form-container button{
+    width: 100%;
+    background-color: red;
+    color: #fff;
+    border: none;
+    padding: 20px 0px;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.index-form-container input{
+    width: 100%;
+    color: #000;
+    border: none;
+    padding: 20px 0px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+/*-------------- Artists --------------*/
+
+
+.music-card{
+    width: 30%;
+    display: inline-block;
+    padding: 1.5%;
+    text-align: center;
+}
+
+.artist-image{
+    position: relative;
+    text-align: center;
+    height: 300px;
+    overflow: hidden;
+}
+
+.artist-image img{
+    background-size: cover;
+    /* width: 100%; */
+    height: auto;
+}
+
+.artist-name{
+    text-align: center;
+    font-family: arial;
+    font-size: 15px;
+    padding: 5%;
+}
+
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: red;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 11px system-ui;
+    padding: 10px 50px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: red;
+    border-image: initial;
+}
+
+button a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+
+/*-------------- Albums --------------*/
+
+
+
+.card{
+    width: 30%;
+    display: inline-block;
+    padding: 1.5%;
+    text-align: center;
+}
+
+.card img{
+    width:  100%;
+}
+
+.card-title{
+    text-align: center;
+    font-family: arial;
+    font-size: 14px;
+    padding: 5%;
+}
+
+.card-body a{
+    background-color: red;
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: uppercase;
+    font-family: arial;
+    padding: 10px 50px;
+}
+
+
+/*-------------- Tracks --------------*/
+
+
+
+.tracks-container{
+    /* position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: arial;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 50%; */
+
+    position: absolute;
+    top: 40%;
+    /* left: 50%; */
+    /* transform: translate(-50%, -50%); */
+    font-family: arial;
+    font-size: 14px;
+    text-transform: uppercase;
+    width: 100%;
+    display: inline-block;
+    text-align: center;
+}
+
+.track-artist-name-container{
+    float: left;
+    padding: 1%;
+    width: 20%;
+}
+
+.track-name-container{
+    float: left;
+    padding: 1%;
+    width: 20%;
+}
+
+.track-number{
+    float: left;
+    padding: 1%;
+    width: 20%;
+}
+
+.track-preview{
+    float: left;
+    margin-top: -20px;
+    padding: 1%;
+    width: 20%;
+}
