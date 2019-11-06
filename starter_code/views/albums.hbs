@@ -1,14 +1,26 @@
 <div class="container">
   <div class="row">
-    <div class="artistsSearch col-12">
+    <div class="artistsSearch col-12 mb-4 pb-4">
       {{> artistSearch}}
     </div>
     
-    <hr/>
-  </div>
-    <div class="card-columns">
-      {{#each albums as |album|}} 
-        {{>cardDefault album}}
-      {{/each}}
+    <div class="col-12">
+      <div class="card-columns">
+        {{#each albums as |album|}}
+          <div class="card"> 
+            {{#if this.images.0.url}}
+              <img src="{{this.images.0.url}}" class="card-img-top">
+            {{else}}
+              <img src="/images/preview.png" class="card-img-top">
+            {{/if}}
+
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+              <a href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+          </div>
+        {{/each}}
+      </div>
     </div>
+  </div>
 </div>

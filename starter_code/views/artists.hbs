@@ -6,8 +6,19 @@
     
     <div class="col-12">
       <div class="card-columns">
-        {{#each artists as |artist|}} 
-          {{>cardDefault artist}}
+        {{#each artists as |artist|}}
+          <div class="card">
+            {{#if this.images.0.url}}
+              <img src="{{this.images.0.url}}" class="card-img-top">
+            {{else}}
+              <img src="/images/preview.png" class="card-img-top">
+            {{/if}}
+
+            <div class="card-body">
+              <h5 class="card-title">{{this.name}}</h5>
+              <a href="/albums/{{this.id}}">View Albums</a>
+            </div>
+          </div>
         {{/each}}
       </div>
     </div>

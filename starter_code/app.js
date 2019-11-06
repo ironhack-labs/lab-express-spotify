@@ -39,23 +39,12 @@ app.post('/artists/', (req, res, next) => {
   spotifyApi
     .searchArtists(req.body.artistName)
     .then(data => {
-      res.render('artists', { 
-        artists: data.body.artists.items,
-        albums: true
-      });
-
-      console.info(req.path)
+      res.render('artists', { artists: data.body.artists.items });
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
   });
 });
-
-hbs.registerHelper('url', () =>{
-  if(req.path.includes('artists')){
-    return true
-  }
-})
 
 //albums
 app.get("/albums/:artistId", (req, res, next) => {

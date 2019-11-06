@@ -70,9 +70,14 @@ body{
 .card a:hover { opacity: 1;}
 
 /*tracks*/
+.alert{
+  transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out,box-shadow .15s ease-in-out;
+  border: 1px solid rgb(61, 61, 61);
+}
 .alert:hover{
   background-color: hsla(0,0%,100%,.1);
   cursor: pointer;
+  color: white;
 }
 audio{ width: 100%;}
 
