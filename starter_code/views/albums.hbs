@@ -1,12 +1,12 @@
 <div class="cards-container">
-    {{#each artistsObj}}
+    {{#each albumsObj}}
     <div class="card" style="width: 33.333%;">
         <div class="card-inner">
             <img class="card-img-top" src="{{this.images.0.url}}"
                 onerror="this.onerror=null; this.src='/images/bunchOfBananas.jpg'" alt="{{name}}">
             <div class="card-body">
                 <h5 class="card-title">{{name}}</h5>
-                <a href="/albums/{{this.id}}">View Albums</a>
+                <a href="/albumTracks/{{this.id}}">View Tracks</a>
             </div>
         </div>
     </div>
