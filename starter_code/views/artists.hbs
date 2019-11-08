@@ -1,0 +1,25 @@
+<div>
+    {{#each output}}
+    <p>
+        {{name}}
+    </p>
+    {{#each images}}
+    {{#if @first}}
+    <img src={{url}}>
+       
+
+    {{/if}}
+    {{/each}}
+
+
+
+    <a href="/albums/{{id}}">View Albums</a>
+    
+    {{/each}}
+
+ 
+
+
+</div>
+
+{{!-- {{uri}} --}}
