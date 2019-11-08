@@ -1,0 +1,12 @@
+{{#each tracks}}
+<div class="card">
+  <audio controls>
+
+  <source src="{{preview_url}}">
+  </audio>
+
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+    </div>
+</div>
+{{/each}}
