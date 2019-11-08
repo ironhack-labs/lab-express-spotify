@@ -1,0 +1,62 @@
+nav a {
+  font-family: "Manjari", sans-serif;
+}
+
+/* Index */
+
+#background {
+  height: 90vh;
+  width: 100%;
+  background-image: url("https://images.unsplash.com/photo-1429962714451-bb934ecdc4ec?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-form {
+  display: flex;
+  flex-direction: row;
+  width: 800px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.index-form input{
+  width: 500px; 
+  height: 50%;
+}
+.index-form button{
+  width: 200px; 
+  height:50%;
+}
+
+/* Cards */
+
+.text-center{
+  font-family: "Manjari", sans-serif;
+
+}
+
+.cards-bg{
+  height: 100%;
+  background-color:#1DB954
+}
+
+.container{
+  padding-top: 50px; 
+}
+
+.card-img-top{
+  height:75%;
+  width: 100%
+}
+
+/* Tracks */
+
+.tracks-bg{
+  background-color:#1DB954
+}

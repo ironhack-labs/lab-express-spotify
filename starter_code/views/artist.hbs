@@ -1,0 +1,27 @@
+<div class="cards-bg">
+<div class="container">
+  <div class="row">
+    {{#each artist}}
+    <div class="col-4">
+
+      {{#if this.images.0.url}}
+      <a href="/albums/{{this.id}}">
+        <img src="{{this.images.0.url}}" alt="{{this.name}}" class="card-img-top img-thumbnail">
+      </a>
+      {{else}}
+      <a href="/albums/{{this.id}}"><img
+          src="https://www.saga.co.uk/contentlibrary/saga/publishing/verticals/money/personal-finance/making-money/selling-vinyl-shutterstock-234267241.jpg"
+          alt="Image not available" class="card-img-top img-thumbnail">
+      </a>
+      {{/if}}
+      <div class="card-body text-center text-dark font-weight-bold">
+        <a href="/albums/{{this.id}}" class="card-link text-center">
+          <h3 class=" text-center text-dark font-weight-bold">{{this.name}}</h3>
+        </a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+</div>
