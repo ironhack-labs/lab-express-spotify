@@ -1,0 +1,12 @@
+<div class="card" style="width: 33.333%;">
+
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}} {{!-- {{this.lastName}} --}}</h5>
+        {{!--        <p class="card-text">{{this.team}}</p> --}}
+        <a href="albums/{{this.name}}">
+            <img class="card-img-top" src="{{this.images.[0].url}}" alt="albumImage">
+        </a>
+        {{!--   <button class="btn" action="submit">View Albums!</button> --}}
+        <a class="btn" href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+</div>

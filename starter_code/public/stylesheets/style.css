@@ -1,0 +1,168 @@
+@import url("https://fonts.googleapis.com/css?family=Signika&display=swap");
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Signika", sans-serif;
+}
+
+body {
+  background-color: rgb(34, 34, 34);
+}
+
+.bgImageHomeBG {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/hanny-naibaho-aWXVxy8BSzc-unsplash.jpg");
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  filter: grayscale();
+  position: absolute;
+  z-index: 0;
+}
+.bgImageHome {
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  z-index: 2;
+}
+
+.bgImageHome form {
+  height: 400px;
+  width: 600px;
+  border-radius: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 100px 30px;
+  box-shadow: 5px 5px 10px rgb(58, 58, 58);
+}
+
+.bgImageHome input {
+  height: 50px;
+  width: 70%;
+  font-size: 1.5em;
+  padding: 0 30px;
+  color: rgb(44, 44, 44);
+}
+
+.bgImageHome button {
+  height: 50px;
+  width: 70%;
+  color: white;
+  font-size: 1.5em;
+  background: rgb(5, 173, 0);
+  background: linear-gradient(
+    180deg,
+    rgb(65, 182, 61) 0%,
+    rgb(2, 116, 12) 100%
+  );
+  border-radius: 10px;
+}
+.bgImageHome button:hover {
+  background: rgb(3, 88, 0);
+  background: linear-gradient(
+    180deg,
+    rgb(95, 221, 91) 0%,
+    rgb(32, 196, 48) 100%
+  );
+  /*   background: linear-gradient(0deg, rgba(5,173,0,1) 0%, rgba(0,85,28,1) 82%, rgba(0,40,3,1) 100%); */
+}
+
+.cards-container {
+  display: flex;
+  padding: 10% 10%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  color: white;
+  font-style: none;
+  text-decoration: none;
+}
+
+.card-body {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  height: 30vw;
+  margin: 30px;
+  /*  width: 100%; */
+}
+
+.card-body h5 {
+  font-size: 1em;
+  /*   width: 100%; */
+  word-break: keep-all;
+  text-align: center;
+}
+
+/*   .cards-container img {
+    object-fit: cover;
+    object-position: center;
+    height: 100px;
+  } */
+
+.card-img-top {
+  object-fit: cover !important;
+  object-position: center !important;
+  height: 20vw !important;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+
+a.btn {
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  padding: 10px;
+  background-color: grey;
+  text-align: center;
+  border-radius: 6px;
+  box-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
+a.btn:hover {
+  background-color: rgb(56, 56, 56);
+}
+
+.card-body {
+  padding: 20px 0;
+}
+
+.card {
+  margin: 20px 0;
+  height: 30vw;
+}
+
+.cards-container-tracks {
+  height: 100vh;
+  width: 100vw;
+  margin-top: 30px;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.tracks-body {
+  font-size: 1.5em;
+  margin-top: 15px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 15vh;
+}

@@ -1,0 +1,14 @@
+<div class="cards-container">
+    {{#each artistInfo}}
+    {{!--     <div class="card" style="width: 33.333%;">
+        <img class="card-img-top" src="{{this.photo}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}} {{this.lastName}}</h5>
+            <p class="card-text">{{this.team}}</p>
+        </div>
+    </div> --}}
+
+    {{>artistCard}}
+    {{!-- partialCall - for that we need to alocate the partials within a folder and reference the url in app.js --}}
+    {{/each}}
+</div>
