@@ -54,23 +54,37 @@ app.get("/artists", (req, res) => {
 
 app.get("/albums/:artistId", (req, res, next) => {
     const Id = req.params.artistId;
-    console.log("here")
+
     spotifyApi.getArtistAlbums(Id)
         .then(data => {
             let albums = data.body.items
 
-
-            console.log("WHAT THE ACTUAL FUCK,  ")
-            return res.render("index.hbs")
-            // res.render("albums.hbs", {
-            //     albums
-            // })
+            res.render("albums.hbs", {
+                albums
+            })
         })
         .catch(err => {
             console.log("The error while searching albums occurred: ", err);
         });
 })
 
+app.get("/tracks/:albumId", (req, res, next) => {
+    const albumId = req.params.albumId;
+
+    spotifyApi.getAlbumTracks(albumId)
+        .then(data => {
+            //res.send(data)
+            let track = data.body.items
+
+            res.render("tracks.hbs", {
+               track
+            })
+
+        })
+        .catch(err => {
+            console.log("The error while searching tracks occurred: ", err);
+        });
+})
 
 
 
