@@ -1,0 +1,13 @@
+<div class="cards-container d-flex flex-wrap  ">
+  {{#each artistList}}
+  <div class="card " style="width: 30%;">
+    <img class="card-img-top" src="{{images.[0].url}}" alt="">
+    <div class="card-body">
+      <h5 class="card-title">{{name}}</h5>
+
+      <a class='btn btn-danger' href="/albums/{{id}}">View Albums</a>
+    </div>
+  </div>
+  {{!-- {{> artistCard this}} --}}
+  {{/each}}
+</div>

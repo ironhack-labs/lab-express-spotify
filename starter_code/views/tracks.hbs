@@ -1,0 +1,15 @@
+<div>
+  {{#each tracks}}
+  <div class='container-fluid row tracks'>
+    <div class='col-7'>
+      <p>{{name}}</p>
+    </div>
+    <div class='col-5'>
+      <audio controls src="{{preview_url}}">
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </div>
+  </div>
+  {{/each}}
+</div>
