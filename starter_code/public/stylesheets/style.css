@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 10px;
+}
+
+html {
+  min-height: 100%;
+}
+
+/* landing page */
+
+body {
+  font-family: Montserrat, sans-serif;
+  min-height: 100vh;
+  max-width: 100%;
+}
+
+.container {
+  background-image: url("/images/142069-full-size-concert-background-2200x1650-for-meizu.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box > * {
+  font-size: 1.6rem;
+  margin: 50vh auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0.5em 5em;
+  background: rgba(200, 200, 200, 0.5);
+}
+
+form > * {
+  font-size: 1.6rem;
+  padding: 0.8em 0.5em;
+  margin: 2em;
+}
+
+.search-btn {
+  background: rgb(209, 94, 17);
+  color: #EEE;
+  
+}
+
+/* cards */
+
+.card-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.card {
+  font-size: 1.4rem;
+  max-width: 30%;
+  margin: 2em;
+  background: rgba(33, 33, 33, 0.7);
+  color: #EEE;
+  display: flex;
+  flex-direction: column;
+}
+
+.card > * {
+  margin: 1em auto;
+}
+
+.card h2 {
+  margin: 1em 3em;
+  text-align: center;
+}
+
+.card a {
+  color: #EEE;
+  background: rgb(209, 94, 17);
+  padding: 1.3rem 2.6rem;
+  margin: 1em auto;
+}

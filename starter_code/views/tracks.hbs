@@ -1,0 +1,15 @@
+<div>
+  <div class="title-bar">
+    <h1>Title</h1>
+    <h1>Listen</h1>
+  </div>
+  <div>
+    {{#each items}}
+    <div>
+      <h1>{{name}}</h1>
+      <audio controls>
+        <source src="{{preview_url}}" type="">
+      </audio>
+      {{/each}}
+    </div>
+  </div>
