@@ -1,0 +1,87 @@
+* {
+  margin: 0;
+}
+
+.home-container {
+  height: 100vh;
+  background-image: url("/images/concert-background.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.image-container {
+  height: 190px;
+  overflow: hidden;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home-form {
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  cursor: pointer;
+}
+
+.home-search:hover,
+.home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.artist-container {
+  padding: 10px 40px;
+}
+
+.artist-img {
+  width: 100%;
+}
+
+.artist-info-container {
+  background-color: #4d4d4d;
+  text-align: center;
+  padding-bottom: 10px;
+}
+
+.artist-info-container p {
+  color: #fff;
+  font-size: 18px;
+  margin: 0;
+}
+
+.artist-info-container a {
+  color: #fff;
+  font-size: 12px;
+  background-color: #f86967;
+  border-radius: 5px;
+  padding: 4px 10px;
+}
+
+.tracks-header {
+  background-color: #3d3d3d;
+  color: #f8f8f8;
+  font-weight: bold;
+  padding: 1rem 0;
+}

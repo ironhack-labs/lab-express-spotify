@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        {{#each albums}}
+        <div class="col-lg-4 artist-container">
+            {{#if images}}
+            {{#each images}}
+            {{#if @first}}
+            <img src="{{url}}" alt="{{name}}" class="artist-img">
+            {{/if}}
+            {{/each}}
+            {{else}}
+            <img src="/images/placeholder-image.jpg" alt="{{name}}" class="artist-img">
+            {{/if}}
+            <div class="artist-info-container">
+                <p>{{name}}</p>
+                <a href="/tracks/{{ id }}">View Tracks</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="tracks-container">
+  <div class="tracks-header mb-3">
+    <div class="container">
+      <div class="row h4 mb-0">
+        <div class="col-7">Title</div>
+        <div class="col-5 text-center">Listen</div>
+      </div>
+    </div>
+  </div>
+  <div class="container">
+    {{#each tracks}}
+    <div class="row mb-2">
+      <div class="align-self-center col-7">
+        <p>{{name}}</p>
+      </div>
+      <div class="col-5 text-center">
+        <audio src="{{preview_url}}" controls>
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
