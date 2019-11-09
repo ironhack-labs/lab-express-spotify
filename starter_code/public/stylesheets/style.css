@@ -21,7 +21,7 @@ body {
 }
 
 .container {
-  background-image: url("/images/142069-full-size-concert-background-2200x1650-for-meizu.jpg");
+  background-image: url("/images/shutterstock_223200862.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   display: flex;
@@ -70,6 +70,10 @@ form > * {
   flex-direction: column;
 }
 
+.card img {
+  max-width: 100%;
+}
+
 .card > * {
   margin: 1em auto;
 }
@@ -84,4 +88,46 @@ form > * {
   background: rgb(209, 94, 17);
   padding: 1.3rem 2.6rem;
   margin: 1em auto;
+}
+
+/* tracks page */
+
+.title-bar {
+  background: #4A4A4A;
+  color: #A29383;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.title-bar h1 {
+  margin: 1em 4em;
+}
+
+.tracks-container {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+
+.track {
+  display: flex;
+  margin: 2px 0;
+  padding: 1em;
+  background: #DDD;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #222;
+}
+
+.track h1 {
+  font-weight: 500;
+  max-width: 70%;
+  margin-right: 1em;
+}
+
+.track audio {
+  min-width: 25%;
+  max-width: 30%;
 }
