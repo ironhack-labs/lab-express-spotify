@@ -7,9 +7,14 @@
     {{#each items}}
     <div class="track">
       <h1>{{name}}</h1>
+
+      {{#if preview_url}}
       <audio controls>
         <source src="{{preview_url}}" type="">
       </audio>
+      {{else}}
+      <h1>No preview available</h1>
+      {{/if}}
     </div>
     {{/each}}
   </div>
