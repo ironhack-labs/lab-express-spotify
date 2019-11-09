@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+</head>
+
+<body class="container-fluid">
+    <div class="tracksHeader row">
+        <h1 class="headerTitle">Title</h1>
+        <h1 class="headerTitle">Listen</h1>
+    </div>
+    {{#each tracksArr}}
+    <div class="trackBlock row">
+        <h2 class="trackTitle">{{this.name}}</h2>
+        <audio controls src="{{this.preview_url}}" class="trackControls">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+    </div>
+    {{/each}}
+</body>
+
+</html>
