@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: uns;
+}
+
+html {
+    font-size: 18px;
+}
+
+body {
+    height: 100vh;
+    background-image: url("../images/background.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    height: 100vh;
+}
+
+.content-container {
+    background-color: rgb(40,41, 35, 0.8);
+    border-radius: 7px;
+    border: 2px solid #1DB954;
+}
+
+.search-div {
+    padding: 10vh 10vw;
+    margin-top: 33vh;
+}
+
+.search-div input {
+    padding: 1vh 1vw;
+    border-radius: 7px;
+    border: none;
+}
+
+input[type=submit] {
+    background-color: #1DB954;
+    border-radius: 7px;
+    border: none;
+    color: white;
+    font-weight: bolder;
+}
+
+.artists-container {
+    width: 80vw;
+    margin: 15vh 0;
+    padding: 5vh 2vw;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#right-column {
+    text-align: center;
+}
+
+.artists-card {
+    height: 30vh;
+    width: 10vw;
+    background-color: rgb(77,77,77);
+    margin: 2vh 2vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.title {
+    font-size: 0.8rem;
+    color: white;
+    flex-grow: 1;
+    font-weight: normal;
+    margin-top: 0.5vh;
+    padding-left: 0.5vw;
+}
+
+.title-img {
+    width: 100%;
+    height: auto;
+}
+
+.cta-button {
+    font-size: 0.7rem;
+    text-align: center;
+    padding: 0.5vh 0;
+    width: 100%;
+    background-color: rgb(223,112,107);
+    color: black;
+    font-weight: bold;
+}
+
+table {
+    width: 60vw;
+    margin: 15vh 0;
+}
+
+td {
+    padding: 1vh 0;
+}
+
+
+.title-text {
+    padding-left: 1vw;
+    color: white
+}
+
+.title-preview {
+    text-align: right;
+    padding-right: 2vw;
+}

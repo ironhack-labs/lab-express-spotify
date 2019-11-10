@@ -1,0 +1,21 @@
+<table class="content-container">
+    <tr>
+        <th class="title-text">Title</th>
+        <th id="right-column" class="title-text">Listen</th>
+    </tr>
+    {{#each tracks}}
+        <tr>
+            <td class="title-text">{{ this.name }}</td>
+            {{#if this.preview_url}}
+                <td class="title-preview">
+                    <audio controls preload="none">
+                        <source src="{{ this.preview_url }}" type="audio/mp3">
+                    </audio>
+                </td>
+            {{else}}
+                <td class="title-text">No preview available.</td>
+            {{/if}}
+        </tr>
+    {{/each}}
+</table>
+
