@@ -1,0 +1,14 @@
+<div id="track-container">
+    {{#each items}}
+    <div>
+        <div id="track-and-name">
+            <h1>{{track_number}}.</h1>
+            <h1>{{name}}</h1>   
+        </div>
+        
+
+        <audio controls src="{{preview_url}}"></audio>
+
+    </div>
+    {{/each}}
+</div>

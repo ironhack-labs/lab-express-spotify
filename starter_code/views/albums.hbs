@@ -1,0 +1,16 @@
+<div class="d-flex flex-wrap justify-content-between pl-2 pr-2">
+    {{#each items}}
+    <div class="card ml-2 mr-2 mt-2 mb-2" style="width: 18rem;">
+    <img src={{images.[0].url}} class="card-img-top" onerror="this.src='https://images.clipartlogo.com/files/istock/previews/9422/94222537-compact-cd-disk-dvd-vinyl-record-vector-icon-isolated.jpg'" alt="Card image cap">
+    <div class="card-body text-center">
+        <h5 class="card-title">{{name}}</h5>
+        {{!-- {{LINEA DE ABAJO IMPORTANTE----> BUSCAR POR ID CADA OBJETO}} --}}
+        <form action="/tracks/{{id}}"> 
+            <button type="submit" class="btn btn-danger btn-sm text-white mr-3">
+                View Tracks
+            </button>
+        </form>
+    </div>
+    </div>
+    {{/each}}
+</div>
