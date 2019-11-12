@@ -1,0 +1,21 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "hbs": "^4.0.6",
+    "nodemon": "^1.19.4",
+    "spotify-web-api-js": "^1.2.0",
+    "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "dev": "DEBUG=starter_code:* nodemon -e hbs,js,css app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}
