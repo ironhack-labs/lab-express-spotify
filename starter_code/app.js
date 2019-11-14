@@ -36,6 +36,28 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/albums/:id", (req, res) => {
+    spotifyApi
+    .getArtistAlbums(req.params.id)
+    .then(data=>{
+        let albumArr = data.body.items.map(album=>{
+        
+            let newAlbum ={
+                id: album.id,
+                imageUrl: album.images[0] ? album.images[0].url : `https://cdn3.iconfinder.com/data/icons/music-and-audio-1/26/music-audio-1027-512.png`,
+                name: album.name,
+                album: true
+            }
+            return newAlbum;
+      });
+      res.render("albums", { albumArr });
+    })
+    .catch(err => {
+        console.log("The error while searching albums occurred: ", err);
+      });
+    
+});
+
 app.post("/artists", (req, res) => {
 
     spotifyApi
@@ -48,7 +70,8 @@ app.post("/artists", (req, res) => {
             let newArtist ={
                 id: artist.id,
                 imageUrl: artist.images[0] ? artist.images[0].url : `https://cdn3.iconfinder.com/data/icons/music-and-audio-1/26/music-audio-1027-512.png`,
-                name: artist.name
+                name: artist.name,
+                artist: true
             }
             return newArtist;
       });

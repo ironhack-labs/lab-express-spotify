@@ -2,6 +2,13 @@
     <img src="{{imageUrl}}" alt="">
     <div>
         <h3>{{name}}</h3>
-        <button class="btn"><a href="/albums/">View Albums</a></button>
+        {{#if artist}}
+            <button class="btn"><a href="/albums/{{id}}">View Albums</a></button>
+        {{/if}}
+
+        {{#if album}}
+            <button class="btn"><a href="/tracks/{{id}}">View Albums</a></button>
+        {{/if}}
+        
     </div>
 </div>
