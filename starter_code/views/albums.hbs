@@ -1,0 +1,6 @@
+<h1>PROBANDO ALBUMS</h1>
+
+{{#each data.body.items}}
+<h2>{{this.name}}</h2>
+<a href="/artist/viewTracks/{{this.id}}">View Tracks</a>
+{{/each}}

@@ -1,0 +1,8 @@
+<h1>PROBANDO TRACKS</h1>
+
+{{#each data.body.items}}
+<h2>{{this.name}}</h2>
+<audio controls src="{{this.preview_url}}">
+<code>Audio</code>
+</audio>
+{{/each}}
