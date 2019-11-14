@@ -84,3 +84,21 @@ button {
     border-radius: 4px;
     box-sizing: border-box;
   }
+
+  .musicContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .imgMusic {
+      width: 30vw;
+      max-width: 340px;
+  }
+
+  .musicAll {
+      width: 24%;
+      margin-top: 30px;
+      margin-left: 30px;
+  }

@@ -1,9 +1,9 @@
 <div class="musicContainer">
-    {{#each searchArtists}}
+    {{#each albumsArtist}}
     <div class="musicAll">
         <img class="imgMusic" src="{{images.0.url}}" alt="Error Photo">
         <h1>{{this.name}}</h1>
-        <a href="/albums/{{id}}">View Albums</a>
+        <a href="/tracks/{{id}}">View Tracks</a>
     </div>
     {{/each}}
 </div>

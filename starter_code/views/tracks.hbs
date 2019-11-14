@@ -1,0 +1,9 @@
+<div class="musicContainer">
+    {{#each songArtist}}
+    <div class="musicAll">
+        <h1>{{this.name}}</h1>
+        <audio src="{{preview_url}}" preload="auto" controls></audio>
+
+    </div>
+    {{/each}}
+</div>
