@@ -35,7 +35,7 @@ $ git push origin master
 
 Spotify is great for streaming music from the app, but they also have a [Web Service](https://en.wikipedia.org/wiki/Web_service) for us developers to play with.
 
-For the purpose of this exercise, we will be using the [`spotify-web-api-node` npm package](https://www.npmjs.com/package/spotify-web-api-js) (this is the link that will take you to the documentation so go ahead and open it). As we can find in the docs, this package gives us simple methods to make requests to Spotify, and give us back artists, albums, tracks, and more.
+For the purpose of this exercise, we will be using the [`spotify-web-api-node` npm package](https://www.npmjs.com/package/spotify-web-api-node) (this is the link that will take you to the documentation so go ahead and open it). As we can find in the docs, this package gives us simple methods to make requests to Spotify, and give us back artists, albums, tracks, and more.
 
 **In this lab, we have two main goals**:
 
@@ -68,7 +68,7 @@ You're given an _almost_ empty `starter_code` folder. In the next few steps, you
 
 1. Create `package.json` (or as we can say: let's _initialize_ our project :wink: ).
 2. `npm install express hbs spotify-web-api-node dotenv`.
-3. Inside of the `app.js` file, require _spotify-web-api-node_.
+3. Inside of the `app.js` file, require `spotify-web-api-node`.
 
 ```js
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -138,7 +138,7 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 ```
 
-We are good to go. Let's open the [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-js) documentation and start our journey!
+We are good to go. Let's open the [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) documentation and start our journey!
 
 ## Iteration 3 | Search for an Artist
 
