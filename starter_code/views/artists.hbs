@@ -1,0 +1,10 @@
+{{#each items}}
+    <p>{{this.name}}</p>
+    {{#each this.images as |image|}}
+        {{#each image}}
+            <img src="{{this}}" alt="">
+        {{/each}}
+    {{/each}}
+    <button><a href="/albums/{{this.id}}>View Albums</a></button>
+{{/each}}
+
