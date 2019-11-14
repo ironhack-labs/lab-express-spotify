@@ -3,6 +3,7 @@ require('dotenv').config()
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require("spotify-web-api-node");
+const bodyParser = require("body-parser");
 
 
 
@@ -11,6 +12,8 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + '/views/partials');
+app.use(bodyParser.urlencoded({ extended: true }));
 
 
 const spotifyApi = new SpotifyWebApi({
@@ -18,7 +21,6 @@ const spotifyApi = new SpotifyWebApi({
     clientSecret: process.env.CLIENT_SECRET
 });
 
-// Retrieve an access token
 spotifyApi
     .clientCredentialsGrant()
     .then(data => {
@@ -28,12 +30,36 @@ spotifyApi
         console.log("Something went wrong when retrieving an access token", error);
     });
 
-
-
-
-
-
 // the routes go here:
+
+app.get("/", (req, res) => {
+    res.render("index");
+});
+
+app.post("/artists", (req, res) => {
+
+    spotifyApi
+    .searchArtists(req.body.name)
+    .then(data => {
+        //console.log(data.body.artists.items[0].images[0].url);
+      //console.log("The received data from the API: ", data.body.artists.items);
+      let artistArr = data.body.artists.items.map(artist=>{
+        
+            let newArtist ={
+                id: artist.id,
+                imageUrl: artist.images[0] ? artist.images[0].url : `https://cdn3.iconfinder.com/data/icons/music-and-audio-1/26/music-audio-1027-512.png`,
+                name: artist.name
+            }
+            return newArtist;
+      });
+     res.render("artists", { artistArr });
+      
+    })
+    .catch(err => {
+      console.log("The error while searching artists occurred: ", err);
+    });
+
+  });
 
 
 

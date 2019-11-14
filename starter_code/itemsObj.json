@@ -1,0 +1,22 @@
+{  external_urls:{ spotify: 'https://open.spotify.com/artist/4uyqaioPEdClDxU6zvYlAZ' },
+   followers: { href: null, total: 474055 },
+   genres: [ 'spanish pop' ],
+   href: 'https://api.spotify.com/v1/artists/4uyqaioPEdClDxU6zvYlAZ',
+   id: '4uyqaioPEdClDxU6zvYlAZ',
+   images:
+    [ { height: 640,
+        url:
+         'https://i.scdn.co/image/2ed44229bd13815d1c211f4fd064fbd27a383f3b',
+        width: 640 },
+      { height: 320,
+        url:
+         'https://i.scdn.co/image/849f61cba26b802e33cf07bbe1efa50588dcb5bd',
+        width: 320 },
+      { height: 160,
+        url:
+         'https://i.scdn.co/image/778f456c9b1ba2554d3be694c2b5a884973260c2',
+        width: 160 } ],
+   name: 'Pablo López',
+   popularity: 65,
+   type: 'artist',
+   uri: 'spotify:artist:4uyqaioPEdClDxU6zvYlAZ' }
