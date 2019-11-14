@@ -1,0 +1,15 @@
+<div class="tracks-container container">
+
+    <ul class="tracklist">
+        {{#each tracks}}
+            <li class="track">
+                <h2>
+                    {{name}}
+                </h2>
+
+                <audio src={{preview_url}} preload="auto" controls></audio>
+            </li>
+        {{/each}}
+    </ul>
+
+</div>

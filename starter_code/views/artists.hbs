@@ -1,0 +1,9 @@
+<div class="artists-container container">   
+    {{#each dataArr}}
+        <div class="card">
+            <img src={{images.0.url}} alt={{name}}>
+            <div class="artist">{{name}}</div>
+            <a href="/albums/{{id}}">View Albums</a>
+        </div>
+    {{/each}}
+</div>
