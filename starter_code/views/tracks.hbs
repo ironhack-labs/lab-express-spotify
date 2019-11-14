@@ -1,0 +1,9 @@
+<div>
+    <h1>Tracks</h1>
+     {{#each trackData}}
+    <div>
+        <h1>{{name}}</h1>
+        <audio src="{{preview_url}}" preload="auto" controls></audio>
+    </div>
+    {{/each}}
+</div>
