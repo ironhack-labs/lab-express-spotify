@@ -1,0 +1,23 @@
+<div class="container">
+  <h1>aqui van los tracks</h1>
+  <div class="col">
+    {{#each track}}
+    <ul>
+      <li>
+        {{name}}
+        {{!-- <audio src="this.preview_url"> play</audio> --}}
+        <audio controls src="{{preview_url}}">
+          Your browser does not support the
+          <code>audio</code> element.
+        </audio>
+      </li>
+    </ul>
+
+
+    {{/each}}
+
+  </div>
+
+
+
+</div>
