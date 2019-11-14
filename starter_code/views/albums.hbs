@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row">
+    {{#each data.body.items}}
+    <div class="col-md-4">
+
+      {{this.name}}
+
+      <a href="/artists/tracks/{{this.id}}">View tracks</a>
+
+
+    </div>
+    {{/each}}
+
+  </div>
+</div>

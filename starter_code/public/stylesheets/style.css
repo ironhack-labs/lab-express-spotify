@@ -1,0 +1,14 @@
+body {
+  padding: 50px;
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
+
+a {
+  color: #00B7FF; }
+
+img {
+  width: 200px; }
+
+.index {
+  background-image: url("public/images/concert.jpeg"); }
+
+/*# sourceMappingURL=style.css.map */
