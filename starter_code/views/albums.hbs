@@ -1,10 +1,10 @@
-<h1>Artists</h1>
+<h1>Albums</h1>
 <ul>
-    {{#each returnedArtists}}
+    {{#each returnedAlbums}}
     <li>
         <img src="{{images.0.url}}" alt="{{name}} Image">
         <p>{{name}}</p>
-        <a href="/albums/{{id}}">View Albums</a>
+        <a href="/album/{{id}}">View Tracks</a>
     </li>
     {{/each}}
 </ul>
