@@ -1,8 +1,8 @@
-<div class="artists-container container">   
+<div class="artists-container max-container container">   
     {{#each dataArr}}
         <div class="card">
             <img src={{images.0.url}} alt={{name}}>
-            <div class="artist">{{name}}</div>
+            <h2 class="artist">{{name}}</h2>
             <a href="/albums/{{id}}">View Albums</a>
         </div>
     {{/each}}

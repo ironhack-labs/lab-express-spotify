@@ -1,9 +1,9 @@
-<div class="albums-container container">
+<div class="albums-container max-container container">
     
     {{#each albums}}
         <div class="card">
             <img src={{images.0.url}} alt={{name}}>
-            <div class="artist">{{name}}</div>
+            <h2 class="artist">{{name}}</h2>
             <a href="/tracks/{{id}}">View Tracks</a>
         </div>
     {{/each}}
