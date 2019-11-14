@@ -1,0 +1,10 @@
+<h1>Artists</h1>
+<ul>
+    {{#each returnedArtists}}
+    <li>
+        <img src="{{images.0.url}}" alt="{{name}} Image">
+        <p>{{name}}</p>
+        <button>View Albumns</button>
+    </li>
+    {{/each}}
+</ul>
