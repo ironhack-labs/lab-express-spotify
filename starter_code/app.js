@@ -36,6 +36,25 @@ app.get("/", (req, res) => {
     res.render("index");
 });
 
+app.get("/tracks/:id", (req, res) => {
+    spotifyApi
+    .getAlbumTracks(req.params.id)
+    .then(data=>{
+        let trackArr = data.body.items.map(track => {
+            let newTrack = {
+                name: track.name,
+                url: track.preview_url
+            }
+            return newTrack;
+        });
+      res.render("tracks", { trackArr });
+    })
+    .catch(err => {
+        console.log("The error while searching albums occurred: ", err);
+      });
+    
+});
+
 app.get("/albums/:id", (req, res) => {
     spotifyApi
     .getArtistAlbums(req.params.id)
