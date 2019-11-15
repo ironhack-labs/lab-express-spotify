@@ -1,0 +1,7 @@
+<h1>usaaaaaaaaaaaaaaaaaaa</h1>
+<img src="{{data.body.artists.href}}" alt="">
+<ul>
+  {{#each data.body.items}}
+  <li><a href="/artist/tracks/{{this.id}}">{{this.name}}</a></li>
+  {{/each}}
+</ul>
