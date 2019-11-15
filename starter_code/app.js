@@ -24,8 +24,7 @@ const spotifyApi = new SpotifyWebApi({
 
 
 
-    // clientId: '0a4c532def29499eb6cb56728634d8b0',
-    // clientSecret: '9733095a9ca94c6aa1725c99f912aeb7',
+
 
 
 
