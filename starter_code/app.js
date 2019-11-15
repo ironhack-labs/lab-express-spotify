@@ -38,10 +38,6 @@ spotifyApi
 
 
 // Routes
-app.get('/', (req, res, next) => {
-    res.render('index');
-})
-
 app.get('/artists', (req, res, next) => {
     // console.log('req.query ->', req.query);
     // console.log('req.query.artist ->', req.query.artist);
@@ -50,12 +46,39 @@ app.get('/artists', (req, res, next) => {
     .then(function(result) {
         console.log('Search artists by name', req.query.artist);
         // console.log(result.body.artists.items);
-    
         res.render('artists', { artistsArray: result.body.artists.items });
     }, function(err) {
         console.error(err);
     });
 })
 
+app.get('/albums/:artistId', (req, res, next) => {
+    // console.log(req.params); // artist id
+    // res.send(req.params);
 
+    spotifyApi.getArtistAlbums(req.params.artistId, { limit: 10 })
+    .then(function(data) {
+        // console.log(data.body);
+        return data.body.items.map(function(a) {
+            // console.log(a)
+            return a.id;
+        });
+    })
+    .then(function(albums) {
+        // console.log(albums);
+        return spotifyApi.getAlbums(albums);
+    })
+    .then(function(data) {
+        console.log(data.body.albums);
+        res.render('albums', { albumArray: data.body.albums });
+    })
+    .catch(error => console.log('ERROR ->', error));
+});
+
+app.get('/', (req, res, next) => {
+    res.render('index');
+})
+
+
+// Start the server
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
