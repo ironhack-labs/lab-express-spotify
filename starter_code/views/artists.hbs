@@ -1,0 +1,10 @@
+<div>
+    <div>
+    {{#each artistsArray}}
+        <p>{{this.name}}</p>
+        <img src="{{this.images.0.url}}" alt="Artist image">
+        <a href="{{this.external_urls.spotify}}"><button>View albums</button></a>
+    {{/each}}
+    </div>
+
+</div>

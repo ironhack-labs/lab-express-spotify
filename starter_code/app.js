@@ -3,11 +3,11 @@ require('dotenv').config()
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require("spotify-web-api-node");
-const path = require('path');
 
 const morgan = require('morgan');
 const logger = morgan('tiny'); // returns a logger function
 
+const path = require('path');
 const app = express();
 
 
@@ -39,10 +39,23 @@ spotifyApi
 
 // Routes
 app.get('/', (req, res, next) => {
-    console.log(req.params);
     res.render('index');
 })
 
+app.get('/artists', (req, res, next) => {
+    // console.log('req.query ->', req.query);
+    // console.log('req.query.artist ->', req.query.artist);
+    
+    spotifyApi.searchArtists(req.query.artist) // res.send(req.query);
+    .then(function(result) {
+        console.log('Search artists by name', req.query.artist);
+        // console.log(result.body.artists.items);
+    
+        res.render('artists', { artistsArray: result.body.artists.items });
+    }, function(err) {
+        console.error(err);
+    });
+})
 
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
