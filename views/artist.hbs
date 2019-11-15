@@ -1,0 +1,10 @@
+<h1>pagina artist</h1>
+{{#each artist}}
+<p>{{name}}</p>
+<div class="button">
+
+  (<a href="/album/{{this.id}}">Ver detalles</a>)
+  {{!-- (<a class="btn btn-dark" href="/books/details/{{this._id}}" role="button">Check the album!</a>) --}}
+</div>
+
+{{/each}}
