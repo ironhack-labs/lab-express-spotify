@@ -19,7 +19,7 @@ spotifyApi
   });
 
 
-router.get("/album/:id", (req, res) => {
+router.get("/:id", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.id)
     .then(data => {
