@@ -1,0 +1,9 @@
+{{#each tracks}}
+<div>
+    <h2>{{this.name}}</h2>
+    <audio controls>
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+        <p>Your browser doesn't support HTML5 audio.</p>
+</audio>
+</div>
+{{/each}}
