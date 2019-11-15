@@ -12,38 +12,52 @@ const spotifyApi = new SpotifyWebApi({
     clientSecret: process.env.CLIENT_SECRET
   });
   
+  
+  const app = express();
+  const PORT = 3000;
+  
+  app.set('view engine', 'hbs');
+  app.set('views', __dirname + '/views');
+  app.use(express.static(__dirname + '/public'));
+  
+  
+  // setting the spotify-api goes here:
   // Retrieve an access token
-  spotifyApi
-    .clientCredentialsGrant()
-    .then(data => {
-      spotifyApi.setAccessToken(data.body["access_token"]);
-    })
-    .catch(error => {
-      console.log("Something went wrong when retrieving an access token", error);
-    });
-
-
-
-
-
-
-
-const app = express();
-const PORT = 3000;
-
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
-
-
-// setting the spotify-api goes here:
-
-
-
-
+spotifyApi
+.clientCredentialsGrant()
+.then(data => {
+  spotifyApi.setAccessToken(data.body["access_token"]);
+})
+.catch(error => {
+  console.log("Something went wrong when retrieving an access token", error);
+});
 
 
 // the routes go here:
+
+app.get('/artists',(req, res, next) => {
+    spotifyApi
+      .searchArtists(req.query.artists)
+       .then(data => {
+     console.log("The received data from the API: ", data.body.artists.items);
+     res.render("artists", { artists: data.body.artists.items });
+   })
+   .catch(err => {
+     console.log("The error while searching artists occurred: ", err);
+   });
+  console.log(req.params.artists, req.query.artists);
+});
+
+    // res.send(req.params, req.query);
+
+app.get('/', (req, res) => {
+    res
+      .status(200)
+      .render('index')
+  });
+
+
+
 
 
 
