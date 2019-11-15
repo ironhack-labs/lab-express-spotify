@@ -1,0 +1,111 @@
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+}
+
+main.search {
+  background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+  background-size: cover;
+  background-position: center center;
+  max-width: 100vw;
+  min-height: 100vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main.search form {
+  background-color: rgba(255, 255, 255, 0.5);
+  min-width: 50vw;
+  min-height: 30vh;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+main.search input {
+  border: 1px solid rgba(0, 0, 0, 0.5);
+  font-size: 150%;
+  padding: 8px;
+  width: 75%;
+}
+
+main.search button {
+  background-color: tomato;
+  color: white;
+  font-size: 125%;
+  padding: 8px;
+  margin-top: 16px;
+}
+
+main.albums {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: space-between;
+  width: 960px;
+  margin: 0 auto;
+}
+
+article.album {
+  flex: 0 0 300px;
+  margin: 10px;
+  padding-bottom: 10px;
+  background-color: #666;
+  color: white;
+  text-align: center;
+}
+
+article.album img {
+  height: 320px;
+  width: 100%;
+}
+
+article.album h1 {
+  font-weight: normal;
+  margin: 10px 0;
+}
+
+article.album a,
+article.album a:hover {
+  background-color: tomato;
+  color: white;
+  text-decoration: none;
+  padding: 4px;
+  border-radius: 4px;
+}
+
+.albums-title {
+  text-align: center;
+}
+
+main.tracks {
+  display: flex;
+  flex-flow: column nowrap;
+}
+
+main.tracks article {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 40px;
+  background-color: silver;
+  font-size: 75%;
+}
+
+main.tracks article.tracks-header {
+  background-color: #666;
+  color: white;
+  margin-bottom: 10px;
+}
+
+main.tracks .listen {
+  width: 300px;
+  text-align: center;
+}
+
+main.tracks article.track {
+  margin: 5px 0;
+}

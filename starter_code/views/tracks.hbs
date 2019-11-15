@@ -1,0 +1,14 @@
+<main class="tracks">
+  <article class="tracks-header">
+    <h2>Title</h2>
+    <h2 class="listen">Listen</h2>
+  </article>
+  {{#each items}}
+  <article class="track">
+    <h2>{{ this.name }}</h2>
+    {{#if this.preview_url}}
+    <audio controls src="{{this.preview_url}}"></audio>
+    {{/if}}
+  </article>
+  {{/each}}
+</main>
