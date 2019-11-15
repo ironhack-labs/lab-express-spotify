@@ -11,7 +11,7 @@
    {{#each artists}}
    <li> Name: {{ this.name }}
        <br>
-       <img src=`{{ this.images }}` width="200" alt="SHOULD BE IMAGES">
+       <img src="{{ this.images.1.url }}" alt="">
    </li>
    <button>View albums</button>
    {{/each}}
