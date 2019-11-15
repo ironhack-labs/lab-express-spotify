@@ -35,10 +35,9 @@ exports.artists = (req, res) => {
 
 exports.albums = (req, res) => { 
     const { artistId } = req.params;
-    console.log(artistId)
-    spotifyApi.getArtistAlbums(artistId, {limit: 10, offset: 20})
+    spotifyApi.getArtistAlbums(artistId, {limit: 6, offset: 10})
     .then(function(data) {
-        // console.log('Album information', data);
+        console.log('Album information', data);
         const albums = data.body.items
         res.render("albums", {albums});
       }, function(err) {
