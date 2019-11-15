@@ -1,0 +1,8 @@
+<div class = 'albums-main-wrapper'>
+{{#each tracks.body.items as |track|}}
+    <h1>{{track.name}}</h1><br>
+    <audio controls>
+        <source src="" type="audio/mpeg">
+    </audio><br>
+{{/each}}
+</div>

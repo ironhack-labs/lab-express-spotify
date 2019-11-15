@@ -1,0 +1,14 @@
+<div class = 'artists-main-wrapper'>
+{{#each response.body.artists.items as |cantante|}}
+    <div class="artist-card">
+        <img src="{{cantante.images.[2].url}}" alt="Placeholder image">
+        <div class="artist-text">
+            <h2>{{cantante.name}}</h2>
+            <form action="/albums/{{cantante.id}}" method="GET">
+                <input type="submit" value="Search" name = "artistId">
+            </form>
+        </div>
+
+    </div>
+{{/each}}
+</div>

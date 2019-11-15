@@ -1,0 +1,13 @@
+<div class = 'albums-main-wrapper'>
+{{#each albums.body.items as |album|}}
+    <div class="album-card">
+        <img src="{{album.images.[2].url}}" alt="Placeholder image">
+        <div class="artist-text">
+            <h2>{{album.name}}</h2>
+            <form action="/tracks/{{album.id}}" method="GET">
+                <input type="submit" value="Search">
+            </form>
+        </div>
+    </div>
+{{/each}}
+</div>

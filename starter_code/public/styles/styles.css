@@ -1,0 +1,111 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.main-wrapper{
+    background-image: url('../images/Rock.jpg');
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.form-wrapper{
+    background-color: gray;
+    opacity: 0.5;
+    width: 60vw;
+    height: 20vh;
+    justify-content:center;
+    align-content:center;
+}
+.form{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+}
+.form input:first-of-type{
+    margin-top: 50px;
+    border-color: 1px solid blue;
+    border-radius: 5px;
+    width: 30vw;
+    padding: 1% 5% 1% 5%;
+    box-sizing: border-box;
+}
+.form input:last-of-type{
+    margin-top: 25px;
+    background-color: green;
+    color:white;
+    padding: 1% 5% 1% 5%;
+}
+
+// Artist Cards 
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 20px 20px;
+}
+
+.artist-card>img {
+    height: 140px;
+    padding-bottom: 20px;
+}
+
+.artist-text {
+    text-align: center;
+}
+
+.artists-main-wrapper {
+    padding: 140px 0;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artist-text>h2 {
+    color: black;
+    margin: 4px 0 14px 0;
+    font-size: 0.9em
+}
+
+
+// Album Cards 
+
+.album-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 400px;
+    margin: 20px 20px;
+}
+
+.album-card>img {
+    height: 140px;
+    padding-bottom: 20px;
+}
+
+.album-text {
+    text-align: center;
+}
+
+.albums-main-wrapper {
+    padding: 140px 0;
+    margin: 0 30px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.album-text>h2 {
+    color: black;
+    margin: 4px 0 14px 0;
+    font-size: 0.9em
+}
+
