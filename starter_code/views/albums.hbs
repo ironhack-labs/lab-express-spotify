@@ -1,6 +1,7 @@
 <div>
-{{#each albumArray}}
-    <p>{{this.name}}</p>
-    <img src="{{this.images.0.url}}" alt="Album cover">
-{{/each}}
+    {{#each albumArray}}
+        <p>{{this.name}}</p>
+        <img src="{{this.images.0.url}}" alt="Album cover">
+        <a href="/tracks/{{this.id}}"><button>View tracks</button></a>
+    {{/each}}
 </div>

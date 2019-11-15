@@ -11,7 +11,7 @@ const path = require('path');
 const app = express();
 
 
-// Middleware
+// MIDDLEWARE
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 hbs.registerPartials(__dirname + '/views/partials');
@@ -37,7 +37,9 @@ spotifyApi
 });
 
 
-// Routes
+// ROUTES
+
+// Search for an artist
 app.get('/artists', (req, res, next) => {
     // console.log('req.query ->', req.query);
     // console.log('req.query.artist ->', req.query.artist);
@@ -52,6 +54,7 @@ app.get('/artists', (req, res, next) => {
     });
 })
 
+// Get the albums of an artist
 app.get('/albums/:artistId', (req, res, next) => {
     // console.log(req.params); // artist id
     // res.send(req.params);
@@ -69,16 +72,31 @@ app.get('/albums/:artistId', (req, res, next) => {
         return spotifyApi.getAlbums(albums);
     })
     .then(function(data) {
-        console.log(data.body.albums);
+        // console.log(data.body.albums);
         res.render('albums', { albumArray: data.body.albums });
     })
     .catch(error => console.log('ERROR ->', error));
 });
 
+// Get tracks in an album
+app.get('/tracks/:albumId', (req, res, next) => {
+    // console.log(req.params);
+    // res.send(req.params);
+
+    spotifyApi.getAlbumTracks(req.params.albumId, { limit : 5, offset : 1 })
+    .then(function(data) {
+        console.log(data.body.items);
+        res.render('tracks', { tracksArray: data.body.items })
+    }, function(err) {
+        console.log('Something went wrong!', err);
+    });
+})
+
+// Route for home '/'
 app.get('/', (req, res, next) => {
     res.render('index');
 })
 
 
-// Start the server
+// START THE SERVER
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
