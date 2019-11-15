@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+.btn-album-direct {
+    padding: 9px;
+    border: pink solid 1px;
+    background: pink;
+    color: white;
+    display: block;
+}
