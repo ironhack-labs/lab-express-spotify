@@ -52,20 +52,36 @@ app.get("/artists/", (req, res, next) =>{
     // it is a query because it is from a form with submit
     // console.log(req.query.artist);
     // res.send(req.query);
-
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-      console.log("The received data from the API: ", data.body.artists.items[0].images[0].url);
+    //   console.log("The received data from the API: ", data.body.artists.items[0]);
       res.render("artists", {arrayArtist: data.body.artists.items});
     })
     .catch(err => {
       console.log("The error while searching artists occurred: ", err);
     });
 
-
-
 });
+
+app.get("/albums/:artistId", (req, res, next) => {
+
+    console.log("res param: ",res.params);
+    console.log("res query: ",res.query);
+    console.log("req param: ",req.params.artistId);
+    console.log("res query",req.query);
+    
+    spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+        console.log("The received data from the API: ", data.body.items[0].name);
+        console.log("The received data from the API: ", data.body.items[0].images[0].url);
+        res.render("albums", {arrayAlbums: data.body.items});
+      })
+      .catch(err => {
+        console.log("The error while searching artists occurred: ", err);
+      });
+  });
 
 
 
