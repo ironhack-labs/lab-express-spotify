@@ -3,13 +3,21 @@ require('dotenv').config()
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require("spotify-web-api-node");
+const path = require('path');
+
+const morgan = require('morgan');
+const logger = morgan('tiny'); // returns a logger function
 
 const app = express();
 
 
+// Middleware
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + '/views/partials');
+
+app.use(logger);
+app.use(express.static(path.join(__dirname, 'public')));
 
 
 // Setting the spotify-api
@@ -29,11 +37,11 @@ spotifyApi
 });
 
 
-
-
-
-
-// the routes go here:
+// Routes
+app.get('/', (req, res, next) => {
+    console.log(req.params);
+    res.render('index');
+})
 
 
 

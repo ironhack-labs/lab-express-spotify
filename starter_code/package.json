@@ -14,5 +14,8 @@
     "express": "^4.17.1",
     "hbs": "^4.0.6",
     "spotify-web-api-node": "^4.0.0"
+  },
+  "devDependencies": {
+    "morgan": "^1.9.1"
   }
 }
