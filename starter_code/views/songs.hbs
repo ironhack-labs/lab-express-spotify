@@ -1,0 +1,7 @@
+<h2>Songs</h2>
+{{#each songs as |song| }}
+   <h3> {{ song.name }} </h3>
+   <audio controls>
+       <source src="{{song.preview_url}}" type="audio/mpeg">
+   </audio>
+{{/each}} 

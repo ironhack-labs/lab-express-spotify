@@ -1,11 +1,9 @@
 require('dotenv').config()
 
+
 const express = require('express');
 const hbs = require('hbs');
-
 // require spotify-web-api-node package here:
-
-
 
 const app = express();
 
@@ -20,9 +18,9 @@ app.use(express.static(__dirname + '/public'));
 
 
 
-
 // the routes go here:
 
-
+const mainRoutes = require("./routes");
+    app.use("/", mainRoutes);
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
