@@ -1,10 +1,9 @@
 
-<body>
+{{!-- <body>
     <h1>tracks</h1>
 
 
     {{#each tracks}}
-{{!-- <img src="{{this.images.1.url}}" alt=""> --}}
 <figure>
     <figcaption>{{this.name}}</figcaption>
     <audio
@@ -17,3 +16,18 @@
 
 {{/each}}
 </body>
+ --}}
+
+
+
+<div>
+
+
+<main class="cards-container">
+{{#each tracks}}
+{{> trackCard this}}
+{{/each}}
+
+</main>
+
+</div>

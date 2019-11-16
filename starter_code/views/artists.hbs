@@ -1,7 +1,7 @@
-<body>
+{{!-- <body>
     
     
-{{!-- //<img src="{{artists.images[0].url}}" alt="no pic"> --}}
+
 {{#each artists}}
 <h1>{{this.name}}</h1>
 
@@ -12,4 +12,17 @@
 {{/each}}
 
    
-</body>
+</body> --}}
+
+
+<div>
+
+
+<main class="cards-container">
+{{#each artists}}
+{{> artistCard this}}
+{{/each}}
+
+</main>
+
+</div>

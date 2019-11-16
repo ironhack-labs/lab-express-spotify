@@ -1,0 +1,149 @@
+html, body {
+    margin: 0;
+    height: 100%;
+    font-family: 'Amatic SC', cursive;
+    background-color: black;
+}
+
+nav{
+
+    position: fixed;
+    margin: -20px 0;
+    padding-top: 12px;
+    padding-bottom: -2px;
+background-color: rgba(85, 85, 85, 0.329);
+color: rgb(255, 255, 255);
+text-align: center;
+width: 100%;
+}
+.nav-title{
+    text-decoration: none;
+    color: white;
+    margin-top: 60px;
+
+}
+
+
+.form{
+position: absolute;
+text-align: center;
+margin-top: 25%;
+display: flex;
+flex-direction: column;
+margin: 20% 40%;
+text-align: center;
+padding-left: 60px;
+transition: margin-top 1s;
+} 
+.form label{
+    font-size: 2em;
+    transition: font-size 2s;
+}
+.form input{
+border-radius: 5px;
+height: 2em;
+}
+.form button{
+    font-size: 1em;
+    color: thistle;
+    background-color: black;
+    height: 2em;
+    transition: color 2s;
+}
+
+
+.index-body{
+    background-image: url("/images/people-in-concert-154147.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.cards-container {
+    padding-top: 60px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+  }
+
+.card {
+    border: 1px solid black;
+    padding: 0px 20px;
+    width: 100%;
+    margin: 5px 300px;
+    height: 160px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(102, 41, 41, 0.877);
+    border-radius: 10px;
+    text-decoration: none;
+    transition: margin 1s ease-in-out .2s;
+  }
+.artist-photo {
+      width: 100px;
+      height: 100px;
+      background-repeat: repeat;
+      background-position: center;
+  }
+  .artist-name{
+      color: white;
+      margin: -1px 0;
+  }
+  .preview{
+    margin-bottom: -20px;
+  }
+  .track-card {
+    text-align: center;
+    border: 1px solid black;
+    padding: 0px 20px;
+    width: 100%;
+    margin: 2px 300px;
+    height: 100px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(102, 41, 41, 0.877);
+    border-radius: 10px;
+    font-size: 1.4em;
+    padding-top: -10px;
+    transition: font-size 1s;
+    
+  }
+  .song-title{
+   color: white;
+   margin-top: -10px;
+  }
+
+  .album-card{
+    color: white;
+    border: 1px solid black;
+    padding: 0px 20px;
+    width: 100%;
+    margin: 5px 320px;
+    height: 160px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(102, 41, 41, 0.877);
+    border-radius: 10px;
+    transition: font-size 1s;
+    
+  }
+  .album-title{
+    color: white;
+    margin: -1px 0;
+    transition: color 3s;
+}
+  a{
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      
+  }

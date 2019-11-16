@@ -1,5 +1,5 @@
 
-<body>
+{{!-- <body>
     <h1>albums</h1>
 
     {{#each albums}}
@@ -9,4 +9,18 @@
 <a href="/tracks/{{this.id}}">View Tracks</a>
 
 {{/each}}
-</body>
+</body> --}}
+
+
+<div>
+
+
+<main class="cards-container">
+    {{!-- <h1>{{artist.0.artists.0}}</h1> --}}
+{{#each albums}}
+{{> albumCard this}}
+{{/each}}
+
+</main>
+
+</div>
