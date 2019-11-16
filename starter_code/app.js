@@ -50,7 +50,7 @@ app.get('/', (req, res) => {
   res.render('index');
 })
 
-var artists;
+
 
 app.get('/artists/', (req, res) => {
 
@@ -61,7 +61,7 @@ app.get('/artists/', (req, res) => {
       console.log("The received data from the API: ", data.body.artists.items[0].name);
       artists = data.body.artists;
      
-    console.log("try3", data.body.artists.items[0].id);
+    //console.log("try3", data.body.artists.items[0].id);
        //console.log(data.body)
       res.render('artists', {artists: data.body.artists.items})
 
@@ -78,14 +78,11 @@ app.get('/artists/', (req, res) => {
 })
 
 app.get("/albums/:artistId", (req, res) => {
-    console.log("muraaa", req.params.artistId)
-    
     spotifyApi
     .searchArtists(req.params.artistId)
     .then(data => {
     spotifyApi.getArtistAlbums(data.body.artists.items[0].id)
   .then(function(data) {
-        console.log('Artist albums', data.body.items);
     res.render('albums', {albums: data.body.items});
   })
     })
@@ -98,17 +95,19 @@ app.get("/albums/:artistId", (req, res) => {
 })
 
 
+app.get("/tracks/:albumId", (req, res) => {
+    console.log( "album" , req.params);
+    spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(function(data) {
+    console.log("trackssss", data.body.items);
+      res.render('tracks', {tracks: data.body.items})
+      
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+});
 
 
-// spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', {limit: 10})
-//   .then(function(data) {
-//     return data.albums.map(function(a) { return a.id; });
-//   })
-//   .then(function(albums) {
-//     return spotifyApi.getAlbums(albums);
-//   }).then(function(data) {
-//     console.log(data);
-//   });
 
 
 

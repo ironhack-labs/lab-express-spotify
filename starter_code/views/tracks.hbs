@@ -1,0 +1,19 @@
+
+<body>
+    <h1>tracks</h1>
+
+
+    {{#each tracks}}
+{{!-- <img src="{{this.images.1.url}}" alt=""> --}}
+<figure>
+    <figcaption>{{this.name}}</figcaption>
+    <audio
+        controls
+        src={{this.preview_url}}>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+
+{{/each}}
+</body>
