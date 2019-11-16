@@ -1,0 +1,146 @@
+body, html {
+    margin:0;
+    padding:0;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:16px;
+   
+}
+
+h3{margin:0px;}
+
+#home {
+background-image: url('../images/crowd.jpg') ;
+background-size: cover;
+background-repeat: no-repeat;
+min-height:600px;
+
+}
+
+#div-wrapper {
+    min-height: 600px;
+    display: flex;
+    align-items: center;
+}
+
+.form-wrapper {
+    padding:60px 50px 50px 50px;
+    background-color: rgba(128, 128, 128, 0.5);
+    width:40%;
+    margin:0 auto;  
+
+}
+
+#form {
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
+    width:75%;
+    margin:0 auto;
+}
+
+#form input{
+    padding:10px;
+    border-radius: 5px;
+    border:1px solid lightgray;
+    text-align:center;
+}
+
+#artist-search-btn {
+    background-color:red;
+    width:40%;
+    padding:8px;
+    color:white;
+    margin:10px auto;
+    border:none;
+    cursor:pointer;
+}
+
+#artist-wrapper {
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-around;
+    padding:50px;
+    color:white;
+}
+
+.card {
+    background-color:rgba(65, 62, 62);
+    width:300px;
+    text-align:center;
+    margin-bottom:25px;
+}
+
+#artist-image {
+    width:300px;
+    height:300px;
+}
+
+#album-wrapper {
+    display: flex;
+    flex-wrap:wrap; 
+    justify-content: space-around;
+    padding:50px;
+    color:white;
+  
+}
+
+#view-button {
+    background-color: red;
+    margin-bottom:15px;
+    border-radius: 3px;
+    border:none;
+    padding:4px;
+    margin-top:5px;
+    font-size:14px;
+}
+
+a {
+    color:white;
+    text-decoration:none;
+}
+#card-name {
+    margin-bottom:-1px;
+    margin-top:10px;
+}
+
+#tracks-card {
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    border-bottom:3px solid white;
+    padding-bottom:20px;
+}
+
+#tracks-card p {
+   width:300px;
+}
+
+audio {
+   width:300px;
+}
+
+.tracks-container {
+background-color:lightgray;
+padding:20px 0px 0px 0px;
+}
+
+.cards-container {
+    margin:160px;
+ 
+}
+
+#tracks-header {
+    background-color: rgba(65, 62, 62);
+    width:100%;
+    display:flex;
+    flex-direction:row;
+    justify-content:space-around;
+    padding:20px 0px 20px 0px;
+    color:#FFF;
+    font-size:25px;
+}
