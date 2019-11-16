@@ -4,7 +4,14 @@
 <h2>artist list</h2>
 
     {{#each artistsList}}
+    <img src="{{images.0.url}}" alt="artist image">
+    
     <p>{{name}}</p>
+    
+    
+    
+     <a href="/albums/someArtistIdGoesHere">View Albums</a>
+
 
     {{/each}}
 

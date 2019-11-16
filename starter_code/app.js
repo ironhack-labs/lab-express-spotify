@@ -51,7 +51,7 @@ app.get('/artists', (req,res,next) => {
     spotifyApi
     .searchArtists(req.query.artists)
     .then(data => {
-      console.log("The received data from the API: ", data.body.items);
+      console.log("The received data from the API: ", data.body.artists.items[0]);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
 
       res.render('artists',{artistsList:data.body.artists.items});
