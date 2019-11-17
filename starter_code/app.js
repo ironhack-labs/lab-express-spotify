@@ -79,10 +79,8 @@ app.get("/albums/:artistId", (req, res) => {
 
 
 app.get("/tracks/:albumId", (req, res) => {
-    console.log( "album" , req.params);
     spotifyApi.getAlbumTracks(req.params.albumId)
     .then(function(data) {
-    console.log("trackssss", data.body.items);
     res.render('tracks', {tracks: data.body.items})
     }, function(err) {
     console.log('Something went wrong!', err);

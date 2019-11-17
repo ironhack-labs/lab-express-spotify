@@ -16,10 +16,11 @@ nav{
     margin: -20px 0;
     padding-top: 12px;
     padding-bottom: -2px;
-    background-color: rgba(85, 85, 85, 0.329);
+    background-color: rgba(85, 85, 85, 0.151);
     color: rgb(255, 255, 255);
     text-align: center;
     width: 100%;
+    margin-right: 200px;
 }
 .nav-title{
     text-decoration: none;
@@ -28,7 +29,7 @@ nav{
 }
 .nav-title:hover
 {
-    color: rgba(102, 41, 41, 0.877);
+    color: rgb(94, 119, 94);;
     opacity: 0.8;
     -webkit-transform: scale(0.9);
     -ms-transform: scale(0.9);
@@ -83,7 +84,7 @@ height: 2em;
 }
 
 .cards-container {
-    padding-top: 60px;
+    padding-top: 65px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -114,11 +115,20 @@ height: 2em;
     transition: all 1s ease-in-out .2s;
   }
   .artist-text{
+    margin-left: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     overflow-wrap: break-word;
   }
+  .artist-text:hover
+{
+    color: rgb(94, 119, 94);;
+    opacity: 0.8;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
+}
 
 .artist-photo {
 width: 90px;
@@ -135,6 +145,7 @@ transform: scale(0.9);
 color: white;
 margin: -1px 0;
 }
+
 
 .album-card{
     color: white;
@@ -154,16 +165,26 @@ margin: -1px 0;
     transition: all 1s ease-in-out .2s;;
 }
 .album-text{
+    margin-right: 10px;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     overflow-wrap: break-word;
+    text-align: right;
 }
 .album-title{
     color: white;
     margin: -1px 0;
-    transition: color 3s;
+    transition: color 1.5s;
     transition-delay: 1s;
+}
+.album-text:hover
+{
+    color: rgb(94, 119, 94);;
+    opacity: 0.8;
+    -webkit-transform: scale(1.05);
+    -ms-transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 
@@ -198,5 +219,12 @@ a{
 color: white;
 text-decoration: none;
 font-weight: bold;
+}
 
+audio{
+    color: white;
+    border-radius: 0;
+    background-color: white;
+    border-radius: 15px;
+    border: 1px solid rgb(255, 255, 255);
 }
