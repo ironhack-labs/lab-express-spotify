@@ -1,0 +1,8 @@
+<main class="albums-container">
+    <h2>Albums for {{album.0.artists.0.name}}</h2>
+    <div>
+        {{#each album}}
+        {{> albumPartial this}}
+        {{/each}}
+    </div>
+</main>

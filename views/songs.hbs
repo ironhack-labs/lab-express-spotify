@@ -1,0 +1,9 @@
+<main class="songs-container">
+    <nav>
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </nav>
+    {{#each song}}
+      {{> songPartial this}}
+    {{/each}}
+</main>

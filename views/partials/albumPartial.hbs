@@ -1,0 +1,7 @@
+<article class = "album">
+    {{#if this.images}}
+        <img src = '{{this.images.0.url}}'>
+    {{/if}}
+    <h3>{{this.name}}</h3>
+    <a href="/songs?id={{this.id}}">View Tracks</a>
+</article>

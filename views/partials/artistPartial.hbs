@@ -1,0 +1,9 @@
+<article class = "artist">
+    {{#if this.images}}
+        <img src = '{{this.images.0.url}}'>
+    {{else}}
+        <img src = 'https://www.publicdomainpictures.net/pictures/40000/nahled/question-mark.jpg'>
+    {{/if}}
+    <h3>{{this.name}}</h3>
+    <a href="/albums?id={{this.id}}">View Albums</a>
+</article>

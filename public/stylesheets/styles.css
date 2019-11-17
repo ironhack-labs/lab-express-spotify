@@ -1,0 +1,123 @@
+* {
+    font-family: 'Alatsi', sans-serif;
+}
+
+body {
+    background-color: burlywood;
+}
+.searchcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: cetner;
+    align-items: center;
+    align-content: center;
+    background-color: rgba(255, 255, 255, 0.7);
+    margin-top: 280px;
+    margin-left: 300px;
+    margin-right: 300px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+.searchcontainer form {
+    display: flex;
+    flex-direction: column;
+}
+.searchcontainer input {
+    width:385px;
+    height:30px;
+    font-size: 1.5em;
+    text-align: center;
+}
+.searchcontainer input:focus {
+    text-decoration: none;
+}
+.searchcontainer button {
+    margin-top: 20px;
+    width: 190px;
+    height: 40px;
+    margin-left: 100px;
+    border: 1px solid salmon;
+    color: white;
+    background-color: salmon;
+    font-size: 16px;
+}
+.searchcontainer button:focus {
+    text-decoration: none;
+}
+.artists-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-grow: 1;
+    color: burlywood;
+}
+.artists-container img {
+    width: 300px;
+}
+.artists-container a {
+    text-decoration: none;
+    color: white;
+    background-color: salmon;
+    padding: 10px 10px;
+}
+.artist {
+    background-color: bisque;
+    margin-bottom: 30px;
+    overflow-wrap: break-word;
+    width: 300px;
+    padding-bottom: 20px;
+}
+.albums-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+.albums-container div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    text-align: center;
+    flex-grow: 1;
+    box-sizing: border-box;
+    color: burlywood;
+}
+.albums-container img {
+    width: 300px;
+}
+.albums-container a {
+    text-decoration: none;
+    color: white;
+    background-color: salmon;
+    padding: 10px 10px;
+}
+.album {
+    background-color: bisque;
+    margin-bottom: 30px;
+    overflow-wrap: break-word;
+    width: 300px;
+    padding-bottom: 20px;
+}
+.songs-container {
+    color: grey;
+}
+.songs-container nav {
+    background-color:wheat;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left:20px;
+    padding-right: 20px;
+}
+.songs {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: beige;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-left: 20px;
+    padding-right: 20px;
+}
