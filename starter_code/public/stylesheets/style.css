@@ -19,8 +19,8 @@ h2 {
 
 /*-- index page -- */
 
-.main-index {
-    height: 1080px;
+.main-container {
+    height: 900px;
     background-image: url("../images/bg-home.jpeg");
     background-size: 100%;
     background-position: center;
@@ -28,8 +28,47 @@ h2 {
     background-size: cover;
     display: flex;
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 400px;
+    height: 200px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-content: center;
+}
+
+.search-items {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
     justify-items: center;
     align-content: center;
+}
+
+.search-items button {
+    background-color: #1db954;
+    margin-top: 20px;
+    padding: 5px 0px 5px 0px;
+    border: solid 1px #1db954;
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.search-items input {
+    background-color: white;
+    border: none;
+    padding: 15px;
 }
 
 /*-- artist + album page -- */
