@@ -1,7 +1,9 @@
-<div>
-    {{#each albumArray}}
-        <p>{{this.name}}</p>
-        <img src="{{this.images.0.url}}" alt="Album cover">
-        <a href="/tracks/{{this.id}}"><button>View tracks</button></a>
-    {{/each}}
+<div class="container">
+    
+    <div class="row">
+        {{#each albumArray}}
+            {{>albumCard this}}
+        {{/each}}
+    </div>
+    
 </div>

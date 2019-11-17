@@ -1,0 +1,14 @@
+<div class="col-lg-4 artist-container">
+
+    {{#if this.images.0.url}}
+        <img src="{{this.images.0.url}}" alt="Album cover" class="artist-img">
+    {{else}}
+        <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="Album cover" class="artist-img">
+    {{/if}}
+    
+    <div class="artist-info-container">
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+        
+</div>

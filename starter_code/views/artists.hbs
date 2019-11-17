@@ -1,10 +1,9 @@
-<div>
-    <div>
-    {{#each artistsArray}}
-        <p>{{this.name}}</p>
-        <img src="{{this.images.0.url}}" alt="Artist image">
-        <a href="/albums/{{this.id}}"><button>View Albums</button></a>
-    {{/each}}
+<div class="container">
+    
+    <div class="row">
+        {{#each artistsArray}}
+            {{>artistCard this}}
+        {{/each}}
     </div>
-
+    
 </div>

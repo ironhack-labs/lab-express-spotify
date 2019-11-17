@@ -1,13 +1,11 @@
 require('dotenv').config()
-
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require("spotify-web-api-node");
-
 const morgan = require('morgan');
-const logger = morgan('tiny'); // returns a logger function
-
 const path = require('path');
+
+const logger = morgan('tiny');
 const app = express();
 
 
@@ -44,7 +42,7 @@ app.get('/artists', (req, res, next) => {
     // console.log('req.query ->', req.query);
     // console.log('req.query.artist ->', req.query.artist);
     
-    spotifyApi.searchArtists(req.query.artist) // res.send(req.query);
+    spotifyApi.searchArtists(req.query.artist) // res.send(req.query.artist);
     .then(function(result) {
         console.log('Search artists by name', req.query.artist);
         // console.log(result.body.artists.items);
@@ -56,7 +54,7 @@ app.get('/artists', (req, res, next) => {
 
 // Get the albums of an artist
 app.get('/albums/:artistId', (req, res, next) => {
-    // console.log(req.params); // artist id
+    // console.log(req.params); // artistId
     // res.send(req.params);
 
     spotifyApi.getArtistAlbums(req.params.artistId, { limit: 10 })
