@@ -41,12 +41,6 @@ const spotifyApi = new SpotifyWebApi({
 
 app.get('/artists', (req,res,next) => {
     console.log(req.query);
-    //res.send(req.query);
-
-   // for (const key in req.query) {
-      //  console.log("el resiltado es", req.query.artists)
-    //  }*/
-    
 
     spotifyApi
     .searchArtists(req.query.artists)
@@ -61,6 +55,26 @@ app.get('/artists', (req,res,next) => {
     });
 });
 
+app.get('/albums/:artistId', (req, res, next) => {
+    //console.log("resultado album id",req.params.artistId);
+    var result = req.params.artistId.substr(15);
+    console.log("resultado tras quitar id",result);
+
+
+    spotifyApi.getArtistAlbums(result)
+    .then(data => {
+        console.log('Artist albums', data.body.items);
+        res.render('albums');
+    })
+    .catch(err => {
+        console.error("The error while searching Albums occurred: ",err);
+    });
+});
+
+    
+
+
+ 
 
 
 app.get('/', (req,res,next) => {
