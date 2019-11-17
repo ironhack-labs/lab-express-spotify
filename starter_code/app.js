@@ -65,11 +65,6 @@ app.get("/artists/", (req, res, next) =>{
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-
-    console.log("res param: ",res.params);
-    console.log("res query: ",res.query);
-    console.log("req param: ",req.params.artistId);
-    console.log("res query",req.query);
     
     spotifyApi
     .getArtistAlbums(req.params.artistId)
@@ -83,6 +78,18 @@ app.get("/albums/:artistId", (req, res, next) => {
       });
   });
 
+
+  // Get tracks in an album
+app.get('/tracks/:albumId', (req, res, next) => { 
+    console.log("que es: ",req.params);
+    
+    spotifyApi
+      .getAlbumTracks(req.params.albumId)
+      .then(data => {
+        res.render('tracks', { tracksArray: data.body.items });
+      })
+      .catch(err => console.log("Error while getting the tracks: ", err));
+  });
 
 
 app.get("/", (req, res, next) =>{
