@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Track info</title>
+</head>
+
+<body>
+    <div id="track-container">
+        {{#each tracks}}
+        <div id="track-name">
+            <h2>{{this.track_number}}.</h2>
+            <h2>{{this.name}}</h2>
+        </div>
+
+        <audio controls src="{{preview_url}}"></audio>
+
+        {{/each}}
+    </div>
+
+</body>
+
+</html>

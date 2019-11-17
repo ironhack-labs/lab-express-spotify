@@ -4,19 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Artist search</title>
+    <title>Album info</title>
 </head>
 <body>
+    <h1> Albums for: {{artist.name}}</h1>
     <div>
-    {{#each artists}}
-    <ul class="artist-page">
+    {{#each albums}}
+    <ul class="album-container">
     <li> Name: {{ this.name }} 
         <br>
-        <img src='{{ this.images.1.url }}' alt="{{ this.name }} ">
+        <img src="{{ this.images.1.url }}" alt="album cover">
     </li>
-    <li> <a href='/albums/{{id}}'>View albums</a></li>
+    <li> <a href='/tracks/{{id}}'>View tracks</a></li>
     </ul>
-    
     {{/each}}
 </div> 
 

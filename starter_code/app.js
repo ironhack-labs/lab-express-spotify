@@ -61,6 +61,32 @@ app.get('/artists', (req, res, next) => {
     //res.send(req.params, req.query);
 });
 
+app.get("/albums/:id", (req, res, next) => {
+   spotifyApi
+    .getArtistAlbums(req.params.id)
+    .then(data => {
+        console.log("The received data from the API: ", data.body.items);
+        res.render("albums", {
+            albums: data.body.items });
+    })
+    .catch(err => {
+        console.log("The error while viewing artist albums occurred: ", err);
+    });
+});
+
+app.get("/tracks/:id", (req, res, next) => {
+    spotifyApi
+     .getAlbumTracks(req.params.id)
+     .then(data => {
+         console.log("The received data from the API: ", data.body.items);
+         res.render("tracks", {
+             tracks: data.body.items });
+     })
+     .catch(err => {
+         console.log("The error while viewing albums tracks occurred: ", err);
+     });
+ });
+
 app.get('/', (req, res) => {
     res
         .status(200)
