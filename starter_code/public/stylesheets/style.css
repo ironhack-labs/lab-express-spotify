@@ -7,10 +7,8 @@ body {
 }
 
 .view-container { 
-  background-image: url('../images/54eeef973a16b01d3d1a37487158b8be.jpg');
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  background: rgb(2,0,36);
+  background: linear-gradient(90deg, rgba(2,0,36,1) 30%, rgba(89,45,89,1) 100%, rgba(0,212,255,1) 100%);
   min-height: 789px;
 }
 .home-container {
@@ -23,6 +21,7 @@ body {
 .home-container h1 {
   margin-bottom: 100px;
   font-size: 40px;
+  color: #f5f5f5;
 }
 form {
   display: flex;
@@ -32,25 +31,39 @@ form {
   margin: 0 auto;
 }
 form input {
-  padding: 10px;
+  padding: 15px 25px;
   width: 275px;
   border-radius: 28px;
-  border: 1px solid black;
+  border: none;
   outline: none;
   margin-bottom: 30px;
   box-shadow: 0px 0px 46px -5px rgba(3, 0, 6, 0.75);
+  opacity: 0.6;
+  transition: 0.3s;
+  background-color: #39274599;
+  color: #f89c44;
+  font-size: 15px;
 }
+form input:focus {
+  opacity: 1;
+}
+
 form button {
-  width: 155px;
+  width: 205px;
   padding: 16px 13px;
   border-radius: 30px;
+  border: none;
   outline: none;
   cursor: pointer;
-  box-shadow: 0px 0px 46px -5px rgba(3, 0, 6, 0.75);
+  box-shadow: 0px 0px 20px -5px #e7cfffbf;
   transition: 0.3s;
+  color: #392745;
+  background-color: #f89d43;
+  font-weight: bold;
+  font-size: 16px;
 }
 form button:hover {
-  box-shadow: 0px 0px 14px -5px rgba(3, 0, 6, 0.75);
+  box-shadow: 0px 0px 14px -5px #e7cfffbf;
 }
 .main-container{
   display: flex;
@@ -67,6 +80,7 @@ form button:hover {
 .main-container h1 {
   margin-bottom: 50px;
   align-self: center;
+  color: #f5f5f5;
 }
 
 .item-img {
@@ -74,19 +88,24 @@ form button:hover {
   height: 250px;
 }
 .item-name {
-  color: #3f0058;
+  color: #f5f5f5;
   font-size: 16px;
   padding: 10px 0;
 }
 .item-link {
   text-decoration: none;
-  color: white;
-  font-weight: 200;
-  background-color: black;
-  width: 110px;
+  color: #f89d43;
+  font-weight: 600;
+  background-color: #392745;
+  width: 100px;
   text-align: center;
-  padding: 5px;
+  padding: 7px 5px;
   border-radius: 5px;
+  transition: 0.3s;
+}
+.item-link:hover {
+  background-color: #2b1d35;
+  color: #ff9b38;
 }
 
 .item-wrapper {
