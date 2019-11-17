@@ -2,6 +2,12 @@ html, body {
     margin: 0;
     height: 100%;
     font-family: 'Amatic SC', cursive;
+    /* background-image: url("/images/crowd-of-people-enjoying-on-concert-3052360.jpg"); */
+    background-image: url("/images/people-standing-on-stage-in-front-of-crowd-1763068.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
     background-color: black;
 }
 
@@ -20,7 +26,14 @@ width: 100%;
     text-decoration: none;
     color: white;
     margin-top: 60px;
-
+}
+.nav-title:hover
+{
+    color: rgba(102, 41, 41, 0.877);
+    opacity: 0.8;
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
 }
 
 
@@ -33,30 +46,40 @@ flex-direction: column;
 margin: 20% 40%;
 text-align: center;
 padding-left: 60px;
-transition: margin-top 1s;
+/* transition: margin-top 1s; */
+transition: all 0.5s ease;
 } 
 .form label{
     font-size: 2em;
     transition: font-size 2s;
+    color: white;
 }
 .form input{
 border-radius: 5px;
 height: 2em;
 }
 .form button{
+    font-family: 'Amatic SC', cursive;
     font-size: 1em;
-    color: thistle;
+    color: rgb(255, 255, 255);
     background-color: black;
     height: 2em;
     transition: color 2s;
+    border-radius: 8px;
+    border: thin;
+}
+.form button:hover
+{
+        -webkit-transform: scale(0.9);
+        -ms-transform: scale(0.9);
+        transform: scale(0.9);
 }
 
-
 .index-body{
-    background-image: url("/images/people-in-concert-154147.jpg");
+    background-image: url("/images/man-holding-bottled-water-2240766.jpg");
     height: 100%;
     background-position: center;
-    background-repeat: no-repeat;
+    background-repeat: repeat;
     background-size: cover;
 }
 
@@ -66,11 +89,16 @@ height: 2em;
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    background-color: black;
+    background-image: url ("/images/people-standing-on-stage-in-front-of-crowd-1763068.jpg");
+    /* background-color: black; */
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
   }
 
 .card {
-    border: 1px solid black;
+    border: none;
     padding: 0px 20px;
     width: 100%;
     margin: 5px 300px;
@@ -79,16 +107,23 @@ height: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(102, 41, 41, 0.877);
+    background-color: rgba(102, 41, 41, 0.411);
     border-radius: 10px;
     text-decoration: none;
     transition: margin 1s ease-in-out .2s;
   }
+
 .artist-photo {
       width: 100px;
       height: 100px;
       background-repeat: repeat;
       background-position: center;
+  }
+  .artist-photo:hover
+  {
+          -webkit-transform: scale(0.9);
+          -ms-transform: scale(0.9);
+          transform: scale(0.9);
   }
   .artist-name{
       color: white;
@@ -99,7 +134,7 @@ height: 2em;
   }
   .track-card {
     text-align: center;
-    border: 1px solid black;
+    border: none;
     padding: 0px 20px;
     width: 100%;
     margin: 2px 300px;
@@ -108,7 +143,7 @@ height: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(102, 41, 41, 0.877);
+    background-color: rgba(102, 41, 41, 0.411);
     border-radius: 10px;
     font-size: 1.4em;
     padding-top: -10px;
@@ -122,7 +157,7 @@ height: 2em;
 
   .album-card{
     color: white;
-    border: 1px solid black;
+    border: none;
     padding: 0px 20px;
     width: 100%;
     margin: 5px 320px;
@@ -131,11 +166,17 @@ height: 2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    background-color: rgba(102, 41, 41, 0.877);
+    background-color: rgba(102, 41, 41, 0.411);
     border-radius: 10px;
     transition: font-size 1s;
-    
   }
+  /* .albums-body{
+    background-image: url("/images/crowd-of-people-enjoying-on-concert-3052360.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: repeat;
+    background-size: cover;
+  } */
   .album-title{
     color: white;
     margin: -1px 0;
