@@ -1,0 +1,11 @@
+
+
+<article class="item-wrapper">
+  {{#greaterThan this.images.length 0}}
+    <img class="item-img" src="{{this.images.[0].url}}" alt="">
+  {{else}}
+    <img class="item-img" src="http://cdn.last.fm/flatness/responsive/2/noimage/default_album_300_g4.png" alt="">
+  {{/greaterThan}}
+  <h5 class="item-name">{{this.name}}</h5>
+  <a class="item-link"href="/tracks/{{this.id}}"">View tracks</a>
+</article>

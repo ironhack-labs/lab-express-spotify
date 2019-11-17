@@ -1,0 +1,8 @@
+<main class="main-container">
+  <h1>Albums for "{{groupName}}"</h1>
+  <div class="list-container">
+    {{#each albumsObj}}
+      {{> album this}}
+    {{/each}}
+  </div>
+</main>

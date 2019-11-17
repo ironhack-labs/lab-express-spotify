@@ -1,0 +1,8 @@
+<main class="main-container">
+  <h1>Results for "{{artistSearched}}"</h1>
+  <div class="list-container">
+    {{#each artistsObj}}
+      {{> artist this}}
+    {{/each}}
+  </div>
+</main>
