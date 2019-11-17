@@ -3,7 +3,17 @@
 
 <h2>albums list</h2>
 
-   {{uri}}
+   
+    {{#each albumsList}}
+    <img src="{{images.0.url}}" alt="artist image">
+    
+    <p>{{name}}</p>
+    
+    
+    
+     <a href="#">View Albums</a>
 
+
+    {{/each}}
 </main>
 </div>

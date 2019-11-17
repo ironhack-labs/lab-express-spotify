@@ -63,8 +63,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 
     spotifyApi.getArtistAlbums(result)
     .then(data => {
-        console.log('Artist albums', data.body.items);
-        res.render('albums');
+        //console.log('Artist albums',{albumsList:data.body.items});
+        res.render('albums',{albumsList:data.body.items});
     })
     .catch(err => {
         console.error("The error while searching Albums occurred: ",err);
