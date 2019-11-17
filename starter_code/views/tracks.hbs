@@ -1,22 +1,17 @@
 <main class="tracks-container">
 
-    <div>
-        <p>Title</p>
-        <p>Listen</p>
-    </div>
-
-    <div class="track">
+    <section id="track">
         {{#each tracksObject}}
                 {{#if this.preview_url}}
-                    <p>{{this.name}}</p>
+                    <span>{{this.name}}</span>
+                    
+                        <audio 
+                                    controls
+                                    src="{{this.preview_url}}">
+                        </audio>              
 
-                    <audio 
-                                controls
-                                src="{{this.preview_url}}">
-                    </audio>
-                {{else}}
             {{/if}}
         {{/each}}
-    </div>
+    </section>
 
 </main>

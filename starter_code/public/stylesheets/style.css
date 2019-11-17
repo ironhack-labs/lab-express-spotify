@@ -83,11 +83,42 @@ main {
 }
 
 .view-container p {
-    color: antiquewhite;
+    color:#ffffff;
     display: flex;
-    padding: 10px;
+    padding: 0px 20px;
     justify-content: center;
 }
 
+.tracks-container {
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    margin: 150px auto 0 auto;
+    justify-content: space-around;
+}
 
+.tracks-container > h3 {
+    padding: 20px;
+    color: black;
+    display: flex;
+}
+
+#track {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+#track > span {
+    padding: 10px;
+    color: black;
+    margin: 10px;
+}
+
+#track > audio {
+    margin: 10px;
+    padding: 10px;
+    display: block;
+}
 
