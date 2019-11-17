@@ -14,6 +14,8 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+hbs.registerPartials(__dirname + '/views/partials');
+
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -36,7 +38,21 @@ spotifyApi
 
 
 // the routes go here:
+app.get( '/artists', ( req, res, next ) => {
+    spotifyApi
+        .searchArtists( req.query.artists )
+        .then( data  => {
+            console.log( 'SEARCH RESULT -> ', data.body.artists.items[0].url );
+            res.render( 'artists', {artistsItem: data.body.artists.items} );
+        })
+        .catch( (err) => console.log( 'Error appeared:', err));
+})
 
+app.get( '/', ( req, res, next) => {
+    res
+        .status(200)
+        .render('index')
+})
 
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
