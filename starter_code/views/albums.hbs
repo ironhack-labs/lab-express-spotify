@@ -1,15 +1,20 @@
-<main class="albums-container">
+<main class="view-container">
     
     {{#each albumsObject}}
-        <img 
-                    src="{{this.images.0.url}}" 
-                    alt="Album-Image">
+        <div>
+            {{#if this.images.0.url}}
+            <img 
+                        src="{{this.images.0.url}}" 
+                        alt="Album-Image">
+            {{/if}}
 
-            <p>{{this.name}}</p>
+                <p>{{this.name}}</p>
 
-            <a href="/tracks/{{this.id}}">
-                <button type="submit">View Tracks</button>
-            </a>
+                <a href="/tracks/{{this.id}}">
+                    View Tracks
+                </a>
+        
+        </div>
     {{/each}}
 
 </main>

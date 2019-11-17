@@ -12,6 +12,7 @@ const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+app.set('images', (__dirname + '/images'))
 app.use(express.static(__dirname + '/public'));
 
 hbs.registerPartials(__dirname + '/views/partials');
@@ -38,11 +39,12 @@ spotifyApi
 
 
 // the routes go here:
+
 app.get( '/artists', ( req, res, next ) => {
     spotifyApi
         .searchArtists( req.query.artists )
         .then( data  => {
-           // console.log( 'SEARCH RESULT -> ', data.body.artists);
+            //console.log( 'SEARCH RESULT -> ', data.body.artists.items[0].images);
             res.render( 'artists', {artistsObject: data.body.artists.items} );
         })
         .catch( (err) => console.log( 'Error appeared:', err));
@@ -52,7 +54,7 @@ app.get( '/albums/:artistId', ( req, res, next ) => {
     spotifyApi
         .getArtistAlbums( req.params.artistId )
             .then( data  => {
-               // console.log('ALBUM RESULT ->', data.body.items[0]);
+            //console.log('ALBUM RESULT ->', data.body.items[0]);
                 res.render( 'albums', {albumsObject: data.body.items });
             })
             .catch( (err) => console.log('Error', err));

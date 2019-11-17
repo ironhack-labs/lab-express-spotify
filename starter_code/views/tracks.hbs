@@ -7,16 +7,14 @@
 
     <div class="track">
         {{#each tracksObject}}
-            {{#if this.preview_url}}
-                <p>{{this.name}}</p>
+                {{#if this.preview_url}}
+                    <p>{{this.name}}</p>
 
-                <audio 
-                            controls
-                            src="{{this.preview_url}}">
-                </audio>
-            {{else}}
-            <p>{{this.name}}</p>
-            <p>Sorry no free preview.</p>
+                    <audio 
+                                controls
+                                src="{{this.preview_url}}">
+                    </audio>
+                {{else}}
             {{/if}}
         {{/each}}
     </div>

@@ -1,15 +1,21 @@
-<main class="artists-container">
+<main class="view-container">
     
     {{#each artistsObject}}
-        <img 
-                    src="{{this.images.0.url}}" 
-                    alt="Artists-Image">
-
+        <div>
+            {{#if this.images.0.url}}
+                <img 
+                        src="{{this.images.0.url}}" 
+                        alt="Artists-Image">
+            {{/if}}
+            
             <p>{{this.name}}</p>
-
-            <a href="/albums/{{this.id}}">
-                <button type="submit">View Albums</button>
-            </a>
+                
+            
+                <a href="/albums/{{this.id}}">
+                    View Albums
+                </a>
+        
+        </div>
     {{/each}}
 
 </main>

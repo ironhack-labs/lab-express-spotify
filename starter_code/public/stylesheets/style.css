@@ -1,0 +1,89 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    display: flex;
+    width: 100%;
+    background-image: url('../images/landing.jpg') ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Roboto', "Times New Roman", Times, Arial, Helvetica, sans-serif;
+}
+
+main {
+    background-color: #ffffff;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    margin: 300px auto 0 auto;
+}
+
+.home-container {
+    display: flex;
+    justify-content: center;
+    height: 130px;
+    background-color: rgba( 255, 255, 255, 0.6);
+}
+
+.home-container form {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 20px;
+}
+
+.home-container input {
+    line-height: 1.5em;
+    margin: 30px auto 20px auto;
+}
+
+.home-container button, .view-container a {
+    display:  inline-block;
+    background-color: rgba(240, 75, 53, 0.6);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 2px;
+    text-decoration: none;
+    color: #ffffff;
+    margin: 20px auto;
+}
+
+.home-container button:hover, .view-container a:hover  {
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+            
+.view-container {
+    margin: 30px;
+}
+
+.view-container img {
+    width: 300px;
+    display: flex;
+    margin-bottom: 20px;
+}
+
+.view-container div {
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(68, 64, 64, 0.6);
+    margin: 30px;
+    justify-content: center;
+    max-width: 300px;
+}
+
+.view-container p {
+    color: antiquewhite;
+    display: flex;
+    padding: 10px;
+    justify-content: center;
+}
+
+
+
