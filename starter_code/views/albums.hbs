@@ -1,11 +1,11 @@
 <main class="albums-container">
     
-    {{#each albums}}
+    {{#each albumsObject}}
         <img src="{{this.images.0.url}}" alt="Album-Image">
 
             <p>{{this.name}}</p>
 
-            <a href="/albums/{{this.id}}">
+            <a href="/tracks/{{this.id}}">
                 <button type="submit">View Tracks</button>
             </a>
     {{/each}}
