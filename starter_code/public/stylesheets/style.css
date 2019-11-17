@@ -3,6 +3,7 @@
     padding: 0;
 }
 
+
 body {
     display: flex;
     max-width: 100%;
@@ -90,7 +91,7 @@ main {
 }
 
 .tracks-container {
-    width: 80%;
+    width: 60%;
     display: flex;
     flex-direction: column;
     margin: 150px auto 0 auto;
@@ -114,6 +115,7 @@ main {
     padding: 10px;
     color: black;
     margin: 10px;
+    
 }
 
 #track > audio {
