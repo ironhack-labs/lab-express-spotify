@@ -1,19 +1,13 @@
 <main class="artists-container">
+    
     {{#each artistsObject}}
-
-
-        
-
         <img src="{{this.images.0.url}}" alt="Artists-Image">
 
-        <div>        
             <p>{{this.name}}</p>
-
-            <p>{{this.id}}</p>
 
             <a href="/albums/{{this.id}}">
                 <button type="submit">View Albums</button>
             </a>
-        </div>   
     {{/each}}
+
 </main>
