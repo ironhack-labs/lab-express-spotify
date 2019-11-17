@@ -1,7 +1,9 @@
 <main class="albums-container">
     
     {{#each albumsObject}}
-        <img src="{{this.images.0.url}}" alt="Album-Image">
+        <img 
+                    src="{{this.images.0.url}}" 
+                    alt="Album-Image">
 
             <p>{{this.name}}</p>
 
