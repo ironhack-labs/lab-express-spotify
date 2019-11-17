@@ -42,16 +42,27 @@ app.get( '/artists', ( req, res, next ) => {
     spotifyApi
         .searchArtists( req.query.artists )
         .then( data  => {
-            console.log( 'SEARCH RESULT -> ', data.body.artists.items[0].url );
-            res.render( 'artists', {artistsItem: data.body.artists.items} );
+           // console.log( 'SEARCH RESULT -> ', data.body.artists);
+            res.render( 'artists', {artistsObject: data.body.artists.items} );
         })
         .catch( (err) => console.log( 'Error appeared:', err));
 })
 
+app.get( '/albums/:artistId', ( req, res, next ) => {
+    spotifyApi
+        .getArtistAlbums( req.params.artistId )
+            .then( data  => {
+                console.log('ALBUM RESULT ->', data.body );
+                res.render( 'albums', {albums: data.body });
+            })
+            .catch( (err) => console.log('Error', err));
+})
+
+
 app.get( '/', ( req, res, next) => {
     res
         .status(200)
-        .render('index')
+        .render('home')
 })
 
 
