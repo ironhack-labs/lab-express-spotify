@@ -1,0 +1,68 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    
+}
+.home-container {
+    background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display:flex;
+    justify-content: center;
+    align-content: center;
+}
+.form-container {    
+    width: 50%;
+    background-color: rgba(255, 255, 255, 0.6);
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+form {
+    text-align: center;
+    width: 100%;
+}
+input {
+    width: 80%;
+    display: block;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid rgba(0,0,0,.15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    margin:auto;
+}
+form > button {
+    width: 25%;
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    border: 1px solid transparent;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    border-radius: .25rem;
+    transition: all .15s ease-in-out;
+}
+form > button:hover {
+    background-color: white;
+    color: #f66;
+    border:solid 1px #f66;
+}
