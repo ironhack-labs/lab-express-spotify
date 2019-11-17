@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat&display=swap");
+
+html {
+    background-color: #191414;
+    font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+}
+
+h2 {
+    font-family: "Montserrat", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    color: white;
+}
+
+/*-- index page -- */
+
+.main-index {
+    height: 1080px;
+    background-image: url("../images/bg-home.jpeg");
+    background-size: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-content: center;
+}
+
+/*-- artist + album page -- */
+
+.card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    background-color: #1db954;
+}
+
+.card-list {
+    /*background-color: white;*/
+    margin: 15px 20px;
+    padding: 0px 0px 0px 0px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    padding: 0px 0px 10px 0px;
+    height: 360px;
+    width: 280px;
+}
+
+.card-list li {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    padding: 5px 0px 0px 0px;
+}
+
+.card-list img {
+    width: 280px;
+}
+
+.card-list a {
+    text-decoration: none;
+    background-color: #191414;
+    color: white;
+    padding: 5px 10px;
+    font-size: 15px;
+    border: solid 1px black;
+    border-radius: 15px;
+}
+
+/*-- track page -- */
+
+.track-container {
+    display: flex;
+    flex-direction: column;
+    background-color: #1db954;
+}
+
+.track-items {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-content: center;
+    margin: 10px 0px;
+    padding: 5px 20px;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-content: center;
+}
+
+.tracks h2 {
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    color: white;
+}

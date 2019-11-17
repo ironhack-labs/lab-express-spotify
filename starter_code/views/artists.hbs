@@ -1,26 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Artist search</title>
-</head>
-<body>
-    <div>
+
+<h1>Results...</h1>
+
+<div class="card">
+
+
     {{#each artists}}
-    <ul class="artist-page">
-    <li> Name: {{ this.name }} 
-        <br>
-        <img src='{{ this.images.1.url }}' alt="{{ this.name }} ">
-    </li>
-    <li> <a href='/albums/{{id}}'>View albums</a></li>
+    <ul class="card-list">
+        <li><img src='{{ this.images.1.url }}' alt="{{ this.name }} "></li>
+        <li> {{ this.name }} </li>
+        <li> <a href='/albums/{{id}}'>View albums</a></li>
     </ul>
-    
+
     {{/each}}
-</div> 
-
-</body>
-</html>
-
-
+</div>
