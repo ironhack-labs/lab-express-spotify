@@ -205,17 +205,17 @@ table {
 
 
 .albums{
-
     display: flex;
-
-
+    height: 300px;
+    width: 300px;
 }
+
 
 .album-img {
     width: 100%;
 }
 
-  .album-info-container {
+  .album-container {
     background-color: #4D4D4D;
     text-align: center;
     padding-bottom: 10px;
@@ -228,10 +228,14 @@ table {
     padding: 10px;
   }
   
-  .album-info-container a {
+  .album-info-container a{
     color: #fff;
     font-size: 12px;
     background-color: #F86967;
     border-radius: 5px;
     padding: 4px 10px;
+  }
+
+  .tracks{
+      display: flex;
   }
