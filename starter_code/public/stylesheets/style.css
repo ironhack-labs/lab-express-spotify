@@ -163,9 +163,8 @@ table {
   .artists-container{
 
     display: flex;
-    height: 300px;
-    width: 300px;
-
+    flex-wrap: wrap;
+    height: 400px;
 
   }
 
@@ -207,7 +206,7 @@ table {
 .albums{
     display: flex;
     height: 300px;
-    width: 300px;
+    
 }
 
 
@@ -239,3 +238,4 @@ table {
   .tracks{
       display: flex;
   }
+

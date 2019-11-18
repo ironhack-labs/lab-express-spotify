@@ -1,12 +1,14 @@
-<div class="artists-container">
-    {{#each arrayArtist}}
-    <div class="artist-container">
-        <img  class ="artist-img" src={{{this.images.1.url}}} alt="">
-        <div class="artist-info-container">
-            <p>{{{this.name}}}</p>
-            <a href="/albums/{{this.id}}">View Albums</a>
+<div class="prueba">
+    <div class="artists-container">
+        {{#each arrayArtist}}
+        <div class="artist-container">
+            <img class="artist-img" src={{{this.images.1.url}}} alt="">
+            <div class="artist-info-container">
+                <p>{{{this.name}}}</p>
+                <a href="/albums/{{this.id}}">View Albums</a>
+            </div>
         </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>
 {{!-- {{> artistCard this}} --}}
