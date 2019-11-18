@@ -1,0 +1,26 @@
+.index{
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.index > * {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.index button {
+    padding: 1vh 2vw;
+    width: 70%;
+}
+
+.index input {
+    border-radius: 2px;
+    border: none;
+    width: 40vw;
+    padding: 1vh 2vw
+}

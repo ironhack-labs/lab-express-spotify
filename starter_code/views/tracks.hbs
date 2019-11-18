@@ -1,0 +1,19 @@
+<h1>Tracks</h1>
+
+{{#each tracks}}
+    <p>{{this.name}}</p>
+        <button class="{{this.id}}">Play Me!</button>
+    <audio class="audio-{{this.id}}" src="{{this.preview_url}}"></audio>
+{{/each}}
+
+<script>
+    var playButtons = document.querySelectorAll("button")
+    playButtons.forEach(button=>{
+        button.addEventListener("click", (e)=>{
+            var musicToPlay = document.querySelector(`.audio-${button.className}`)
+            musicToPlay.play();
+        })
+    })
+
+</script>
+
