@@ -33,7 +33,9 @@ const spotifyApi = new SpotifyWebApi({
       console.log("Something went wrong when retrieving an access token", error);
     });
 
+// set the static folder for partials
 
+    hbs.registerPartials( __dirname + '/views/partials');
 
 
 

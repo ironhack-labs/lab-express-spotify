@@ -1,18 +1,13 @@
 <div>
+    <h2>artist list</h2>
  <main class="cards-container">
 
-<h2>artist list</h2>
+
 
     {{#each artistsList}}
-    <img src="{{images.0.url}}" alt="artist image">
     
-    <p>{{name}}</p>
+    {{> artistsCard this}}
     
-    
-    
-     <a href="/albums/{{uri}}">View Albums</a><br>
-
-
     {{/each}}
 
 </main>
