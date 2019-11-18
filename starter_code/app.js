@@ -2,7 +2,7 @@ require('dotenv').config()
 
 const express = require('express');
 const hbs = require('hbs');
-const bodyParser = require('body-parser')
+// const bodyParser = require('body-parser')
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -19,6 +19,8 @@ const spotifyApi = new SpotifyWebApi({
   app.set('view engine', 'hbs');
   app.set('views', __dirname + '/views');
   app.use(express.static(__dirname + '/public'));
+//   app.use(express.static(path.join(__dirname, 'public')));
+  hbs.registerPartials(__dirname + '/views/partials');
   
   
   // setting the spotify-api goes here:
@@ -32,22 +34,36 @@ spotifyApi
   console.log("Something went wrong when retrieving an access token", error);
 });
 
-
 // the routes go here:
 
 app.get('/artists',(req, res, next) => {
     spotifyApi
       .searchArtists(req.query.artists)
        .then(data => {
-     console.log("The received data from the API: ", data.body.artists.items );
+      console.log("The received data from the API: ", data.body.artists.items );
      res.render("artists", { artists: data.body.artists.items });
    })
    .catch(err => {
      console.log("The error while searching artists occurred: ", err);
    });
-  console.log(req.params.artists, req.query.artists);
+//   console.log(req.params.artists, req.query.artists);
 
 });
+
+app.get("/albums", (req, res, next) => {
+
+    spotifyApi
+    .getArtistAlbums(req.query.id)
+    .then(data => {
+        res.render("albums", {albums: data.body.items})
+        },
+        function(err) {
+          console.error(err);
+        }
+      );
+
+});
+
 
     // res.send(req.params, req.query);
 
@@ -56,10 +72,6 @@ app.get('/', (req, res) => {
       .status(200)
       .render('index')
   });
-
-
-
-
 
 
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));

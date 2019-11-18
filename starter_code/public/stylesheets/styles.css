@@ -1,0 +1,42 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    background: url('https://www.talkingbull.org/wp-content/uploads/2019/02/MusicCrowd.jpg') no-repeat;
+    background-size: cover;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    margin-top: 350px;
+    background: rgba(255, 255, 255, 0.4);
+    padding: 80px 200px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form > input {
+    width: 500px;
+    height: 50px;
+}
+
+button {
+    display: flex;
+    padding: 20px 20px;
+    font-size: 1.5rem;
+    width: fit-content;
+    margin-top: 30px;
+    background-color: rgb(228, 98, 98);
+    color: white;
+    border: none;
+}

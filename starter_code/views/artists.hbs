@@ -5,15 +5,16 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta http-equiv="X-UA-Compatible" content="ie=edge">
    <title>Artist search</title>
+   <link rel="stylesheet" href="stylesheets/artists.css">
 </head>
 <body>
-   <div>
+   <div class="artist-container">
    {{#each artists}}
    <li> Name: {{ this.name }}
        <br>
        <img src="{{ this.images.1.url }}" alt="">
    </li>
-   <button>View albums</button>
+   <button><a href="/albums?id={{this.id}}">View albums</a></button>
    {{/each}}
 </div>
 </body>

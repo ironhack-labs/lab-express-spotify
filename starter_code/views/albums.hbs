@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+
+    <h1>albums page</h1>
+
+<div>
+   {{#each albums}}
+   <li> Name: {{ this.name }}
+       <br>
+    <img src="{{ this.images.1.url }}" alt="">
+   </li>
+   {{/each}}
+</div>
+
+</body>
+</html>
