@@ -85,7 +85,7 @@ const spotifyApi = new SpotifyWebApi({
     
         spotifyApi.getAlbumTracks(result2, { limit : 5, offset : 1 })
         .then(data => {
-                console.log('album tracks',data.body.items);
+               // console.log('album tracks',data.body.items);
                 res.render('tracks',{tracksList:data.body.items});
             })
         .catch(err => {
