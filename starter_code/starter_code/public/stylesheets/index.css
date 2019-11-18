@@ -1,0 +1,12 @@
+body {
+  margin: 0;
+  background-color: brown;
+}
+
+.land {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  /* background-image: url("../images/"); */
+  background-color: aquamarine;
+}

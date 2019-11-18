@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  if albumes 
+    //-  each album in albumes
+    h1="Albums for: "+(artistname?artistname:" ?")
+    each album in albumes
+      img(src=album.images[0].url)
+      p=album.name
+      a(href="/album/"+album.id+"/tracks") Ver Pistas
+  else
+    p No hay albumes asociados

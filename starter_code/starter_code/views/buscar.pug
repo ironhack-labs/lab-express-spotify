@@ -1,0 +1,17 @@
+
+extends layout
+
+block styles
+  link(type="stylesheet" href="/stylesheets/buscar.css")
+
+block content
+  if artistas
+    each artista in artistas
+      //- img(src=artista.imgurl)
+      h2=artista.name
+      a(href="/albumes/"+artista.id)  Ver Más
+  else
+    p No matches found
+      //-Error
+
+//- else mostrar 

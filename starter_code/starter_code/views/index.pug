@@ -1,0 +1,9 @@
+extends layout
+
+block styles
+  link(type="stylesheet" href="/stylesheets/index.css")
+block content
+  section(class="land")
+    form(action="/buscar" method="post")
+      input(type="text" name="name")
+      button(type="submit") Buscar

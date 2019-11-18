@@ -1,0 +1,19 @@
+{
+  "name": "starter_code",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "dev": "nodemon index.js -e,pug",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.1.0",
+    "express": "^4.17.1",
+    "pug": "^2.0.4",
+    "spotify-web-api-node": "^4.0.0"
+  }
+}
