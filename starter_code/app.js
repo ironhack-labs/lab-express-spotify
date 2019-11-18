@@ -50,10 +50,24 @@ app.get('/artists',(req, res, next) => {
 
 });
 
-app.get("/albums", (req, res, next) => {
+// app.get("/albums", (req, res, next) => {
+
+//     spotifyApi
+//     .getArtistAlbums(req.query.id)
+//     .then(data => {
+//         res.render("albums", {albums: data.body.items})
+//         },
+//         function(err) {
+//           console.error(err);
+//         }
+//       );
+
+// });
+
+app.get("/albums/:artistId", (req, res, next) => {
 
     spotifyApi
-    .getArtistAlbums(req.query.id)
+    .getArtistAlbums(req.params.artistId)
     .then(data => {
         res.render("albums", {albums: data.body.items})
         },
@@ -63,7 +77,6 @@ app.get("/albums", (req, res, next) => {
       );
 
 });
-
 
     // res.send(req.params, req.query);
 
