@@ -7,7 +7,6 @@ const hbs = require('hbs');
 const SpotifyWebApi = require("spotify-web-api-node");
 
 
-
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -35,11 +34,7 @@ spotifyApi
     });
 
 
-
-
-
 // the routes go here:
-
 app.get( '/artists', ( req, res, next ) => {
     spotifyApi
         .searchArtists( req.query.artists )
@@ -64,12 +59,11 @@ app.get( '/tracks/:albumId', ( req, res, next ) => {
     spotifyApi
         .getAlbumTracks( req.params.albumId ) 
             .then( data => {
-                console.log('TRACK RESULT ->', data.body.items);
+                // console.log('TRACK RESULT ->', data.body.items);
                 res.render( 'tracks', { tracksObject: data.body.items})
                 
             }) 
 })
-
 
 app.get( '/', ( req, res, next) => {
     res
