@@ -68,6 +68,7 @@ input {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  /* height: 200px; */
   justify-content: space-between;
   padding: 10px 80px;
   margin-bottom: 20px;
