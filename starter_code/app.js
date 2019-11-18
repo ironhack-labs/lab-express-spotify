@@ -46,7 +46,6 @@ app.get('/artists',(req, res, next) => {
    .catch(err => {
      console.log("The error while searching artists occurred: ", err);
    });
-//   console.log(req.params.artists, req.query.artists);
 
 });
 
@@ -75,10 +74,7 @@ app.get("/albums/:artistId", (req, res, next) => {
           console.error(err);
         }
       );
-
 });
-
-    // res.send(req.params, req.query);
 
 app.get('/', (req, res) => {
     res

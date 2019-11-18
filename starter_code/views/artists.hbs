@@ -1,14 +1,4 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-   <meta charset="UTF-8">
-   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-   <title>Artist search</title>
-   <link rel="stylesheet" href="stylesheets/artists.css">
-</head>
-<body>
-   <div class="artist-container">
+<div class="artist-container">
    {{#each artists}}
    <li> Name: {{ this.name }}
        <br>
@@ -17,5 +7,3 @@
    <button><a href="/albums/{{this.id}}">View albums</a></button>
    {{/each}}
 </div>
-</body>
-</html>
