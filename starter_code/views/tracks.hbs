@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row header-row">
+        <span class="col-lg-8">Title</span>
+        <span class="col-lg-4">Listen</span>
+    </div>
+        {{#each tracks}}
+        <div class="row bg-gray">
+        <audio class="col-lg-12"
+            src="{{this.preview_url}}" controls>
+            Your browser does not support the audio tag.
+            <code>{{this.preview_url}}</code>.
+    </audio>
+    <p class="col-lg-12">{{this.name}}</p>
+    </div>
+    {{/each}}
+
+</div>
