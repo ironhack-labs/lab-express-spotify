@@ -2,3 +2,4 @@
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
 .env
+.DS_Store
