@@ -1,0 +1,38 @@
+<div class="container menu-artists">
+    <div class="row">
+        {{#each artists}}
+        <div class="col-sm mb-4 mt-3 d-flex justify-content-center">
+
+            <div class="card " style="width: 18rem;">
+
+
+                <img src="{{this.images.0.url}}" onerror="this.src='../images/logo-image.png'" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+
+                    <p>Followers: <span></span>{{this.followers.total}}</span></p>
+                    <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
+
+
+
+
+
+
+{{!-- <div class="container">
+    <div class="row d-flex flex-wrap">
+        <div class="col">
+            
+                </div>
+            </div>
+        </div>
+    </div>
+</div> --}}

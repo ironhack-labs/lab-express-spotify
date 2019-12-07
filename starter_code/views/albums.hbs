@@ -1,0 +1,24 @@
+{{!-- <h1>ALBUMS</h1> --}}
+
+<div class="container menu-artists">
+    <div class="row">
+        {{#each albums}}
+        <div class="col-sm mb-4 mt-3 d-flex justify-content-center">
+
+            <div class="card " style="width: 18rem;">
+
+
+                <img src="{{this.images.0.url}}" onerror="this.src='../images/logo-image.png'" class="card-img-top"
+                    alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+
+                    <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
+
+                </div>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

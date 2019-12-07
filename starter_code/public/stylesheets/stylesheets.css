@@ -1,0 +1,43 @@
+.menu-back {
+  background-image: url("../images/crowd.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 800px;
+  width: 100%;
+}
+
+.menu {
+  height: 650px;
+}
+
+.white {
+  background-color: rgb(83, 83, 83);
+  opacity: 0.9;
+  margin-top: 250px;
+  height: 200px;
+  width: 400px;
+  margin-left: 370px;
+}
+
+h1 {
+  color: #1db954;
+}
+
+.btn-menu {
+  border-radius: 40px;
+  width: 100px;
+  margin-left: 30px;
+}
+
+.search-bar {
+  width: 250px;
+}
+
+.menu-artists {
+  background-color: #191414;
+}
+
+.card {
+  background-color: #1db954;
+  color: white;
+}
