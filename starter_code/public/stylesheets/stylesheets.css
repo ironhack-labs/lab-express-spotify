@@ -21,6 +21,7 @@
 
 h1 {
   color: #1db954;
+  text-align: center;
 }
 
 .btn-menu {
@@ -40,4 +41,13 @@ h1 {
 .card {
   background-color: #1db954;
   color: white;
+}
+
+figcaption {
+  color: white;
+}
+
+p {
+  color: white;
+  text-align: center;
 }

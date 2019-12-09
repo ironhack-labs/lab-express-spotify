@@ -1,13 +1,22 @@
 <h1>TRACKS</h1>
 
+<div class="container" style="background-color: #1db954;">
+    <div class="row">
 
-{{#each tracks}}
-<figure>
-    <figcaption>{{this.name}}</figcaption>
-    <audio controls src="{{this.preview_url}}">
-        Your browser does not support the
-        <code>audio</code> element.
-    </audio>
-</figure>
+        {{#each tracks}}
+        <div class="col">
+            <figure>
 
-{{/each}}
+                <p>{{this.track_number}}</p>
+                <figcaption>{{this.name}}</figcaption>
+                <br>
+                <audio controls src="{{this.preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </figure>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
