@@ -7,11 +7,13 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "hbs": "^4.0.6",
+    "nodemon": "^2.0.2",
     "spotify-web-api-node": "^4.0.0"
   },
   "devDependencies": {},
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1", 
+    "dev": "nodemon app.js"
   },
   "author": "",
   "license": "ISC"
