@@ -1,0 +1,17 @@
+ {{#each albumData}}
+
+    <div class="albums">
+
+        {{#each this.images}}
+        {{#if @first}}
+        <img src={{url}} width=300 height=300 alt="">
+        {{/if}}
+        {{/each}}
+
+        {{ name }}
+
+        <a href="/tracks/{{ id }}">View Tracks</a>
+
+    </div>
+
+    {{/each}}
