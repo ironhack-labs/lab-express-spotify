@@ -1,0 +1,18 @@
+<div id= "artistsCards">
+    {{#each artistResult.body.artists.items }}
+    <div>
+    {{#each this.images}}
+    {{#if @first}}
+    <img src="{{this.url}}" width="{{this.width}}" height="{{this.height}}" alt="">
+    {{/if}}
+    {{/each}}
+    <p>{{this.name}}</p>
+    <button>
+    <a href="/albums.hbs/{{this.id}}">View Albums</a>
+    </button>
+    </div>
+    {{/each}}
+   
+</div>
+
+
