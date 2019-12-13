@@ -69,12 +69,26 @@ spotifyApi
 const queryResult = data.body.items;
   // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   res.render('albums',{queryResult});
-  
 })
 .catch(err => {
   console.log('The error while searching artists occurred: ', err);})
 })
 
+//get Album Tracks
+app.get('/tracks/:albumId', (req, res, next) => {
+  //console.log (req.query.artist);
+spotifyApi.
+getAlbumTracks(req.params.albumId)
+
+  .then(data=> {
+    const queryResult = data.body.items;
+    console.log("Anzahl Tracks" +data.body.items.length);
+    res.render('tracks',{queryResult});
+  })
+  .catch (err=> {
+    console.log('Something went wrong!', err);
+  });
+})
 
 
 app.listen(3000, () =>{
