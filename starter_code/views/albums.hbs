@@ -1,8 +1,11 @@
-
-<h1>bla</h1>
 <div class="Albums">
-{{#each album.id}}
+    {{#each testResult}}
+        {{#each images}}
+            {{#if @first}}
+                <img src="{{url}}" alt="noPicHere">
+            {{/if}}
+        {{/each}}
     <p>{{name}}</p>
     <p><button><a href="{{external_urls.spotify}}">View Tracks</a></button></p>
-{{/each}}
+    {{/each}}
 </div>

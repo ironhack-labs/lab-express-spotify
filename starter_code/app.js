@@ -44,14 +44,14 @@ spotifyApi
     
   });
 
-app.get('/albums/artist:Id', (req, res, next) => {
-  console.log(req.params.artistId)
+app.get('/albums/:artistId', function (req, res, next){
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then(data => {
     const testResult = data.body.items;
     res.render('albums', {testResult});
   })
-  .catch(err => {console.log("FEHLER !", err)});
+  .catch(err => {console.log("FEHLER !", err);
+  });
 });
 
 
