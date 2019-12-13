@@ -1,0 +1,8 @@
+<div class="main-btn" onclick="location.href='/';">HOME</div>
+<hr>
+<h1>Albums for: {{artist}}</h1>
+<div class="cards">
+    {{#each items}}
+    {{> infocard this }}
+    {{/each}}
+</div>

@@ -1,0 +1,30 @@
+<div class="main-btn" onclick="location.href='/';">HOME</div>
+<hr>
+<div class="flex-c">
+    <div class="flex-column-c w-800px index-input">
+        <table class="track-tab">
+            <thead>
+                <th>Title</th>
+                <th>Listen</th>
+            </thead>
+            <tbody>
+            {{#each items}}
+                <tr>
+                    <td>{{name}}</td>
+                    <td>
+                        <audio
+                            controls
+                            src="{{url}}">
+                            Your browser does not support the <code>audio</code> element.
+                        </audio>
+                    </td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+
+
+

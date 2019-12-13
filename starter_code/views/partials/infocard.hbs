@@ -1,0 +1,9 @@
+<div class="infocard">
+    {{#with image}}
+        <img src="{{url}}" width="{{width}}" height="{{height}}" alt="no picture available">
+    {{/with}}
+    <div class="bkg-dgray">
+        <h3>{{name}}</h3>
+        <div class="main-btn" onclick="location.href='/{{ref_page}}/{{ref_id}}';">View {{info_type}}</div>
+    </div>
+</div>
