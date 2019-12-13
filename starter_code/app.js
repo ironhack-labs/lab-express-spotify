@@ -43,8 +43,16 @@ spotifyApi
     });
     
   });
-  
 
+app.get('/albums/artist:Id', (req, res, next) => {
+  console.log(req.params.artistId)
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    const testResult = data.body.items;
+    res.render('albums', {testResult});
+  })
+  .catch(err => {console.log("FEHLER !", err)});
+});
 
 
 app.listen(3000, () =>
