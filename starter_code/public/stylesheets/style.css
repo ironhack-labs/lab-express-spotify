@@ -1,8 +1,18 @@
-h1{
-    color: red;
+
+
+.album_tile{
+    display: flex;
+    flex-wrap: wrap;
 }
 
-body{
-    background-image: url('/images/Hintergrund.jpg');
-    background-repeat: no-repeat;
+
+.album_tile div{
+    margin: 5rem;
+    width: 10vw;
+    height: auto;
+}
+
+.img {
+   height: 200px;
+   width: auto;
 }

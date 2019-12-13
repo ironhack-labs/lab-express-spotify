@@ -2,7 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
-
+hbs.registerPartials(__dirname + '/views/partials');
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -31,28 +31,46 @@ spotifyApi
 
 
 // the routes go here:
-
 app.get('/',(request , response) => {
   response.render('index');
 });
 
 app.get('/artists',(request , response) => {
-  console.log(request.query);
-  response.render('artists', request.query);
-});
-
-app.get('/albums', (request,response) => {
-    spotifyApi.searchArtists(request.query.artist)
+  spotifyApi.searchArtists(request.query.artist)
     .then((data) => {
-      console.log('The received data from the API: ', data.body);
-      response.send(data.body);
+      let test = data.body.artists.items;
+      response.render('artists', {test});
     })
     .catch(error => {
       console.log('Something went wrong when retrieving an access token', error);
     });
 });
 
+app.get('/albums', (request,response) => {
+    spotifyApi.getArtistAlbums(request.query.artistId)
+    .then((data) => {
+      //console.log(request.query.artistId);
+      //console.log('The received data from the API: ', data.body.items);
+      let test = data.body.items;
+      response.render('albums', {test});
+    })
+    .catch(error => {
+      console.log('Something went wrong when retrieving an access token', error);
+    });
+});
 
+app.get('/tracks', (request,response) => {
+  spotifyApi.getAlbumTracks(request.query.albumId)
+  .then((data) => {
+    //console.log(request.query.albumId);
+    //console.log('The received data from the API: ', data.body.items);
+    let test = data.body.items;
+    response.render('tracks', {test});
+  })
+  .catch(error => {
+    console.log('Something went wrong when retrieving an access token', error);
+  });
+});
 
 // Spotify Artist search
 

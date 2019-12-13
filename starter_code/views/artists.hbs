@@ -1,3 +1,7 @@
-
 <h1>Artists</h1>
-<a href="/albums?artist={{artist}}">View Albums</a>
+
+<div class="album_tile">
+    {{#each test}}
+    {{> artistPartial}}
+    {{/each}}
+</div>

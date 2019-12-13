@@ -1,0 +1,10 @@
+<div>
+    <p><a href="{{href}}">{{name}}</a></p>
+    {{#each images}}
+        {{#if @last}}
+        <p><img class="img" src="{{url}}" alt="pic"></p>
+        {{/if}}
+    {{/each}}
+    <p><a href="/tracks?albumId={{id}}">View Tracks</a></p>
+</div>
+
