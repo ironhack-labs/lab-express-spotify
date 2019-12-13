@@ -1,0 +1,12 @@
+
+<div class="Artists">
+{{#each artists.items}}
+    {{#each images}}
+        {{#if @last}}
+            <img src="{{url}}" alt="">
+        {{/if}}
+    {{/each}}
+    <p>{{name}}</p>
+    <p><button><a href="{{external_urls.spotify}}">View Albums</a></button></p><br>
+{{/each}}
+</div>
