@@ -1,0 +1,12 @@
+
+<figure>
+    
+    {{#each tracksResult.body.items}}
+    <figcaption>
+        {{this.name}}
+    </figcaption>
+        <audio controls>
+            <source src="{{this.preview_url}}">No preview available</audio>
+    
+    {{/each}}
+</figure>

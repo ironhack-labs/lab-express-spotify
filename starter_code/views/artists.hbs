@@ -1,4 +1,4 @@
-<div id= "artistsCards">
+<div class= "cards">
     {{#each artistResult.body.artists.items }}
     <div>
     {{#each this.images}}
@@ -8,7 +8,7 @@
     {{/each}}
     <p>{{this.name}}</p>
     <button>
-    <a href="/albums.hbs/{{this.id}}">View Albums</a>
+    <a href="/albums/{{this.id}}">View Albums</a>
     </button>
     </div>
     {{/each}}

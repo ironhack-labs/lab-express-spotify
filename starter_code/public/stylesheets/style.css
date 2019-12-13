@@ -1,4 +1,4 @@
-#artistsCards {
+.cards {
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
@@ -7,7 +7,7 @@
     flex-wrap: wrap;
 }
 
-#artistsCards div {
+.cards div {
     width: 22vw;
     height: 20vw;
     border: 2px solid black;
@@ -19,7 +19,7 @@
     align-items: center ;
 }
 
-#artistsCards img {
+.cards img {
     width: auto;
     height: 15vw;
     

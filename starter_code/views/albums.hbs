@@ -1,0 +1,19 @@
+
+<div class= "cards">
+    {{#each albumResult.body.items }}
+    <div>
+
+    {{#each this.images}}
+    {{#if @first}}
+    <img src="{{this.url}}" width="{{this.width}}" height="{{this.height}}" alt="">
+    {{/if}}
+    {{/each}}
+
+    <p>{{this.name}}</p>
+    <button>
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+    </button>
+    </div>
+    {{/each}}
+   
+</div>
