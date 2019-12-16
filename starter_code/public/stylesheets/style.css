@@ -22,7 +22,7 @@ html, body {
 
 /* ----------------------------------- */
 
-h1, h2, h3, h4, h5, h6, p, hr { margin: 0; }
+h1, h2, h3, h4, h5, h6, p, hr, img { margin: 0; }
 
 /* ----------------------------------- */
 
@@ -69,7 +69,7 @@ h1, h2, h3, h4, h5, h6, p, hr { margin: 0; }
     flex-direction: column;
     align-items: center;
 }
-.flex-column-r {
+.flex-column-b {
     display: flex;
     flex-direction: column;
     align-items: flex-end;
@@ -111,6 +111,7 @@ h1, h2, h3, h4, h5, h6, p, hr { margin: 0; }
 }
 
 .index-input{
+    margin: 20px;
     padding:50px 0;
     background-color: #ffffff33;
     text-align: center;
