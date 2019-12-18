@@ -28,6 +28,27 @@ spotifyApi
     console.log('Something went wrong when retrieving an access token', error);
   });
 // the routes go here:
+app.get('/artist', function (req, res) {
+  spotifyApi
+  .searchArtists('The Beatles')
+  .then(data => {
+    console.log('The received data from the API: ', data.body);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+  })
+  .catch(err => {
+    console.log('The error while searching artists occurred: ', err);
+  });
+
+  res.send(req.query); //query string
+});
+
+app.get('/', function (req, res) {
+  res.render('layout'); //query string
+});
+
+
+
+
 
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
