@@ -5,22 +5,14 @@ const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
+
 const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-
-// credentials are optional
-// const spotifyApi = new SpotifyWebApi({
-//   clientId: '6f0d077187a5464082bfcfcdf7781cd0',
-//   clientSecret: '690539c32d8442e7ac07f856355fc148',
-//   redirectUri: 'http://www.example.com/callback'
-// });
-
-
-// the routes go here:
+// setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
 	clientId: process.env.CLIENT_ID,
 	clientSecret: process.env.CLIENT_SECRET
@@ -37,6 +29,7 @@ spotifyApi
 	});
 
 
+// the routes go here:
 app.get('/', function (req, res) {
   	res.render("index");
 })
@@ -52,9 +45,6 @@ app.get('/artists', function (req, res){
 		
 	res.send(req.query);
 })
-
-
-
 
 // Get an artist
 
