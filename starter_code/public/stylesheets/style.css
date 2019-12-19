@@ -1,0 +1,29 @@
+body {
+    margin: 0;
+  }
+
+  /* Home Page */
+  .home-container {
+    background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+  }
+
+  .home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+  }
+
+  .home-search {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    background-color: blue;
+    border: 1px solid blue;
+  }
