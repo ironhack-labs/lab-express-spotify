@@ -1,0 +1,15 @@
+<div class="row justify-content-center">
+     <div class="col-10">
+          {{#each tracksResult.body.items}}
+          <div class="row mt-5">
+               <div
+                    class="col-12 d-flex justify-content-between p-3 mb-2 bg-dark text-white rounded align-items-center">
+                    <span>{{this.name}}</span>
+                    <figure class="m-0 d-flex align-items-center">
+                         <audio controls src="{{this.preview_url}}">No preview available</audio>
+                    </figure>
+               </div>
+          </div>
+          {{/each}}
+     </div>
+</div>

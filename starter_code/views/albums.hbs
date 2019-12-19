@@ -1,16 +1,17 @@
 <div class="container">
      <div class="row d-flex d-column align-items-end">
-          {{#each artistResult.body.artists.items }}
+          {{#each albumResult.body.items }}
           <div class="col-3 my-5 cards">
                {{#each this.images}}
                {{#if @first}}
-               <img class="figure-img img-fluid rounded" src="{{this.url}}" alt="">
+               <img class="figure-img img-fluid rounded" src="{{this.url}}" width="{{this.width}}"
+                    height="{{this.height}}" alt="">
                {{/if}}
                {{/each}}
                <div class="d-flex flex-column align-items-center">
                     <p class="my-2">{{this.name}}</p>
                     <button type="button" class="btn btn-dark d-block views-btn">
-                         <a class="views" href="/albums/{{this.id}}">View Albums</a>
+                         <a class="views-a" href="/tracks/{{this.id}}">View Tracks</a>
                     </button>
                </div>
           </div>
