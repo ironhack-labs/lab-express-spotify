@@ -1,5 +1,5 @@
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
-.env
+starter_code/.env
 .DS_Store
