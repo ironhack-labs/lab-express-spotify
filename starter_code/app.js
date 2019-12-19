@@ -39,9 +39,7 @@ app.get('/artists', function (req, res){
 	spotifyApi
 		.searchArtists(req.query.artists)
 		.then(data => {
-			// console.log(`Search artists: ${req.query.artists}`, data.body);
 			const items = data.body.artists.items;
-			// res.send( { items });
 			res.render("artists", { items });
 		})
 		.catch(err => {
