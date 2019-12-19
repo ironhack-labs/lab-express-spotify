@@ -3,14 +3,18 @@ require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
+const bodyParser = require('body-parser');
 
 // require spotify-web-api-node package here:
 
 const app = express();
 
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+
+app.use(bodyParser.urlencoded({ extended: true })); //activar bodypaser
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -30,8 +34,9 @@ spotifyApi
 // the routes go here:
 app.get('/artist', function (req, res) {
   spotifyApi
-  .searchArtists('The Beatles')
+  .searchArtists({artist})
   .then(data => {
+    //console.log(req)
     console.log('The received data from the API: ', data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
