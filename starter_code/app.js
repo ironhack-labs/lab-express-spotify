@@ -35,15 +35,19 @@ app.get('/', function (req, res) {
 })
 
 app.get('/artists', function (req, res){
-	// Search artists whose name contains 'Love'
-	spotifyApi.searchArtists('Love')
-		.then(function(data) {
-		console.log('Search artists by "Love"', data.body);
-		}, function(err) {
-		console.error(err);
+	spotifyApi
+		.searchArtists(req.query.artists)
+		.then(data => {
+			// console.log(`Search artists: ${req.query.artists}`, data.body);
+			const items = data.body.artists.items;
+			// res.send( {items });
+			res.render("artists", { items });
+		})
+		.catch(err => {
+			console.error(err);
 		});
 		
-	res.send(req.query);
+	// res.send(req.query.artists);
 })
 
 // Get an artist
