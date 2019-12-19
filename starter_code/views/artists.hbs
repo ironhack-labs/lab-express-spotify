@@ -1,11 +1,9 @@
-<div class="cards">
-  {{#each items}}
-  <div class="cards">
-    <figure>
-      <img src='{{images.0.url}}' alt="">
-    </figure>
-    <h3>{{name}}</h3>
-<a href="/albums/{{ id }}">View Albums</a>
-  </div>
-  {{/each}}
-</div>
+
+      {{#each items}}
+ 
+        <img class="img-card" src='{{images.0.url}}' alt="">
+
+          <h3>{{name}}</h3>
+          <a  href="/albums/{{ id }}">View Albums</a>
+ 
+      {{/each}}
