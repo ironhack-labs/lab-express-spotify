@@ -1,0 +1,36 @@
+body {
+    background-image: url("/images/spotify_bgnd.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+}   
+
+
+.parentDiv {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: space-around;
+}
+
+
+.searchDiv{
+    align-items: center;
+    width: 70%;
+    background-color: white;
+    padding: 10px;
+    font-size: 1.5em
+
+}
+
+.submitBtn {
+    background-color: tomato;
+    color: white;
+    border-color: tomato;
+    font-weight: bold;
+}
+
+.inputArtists {
+    width: 25%;
+}

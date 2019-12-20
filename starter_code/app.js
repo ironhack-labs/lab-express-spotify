@@ -29,8 +29,27 @@ spotifyApi
     console.log('Something went wrong when retrieving an access token', error);
   });
 
-  
+
+
 // the routes go here:
+
+app.get('/', (req, res, next) => {
+  res.render('index');
+});
+
+app.get('/artists', (req, res, next) => {
+  spotifyApi
+  .searchArtists(req.query.artistsLookUp) // pega o name do campo input text
+  .then(data => {
+    console.log('The received data from the API: ', data.body);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    res.send (data.body)
+    // res.render("artists", data.body);
+  })
+  .catch(err => {
+    console.log('The error while searching artists occurred: ', err);
+  });
+});
 
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
