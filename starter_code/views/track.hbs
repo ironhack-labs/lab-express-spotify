@@ -1,10 +1,20 @@
-<div class="track">
+<div class="container">
+  <div class="row header-row d-flex flex-row">
+    <div class="col-md-8">
+      <h3>Title</h3>
+    </div>
+    <div class="col-md-4">
+      <h3>Listen</h3>
+    </div>
+  </div>
   {{#each items}}
-  <div class="track">
-    <h3>{{name}}</h3>
-    <audio
-    controls
-    src="{{preview_url}}">
-      </audio>
+  <div class="row track-container">
+    <div class="col-md-8 track-titulo">
+      <p>{{name}}</p>
+    </div>
+    <div class="col-md-4 track-preview">
+      <audio controls src="{{preview_url}}"></audio>
+    </div>
   </div>
   {{/each}}
+</div>

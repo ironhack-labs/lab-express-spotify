@@ -44,6 +44,7 @@ app.get('/artists', (req, res) => {
     // console.log("The received data from the API: ", data.body)
     const { items } = data.body.artists;
     // res.send(data.body)
+
     res.render('artists', { items });
   })
   .catch(err => {

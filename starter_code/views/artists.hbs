@@ -1,9 +1,18 @@
+<div class="container ">
+  <div class="row">
+    {{#each items}}
+    <div class="col-md-4 cards">
+      {{#if images.0.url}}
+      <img class="img-card" src='{{images.0.url}}' alt="">
+      {{else}}
+      <img class="img-card" src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="">
+      {{/if}}
+      <div class="card-titulo">
+        <p>{{name}}</p>
+        <a href="/albums/{{ id }}">View Albums</a>
 
-      {{#each items}}
- 
-        <img class="img-card" src='{{images.0.url}}' alt="">
-
-          <h3>{{name}}</h3>
-          <a  href="/albums/{{ id }}">View Albums</a>
- 
-      {{/each}}
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

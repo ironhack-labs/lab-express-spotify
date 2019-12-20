@@ -1,11 +1,13 @@
-<div class="cards">
-  {{#each items}}
-  <div class="cards">
-    <figure>
-      <img src='{{images.0.url}}' alt="">
-    </figure>
-    <h3>{{name}}</h3>
-<a href="/track/{{ id }}">View Tracks</a>
+<div class="container">
+  <div class="row">
+    {{#each items}}
+    <div class="col-md-4 cards">
+      <img class="img-card" src='{{images.0.url}}' alt="">
+      <div class="card-titulo">
+        <p>{{name}}</p>
+        <a href="/track/{{ id }}">View Tracks</a>
+      </div>
+    </div>
+    {{/each}}
   </div>
-  {{/each}}
 </div>
