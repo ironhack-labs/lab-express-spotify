@@ -1,0 +1,11 @@
+{{#each this}}
+{{#if name}}
+<div class="artist-card">
+    <figure class="artist-image">
+        <img src="{{images.[1].url}}" alt="{{name}}">
+    </figure>
+    <h3>{{name}}</h3>
+    <a href="/albums/{{id}}">View Albums</a>
+</div>
+{{/if}}
+{{/each}}

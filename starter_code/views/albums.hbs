@@ -1,0 +1,13 @@
+<h2>Albums for {{artistName}}</h2>
+
+{{#each albumsArray}}
+{{#if name}}
+<div class="album-card">
+    <figure class="album-image">
+        <img src="{{images.[1].url}}" alt="{{name}}">
+    </figure>
+    <h3>{{name}}</h3>
+    <a href="/albums/{{id}}">View Tracks</a>
+</div>
+{{/if}}
+{{/each}}
