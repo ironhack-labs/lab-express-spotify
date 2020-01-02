@@ -1,0 +1,21 @@
+<figure class="tracks_tile">
+    <div class="tracks_header">
+        <div><h1>Title</h1></div>
+        <div><h1>Listen</h1></div>
+    </figure>
+    {{#each test}}
+    <figure>
+        <div class="previewAudio">
+            <p>{{name}}:</p>
+            <p>
+                <audio
+                controls
+                src="{{preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </p>
+        </div>
+    </figure>
+    {{/each}}
+</div>
