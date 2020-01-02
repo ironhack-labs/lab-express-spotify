@@ -1,9 +1,0 @@
-<div>
-  {{#each images}}
-    {{#if @first}}
-      <p><img class="img" src="{{url}}" alt="img"></p>
-    {{/if}}
-  {{/each}}
-  <p class="noLink"><a href="{{href}}">{{{trimString name}}}</a</p>
-  <p class="link"><a href="/albums?artistId={{id}}">View Albums</a></p>
-</div>
