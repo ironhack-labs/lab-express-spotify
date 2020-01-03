@@ -1,0 +1,48 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.main-index {
+  background-image: url('https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg');
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-format {
+  padding: 70px 150px;
+  /* background-color: rgb(255, 255, 255); */
+  background-color: rgba(255, 255, 255, 0.3);
+  /* background-color: red; */
+  /* background-color: rbga(255, 255, 255, 0); */
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  margin: 10px 0px;
+  width: 400px;
+  font-size: 14px;
+  height: 25px;
+  border-radius: 3px;
+  border: 1px solid darkgray;
+}
+
+button {
+  background-color: tomato;
+  color: white;
+  font-size: 14px;
+  padding: 7px 12px;
+  border: none;
+}
+
