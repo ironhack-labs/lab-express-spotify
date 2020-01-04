@@ -22,6 +22,48 @@ body {
   /* background-color: rbga(255, 255, 255, 0); */
 }
 
+.artists-info {
+  background-color: darkgray;
+}
+
+.artists-page {
+  margin: 10px 150px;
+}
+
+.card {
+  margin: 25px 10px;
+}
+
+.header-tracks {
+  background-color: rgb(65, 62, 62);
+  color: lightgray;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 10px 0px;
+}
+
+.header-tracks > h2 {
+  margin-left: 40px;
+  margin-right: 120px;
+  font-size: 25px;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  background-color: lightgray;
+  margin-bottom: 5px;
+}
+
+.tracks > p {
+  padding-top: 10px;
+  margin-left: 40px;
+  font-weight: bold;
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -46,3 +88,18 @@ button {
   border: none;
 }
 
+a {
+  background-color: tomato;
+  color: white;
+  font-size: 14px;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 6px;
+  text-decoration: none;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 40px;
+  font-size: 30px;
+}

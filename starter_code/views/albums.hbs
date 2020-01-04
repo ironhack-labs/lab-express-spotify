@@ -1,6 +1,22 @@
-<h1>Albums for: {{albums.[1].artists.[0].name}}</h1>
+{{!-- <h1>Albums for: {{albums.[1].artists.[0].name}}</h1>
 {{#each albums}}
 <img src="{{this.images.1.url}}" alt="album cover">
 <h2>{{this.name}}</h2>
 <a href="/tracks/{{this.id}}">View Tracks</a>
-{{/each}}
+{{/each}} --}}
+
+
+<h1>Albums for: {{albums.[1].artists.[0].name}}</h1>
+<div class="row row-cols-1 row-cols-md-3 artists-page">
+  {{#each albums}}
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="{{this.images.1.url}}" class="card-img-top" alt="album cover">
+      <div class="card-body artists-info">
+        <h5 class="card-title">{{this.name}}</h5>
+        <a class="card-text" href="/tracks/{{this.id}}">View Tracks</a>
+      </div>
+    </div>
+  </div>
+  {{/each}}
+</div>

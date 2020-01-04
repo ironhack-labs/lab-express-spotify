@@ -1,7 +1,26 @@
-<div class="artist-page">
+{{!-- <div class="card-deck">
   {{#each artists}}
-  <img src="{{this.images.2.url}}" alt="">
-  <h2>{{this.name}}</h2>
-  <a href="/albums/{{this.id}}">View Albums</a>
+  <div class="card">
+    <img src="{{this.images.2.url}}" class="card-img-top" alt="artist picture">
+    <div class="card-body artists-info">
+      <h5 class="card-title">{{this.name}}</h5>
+      <a class="card-text" href="/albums/{{this.id}}">View Albums</a>
+    </div>
+  </div>
+  {{/each}}
+</div> --}}
+
+
+<div class="row row-cols-1 row-cols-md-3 artists-page">
+  {{#each artists}}
+  <div class="col mb-4">
+    <div class="card h-100">
+      <img src="{{this.images.1.url}}" class="card-img-top" alt="artist picture">
+      <div class="card-body artists-info">
+        <h5 class="card-title">{{this.name}}</h5>
+        <a class="card-text" href="/albums/{{this.id}}">View Albums</a>
+      </div>
+    </div>
+  </div>
   {{/each}}
 </div>
