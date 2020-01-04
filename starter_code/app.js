@@ -65,6 +65,22 @@ app.get('/albums/:artistId', (req, res, next) => {
   });
 });
 
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi
+  .getAlbumTracks(req.params.albumId)
+  .then(data => {
+    console.log('The received data from the API: ', data.body);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    let tracks = data.body.items;
+    // render the page with all the info related to that artist
+    // res.send(data.body.items);
+    res.render('tracks', { tracks })
+  })
+  .catch(err => {
+    console.log('The error while searching artists occurred: ', err);
+  });
+});
+
 
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
