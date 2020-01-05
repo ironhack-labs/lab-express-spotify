@@ -1,0 +1,17 @@
+<div class="search">
+  <div class="card-container">
+    {{#each items}}
+    <div class="card">
+      <div>
+      <img src="{{images.0.url}}" alt="" class="album-img">
+      </div>
+      <div class="info">
+        <h4>{{name}}</h4>
+        <a href="/albums/{{id}}" class="view-album">View Albuns</a>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+
