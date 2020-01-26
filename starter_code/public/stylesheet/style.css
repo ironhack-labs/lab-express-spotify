@@ -1,0 +1,30 @@
+body {
+  background-color: #333;
+  color: #fff;
+}
+.bg {
+  position: absolute;
+  width: 100vw;
+}
+.blur {
+  position: relative;
+  z-index: 1;
+  top: 10rem;
+  left: 20rem;
+}
+.blur button {
+  padding: 0.5rem;
+  background-color: red;
+  color: #fff;
+  font-weight: bold;
+  font-size: 1rem;
+  border: none;
+}
+.blur button:hover {
+  background-color: #fff;
+  color: black;
+}
+form input {
+  height: 2rem;
+  padding: 2rem;
+}

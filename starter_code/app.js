@@ -27,6 +27,9 @@ spotifyApi
   });
 
 // the routes go here:
+app.get('/', (req, res, next) => {
+  res.render('index', { title: 'My Spotify | Home' });
+});
 
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
