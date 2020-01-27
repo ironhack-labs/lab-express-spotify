@@ -72,7 +72,8 @@ div.main form input {
   flex-direction: column;
   text-transform: capitalize;
 }
-.artists .a-tag {
+.artists .a-tag,
+.artists .p-tag {
   display: flex;
   justify-content: center;
 }
