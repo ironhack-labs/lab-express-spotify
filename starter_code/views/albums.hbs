@@ -1,0 +1,13 @@
+<h2>Albums</h2>
+<div style="width: 300px;height:300px;">
+    {{#each items}}
+
+    {{!-- <p> {{@key}} : {{this}}</p> --}}
+    {{!-- <img src={{this.images.[2].url}} alt=""> --}}
+    <div>
+        <img src={{this.images.[2].url}} alt="">
+        <p> {{this.name}} </p>
+        <a href="/tracks/{{this.id}}" style="list-style: none; color: #fff;">View tracks</a>
+    </div>
+    {{/each}}
+</div>

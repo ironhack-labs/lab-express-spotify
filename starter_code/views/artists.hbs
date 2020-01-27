@@ -1,0 +1,11 @@
+<h1>Artists</h1>
+<div>
+    {{#each items}}
+    <p>Type: {{this.type}} </p>
+    <p>Name: {{this.name}} </p>
+    <p>Popularity: {{this.popularity}} </p>
+    <p>Followers: {{this.followers.total}} </p>
+    <a href="/albums/{{this.id}}" style="list-style: none; color: #fff;">View Albums</a>
+    <img src={{this.images.[2].url}} alt="">
+    {{/each}}
+</div>
