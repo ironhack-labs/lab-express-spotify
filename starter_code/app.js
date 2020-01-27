@@ -49,7 +49,7 @@ app.get('/artists', (req, res, next) => {
       let {
         artists: { items },
       } = data.body;
-      console.log('artists', data.body.artists.items);
+      // console.log('artists', data.body.artists.items);
       res.render('artists', { items, typeOf: 'albums' });
     })
     .catch(err => {

@@ -3,7 +3,7 @@
   color: #fff;
   background: url(/images/spotify-img.jpg) no-repeat;
   background-size: cover;
-  min-height: 65vw;
+  min-height: 50vw;
   display: flex;
   justify-content: center;
   align-items: center;
