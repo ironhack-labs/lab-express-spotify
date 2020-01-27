@@ -11,6 +11,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + '/views/partials');
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -48,8 +49,8 @@ app.get('/artists', (req, res, next) => {
       let {
         artists: { items },
       } = data.body;
-      // console.log('artists', data.body.artists.items);
-      res.render('artists', { items });
+      console.log('artists', data.body.artists.items);
+      res.render('artists', { items, typeOf: 'albums' });
     })
     .catch(err => {
       console.log('The error while searching artists occurred: ', err);
@@ -66,7 +67,7 @@ app.get('/albums/:artistId', (req, res, next) => {
       // console.log(data.body);
       let { items } = data.body;
       // console.log(items);
-      res.render('albums', { items });
+      res.render('albums', { items, typeOf: 'tracks' });
     })
     .catch(err => console.log(err));
 });

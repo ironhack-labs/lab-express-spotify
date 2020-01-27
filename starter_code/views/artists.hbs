@@ -1,13 +1,5 @@
 <div class="main-artists">
     {{#each items}}
-    <div class="artists">
-        <div> <img src={{this.images.[0].url}} alt={{this.name}}></div>
-        <div>
-            <p> {{this.name}} </p>
-            <div class="a-tag">
-                <a href="/albums/{{this.id}}"><button>View albums</button></a>
-            </div>
-        </div>
-    </div>
+    {{> artistPartial typeOf = 'albums'}}
     {{/each}}
 </div>
