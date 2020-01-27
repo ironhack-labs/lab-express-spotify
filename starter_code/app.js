@@ -1,9 +1,11 @@
+// Iteration 1 | Spotify API Setup
 require('dotenv').config();
+// require spotify-web-api-node package here:
+const SpotifyWebApi = require('spotify-web-api-node');
+// Iteration 2 | Express Setup
 const express = require('express');
 const hbs = require('hbs');
 
-// require spotify-web-api-node package here:
-const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -26,12 +28,16 @@ spotifyApi
     console.log('Something went wrong when retrieving an access token', error);
   });
 
-// the routes go here:
+// The routes go here:
+// Iteration 3 | Search for an Artist
+// Step 1 | Create a Homepage
+//Home page
 app.get('/', (req, res, next) => {
   res.render('index', { title: 'My Spotify | Home' });
 });
 
-//artists
+//Step 2 | Display results for artist search
+//Search for artists from home page - type name and  submit
 app.get('/artists', (req, res, next) => {
   // res.send(req.query.artist);
   spotifyApi
@@ -50,6 +56,7 @@ app.get('/artists', (req, res, next) => {
     });
 });
 
+//Iteration 4 | View Albums
 //albums
 app.get('/albums/:artistId', (req, res, next) => {
   // .getArtistAlbums() code goes here
@@ -64,13 +71,13 @@ app.get('/albums/:artistId', (req, res, next) => {
     .catch(err => console.log(err));
 });
 
+//Iteration 5 | View Tracks
 //tracks
 app.get('/tracks/:trackId', (req, res) => {
   spotifyApi
     .getAlbumTracks(req.params.trackId)
     .then(data => {
       const { items } = data.body;
-
       // console.log(items);
       res.render('tracks', { items });
     })

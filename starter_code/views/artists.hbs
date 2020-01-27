@@ -1,11 +1,13 @@
-<h1>Artists</h1>
-<div>
+<div class="main-artists">
     {{#each items}}
-    <p>Type: {{this.type}} </p>
-    <p>Name: {{this.name}} </p>
-    <p>Popularity: {{this.popularity}} </p>
-    <p>Followers: {{this.followers.total}} </p>
-    <a href="/albums/{{this.id}}" style="list-style: none; color: #fff;">View Albums</a>
-    <img src={{this.images.[2].url}} alt="">
+    <div class="artists">
+        <div> <img src={{this.images.[0].url}} alt={{this.name}}></div>
+        <div>
+            <p> {{this.name}} </p>
+            <div class="a-tag">
+                <a href="/albums/{{this.id}}"><button>View albums</button></a>
+            </div>
+        </div>
+    </div>
     {{/each}}
 </div>
