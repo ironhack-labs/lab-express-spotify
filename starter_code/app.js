@@ -50,7 +50,11 @@ app.get('/artists', (req, res, next) => {
         artists: { items },
       } = data.body;
       // console.log('artists', data.body.artists.items);
-      res.render('artists', { items, typeOf: 'albums' });
+      res.render('artists', {
+        items,
+        typeOf: 'albums',
+        title: 'My Spotify | Artists',
+      });
     })
     .catch(err => {
       console.log('The error while searching artists occurred: ', err);
@@ -67,7 +71,11 @@ app.get('/albums/:artistId', (req, res, next) => {
       // console.log(data.body);
       let { items } = data.body;
       // console.log(items);
-      res.render('albums', { items, typeOf: 'tracks' });
+      res.render('albums', {
+        items,
+        typeOf: 'tracks',
+        title: 'My Spotify | Albums',
+      });
     })
     .catch(err => console.log(err));
 });
@@ -80,7 +88,7 @@ app.get('/tracks/:trackId', (req, res) => {
     .then(data => {
       const { items } = data.body;
       // console.log(items);
-      res.render('tracks', { items });
+      res.render('tracks', { items, title: 'My Spotify | Tracks' });
     })
     .catch(err => console.log(err));
 });

@@ -1,3 +1,8 @@
+body {
+  background-color: rgba(247, 246, 248, 0.89);
+  margin: 0;
+  padding: 0;
+}
 .main {
   background-color: #333;
   color: #fff;
@@ -78,6 +83,7 @@ div.main form input {
   flex-wrap: wrap;
   background-color: #333;
   color: #fff;
+  min-height: 50vw;
 }
 .artists img {
   width: 250px;
