@@ -64,17 +64,34 @@ The following screens might be out of date, since Spotify is constantly iteratin
 
 ## Iteration 1 | Spotify API Setup
 
-You're given an _almost_ empty `starter_code` folder. In the next few steps, you'll create all of the files that you need. So far, you have some basic setup in `app.js`, but that's not quite enough. As you remember, to get some packages (including `express`) in our app, we have to create a `package.json` file. So let's start listing the steps:
+You're given an _almost_ empty `starter-code` folder. In the next few steps, you'll create all of the files that you need. So far, you have some basic setup in `app.js`, but that's not quite enough. As you remember, to get some packages (including `express`) in our app, we have to create a `package.json` file. So let's start listing the steps:
 
-1. Create `package.json` (or as we can say: let's _initialize_ our project :wink: ).
-2. `npm install express hbs spotify-web-api-node dotenv`.
-3. Inside of the `app.js` file, require `spotify-web-api-node`.
+1. Navigate to `starter-code`.
+2. Create `package.json` (or as we can say: let's _initialize_ our project :wink: ).
+3. Install all the dependencies we need to successfully run this app:
+   `npm install express hbs spotify-web-api-node dotenv`.
+4. Install `nodemon` as a dev dependency (our app doesn't depend on it but it helps us in the development process):
+   `npm install --save-dev nodemon`
+5. Add the following line in the `scripts` object in the `package.json` file:
+
+```shell
+# package.json
+
+"scripts": {
+"dev": "nodemon app.js", # <= add this line
+"test": "echo \"Error: no test specified\" && exit 1"
+},
+```
+
+6. Now you can run your app with: `npm run dev`.
+
+7. Inside of the `app.js` file, require `spotify-web-api-node`.
 
 ```js
 const SpotifyWebApi = require('spotify-web-api-node');
 ```
 
-4. Inside of the `app.js` file, you'll find the place where you should paste the following code:
+8. Inside of the `app.js` file, you'll find the place where you should paste the following code:
 
 ```javascript
 const spotifyApi = new SpotifyWebApi({
@@ -93,7 +110,7 @@ spotifyApi
   });
 ```
 
-5. See this above?
+9. See this above?
 
 ```js
 const spotifyApi = new SpotifyWebApi({
@@ -120,14 +137,15 @@ CLIENT_SECRET=your clientSecret goes here
 Now let's add a couple of folders and files in our app. Please follow the following set up:
 
 ```
-├── app.js
-├── package.json
-├── public
-│   ├── public/images
-│   └── public/stylesheets
-│       └── public/stylesheets/style.css
-└── views
-    ├── views/layout.hbs
+starter-code
+      ├── app.js
+      ├── package.json
+      ├── public
+      │    ├── public/images
+      │    └── public/stylesheets
+      │         └── public/stylesheets/style.css
+      └── views
+            ├── views/layout.hbs
 ```
 
 As we can see, in your _app.js_ we have required all the packages we are using:
@@ -142,18 +160,20 @@ We are good to go. Let's open the [spotify-web-api-node](https://www.npmjs.com/p
 
 ## Iteration 3 | Search for an Artist
 
+**You can keep all your routes in the `app.js` after where it states: _// the routes go here:_.**
+
 ### Step 1 | Create a Homepage
 
 Create a route that renders a simple home page. You'll need a basic index route, that renders a home page. On this page, you should have a small search `form` that has an input field receiving an artist's name and a button that submits the request.
 
-This form should direct its query to `/artists` (action="/artists", method="GET").
+This form should direct its query to `/artist-search` (`action="/artist-search", method="GET"`).
 The result should be something along these lines but leave styling for the end.
 
 ![](https://i.imgur.com/YuTA0vQ.png=400x)
 
 ### Step 2 | Display results for artist search
 
-Okay, our search form submitted to `/artists` route. We still don't have this route created so let's do it!
+Okay, our search form submitted to `/artist-search` route. We still don't have this route created so let's do it!
 This route will receive the search term from the `query` string, and make a search request using one of the methods of the Spotify npm package. You have the documentation open :wink: but we will help you with your first step.
 
 The method we will use from the npm package is: `spotifyApi.searchArtists()`. In this route, you should have something like this:
@@ -165,18 +185,16 @@ spotifyApi
     console.log('The received data from the API: ', data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
-  .catch(err => {
-    console.log('The error while searching artists occurred: ', err);
-  });
+  .catch(err => console.log('The error while searching artists occurred: ', err));
 ```
 
-In order to display the found artists information, create `artists.hbs` file inside `views` folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let's move to the next step.
+In order to display the found artists' information, create `artist-search-results.hbs` file inside `views` folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let's move to the next step.
 <br><br>
 ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_9dc721e76158df1836ef07565b5385c2.png)
 
 ## Iteration 4 | View Albums
 
-On the `artists.hbs` page we created the `View albums` button/link. Users should be taken to _some other page_ after clicking on it and there be able to see all the albums of that particular artist. **Hint**: the URL should include artist's `id` 🤓 and should change dynamically.
+On the `artist-search-results.hbs` page we created the `View albums` button/link. Users should be taken to _some other page_ after clicking on it and there be able to see all the albums of that particular artist. **Hint**: the URL should include artist's `id` 🤓 and should change dynamically.
 
 ```html
 <a href="/albums/someArtistIdGoesHere">View Albums</a>
