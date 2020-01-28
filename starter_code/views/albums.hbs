@@ -1,0 +1,15 @@
+{{!-- albums.hbs --}}
+
+<div class="things">
+    {{#each items}}
+    <div class="card artist-info-container" style="width: 18rem; margin: 1vw;">
+        <img class="card-img-top"
+            src="{{#if this.images.0.url}}{{this.images.0.url}}{{else}}/images/640px-Microphone.jpeg{{/if}}"
+            alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
