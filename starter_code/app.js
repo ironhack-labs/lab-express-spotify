@@ -30,6 +30,32 @@ spotifyApi
 
 // the routes go here:
 
+// Home page
+app.get('/', (req, res, next) => {
+  res.render('index');
+});
+
+// artists 
+app.get('/artists', (req, res, next) => {
+  console.log(req.query.artists);
+  spotifyApi
+  .searchArtists(req.query.artists)
+  .then(data => {
+    console.log(data.body.artists.items[0]);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    res.render('artists', {artists: data.body.artists.items});
+  })
+  .catch(err => {
+    console.log('The error while searching artists occurred: ', err);
+  });
+});
+
+// Albums
+// app.get('/albums/:artistId', (req, res, next) => {
+//   // .getArtistAlbums() code goes here
+// });
+
+
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 );

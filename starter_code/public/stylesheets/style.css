@@ -1,0 +1,35 @@
+.search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 600px;
+    height: 200px;
+    background-color: lightgray;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.search input {
+    padding: 10px;
+    width: 60%;
+    font-size: 18px;
+}
+
+.search a {
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-top: 10px;
+    font-size: 18px;
+}
+
+.artists {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
