@@ -2,8 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
-
-// require spotify-web-api-node package here:
+const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
 
@@ -13,8 +12,46 @@ app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
 
-// the routes go here:
+const spotifyApi = new SpotifyWebApi({
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET
+});
 
+// Retrieve an access token
+spotifyApi
+  .clientCredentialsGrant()
+  .then(data => {
+    spotifyApi.setAccessToken(data.body['access_token']);
+  })
+  .catch(error => {
+    console.log('Something went wrong when retrieving an access token', error);
+  });
+
+app.get('/', (req, res) => res.render('index'));
+
+app.get('/artists', (req, res) => {
+  // console.log(req.query)
+  spotifyApi
+    .searchArtists(req.query.artistName)
+    .then(data => {     
+      res.render('artists.hbs',{info:data.body.artists.items})
+    })
+    .catch(err => {
+      console.log('The error while searching artists occurred: ', err);
+    });
+});
+
+app.get('/albuns/:id', (req, res) => {
+  spotifyApi
+  .getArtistAlbums(req.param.id)
+  .then(function(data) {
+    console.log('albumbs.hbs', data.body);
+  }, 
+  function(err) {
+    console.error(err);
+  });
+})
+  
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 );
