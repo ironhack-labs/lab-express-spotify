@@ -64,34 +64,20 @@ The following screens might be out of date, since Spotify is constantly iteratin
 
 ## Iteration 1 | Spotify API Setup
 
-You're given an _almost_ empty `starter-code` folder. In the next few steps, you'll create all of the files that you need. So far, you have some basic setup in `app.js`, but that's not quite enough. As you remember, to get some packages (including `express`) in our app, we have to create a `package.json` file. So let's start listing the steps:
+You're given an _almost_ empty `starter-code` folder. In the next few steps, you'll create all of the files that you need. So far, you have some basic setup in `app.js`, but that's not quite enough. As you remember, to get some packages (including `express`) in our app, we have to have them in the `package.json` file. So let's start listing the steps:
 
 1. Navigate to `starter-code`.
-2. Create `package.json` (or as we can say: let's _initialize_ our project :wink: ).
-3. Install all the dependencies we need to successfully run this app:
+2. Install all the dependencies we need to successfully run this app:
    `npm install express hbs spotify-web-api-node dotenv`.
-4. Install `nodemon` as a dev dependency (our app doesn't depend on it but it helps us in the development process):
-   `npm install --save-dev nodemon`
-5. Add the following line in the `scripts` object in the `package.json` file:
+3. `nodemon` is installed as a dev dependency (our app doesn't depend on it but it helps us in the development process), which means we can use nodemon to run the app with: **`npm run dev`**.
 
-```shell
-# package.json
-
-"scripts": {
-"dev": "nodemon app.js", # <= add this line
-"test": "echo \"Error: no test specified\" && exit 1"
-},
-```
-
-6. Now you can run your app with: `npm run dev`.
-
-7. Inside of the `app.js` file, require `spotify-web-api-node`.
+4. Inside of the `app.js` file, require `spotify-web-api-node`.
 
 ```js
 const SpotifyWebApi = require('spotify-web-api-node');
 ```
 
-8. Inside of the `app.js` file, you'll find the place where you should paste the following code:
+5. Inside of the `app.js` file, you'll find the place where you should paste the following code:
 
 ```javascript
 const spotifyApi = new SpotifyWebApi({
@@ -110,7 +96,7 @@ spotifyApi
   });
 ```
 
-9. See this above?
+6. See this above?
 
 ```js
 const spotifyApi = new SpotifyWebApi({
