@@ -117,18 +117,20 @@ CLIENT_SECRET=your clientSecret goes here
 
 ## Iteration 2 | Express Setup
 
-Now let's add a couple of folders and files in our app. Please follow the following set up:
+Now let's create a `views` folder inside the `starter-code` and in it let's add the `layout.hbs` file.
+At this moment we should have the following structure of folders and files:
 
 ```
 starter-code
       ├── app.js
       ├── package.json
+      ├── package-lock.json
       ├── public
       │    ├── images
       │    └── stylesheets
       │         └── style.css
       └── views
-            ├── views/layout.hbs
+            └── layout.hbs
 ```
 
 As we can see, in your _app.js_ we have required all the packages we need for now:
