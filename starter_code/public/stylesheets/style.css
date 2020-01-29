@@ -29,7 +29,29 @@
 
 .artists {
     display: flex;
-    justify-content: center;
-    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
+    flex-direction: column;
+    width: 250px;
+    height: 500px;
+}
+
+.artists a {
+    background-color: red;
+    padding: 5px 10px;
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+}
+
+.artists > div:nth-child(1) {
+    height: auto;
+}
+
+.artists > div:nth-child(2) {
+    height: 20%;
+    background-color: darkgray;
+    width: 100%;
+    text-align: center;
+    color: white;
 }
