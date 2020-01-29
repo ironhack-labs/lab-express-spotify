@@ -117,7 +117,7 @@ CLIENT_SECRET=your clientSecret goes here
 
 ## Iteration 2 | Express Setup
 
-Now let's create a `views` folder inside the `starter-code` and in it let's add the `layout.hbs` file.
+Now let's create a `views` folder inside the `starter-code` and let's add the `layout.hbs` file in it.
 At this moment we should have the following structure of folders and files:
 
 ```
