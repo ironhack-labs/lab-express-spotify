@@ -1,0 +1,18 @@
+html {
+    font-family: Roboto, system-ui, sans-serif;
+}
+
+body {
+    display: flex;
+    /* margin: 0px; */
+    background-image: url(../images/background.jpg);
+}
+
+.main {
+    display: flex;
+    /* background-color: #00B172; */
+    color: #fff;
+    background-repeat: no-repeat;
+    background-size: 50px;
+    background-position: center;
+}
