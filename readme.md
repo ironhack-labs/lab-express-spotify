@@ -88,12 +88,8 @@ const spotifyApi = new SpotifyWebApi({
 // Retrieve an access token
 spotifyApi
   .clientCredentialsGrant()
-  .then(data => {
-    spotifyApi.setAccessToken(data.body['access_token']);
-  })
-  .catch(error => {
-    console.log('Something went wrong when retrieving an access token', error);
-  });
+  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
+  .catch(error => console.log('Something went wrong when retrieving an access token', error));
 ```
 
 6. See this above?
@@ -107,7 +103,8 @@ const spotifyApi = new SpotifyWebApi({
 
 To avoid making our API keys public, we don't want to add and commit them. We'll use a package named `dotenv` for that.
 
-It is imported at the very beginning of `app.js`. All that is left to do is to add your keys in the `.env` file.
+This package is imported at the very beginning of `app.js`. All that is left to do is to add your keys in the `.env` file.
+So go ahead and create a `.env` file in the `starter-code` folder and paste the following lines there, replacing the text with your credentials.
 
 ```
 CLIENT_ID=your clientId goes here
@@ -127,14 +124,14 @@ starter-code
       ├── app.js
       ├── package.json
       ├── public
-      │    ├── public/images
-      │    └── public/stylesheets
-      │         └── public/stylesheets/style.css
+      │    ├── images
+      │    └── stylesheets
+      │         └── style.css
       └── views
             ├── views/layout.hbs
 ```
 
-As we can see, in your _app.js_ we have required all the packages we are using:
+As we can see, in your _app.js_ we have required all the packages we need for now:
 
 ```javascript
 const express = require('express');
@@ -146,7 +143,7 @@ We are good to go. Let's open the [spotify-web-api-node](https://www.npmjs.com/p
 
 ## Iteration 3 | Search for an Artist
 
-**You can keep all your routes in the `app.js` after where it states: _// the routes go here:_.**
+**You can keep all your routes in the `app.js` after where it states: _// Our routes go here:_.**
 
 ### Step 1 | Create a Homepage
 
@@ -217,7 +214,7 @@ A track object comes with a `preview_url`, which is the source for a 30-second p
 
 ### The summary of requirements
 
-- Total of five pages with artist / album / track information populated from Spotify + layout + home.
+- Total of five pages with (1)artist / (2)album / (3)track information (all populated from Spotify) + (4)layout + (5)home.
 - Some styling, it doesn't have to look like the example.
 
 Happy Coding! 💙
