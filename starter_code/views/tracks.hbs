@@ -1,7 +1,10 @@
 <ul>
     {{#each items}}
     <li>{{this.name}}</li>
-
+    <audio controls>
+        <source src="{{this.preview.url}}" type="audio/mpeg">
+    </audio>
+    <a href="/tracks/{{this.id}}"></a>
     {{/each}}
 
 </ul> 

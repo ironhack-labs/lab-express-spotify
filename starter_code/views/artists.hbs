@@ -1,7 +1,11 @@
 <ul>
     {{#each items}}
-    <h2>{{this.name}}</h2>
-    <img src="{{this.images.0.url}}" alt="artist pictures">
+    <li>{{this.name}}</li>
+    {{#if this.images}}
+    <img src="{{this.images.0.url}}" alt="{{this.name}}" style="">
+    {{else}}
+    <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiLvpGxjarnAhWmrFkKHYOlDlUQjRx6BAgBEAQ&url=https%3A%2F%2Faspire.rit.edu%2Fuser%2Ftrask.dalton&psig=AOvVaw3mwbw_6vf_NP7kMBWsdUOe&ust=1580431777616706" alt="{{this.name}}">
+    {{/if}}
     <button><a href="/albums/{{this.id}}">View Albums</a></button>
 
     {{/each}}

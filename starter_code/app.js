@@ -36,9 +36,11 @@ app.get("/", (req, res, next) => {
 
 app.get('/artists', (req, res, next) => {
   spotifyApi
-    .searchArtists(req.query.artist)
+    .searchArtists(req.query.artistName)
     .then(data => {
-      console.log('The received data from the API: ', data.body);
+      console.log('The received data from the API: ', {
+        artist: data.body.artists.items
+      });
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       let items = data.body.artists.items;
       res.render('artists', {
@@ -52,14 +54,15 @@ app.get('/artists', (req, res, next) => {
 });
 
 
-
 app.get('/albums/:id', (req, res, next) => {
   // .getArtistAlbums() code goes here
   spotifyApi
-    .getArtistAlbums('req.params.id')
+    .getArtistAlbums(req.params.id)
     .then(data => {
-      console.log('Artist albums', data.body);
-      let items = data.body.items;
+      console.log('The received data from the API: ', data.body.items);
+      let items = {
+        albums: data.body.items
+      };
       res.render('albums', {
         items
       });
@@ -73,11 +76,13 @@ app.get('/albums/:id', (req, res, next) => {
 
 app.get("/tracks/:id", (req, res, next) => {
   spotifyApi
-    .getAlbumTracks('req.params.id')
+    .getAlbumTracks(req.params.id)
     .then(data => {
       console.log(data.body);
-      let items = data.body.items;
-      res.render('album-tracks', {
+      let items = {
+        tracks: data.body.items
+      };
+      res.render('tracks', {
         items
       });
     })
