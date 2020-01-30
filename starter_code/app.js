@@ -42,10 +42,10 @@ app.get("/", (req, res, next) => {
 
 
 //-----Display results for artist search
-app.get("/artists", (req, res, next) => {
+app.get("/artist-search", (req, res, next) => {
   // console.log(req.query.artist);
   spotifyApi
-    .searchArtists( /*'HERE GOES THE QUERY ARTIST'*/ req.query.artist)
+    .searchArtists( /*'HERE GOES THE QUERY ARTIST'*/ req.query.theArtistName)
     .then(data => {
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       let {

@@ -6,7 +6,11 @@
 
 {{#each tracks}}
 <div>
-    <h4>{{this.name}}</h4>
-    <audio controls src={{this.preview_url}}></audio>
+    <ul>
+        <li>
+            <h4>{{this.name}}</h4>
+            <audio controls src={{this.preview_url}}></audio>
+        </li>
+    </ul>
 </div>
 {{/each}}

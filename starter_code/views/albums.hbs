@@ -1,7 +1,7 @@
 <div class="main-artists">
     {{#each albums}}
     <div class="artist">
-        <img src={{this.images.[0].url}} alt={{this.name}}>
+        <img src={{this.images.1.url}} alt={{this.name}}>
         <p>{{this.name}}</p>
         <a href="/tracks/{{this.id}}"><button>View Tracks</button></a>
     </div>
