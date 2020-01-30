@@ -1,9 +1,9 @@
 <ul>
     {{#each info}}
-    <img src="{{this.images.0.url}}">
-    <li>{{this.name}}</li>
-    <button > <a href="/albums/{{this.id}}">View Albums</a></button>
-
+        <li>
+            <li>{{this.name}}
+            <img src="{{this.images.1.url}}">
+            <button type="submit"><a href="/albums/{{this.id}}">View Albums</a></button>
+        </li>
     {{/each}}
-    
 </ul>

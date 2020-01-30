@@ -43,9 +43,9 @@ app.get('/artists', (req, res) => {
 
 app.get('/albuns/:id', (req, res) => {
   spotifyApi
-  .getArtistAlbums(req.param.id)
+  .getArtistAlbums(req.params.id)
   .then(function(data) {
-    console.log('albumbs.hbs', data.body);
+    console.log('albumbs.hbs', albums: data.body.items.id);
   }, 
   function(err) {
     console.error(err);
