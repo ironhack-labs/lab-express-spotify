@@ -1,0 +1,13 @@
+
+
+<div class="card" style="width: 90vw;">
+  <div class="card-header">
+    TITLE
+  </div>
+  <ul class="list-group list-group-flush">
+      {{#each tracksArr}}
+    <li class="list-group-item">{{this.name}}<audio src="{{this.preview_url}}" controls></audio></li>
+{{/each}}
+
+  </ul>
+</div>
