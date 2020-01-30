@@ -1,0 +1,17 @@
+<h1>ARTISTS</h1>
+
+<ul>
+ {{#each artists}}
+    <h3>Name : {{this.name}} </h3>
+    <br>
+    {{#if this.images}}
+    <img src="{{this.images.2.url}}" alt="{{this.name}}">
+    {{else}}
+    <img src="https://cdn.pixabay.com/photo/2015/10/05/22/37/blank-profile-picture-973460_960_720.png" alt="{{this.name}}" style="60px">
+    {{/if}}
+    <br>
+   <a href="/albums/{{this.id}}">View Albums</a> {{!-- this have to send us to the albums page --}}
+
+    {{/each}}
+
+</ul>
