@@ -1,0 +1,7 @@
+<ol>
+{{#each album.body.items}}
+    <li>{{name}}</li>
+    <img src={{images.[0].url}} alt="" width="640px" height="640px">
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+{{/each}}
+</ol>

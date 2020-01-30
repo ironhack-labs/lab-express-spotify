@@ -1,0 +1,11 @@
+<h1>Hola de tracks</h1>
+
+<ol>
+{{#each track.body.items}}
+    <li>
+        {{name}}
+        <audio src="{{this.preview_url}}" controls></audio>
+    </li>
+
+{{/each}}
+</ol>

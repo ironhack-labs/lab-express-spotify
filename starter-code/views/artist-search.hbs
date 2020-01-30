@@ -1,0 +1,7 @@
+<ol>
+{{#each artistSearch.body.artists.items}}
+    <li>{{name}}</li>
+    <img src={{images.[0].url}} alt="" width="640px" height="640px">
+    <a href="/albums/{{this.id}}">View Albums</a>
+{{/each}}
+</ol>
