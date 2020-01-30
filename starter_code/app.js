@@ -36,14 +36,13 @@ app.get('/', (req, res, next) => {
 });
 
 // artists 
-app.get('/artists', (req, res, next) => {
-  let { artist } = req.query
+app.get('/artist-search', (req, res, next) => {
   spotifyApi
-  .searchArtists(artist)
+  .searchArtists(req.query.artist)
   .then(data => {
     console.log(data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-    res.render('artists', {artists: data.body.artists.items})
+    res.render('artist-search', {artists: data.body.artists.items})
   })
   .catch(err => {
     console.log('The error while searching artists occurred: ', err);
@@ -51,16 +50,29 @@ app.get('/artists', (req, res, next) => {
 });
 
 // Albums
-app.get('/albums/:id', (req, res, next) => {
+app.get('/album-search/:id', (req, res, next) => {
   // .getArtistAlbums() code goes here
-  let artistId = req.params.id;
   spotifyApi
-    .getArtistAlbums(artistId)
+    .getArtistAlbums(req.params.id)
+    .then(data => {
+      console.log('The received data from the API: ', data);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render('album-search', {albums: data.body.items})
+    })
+    .catch(err => {
+      console.log('The error while searching artists occurred: ', err);
+    });
+});
+
+// Tracks
+app.get('/tracks/:id', (req, res, next) => {
+  // .getAlbumTracks() code goes here
+  spotifyApi
+    .getAlbumTracks(req.params.id)
     .then(data => {
       console.log('The received data from the API: ', data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      let items = data.body.items;
-      res.render('albums', {items})
+      res.render('tracks', {tracks: data.body.items})
     })
     .catch(err => {
       console.log('The error while searching artists occurred: ', err);

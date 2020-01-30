@@ -18,7 +18,7 @@
     font-size: 18px;
 }
 
-.search a {
+.search button {
     background-color: red;
     color: white;
     text-decoration: none;
@@ -27,16 +27,27 @@
     font-size: 18px;
 }
 
-.artists {
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.artists, .albums {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     flex-direction: column;
-    width: 250px;
+    width: 350px;
     height: 500px;
 }
 
-.artists a {
+.artist-container img, .album-container img {
+    width: 350px;
+    height: 350px;
+}
+
+.artist-container a, .album-container a {
     background-color: red;
     padding: 5px 10px;
     text-decoration: none;
@@ -44,14 +55,15 @@
     border-radius: 5px;
 }
 
-.artists > div:nth-child(1) {
+.artists > div:nth-child(1), .albums > div:nth-child(1) {
     height: auto;
 }
 
-.artists > div:nth-child(2) {
-    height: 20%;
+.artist-container > div:nth-child(2), .album-container > div:nth-child(2) {
+    height: 100px;
     background-color: darkgray;
     width: 100%;
     text-align: center;
     color: white;
+    font-size: 14px;
 }

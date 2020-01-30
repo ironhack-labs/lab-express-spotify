@@ -1,0 +1,17 @@
+<div class="container">
+    {{#each artists}}
+    <div class="artist-container">
+            <div>
+                {{#if this.images}}
+                    <img src="{{this.images.0.url}}" alt="{{this.name}}">
+                {{else}}
+                    <img src="https://colegioclassea.com.br/wp-content/themes/PageLand/assets/img/avatar/avatar.jpg" alt="{{this.name}}">
+                {{/if}}
+            </div>
+            <div>
+                <h2>{{this.name}}</h2>
+                <a href="/album-search/{{this.id}}">View Albums</a>
+            </div>
+    </div>
+    {{/each}}
+</div>

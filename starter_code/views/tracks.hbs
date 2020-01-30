@@ -1,0 +1,19 @@
+<div>
+    <header>
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </header>
+    <div>
+        <ul>
+            {{#each tracks}}
+            <li>
+                <h4>{{this.name}}</h4>
+                <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>
