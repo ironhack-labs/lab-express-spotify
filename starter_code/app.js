@@ -52,7 +52,6 @@ app.get('/artists', (req, res, next) => {
       // console.log('artists', data.body.artists.items);
       res.render('artists', {
         items,
-        typeOf: 'albums',
         title: 'My Spotify | Artists',
       });
     })
@@ -73,7 +72,6 @@ app.get('/albums/:artistId', (req, res, next) => {
       // console.log(items);
       res.render('albums', {
         items,
-        typeOf: 'tracks',
         title: 'My Spotify | Albums',
       });
     })

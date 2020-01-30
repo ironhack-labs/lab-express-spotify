@@ -3,12 +3,19 @@ body {
   margin: 0;
   padding: 0;
 }
+.nav {
+  background-color: black;
+}
+.navbar-nav {
+  margin-top: 15px;
+  font-size: 1rem;
+}
 .main {
   background-color: #333;
   color: #fff;
   background: url(/images/spotify-img.jpg) no-repeat;
   background-size: cover;
-  min-height: 50vw;
+  min-height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +91,7 @@ div.main form input {
   flex-wrap: wrap;
   background-color: #333;
   color: #fff;
-  min-height: 50vw;
+  min-height: 100vh;
 }
 .artists img {
   width: 250px;
@@ -118,11 +125,14 @@ div.main form input {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgrey;
-  color: #333;
   padding-left: 20px;
   margin: 5px 0;
+  background-color: lightgrey;
+  color: #333;
   /* font-family: monospace; */
   font-size: 1.2rem;
   text-transform: capitalize;
+}
+.main-tracks {
+  min-height: 100vh;
 }
