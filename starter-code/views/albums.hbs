@@ -1,0 +1,8 @@
+<h1>Albums for: {{data.items.0.artists.0.name}}</h1>
+
+<div class="results">
+    {{#each data.items}}
+    {{> albumCard this}}
+
+    {{/each}}
+</div>

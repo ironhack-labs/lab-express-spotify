@@ -1,0 +1,10 @@
+<div class="artist-container">
+    {{#if this.images.0.url}}
+    <img src="{{this.images.0.url}}" alt="">
+    {{else}}
+    <img src="http://www.scottishculture.org/themes/scottishculture/images/music_placeholder.png" alt="">
+
+    {{/if}}
+    <p>{{this.name}}</p>
+    <a href="/albums/{{this.id}}">View Albums</a>
+</div>

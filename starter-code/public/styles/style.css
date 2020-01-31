@@ -1,0 +1,128 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+
+.home {
+  height: 100vh;
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+form {
+  width: 50%;
+  height: 25%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+form input {
+  min-width: 500px;
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+form button {
+  background-color: rgb(245, 105, 102);
+  font-size: 2.5rem;
+  color: white;
+  border: none;
+  padding: 8px;
+  border-radius: 10px;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5px;
+}
+
+.artist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-bottom: 2%;
+  background-color: rgb(60, 60, 60);
+  margin: 0.5rem;
+  color: white;
+  max-width: 200px;
+  text-align: center;
+}
+
+.artist-container img {
+  height: 200px;
+  width: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+.artist-container a {
+  background-color: rgb(245, 105, 102);
+  text-decoration: none;
+  color: #fff;
+  padding: 5px;
+  border-radius: 2px;
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  margin: 2.5rem;
+}
+
+tbody {
+  border-style: 1px solid black;
+}
+
+th {
+  background-color: rgb(57, 57, 57);
+  border-style: none;
+  color: rgb(174, 173, 170);
+  font-size: 1.5rem;
+  height: 4.5rem;
+  width: 500px;
+}
+
+table,
+th,
+td {
+  border-collapse: collapse;
+  border-style: 1px solid black;
+  border-bottom: 2px solid white;
+}
+
+td {
+  background-color: rgb(244, 244, 244);
+}
+
+.trackname {
+  text-align: left;
+  padding-left: 2%;
+}
+
+.preview {
+  display: flex;
+  justify-content: flex-end;
+}
+
+tr:hover {
+  background-color: white;
+}
