@@ -1,0 +1,18 @@
+body{
+    background-image: url("/images/spotify-background.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+body > form {
+    padding-top: 25%;
+
+}
+
+body form{
+    display: flex;
+    flex-direction: column;
+}
+
