@@ -1,0 +1,21 @@
+<nav>
+    <div class="titles">
+        <p>Title</p>
+        <p>Listen</p>
+    </div>
+</nav>
+<div class="tracks-wrapper">
+    <div class="track">
+        {{#each this.items}}
+        <div class="track-item">
+            {{!-- Display its name --}}
+            <p>{{this.name}}</p>
+            {{!-- Display the preview clip --}}
+            <audio controls src="{{this.preview_url}}">
+                Your browser does not support the
+                audio element.
+            </audio>
+        </div>
+        {{/each}}
+    </div>
+</div>

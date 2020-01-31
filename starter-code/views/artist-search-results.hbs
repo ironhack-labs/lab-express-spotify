@@ -1,0 +1,17 @@
+<div class="wrapper">
+    {{#each artists.items}}
+    <div class="card">
+        {{!-- For each item that matches the 'artist' query --}}
+        {{!-- Display its image --}}
+        <div class="card-image">
+            <img src="{{this.images.[1].url}}" />
+        </div>
+        {{!-- Display its name --}}
+
+        <div class="card-details">
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}"><button class="btn">View Albums</button></a>
+        </div>
+    </div>
+    {{/each}}
+</div>

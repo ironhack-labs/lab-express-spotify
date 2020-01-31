@@ -1,0 +1,16 @@
+<div class="wrapper">
+    {{#each this.items}}
+    <div class="card">
+        <div class="card-image">
+            {{!-- Display its image --}}
+            <img src="{{this.images.[1].url}}" />
+        </div>
+
+        <div class="card-details">
+            {{!-- Display its name --}}
+            <p>{{this.name}}</p>
+            <a href="/tracks/{{this.id}}"><button class="btn">View Tracks</button></a>
+        </div>
+    </div>
+    {{/each}}
+</div>
