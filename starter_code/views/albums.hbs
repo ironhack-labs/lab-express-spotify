@@ -1,0 +1,11 @@
+<ul>
+
+{{#each items}}
+<li>
+    {{this.name}}
+    <br>
+    <img src="{{this.images.2.url}}" alt="Image URL">
+    <button><a href="/tracks/{{this.id}}">View Tracks<a></button>
+</li>
+{{/each}}
+</ul>

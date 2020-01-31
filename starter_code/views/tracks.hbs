@@ -1,0 +1,14 @@
+<ul>
+{{#each items}}
+<li>
+    <h4>{{this.name}}</h4>
+
+    <audio controls="" name="media">
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+    </audio>
+    <a href="/tracks/{{this.id}}"></a>
+</li>
+{{/each}}
+
+
+</ul>

@@ -11,7 +11,8 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-console.log(process.env.CLIENT_ID)
+// console.log(process.env.CLIENT_ID)
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -34,14 +35,14 @@ app.get("/", (req, res, next) => {
 });
 
 
-app.get('/artists', (req, res, next) => {
+app.get('/artist-search', (req, res, next) => {
   spotifyApi
-    .searchArtists(req.query.artist)
+    .searchArtists(req.query.theArtistName)
     .then(data => {
-      console.log('The received data from the API: ', data.body);
+      console.log('The received data from the API: ', data);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       let items = data.body.artists.items;
-      res.render('artists', {
+      res.render('artist', {
         items
       });
     })
@@ -56,9 +57,9 @@ app.get('/artists', (req, res, next) => {
 app.get('/albums/:id', (req, res, next) => {
   // .getArtistAlbums() code goes here
   spotifyApi
-    .getArtistAlbums('req.params.id')
+    .getArtistAlbums(req.params.id)
     .then(data => {
-      console.log('Artist albums', data.body);
+      console.log('The received data from the API: ', data.body);
       let items = data.body.items;
       res.render('albums', {
         items
@@ -73,11 +74,11 @@ app.get('/albums/:id', (req, res, next) => {
 
 app.get("/tracks/:id", (req, res, next) => {
   spotifyApi
-    .getAlbumTracks('req.params.id')
+    .getAlbumTracks(req.params.id)
     .then(data => {
-      console.log(data.body);
+      console.log('The received data from the API: ', data.body);
       let items = data.body.items;
-      res.render('album-tracks', {
+      res.render('tracks', {
         items
       });
     })

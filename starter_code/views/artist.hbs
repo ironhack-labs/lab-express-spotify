@@ -1,9 +1,9 @@
 <ul>
     {{#each items}}
     <h2>{{this.name}}</h2>
+
     <img src="{{this.images.0.url}}" alt="artist pictures">
+    
     <button><a href="/albums/{{this.id}}">View Albums</a></button>
-
     {{/each}}
-
-</ul> 
+</ul>
