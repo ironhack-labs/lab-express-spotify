@@ -2,7 +2,7 @@
     {{#each items}}
     <li>{{this.name}}</li>
     {{#if this.images}}
-    <img src="{{this.images.0.url}}" alt="{{this.name}}" style="">
+    <img src="{{this.images.0.url}}" alt="{{this.name}}" style="width: 120px;">
     {{else}}
     <img src="https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwiLvpGxjarnAhWmrFkKHYOlDlUQjRx6BAgBEAQ&url=https%3A%2F%2Faspire.rit.edu%2Fuser%2Ftrask.dalton&psig=AOvVaw3mwbw_6vf_NP7kMBWsdUOe&ust=1580431777616706" alt="{{this.name}}">
     {{/if}}

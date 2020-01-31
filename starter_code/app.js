@@ -59,10 +59,8 @@ app.get('/albums/:id', (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.id)
     .then(data => {
-      console.log('The received data from the API: ', data.body.items);
-      let items = {
-        albums: data.body.items
-      };
+      console.log('The received data from the API: ', data.body);
+      let items = data.body.items;
       res.render('albums', {
         items
       });
@@ -78,10 +76,8 @@ app.get("/tracks/:id", (req, res, next) => {
   spotifyApi
     .getAlbumTracks(req.params.id)
     .then(data => {
-      console.log(data.body);
-      let items = {
-        tracks: data.body.items
-      };
+      console.log('The received data from the API: ', data.body);
+      let items = data.body.items;
       res.render('tracks', {
         items
       });
