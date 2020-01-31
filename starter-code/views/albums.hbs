@@ -1,0 +1,17 @@
+<div class="search-wrapper">
+
+<h1>Albums of {{artistName}}</h1>
+
+<div class="artist-search-result-wrapper">
+
+{{#each artistList}}
+    
+<div class="album-result-wrapper">
+    
+    <img class="album-image" src="{{#if this.images}}{{this.images.1.url}}{{else}}images/no-album.jpg{{/if}}" style="max-width: {{this.images.1.width}}; max-height: {{this.images.1.height}}">
+    <div class="album-name">{{this.name}}</div>
+    <a href="/tracks/{{this.id}}" class="btn btn-secondary btn-large">View Tracks</a>
+
+</div>
+{{/each}}
+</div>

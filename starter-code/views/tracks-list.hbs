@@ -1,0 +1,23 @@
+<div class="tracks-wrapper">
+
+    <table>
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Listen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tracks}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td>
+                    <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg">
+                    </audio>
+                </td>
+            </tr>          
+            {{/each}}
+        </tbody>
+    </table>
+</div>
