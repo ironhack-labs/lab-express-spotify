@@ -1,0 +1,5 @@
+{{#each albumChido as |album|}}
+    <img src="{{album.images.[0].url}}">
+    <h4>{{album.name}}</h4>
+    <a href="/tracks/{{album.id}}">Songs</a>
+    {{/each}}

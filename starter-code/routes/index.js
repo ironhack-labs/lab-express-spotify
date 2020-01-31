@@ -1,12 +1,16 @@
 const router = require('express').Router()
-const spotifyVars = require("../config/spotify.config")
+const spotify = require("../config/spotify.config")
 const {findArtist} = require('../controller/index')
+const {findAlbums} = require('../controller/index')
+const {findTracks} = require('../controller/index')
 
 
 
 router.get('/', (req, res) => {
     res.render('home')
 })
+router.post('/artist-search', findArtist)
+router.get("/albums:artistId", findAlbums)
+router.get("/tracks:albumId", findTracks)
 
-router.post('/artist-search', findArtist )
 module.exports= router
