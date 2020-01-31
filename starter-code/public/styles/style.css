@@ -1,0 +1,74 @@
+.track{
+    background-color: #f7f7f7;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin: 2px;
+}
+
+#title-tracks{
+    background-color:grey;
+    color: #f7f7f7;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: row wrap;
+    padding: 20px 100px;
+    margin: 2px;
+}
+
+.fotos{
+    background-color: grey;
+    width: fit-content;
+    text-align: center;
+    color: white;
+    margin: 20px;
+    height: 400px;
+    width: 300px;
+}
+.fotos img{
+    width: 300px;
+    height: 300px;
+}
+
+a{
+    background-color: red;
+    border-radius: 20px;
+    color: white;
+    text-decoration: none;
+    padding: 10px;
+    margin-bottom: 50px;
+}
+
+.albums{
+    background-color: #f7f7f7;
+    color: black;
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    flex-flow: row wrap;
+    padding: 10px;
+    margin: 2px;
+}
+
+#inicio{
+    background-image: url(../images/spotify-background.jpeg);
+    width: 100vw;
+    height: 700px;
+    background-size: contain;
+    display: flex;
+    margin: auto 0;
+    justify-content: center;
+    flex-direction: column;
+    align-content: center;
+}
+
+button{
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px;
+}
