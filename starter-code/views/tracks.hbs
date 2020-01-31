@@ -1,0 +1,16 @@
+<ul class="nav-bar">
+    <li>Title</li>
+    <li>Listen</li>
+
+</ul>{{#each tracks}}
+
+<div class="tracks-container">
+
+    <div class="track-name">{{this.name}}</div>
+    <audio controls>
+        <source src={{this.preview_url}} type="audio/ogg">
+        <source src="horse.mp3" type="audio/mpeg">
+        Your browser does not support the audio tag.
+    </audio>
+</div>
+{{/each}}
