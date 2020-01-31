@@ -1,5 +1,5 @@
-{{#each input}}
-<img src={{this.image}}>
-<h3>{{this.name}}</h3>
-<a>{{this.id}}</a>
+{{#each data.body.artists.items as |artist|}}
+<img src="{{artist.image}}">
+<h3>{{artist.name}}</h3>
+<a>{{artist.id}}</a>
 {{/each}}

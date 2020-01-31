@@ -8,11 +8,10 @@ router.get("/", (req, res) => {
     res.render('home')
 })
 
-
-router.post("/artist-search", searchArtist)
 router.get("/artist-search", (req, res) => {
-    res.render('artist-search-results')
-})
+    res.render('artist-search-results')})
+router.post("/artist-search", searchArtist)
+
 
 
 module.exports = router;
