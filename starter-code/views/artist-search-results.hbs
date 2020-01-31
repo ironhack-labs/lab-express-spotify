@@ -1,0 +1,18 @@
+<ul>
+{{#each artistas}}
+
+<li>
+    <article>
+    <img src="{{this.images.[0].url}}" alt="foto">
+    {{this.name}}
+
+
+<form action="/albums/{{this.id}}" method="GET">
+<input type="submit" value="Albums">
+</form>
+    </article>
+</li>
+
+
+{{/each}}
+</ul>

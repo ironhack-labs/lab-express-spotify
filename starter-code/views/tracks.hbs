@@ -1,0 +1,14 @@
+<ul>
+{{#each canciones}}
+
+<li>
+    <article>
+    {{this.name}}
+<audio src="{{this.preview_url}}" controls></audio>
+
+    </article>
+</li>
+
+
+{{/each}}
+</ul>

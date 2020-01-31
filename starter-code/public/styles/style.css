@@ -1,0 +1,34 @@
+#section-home{
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+display: flex;
+justify-content: center;
+align-items: center;
+}
+
+#section-home form{
+    width: 400px;
+    height: 150px;
+    background-color: rgb(190, 190, 190);
+    opacity: 0.75;
+    display: flex;
+    flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+#input-text-home{
+    width: 250px;
+    height: 45px;
+    
+}
+#input-btn-home{
+    margin-top: 15px;
+    width: 150px;
+    height: 45px;
+    background-color: tomato;
+    color: white;
+}

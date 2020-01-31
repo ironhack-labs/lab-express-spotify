@@ -5,13 +5,18 @@ const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
 
+const bodyParser=require('body-parser');
+
+
 const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({exteded:true}));
 
-// setting the spotify-api goes here:
+
+app.use("/", require("./routes"))
 
 // Our routes go here:
 
