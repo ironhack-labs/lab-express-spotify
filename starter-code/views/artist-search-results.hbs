@@ -1,5 +1,5 @@
 {{#each data.body.artists.items as |artist|}}
-<img src="{{artist.image}}">
+<img src="{{artist.images.[1].url}}">
 <h3>{{artist.name}}</h3>
-<a>{{artist.id}}</a>
+<p><a href="/albums/{{artist.id}}">View albums</a></p>
 {{/each}}

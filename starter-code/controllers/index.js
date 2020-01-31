@@ -15,6 +15,37 @@ res.render('artist-search-results', {data})
 
 }
 
+exports.getArtistAlbumsView = (req, res) => {
+    const {artistId} = req.params
+    console.log("artistId:", artistId)
+
+    spotify
+    .getArtistAlbums(artistId)
+    .then( album => {console.log(`The received data from the API:`, album)
+    let {items} = album.body
+    res.render('albums', {items})
+
+
+})
+.catch( err => console.log('The error while searching artist ocuured:',err))
+}
+
+
+exports.getTracks = (req, res) => {
+    const {tracksId} = req.params
+    console.log("tracksId:", tracksId)
+
+    spotify
+    .getAlbumTracks(tracksId)
+    .then( track => {console.log(`The received data from the API:`, track)
+    let {items} = track.body
+    res.render('tracks', {items})
+    
+
+})
+.catch( err => console.log('The error while searching artist ocuured:',err))
+}
+
 
 
 
