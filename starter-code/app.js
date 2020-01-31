@@ -45,7 +45,7 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
-app.get("/albums/:artistId", (req, res, next) => {
+app.get("/albums/:artistId", (req, res) => {
   spotifyApi.getArtistAlbums(req.params.artistId).then(
     function(data) {
       console.log("req.params", req.params);
