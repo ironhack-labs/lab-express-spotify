@@ -1,6 +1,6 @@
 <div>
     {{#each items as |album|}}
-    <img src="{{album.images.[0]}}" alt="">
+    <img src="{{album.images.[1].url}}" alt="">
     <h4>{{album.name}}</h4>
     <a href="/tracks/{{album.id}}">Songs</a>
     {{/each}}
