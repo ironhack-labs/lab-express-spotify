@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+}
+
+.homepage-container {
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist-image {
+    width: 200px;
+}
+
+.album-image {
+    width: 200px;
+}
+
+.form-container {
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.7);
+    top: 50%;
+    bottom: 50%;
+    
+}
+
+.searchbox {
+    width: 250px;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-size: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    display: block;
+    vertical-align: middle;
+}
+
+.searchbutton {
+    width: 150px;
+    padding: 10px;
+    background-color: rgb(250, 100, 105);
+    vertical-align: middle;
+    font-size: 14px;
+    color: white;
+}

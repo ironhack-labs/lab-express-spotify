@@ -1,0 +1,18 @@
+<h1>Title </h1>
+
+<div class="tracks-container">
+
+    {{#each trackList}}
+    <div>
+        <h2>{{{this.name}}}</h2>
+    </div>
+    <div>
+        <audio controls src="{{{ this.preview_url }}}"></audio>
+    </div>
+    <div>
+        <h3>{{{ this.album }}}</h3>
+    </div>
+    <div>
+    </div>
+    {{/each}}
+</div>
