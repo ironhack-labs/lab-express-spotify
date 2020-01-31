@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.main {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+form input {
+  height: 20px;
+  margin-bottom: 10px;
+  width: 40%;
+}
+form button {
+  border: none;
+  height: 30px;
+  background-color: #f56965;
+  color: white;
+  width: fit-content;
+  padding: 5px 10px;
+}
+
+.artists,
+.albums {
+  padding: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+}
+.box {
+  margin: 20px;
+  width: 20%;
+  padding: 20px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+.box img {
+  height: 250px;
+}
+.box h3 {
+  font-size: 12pt;
+  margin: 10px;
+}
+.box a {
+  color: white;
+  background-color: #f56965;
+  text-decoration: none;
+  border: 1px solid black;
+  border-radius: 4px;
+  padding: 5px 10px;
+  font-size: 10pt;
+}
+.gray-bg {
+  width: 100%;
+  background-color: rgb(90, 90, 90);
+  text-align: center;
+  /* height: 40px; */
+}
+
+table {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  border-collapse: collapse;
+}
+thead {
+  background-color: rgb(90, 90, 90);
+  color: rgb(224, 224, 224);
+  border-collapse: collapse;
+  text-align: left;
+}
+table td:nth-child(1),
+table th:nth-child(1) {
+  width: 70%;
+}
+th {
+  padding-left: 20px;
+  height: 50px;
+}
+tbody td {
+  border-bottom: 2px solid white;
+}
+td {
+  background-color: rgb(224, 224, 224);
+  padding-left: 20px;
+}
+tr {
+  height: 20px;
+}
+table embed {
+  background-color: rgb(255, 255, 255);
+}

@@ -1,0 +1,10 @@
+<div class="artists">
+    {{#each artists}}
+    <div class="box">
+        {{> tile this}}
+        <div class="gray-bg">
+            <a href="/albums?artist={{id}}">View Albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
