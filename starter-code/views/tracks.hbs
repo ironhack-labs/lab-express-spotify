@@ -1,0 +1,8 @@
+<div>
+    {{#each items as |tracks|}}
+    <img src="{{tracks.images.[0]}}" alt="">
+    <h4>{{tracks.name}}</h4>
+    <audio src="{{tracks.preview_url}}"></audio>
+    <a href="/">Home</a>
+    {{/each}}
+</div>
