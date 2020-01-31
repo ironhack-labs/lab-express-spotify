@@ -10,7 +10,7 @@ router.get('/', (req, res) => {
     res.render('home')
 })
 router.post('/artist-search', findArtist)
-router.get("/albums:artistId", findAlbums)
-router.get("/tracks:albumId", findTracks)
+router.get("/albums/:artistId", findAlbums)
+router.get("/tracks/:albumId", findTracks)
 
 module.exports= router

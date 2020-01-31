@@ -17,18 +17,18 @@ exports.findAlbums = (req, res) => {
     spotifyApi.getArtistAlbums(artistId)
     .then(album => {
         console.log("got the albums:", album)
-        let {albumChido} = album.body
-        res.render("albums"), {albumChido}
+        let {items: albumChido} = album.body
+        res.render("albums",{albumChido})
     })
     .catch(err => console.log("Albums broke", err))
 }
 
     exports.findTracks = (req, res) => {
         const {albumId} = req.params
-      spotify.getAlbumTracks(albumId)
+      spotifyApi.getAlbumTracks(albumId)
       .then(tracks => {
         console.log("Got the tracks:", tracks)
-        let {tracksChidas} = tracks.body
+        let {items: tracksChidas} = tracks.body
         res.render('tracks', {tracksChidas})
     })
     .catch(err => console.log('Tracks broke', err));

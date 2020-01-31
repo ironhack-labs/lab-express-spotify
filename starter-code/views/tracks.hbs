@@ -1,6 +1,13 @@
 <h2>Tracks</h2>
 {{#each tracksChidas as |tracks|}}
-<img src="{{tracks.images.[0].url}}">
+
 <h4>{{tracks.name}}</h4>
-<audio src="{{tracks.preview_url}}"></audio>
+{{#if tracks.preview_url}}
+<audio controls>
+<source src="{{tracks.preview_url}}" type="audio/mpeg">
+Your browser does not support the audio element.
+</audio>
+{{else}}
+ <div>no preview for this track</div>
+ {{/if}}
 {{/each}}
