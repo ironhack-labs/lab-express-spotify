@@ -1,5 +1,5 @@
-{{#each track.body.items as |dataTrack|}}
-<ul>
-    <li>{{dataTrack.name}}><audio src="{{dataTrack.preview_url}}" controls></audio></li>
-</ul>
+{{#each items as |dataTrack|}}
+
+    <p>{{dataTrack.name}}><audio src="{{dataTrack.preview_url}}" controls></audio></p>
+
 {{/each}}
