@@ -1,0 +1,104 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* FRONT PAGE */
+
+.front-page {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.search-container {
+  position: absolute;
+  width: 600px;
+  height: 200px;
+  margin-top: 200px;
+  margin-left: 400px;
+  background-color: rgba(255, 255, 255, 0.4);
+}
+
+.search-box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 50px;
+}
+
+.search-box input {
+  padding: 10px 100px;
+  font-size: 1.2em;
+}
+
+.search-box button {
+  padding: 5px 15px;
+  margin-top: 10px;
+  font-size: 1.1em;
+  background-color: #ff6666;
+  border: none;
+}
+
+/* ARTIST SEARCH PAGE + ALBUM PAGE */
+
+.artist-search-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.artist-card {
+  /* height: 500px; */
+  width: 250px;
+  padding: 20px;
+}
+
+.artist-info {
+  background-color: darkgray;
+  text-align: center;
+  padding: 10px;
+}
+
+.artist-info h3 {
+  font-size: 1em;
+}
+
+.artist-card img {
+  width: 250px;
+}
+
+.artist-info button {
+  background-color: #ff6666;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  margin-top: 5px;
+  font-size: 1em;
+}
+
+/* TRACK PAGE */
+
+.tracks-page {
+  margin: 10px;
+  position: absolute;
+  text-align: center;
+}
+
+th {
+  background-color: darkgrey;
+  padding: 20px;
+}
+
+td {
+  background: lightgrey;
+}
+
+audio {
+  background: transparent;
+}

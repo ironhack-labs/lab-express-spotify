@@ -1,0 +1,20 @@
+<div class="artist-search-page">
+{{#each artistAlbums}}
+    <div class="artist-card">
+        {{#if images.1.url}}
+        <img src="{{images.1.url}}" alt="{{name}}">
+        {{else}}
+        <img src="/images/default_img.jpeg" alt="default">
+        {{/if}}
+    
+        <div class="artist-info">
+            <h3>{{name}}</h3>
+    
+            <a href="/tracks/{{id}}">
+            <button>View Tracks</button>
+            </a>
+        </div>
+    </div>
+
+{{/each}}
+</div>
