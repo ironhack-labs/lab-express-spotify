@@ -1,0 +1,80 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: "Trebuchet MS", Helvetica, sans-serif;
+  background-image: url("/images/spotify-background.jpeg");
+  background-color: #cccccc;
+  background-size: cover;
+}
+
+h1 {
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+}
+
+.albums-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album-card {
+  flex: 1;
+  margin: 10px;
+  box-shadow: 5px 5px 10px 0px#32323232;
+  background-color: #fafafa;
+}
+
+.album-poster,
+.album-details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.album-card,
+.album-details {
+  padding: 10px;
+}
+
+.album-poster img {
+  width: 150px;
+  height: 200px;
+  object-fit: cover;
+  object-position: center;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+form input {
+  border: none;
+
+  padding: 10px;
+  width: 50%;
+  font-size: large;
+  background-color: #fafafa;
+
+  transition: 0.5s background-color;
+}
+
+form input:focus {
+  outline: none;
+  background-color: #fff;
+}
+
+form button {
+  width: 25%;
+  background-color: #1db954;
+  color: #fff;
+  font-size: large;
+  margin-left: 2px;
+  border-radius: 5px;
+}
