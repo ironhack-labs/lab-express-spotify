@@ -1,0 +1,12 @@
+<div class="tracks">
+    {{#each items}}
+    <ul>
+        <li>
+            <figure>
+                <figcaption>Listen to "{{name}}"</figcaption>
+                <audio controls src="{{preview_url}}"></audio>
+            </figure>
+        </li>
+    </ul>
+    {{/each}}
+</div>

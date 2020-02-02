@@ -1,0 +1,21 @@
+{{!-- <a href="/albums/{{this.data.body.artists.albums}}"></a>View Albums</a>
+
+<div class="artistInfo">
+
+    <img src="{{this.images.0.url}}" alt="poster for {{this.name}}">
+</div>
+
+<h3>{{this.Title}}</h3>
+
+</a> --}}
+
+<div class="albums">
+    {{#each albums}}
+
+    <img src="{{this.images.2.url}}" alt="{{this.name}} album cover">
+    {{this.name}}
+
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+
+    {{/each}}
+</div>
