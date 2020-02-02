@@ -1,0 +1,102 @@
+/* home page */
+.startpage {
+  position: relative;
+}
+.search {
+  position: absolute;
+  border: 1px solid none;
+  padding: 50px 100px;
+
+  background-color: rgb(255, 255, 255, 0.5);
+  top: 50%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+input {
+  width: 200px;
+  border-radius: 5px;
+  padding: 5px;
+}
+.search button {
+  background-color: tomato;
+  color: white;
+  margin-top: 10px;
+  border: tomato;
+  padding: 5px;
+}
+.search button:hover {
+  background-color: white;
+  color: tomato;
+  border: 1px solid tomato;
+}
+
+.image {
+  width: 100vw;
+  /* position: absolute; */
+}
+
+/* Artist search page */
+/* Artist albums page */
+.album-wrapper {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+.artists-album {
+  padding: 10px;
+}
+.artist-img {
+  width: 300px;
+  height: 300px;
+  margin-bottom: -5px;
+}
+.artist {
+  color: white;
+  font-weight: bold;
+  padding-bottom: 10px;
+  font-size: large;
+  width: 280px;
+}
+.info-container {
+  background-color: #4d4d4d;
+  text-align: center;
+  padding: 10px;
+}
+
+.info-container button {
+  background-color: tomato;
+  color: white;
+  border-radius: 5px;
+  border: none;
+  padding: 5px;
+  margin: 5px;
+}
+
+.info-container button:hover {
+  text-decoration: underline;
+}
+
+/* Artist albums track page */
+.header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #4d4d4d;
+  color: white;
+  font-weight: bold;
+  padding: 20px;
+}
+
+.track-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #f6f6f6;
+  margin: 2px 0px;
+}
+
+.track-container p {
+  margin-left: 20px;
+}
