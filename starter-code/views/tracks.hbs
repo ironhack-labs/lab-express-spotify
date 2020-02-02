@@ -1,4 +1,8 @@
-{{#each tracksList}}
-<h3>{{this.name}}</h3>
-<audio src="{{this.preview_url}}" controls></audio>
-{{/each}}
+<div class="track-container">
+    {{#each tracksList}}
+    <div class="track">
+        <h3>{{this.name}}</h3>
+        <audio src="{{this.preview_url}}" controls></audio>
+    </div>
+    {{/each}}
+</div>

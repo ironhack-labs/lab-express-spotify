@@ -1,0 +1,73 @@
+body {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+}
+#form-container {
+  margin-top: 200px;
+  width: 600px;
+  height: 200px;
+  background: rgb(255, 255, 255, 0.5);
+}
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+form input {
+  margin-top: 50px;
+  margin-bottom: 10px;
+  width: 350px;
+  padding: 8px;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+form button {
+  background-color: coral;
+  color: white;
+  border: none;
+  padding: 8px;
+}
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background: rgb(255, 255, 255, 0.5);
+}
+.container img {
+  width: 250px;
+  height: 250px;
+}
+.img-container {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.title {
+  width: 250px;
+  background-color: grey;
+  color: white;
+  text-align: center;
+  padding-bottom: 5px;
+}
+.title h3 {
+  margin-top: 5px;
+}
+.title button {
+  background-color: coral;
+  color: white;
+  border: none;
+  padding: 5px;
+  border-radius: 5px;
+}
+.track-container {
+  background: rgb(255, 255, 255, 0.5);
+  width: 1000px;
+}
+.track {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px;
+}
