@@ -1,35 +1,13 @@
-<h1>Search Results Page</h1>
-
-<div class="artist-container">
+<div class="results-container">
     {{#each artistList}}
-    <div>
-        <img class="artist-image" src=" {{{ this.images.0.url }}} " alt="image of {{{ this.name }}}">
-    </div>
-    <div>
-        <h3>{{{ this.name }}}</h3>
-    </div>
-    <div>
-        <a href="/albums/{{{this.id}}}"><button>View Albums</button></a>
-    </div>
+    <div class="row">
+        <div>
+            <img class="image" src=" {{{ this.images.0.url }}} " alt="image of {{{ this.name }}}">
+        </div>
+            <div class="info-container">
+                <p>{{{this.name}}}</p>
+                <a href="/albums/{{{this.id}}}"><button class="btn">View Albums</button></a>
+            </div>
+        </div>
     {{/each}}
 </div>
-
-{{!-- name, image, button --}}
-
-
-{{!-- <div class="movie-poster">
-    <img src="{{this.Poster}}" alt="poster for {{this.Title}}">
-</div>
-<div class="movie-details">
-    <h3>{{this.Title}}</h3>
-    <p><strong>Released</strong> in <a href="/searchByYear?year={{this.Year}}">{{this.Year}}</a> and
-        <strong>directed</strong> by {{this.Director}}</p>
-    <p><strong>Duration</strong>: {{this.Runtime}}</p>
-    <p><strong>Rate</strong>: {{this.imdbRating}}</p>
-    <p><strong>Genre</strong>: {{this.Genre}}</p>
-    <p><strong>Actors</strong>: {{this.Actors}}</p>
-    <p><strong>Plot</strong>: {{this.Plot}}</p>
-    <p><strong>Language</strong>: {{this.Language}}</p>
-    <p><strong>Country</strong>: {{this.Country}}</p>
-    <p><strong>Awards</strong>: {{this.Awards}}</p>
-</div> --}}

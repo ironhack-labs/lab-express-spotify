@@ -1,19 +1,13 @@
-<h1>Albums for: {{{ albumsList.0.artists.0.name }}}</h1>
-
-<div class="albums-container">
-    
-{{#each albumsList}}
-<div>
-    <h2>{{{this.name}}}</h2>
-</div>
-    <div>
-        <img class="album-image" src=" {{{ this.images.0.url }}} " alt="image of {{{ this.name }}}">
-    </div>
-    <div>
-        <h3>{{{ this.album }}}</h3>
-    </div>
-    <div>
-        <a href="/tracks/{{{this.id}}}"><button>View Tracks</button></a>
+<div class="results-container">
+    {{#each albumsList}}
+    <div class="row">
+        <div>
+            <img class="image" src=" {{{ this.images.0.url }}} " alt="image of {{{ this.name }}}">
+        </div>
+        <div class="info-container">
+            <p>{{{this.name}}}</p>
+            <a href="/tracks/{{{this.id}}}"><button class="btn">View Tracks</button></a>
+        </div>
     </div>
     {{/each}}
 </div>
