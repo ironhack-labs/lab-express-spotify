@@ -1,0 +1,10 @@
+<h1>Search Results</h1>
+<div class="search-result">
+    {{#each searchResults}}
+    <div class="search-result-card">
+        <img class="result-image" src="{{this.images.0.url}}" alt="album-cover">
+        <h3 class="search-result-titel">{{this.name}}</h3>
+        <a class="red-button" href="/albums/{{this.id}}">View Albums</a>
+    </div>
+    {{/each}}
+</div>

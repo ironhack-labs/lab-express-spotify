@@ -1,0 +1,7 @@
+<h1>Play a Song!</h1>
+
+{{#each songList}}
+<h2>{{this.name}}</h2>
+<audio src="{{{this.preview_url}}}" controls>Your browser does not support the
+    <code>audio</code> element.</audio>
+{{/each}}

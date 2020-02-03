@@ -1,0 +1,64 @@
+body {
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 20px;
+}
+
+.artist-search {
+  background-color: rgba(255, 255, 255, 0.9);
+  padding: 3em;
+  width: 50vw;
+  opacity: 0.9;
+}
+
+.artist-search > form {
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-search > form > input,
+button {
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 1em;
+  padding: 1em;
+}
+
+.artist-search > form > input {
+  width: 70%;
+}
+
+.red-button {
+  background-color: rgb(209, 66, 66);
+  text-decoration: none;
+  margin: 1em;
+  padding: 1em;
+  color: white;
+}
+
+.search-result {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.search-result-card {
+  width: 25vw;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.result-image {
+  width: 100%;
+  /* height:ts */
+}
