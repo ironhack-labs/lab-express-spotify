@@ -62,8 +62,8 @@ app.get("/albums/:artistId", (request, response) => {
 });
 
 app.get("/tracks/:albumID", (request, response) => {
-  let albumId = request.params.albumId;
-
+  let albumId = request.params.albumID; //albumID links to route on line 64 :albumID
+  console.log(albumId);
   spotifyApi
     .getAlbumTracks(albumId)
     .then(data => {

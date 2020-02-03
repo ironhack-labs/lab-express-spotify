@@ -1,14 +1,14 @@
 <div class="track-page">
-<table>
-    <tr>
-        <th>Title</th>
-        <th>Listen</th>
-    </tr>
-    {{#each tracksList}}
-    <tr>
-        <td>{{this.name}}</td>
-        <td><audio src="{{this.preview_url}}"></audio></td>
-    </tr>
-    {{/each}}
-</table>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Listen</th>
+        </tr>
+        {{#each tracksList}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td><audio src="{{this.preview_url}}"></audio></td>
+        </tr>
+        {{/each}}
+    </table>
 </div>
