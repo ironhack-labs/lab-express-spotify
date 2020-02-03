@@ -1,0 +1,10 @@
+<h1>Artist Search Results</h1>
+{{#each data}}
+<div class="artist-cover">
+    <img src="{{this.images.[1].url}}" alt="poster for {{this.name}}">
+</div>
+<div class="artist-details">
+    <h3>{{this.name}}</h3>
+    <button><a href="/albums/{{this.id}}">View Albums</a></button>
+</div>
+{{/each}}
