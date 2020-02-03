@@ -1,12 +1,25 @@
+{{!-- {{#each items}}
+    <div class="audio-info">
+
+        "{{name}}"
+        <audio controls src="{{preview_url}}"></audio>
+    </div>
+
+    {{/each}} --}}
+
+
 <div class="tracks">
-    {{#each items}}
-    <ul>
-        <li>
-            <figure>
-                <figcaption>Listen to "{{name}}"</figcaption>
-                <audio controls src="{{preview_url}}"></audio>
-            </figure>
-        </li>
-    </ul>
-    {{/each}}
+    <table>
+
+        <tr>
+            <th>Title</th>
+            <th>Track</th>
+        </tr>
+        {{#each items}}
+        <tr>
+            <td> "{{name}}"</td>
+            <td> <audio controls src="{{preview_url}}"></audio></td>
+        </tr>
+        {{/each}}
+    </table>
 </div>

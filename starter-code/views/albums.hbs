@@ -1,21 +1,12 @@
-{{!-- <a href="/albums/{{this.data.body.artists.albums}}"></a>View Albums</a>
-
-<div class="artistInfo">
-
-    <img src="{{this.images.0.url}}" alt="poster for {{this.name}}">
-</div>
-
-<h3>{{this.Title}}</h3>
-
-</a> --}}
-
 <div class="albums">
     {{#each albums}}
+    <div class="album-content">
+        <div class="album-cover">
+            <img src="{{this.images.1.url}}" alt="{{this.name}} album cover">
+            <h3>{{this.name}}</h3>
+            <a href="/tracks/{{this.id}}"><button>View Tracks</button></a>
+        </div>
 
-    <img src="{{this.images.2.url}}" alt="{{this.name}} album cover">
-    {{this.name}}
-
-    <a href="/tracks/{{this.id}}">View Tracks</a>
-
+    </div>
     {{/each}}
 </div>

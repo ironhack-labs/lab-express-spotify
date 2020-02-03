@@ -1,51 +1,153 @@
+* {
+  box-sizing: border-box;
+}
 body {
-  background: #4b0a0a;
+  box-sizing: border-box;
+  background: #191414;
+  background-image: url(/images/spotify-background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  /* background-clip: padding-box; */
   font-family: "Open Sans", sans-serif;
 }
 
 .search {
-  width: 100%;
-  position: relative;
   display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  align-content: flex-end;
 }
 
 .searchTerm {
   width: 100%;
-  border: 3px solid #00b4cc;
-  border-right: none;
+  border: 3px solid #1db954;
   padding: 5px;
   height: 40px;
-  border-radius: 5px 0 0 5px;
+  border-radius: 5px 5px;
   outline: none;
   color: #c6dbd2;
 }
 
 .searchTerm:focus {
-  color: #00b4cc;
+  color: #191414;
 }
 
 .searchButton {
   width: 200px;
   height: 40px;
-  border: 1px solid #00b4cc;
-  background: #00b4cc;
+  border: 1px solid #1db954;
+  background: #1db954;
   text-align: center;
   color: #fff;
-  border-radius: 0 5px 5px 0;
+  border-radius: 5px 5px 5px 5px;
   cursor: pointer;
   font-size: 20px;
+  display: flex;
+  flex-direction: row;
 }
 
-/*Resize the wrap to see the search bar change!*/
-.wrap {
+/* .wrap {
   width: 100%;
-  position: 50%;
+  position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-100%, -50%);
+} */
+button {
+  width: 150px;
+  height: 30px;
+  border: 1px solid #1db954;
+  background: #1db954;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px 5px 5px 5px;
+  cursor: pointer;
+  font-size: 15px;
+}
+
+.artist {
+  display: flex;
+  /*justify-content: space-around;*/
+  flex-wrap: wrap;
+  padding: 10px;
+  background: darkgrey;
+}
+.artist-info img {
+  height: 200px;
+}
+.artist-info {
+  box-shadow: #191414;
+  background-color: darkgrey;
+  opacity: 80%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding: 10px;
+}
+
+.artist-info .img {
+  max-width: 100%;
+}
+/* .artists-name {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
+} */
+
+.album-content {
+  box-shadow: black;
+  background-color: darkgrey;
+  opacity: 80%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 10px;
 }
 
 .tracks {
   display: flex;
-  background: yellow;
+  flex-direction: column;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: space-between;
+  width: 100%;
+  padding: 100px, 100px;
+  margin: 100px, 100px;
+}
+
+.tracks table {
+  display: table;
+  table-layout: fixed;
+  width: 100%;
+  word-wrap: break-word;
+  border-spacing: 2px;
+  border-color: gray;
+  padding: 10px, 10px;
+}
+td {
+  text-align: left;
+  background-color: darkgrey;
+  opacity: 80%;
+  padding: 10px;
+  width: 100%;
+}
+th {
+  text-align: center;
+  background-color: #1db954;
+  padding: 20px;
+  font-weight: bolder;
+  font-size: 1rem;
+}
+.td audio {
+  text-align: right;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.4);
+  border-radius: 70px;
+  transform: scale(1);
 }
