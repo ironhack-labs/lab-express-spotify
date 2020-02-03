@@ -2,13 +2,18 @@
 
 <div class="album-poster">
 
-    <h3>{{this.name}}</h3>
+    <p>{{name}}</p>
+    {{#if images.[0].url}}
+    <img src="{{images.[0].url}}" alt="photo for {{name}}" style="height: 200px;">
 
-    <img src="{{this.images.0.url}}" alt="artist image for {{this.name}}">
-
+    {{else}}
+    <img src="https://scenefordummies.com/img/static/cover/placeholder.png" alt="missing photo for {{name}}"
+        style="height: 200px;">
+    {{/if}}
     <button>
-        <a href="/albumView?id={{this.id}}">Album: {{this.name}}
+        <a href="/albumView?id={{this.id}}">Albums: {{this.name}}
     </button> </a>
+
 
 </div>
 
