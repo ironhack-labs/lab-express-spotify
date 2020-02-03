@@ -6,7 +6,7 @@ html {
   font-family: "Trebuchet MS", Helvetica, sans-serif;
   background-image: url("/images/spotify-background.jpeg");
   background-color: #cccccc;
-  background-size: cover;
+  background-size: 100% auto;
 }
 
 h1 {
@@ -21,6 +21,7 @@ a {
 .albums-container {
   display: flex;
   flex-wrap: wrap;
+  
 }
 
 .album-card {
