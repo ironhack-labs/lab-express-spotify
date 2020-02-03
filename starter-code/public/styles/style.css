@@ -1,7 +1,20 @@
-body {
+.main-body {
   background-image: url(images/spotify-background.jpeg);
 }
 
 .backs {
   height: 600px;
+}
+.item-wrapper > img {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+}
+.albums-wrapper > img {
+  height: 200px;
+}
+.albums-wrapper {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
 }

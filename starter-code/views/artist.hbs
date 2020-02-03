@@ -1,6 +1,11 @@
-<div>
+<div class="item-wrapper">
     {{#each artist}}
-    <img src={{this.images.[1].url}} alt="">
+    {{#if this.images.[1].url}}
+    <img src={{this.images.[1].url}} alt="photo for {{this.name}}">
+    {{else}}
+    <img src="https://scenefordummies.com/img/static/cover/placeholder.png" alt="missing photo for {{this.name}}">
+    {{/if}}
+    <!--<img src={{this.images.1.url}} alt=""> also works-->
     {{this.name}}
     <a href="/albums/{{this.id}}"> <button>View Albums</button></a>
     {{/each}}

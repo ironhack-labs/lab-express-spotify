@@ -1,6 +1,12 @@
-{{#each albums}}
-{{this.name}}
-<img src={{this.images.[1].url}}>
-<a href="/tracks/{{this.id}}"><button>See the tracks</button></a>
+<div class="albums-wrapper">
+    {{#each albums}}
+    {{this.name}}
+    {{#if this.images.[1].url}}
+    <img src={{this.images.[1].url}}>
+    {{else}}
+    <img src="https://scenefordummies.com/img/static/cover/placeholder.png" alt="missing photo for {{this.name}}">
+    {{/if}}
+    <a href="/tracks/{{this.id}}"><button>See the tracks</button></a>
 
-{{/each}}
+    {{/each}}
+</div>
