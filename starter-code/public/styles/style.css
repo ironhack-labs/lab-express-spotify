@@ -1,0 +1,5 @@
+.background {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  height: 100vh;
+}
