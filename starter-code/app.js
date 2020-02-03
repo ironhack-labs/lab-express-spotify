@@ -70,7 +70,7 @@ app.get("/albumView", (request, response) => {
   spotifyApi
     .getArtistAlbums(request.query.id)
     .then(data => {
-      console.log("The received ALBUM data from the API: ", data.body);
+      // console.log("The received ALBUM data from the API: ", data.body);
       response.render("albumView.hbs", {
         result: data.body
       });
@@ -82,12 +82,12 @@ app.get("/albumView", (request, response) => {
 
 // ------------------ Songs search
 app.get("/songsView", (request, response) => {
-  console.log("request.query: ", request.query);
+  //console.log("request.query: ", request.query);
   console.log("Songs searched...");
   spotifyApi
     .getAlbumTracks(request.query.id)
     .then(data => {
-      console.log("The received SONG data from the API: ", data.body);
+      // console.log("The received SONG data from the API: ", data.body);
       response.render("songsCard.hbs", {
         result: data.body
       });
@@ -96,6 +96,8 @@ app.get("/songsView", (request, response) => {
       console.log("The error while searching artists occurred: ", err)
     );
 });
+
+// ------------------ start app
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
