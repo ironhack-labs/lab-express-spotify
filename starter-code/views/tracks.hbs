@@ -1,0 +1,15 @@
+<div class=“container”>
+    {{#each tracks}}
+        <div class=“track-wrappers”>
+
+          
+            {{this.name}}
+            <audio controls>
+            <source src={{this.preview_url}}>
+ 
+            </audio>
+            
+           
+        </div>
+    {{/each }}
+</div>
