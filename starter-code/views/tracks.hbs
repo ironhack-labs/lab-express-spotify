@@ -1,0 +1,21 @@
+<div class="container">
+    <div id="track-header" class="row">
+        <div class="col-12 d-flex justify-content-between">
+            <div class="d-flex align-items-center">
+                <p id="back-link" onclick="window.history.back()">Atras</p>
+                <h1 id="track-title">Title</h1>
+            </div>
+            <h1>Listen</h1>
+        </div>
+    </div>
+    {{#each tracks}}
+    <div id="track" class="row">
+        <div class="col-12 d-flex justify-content-between align-items-center">
+            <h2>{{name}}</h2>
+            <audio controls>
+                <source src="{{preview_url}}">
+            </audio>
+        </div>
+    </div>
+    {{/each}}
+</div>
