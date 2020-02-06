@@ -41,26 +41,42 @@ app.get('/artist-search', (req, res) => {
                 artistsArray
             })
         })
-
-
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 app.get('/artist/:artistID', (req, res) => {
     // console.log(req.params.artistID)
     let id = req.params.artistID
-    console.log(id)
 
-    console.log('sadfa')
     spotifyApi
         .getArtistAlbums(id)
         .then(data => {
-            // console.log(data)
-            // res.render(data)
-            res.json(data.body)
+            let artistAlbums = data.body
+            res.render('albums', artistAlbums)
         })
 
 })
+
+app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi
+        .getArtistAlbums(req.params.artistId)
+        .then(data => {
+            let artistAlbums = data.body
+            // res.json(artistAlbums);
+            res.render('albums', artistAlbums);
+        })
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+    spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then(data => {
+            let albumTracks = data.body
+            // res.json(data.body);
+            res.render('tracks', albumTracks);
+        })
+});
+
 
 
 
