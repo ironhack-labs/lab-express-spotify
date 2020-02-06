@@ -1,0 +1,20 @@
+<div class="container">
+    <h2>Albums</h2>
+    <div class="row">
+
+        {{#each albums}}
+        <div class="col-md-3 justify-content-center">
+            <div class="">
+                <div class="">
+
+                    <h4>{{name}}</h4>
+                    <img class="artist-main" src="{{images.1.url}}" alt="">
+                    <a href="/album/{{id}}">View tracks</a>
+
+                </div>
+            </div>
+
+        </div>
+        {{/each}}
+    </div>
+</div>

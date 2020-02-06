@@ -1,0 +1,16 @@
+.bg-main {
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    padding: 300px;
+}
+
+.grey-bg {
+    padding: 30px 100px;
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.artist-main {
+    /* height: 400px; */
+}

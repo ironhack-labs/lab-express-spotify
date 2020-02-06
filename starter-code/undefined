@@ -1,0 +1,14 @@
+ {
+    external_urls: {
+      spotify: 'https://open.spotify.com/artist/711MCceyCBcFnzjGY4Q7Un'
+    },
+    followers: { href: null, total: 14197144 },
+    genres: [ 'album rock', 'australian rock', 'hard rock', 'rock' ],
+    href: 'https://api.spotify.com/v1/artists/711MCceyCBcFnzjGY4Q7Un',
+    id: '711MCceyCBcFnzjGY4Q7Un',
+    images: [ [Object], [Object], [Object], [Object] ],
+    name: 'AC/DC',
+    popularity: 86,
+    type: 'artist',
+    uri: 'spotify:artist:711MCceyCBcFnzjGY4Q7Un'
+  },
