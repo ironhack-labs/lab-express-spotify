@@ -1,0 +1,7 @@
+<div class="container">
+    <div class="row">
+        {{#each algo}}
+        {{>albumCard this}}
+        {{/each}}
+    </div>
+</div>
