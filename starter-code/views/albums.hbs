@@ -1,0 +1,13 @@
+<div class="col-10">
+
+<h1> ALBUMES DE: {{infoAlbum.0.artists.0.name}} </h1>
+
+{{#each infoAlbum}}
+{{name}}
+</br>
+<img src="{{images.0.url}}" style="width: 30%;">
+</br>
+<a href="/songs/{{id}}" class="btn btn-primary btn-sm">TODOS LAS CANCIONES</a>
+</br>
+{{/each}}
+<div>

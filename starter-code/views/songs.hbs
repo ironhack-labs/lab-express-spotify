@@ -1,0 +1,9 @@
+<div class="col-3">
+<h1>CANCIONES DE: {{infoSongs.0.name}}</h1>
+{{#each infoSongs}}
+{{name}}
+<audio controls>
+    <source src="{{preview_url}}" type="audio/mpeg">
+</audio>
+{{/each}}
+</div>

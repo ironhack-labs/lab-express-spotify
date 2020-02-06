@@ -1,0 +1,12 @@
+<div class="col-10">
+
+    <h1> HAS BUSCADO A ESTOS ARTISTAS:</h1>
+
+    {{#each result.artists.items}}
+    {{name}}
+    </br>
+    <img src="{{images.0.url}}" style="width: 30%;">
+    </br>
+    <a href="/albums/{{id}}" class="btn btn-primary btn-sm">TODOS LOS ALBUMES</a>
+    </br>
+    {{/each}}
