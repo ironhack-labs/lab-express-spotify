@@ -62,6 +62,25 @@ app.get("/albums/:artistId", (req, res) => {
   //   );
 });
 
+
+app.get("/tracks/:albumId", (req, res) => {
+  let { albumId } = req.params;
+  spotifyApi.getAlbumTracks(albumId).then(data => {
+    const tracks = data.body.items;
+    // res.json(tracks);
+    res.render("tracks", { tracks });
+  });
+  // let { artist } = req.query;
+  // spotifyApi
+  //   .searchArtists(artist)
+  //   .then(data => {
+  //     const artistsFound = data.body.artists.items;
+  //     res.render("artist-search-results", { artistsFound });
+  //   })
+  //   .catch(err =>
+  //     console.log("The error while searching artists occurred: ", err)
+  //   );
+});
 //   console.log(req.query);
 
 //   Services.find({ nif: req.query.nif }).then(service => {

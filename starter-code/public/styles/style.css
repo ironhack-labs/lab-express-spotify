@@ -1,3 +1,12 @@
 img {
   width: 200px;
 }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.tracks .album {
+  display: flex;
+  /* flex-direction: column */
+}
