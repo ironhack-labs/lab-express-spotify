@@ -4,14 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
-
-const app = express();
-
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
-
-// setting the spotify-api goes here:
+//Order Matters - place above everything else
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const spotifyApi = new SpotifyWebApi({
@@ -30,6 +23,14 @@ spotifyApi
     console.log('Something went wrong when retrieving an access token', error);
   });
 
+  const app = express()
+
+app.set('view engine', 'hbs');
+app.set('views', __dirname + '/views');
+app.use(express.static(__dirname + '/public'));
+
+
+
 // the routes go here:
 //#1: Render index.hbs
 app.get('/', (req, res, next) => {
@@ -41,10 +42,25 @@ app.get('/', (req, res, next) => {
 //#2: Render artist.hbs
 app.get('/artists', (req, res, next)=>{
 
-  spotifyApi.searchArtists(req.query.artists)
+  spotifyApi.searchArtists(req.query.artistName)
   .then(data => {
-    // console.log("The received data from the API: ", data.body.artists.items);
+    // console.log("the data from spotify: ", {data: data.body.artists.items})
     res.render('artists', {artist: data.body.artists.items})
+  })
+  .catch(err => {
+    console.log("The error while searching artists occurred: ", err);
+  })
+
+});
+
+//#3: Render albums.hbs
+//.getArtistAlbums - req.params.getID (or album, or whatver I call it)
+app.get('/albums/:artistId', (req, res, next)=>{
+
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    // console.log("the data from spotify: ", {data: data.body})
+    res.render('albums', {album: data.body.items})
   })
   .catch(err => {
     console.log("The error while searching artists occurred: ", err);
