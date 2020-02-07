@@ -1,6 +1,15 @@
-{{#each items}}
-<li>
-    {{name}}
-    <button><a href="/tracks/{{id}}" type="button">View Tracks</a></button>
-</li>
-{{/each}}
+<div class="container">
+    <ul>
+        {{#each items}}
+            <li>
+                {{#if images.1.url}}
+                <img src="{{images.1.url}}" alt="{{name}}">
+                {{else}}
+                <img src="../images/default.jpg" alt="{{name}}">
+                {{/if}}
+                <p class="artist-name">{{name}}</p>
+                <button class="btn-albums"><a href="/tracks/{{id}}" type="button">View Tracks</a></button>
+            </li>
+        {{/each}}
+    </ul>
+</div>

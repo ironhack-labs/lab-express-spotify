@@ -1,22 +1,132 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
 body {
-    /* background-image: url('../images/spotify-background.jpeg');
-    background-repeat: no-repeat;
-    background-size: cover; */
     padding: 0;
     margin: 0;
+    box-sizing: border-box;
 }
 
-.overlay {
-    background-color: rgba(0, 0, 0, .6);
+.background {
+    background-image: url('../images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
     height: 100vh;
-}
-
-.form-container{
-    width: 300px;
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.overlay {
+    background-color: rgba(255, 255, 255, .6);
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-items: center;
+    align-items: center;
+}
+
+.form {
+    width: 80%;
     margin: 0 auto;
-    padding-top: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.input-search {
+    width: 80%;
+    height: 40px;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+
+.btn-search {
+    width: 30%;
+    height: 30px;
+    background-color: rgb(229, 111, 103);
+    color: #fff;
+}
+
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.container ul{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.container li{
+    background-color: #c5c7c5;
+    width: 30%;
+    margin-right: 20px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.container img{
+    height: 300px;
+    max-width: 90%;
+}
+
+.artist-name {
+    font-family: 'Montserrat', sans-serif;
+    margin-bottom: 5px;
+}
+
+.btn-albums{
+    background-color: rgb(229, 111, 103);
+    color: #fff;
+    border-radius: 10px;
+    height: 30px;
+    padding: 0 20px;
+}
+
+.btn-albums a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.container-tracks {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.title-tracks {
+    width: 100%;
+    height: 100px;
+    background-color: rgb(74, 74, 74);
+    display: flex;
+    font-family: 'Montserrat', sans-serif;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-tracks h2{
+    margin: 0 60px;
+    color: rgb(194, 194, 195)
+
+}
+
+.container-tracks ul {
+    padding-left: 0;
+}
+
+.tracks {
+    background-color: rgb(246, 246, 246);
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20px;
+    font-family: 'Montserrat', sans-serif;
 }
