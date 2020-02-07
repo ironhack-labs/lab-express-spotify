@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+{{#each artistName}}
+    {{this.name}}
+    <img src="{{this.url}}" alt="">
+    {{/each}}
+    <br>
+    <a href="/albums/{{this.id}}">View Albums</a>
+
+</body>
+</html>
