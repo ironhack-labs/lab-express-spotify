@@ -1,0 +1,13 @@
+<div>
+    <main>
+        <h1>Artists albums</h1>
+        {{#each albumsList}}
+
+        <h2>{{this.name}}</h2>
+        <img src="{{{this.images.0.url}}}" alt="tapa-album-img">
+        <a href="/songs/{{this.id}}">View Tracks</a>
+
+
+        {{/each}}
+    </main>
+</div>
