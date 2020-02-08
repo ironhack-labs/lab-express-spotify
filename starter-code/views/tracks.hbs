@@ -1,0 +1,8 @@
+{{#each artistTrack}}
+    {{this.name}}
+    <audio controls>
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+        preview
+    </audio>
+    <br>
+{{/each}}

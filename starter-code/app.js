@@ -54,5 +54,18 @@ app.get('/albums/:artistId',(req, res)=>{
       res.render("albums",objectAlbums);
     }
   });
+});
+
+app.get("/tracks/:trackId",(req, res) =>{
+  spotifyApi.getAlbumTracks(req.params.trackId,{limit: 10, offset: 1})
+  .then(data=>{
+    let objectTrack ={
+      artistTrack : data.body.items
+    }
+    res.render("tracks", objectTrack);
+  })
+  .catch(err=>{
+    console.log("something with wrongvvv ",err);
+  })
 })
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
