@@ -1,0 +1,20 @@
+<nav class="nav">
+    <li class="nav-item"> <a class="nav-link active" href="/">New Search</a> </li>
+</nav>
+
+<div class="row">
+    {{#each trackList}}
+    <div class="col-sm-4">
+        <div class="card result-card">
+            <div class="card-body backup_picture">
+                <h5 class="card-title">Track {{this.track_number}} - </span>{{this.name}}</h5>
+                <audio controls>
+                    <source src={{this.preview_url}} type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

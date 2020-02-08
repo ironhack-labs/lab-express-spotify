@@ -1,0 +1,16 @@
+body {
+    margin: 20px;
+}
+
+.search-form-container {
+    height: 100%;
+}
+
+.result-card {
+    margin-bottom: 20px;
+}
+
+.nav {
+    background-color: lightgray;
+    margin-bottom: 20px;
+}

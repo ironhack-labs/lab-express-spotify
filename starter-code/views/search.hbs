@@ -1,7 +1,16 @@
-<div>
-    <form action="/artist-search" method="GET">
-    <label>Search here</label>
-    <input type="text" name="q">
-    <button>GO!</button>
-    </form>
+<div class="row align-items-center search-form-container">
+    <div class="col">
+        <div class="jumbotron">
+            <h1 class="display-4">Search for your artist ...<h1>
+                    <p class="lead">This is a simple search using the spotify web API.</p>
+                    <hr class="my-4">
+                    <form action="/artist-search" method="GET">
+                        <div class="form-group">
+                            <label for="exampleInputEmail1"> </label>
+                            <input type="text" class="form-control" id="searchField" name="q">
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg">GO!</button>
+                    </form>
+        </div>
+    </div>
 </div>
