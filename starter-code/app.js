@@ -67,19 +67,20 @@ app.get("/albums/:artistId", (req, res, next) => {
 		);
 });
 
-app.get("/albums/tracks/:tracksId", (req, res, next) => {
-	console.log("Tracks", req.query.tracksId);
-	let albumId = req.params.id;
-
+app.get("/tracks/:albumId", (req, res, next) => {
+	// console.log("ALBUM", req.params.albumId);
+	const albumId = req.params.albumId;
 
 	spotifyApi
 		.getAlbumTracks(albumId)
-		.then(function (data) {
-			// console.log(data.body.items);
-			res.render("tracks.hbs", {
-				tracksList
-			});
-		}, function (err) {
+		.then(data => {
+			// console.log("Album tracks", data.body.items);
+			const tracksList = data.body.items;
+			//Song preview URL : 
+			// console.log("preview_url":, data.body.items[0].preview_url);
+			res.render("tracks", { tracksList});
+			},
+			function (err) {
 			console.log('Something went wrong!', err);
 		});
 

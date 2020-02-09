@@ -3,11 +3,11 @@
         <h1>Tracks list</h1>
         {{#each tracksList}}
 
-        <h2>{{this.name}}</h2>
-        {{!-- <audio src="{}"></audio> --}}
-        <img src="{{{this.images.0.url}}}" alt="spotify-album-img">
-        {{!-- {{!-- <a href="/albums/{{this.id}}">View Albums</a> --}} --}}
-
+            <h2>Track {{this.track_number}} - {{this.name}}</h2>
+            <audio controls>
+                <source src={{this.preview_url}} type="audio/mpeg">
+                Your browser is old as good whisky. Re install it so you can use audio tag.
+            </audio>
 
         {{/each}}
     </main>
