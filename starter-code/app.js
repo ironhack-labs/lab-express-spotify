@@ -83,13 +83,7 @@ app.get("/tracks/:albumId", (req, res, next) => {
 			function (err) {
 			console.log('Something went wrong!', err);
 		});
-
-
 });
-
-
-
-
 
 
 app.listen(3000, () =>

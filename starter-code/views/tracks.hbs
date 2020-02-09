@@ -1,9 +1,9 @@
 <div>
     <main>
-        <h1>Tracks list</h1>
-        {{#each tracksList}}
+        <h1>Tracks list</h1>         
+        {{#each tracksList}}        
 
-            <h2>Track {{this.track_number}} - {{this.name}}</h2>
+                <h2>Track {{this.track_number}} - {{this.name}}</h2>
             <audio controls>
                 <source src={{this.preview_url}} type="audio/mpeg">
                 Your browser is old as good whisky. Re install it so you can use audio tag.
