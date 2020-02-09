@@ -6,7 +6,7 @@
     {{#each artistList}}
     <div class="col-sm-4">
         <div class="card result-card">
-            <img src="{{{this.images.0.url}}}" class="card-img-top backup" alt="{{this.name}}">
+            <img src="{{{this.images.0.url}}}" class="card-img-top backup" onError="this.onerror=null;this.src='/images/fallback-image.jpg';" alt="{{this.name}}">
             <div class="card-body backup_picture">
                 <h5 class="card-title">{{this.name}}</h5>
                 <a href="/albums/{{this.id}}" class="btn btn-primary">Show albums</a>
