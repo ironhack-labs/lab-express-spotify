@@ -1,8 +1,40 @@
-body {
+.home-background {
     background-image: url("/images/spotify-background.jpeg");
-    background-color: red;
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100%;
 }
 
-.innegable {
-    color: pink;
+#searchbox {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    width: 40%;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.466);
+    padding: 50px 70px;
+}
+
+#searchbox input {
+    background-color: white;
+    border-radius: 3px;
+    border: 1px solid gray;
+    color: gray;
+    width: 300px;
+    height: 32px;
+    text-align: left;
+    font-size: 0.8em;
+    padding-left: 8px;
+    font-family: Verdana, Tahoma, sans-serif;
+}
+
+#searchbox button {
+    background-color: indianred;
+    font-size: 0.9em;
+    text-align: center;
+    color: white;
+    width: 160px;
+    margin-top: 10px;
+    height: 35px;
+    border: none;
 }
