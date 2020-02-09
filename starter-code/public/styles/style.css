@@ -1,0 +1,124 @@
+.index-bg {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: 100%;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif
+}
+
+form {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 500px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  height: 180px;
+  width: 400px;
+  padding-left: 15px;
+}
+
+.btn {
+  background-color: rgb(241, 76, 76);
+  color: white;
+  height: 35px;
+  width: 200px;
+  border: none;
+  border-radius: 5px;
+  margin: 10px;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px;
+}
+
+.card-container {
+  background-color: rgb(73, 73, 73);
+  color: white;
+  width: 300px;
+  height: 400px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  margin: 20px;
+}
+
+.card-img {
+  align-self: center;
+  width: 300px;
+  height: 300px;
+}
+
+.card-img img {
+  width: 100%;
+}
+
+.card-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0;
+  margin: 0;
+}
+
+nav {
+  background-color: rgb(73, 73, 73);
+  width: 100%;
+  height: 65px;
+  position: absolute;
+  color: rgba(173, 173, 173, 0.623);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h4 {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+.tracks-container {
+  display: flex;
+  justify-content: center;
+}
+
+.tracks {
+  position: absolute;
+  top: 85px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 2px 0px;
+  background-color: rgb(190, 190, 190);
+  height: 65px;
+  padding: 0px 15px;
+}
