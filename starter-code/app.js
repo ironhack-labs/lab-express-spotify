@@ -29,12 +29,39 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/artist-search", (req, res, next) => {
+  console.log("req.query :", req.query);
   spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
       const artistObj = data.body.artists.items;
-      console.log('hellooo', artistObj.images);
       res.render("artist-search-results", { artistObj });
+    })
+    .catch(err => {
+      console.log("err :", err);
+    });
+});
+
+app.get("/albums/?:id", (req, res, next) => {
+  const artistID = req.params.id;
+  spotifyApi
+    .getArtistAlbums(`${artistID}`)
+    .then(data => {
+      const albumObj = data.body.items;
+      res.render("album", { albumObj });
+    })
+    .catch(err => {
+      console.log("err :", err);
+    });
+});
+
+app.get("/album/tracks/?:id", (req, res, next) => {
+  const albumID = req.params.id;
+  spotifyApi
+    .getAlbumTracks(`${albumID}`)
+    .then(result => {
+      const trackObj = result.body.items;
+      console.log("trackObj[0] :", trackObj);
+      res.render("tracks", { trackObj });
     })
     .catch(err => {
       console.log("err :", err);
