@@ -1,9 +1,13 @@
-<div class="main-container">
+<div class="card-container">
     {{#each result}}
-    <div id="artist-container">
-        <h1>{{name}}</h1>
-        <img src="{{images.0.url}}" alt="{{this.name}}">
-        <button><a href="/albums/{{id}}">Go to Albums</a></button>
+    <div class="card">
+        <div>
+            <img class="card-img" src="{{images.0.url}}" alt="{{this.name}}">
+            <div class="card-body">
+                <h1 class="card-name">{{name}}</h1>
+                <button class="card-img btn btn-danger"><a href="/albums/{{id}}">Go to Albums</a></button>
+            </div>
+        </div>
     </div>
     {{/each}}
 </div>

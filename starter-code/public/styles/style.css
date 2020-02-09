@@ -1,4 +1,4 @@
-* {
+/* * {
   margin: 0;
   padding: 0;
   border: 0;
@@ -78,4 +78,101 @@ audio {
   filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
   width: 200px;
   height: 25px;
+} */
+
+body {
+  background-color: whitesmoke;
+}
+
+img {
+  width: 300px;
+  height: 300px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: #333;
+}
+
+.card-body h1 {
+  font-size: 18px;
+  height: 100px;
+  color: white;
+}
+
+.card {
+  width: 300px;
+  display: inline-grid;
+  margin: 30px;
+}
+
+.card-container {
+  padding: 30px;
+  text-align: center;
+}
+
+a {
+  color: white;
+  text-decoration: none;
+}
+
+.search-box {
+  background: rgba(255, 255, 255, 0.8);
+  width: 1000px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+.main-page {
+  background: url("https://wzbhrocks.com/wp-content/uploads/sites/21/concert-background-02-thebeach.jpg");
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-box * {
+  margin: 30px;
+}
+
+.searchform {
+  border: 1px solid gray;
+  padding: 20px;
+  border-radius: 40px;
+  width: 500px;
+}
+
+.song-page {
+  display: flex;
+  flex-direction: column;
+}
+
+#song-container {
+  background-color: #ecebeb;
+  margin: 3px 0;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+#song-container h1 {
+  font-size: 30px;
+}
+
+.song-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #333;
+  color: white;
+  height: auto;
+  padding: 20px;
 }
