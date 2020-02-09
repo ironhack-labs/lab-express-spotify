@@ -1,10 +1,13 @@
-
+<div class="tracks-container">
     {{#each tracksQuery}}
-    {{this.name}}
+    <div class="track-box">
+    <h3>{{this.name}}</h3>
     <audio
         controls
         src={{this.preview_url}}>
             Your browser does not support the
             <code>audio</code> element.
     </audio>
+    </div>
     {{/each}}
+</div>

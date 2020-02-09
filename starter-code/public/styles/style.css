@@ -1,9 +1,48 @@
-.index-container {
-    color: red;
-    background-color: red;
+body {
+    background-size: 1800px;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
-body {
-    color: red;
-    background-color: red;
+.index-container {
+    margin: 0px;
+    padding: 0px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    height: 100vh;
+    width: 100vw;
 }
+
+.form-container form input {
+    height: 50px;
+    width: 200px;
+}
+
+.form-container form button {
+    height: 20px;
+    width: 200px;
+    background-color: orange;
+}
+
+.artists-container, .albums-container, .tracks-container{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artist-box, .album-box, .track-box{
+    background-color: white;    
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
+    width: 200px;
+    margin: 10px;
+}
+

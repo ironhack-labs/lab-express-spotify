@@ -1,6 +1,11 @@
+<div class="albums-container">
 
     {{#each albumsQuery}}
-    {{this.name}}
-    <img src="{{this.images.0.url}}" alt="" height="100px" width="100px">
-    <a href="/albums/view-tracks/{{this.id}}">View Tracks</a>
+    <div class="album-box">
+        <h3>{{this.name}}</h3>
+        <img src="{{this.images.0.url}}" alt="album" height="100px" width="100px">
+        <a href="/view-tracks/{{this.id}}">View Tracks</a>
+    </div>
     {{/each}}
+
+</div>
