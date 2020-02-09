@@ -35,10 +35,10 @@ app.get("/artist-search", (req, res, next) => {
         .searchArtists(req.query.artist)
         .then(data => {console.log("The received data from the API:", data.body.artists.items);
 // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-        const artistName = data.body.artists.items;
-        console.log(artistName);
+        const artistArray = data.body.artists.items;
+        console.log(artistArray);
         
-        res.render("artist-search-results", {artistName})
+        res.render("artist-search-results", {artistArray})
        
         
         })
@@ -48,6 +48,31 @@ app.get("/artist-search", (req, res, next) => {
 app.get('/artist-search-results', (req, res, next) => {
     res.render("artist-search-results");
 })
+
+app.get('/albums/:artistId', (req, res, next) => {
+    const artistId = (req.params.artistId);
+    spotifyApi.getArtistAlbums(artistId)
+        .then(function(data) {
+          //console.log("Artist albums", data.body.items);
+          const albums = data.body.items;
+          res.render("albums", { albums });
+        })
+        .catch(err => console.log(err));
+        
+});
+// ALBUM ID
+app.get("/tracks/:albumId", (req, res, next) => {
+  const albumId = req.params.albumId;
+  spotifyApi.getAlbumTracks(albumId)
+  .then(function(data) {
+    console.log("Albums Tracks", data.body.items);
+    const tracks = data.body.items;
+    res.render("tracks", { tracks });
+  })
+    .catch(err => console.log(err));
+});
+
+
 
 
 
