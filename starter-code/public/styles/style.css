@@ -1,0 +1,33 @@
+body {
+  background-color: #B4FFE5;
+}
+
+.form {
+  background-color: beige;
+  padding: 60px;
+  width: 500px;
+  position: absolute;
+  left: 35%;
+  top: 35%;
+  text-align: center;
+}
+
+.artist-cards {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+  align-content: stretch;
+  margin: 50px;
+}
+
+.albums-cards {
+  display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: flex-start;
+  align-content: stretch;
+  margin: 50px;
+}
