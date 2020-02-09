@@ -32,44 +32,63 @@ app.get("/", (req, res, next) => {
 	res.render("index");
 });
 
-
-app.get("/artist-search", (req, res) => {
-	console.log("artista", req.query.artist);
+app.get("/artist-search", (req, res) => {	
 	const artista = req.query.artist;
+	console.log("artista", req.query.artist);
 
 	spotifyApi
 		.searchArtists(artista)
-		.then( function (data) {
-			console.log("Found artist", data.body.artists.items);
-			const artistsList = data.body.artists.items;
-			res.render("artist-search-results", {
-				artistsList
-			});
-		},
-		function (err) {
-			console.error(err);
-		}
-	);
+		.then(data => {
+				console.log("Found artist", data.body.artists.items);
+				const artistsList = data.body.artists.items;
+				res.render("artist-search-results", {artistsList});
+			},
+			function (err) {
+				console.error(err);
+			}
+		);
 });
 
 
 app.get("/albums/:artistId", (req, res, next) => {
 	console.log("artist", req.query.artistId); //=> find albums adress
-	const lastPartOfUrlakaArtisId = req.params.artistId;
+	const lastPartOfUrlakaArtistId = req.params.artistId;
 
 	spotifyApi
-		.getArtistAlbums(lastPartOfUrlakaArtisId)
-		.then(function (data) {
-			const albumsList = data.body.items;
-			// console.log("Found album", data.body);			 
-			res.render("albums.hbs", { albumsList
-			});
-		},
-		function (err) {
-			console.error(err);
-		}
-	);
+		.getArtistAlbums(lastPartOfUrlakaArtistId)
+		.then(data => {
+				const albumsList = data.body.items;
+				// console.log("Found album", data.body);			 
+				res.render("albums.hbs", {albumsList});
+			},
+			function (err) {
+				console.error(err);
+			}
+		);
 });
+
+app.get("/albums/tracks/:tracksId", (req, res, next) => {
+	console.log("Tracks", req.query.tracksId);
+	let albumId = req.params.id;
+
+
+	spotifyApi
+		.getAlbumTracks(albumId)
+		.then(function (data) {
+			// console.log(data.body.items);
+			res.render("tracks.hbs", {
+				tracksList
+			});
+		}, function (err) {
+			console.log('Something went wrong!', err);
+		});
+
+
+});
+
+
+
+
 
 
 app.listen(3000, () =>

@@ -1,0 +1,14 @@
+<div>
+    <main>
+        <h1>Tracks list</h1>
+        {{#each tracksList}}
+
+        <h2>{{this.name}}</h2>
+        {{!-- <audio src="{}"></audio> --}}
+        <img src="{{{this.images.0.url}}}" alt="spotify-album-img">
+        {{!-- {{!-- <a href="/albums/{{this.id}}">View Albums</a> --}} --}}
+
+
+        {{/each}}
+    </main>
+</div>
