@@ -58,7 +58,7 @@ app.get("/artist-search", (req, res) => {
 			}
 		);
 });
-
+//
 
 app.get("/albums/:artistId", (req, res, next) => {
 	// console.log("artist", req.query.artistId); //=> find albums adress
