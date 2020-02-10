@@ -34,8 +34,8 @@ app.get('/artist-search', (req, res) => {
   spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-      const artistList = data.body.artists.items;
-      res.render('artist-search-results', {artistList})
+      const artistList = data.body.artists.items; //you make it a const var 
+      res.render('artist-search-results', {artistList}) //but when you render it the {} make it an object
   })
     .catch(err => console.log('The error while searching artists occurred: ', err))
 })
@@ -45,7 +45,7 @@ app.get('/albums/:id', (req, res) => {
   .getArtistAlbums(req.params.id)
   .then(data => {
     const albumsList = data.body.items;
-    res.render('albums', {albumsList})
+    res.render('albums', {albumsList}) 
   })
   .catch(err => console.log('The error while searching albums occurred: ', err))
 });

@@ -35,7 +35,7 @@ input {
   background-color: rgb(241, 76, 76);
   color: white;
   height: 35px;
-  width: 200px;
+  width: 150px;
   border: none;
   border-radius: 5px;
   margin: 10px;
@@ -44,7 +44,7 @@ input {
 .container {
   display: flex;
   flex-wrap: wrap;
-  margin: 30px;
+  margin: 0px;
 }
 
 .card-container {
@@ -56,12 +56,12 @@ input {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 5px;
-  margin: 20px;
+  padding: 0px;
+  margin: 10px;
 }
 
 .card-img {
-  align-self: center;
+  align-items: center;
   width: 300px;
   height: 300px;
 }
@@ -73,12 +73,17 @@ input {
 .card-info {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
   height: auto;
   padding: 0;
   margin: 0;
+}
+
+.card-info p {
+  margin-bottom: 0;
+  font-weight: light;
 }
 
 nav {
