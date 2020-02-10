@@ -1,0 +1,15 @@
+<div>
+    {{#each trackList}}
+    <div>
+        <div>
+            <div>
+                <h5>Track {{this.track_number}} - </span>{{this.name}}</h5>
+                <audio controls>
+                    <source src={{this.preview_url}} type="audio/mpeg">
+                    No reproducible>
+
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
