@@ -1,14 +1,17 @@
 <div>
-    {{#each artistsArray}}
+    {{#each artists}}
         <h1>{{this.name}}</h1>
-
+{{!-- The objects that become available from the data can be accessed by using 'this' --}}
         {{#each this.images}}
+
         {{#if @last}}
-        <img src="{{this.url}}" alt="">
+        <img src="{{this.images.2.url}}" alt="">
         {{/if}}
+
         {{/each}}
         <br>
      <a href="/albums/{{this.id}}">View Albums</a>
     {{/each}}
    
 </div>
+{{!-- <a href="/albums/someArtistIdGoesHere">View Albums</a> --}}

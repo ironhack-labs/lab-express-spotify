@@ -5,6 +5,7 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 // require spotify-web-api-node package here:
+// This creates an object with your ID at Spotify
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET
@@ -20,6 +21,8 @@ const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+
+// This is middleware: app.use
 app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
@@ -32,44 +35,52 @@ app.get('/', (req, res, next) => {
 
 app.get('/artist-search', (req, res, next) =>{
     spotifyApi
-    .searchArtists(req.query.artist) 
-    .then(data => {
-        console.log('The received data from the API: ', data.body.artists.items)
-        data.body.artists.items.forEach((item) => 
-        console.log(item.images))
-        const artistsArray = data.body.artists.items
-        res.render('artist-search-results', {artistsArray})
+    .searchArtists(artist)  // instead of (req.query.artist) ??
+    .then(response => {
+        console.log('The received data from the API: ', data.body.artists.items) // This comes out of the 'data'
+        const data = {
+            artists: data.body.artists.items
+        };
+        
+        // data.body.artists.items.forEach((item) => 
+        // console.log(item.images))
+        // const artistsArray = data.body.artists.items
+        res.render('artist-search-results', {artistsArray}) //???
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
-app.get('/albums/:artistId', (req, res, next) => {
+app.get('/albums/:artistId', (req, res, next) => { // any param in the GET is available under re.params.<request>: here"artistId"
     const artistId = (req.params.artistId);
-    spotifyApi.getArtistAlbums(artistId)
-    .then(function(data) {
-          console.log('Artist albums', data.body);
-          const albums = data.body;
+    spotifyApi.getArtistAlbums(req.params.artistId) // this comes from req.params.artistId
+    .then(response => {
+          // console.log('Artist albums', data.body)
+
+          const data = {
+              albums: response.data.albums
+            }
           res.render('albums', {albums})
-        },
-        function(err) {
-          console.error(err);
-        }
-      );
-  });
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
+});
 
 app.get('/tracks/:albumId', (req, res, next) => {
-    const albumId = (req.params.albumId)
-    spotifyApi.getAlbumTracks(albumId)
-    
-  .then(function(data) {
-    console.log('Album tracks', data.body);
-    const tracks = data.body;
-    res.render('tracks', {tracks})
-  }, 
-  function(err) {
-    console.log('Something went wrong!', err);
-  });
-})
+    //req.params.albumId
+    //const albumId = (req.params.albumId)
+
+    spotifyApi.getAlbumTracks(req.params.albumId)
+    .then(response => {
+    console.log('Album tracks', response.body.items);
+
+    const tracks = {
+            tracks: response.body.items
+        }
+    res.render('tracks', data)
+    })
+
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+});
+
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

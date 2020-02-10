@@ -1,10 +1,14 @@
 <div>
 
-    {{#each tracksArray}}
+    {{#each tracks}}
+
     <ul>
-        <li>{{this.name}}</li>
-        <audio src="{{preview_url}}">Listen</audio> 
+        <li>
+        <h4>{{this.name}}</h4>
+        <audio controls src="{{this.preview_url}}">Listen</audio>
+        </li> 
     </ul>
+
     {{/each}}  
 
 </div>

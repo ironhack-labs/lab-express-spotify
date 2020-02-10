@@ -2,16 +2,17 @@
 <div>
 
     {{#each albums}}
+        <img src="{{this.images.2.url}}" alt="">
         <h1>{{this.name}}</h1>
 
-        {{#each this.images}}
+        {{!-- {{#each this.images}}
         {{#if @last}}
         <img src="{{this.url}}" alt="">
         {{/if}}
-        {{/each}}
+        {{/each}} --}}
         {{/each}}
         <br>
-     <a href="/tracks/{{this.id}}">View Tracks</a>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
    
    
 </div>
