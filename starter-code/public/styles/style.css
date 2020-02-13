@@ -1,0 +1,145 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-color: #191414;
+}
+
+nav {
+  background-color: #1db954;
+  display: flex;
+  justify-content: center;
+}
+
+nav img {
+  width: 150px;
+  padding: 15px;
+}
+
+.home {
+  background-image: url('/images/spotify-background.jpeg');
+  height: 800px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+
+.home > form {
+  width: 50%;
+  height: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.44);
+}
+
+.home input {
+  width: 70%;
+  height: 30px;
+  margin-bottom: 10px;
+  border: 0.5px solid lightgray;
+  border-radius: 3px;
+}
+
+.home input::-webkit-input-placeholder {
+  padding-left: 10px;
+}
+
+.home button {
+  color: white;
+  /* padding: 0 15px; */
+  border: none;
+  cursor: pointer;
+  background-color: #1db954;
+  border-radius: 30px;
+  letter-spacing: 2px;
+  font-weight: bold;
+  padding: 15px 40px;
+  margin-top: 3px;
+}
+
+.home button:hover {
+  margin-top: 0;
+  padding: 17px 42px;
+}
+
+.artistCard {
+  width: 25%;
+  margin: 2%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+  background-color: #191414;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.artistCard img {
+  max-width: 100%;
+  max-height: 300px;
+}
+
+.artistCard h4 {
+  margin: 15px;
+}
+
+.artistCard a {
+  background-color: #1db954;
+  color: white;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 30px;
+  cursor: pointer;
+  letter-spacing: 2px;
+  font-weight: bold;
+}
+
+.artistCard a:hover {
+  padding: 17px 42px;
+}
+
+.searchPage {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: baseline;
+  padding-top: 50px;
+}
+
+/* .tracksPage {
+} */
+
+table {
+  margin: 50px auto;
+
+  width: 90%;
+  background-color: white;
+}
+
+th {
+  padding: 25px;
+  background-color: #191414;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.audio {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.songsRow,
+.audio {
+  padding: 5px 15px;
+}

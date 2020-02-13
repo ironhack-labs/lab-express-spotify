@@ -1,0 +1,9 @@
+<div class="artistCard">
+{{#each images}}
+{{#if @first}}
+<img src={{ url }} alt="">
+{{/if}}
+{{/each}}
+<h4>{{name}}</h4>
+<a href="/album/{{id}}">VIEW TRACKS</a>
+</div>
