@@ -1,0 +1,10 @@
+{{#each albums}}
+<a href="/album/{{ id }}">
+{{ name }}
+  {{#each images}}
+    {{#if @first}}
+    <img src="{{url}}" alt="images">
+    {{/if}}
+  {{/each}}
+  </a>
+{{/each}}
