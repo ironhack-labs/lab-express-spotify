@@ -1,0 +1,112 @@
+* {
+}
+
+.background {
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.background img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.white-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 200px;
+  width: 900px;
+  background-color: rgba(255, 255, 255, 0.6);
+}
+
+form {
+  opacity: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: large;
+  width: 400px;
+}
+
+input {
+  border-radius: 0.2em;
+  width: 700px;
+  border: 1px solid lightgray;
+  margin-bottom: 15px;
+  padding: 10px 20px;
+  background-color: white;
+  color: lightgray;
+}
+
+button {
+  opacity: 0.8;
+  width: 200px;
+  padding: 5px;
+  background-color: crimson;
+  color: white;
+}
+
+.center-artists {
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+  width: 250px;
+  margin: 2em;
+}
+
+.center-artists div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+  background-color: #4d4d4d;
+  width: 100%;
+  padding-bottom: 15px;
+  color: white;
+}
+
+.view-albums {
+  border-radius: 1em;
+  background-color: #f86967;
+  margin-top: 5px;
+  color: white;
+}
+
+.artist-table {
+  width: 70%;
+  margin: 30px auto;
+}
+
+.artist-table img {
+  width: 100%;
+  height: 250px;
+}
+
+h4 {
+  font-size: 1em;
+}
+
+.center-albums {
+  display: inline-block;
+  justify-content: center;
+  flex-direction: column;
+  width: 250px;
+  margin: 2em;
+}
+
+.center-albums div:nth-child(2) {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding-top: 15px;
+  background-color: #4d4d4d;
+  width: 100%;
+  padding-bottom: 15px;
+  color: white;
+}
