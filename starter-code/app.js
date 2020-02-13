@@ -27,7 +27,7 @@ spotifyApi
 
 // Our routes go here:
 app.get('/', (req, res) => {
-  res.render('index');
+  res.render('index', { layout: false });
 });
 
 app.get('/artist-search', (req, res) => {

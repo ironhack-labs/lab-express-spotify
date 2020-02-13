@@ -9,10 +9,10 @@ body {
   background-color: #191414;
 }
 
-nav {
-  background-color: #1db954;
+nav:not(.homeNav) {
   display: flex;
   justify-content: center;
+  background-color: #1db954;
 }
 
 nav img {
@@ -21,37 +21,46 @@ nav img {
 }
 
 .home {
-  background-image: url('/images/spotify-background.jpeg');
+  background-image: url('/images/bgImg4.jpg');
+  background-color: rgb(100, 100, 100);
+  background-blend-mode: multiply;
   height: 800px;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  justify-content: space-evenly;
   align-items: center;
   width: 100%;
 }
 
 .home > form {
   width: 50%;
-  height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: rgba(255, 255, 255, 0.44);
+  position: relative;
+  top: -150px;
 }
 
 .home input {
   width: 70%;
-  height: 30px;
-  margin-bottom: 10px;
-  border: 0.5px solid lightgray;
+  height: 40px;
+  margin-bottom: 20px;
+  border: none;
   border-radius: 3px;
 }
 
-.home input::-webkit-input-placeholder {
+.home input::-webkit-input-placeholder,
+.home input:valid {
   padding-left: 10px;
+  font-size: 16px;
+}
+
+.home img {
+  width: 200px;
 }
 
 .home button {
@@ -121,17 +130,16 @@ nav img {
 
 table {
   margin: 50px auto;
-
-  width: 90%;
-  background-color: white;
+  width: 70%;
 }
 
-th {
-  padding: 25px;
+td {
   background-color: #191414;
   color: white;
   font-weight: bold;
   font-size: 20px;
+  color: white;
+  font-weight: bold;
 }
 
 .audio {
@@ -141,5 +149,5 @@ th {
 
 .songsRow,
 .audio {
-  padding: 5px 15px;
+  padding: 16px 15px;
 }
