@@ -64,20 +64,19 @@ The following screens might be out of date, since Spotify is constantly iteratin
 
 ## Iteration 1 | Spotify API Setup
 
-You're given an _almost_ empty `starter-code` folder. In the next few steps, you'll create all of the files that you need. So far, you have some basic setup in `app.js`, but that's not quite enough. As you remember, to get some packages (including `express`) in our app, we have to have them in the `package.json` file. So let's start listing the steps:
+In the next few steps, you'll create all of the files that you need. So far, you have some basic setup in `app.js`, but that's not quite enough. As you remember, to get some packages (including `express`) in our app, we have to have them in the `package.json` file. So let's start listing the steps:
 
-1. Navigate to `starter-code`.
-2. Install all the dependencies we need to successfully run this app:
+1. Let's install all the dependencies we need to successfully run this app:
    `npm install express hbs spotify-web-api-node dotenv`.
-3. `nodemon` is installed as a dev dependency (our app doesn't depend on it but it helps us in the development process), which means we can use nodemon to run the app with: **`npm run dev`**.
+2. `nodemon` is installed as a dev dependency (our app doesn't depend on it but it helps us in the development process), which means we can use nodemon to run the app with: **`npm run dev`**.
 
-4. Inside of the `app.js` file, require `spotify-web-api-node`.
+3. Inside of the `app.js` file, require `spotify-web-api-node`.
 
 ```js
 const SpotifyWebApi = require('spotify-web-api-node');
 ```
 
-5. Inside of the `app.js` file, you'll find the place where you should paste the following code:
+4. Inside of the `app.js` file, you'll find the place where you should paste the following code:
 
 ```javascript
 const spotifyApi = new SpotifyWebApi({
@@ -92,7 +91,7 @@ spotifyApi
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 ```
 
-6. See this above?
+5. See this above?
 
 ```js
 const spotifyApi = new SpotifyWebApi({
@@ -104,7 +103,7 @@ const spotifyApi = new SpotifyWebApi({
 To avoid making our API keys public, we don't want to add and commit them. We'll use a package named `dotenv` for that.
 
 This package is imported at the very beginning of `app.js`. All that is left to do is to add your keys in the `.env` file.
-So go ahead and create a `.env` file in the `starter-code` folder and paste the following lines there, replacing the text with your credentials.
+So go ahead and create a `.env` file and paste the following lines there, replacing the text with your credentials.
 
 ```
 CLIENT_ID=your clientId goes here
@@ -117,11 +116,11 @@ CLIENT_SECRET=your clientSecret goes here
 
 ## Iteration 2 | Express Setup
 
-Now let's create a `views` folder inside the `starter-code` and let's add the `layout.hbs` file in it.
+Now let's create a `views` folder and let's add the `layout.hbs` file in it.
 At this moment we should have the following structure of folders and files:
 
 ```
-starter-code
+lab-express-spotify
       ├── app.js
       ├── package.json
       ├── package-lock.json
