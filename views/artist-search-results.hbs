@@ -1,0 +1,11 @@
+<div class="parent-artist">
+  {{#each artists}}
+  <div class="artist">
+    <img src="{{this.images.[0].url}}" width="50" height="50">
+    <div class="text-artist">
+      <a href="">{{this.name}}</a>
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+  </div>
+  {{/each}}
+</div>s

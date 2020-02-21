@@ -1,0 +1,72 @@
+body {
+  background-color: darkred;
+  background-image: url(https://i.pinimg.com/originals/b7/93/8f/b7938f1b65083384bf6f567bb8b5bf5d.jpg);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-position: center;
+  font-family: "Roboto", sans-serif;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+}
+
+.form-title {
+  display: block;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+.form {
+  background-color: gray;
+  background-color: rgba(15, 77, 0, 0.5);
+  padding: 20px;
+  width: 500px;
+}
+
+.form * {
+  margin: 20px;
+}
+
+.parent-artist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.parent-artist * {
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+}
+
+.artist {
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+}
+
+.text-artist {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+  background-color: rgba(100, 100, 100, 0.5);
+}
+
+.artist img {
+  width: 200px;
+  height: 200px;
+}
