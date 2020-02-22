@@ -1,0 +1,10 @@
+body{
+    background-color: lightblue;
+}
+
+.boxSearch {
+    width: 200px;
+    height: 200px;
+    margin: 0px auto 0px auto;
+    background-color: green;
+}
