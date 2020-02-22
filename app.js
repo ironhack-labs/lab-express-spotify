@@ -8,6 +8,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + "/views/partials");
 
 
 // Spotify connection
@@ -24,9 +25,16 @@ spotifyApi
 
 // Our routes go here:
 app.get("/", (req, res, next) => res.render("index"));
+
 app.get("/artists", (req, res, next) => {
-    console.log(req.query);
-    res.render("artists");
+    console.log(req.query.artist);
+    spotifyApi.searchArtists(req.query.artist)
+        .then(function (data) {
+            res.render("artists", {artists: data.body});
+            console.log(data.body.artists);
+        }, function (err) {
+            console.error(err);
+        });
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
