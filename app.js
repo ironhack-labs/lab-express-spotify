@@ -26,6 +26,24 @@ spotifyApi
     console.log("Something went wrong when retrieving an access token", error)
   );
 
+app.get("/artist-search", (req, res) => {
+  console.log("======");
+
+  spotifyApi
+    .searchArtists(req.query.search)
+    .then(data => {
+      console.log(
+        "The received data from the API: ",
+        data.body.artists.items[2].external_urls.spotify
+      );
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render("artist-search-results", { data });
+    })
+    .catch(err =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
 // Our routes go here:
 app.get("/", (req, res) => {
   res.render("index");

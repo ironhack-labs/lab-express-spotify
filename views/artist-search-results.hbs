@@ -1,0 +1,16 @@
+<form action="/artist-search-results" method="get">
+  <div class="artist-search">
+    {{#each data.body.artists.items}}
+    {{#if this.images.0.url includeZero=true}}
+    <img src="{{ this.images.0.url }}">
+    {{else}}
+    <img src="/images/undefined.jpg">
+    {{/if}}
+    <p>{{this.name}}</p>
+
+    <a href=`{{this.external_urls.spotify}}`>
+      <button>View Albums</button>
+    </a>
+    {{/each}}
+  </div>
+</form>
