@@ -1,0 +1,53 @@
+* {
+    font-family: 'Roboto';
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+body {
+    margin: 0;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.card-image {
+    width: 300px;
+}
+
+.card {
+    margin: 50px;
+}
+
+.card-footer {
+    text-align: center;
+    background-color: #4D4D4D;
+    color: white;
+    font-size: 1.1em;
+    margin-top: -22px;
+    padding-top: 5px;
+    height: 90px;
+    width:300px;
+    overflow-wrap: break-word;
+    font-size: 0.95em;
+}
+
+.selection-button {
+    font-size: 0.8em;
+    background-color: #EF6866;
+    border-radius: 5px;
+    padding: 5px;
+}
+
+.tracks-header {
+    background-color: #4D4D4D;
+    width: 100%;
+    height: 50px;
+}
