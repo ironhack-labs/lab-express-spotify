@@ -1,14 +1,14 @@
-<main id="artist-search-results">
+<main id="album-search-results">
   {{#each items}}
-    <div class="artist">
+    <div class="album">
     {{#if this.images.[0].url}}
     <img src="{{this.images.[0].url}}" />
     {{else}}
     <img src="https://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" />
     {{/if}}
-      <div class="artist-info">
+      <div class="album-info">
         <h2>{{this.name}}</h2>
-        <a class="button" href="/albums/{{this.id}}">View Albums</a>
+        <a class="button" href="/tracks/{{this.id}}">View Songs</a>
       </div>
     </div>
   {{/each}}
