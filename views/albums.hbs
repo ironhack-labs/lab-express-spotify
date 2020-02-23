@@ -1,0 +1,10 @@
+
+<div class="position-results">
+{{#each albums}}
+<div class="artists-result">
+    <img src="{{this.images.[0].url}}" width="340" height="340"> 
+    <h1 class="name"> {{ this.name }}</h1>
+    <a class="link-album" href="/songs/{{this.id}}">View Songs</a>
+</div>
+{{/each}} 
+</div>

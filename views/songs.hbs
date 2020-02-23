@@ -1,0 +1,12 @@
+<div class="position-results-songs">
+    <div id="title" class="title"> Title </div>
+    <div id="song"  class="song"> Listen </div>
+    {{#each songs}}
+    <div class="title">
+        <h1 class="nameSong"> {{ this.name }}</h1>
+    </div>
+    <audio class="song" controls id="audio" >
+      <source src="{{ this.preview_url }}" type="audio/ogg">
+    </audio>
+    {{/each}} 
+</div>

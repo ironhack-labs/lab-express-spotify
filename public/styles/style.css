@@ -1,10 +1,93 @@
+.bodyArtists{
+    background-image: url('/images/wallpaper.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+}
+
 body{
-    background-color: lightblue;
+ background-color: wheat;
 }
 
 .boxSearch {
-    width: 200px;
-    height: 200px;
-    margin: 0px auto 0px auto;
-    background-color: green;
+    width: 500px;
+    height: 250px;
+    background-color: #d0c052;
+    opacity: 0.8;
+    top: 50%;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.form{
+    position: relative;
+}
+
+.search {
+    position: absolute;
+    top: 90px;
+    left: 50%;
+    transform: translate(-50%);
+    padding: 5px;
+}
+
+.submit {
+    position: absolute;
+    top: 130px;
+    left: 50%;
+    transform: translate(-50%);
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px 30px 5px 30px;
+}
+
+.name {
+    line-height: 10px;
+    padding-top: 20px;
+    color: black;
+}
+
+.artists-result{
+    width: 350px;
+    padding: 10px;
+    float: left;
+    margin: 20px;
+    height: 400px;
+    background-color: white;
+}
+
+.link-album{
+    line-height: 40px;
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.position-results-songs{
+
+}
+
+.title{
+    width: 50%;
+    height: 60px;
+    float: left;
+    text-align: center;
+   /* margin-top: 5px; */
+}
+
+.song{
+    width: 30%;
+    height: 60px;
+    float: left;
+}
+
+#title, #song {
+    margin-top: 20px;
+    width: 50%;
+    height: auto;
+    background-color: white;
+    margin-bottom: 20px;
 }
