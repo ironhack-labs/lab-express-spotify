@@ -1,5 +1,7 @@
 * {
     font-family: 'Roboto';
+    margin: 0;
+    padding: 0;
 }
 
 a {
@@ -31,12 +33,16 @@ body {
     background-color: #4D4D4D;
     color: white;
     font-size: 1.1em;
-    margin-top: -22px;
+    margin-top: -5px;
     padding-top: 5px;
-    height: 90px;
-    width:300px;
+    height: 70px;
+    width: 300px;
     overflow-wrap: break-word;
     font-size: 0.95em;
+}
+
+.card-footer>p {
+    margin-bottom: 8px;
 }
 
 .selection-button {
@@ -46,8 +52,47 @@ body {
     padding: 5px;
 }
 
-.tracks-header {
+.tracks-menu {
+    display: flex;
+    margin-top: 0;
     background-color: #4D4D4D;
-    width: 100%;
-    height: 50px;
+    width: 75%;
+    margin: auto;
+    height: 70px;
+    color: white;
+    font-size: 1.2em;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.tracks-menu>p {
+    display: flex;
+}
+
+.tracks-container {
+    display:flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+}
+
+.tracks {
+    display:flex;
+    background-color: #F6F6F6;
+    align-items:center;
+    margin-top: 5px;
+    height: 80px;
+}
+
+#track-name {
+    display:flex;
+    margin-left: 15px;
+    width: 70%;
+}
+
+#track-audio {
+    display:flex;
+    width: 30%;
+    margin-right: 70px;
+
 }

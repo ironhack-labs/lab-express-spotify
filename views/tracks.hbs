@@ -1,11 +1,18 @@
-<div class= "tracks-header">
-    {{#each tracks}}
-    <div>
-        <p>{{this.name}}</p>
+<div class="tracks-menu">
+  <p>Title</p>
+  <p>Listen</p>
+</div>
 
-  <audio controls>
-    <source src="{{this.preview_url}}" type="audio/ogg">
-  </audio>
-    {{/each}}
+<div class="tracks-container">
+      {{#each tracks}}
+  <div class="tracks">
 
+    <p id="track-name">{{this.name}}</p>
+
+    <audio controls id="track-audio">
+      <source src="{{this.preview_url}}" type="audio/ogg">
+    </audio>
+  
+  </div>
+  {{/each}}
 </div>
