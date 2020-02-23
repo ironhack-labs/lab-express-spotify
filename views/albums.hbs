@@ -9,18 +9,19 @@
 </head>
 <body>
   
-  <div class="container-artist">
-    {{#each artists}}
-      <div>
-          <img class="artist-img" src="{{this.images.[0].url}}">
-        <div class="text-artist">
-          <p>{{this.name}}</p>
-          <a href="/albums/{{this.id}}">View Albums</a>
-        </div>
-      </div>
-    {{/each}}
+<div class="container-artist">
+  {{#each albums}}
+  <div>
+    <img class="artist-img" src="{{this.images.[0].url}}">
+    <div class="text-artist">
+      <p>{{this.name}}</p>
+      <a href="/tracks/{{this.id}}">View tracks</a>
+    </div>
+  </div>
+  {{/each}}
 </div>
 
 
 </body>
 </html>
+
