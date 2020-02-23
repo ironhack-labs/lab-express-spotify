@@ -1,0 +1,10 @@
+<header>
+    <h1>Title</h1>
+    <h1>Listen</h1>
+</header>
+{{#each data.body.items}}
+    <div class="track">
+        <p class="track-name">{{this.name}}</p>
+        <audio controls src="{{this.preview_url}}"></audio>
+    </div>
+{{/each}}

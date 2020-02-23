@@ -1,0 +1,8 @@
+{{#each this.images}}
+    {{#if @first}}
+        <img class="artist-album-width" src="{{this.url}}" alt="Artist/Album image">
+    {{/if}}
+{{else}}
+    <img class="artist-album-width" src="/images/no_photo.jpg" alt="No photo">
+{{/each}}
+<h2 class="artist-album-element">{{this.name}}</h2>

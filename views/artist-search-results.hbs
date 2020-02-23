@@ -1,0 +1,8 @@
+<div class="artists-albums">
+  {{#each data.body.artists.items}}
+    <div class="artist-album artist-album-width">
+        {{> artistAlbum this}}
+        <a class="button-color button-view-albums-tracks artist-album-element" href="/albums/{{this.id}}">View Albums</a>
+    </div>
+  {{/each}}
+</div>
