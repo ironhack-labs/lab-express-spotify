@@ -1,13 +1,67 @@
 html, body {
   height: 100%;
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #home {
+  position: absolute;
   height: 100%;
   width: 100%;
   background-image: url("/images/spotify-background.jpeg");
   background-size: cover;
   background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+b {
+  font-family: sans-serif;
+}
+
+#home #form-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 700px;
+  height: 200px;
+  background:rgba(255,255,255,0.5);
+}
+
+#home form {
+  text-align: center;
+}
+
+#home input {
+  font-size: 16px;
+}
+
+#home input[type=text] {
+  padding: 0 5px;
+  width: 400px;
+  height: 35px;
+  display: block;
+}
+
+#home input[type=submit] {
+  width: 160px;
+  height: 40px;
+  margin-top: 10px;
+  padding: 5px 15px;
+  background-color:rgba(255,0,0,0.5);
   color: white;
+  border: none;
+  cursor: pointer;
+}
+
+#home input:hover {
+  background-color: white;
+  color:rgba(255,0,0,0.5);
+}
+
+#home input:active {
+  background-color: white;
+  color:rgba(255,0,0,1);
 }
