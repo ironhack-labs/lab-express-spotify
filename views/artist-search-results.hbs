@@ -1,5 +1,15 @@
 <main id="artist-search-results">
   {{#each items}}
-    {{this.name}}
+    <div class="artist">
+      {{#if this.images.[0].url}}
+        <img src="{{this.images.[0].url}}" />
+      {{else}}
+        <img src="https://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" />
+      {{/if}}
+      <div>
+        <h2>{{this.name}}</h2>
+        <a class="button" href="/">View Albums</a>
+      </div>
+    </div>
   {{/each}}
 </main>

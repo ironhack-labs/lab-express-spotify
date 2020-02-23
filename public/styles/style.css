@@ -65,3 +65,19 @@ b {
   background-color: white;
   color:rgba(255,0,0,1);
 }
+
+#artist-search-results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artist {
+  width: 300px;
+  padding: 10px 40px;
+}
+
+.artist img {
+  width: 300px;
+}
