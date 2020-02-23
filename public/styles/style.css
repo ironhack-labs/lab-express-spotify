@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.search-box {
+  margin: 15% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 500px;
+  padding: 50px 0;
+  background-color: rgb(240,240,240 , 0.5);  
+}
+
+.search-artist{
+  display: flex;
+  flex-direction: column;
+}
+
+.input-artist{
+  height: 25px;
+  width: 300px;
+  padding: 5px;
+  border: 0;
+}
+
+.button{
+  background-color: #f5675d;
+  color: #fff;
+}
+
+.button-search{
+  border: 0;
+  padding: 10px;
+  width: 200px;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.button-search:hover {
+  color: #f5675d;
+  background-color: #fff;
+}
+
+.search-page{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artist-card{
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  margin: 10px 50px;
+}
+
+.image{
+  height: 300px;
+  width: 300px;
+}
+
+.text-card {
+  background-color: #4d4d4d;
+  width: 300px;
+  text-align: center;
+  padding: 10px 0;
+}
+
+.title-text-card {
+  color: #fff;
+  margin-block-start: 3px;
+  margin-block-end: 10px;
+}
+
+.button-albums{
+  padding: 5px;
+  border-radius: 5%;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.title-tracks{
+  background-color: gray;
+  color: white;
+  font-weight: bold;
+}
+.title-track{
+  width: 25%
+}
+.tracks{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 50px;
+}
+
+.tracks-card {
+  background-color: rgb(240,240,240 , 0.5);
+  border-top: 2px white solid;
+
+}
+
+.audio {
+  display: flex;
+  align-items: center;
+}
