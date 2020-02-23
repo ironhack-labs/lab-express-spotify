@@ -156,14 +156,14 @@ a {
   margin: 0 0 1px 0;
 }
 
-.track span {
-  padding: 30px 20px;
-}
-
 .first-col {
   flex: 2 1 0
 }
 
 .second-col {
   flex: 1 1 0;
+}
+
+.track span {
+  padding: 15px;
 }

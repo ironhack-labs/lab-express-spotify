@@ -9,7 +9,11 @@
   {{#each items}}
     <div class="track">
       <span class="first-col">{{this.name}}</span>
-      <span class="second-col">00000</span>
+      <span class="second-col">
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg">
+        </audio>
+      </span>
     </div>
   {{/each}}
 </main>
