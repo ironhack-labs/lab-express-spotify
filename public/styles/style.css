@@ -1,0 +1,23 @@
+.wrapper {
+    display: flex;
+    flex-flow: row wrap;
+}
+form {
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+}
+.artist {
+    width:25%;
+    padding:0 15px;
+    margin-bottom: 20px;
+}
+.artist .content {
+    background: lightgrey;
+    padding:10px;
+}
+.artist img {
+    width: 100%;
+    max-height: 100%;
+}
