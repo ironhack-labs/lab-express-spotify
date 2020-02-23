@@ -1,0 +1,17 @@
+{{!-- https://developer.mozilla.org/en-US/docs/Web/HTML/Element/audio --}}
+
+<div class="tracks-nav"> <p>Title</p> <p>Listen</p> </div>
+
+<div section="tracks-list">
+      {{#each tracks}}
+ 
+  <div class="all-tracks">
+   <p id="track">{{this.name}}</p>
+
+      <audio controls id="audio">
+         <source src="{{this.preview_url}}" type="audio/ogg">
+      </audio>
+  </div>
+  
+  {{/each}}
+</section> 
