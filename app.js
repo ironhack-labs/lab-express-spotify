@@ -62,7 +62,6 @@ app.get('/tracks/:albumId', (req, res) => {
       const params = {
         items: data.body.items,
       };
-      console.log(`Track listing results are ${JSON.stringify(data)}`);
       res.render('tracks', params);
     })
     .catch((err) => console.log('The error while searching for tracks occurred: ', err));

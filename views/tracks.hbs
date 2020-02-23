@@ -4,16 +4,15 @@
     <li class="second-col">Listen</li>
   </ul>
 </header>
-
 <main id="tracks">
   {{#each items}}
-    <div class="track">
-      <span class="first-col">{{this.name}}</span>
-      <span class="second-col">
-        <audio controls>
-          <source src="{{this.preview_url}}" type="audio/mpeg">
-        </audio>
-      </span>
-    </div>
+  <div class="track">
+    <span class="first-col">{{this.name}}</span>
+    <span class="second-col">
+      <audio controls>
+        <source src="{{this.preview_url}}" type="audio/mpeg">
+      </audio>
+    </span>
+  </div>
   {{/each}}
 </main>
