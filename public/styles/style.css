@@ -1,0 +1,90 @@
+.total_artcol {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+.total_artrow {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.containerArtists {
+  border: solid rgb(78, 74, 74) 1px;
+  background-color: rgb(66, 65, 65);
+  width: 30%;
+  margin-left: 20px;
+  margin-bottom: 40px;
+}
+.topart {
+}
+.botart {
+  text-align: center;
+  color: white;
+}
+.imgartist {
+  width: 100%;
+}
+
+.containerArtists a {
+  text-decoration: none;
+  color: white;
+}
+.btn_album {
+  background-color: lightcoral;
+  border: none;
+  color: white;
+  padding: 15px;
+  font-size: 20px;
+  margin-bottom: 20px;
+  border-radius: 8px;
+}
+.mainhtml {
+  margin-top: 100px;
+  background-color: rgb(139, 139, 139);
+}
+.maincontent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.textoinput {
+  height: 30px;
+  width: 30vw;
+  font-size: 18px;
+  font-weight: bold;
+}
+.btninput {
+  padding: 13px;
+  width: 10vw;
+  font-family: monospace;
+  font-size: 18px;
+  font-weight: bold;
+  border: none;
+}
+.containersongs {
+  border: solid rgb(78, 74, 74) 1px;
+  background-color: rgb(66, 65, 65);
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  color: white;
+  padding-top: 8px;
+  font-family: monospace;
+  align-items: baseline;
+  justify-content: baseline;
+}
+.namesong {
+  font-size: 20px;
+  margin-left: 40px;
+
+  padding: 3px;
+}
+.namesongbutton {
+  font-size: 20px;
+  margin-left: 40px;
+
+  right: 0;
+  padding: 3px;
+}
