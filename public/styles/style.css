@@ -56,12 +56,12 @@ b {
   cursor: pointer;
 }
 
-#home input:hover {
+#home input[type=submit]:hover {
   background-color: white;
   color:rgba(255,0,0,0.5);
 }
 
-#home input:active {
+#home input[type=submit]:active {
   background-color: white;
   color:rgba(255,0,0,1);
 }
