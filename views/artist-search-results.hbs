@@ -1,0 +1,11 @@
+<p>Los artistas que coinciden con la busqueda son:</p>
+<div class="parent">
+  {{#each artist}}
+  <div class="artist-container">
+    <img class="artist-image" src="{{this.images.0.url}}" alt="{{name}}">
+    <h3>{{name}}</h3>
+    <a href="/albums/{{this.id}}" class="btn">View Albums</a>  
+  </div>
+  {{/each}}
+
+</div>

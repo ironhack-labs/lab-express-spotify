@@ -1,0 +1,16 @@
+<p>Las canciones del album son:</p>
+<div class="parent">
+    {{#each track}}
+        <div class="tracks-container">
+            <figure>
+                <figcaption>{{name}}:</figcaption>
+                <audio
+                    controls
+                    src="{{this.preview_url}}">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                </audio>
+            </figure>
+        </div>
+    {{/each}}
+</div>

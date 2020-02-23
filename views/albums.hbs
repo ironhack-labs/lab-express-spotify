@@ -1,0 +1,10 @@
+<p>Los albumes son:</p>
+<div class="parent">
+    {{#each album}}
+        <div class="artist-container">
+            <img class="artist-image" src="{{this.images.0.url}}" alt="{{name}}"><br>
+            {{name}}<br>
+            <a href="/tracks/{{this.id}}" class="btn">View Tracks</a>  
+        </div>
+    {{/each}}
+</div>

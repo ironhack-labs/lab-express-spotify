@@ -1,0 +1,39 @@
+body{
+    background-color: ##E5E5E5;
+}
+p{
+    font-size: 34px;
+}
+.parent{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+.artist-container{
+    margin: 2%;
+    height: 400px;
+    width: 28%;
+}
+
+.artist-image{
+    height: 300px;
+    width: 300px;
+}
+.btn{
+    background-color: #1c87c9;
+    border: none;
+    color: white;
+    padding: 20px 34px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 20px;
+    margin: 4px 2px;
+}
+.tracks-container{
+    margin: 1%;
+    height: 50px;
+    width: 33%;
+}
