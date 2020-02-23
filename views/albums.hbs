@@ -1,6 +1,6 @@
-<form action="/artist-search-results" method="get">
+<form action="/albums" method="get">
   <div class="artist-search">
-    {{#each data.body.artists.items}}
+    {{#each items}}
     {{#if this.images.0.url includeZero=true}}
     <img src="{{ this.images.0.url }}">
     {{else}}
@@ -8,7 +8,10 @@
     {{/if}}
     <p>{{this.name}}</p>
 
-    <a href="/albums/{{this.id}}">View Albums</a>
+    <a href="/tracks/{{this.id}}">
+      View Traks
+      {{!-- <button>View Traks</button> --}}
+    </a>
     {{/each}}
   </div>
 </form>

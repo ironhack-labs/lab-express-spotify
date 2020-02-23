@@ -1,0 +1,22 @@
+<form action="/tracks" method="get">
+  <div class="track">
+
+    {{#each items}}
+
+    <p>{{this.name}}</p>
+
+    <div class="track-audio">
+      <div>
+        {{#unless this.preview_url}}
+        <p>is not available</p>
+        {{/unless}}
+      </div>
+      <div>
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/ogg">
+        </audio>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</form>

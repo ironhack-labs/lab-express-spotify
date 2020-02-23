@@ -11,6 +11,7 @@ const app = express();
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
+// hbs.registerPartials(__dirname + "/views/partials");
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -26,17 +27,15 @@ spotifyApi
     console.log("Something went wrong when retrieving an access token", error)
   );
 
-app.get("/artist-search", (req, res) => {
-  console.log("======");
+// Our routes go here:
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
+app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.search)
     .then(data => {
-      console.log(
-        "The received data from the API: ",
-        data.body.artists.items[2].external_urls.spotify
-      );
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("artist-search-results", { data });
     })
     .catch(err =>
@@ -44,9 +43,24 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
-// Our routes go here:
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/albums/:artistId", (req, res) => {
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+      res.render("albums", { items: data.body.items });
+    })
+    .catch(err => console.log("The error in the album occurred: ", err));
+});
+
+app.get("/tracks/:artistId", (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.artistId)
+    .then(data => {
+      const ss = { items: data.body.items };
+      console.log("listen tracks", ss);
+      res.render("tracks", { items: data.body.items });
+    })
+    .catch(err => console.log("The error in the track occurred: ", err));
 });
 
 app.listen(3000, () =>

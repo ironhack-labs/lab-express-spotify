@@ -47,7 +47,7 @@ input[type="submit" i] {
   width: 22rem;
   background: rgba(104, 104, 104, 0.7);
 }
-.artist-search button {
+.artist-search a {
   width: 7rem;
   margin: 1rem;
   background-color: red;
@@ -60,5 +60,24 @@ input[type="submit" i] {
 }
 
 .artist-search p {
-  color:white
+  color: white;
+}
+
+.track {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.track p {
+  position: relative;
+  right: 10rem;
+  width: 10rem;
+}
+
+.track-audio {
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: center;
+  align-content: space-evenly;
 }
