@@ -1,0 +1,14 @@
+<header id='tracks-header'>
+  <ul>
+    <li class="first-col">Title</li>
+    <li class="second-col">Listen</li>
+  </ul>
+</header>
+
+<main id="tracks">
+  {{#each items}}
+    <div class="track">
+      <span>{{this.name}}</span>
+    </div>
+  {{/each}}
+</main>

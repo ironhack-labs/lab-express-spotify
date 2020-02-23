@@ -128,3 +128,32 @@ a {
   background-color: white;
   color:rgba(255,0,0,1);
 }
+
+#tracks {
+  width: 1100px;
+  margin: 0 auto;
+}
+
+#tracks-header ul {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  padding: 20px;
+  margin: 0 auto;
+  background-color: #4A4A4A;
+  list-style-type: none;
+}
+
+#tracks-header ul {
+  font-size: 20px;
+  font-weight: 400;
+  color: #F6F6F6;
+}
+
+.first-col {
+  flex: 2 1 0
+}
+
+.second-col {
+  flex: 1 1 0;
+}
