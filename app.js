@@ -1,5 +1,5 @@
 
-require("dotenv").config();
+require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
@@ -14,12 +14,12 @@ app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
-    clientId: 'b84b6a08c27d4080bb8f0ff74c56244d',
-    clientSecret: '65932c2bda634379bfff2824a92b827e'
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET
   });
   spotifyApi
   .clientCredentialsGrant()
-  .then(data => spotifyApi.setAccessToken(data.body.access_token))
+  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
   .catch(error => console.log('Something went wrong when retrieving an access token', error));  
 // Our routes go here:
 app.get('/', (req, res) => res.render('search-artists'));
@@ -42,11 +42,10 @@ app.get('/albums/:artistId', (req, res, next) => {
         res.render('albums', { albums });
       })
       .catch(err =>
-        console.log('The error while searching albums occurred: ', err)
-      );
+        console.log('The error while searching albums occurred: ', err));
   });
 
-  app.get('/tracks/:albumId', (req, res) => {
+app.get('/tracks/:albumId', (req, res) => {
     spotifyApi
       .getAlbumTracks(req.params.albumId)
       .then((data) => {
