@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-size: 10px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.background-image {
+  width: 100vw;
+  position: absolute;
+}
+
+.main {
+  background-color: white;
+  opacity: 0.8;
+  height: 30px;
+  position: absolute;
+  top: 400px;
+  height: 250px;
+  left: 300px;
+  right: 300px;
+}
+
+.form {
+  position: relative;
+  text-align: center;
+  justify-items: center;
+  top: 50px;
+}
+
+.startbutton {
+  background-color: #ee6866;
+  color: white;
+  font-size: 1.5rem;
+  padding: 8px;
+  margin-top: 30px;
+  display: block;
+  margin-left: 45%;
+}
+
+.listofartist {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 150px;
+  padding-right: 150px;
+}
+
+.artist {
+  width: 300px;
+  text-align: center;
+  margin: 20px;
+}
+
+.text-artist {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  background-color: #4d4d4d;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  width: 60%;
+  margin-left: 17%;
+}
+
+.text-artist p {
+  font-size: 1.3rem;
+  color: white;
+}
+
+.text-artist a {
+  font-size: 1.2rem;
+  text-decoration: none;
+  color: white;
+  background-color: #ee6866;
+  padding: 10px;
+  margin: 10px 40px 0px 40px;
+}
+
+
+.track {
+  display: flex;
+  flex-wrap: wrap;
+  justify-items: left;
+  padding: 10px;
+  margin: 5px;
+  background-color: lightgray;
+}
+
+.title {
+  justify-content: space-evenly;
+  background-color:#4d4d4d;
+  height: 50px;
+  padding: 10px;
+}
+
+.title p {
+  font-size: 250%;
+  color: lightgray;
+}
+
+.track p {
+  font-size: 1.3rem;
+  font-family: Arial Bold;
+  color:black;
+  padding: 10px;}
+
+.audio {
+  font-size: 1.3rem;
+  color: white;
+  padding: 10px;
+} 

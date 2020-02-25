@@ -1,0 +1,12 @@
+<div class="listofartist">
+
+  {{#each albums}}
+  <div class="artist">
+    <img src="{{this.images.[0].url}}" width="200" height="200">
+    <div class="text-artist">
+      <p>{{this.name}}</p>
+      <a href="/tracks/{{this.id}}">View tracks</a>
+    </div>
+  </div>
+  {{/each}}
+</div> 
