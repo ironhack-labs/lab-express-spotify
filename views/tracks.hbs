@@ -1,0 +1,11 @@
+<div class="top-bar">
+    <div>Title</div>
+    <div>Listen</div>
+</div>
+
+{{#each data.body.items}}
+    <div class="tracks">
+        <p class="song">{{this.name}}</p>
+        <audio controls src="{{this.preview_url}}"></audio>
+    </div>
+{{/each}} 

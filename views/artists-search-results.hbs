@@ -1,0 +1,15 @@
+<div class='artists-albums'>
+  {{#each data.body.artists.items}}
+    <div class='artist-album'>
+        {{#each this.images}}
+    {{#if @first}}
+        <img class='artist-album-image' src='{{this.url}}'>
+    {{/if}}
+{{else}}
+    <img class='artist-album-image' src='/images/no_photo.jpg'>
+{{/each}}
+<h2 class='artist-album-element'>{{this.name}}</h2>
+        <a class='button-albums' href='/albums/{{this.id}}'>View Albums</a>
+    </div>
+  {{/each}}
+</div> 

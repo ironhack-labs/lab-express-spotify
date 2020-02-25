@@ -1,0 +1,52 @@
+
+@import url('https://fonts.googleapis.com/css?family=Signika&display=swap');
+
+*{
+    font-family: Signika ;
+    
+}
+
+
+.artist-search{
+    position: fixed;
+    padding-top: 450px;
+    padding-left: 450px;
+    display: flex;
+    flex-direction: column;
+
+}
+.search-box{
+    width: 500px;
+    height: 35px;
+}
+.search-button{
+    background-color: rgb(196, 57, 57);
+    color: white;
+}
+
+.top-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    font-size: 20px;
+    padding-left: 50px;
+    padding-right: 100px;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    background-color: grey;
+    font: Signika;
+
+}
+
+.tracks {
+    display: flex;
+    background-color: rgb(192, 189, 189);
+    justify-content: space-between;
+    padding-top: 15px;
+    padding-left: 35px;
+}
+
+.song {
+    color: black;
+    font-size: 20px;
+} 
