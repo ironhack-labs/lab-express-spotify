@@ -1,5 +1,3 @@
-
-<div>hola</div>
 {{#each items}}
 <div>
     <div>
@@ -8,6 +6,6 @@
         {{/with}}
     </div>
     <div>{{this.name}}</div>
-    <button><a href="">View tracks</a></button>
+    <button><a href="/tracks/{{this.id}}">View tracks</a></button>
 </div>
 {{/each}}
