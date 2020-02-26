@@ -1,10 +1,10 @@
 <div>
-    {{!-- <div><img src={{this.images[0].url}}/></div> --}}
     <div>
         {{#with this.images.[0]}}
             <img src={{url}}/>
         {{/with}}
     </div>
     <div>{{this.name}}</div>
-    <button><a href={{this.href}}>view artists</a></button>
+    <button><a href="/albums/{{this.id}}">View Albums</a></button>
+    
 </div>

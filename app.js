@@ -30,11 +30,31 @@ app.get("/artist-search", (req, res) => {
     spotifyApi
         .searchArtists(req.query.search)
         .then(data => {
-            console.log(data.body.artists.items[0].images);
             res.render("artist-search-results", { data });
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 });
+
+// app.get('/beers/:id', (req, res) => {
+//     punkAPI
+//         .getBeer(req.params.id)
+//         .then((beer) => {
+//             console.log(beer)
+//             res.render("beer", { beer } )
+//         })
+//         .catch(error => console.log(error))
+// })
+
+app.get('/albums/:id', (req, res, next) => {
+    spotifyApi.getArtistAlbums(req.params.id)
+    .then(
+        (data) => {
+            console.log(data.body);
+            res.render("albums", data.body );
+        })
+        .catch(error => console.log(error));
+  });
+
 
 
 
