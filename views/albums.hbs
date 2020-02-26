@@ -1,0 +1,13 @@
+
+<div>hola</div>
+{{#each items}}
+<div>
+    <div>
+        {{#with this.images.[0]}}
+            <img src={{url}}/>
+        {{/with}}
+    </div>
+    <div>{{this.name}}</div>
+    <button><a href="">View tracks</a></button>
+</div>
+{{/each}}
