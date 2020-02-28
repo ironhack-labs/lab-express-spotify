@@ -1,0 +1,13 @@
+<div class="songs-container">
+
+    {{#each artistSongs}}
+    <div class="songs-box">
+        <span>{{this.name}}</span>
+        <audio controls src="{{this.prewier_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+    </div>
+    {{/each}}
+
+</div>

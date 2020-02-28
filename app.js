@@ -37,6 +37,7 @@ app.get('/artist-search', (req, res) => {
     .then(data => {
       // console.log('The received data from the API: ', data.body.artists.items);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      console.log('Artist: ', data.body.artists.items)
       const artistList = data.body.artists.items;
       res.render("artist-search-result", { artistList });
     })
@@ -49,12 +50,22 @@ app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi
   .getArtistAlbums(req.params.artistId)
   .then(data => {
-    console.log('Artist albums', data.body.albums.items);
-    const artistAlbum = data.body.items
-    res.render("albums", { artistAlbum })
+    console.log('Artist albums: ', data.body.items);
+    const artistAlbums = data.body.items
+    res.render("albums", { artistAlbums })
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
+app.get('/tracks/:albumsId', (req, res, next) => {
+  console.log(req.params.albumsId)
+  spotifyApi
+  .getAlbumTracks(req.params.albumsId)
+    .then(data => {
+      console.log('Artist songs: ', data.body.items)
+      const artistSongs = data.body.items
+      res.render('tracks', { artistSongs })
+   })
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
