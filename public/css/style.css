@@ -1,1 +1,11 @@
 
+.albums-result {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album {
+  background-color: aquamarine;
+  width: 200px;
+  height: 200px;
+}

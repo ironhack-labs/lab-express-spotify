@@ -1,9 +1,12 @@
 <h1>Artist results</h1>
 
-<div>
+<div class="albums-result">
   {{#each data.body.artists.items}}
-    {{ this.name }}
-    <input type="submit" value="View Albums">
+    <div class="album">
+      <img src="{{ this.images.[0].url }}" alt="" width="100" height="100">
+      {{ this.name }}
+      <a href="/albums/{{ this.id }}"><input type="submit" value="View Albums"></a>
+    </div>
   {{/each}}
 </div>
 
