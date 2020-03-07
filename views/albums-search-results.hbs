@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums Search Results</title>
+</head>
+<body>
+    {{#each items}}
+    {{!-- {{#contains "NL" available_markets name images[1].url}} --}}
+    {{!-- {{{json available_markets}}} --}}
+        album
+        <div>{{name}}</div>
+        <img src="{{{images.[1].url}}}" width="{{images.[1].width}}" height="{{images.[1].height}}">
+        <form action="/albums/{{id}}" method="get">
+        <button type="submit">View albums</button>
+        </form>
+        <br>
+        {{!-- {{/contains}} --}}
+    {{/each}}
+    <br><br>
+</body>
+</html>

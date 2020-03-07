@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Search Results</title>
+</head>
+<body>
+    {{#each artists.items}}
+        <div>{{name}}</div>
+        <img src="{{{images.[1].url}}}" width="{{images.[1].width}}" height="{{images.[1].height}}">
+        <form action="/albums/{{id}}" method="get">
+        <button type="submit">View albums</button>
+        </form>
+        <br>
+    {{/each}}
+</body>
+</html>
