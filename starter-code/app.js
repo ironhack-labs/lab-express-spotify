@@ -11,6 +11,7 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: process.env.CLIENT_SECRET
 });
 
+// require spotify-web-api-node package here:
 spotifyApi
   .clientCredentialsGrant()
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
@@ -18,10 +19,8 @@ spotifyApi
 
 const app = express();
 
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-
+app.set('view engine', 'hbs');
 // setting the spotify-api goes here:
 
 // Our routes go here:
@@ -63,7 +62,7 @@ app.get('/tracks/:albumId', (req, res) => {
   spotifyApi
     .getAlbumTracks(albumId)
     .then(data => {
-      console.log(data.body.items);
+      console.log('this is body items', data.body.items);
       const albumsList = data.body.items;
       res.render('tracks', { albumsList });
     })

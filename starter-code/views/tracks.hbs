@@ -1,3 +1,16 @@
-<div height=200px background-color=grey >
+<div class="bg-dark d-flex justify-content-around" >
   <h1 color=white>Tracks</h1>
+  <h1>Listen</h1>
+</div> 
+
+{{#each albumsList}}
+<div class="bg-secondary d-flex justify-content-between mb-1 mt-1">
+  <h3> {{name}} </h3>
+  <audio controls>
+    <source src={{preview_url}} type="audio/mpeg">
+  </audio>
 </div>
+  
+
+
+{{/each}}
