@@ -1,0 +1,25 @@
+body {
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+.search {
+    background-color: whitesmoke;
+    opacity: 0.8;
+    margin: auto;
+    width: 60%;
+    border: 3px solid bisque;
+    padding: 40px;
+    margin-top: 19.5rem;
+}
+
+.search > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-transform: uppercase;
+}
