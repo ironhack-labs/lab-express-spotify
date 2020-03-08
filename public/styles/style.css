@@ -1,0 +1,15 @@
+
+html,
+body {
+  height: 100%;
+  background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+::-webkit-input-placeholder {
+  text-align: center;
+}
