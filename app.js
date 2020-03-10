@@ -11,22 +11,32 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
-hbs.registerHelper("contains", (element, array, options, name, imagesUrl) => {
-    // console.log('options.fn', options.fn(this));
-    // console.log('inverse', options.inverse(this));
-    console.log(name)
-  return array.includes(element) ? options.fn(this) : options.inverse(this);
-//return array.includes(element) ? true : false;
-});
-
-hbs.registerHelper("json", function(context) {
-  return JSON.stringify(context);
-});
-
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET
+});
+
+// Filtering results to remove duplicate albums -- not finished yet
+let spotifyAlbumFilter = arrayArg => {
+  return (result = arrayArg.filter(el => {
+    el.items.forEach(arelem => {
+      if (arelem.available_markets.includes("NL")) {
+        return arelem;
+      }
+    });
+  }));
+};
+
+// Providing query object to handlebars pages
+app.use(function(req, res, next) {
+  const { query } = req.query;
+  switch (req.path) {
+    case "/artist-search":
+      res.locals.info = query;
+      break;
+  }
+  next();
 });
 
 // Retrieve an access token
@@ -41,12 +51,15 @@ app.get("/", (req, res) => {
 });
 
 app.get("/artist-search", (req, res) => {
-  const { query } = req.query;
+  let { query } = req.query;
+  if (query === "") {
+    query = "Rick Asstley";
+  }
+
   spotifyApi
     .searchArtists(query)
     .then(data => {
-      console.log("The received data from the API: ", data.body);
-      //   res.send(data.body)
+      //console.log("The received data from the API: ", data.body);
       res.render("artist-search-results", data.body);
     })
     .catch(err => {
@@ -59,11 +72,24 @@ app.get("/artist-search", (req, res) => {
 
 app.get("/albums/:albumId", (req, res) => {
   const { albumId } = req.params;
-  console.log(albumId)
   spotifyApi.getArtistAlbums(albumId).then(
     function(data) {
-    //   res.send(data.body);
+      //console.log(spotifyAlbumFilter(data.body));
+
+      //res.render("albums-search-results", spotifyAlbumFilter(data.body));
       res.render("albums-search-results", data.body);
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+});
+
+app.get("/tracks/:trackId", (req, res) => {
+  const { trackId } = req.params;
+  spotifyApi.getAlbumTracks(trackId).then(
+    function(data) {
+      res.render("tracklist-results", data.body);
     },
     function(err) {
       console.error(err);

@@ -3,12 +3,21 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
     <title>Spotify App</title>
 </head>
 <body>
-    <form action="/artist-search" method="GET">
-    <input type="text" name="query">
-    <button type="submit">Search for an Artist</button>
-    </form>
+    <header id="header-top">
+        <p id="header-logotext">Spotify API Wrapper</p>
+        <section id="header-content">
+            <div id="header-form-box">
+                <form id="header-form-content" action="/artist-search" method="GET">
+                <input type="text" name="query" placeholder="Please type your artist">
+                <button type="submit">Search for an Artist</button>
+                </form>
+            </div>
+        </section>
+        <p id="header-footertext">Made by Daniel Hoogerwerf for IronHack</p>
+    </header>
 </body>
 </html>

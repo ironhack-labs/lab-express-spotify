@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto:300,400,700&display=swap');
+
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+audio {
+    height: 20px;
+}
+
+#header-top {
+    width: 80%;
+    height: 70vh;
+    margin: 5% auto;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+}
+
+#header-logotext {
+    font-weight: 300;
+    font-size: 2em;
+    color: black;
+    align-self: flex-start;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 0;
+}
+
+#header-content {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    background: no-repeat url("/images/spotify-background.jpeg");
+    background-size: cover;
+    border-radius: 5px;
+    height: 100%;
+    width: 100%;
+}
+
+
+
+#header-form-box {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    height: 40%;
+    width: 50%;
+    background-color: rgba(0, 0, 0, 0.6);
+    border-radius: 3px;
+}
+
+#header-form-content {
+    width: 60%;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+#header-form-content input {
+    width: 100%;
+    margin: 20px;
+}
+
+#header-form-content button {
+    background-color: rgba(250, 104, 100, 1.0);
+    width: 50%;
+    border: 1px solid lightgray;
+}
+
+#header-form-content button:active  {
+    background-color: rgba(250, 104, 100, 1.0);
+    color: white;
+    width: 50%;
+    border: 1px solid lightgray;
+}
+
+
+
+#header-footertext {
+    align-self: flex-end;
+    margin: 0;
+    padding: 2px;
+    font-size: 0.5em;
+    font-weight: 400;
+    color: black;
+}
