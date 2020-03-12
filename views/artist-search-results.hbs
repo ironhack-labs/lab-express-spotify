@@ -1,0 +1,16 @@
+<div><h2 class="my-10 mt-40 text-center">The artists:</h2></div>
+
+<div class="myFlex">
+
+{{#each data.body.artists.items}}
+
+  <div class="myAlbum">
+      <div><img class="myAlbumCover" src="{{images.0.url}}" alt=""></div>
+      <div><p class="myAlbumTitle text-center my-10">{{name}}</p></div>
+      <div class="text-center my-10"><a href="/albums/{{id}}/{{name}}">View Albums</a></div>
+  </div>
+
+
+{{/each}}
+
+</div>

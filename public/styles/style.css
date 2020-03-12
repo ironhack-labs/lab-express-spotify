@@ -1,0 +1,107 @@
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    font-family: 'Roboto Mono', monospace;
+}
+
+.bgImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/images/fatherandson.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.searchBox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 600px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.searchInput {
+    width: 300px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.searchSubmit {
+    width: 340px;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border-radius: 4px;
+    font-size: 1rem; 
+    border: 1px solid #120B09;
+    background-color: #120B09;
+    color: white;
+}
+
+@media (max-width: 600px) {
+    .bgImage {
+        background-attachment: fixed;
+    }
+    .searchBox {
+        width: 300px;
+    }
+}
+
+.myFlex {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+}
+
+.myAlbum {
+    width: 300px;
+    margin: 30px 20px 30px 20px;
+}
+
+.myAlbumCover {
+    width: 100%;
+}
+
+.myAlbumTitle {
+    font-weight: bold;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.my-10 {
+    margin: 10px 0px;
+}
+
+.mt-40 {
+    margin: 40px 0px 0px 0px; 
+}
+
+.pb-40 {
+    padding-bottom: 40px;
+}
+
+.myFlexTracks {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 20px;
+}
+
+@media (min-width: 600px) {
+    .myFlexTracks {
+        padding: 0px 100px 0px 100px;
+    }
+}

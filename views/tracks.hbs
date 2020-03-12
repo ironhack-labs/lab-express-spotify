@@ -1,0 +1,19 @@
+<div><h2 class="my-10 mt-40 text-center pb-40">Listen previews</h2></div>
+
+{{#each data.body.items}}
+    <div class="my-10 myFlexTracks">
+
+        <div>
+            <p>{{name}}</p>
+        </div>
+        <div>
+            <audio
+                controls
+                src="{{preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </div>
+
+    </div>
+{{/each}}
