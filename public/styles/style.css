@@ -1,0 +1,31 @@
+
+body{
+background-image: url('/images/spotify-background.jpeg');
+background-size: cover;
+display: flex;
+	flex-direction: row;
+	flex-wrap: wrap!important;
+	justify-content: center;
+	align-items: stretch;
+    align-content: center;
+    padding: 2em;
+}
+
+.card{
+    text-align: center;
+    width: 60%;
+    padding: 1em;
+    margin: 115px auto; 
+    margin-bottom: 25px;
+}
+.container{
+margin-top: 14em;
+background-color: rgba(255, 255, 255, 0.5);
+width: 600px;
+height: 200px;
+
+}
+audio{
+max-width:600px;
+width: 100%;
+}
