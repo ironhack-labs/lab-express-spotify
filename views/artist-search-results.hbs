@@ -1,9 +1,14 @@
-<div>
+
 
 {{#each artistInfo}}
-<img src={{this.images.0.url}} width="200px">
-<h4>{{this.name}}</h4>
-<a class="btn btn-danger" href="/albums/{{this.id}}">View Albums</a>
+  <div class="card d-flex flex-column justify-content-center align-center text-center mx-auto w-25">
+    <img class="card-img-top" src={{this.images.0.url}} style="width: 315px;">
+    <div class="card-body bg-dark text-light align-middle my-auto">
+        <h4>{{this.name}}</h4>
+        <a class="btn btn-danger stretched-link" href="/albums/{{this.id}}">View Albums</a>
+    </div>
+  </div>
 {{/each}}
-
+<div class="d-flex justify-content-center text-lg-center">
+<a href="/" class="btn btn-md btn-danger " type="submit">Go back Home page</a>
 </div>
