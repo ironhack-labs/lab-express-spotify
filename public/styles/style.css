@@ -1,0 +1,27 @@
+.card img{
+    width: 40%;
+    height: 40%;
+    display:block;
+    margin: auto;
+}
+body{
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover
+}
+
+.margin{
+    margin: 40px;
+}
+.card{
+    /* width: 400px; */
+    height: 200px;
+}
+.vh-100{
+    min-height: 100vh;
+
+}
+
+.blanco{
+    padding: 100px;
+    background-color: rgba(255,255,255,0.5) !important;
+}
