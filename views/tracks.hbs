@@ -1,0 +1,14 @@
+<div class="container">
+{{#each tracks}}
+<div class="track">
+    <span> <h4>{{name}}</h4></span>
+    <audio
+        controls
+        src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+</div>
+{{/each}}
+</div>

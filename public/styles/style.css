@@ -1,0 +1,49 @@
+body {
+  background-color: #cccccc;
+  margin: 0;
+  padding: 0;
+  
+}
+
+.search-form {
+  background-image: url("../images/spotify-background.jpeg");
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width:100vw;
+  height: 100vh;
+
+}
+
+.allArtists {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 10px;
+  grid-auto-columns: auto;
+}
+.grid-elem{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.album-cover{
+    display: block;
+  
+}
+.albums{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 10px;
+    grid-auto-columns: auto;
+  }
+.container{
+    display: flex;
+    flex-direction: column;
+
+}
+.track{
+    display: flex;
+}
