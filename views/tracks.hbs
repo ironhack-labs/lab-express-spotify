@@ -1,0 +1,16 @@
+<div class="container align-self-center bg-dark mt-90 mb-90">
+    <div class="row">
+        {{#each album}}
+        <div class="bg-secondary col text-center mt-5 mb-5 text-light">
+            <div class="height-190">
+                <h4>Song: {{this.name}}</h4>
+            </div>
+            <div class="height-100">
+                <audio class="mb-3" controls="controls">Your browser does not support the &lt;audio&gt;tag.
+                <source src={{this.preview_url}} /></audio>
+
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
