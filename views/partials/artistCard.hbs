@@ -1,0 +1,11 @@
+<div class="card text-center bg-dark m-3">
+    {{#if images.1.url}}
+        <img class="card-img-top" src="{{images.1.url}}" alt="Artist image">
+        {{else}}
+                <img class="card-img-top" src="https://lh3.googleusercontent.com/proxy/Xw1R3YlNRuFmB_sJvTulYDdus-amCBVa1FNgx8AFYH_eTq4lP6ZQses0R7UAahYkkHztYJ6H8TDaImojyi_wwZXR3Jcy2jMap7KCJQp_XMcj8VbKBShyyodEQWMg7nBYhkFvTeI5xa8xARcgcu8TTV_osdia97aohEAXqzk" alt="No image available">
+    {{/if}}
+    <div class="card-body ">
+        <h5 class="card-title text-light font-weight-bold"> {{name}}</a></h5>
+        <a class="btn btn-danger" href="/albums/{{id}}">View albums</a>
+    </div>
+</div>
