@@ -1,0 +1,9 @@
+<div>
+
+{{#each artistInfo}}
+<img src={{this.images.0.url}} width="200px">
+<h4>{{this.name}}</h4>
+<a class="btn btn-danger" href="/albums/{{this.id}}">View Albums</a>
+{{/each}}
+
+</div>
