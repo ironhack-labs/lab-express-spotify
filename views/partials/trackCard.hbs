@@ -1,9 +1,8 @@
-<div class="card text-center col-lg-8 bg-dark m-3">
-<div class="row">
+<div class="card text-center col-lg-8 track m-1">
 
-    <div class="card-body ">
-        <h5 class="card-title text-light font-weight-bold"> {{name}}</a></h5>        
-        <audio src="{{preview_url}}"></audio>
+    <div class="card-body row justify-content-between align-items-center">
+        <p class="card-title text-dark m-0"> {{name}}</a></p>
+        <audio controls="controls" class="bg-dark">
+            <source src="{{preview_url}}" /></audio>
     </div>
-</div>
 </div>

@@ -6,3 +6,8 @@
 .card {
     width: 300px !important;
 }
+
+.track {
+    background-color: rgb(240,240,240) !important;
+    border-width: 0 !important;
+}

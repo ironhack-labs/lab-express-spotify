@@ -1,11 +1,15 @@
 <div class="container-fluid text-center">
    <h2 class="mt-5 mb-3 display-3 font-weight-bold text-danger">
-   Tracklist for selected album
-   </h2> 
+      Tracklist for the selected album
+   </h2>
 
-<div class="row justify-content-center">
-{{#each data}}
-{{>trackCard this}}
-{{/each}}
-</div>
+   <div class="row justify-content-center">
+      <div class="row bg-dark col-lg-8  justify-content-between">
+         <h5 class="col-xs-4 text-light my-5 font-weight-bold">Track name</h5>
+         <h5 class="col-xs-4 text-light my-5 font-weight-bold">Preview</h5>
+      </div>
+      {{#each data}}
+      {{>trackCard this}}
+      {{/each}}
+   </div>
 </div>
