@@ -1,12 +1,9 @@
 <div class="pt-2 col-lg-4 col-sm-6 col-xs-12 d-flex flex-column justify-content-center align-content-center align-items-center bg-dark text-white">
-  {{!-- <div class="card" > --}}
     {{#if images.1.url}}
       <img class="card-img-top" src="{{this.images.1.url}}" alt="Artist">
     {{else}}
       <img class="card-img-top" src="https://cdn.peopleitrust.com/image/recommendation/564775/564775_08112019033146442048_opt_320.jpg" alt="No image available">
     {{/if}}
-  
-  {{!-- <div class="card-body"> --}}
       <h4 class="card-title">{{name}}</h4>
       <p class="card-text"><a href="/albums/{{id}}" class="btn btn-danger my-3">View Albums</a></p>
   </div>
