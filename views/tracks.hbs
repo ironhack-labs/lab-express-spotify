@@ -1,0 +1,23 @@
+
+<div class="py-5">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="list-group">
+            <li class="list-group-item list-group-item-action bg-dark text-white h2 px-5"><span clas="float-left">Title</span><span class="float-right">Listen</span></li>
+            {{#each data}}
+                <li class="list-group-item d-flex justify-content-between align-items-center bg-light"><p class="card-title text-dark m-0"> {{name}}</a></p>
+                {{#if preview_url}}
+                    <span><audio controls><source src="{{preview_url}}" /></audio></span>
+                {{else}}
+                    <span class="mx-5 my-3">No preview</span>
+                {{/if}}
+                </li>
+            {{/each}}
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+        
+        
