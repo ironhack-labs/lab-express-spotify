@@ -1,0 +1,52 @@
+*{
+    margin: 0;
+}
+.index{
+    background-image: url('/images/spotify-background.jpeg');
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    background-position: center; 
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.index button{
+    margin: 20px 0px;
+    height: 30px;
+    border-radius: 10px;
+    background-color: #20BF54;
+    border: 0px;
+    color: white;
+    font-size: 15px;
+}
+.index input{
+    height: 30px;
+    width: 128px;
+    border-radius: 15px;
+}
+.card{
+    display: flex;
+	flex-direction: column;
+    align-items: center;
+    align-content: center;
+    margin: 40px 20px;
+    background-color: grey;
+}
+.card button{
+    background-color: #20BF54;
+    margin: 10px 0%;
+    border-radius: 15px;
+    border: 0px;
+    height: 30px;
+}
+.flex{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #20BF54;
+}
