@@ -1,0 +1,10 @@
+<div>
+    <div class="container">
+        <div class="row">
+{{#each albums}}
+{{> albumsCard this}}
+<a href='/album-tracks/{{this.id}}'>  <button>View Tracks</button></a>
+{{/each}}
+</div>
+</div>
+</div>
