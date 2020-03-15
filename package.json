@@ -1,16 +1,22 @@
 {
-  "name": "starter_code",
+  "name": "starter-code",
   "version": "2.0.0",
+  "description": "",
   "main": "app.js",
   "scripts": {
-    "start": "node app.js"
+    "dev": "node app.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "keywords": [],
   "author": "",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^2.0.2"
+  },
   "dependencies": {
+    "dotenv": "^8.2.0",
     "express": "^4.17.1",
-    "hbs": "^4.0.6",
-    "path": "^0.12.7",
-    "punkapi-javascript-wrapper": "^1.0.2"
+    "hbs": "^4.1.0",
+    "spotify-web-api-node": "^4.0.0"
   }
 }
