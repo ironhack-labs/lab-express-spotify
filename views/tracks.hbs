@@ -1,0 +1,18 @@
+<table class="table table-stripped">
+        <thead class="thead-dark">
+            <tr>
+                <th class="h3">Track Title</th>
+                <th class="text-center h3">Listen to the Track</th>
+            </tr>
+        </thead>
+        {{#each tracks}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td class="text-center">
+                <audio controls src="{{this.preview_url}}" type="audio/mpeg">
+                    <code>audio</code> element.
+                </audio>
+            </td>
+        </tr>
+        {{/each}}
+</table>

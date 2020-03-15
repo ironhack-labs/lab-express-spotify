@@ -19,3 +19,16 @@ body {
   height: 200px;
   object-fit: scale-down;
 }
+
+
+footer {
+  background-color: #0a2c42;
+  color: white;
+  padding: 0.2rem;
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  justify-content: center;
+
+}

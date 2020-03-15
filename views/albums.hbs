@@ -1,14 +1,17 @@
 <div class="container " >
     <div class="row">
-        {{#each artist}}
+        {{#each albums}}
         <div class="card bg-white m-4 h-100 border-0" style="width: 300px">
             <img class="card-img-top beerimage card-img-left" src ={{this.images.0.url}} alt="">
             <div class="card-header border-0 bg-dark text-light h5"  align="center">
                 {{this.name}}
-                <div class= "bg-dark" align = "center" ><a class = "btn btn-danger btn-sm" href="/albums/{{this.id}}"role ="button">View Albums</a>
+                <div class= "bg-dark" align = "center" >
+                    <a class = "btn btn-danger btn-sm" href="/tracks/{{this.id}}"role ="button">View Tracks</a>
             </div>
           </div>
         </div>
         {{/each}}
     </div>
 </div>
+
+
