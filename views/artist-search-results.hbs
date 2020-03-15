@@ -1,3 +1,16 @@
-<div>
-    <h1>Thanks for Searching</h1>
+<div class="container " >
+    <div class="row">
+        {{#each artist}}
+        <div class="card bg-white m-4 h-100 border-0" style="width: 300px">
+            <img class="card-img-top beerimage card-img-left" src ={{this.images.2.url}} alt="">
+            <div class="card-header border-0 bg-dark text-light h5"  align="center">
+                {{this.name}}
+                <div class= "bg-dark" align = "center" ><a class = "btn btn-danger btn-sm" href="/albums/{{this.id}}"role ="button">View Album</a>
+            </div>
+          </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
+
+

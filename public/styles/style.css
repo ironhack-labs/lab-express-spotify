@@ -13,3 +13,9 @@ body {
 ::-webkit-input-placeholder {
   text-align: center;
 }
+
+.beerimage { 
+  width: 200px; 
+  height: 200px;
+  object-fit: scale-down;
+}
