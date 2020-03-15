@@ -1,0 +1,18 @@
+<div class="titles">
+    <span>
+        <h3>Title</h3>
+    </span>
+    <span class="listen">
+        <h3>Listen</h3>
+    </span>
+</div>
+<div class="tracksDetails">
+    
+        {{#each tracksInfo}}
+        <p>{{this.name}}</p>
+    
+    
+        <audio controls="controls">
+            <source src="{{this.preview_url}}" /></audio>
+    {{/each}}
+</div>

@@ -1,0 +1,111 @@
+.bg {
+  background-image: url("/images/spotify-background.jpeg");
+  height: 100vh;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+.formWrapper {
+  width: 40em;
+  height: 12em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(219, 224, 223, 0.6);
+  display: flex;
+}
+
+.searchForm {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.searchForm,
+input {
+    border-style: none;
+    border: rgb(54, 53, 53), solid, 1px;
+    border-radius: 3px;
+  text-indent: 1em;
+  height: 2rem;
+  width: 25rem;
+  font-size: 16px;
+}
+.btn-search{
+    border-style: none;
+    margin: 1em;
+    font-size: 16px;
+    height: 40px;
+    width: 10rem;
+    background-color: rgb(247, 102, 102);
+    color: white;
+}
+
+.btn {
+  border-radius: 6px;
+  text-decoration: none;
+  margin-left: 107px;
+  margin-bottom: 1em;
+  padding: 3px;
+  font-size: 12px;
+  height: 1rem;
+  width: 6rem;
+  background-color: rgb(241, 89, 89);
+  color: white;
+}
+
+.cardsContainer {
+  display: flex;
+  margin: 2em;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: rgb(54, 53, 53);
+}
+
+.cardsContainer,
+h3 {
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  font-weight: lighter;
+  padding-bottom: 0;
+}
+
+.artist-search {
+  margin: 0 5em;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+}
+
+.titles{
+
+  padding: 0 2em;
+  background-color: rgb(54, 53, 53);
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.listen{
+  padding-right:10em;
+}
+
+.tracksDetails{
+  font-family: Arial, Helvetica, sans-serif;
+  width:100%;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  padding: 0 2em;
+  justify-content: space-around;
+  background-color: rgb(185, 184, 184);
+}
+
