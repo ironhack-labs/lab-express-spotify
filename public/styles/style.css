@@ -1,0 +1,15 @@
+#main-container{
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    height: 100vh;
+}
+#form-container{
+   background-color: rgba(255, 255,255, 0.6);
+}
+#listen{
+    text-align: end;
+    margin-right: 20px;
+}
+tr{
+    justify-content: space-between;
+}

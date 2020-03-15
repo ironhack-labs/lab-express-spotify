@@ -1,0 +1,9 @@
+<div class="card my-4 mx-3 shadow text-center " style="width: 22%;">
+    <div class="card-body bg-dark   justify-content-center rounded">
+        <img class="card-img-top" style="object-fit: cover;" src="{{this.images.0.url}}" alt="">
+        <h5 class="card-title my-2 p-3 text-white">{{this.name}} </h5>
+        <form action="/tracks/{{this.id}}"  method="GET">
+            <button class="btn btn-danger" type="submit">View Tracks</button>
+        </form>
+    </div>
+</div>
