@@ -1,5 +1,20 @@
-<div>
-    {{#each tracks}}
-    {{> tracksCard this}}
-    {{/each}}
-</div>
+<table class="table ">
+    <thead class="thead-dark ml-3">
+        <tr>
+            <th class="w-10"></th>
+            <th scope="col" class="ml-1 ">Title</th>
+            <th class="w-80"></th>
+            <th scope="col" id="listen">Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+        <tr>
+            <td class="w-10"></td>
+            <td class="font-weight-bold mr-5 "> {{this.name}} </td>
+            <td class="w-50"></td>
+            <td><audio controls="controls"><source src="{{this.preview_url}}"></audio></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,8 +1,9 @@
-<div>
-  <img alt="" src="{{this.images.0.url}}">
-  <div>
-    <h5>{{this.name}} {{this.lastName}}</h5>
-    <p>{{this.genres}}</p>
-    <a href="/albums-search/{{this.id}}"><button>View Albums</button></a>
-  </div>
+<div class="card my-4 mx-3 shadow text-center " style="width: 22%;">
+        <img class="card-img-top" style="object-fit: cover;" src="{{this.images.0.url}}" alt="">
+        <div class="card-body bg-dark col justify-content-center rounded">
+                <h5 class="card-title p-3 mx-auto text-white">{{this.name}} {{this.lastName}}</h5>
+                <form action="/albums-search/{{this.id}}" , method="GET">
+                        <button class="btn btn-danger mx-auto" type="submit">View Albums</button>
+                </form>
+        </div>
 </div>
