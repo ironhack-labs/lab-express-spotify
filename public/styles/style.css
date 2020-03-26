@@ -1,3 +1,84 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
 body {
+    height: 100vh;
+    width: 100%;
+}
+
+.home {
     background-image: url(../images/spotify-background.jpeg);
+    background-position: center;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    width: 800px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    align-items: center;
+}
+
+form>input {
+    width: 400px;
+    height: 30px;
+    margin: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+}
+
+form>button {
+    width: 200px;
+    height: 35px;
+    margin: 10px;
+    border: none;
+    color: white;
+    background-color: tomato;
+    font-size: 1.1em;
+    padding: 6px;
+}
+
+.artists {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.artists article {
+    margin: 40px;
+    background-color: darkslategray;
+    color: white;
+    text-align: center;
+    height: 500px;
+}
+
+.artists img {
+    width: 400px;
+}
+
+h3 {
+    margin: 10px;
+    margin-bottom: 20px;
+}
+
+a {
+    color: white;
+    background-color: tomato;
+    font-size: 1.1em;
+    padding: 6px;
+    text-decoration: none;
+    border-radius: 3px;
 }
