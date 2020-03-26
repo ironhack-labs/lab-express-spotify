@@ -1,0 +1,53 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+
+.container-index{
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: 100vw 100vh;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.align-class{
+    background-color: rgba(255,255,255,0.5);
+    height: 20%;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.form-class{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.form-class button{
+    background-color: rgb(255,102,102);
+    color: white;
+    margin-top: 5px;
+    padding: 5px 10px;
+    border-style: none;
+    
+}
+
+.form-class input {
+    width: 60%;
+    height: 15%;
+    padding-left: 20px;
+    border-radius: 1.4;
+    
+}
+

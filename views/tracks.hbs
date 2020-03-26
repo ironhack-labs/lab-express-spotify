@@ -1,0 +1,21 @@
+<nav></nav>
+<div>
+    {{#each items}}
+    <div>
+        <div>
+            <h3>{{this.name}}</h3>
+        </div>
+        <div>
+            {{#if this.preview_url}}     
+                <audio controls name="media">
+                    <source src={{this.preview_url}} type="audio/mpeg"> 
+                </audio>
+            {{else}}
+                <audio controls name="media">
+                    <source src(unknown) type="audio/mpeg"> 
+                </audio>
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+</div>
