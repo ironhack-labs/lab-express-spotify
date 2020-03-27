@@ -1,0 +1,13 @@
+
+<div>
+    {{#each artistSearched }}
+
+    <ul>
+        <li>{{name}}</li>
+        <li> <img src="{{images.[0].url}}" alt="band"> </li>
+        <li> <a href="/albums/{{id}}"> <button> View Albums </button> </a> </li>
+    </ul>
+
+
+    {{/each}}
+</div>
