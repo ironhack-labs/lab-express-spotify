@@ -56,10 +56,11 @@ justify-content: center;
 /*  artist and albums */
 .div {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
     flex-wrap: wrap;
-    align-items: baseline;
+    justify-content: space-evenly;
+    align-items: center;
+    align-content: center;
+    padding: 0 6em;
     
 }
 
@@ -71,11 +72,12 @@ img {
     margin: 30px;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
     flex-direction: column;
     align-items: center;
     padding-bottom: 0.6em;
     background-color:#4d4d4d;
+    width: 20rem;
+    height: 23.7rem;
 }
 
 .title {
@@ -115,7 +117,13 @@ img {
     display: flex;
     flex-direction:row;
     justify-content: space-between;
-    background-color: lightgray;
+    background-color:#f1f3f4;
     align-items: center;
+    padding: 0 2em;
+    margin: 0.15em 0;
+    height: 4em;
+    color: rgb(63, 63, 63);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.9em;
 }
 

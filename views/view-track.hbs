@@ -2,10 +2,10 @@
   <h2>Title</h2>
    <h2>Listen</h2>
 </div>
-<div>
   {{#each track}}
+  <div class="audio"> 
+  <h3>{{name}}</h3>
       <figure>
-        <figcaption>{{name}}</figcaption>
           <audio
             controls
               src="{{preview_url}}">
@@ -13,7 +13,6 @@
               <code>audio</code> element.
           </audio>
         </figure>
-      <audio src="{{preview_url}}"></audio>
   </div>
 {{/each}} 
 
