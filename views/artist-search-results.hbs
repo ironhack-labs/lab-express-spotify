@@ -1,0 +1,7 @@
+
+{{#each artists}}
+{{!-- <button onclick="window.location.href='/albums/{{this.id}}'">Continue</button> --}}
+<a href="/albums/{{this.id}}">View Albums</a>
+  <h1>{{this.name}}</h1>
+  <h2>{{this.id}}</h2>
+  {{/each}}
