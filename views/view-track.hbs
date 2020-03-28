@@ -1,16 +1,20 @@
-
-{{#each track}}
-<figure>
-    <figcaption>{{name}}</figcaption>
-    <audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</figure>
-
-  <audio src="{{preview_url}}"></audio>
+<div class="bar">
+  <h2>Title</h2>
+   <h2>Listen</h2>
+</div>
+<div>
+  {{#each track}}
+      <figure>
+        <figcaption>{{name}}</figcaption>
+          <audio
+            controls
+              src="{{preview_url}}">
+              Your browser does not support the
+              <code>audio</code> element.
+          </audio>
+        </figure>
+      <audio src="{{preview_url}}"></audio>
+  </div>
 {{/each}} 
 
 
