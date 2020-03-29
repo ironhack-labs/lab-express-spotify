@@ -106,7 +106,11 @@ img {
     border-style: solid;
     color: white;
     text-align: center;
-    }
+}
+
+.btn:hover {
+    text-decoration: underline;
+}
 
 
 /* view tracks */
