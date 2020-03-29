@@ -94,6 +94,7 @@ img {
     height: 2em;
     border-radius: 0.2rem;
     border-color: #ef6867;
+    border-style: solid;
     color: white;
     text-align: center;
     }
