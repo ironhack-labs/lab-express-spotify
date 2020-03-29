@@ -1,13 +1,31 @@
 <section class="tracksAlbum">
-    {{#each track}}
-    <div class="cardsContainer">
-           <h1>{{this.name}}</h1>
-           <audio controls="controls">
-  
-                <source src="{{this.preview_url}}" type="audio/mp3">
 
+
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col"></th>
+      <th scope="col"></th>
+      <th scope="col">Preview</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each track}}
+    <tr>
+      <th scope="row">{{this.track_number}}</th>
+      <td>{{this.name}}</td>
+      <td></td>
+      <td>
+           <audio controls="controls">
+                <source src="{{this.preview_url}}" type="audio/mp3">
            </audio>
-          
-    </div>
+      </td>
+    </tr>
     {{/each}}
+ 
+  </tbody>
+</table>
+
+
 </section>

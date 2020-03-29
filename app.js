@@ -9,7 +9,7 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
-const path    = require('path')
+const path = require('path')
 
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname, 'views'));
@@ -44,13 +44,7 @@ app.get('/artist-search', (req, res) => {
       .then(data => {
 
           let spotifyArtists = data.body.artists.items;
-
-          // console.log('The received data from the API: ', spotifyArtists);
-
           res.render('artist-search-results', {spotifyArtists})
-          
-
-
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
   
@@ -62,15 +56,9 @@ app.get('/albums/:artistId', (req, res, next) => {
  
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then(data => {
-
       let album = data.body.items;
-
       console.log('Album:', album);
-
       res.render('albums',{album})
-      
-
-
 })
 .catch(err => console.log('The error while searching artists occurred: ', err));
 
@@ -84,18 +72,12 @@ app.get('/tracks/:albumId', (req, res, next) => {
       .then(data => {
 
           let track = data.body.items;
-
           console.log('Album Track:', track);
-
           res.render('tracks', { track })
       
       })
       .catch(err => console.log('Something went wrong!', err));
-
-
 });
-
-
 
 
 
