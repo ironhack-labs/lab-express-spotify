@@ -1,0 +1,137 @@
+* {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+/* layout */
+
+body {
+    height: 100vh;
+    width: 100vw;
+}
+
+/* home */
+
+.home{
+    background-image: url(/images/spotify-background.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.form-box {
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    background-color: rgba(255, 255, 255, 0.6);
+    height: 200px;
+    width: 700px;
+}
+
+.form-input {
+    width: 70%;
+    height: 20%;
+    position: absolute;
+    top: 30%;
+    left: 15%;
+    border-radius: 5px;
+    border-style: none;
+    padding-left: 20px;
+    font-size: 15px;
+}
+
+.btn {
+    width: 30%;
+    height: 20%;
+    position: absolute;
+    top: 60%;
+    left: 35%; 
+    border-style: none;
+    color: #fff;
+    background-color: #FF6665;
+    font-size: 18px;
+}
+
+/* artist search / albums */
+
+.artist-albums {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 32%;
+}
+
+.image {
+    width: 80%;
+}
+
+.name {
+    color: #fff;
+    text-align: center;
+    font-size: 20px;
+}
+
+.button {
+    border-style: none;
+    color: #fff;
+    background-color: #FF6665;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-left: 130px;
+}
+
+.button:hover {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 15px;
+}
+
+.gray {
+    background-color: #4D4D4D;
+    width: 80%;
+    height: 70px;
+}
+
+/* tracks */
+
+.title {
+    display: flex;
+    justify-content: space-around;
+    background-color: #4A4A4A;
+    color: #fff;
+    width: 70%;
+    height: 40px;
+    margin-left: 200px;
+    padding-top: 30px;
+    font-size: 10px;
+}
+
+.tracks {
+    display: flex;
+    flex-direction: column;
+    background-color: #F6F6F6;
+    color: #000;
+    margin-left: 200px;
+    padding-top: 30px;
+    font-size: 10px;
+    width: 70%;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+}

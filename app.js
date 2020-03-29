@@ -33,11 +33,17 @@ app.get('/', (req, res) => {
 
 app.get('/artist-search', (req, res) => {
     const queryString = req.query.q;
+    console.log(queryString);
     spotifyApi
   .searchArtists(queryString)
   .then(data => {
-    console.log('The received data from the API: ', data.body);
     const artist = data.body.artists.items
+    artist.forEach((artist,i) => {
+      if( artist.images.length === 0 ){
+        artist.images.push({ url: 'http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg' })
+      }
+    })
+    console.log(artist);
     res.render('artist-search', {
         artist
     })
@@ -64,6 +70,7 @@ app.get('/albums/tracks/:tracksId', (req, res, next) => {
     .then(data => {
       console.log('The received data from the API: ', data.body);
       const tracks = data.body.items;
+      console.log(tracks)
       res.render('tracks', {
           tracks
       })
