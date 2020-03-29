@@ -14,6 +14,13 @@
     text-shadow:0px 1px 0px #854629;
     margin-top: 1em;
 }
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 a:link {
 	box-shadow:inset 0px 1px 0px 0px #cf866c;
 	background-color:#ec3f0a;
@@ -39,6 +46,10 @@ a:link {
     align-content: center;
 }
 
+form {
+    margin-top: 7em;
+}
+
 input {
     height: 3em;
     width: 40em;
@@ -47,13 +58,12 @@ input {
 .formWrapper {
     margin-top: 12em;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
-    align-content: flex-start;
-    background-color: white;
+    align-content: center;
+    background-color: rgba(255,255,255, 0.3) ;
     width: 70em;
     height: 20em;
-    opacity: 0.5;
 }
 
 .indexBody {
@@ -62,4 +72,18 @@ input {
     display: flex;
     flex-direction: column;
     align-items: center;
+}
+
+.artistBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5em;
+}
+
+.albumBody {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 5em;
 }
