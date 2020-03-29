@@ -1,8 +1,8 @@
 <body class="albumBody">  
 <section class="artist-search">
 
-{{#each album}}
 <div class="row row-cols-1 row-cols-md-3">
+{{#each album}}
   <div class="col mb-4">
     <div class="card h-100">
       <img src="{{this.images.0.url}}" class="card-img-top" alt="...">
@@ -12,8 +12,12 @@
       </div>
     </div>
   </div>
-</div>
 {{/each}}
+</div>
+
+
+
+
 
 </section>
 </body>

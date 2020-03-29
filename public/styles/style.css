@@ -76,6 +76,7 @@ input {
 
 .artistBody {
     display: flex;
+    flex-wrap: wrap;
     flex-direction: row;
     align-items: center;
     margin: 5em;
@@ -84,6 +85,6 @@ input {
 .albumBody {
     display: flex;
     flex-direction: row;
-    align-items: center;
+    align-content: center;
     margin: 5em;
 }
