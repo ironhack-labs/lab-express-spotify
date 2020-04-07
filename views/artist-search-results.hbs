@@ -1,0 +1,10 @@
+<section class="artist-search">
+    {{#each spotifyArtists}}
+    <div class="cardsContainer">
+            <span><img src={{this.images.0.url}}></span>
+
+            <p>{{this.name}}</p>
+            <a class="btn" href="/albums/{{this.id}}">View Albums</a>
+    </div>
+    {{/each}}
+</section>
