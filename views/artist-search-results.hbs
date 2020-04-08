@@ -1,0 +1,14 @@
+<div class="artist-page">
+
+    {{#each spotifyArtists}}
+    <div class="artist-card">
+        <img src="{{this.images.0.url}}" >
+            
+
+        <h5>{{this.name}}</h5>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+    {{/each}}
+
+
+</div>
