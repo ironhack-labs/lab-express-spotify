@@ -1,0 +1,17 @@
+<div>
+
+{{#each items}}
+
+    <div>
+
+        <h3>{{this.name}}</h3>
+        <audio controls="controls">
+        Your browser does not support the &lt;audio&gt; tag. 
+        <source src="{{this.preview_url}}" />
+        </audio>
+
+    </div>
+
+{{/each}}
+
+</div>
