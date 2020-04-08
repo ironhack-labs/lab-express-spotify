@@ -1,3 +1,9 @@
 body {
-    background-color: black;
+    background-image: url(../images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.searchbox {
+    min-height: 70vh;
 }
