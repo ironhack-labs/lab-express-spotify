@@ -27,25 +27,35 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
+//route for home.hbs
 app.get('/', function (req, res) {
-    res.render('layout')
+    res.render('home')
   })
 
+//route for artist-search-results.hbs
   app.get('/artist-search', (req, res, next) => {
     spotifyApi
-    .searchArtists(req.query)
-    .then(data => {
-    console.log('The received data from the API: ', data.body);
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    .searchArtists(req.query.artist)
+    .then(dataFromApi => {
+    console.log('The received data from the API: ', dataFromApi.body.artists);
+    res.render('artist-search-results', {data : dataFromApi.body.artists.items})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
-    
-    console.log(req.query)
-    res.send('')
   })
 
 
+//dynamic route for albums.hbs
 
+app.get('/albums/:artistId', (req, res, next) => {
+  // .getArtistAlbums() code goes here
+  spotifyApi
+  .getArtistAlbums(req.params.artistId)
+  .then((albumsFromApi) => {
+    console.log("I found some albums porco dio")
+    res.render('albums')
+  })
+  .catch((err) => console.log('The error while searching artists occured: ', err))
+});
 
 
 // Server listening
