@@ -5,5 +5,16 @@ body {
 }
 
 .searchbox {
-    min-height: 70vh;
+    min-height: 60vh;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+.card-detail {
+    max-width: 32%;
+    margin: 0.5rem auto 0.5rem auto;
+}
+
+.card-bg {
+    background-color: slategrey;
+    color: white;
 }
