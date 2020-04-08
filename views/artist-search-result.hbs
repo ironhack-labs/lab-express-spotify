@@ -1,0 +1,21 @@
+{{!-- dsjfhk --}}
+
+<div class="container">
+
+    {{#each content}}
+    <div class="box">
+        {{#each this.images}}
+        <div class="img">
+            <img src="{{this.this.url}}" alt="">
+            <p>{{this.this.text}}</p>
+
+        </div>
+        {{/each }}
+        <div class="box-content">
+            <h4>{{this.name}}</h4>
+            <button type="submit"><a href="/albums/{{this.id}}"> View Albums</a></button>
+        </div>
+    </div>
+
+    {{/each }}
+</div>
