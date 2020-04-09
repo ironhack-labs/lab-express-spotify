@@ -1,13 +1,14 @@
 <div class="row d-flex flex-wrap justify-content-between">
-    {{#each spotifyTracks}}
-<div class="card col-12 col-md-4 card-detail card-bg">
-  <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{this.name}}</h5>
-    <p class="card-text">Popularity: </p>
-    <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
+  {{#each spotifyTracks}}
+  <div class="card col-12 col-md-4 card-detail card-bg">
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}} - {{this.track_number}}</h5>
+      <p class="card-text">
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg">
+        </audio>
+      </p>
+    </div>
   </div>
+  {{/each}}
 </div>
- {{/each}}
-</div>
-  

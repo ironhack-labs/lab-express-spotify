@@ -1,13 +1,17 @@
 <div class="row d-flex flex-wrap justify-content-between">
-    {{#each spotifyArtists}}
-<div class="card col-12 col-md-4 card-detail card-bg">
-  <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{this.name}}</h5>
-    <p class="card-text">Popularity: {{this.popularity}}</p>
-    <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+  {{#each spotifyArtists}}
+  <div class="card col-12 col-md-4 card-detail card-bg">
+    {{#if this.images.0.url}}
+    <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
+    {{else}}<img class="card-img-top"
+      src="https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png"
+      alt="Placeholder Image">
+    {{/if}}
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+      <p class="card-text">Popularity: {{this.popularity}}</p>
+      <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+    </div>
   </div>
+  {{/each}}
 </div>
- {{/each}}
-</div>
-  
