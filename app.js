@@ -47,7 +47,6 @@ app.get("/artist-search", (req, res) => {
           image.text = "No photo available";
           e.images.push(image);
         }
-        return e.images;
       });
       res.render("artist-search-result", { content: data.body.artists.items });
     })
@@ -64,7 +63,7 @@ app.get("/albums/:artistId", (req, res) => {
       // dealing with images array
       data.body.items.map((e) => {
         if (e.images.length > 0) {
-          // get the first image from array
+          // get the first image from the images array
           e.images = [e.images[1]];
         }
         // add text in case there is no image
@@ -74,7 +73,6 @@ app.get("/albums/:artistId", (req, res) => {
           image.text = "No photo available";
           e.images.push(image);
         }
-        return e.images;
       });
 
       res.render("albums", { albumContent: data.body.items });
@@ -90,7 +88,7 @@ app.get("/tracks/:artistId", (req, res) => {
     .getAlbumTracks(req.params.artistId, { limit: 5, offset: 1 })
     .then((data) => {
       console.log(data.body);
-      res.render("tracks");
+      res.render("tracks", { tracksContent: data.body.items });
     })
     .catch((err) =>
       console.log("The error while searching artists Id occurred: ", err)

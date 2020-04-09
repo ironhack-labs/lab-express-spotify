@@ -107,3 +107,41 @@ form input {
     height: 30px;
     background-color: white;
 }
+
+/* tracks page css  */
+
+.box-tracksContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    background-color: lightgray;
+    margin-bottom: 10px;
+}
+
+.box-tracksContent h4 {
+    width: 200px;
+    text-align: left;
+}
+
+#title {
+    height: 100px;
+    background-color: darkgray;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    max-width: 100%;
+    margin: 0;
+}
+
+.tracksContainer {
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
