@@ -1,4 +1,4 @@
-<h1 class="display-3">albums for</h1>
+<h1 class="display-3">albums for "{{albumArtistChosen.chose}}"</h1>
 <hr>
 
 <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
@@ -16,14 +16,3 @@
     </div>
     {{/each}}
 </div>
-
-
-
-{{!-- <h1>Albums for</h1>
-{{#each albumsArray}}
-{{this.name}}
-<a href="/album-tracks/{{this.id}}">Go to albums tracks</a>
-    {{#with this.images.[1]}}
-        <img src="{{url}}" alt="">
-    {{/with}}
-{{/each}} --}}

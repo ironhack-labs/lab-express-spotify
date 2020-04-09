@@ -34,14 +34,14 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/artist-search", (req, res, next) => {
-  console.log("This is the return value of req query: ", req.query.artist);
-
   spotifyApi
     .searchArtists(req.query.artist)
     .then((data) => {
-      console.log("The received data from the API: ", data.body.artists.items);
+
+      let searchTermArtist = { search: req.query.artist };
+
       res.render("artist-search-results", {
-        artistsArray: data.body.artists.items,
+        artistsArray: data.body.artists.items, searchTermArtist,
       });
     })
     .catch((err) =>
@@ -50,13 +50,13 @@ app.get("/artist-search", (req, res, next) => {
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-  console.log(req.params.artistId);
-
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then((data) => {
-      console.log(data.body.items);
-      res.render("albums", { albumsArray: data.body.items });
+
+      let albumArtistChosen = {chose: data.body.items[0].artists[0].name}
+
+      res.render("albums", { albumsArray: data.body.items, albumArtistChosen });
     })
     .catch((err) =>
       console.log("The error while searching artists albums occurred: ", err)
@@ -64,16 +64,13 @@ app.get("/albums/:artistId", (req, res, next) => {
 });
 
 app.get("/album-tracks/:albumId", (req, res, next) => {
-
   spotifyApi
     .getAlbumTracks(req.params.albumId, { limit: 10, offset: 0 })
     .then((data) => {
-        console.log(data.body);
-        res.render("album-tracks", {tracksArray: data.body.items});
-      })
-      .catch((err) =>
-        console.log("Something went wrong!", err)
-    );
+
+      res.render("album-tracks", { tracksArray: data.body.items });
+    })
+    .catch((err) => console.log("Something went wrong!", err));
 });
 
 app.listen(3000, () =>
