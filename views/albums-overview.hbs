@@ -1,11 +1,11 @@
 <div class="row d-flex flex-wrap justify-content-between">
-    {{#each spotifyArtists}}
+    {{#each spotifyAlbums}}
 <div class="card col-12 col-md-4 card-detail card-bg">
   <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
   <div class="card-body">
     <h5 class="card-title">{{this.name}}</h5>
-    <p class="card-text">Popularity: {{this.popularity}}</p>
-    <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+    <p class="card-text">Popularity: </p>
+    <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
   </div>
 </div>
  {{/each}}

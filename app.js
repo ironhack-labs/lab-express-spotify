@@ -36,17 +36,36 @@ app.get('/', (req, res) => {
 });
 
 app.get('/artist-search', (req, res) => {
-  console.log(req.query)
+  //console.log(req.query)
   spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
       let spotifyArtists = data.body.artists.items
-      console.log('The received data from the API: ', data.body);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      //console.log('The received data from the API: ', JSON.stringify(data.body));
+      // res.send(data.body) OR the following line, can't send 2 res.ANYTHING
       res.render('artist-search-results', {spotifyArtists})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi
+  .getArtistAlbums(req.params.artistId)
+  .then(data => {
+    let spotifyAlbums = data.body.items
+    res.render('albums-overview', {spotifyAlbums})
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+})
+
+app.get('/tracks/:albumId', (req, res) => {
+  spotifyApi
+  .getAlbumTracks(req.params.albumId)
+  .then(data => {
+    let spotifyTracks = data.body.items
+    res.render('tracks-overview', {spotifyTracks})
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
