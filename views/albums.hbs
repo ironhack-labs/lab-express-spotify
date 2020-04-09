@@ -1,0 +1,29 @@
+<h1 class="display-3">albums for</h1>
+<hr>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+    {{#each albumsArray}}
+    <div class="col mb-4">
+        <div class="card">
+            {{#with this.images.[1]}}
+            <img src="{{url}}" alt="" class="card-img-top">
+            {{/with}}
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <a class="btn btn-primary" href="/album-tracks/{{this.id}}">Go to album tracks</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+
+{{!-- <h1>Albums for</h1>
+{{#each albumsArray}}
+{{this.name}}
+<a href="/album-tracks/{{this.id}}">Go to albums tracks</a>
+    {{#with this.images.[1]}}
+        <img src="{{url}}" alt="">
+    {{/with}}
+{{/each}} --}}

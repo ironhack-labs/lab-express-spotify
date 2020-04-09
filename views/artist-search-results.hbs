@@ -1,0 +1,67 @@
+<h1 class="display-3">artist search results</h1>
+<hr>
+
+<div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3">
+    {{#each artistsArray}}
+    <div class="col mb-4">
+        <div class="card">
+            {{#with this.images.[1]}}
+            <img src="{{url}}" alt="" class="card-img-top">
+            {{/with}}
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <a class="btn btn-primary" href="/albums/{{this.id}}">Go to artist albums</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+
+{{!-- OLDER CODE --}}
+
+{{!-- <h1>artist search results</h1>
+<div>
+    {{#each artistsArray}}
+<ul>
+    <li><a href="/albums/{{this.id}}">Go to artist albums</a></li>
+    <li>{{this.name}}</li>
+        {{#with this.images.[1]}}
+            <li><img src="{{url}}" alt=""></li>
+        {{/with}}
+</ul>
+{{/each}}
+</div> --}}
+
+{{!-- ___________________ --}}
+
+
+{{!-- <div class="card" style="width: 18rem;">
+    {{#each artistsArray}}
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <a class="btn btn-primary" href="/albums/{{this.id}}">Go to artist albums</a>
+    </div>
+    {{#with this.images.[1]}}
+    <img src="{{url}}" alt="" class="card-img-top">
+    {{/with}}
+    {{/each}}
+</div> --}}
+
+
+
+{{!-- 
+<div class="card-deck">
+     {{#each artistsArray}}
+  <div class="card">
+    {{#with this.images.[1]}}
+    <img src="{{url}}" alt="" class="card-img-top">
+    {{/with}}
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+        <a class="btn btn-primary" href="/albums/{{this.id}}">Go to artist albums</a>
+    </div>
+  </div>
+  {{/each}}
+</div> --}}
