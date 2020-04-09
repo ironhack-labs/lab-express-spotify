@@ -1,8 +1,15 @@
 {{#each albums}}
 
 <div>
-{{this.name}}
-<img src="">
+<h5>{{this.name}}</h5>
+
+{{#each this.images}}
+{{#if @last}}
+<img src="{{this.url}}">
+<br>
+{{/if}}
+{{/each}}
+
  <a href="/albums/{{this.name}}/{{this.id}}">View tracks</a>
 </div>
 

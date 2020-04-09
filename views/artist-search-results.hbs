@@ -1,8 +1,13 @@
 {{#each data}}
 
 <div>
-{{this.name}}
-<img src="">
+<h5>{{this.name}}</h5>
+{{#each this.images}}
+{{#if @last}}
+<img src="{{this.url}}">
+<br>
+{{/if}}
+{{/each}}
 <a href="/albums/{{this.id}}">View albums</a>
 </div>
 
