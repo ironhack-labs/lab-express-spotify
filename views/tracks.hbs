@@ -1,0 +1,14 @@
+<div class="tracksContainer">
+    <div id="title">
+        <h3>Title</h3>
+        <h3>Listen</h3>
+    </div>
+    {{#each tracksContent}}
+    <div class="box-tracksContent">
+        <h4>{{this.name}}</h4>
+        <audio controls>
+            <source src="{{this.preview_url}}">
+        </audio>
+    </div>
+    {{/each }}
+</div>
