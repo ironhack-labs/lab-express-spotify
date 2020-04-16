@@ -1,0 +1,25 @@
+.home-background {
+  z-index: -100;
+  max-width: 100vw;
+  object-fit: cover;
+  position: absolute;
+}
+
+.floating-box {
+  background-color: rgba(255,255,255,0.5);
+  padding: 24px 32px;
+}
+
+.card {
+  margin-bottom: 16px;
+}
+
+.card-img-top{
+  object-fit: cover;
+  object-position: center;
+}
+
+.btn-primary {
+  background: #ef6866;
+  border-color: #ef6866;
+}
