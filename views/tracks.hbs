@@ -1,5 +1,10 @@
 {{#each tracks}}
-<p>{{name}}</p>
-<audio controls src="{{preview_url}}">Your browser does not support the
-  <code>audio</code> element.</audio>
+<div class="row">
+  <div class="col">
+    <p>{{name}}</p>
+  </div>
+  <div class="col"><audio controls src="{{preview_url}}">Your browser does not support the
+      <code>audio</code> element.</audio></div>
+
+</div>
 {{/each}}
