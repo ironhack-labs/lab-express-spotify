@@ -33,7 +33,6 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/artist-search', (req, res, next) => {
-  console.log(req.query.artist)
   spotifyApi
     .searchArtists(req.query.artist)
     .then((data) => {
@@ -45,15 +44,24 @@ app.get('/artist-search', (req, res, next) => {
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
-  console.log(req.params.artistId)
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then((data) => {
-      console.log(`got albums from artistID ${req.params.artistId}: ${data.body.items}`)
       res.render('albums', { albums: data.body.items })
     })
     .catch((err) => {
       console.log('error in album search: ', err)
+    })
+})
+
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then((data) => {
+      res.render("tracks", {tracks: data.body.items})
+    })
+    .catch((err) => {
+      console.log('error in track search: ', err)
     })
 })
 
