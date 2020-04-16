@@ -1,0 +1,23 @@
+<div class="container">
+    <div class="row">
+
+        {{#if artist}}
+
+            {{#each items}}
+
+                {{> artistPartial this}}
+
+            {{/each}}
+
+        {{else}}
+
+            {{#each items}}
+
+                {{> albumPartial this}}
+
+            {{/each}}
+
+        {{/if}}
+
+    </div>
+</div>
