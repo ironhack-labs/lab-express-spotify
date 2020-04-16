@@ -1,11 +1,9 @@
-<h1>Artists</h1>
-
-{{#each data}}
+{{#each albums}}
 <div class="card" style="width: 18rem;">
   <img class="card-img-top" src="{{images.1.url}}" alt="{{name}}">
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>
-    <a href="/albums/{{id}}" class="btn btn-primary">Show albums</a>
+    <a href="/albums/{{id}}" class="btn btn-primary">View tracks</a>
   </div>
 </div>
 {{/each}}
