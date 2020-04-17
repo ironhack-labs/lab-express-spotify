@@ -1,1 +1,17 @@
 <h1>Albuns for: {{artistName}}</h1>
+
+<div>
+    <p>results:</p>
+     {{#each albumsInfo}}
+        <div>
+            <img src={{images.1.url}}>
+        </div>
+
+        <div>
+             <p>{{name}}</p>
+            <a href="/album-tracks/{{id}}">View Tracks</a>  
+        </div>
+    {{/each}}
+</div>
+
+<!-- Put this on a partial, do I don't DRY. It's the same code for showing the artist's. I just need to put the button outside of this partial, but inside the #each  -->
