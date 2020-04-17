@@ -1,0 +1,8 @@
+<!-- 'data' is short for 'data.body.artists.items' from res.render in app.js -->
+<!-- iterating with #each helper -->
+{{#each data}}
+<!-- {{name}} equals to data.body.artists.items.name => accessing the objects loaded from .searchArtists() -->
+<p>{{name}}</p>
+<!-- <img src={{images}}> ___ not working -->
+<a href={{href}}>View Albums</a>
+{{/each}}
