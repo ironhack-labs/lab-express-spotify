@@ -41,3 +41,13 @@ body {
   background-color: red;
   color: white;
 }
+
+/* .container {
+  display: flex;
+} */
+
+.album-images {
+  width: 200px;
+  display: flex;
+  flex-wrap: wrap;
+}

@@ -1,5 +1,18 @@
 {{!-- {{#each data.body.artists.items}}
 <p>{{this.name}}</p>
 {{/each}} --}}
+{{!-- <div> --}}
+{{!-- <img src={{artists}} alt=""> --}}
+{{!-- <p>{{name}}</p> --}}
+{{!-- </div> --}}
 
-<p>{{name}}</p>
+{{!-- const { url } = data.body.artists.items[0].images[0] --}}
+
+
+{{#each items}}
+<div class="container">
+  <img class="album-images" src={{images.1.url}} alt="">
+  <p>{{name}}</p>
+  <a href="/albums/{{id}}"><button>View Album</button></a>
+</div>
+{{/each}}
