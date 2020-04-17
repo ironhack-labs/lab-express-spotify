@@ -1,0 +1,13 @@
+<div class="mainBox">
+    {{#each items}}
+    <div class="albums">
+        <div>
+            <img class="albumsImages" src={{images.[0].url}} alt="">
+        </div>
+        <div class="cardBottom">
+            <p>{{name}}</p>
+            <a href="/tracks/{{id}}"><button>View Tracks</button></a>
+        </div>
+    </div>
+    {{/each}}
+</div>

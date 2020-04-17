@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.indexMainBox {
+    background-image: url("/images/spotify-background.jpeg");
+    height: 100vh;
+    width: 100vw;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBoxContainer {
+    background: rgba(255, 255, 255, 0.7);
+    height: 25vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.searchBox {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center
+}
+
+.inputBar {
+    height: 5vh;
+    width: 30vw;
+}
+
+.btn {
+    height: 5vh;
+    width: 10vw;
+    margin-top: 2vh;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+}
+
+.mainBox {
+    display: flex;
+    justify-content: space-evenly;
+    flex-direction: row;
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+}
+
+.artists {
+    height: 35vh;
+    width: 20vw;
+    padding: 5vh;
+    margin:2vh;
+}
+
+.artists img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.albums {
+    height: 35vh;
+    width: 20vw;
+    padding: 5vh;
+    margin:2vh;
+}
+
+.albums img {
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.cardBottom {
+    background-color: rgb(48, 48, 48);
+    color: white;
+    height: 7vh;
+}
+
+.nav {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    height: 10vh;
+    background-color: rgb(54, 54, 54);
+    justify-content: space-between;
+    align-items: center;
+    color: gray;
+    font-size: 24px;
+}
+
+.left {
+    padding-left: 2vh;
+}
+
+.right {
+    padding-right: 10vh;
+}
+
+.tracks {
+    height: 7vh;
+    background-color: gray;
+    width: 100%;
+    margin-bottom: 0.5vh;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}

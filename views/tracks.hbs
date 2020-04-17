@@ -1,0 +1,21 @@
+<div class="nav">
+    <div class="left">
+        <p>Title</p>
+    </div>
+    <div class="right">
+        <p>Listen</p>
+    </div>
+</div>
+<div class="mainTrackBox">
+    {{#each items}}
+    <div class="tracks">
+        <div class="right">
+                    <p>{{name}}</p>
+        </div>
+        <div class="left">
+        <audio controls src="{{preview_url}}">
+        </audio>
+        </div>
+    </div>
+    {{/each}}
+</div>
