@@ -1,6 +1,17 @@
-<form action="/artist-search", method="GET">
-  <label for="name">Search</label>
-  <input id="name" type="text" name="artistName">
+<div class="container">
 
-  <button type="submit">Search for an Artist</button>
-</form>
+    <div class="row text-center">
+        <h1 class="col display-1">SPOTIFY APP</h1>
+    </div>
+
+    <div class="container searchfield text-center">
+    
+        <form action="/artist-search" method="get"> 
+            <div class="form-group"></div>
+                <input type="text" name="artist" class="form-control" placeholder="Search for artist">
+            </div>
+     
+            <button type="submit" class="btn btn-primary">Search</button>
+        </form>
+    </div>
+</div>

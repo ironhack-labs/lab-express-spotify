@@ -31,22 +31,45 @@ app.get('/', (req, res) => {
     res.render('index')
 });
 
-app.get('/artist-search', (req, res) => {
+app.get("/artist-search", (req, res, next) => {
+  spotifyApi
+    .searchArtists(req.query.artist)
+    .then((data) => {
 
-    spotifyApi
-  .searchArtists(req.query.artistName)
-  .then(data => {
+      let searchTermArtist = { search: req.query.artist };
 
-    const artistName = data.body.artists.items;
-    //console.log('The received data from the API: ', data.body.artists.items.images);
-    res.render('artist-search', {artistName});
-    
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
-  
-})
+      res.render("artist-search-results", {
+        artistsArray: data.body.artists.items, searchTermArtist,
+      });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then((data) => {
+
+      let albumArtistChosen = {chose: data.body.items[0].artists[0].name}
+
+      res.render("albums", { albumsArray: data.body.items, albumArtistChosen });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists albums occurred: ", err)
+    );
+});
+
+app.get("/album-tracks/:albumId", (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId, { limit: 10, offset: 0 })
+    .then((data) => {
+
+      res.render("album-tracks", { tracksArray: data.body.items });
+    })
+    .catch((err) => console.log("Something went wrong!", err));
+});
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

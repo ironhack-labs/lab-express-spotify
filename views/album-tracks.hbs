@@ -1,0 +1,21 @@
+<h1 class="display-tracks">album tracks</h1>
+<hr>
+
+<table class="table table-striped table-dark text-center">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">Track Name</th>
+            <th scope="col">Audio</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracksArray}}
+        <tr>
+            <th scope="row">{{@index}}</th>
+            <td>{{this.name}}</td>
+            <td><audio controls src="{{this.preview_url}}">{{this.name}}</audio></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
