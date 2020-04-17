@@ -51,14 +51,20 @@ app.get("/albums/:id", (req,res) => {
     }
   );
 })
-//  app.get("/albums/tracks/:id", (req,res) => {
-//   spotifyApi.getArtistAlbums(req.param.id).then(
-//     function(data) {
-//       console.log('Artist albums', data.body);
-//     },
-//     function(err) {
-//       console.error(err);
-//     }
-//   );
-// })
+ app.get("/tracks/:id", (req,res) => {
+   const esteId = req.params.id
+   console.log("id ingresado" + esteId)
+  spotifyApi.getAlbumTracks(req.params.id).then(
+    function(data) {
+      const allTracks = data.body.items.map(function(a) {
+        console.log(a)
+        return a
+      })
+      res.render("tracks",{ tracks : allTracks})
+     },
+    function(err) {
+      console.error(err);
+    }
+  );
+})
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
