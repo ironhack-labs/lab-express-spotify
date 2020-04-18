@@ -46,7 +46,7 @@ app.get("/artist-search", (req, res) => {
             console.log('The received data from the API: ', data.body.artists.items);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
             res.render("artist-search-results", 
-                {searchResults});
+                {searchResults, artistFromForm});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
@@ -54,7 +54,7 @@ app.get("/artist-search", (req, res) => {
 });
 
 
-app.get("/album-results/:artistId", (req, res, next) => {
+app.get("/album-results/:artistId", (req, res) => {
     let artistId = req.params.artistId;
     let album;
     console.log(`logging params`, req.params);
