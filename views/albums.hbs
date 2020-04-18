@@ -1,0 +1,8 @@
+<h1>Albums</h1>
+{{#each items}}
+      {{#each images}}
+            {{#if @first}}
+                <img src="{{ url }}" width="200" alt="" />
+             {{/if}}
+        {{/each}}
+  {{/each}}

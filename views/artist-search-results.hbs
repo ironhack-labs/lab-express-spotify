@@ -1,0 +1,30 @@
+{{!-- In order to display the found artists' information, create artist-search-results.hbs file inside views folder 
+and display 
+name, image, 
+and button (or link) 
+to show the albums for a particular artist 
+on a new view (for now just create the button/link and we will take care of the rest in the next step).  --}}
+<h1>The search results are: </h1>
+{{!-- <h2>{{data.body.artists.items[0].name}}</h2> --}}
+<div>
+    {{#each artists}}
+    Name: {{ name }}
+
+        {{#each images}}
+            {{#if @first}}
+                <img src="{{ url }}" width="200" alt="" />
+             {{/if}}
+        {{/each}}
+
+    {{!-- <button type="button" >View albums</button> --}}
+    {{!-- <form action="https://google.com">
+    <input type="submit" value="" />
+    </form> --}}
+
+    <button onclick="window.location.href = '/albums/{{id}}';">View albums</button>
+
+    {{/each}}
+</div>
+
+     {{!-- <img src="{{ images }}" width="200" alt="" />    --}}
+   {{!-- <img src="{{ images[0].url}}" width="200" alt="" /> --}}

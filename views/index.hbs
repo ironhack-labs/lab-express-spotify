@@ -1,0 +1,20 @@
+
+<body>
+    <img src="images/spotify-background.jpeg" width="200" alt="">
+    <div>
+        <form action="/artist-search">
+        <label for="artname"></label><br>
+        <input type="text" id="artname" name="artname" placeholder="Radiohead">
+        <input type="submit" value="Submit">
+        </form> 
+    </div>
+</body>
+ 
+
+
+
+
+{{!-- if in the form I type: placebo
+and submit this form, 
+the browser will generate a new request to:
+http://localhost:3000/artist-search?artname=placebo --}}
