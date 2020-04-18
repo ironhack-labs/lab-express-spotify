@@ -1,0 +1,39 @@
+.index{
+    background-image: url("/images/spotify-background.jpeg");
+    height: 100vh;
+    background-position: bottom;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form{
+    background-color:rgba(255, 255, 255, 0.3);
+    width: 100vh;
+    height: 32vh;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+.form-control{
+    width: 60vh!important;
+}
+.artistSearch img{
+width: 40vh;
+height: 40vh;
+}
+.eachArtist {
+    width: 40vh;
+    color: antiquewhite;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+}
+.eachArtist h1{
+    font-size:1.5rem;
+    background-color: rgb(133, 109, 109);
+    width: 40vh;
+}
+.btn a{
+    color: white;
+}
