@@ -1,6 +1,4 @@
-
-
-{{#each searchResults }}
+{{#each album }}
 
 
 
@@ -8,9 +6,9 @@
     <img class="card-img-top" src={{images.0.url}} alt="" />
     <div class="card-body">
         <h5 class="card-title">Name: {{name}}</h5>
-        <p class="card-text">Genres: {{genres}}</p>
-        <a href="/album-results/{{id}}" class="btn btn-primary">See Albums</a>
-            
+        <p class="card-text">Released: {{release_date}}</p>
+        <a href="/track-list/{{id}}" class="btn btn-primary">See Tracks</a>
+
     </div>
 </div>
 
