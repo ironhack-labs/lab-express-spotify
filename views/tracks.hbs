@@ -1,0 +1,31 @@
+<div class="artist-container ">
+
+<div class="row track-head bg-dark text-white">
+<div class="col-2">   <h5 class="track-title">Track</h5> </div> 
+<div class="col-6">   <h5 class="track-title">Title</h5> </div> 
+<div class="col-4">   <h5 class="track-listen ">Listen</h5></div> 
+
+</div>
+
+{{#each  tracks.items}}
+
+<div class="media row">
+      <div class="media-body col-1">
+    <h6 class="media-title">{{this.track_number}}</h6>
+  </div>
+  <div class="media-body col-7">
+    <h6 class="media-title">{{this.name}}</h6>
+  </div>
+  <div class="media-control col-4">
+  <figure>
+            <audio controls src="{{this.preview_url}}">
+
+            </audio>
+        </figure>
+   </div>     
+</div>
+<hr class="white">
+
+    {{/each}}
+
+    </div>

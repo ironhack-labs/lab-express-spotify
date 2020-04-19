@@ -1,0 +1,23 @@
+<div class="card-columns artist-container ">
+ 
+ 
+ {{#each albums.items}}
+
+    <div class="card artist-card" >
+      <img src="{{this.images.[1].url}}" class="card-img-top" onerror="this.style.display='none'" alt="album: {{this.name}}">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <hr>
+        <p class="card-text text-info">Release Date:<span class="text-primary"> {{this.release_date}}</span></p>
+        <p class="card-text text-info">Tracks:<span class="text-primary"> {{this.total_tracks}}</span></p>
+     
+
+        <a class="btn btn-outline-success" href="/tracks?trackId={{this.id}}" role="button">View tracks</a>
+      </div>
+
+
+</div>
+  
+      {{/each}}
+
+</div> 

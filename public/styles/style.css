@@ -1,0 +1,100 @@
+body {
+  font-family: Roboto;
+  background-color: whitesmoke;
+}
+
+.spoty-container {
+  background: url("https://images.unsplash.com/photo-1543365067-fa127bcb2303?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1370&q=80")
+    no-repeat center center fixed;
+  background-size: contain;
+  margin-top: 1em;
+  padding-top: 1em;
+  padding-bottom: 1em;
+  text-align: center;
+  min-height: 90vh;
+}
+
+.spoty-input {
+  max-width: 650px;
+  margin: 30px auto;
+}
+
+.artist-container {
+  margin: 50px;
+}
+
+.artist-card {
+  text-align: center;
+}
+
+.track-head {
+  padding: 25px 30px;
+  margin-bottom: 30px;
+}
+
+.media {
+  padding: 0 10px;
+}
+
+.media-title {
+  font-weight: bold;
+  margin-top: 18px;
+  color: #5a5a5a;
+}
+
+.track-title {
+  margin-left: -25px;
+  text-transform: uppercase;
+}
+
+.track-listen {
+  margin-left: 1.5em;
+  text-transform: uppercase;
+}
+
+hr.white {
+  border-top: 2px solid white;
+  margin-top: 0;
+}
+
+/* // Extra small devices (portrait phones, less than 576px) */
+/* // No media query since this is the default in Bootstrap */
+
+/* // Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+  .card-columns .card {
+    display: inline-flex;
+    width: 100%;
+  }
+}
+
+/* // Medium devices (tablets, 768px and up) */
+@media (min-width: 768px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+/* // Large devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+/* // Extra large devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 4;
+  }
+}
+
+/* // Extra extra large devices (large desktops, 1400px and up) */
+@media (min-width: 1400px) {
+  .card-columns {
+    column-count: 5;
+  }
+}
