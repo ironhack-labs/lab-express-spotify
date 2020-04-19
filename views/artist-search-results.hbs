@@ -1,15 +1,20 @@
+    
 <div>
- {{#each artists}}
+    <div class ="artists row">
+        {{#each artists}}
 
-    <img src='{{this.images.[0].url}}'>
-    <h3>{{this.name}}</h3>
+            <div =class ="col-lg">
 
-    <div><a href="/artists/{{this.id}}">View Albums</a></div>
+            <img src='{{this.images.[0].url}}'>
+            <h3>{{this.name}}</h3>
+
+            <a href="/artists/{{this.id}}">View Albums</a>
+
+            </div>
 
 
+        {{/each}}
 
-
-        </div>
-{{/each}}
+    </div>
 
 </div>

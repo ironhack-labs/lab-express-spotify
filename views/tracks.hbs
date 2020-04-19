@@ -1,17 +1,25 @@
-<div>
+<div class = "tracks">
+
+    <table>
+
+    <tr class="tableHeader">
+        <th>Title</th>
+        <th>Listen</th>
+    </tr>
 
     {{#each tracks}}
+    <tr>
+       <th>{{this.name}}</th>
 
-
-    <h3>{{this.name}}</h3>
-
-    <audio controls>
-        <source src={{this.preview_url}} />
-    </audio>
-
-
+       <th><audio controls>
+            <source src={{this.preview_url}} />
+        </audio></th> 
+        
+    </tr>
     {{/each}}
 
+        
 
+    </table>
 
 </div>

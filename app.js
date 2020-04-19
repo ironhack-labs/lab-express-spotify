@@ -77,3 +77,5 @@ app.get('/tracks/:albumId', (req, res) => {
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+//server.close();

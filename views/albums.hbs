@@ -1,16 +1,18 @@
 <div>
-
+    <div class ="artists row">
     {{#each albums}}
 
-    <img src='{{this.images.[0].url}}'>
-    <h3>{{this.name}}</h3>
-    <div><a href="/tracks/{{this.id}}">View Tracks</a></div>
+    <div "col-lg">
 
+        <img src='{{this.images.[0].url}}'>
+        <h3>{{this.name}}</h3>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
 
     {{/each}}
 
 
-
+    </div>
 </div>
 
 

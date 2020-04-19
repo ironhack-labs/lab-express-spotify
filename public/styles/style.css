@@ -1,0 +1,118 @@
+body {
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+    font: 12px;
+    height: 100%;
+    position: relative;
+}
+
+.backgroundImg {
+    background-image: url('/images/spotify-background.jpeg');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100vh;
+    min-width: 100vh;
+    display: flex;
+    justify-content: center;
+	align-items: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, .5);
+    padding: 3rem 4rem
+}
+
+.myButton {
+    margin-top: 2rem;
+	box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background:linear-gradient(to bottom, #e4685d 5%, #eb675e 100%);
+	background-color:#e4685d;
+	border-radius:4px;
+	border: none;
+	display:inline-block;
+	cursor:pointer;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:15px;
+	padding:10px 15px;
+	text-decoration:none;
+	text-shadow:0px 1px 0px #b23e35;
+}
+.myButton:hover {
+	background:linear-gradient(to bottom, #eb675e 5%, #e4685d 100%);
+	background-color:#eb675e;
+}
+.myButton:active {
+	position:relative;
+	top:1px;
+}
+
+
+input {
+    text-align: center;
+    width: 40vw;
+    height: 2rem;
+}
+
+.artists > div {
+
+
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    align-content: stretch;
+    background-color: #363a40;
+    margin: 1rem; 
+}
+
+.artists > div > h3 {
+    font-size: 1.1rem;
+    max-width: 70%;
+    text-align: center;
+    color: white;
+    margin: 10px 0px;
+
+}
+
+.artists > div > img {
+    width: 15vw
+}
+
+.artists > div > a {
+    text-decoration: none;
+    cursor:pointer;
+    color: white;
+    box-shadow:inset 0px 39px 0px -24px #e67a73;
+	background:linear-gradient(to bottom, #e4685d 5%, #eb675e 100%);
+	background-color:#e4685d;
+	border-radius:4px;
+    border: none;
+    padding:8px 12px;
+    margin-bottom: 10px;
+}
+
+.tableHeader > th {
+    background-color: #363a40;
+    color: white;
+}
+
+.tracks > table {
+    width: 100%;
+    font-size: 20px;
+}
+
+.tracks > table th {
+    padding: 10px 10px 10px 10px;
+}
+
+
+
