@@ -1,0 +1,15 @@
+{{#if artist}}
+{{#each items}}
+<div class="albums">
+    <p>{{name}}</p>
+    <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+</div>
+{{else}}
+{{#each items}}
+<div class="albums">
+    <p>{{name}}</p>
+    <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+</div>
+{{/each}}
+
+{{/if}}
