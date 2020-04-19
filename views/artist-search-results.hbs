@@ -2,7 +2,8 @@
     {{#each data}}
     <div class="aartistcontainer">
 
-        <img src={{this.images.[0].url}} class="artistphoto">
+        <img src={{this.images.[0].url}} class="artistphoto"
+            onerror="this.src='https://image.shutterstock.com/z/stock-vector-no-image-available-vector-illustration-on-white-background-744886198.jpg';">
         <div class="greyBoxInArtists">
             <h4 class="h4artist">{{this.name}}</h4>
             <a href="albums/{{this.id}}" class="viewalbums">View albums</a>

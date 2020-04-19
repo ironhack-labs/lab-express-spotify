@@ -127,3 +127,8 @@ body > div > div > form > div > button {
   font-weight: bold;
   color: rgb(0, 215, 83);
 }
+
+body > div > div > div > img {
+  height: 100%;
+  width: 100%;
+}
