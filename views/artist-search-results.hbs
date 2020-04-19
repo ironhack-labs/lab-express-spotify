@@ -1,0 +1,12 @@
+<div class="allartistcontainer">
+    {{#each data}}
+    <div class="aartistcontainer">
+
+        <img src={{this.images.[0].url}} class="artistphoto">
+        <div class="greyBoxInArtists">
+            <h4 class="h4artist">{{this.name}}</h4>
+            <a href="albums/{{this.id}}" class="viewalbums">View albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

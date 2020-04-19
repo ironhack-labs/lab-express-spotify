@@ -1,0 +1,129 @@
+body {
+  margin: 0;
+}
+.bodyhome {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: 100% 100%;
+  height: 100vh;
+}
+.h1home {
+  color: white;
+  margin: auto;
+  text-shadow: 0.1em 0.1em 0.05em #333;
+}
+.homebox {
+  background-color: rgba(95, 185, 0, 0.4);
+  border-radius: 10px;
+
+  display: flex;
+
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 30%;
+  margin: 20% 0 0 30%;
+  box-shadow: -18px 15px 21px 6px rgba(0, 0, 0, 0.75);
+}
+.formhome {
+  display: flex;
+  flex-direction: column;
+  margin: 5%;
+}
+body > div > div > form > div > button {
+  margin: 5% 0;
+  border-radius: 10px;
+  background-color: rgb(95, 185, 0);
+  color: white;
+}
+
+.allartistcontainer {
+  display: flex;
+
+  flex-wrap: wrap;
+  /* justify-content: space-around; */
+  align-items: center;
+  align-content: flex-start;
+  /* align-content: center; */
+  margin-left: 5%;
+  /* margin-top: 100px; */
+}
+
+.artistphoto {
+  height: 100%;
+  width: 100%;
+}
+
+.aartistcontainer {
+  display: flex;
+  flex-direction: column;
+  max-width: 24%;
+  /* max-height: 1%; */
+  align-items: center;
+  margin: 0 3% 3% 3%;
+  text-align: center;
+}
+
+.greyBoxInArtists {
+  background-color: grey;
+  width: 100%;
+  color: white;
+  padding-bottom: 10px;
+}
+
+.viewalbums {
+  text-decoration: none;
+  /* padding-bottom: 2%; */
+  background-color: tomato;
+  /* background-size: 120%; */
+  /* width: 100%; */
+  padding: 1.5%;
+  border-radius: 7px;
+  color: white;
+}
+.h4artist {
+  margin: 5%;
+}
+
+.songcontainer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: green;
+  width: 70%;
+  margin: auto;
+  margin-top: 1%;
+  padding: 1%;
+  font-size: 120%;
+  color: white;
+  border-radius: 50px;
+  box-shadow: -10px 3px 10px 1px rgba(0, 0, 0, 0.4);
+}
+
+.center {
+  text-align: center;
+}
+
+.navbar {
+  /* position: fixed; */
+  background-color: rgb(35, 35, 35);
+  margin: 0 0% 10px 0%;
+  width: 100%;
+  padding: 1%;
+  padding-left: 5%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: center;
+}
+.pnav {
+  margin: 0 -3% 0 7%;
+  text-decoration: none;
+  color: white;
+}
+#dionisfy {
+  font-weight: bold;
+  color: rgb(0, 215, 83);
+}
