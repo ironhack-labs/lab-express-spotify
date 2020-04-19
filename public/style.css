@@ -29,11 +29,25 @@ height: 40vh;
     font-family: Arial, Helvetica, sans-serif;
     font-weight: bold;
 }
-.eachArtist h1{
-    font-size:1.5rem;
+.info{
+    font-size:0.5rem;
     background-color: rgb(133, 109, 109);
     width: 40vh;
+    padding: 1rem;
+}
+.info h1{
+    font-size: 1rem;
 }
 .btn a{
     color: white;
+}
+.header{
+    background-color: #EB1A15;
+    color: #FFD082;
+    height: 17vh;
+}
+.eachTrack{
+    background-color: #76C8E8;
+    color: #EB1A15;
+    font-weight: bold;
 }
