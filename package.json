@@ -1,7 +1,7 @@
 {
   "name": "starter-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
@@ -17,6 +17,15 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "hbs": "^4.1.1",
+    "path": "^0.12.7",
     "spotify-web-api-node": "^4.0.0"
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/andreElCoder/lab-express-spotify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/andreElCoder/lab-express-spotify/issues"
+  },
+  "homepage": "https://github.com/andreElCoder/lab-express-spotify#readme"
 }
