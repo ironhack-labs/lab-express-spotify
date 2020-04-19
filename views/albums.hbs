@@ -1,0 +1,12 @@
+<div class="album-card">
+  {{!-- <a href="/{{this.title}}"><img src="{{this.poster}}" alt="poster for {{this.title}}"></a> --}}
+  <div class="album-details">
+    {{#each this.artistAlbums}} 
+    {{!-- "artistAlbums" has to match / defined by 'res.render' 2nd parameter. --}}
+    <p>Name: {{this.name}}</p>
+    <img src="{{this.images.[0].url}}" >
+    <button><a href="/albums/{{this.id}}/tracks">View Tracks</a></button> 
+    {{!-- this.id will become a url parameter --}}
+    {{/each}}
+  </div>
+</div>
