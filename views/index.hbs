@@ -1,18 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Spotify</title>
-</head>
-
-<body>
-    <form action="/artist-search" method="get">
-        <label for="artistInput">🔍</label>
-        <input type="text" name="artist" id="artistInput">
-        <button type="submit">Search for an Artist</button>
-    </form>
-</body>
-
-</html>
+<style>
+    body {
+        height: 100vh;
+        background-image: url("./images/spotify-background.jpeg");
+        background-size: cover;
+        display: grid;
+        place-items: center;
+    }
+</style>
+<form action="/artist-search" method="get">
+    <input aria-label="Artist's name" type="text" name="artist" id="artistInput" placeholder="The Beatles">
+    <button type="submit">Search for an Artist</button>
+</form>

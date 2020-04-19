@@ -1,5 +1,10 @@
 <h1>{{albums.0.artists.0.name}}</h1>
-{{#each albums}}
-<img src="{{this.images.[0].url}}" alt="">
-
-{{/each}}
+<section class="albums">
+    {{#each albums}}
+    <article class="album">
+        <h2>{{this.name}}</h2>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+        <img src="{{this.images.[0].url}}" alt="" height="450" />
+    </article>
+    {{/each}}
+</section>
