@@ -1,5 +1,12 @@
 body {
+  margin: 0;
+  padding: 0;
+  background-color: white;
+}
+
+#start {
   height: 100vh;
+  width: 100vw;
   background-image: url("/images/spotify-background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -15,4 +22,74 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30vw;
+}
+
+.container form input {
+  width: 70%;
+  margin: 0.5em;
+}
+
+.container form button {
+  width: 40%;
+}
+
+#content-wrapper {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+}
+
+#artists-overview,
+#albums-overview {
+  width: 80vw;
+  margin-top: 5em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.artist-card,
+.album-card {
+  margin: 2em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artist-card img,
+.album-card img {
+  width: 20vw;
+}
+
+#tracks-wrapper {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+}
+
+.top {
+  background-color: gray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5em;
+  color: lightgray;
+  padding-left: 3em;
+  padding-right: 8em;
+}
+
+.track {
+  background-color: lightgray;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0.2em;
+  padding-left: 1em;
 }

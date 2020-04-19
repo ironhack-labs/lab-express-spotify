@@ -1,0 +1,17 @@
+<div id="content-wrapper">
+    <div id="tracks-wrapper">
+        <div class="top">
+            <p>Title</p>
+            <p>Listen</p>
+        </div>
+        {{#each  tracks }}
+        <div class="track">
+            <p>{{name}}</p>
+            <figure>
+                <audio controls src="{{preview_url}}">
+                </audio>
+            </figure>
+        </div>
+        {{/each}}
+    </div>
+</div>

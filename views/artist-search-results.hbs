@@ -1,8 +1,19 @@
-<!-- 'data' is short for 'data.body.artists.items' from res.render in app.js -->
-<!-- iterating with #each helper -->
-{{#each data}}
-<!-- {{name}} equals to data.body.artists.items.name => accessing the objects loaded from .searchArtists() -->
-<p>{{name}}</p>
-<!-- <img src={{images}}> ___ not working -->
-<a href={{href}}>View Albums</a>
-{{/each}}
+<div id="content-wrapper">
+    <div id="artists-overview">
+        {{#each artists}}
+        <div class="artist-card">
+            <p>{{name}}</p>
+            <img src="{{images.[0].url}}" alt="artist-img">
+            <a href="/albums?id={{id}}">View Albums</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<!-- explanations:
+    a) 'artists' is short for 'data.body.artists.items' from res.render in app.js
+    b) iterating with #each helper
+    c) {{name}} equals to data.body.artists.items.name => accessing the objects loaded from .searchArtists()
+    d) same in c) for images (= object with n-items and respective url) and href
+    e) '?id=' has to be used instead of /albums/{{id}}, otherwise there is a syntax error
+    -->
