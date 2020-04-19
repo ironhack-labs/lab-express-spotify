@@ -1,0 +1,22 @@
+
+<h2 class="mt-4"><small class="text-muted">Albums de </small>{{artistName}}</h2>
+<a onclick="history.back(-1)" class="return">Voltar aos artistas</a>
+<hr>
+
+<section class="album-wrap d-flex p-2 flex-row flex-wrap justify-content-center align-items-center">
+    {{#each albums}}
+    <div class="album-card card" style="width: 18rem;">
+        {{#if images}}
+            <img class="album-image card-img-top" src="{{images.0.url}}" alt="Card image">
+        {{else}}
+            <div class="plchd"></div>
+        {{/if}}
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/tracks/{{id}}" class="card-link">View tracks</a>
+        </div>
+    </div>
+
+    {{/each}}
+</section>
+

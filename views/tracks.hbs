@@ -1,0 +1,12 @@
+
+<h2>Album tracks</h2>
+<a onclick="history.back(-1)" class="return">Voltar ao album</a>
+<hr>
+
+{{#each tracks}}
+    <div class="track-card">
+        <h6>{{name}}</h6>
+        <audio src="{{preview_url}}" controls ></audio>
+    </div>
+{{/each}}
+

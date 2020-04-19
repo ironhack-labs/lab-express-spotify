@@ -1,0 +1,39 @@
+body, html {
+    font-size: 14px;
+    margin:0;
+    padding:0;
+    font-family: sans-serif;
+    text-align:center;
+    padding-top: 2rem;
+
+}
+.home {
+    background: #222 url(../images/spotify-background.jpeg) no-repeat;
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-size: cover;
+    color: white;
+    background-blend-mode: overlay;
+}
+h2, h1 {
+    display: inline-block;
+    clear: both;
+}
+img {
+    max-height: 220px;
+}
+.plchd {
+    min-height: 220px;
+    background: #6c757c;
+}
+a.return {
+    left: 0;
+    position: relative;
+    top: -3px;
+    margin: 0 20px;
+    color: #222;
+    text-decoration: underline;
+}

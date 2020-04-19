@@ -1,0 +1,22 @@
+
+<h2 class="mt-4"><small class="text-muted">Artist Search:</small>{{artistName}}</h2>
+<a href="/" class="return">Voltar à Home</a>
+<hr>
+
+<section class="artist-wrap d-flex p-2 flex-row flex-wrap justify-content-center align-items-center">
+    {{#each result}}
+            <div class="artist-card card" style="width: 18rem;">
+                {{#if images}}
+                    <img class="artist-image card-img-top" src="{{this.images.0.url}}" alt="Card image">
+                {{else}}
+                    <div class="plchd"></div>
+                {{/if}}
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <a href="/albums/{{id}}" class="card-link">View Albums</a>
+                </div>
+            </div>
+    {{/each}}
+</section>
+
+

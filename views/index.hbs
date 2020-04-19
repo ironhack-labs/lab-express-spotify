@@ -1,0 +1,14 @@
+<section class="home d-flex p-2 flex-column justify-content-center align-items-center">
+    <h1>Homepage Search</h1>
+
+    {{!-- Create a form to search artists on the homepage --}}
+
+    <form action="/artist-search" method="GET">
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" placeholder="Search for your artist" aria-label="Search for your artist" aria-describedby="basic-addon2" name="artist">
+            <div class="input-group-append">
+                <button class="btn btn-outline-secondary" type="submit">Search for an artist</button>
+            </div>
+        </div>
+    </form>
+</section>
