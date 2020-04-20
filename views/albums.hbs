@@ -1,10 +1,15 @@
-<h2>Albums from this artist</h2>
+{{> navbar}}
 
+<div class="grid-container">
 {{#each albums}}
+<div class="artist-container">
   <img src="{{this.images.[0].url}}" alt="{{this.name}}'s cover">
-  <h3>{{this.name}}</h3>
-  <p>Release date: {{this.release_date}}</p>
+  <div class="desc">
+  <h3 class="title is-5">{{this.name}}</h3>
+  <p>{{this.release_date}}</p>
   <p>{{this.total_tracks}} tracks</p>
   <a href="/albums/tracks/{{this.id}}">View tracks</a>
+  </div>
+</div>
 {{/each}}
-
+</div>

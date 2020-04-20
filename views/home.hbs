@@ -1,6 +1,11 @@
+
 <section class="main-container">
-  <form action="/artist-search" method="get">
-    <input type="text" name="searchArtist">
-    <button>Search</button>
-  </form>
+{{> navbar}}
+  <div class="box search">
+    <form class="is-flex" action="/artist-search" method="get">
+      <input class="input is-primary" type="text" name="searchArtist">
+      <button class="search button is-primary ">Search</button>
+    </form>
+  </div>
 </section>
+

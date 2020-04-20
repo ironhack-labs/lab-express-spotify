@@ -1,0 +1,67 @@
+body {
+  box-sizing: border-box;
+}
+
+a:visited {
+  color: inherit;
+}
+
+.button.is-primary.is-small {
+  margin: 25px;
+}
+
+.main-container {
+  height: 100vh;
+  background-image: url(../images/spotify-background.jpeg);
+  background-size: cover;
+}
+
+.box.search {
+  width: 50%;
+  margin: 200px auto;
+}
+
+.is-flex {
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.search {
+  margin-left: 25px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.artist-container img {
+  height: 100%;
+  margin-right: 50px;
+  border-radius: 10px;
+}
+
+.artist-container {
+  height: 150px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.tracks-container {
+  height: 150px;
+  border: solid 1px lightgray;
+  border-radius: 10px;
+  margin: 30px;
+  padding: 10px;
+  display: flex;
+  justify-content: space-evenly;
+  flex-direction: column;
+}
+
+.tracks {
+  max-width: 650px;
+}

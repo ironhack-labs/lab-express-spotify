@@ -11,6 +11,10 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.locals.title = 'Spotify Index';
 
+// Partials
+const path = require('path');
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+
 // API setup
 const SpotifyWebApi = require('spotify-web-api-node');
 const spotifyApi = new SpotifyWebApi({
@@ -35,14 +39,13 @@ app.get('/artist-search', (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.searchArtist)
     .then((data) => {
-      console.log(data.body.artists);
       res.render('artist-search-results.hbs', {
         artists: data.body.artists.items,
       });
     })
     .catch((err) => {
       console.log(err);
-      res.redirect('home.hbs');
+      res.redirect('/');
     });
 });
 
@@ -50,14 +53,13 @@ app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then((data) => {
-      console.log(data.body.items);
       res.render('albums.hbs', {
         albums: data.body.items,
       });
     })
     .catch((err) => {
       console.log(err);
-      res.redirect('home.hbs');
+      res.redirect('/');
     });
 });
 

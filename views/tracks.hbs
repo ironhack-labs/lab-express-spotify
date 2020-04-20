@@ -1,6 +1,19 @@
-<h2>Tracks from this album</h2>
+{{> navbar}}
+
+<div class="tracks">
 
 {{#each tracks}}
+<div class="tracks-container">
 <h4>{{this.name}}</h4>
 <audio controls src={{this.preview_url}}></audio>
+</div>
 {{/each}}
+</div>
+
+  {{!-- <img src="{{this.images.[0].url}}" alt="{{this.name}}'s cover">
+  <div class="desc">
+  <h3 class="title is-5">{{this.name}}</h3>
+  <p>{{this.release_date}}</p>
+  <p>{{this.total_tracks}} tracks</p>
+  <a href="/albums/tracks/{{this.id}}">View tracks</a>
+  </div> --}}

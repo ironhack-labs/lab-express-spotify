@@ -1,8 +1,13 @@
-<h2>Search result:</h2>
-<div class="artist-container">
+{{> navbar}}
+
+<div class="grid-container">
 {{#each artists}}
+<div class="artist-container">
   <img src="{{this.images.[0].url}}" alt="{{this.name}}'s main picture">
-  <h3>{{this.name}}</h3>
+  <div class="desc">
+  <h3 class='title is-4'>{{this.name}}</h3>
   <a href="/albums/{{this.id}}">View Albums</a>
+  </div>
+</div>
 {{/each}}
 </div>
