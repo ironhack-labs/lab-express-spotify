@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+
+<body style="background-image: url('/images/spotify-background.jpeg');background-size: cover">
+    <div>
+        <form action="/artist-search" method="GET">
+            <label for="artist">Search for an artist!</label>
+            <input type="text" name="artist">
+            <!--name chosen here has to match the searchArtists() api method (i.e..searchArtists(req.query.artist)-->
+            <button type="submit">Search artist</button>
+        </form>
+
+    </div>
+</body>
+
+</html>

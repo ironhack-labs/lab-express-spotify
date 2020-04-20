@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+</head>
+
+<body>
+
+
+    <div class="albums-container">
+        {{#each items }}
+        <h1>{{name}}</h1>
+        <div>{{cover}}</div>
+        <img src="albumimgagehere.img" alt="album image">
+        <button type="submit">View tracks</button>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>

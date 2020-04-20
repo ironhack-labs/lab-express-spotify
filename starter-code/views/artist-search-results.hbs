@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+</head>
+
+<body>
+
+    <div class="artist-container">
+        <!--Object structure: data.body => artists (an object) => items (an array of all the individual artist objects)-->
+        {{#each artist}}
+        <!--artist here refers to the key I assigned to the object in res.render line 46 of app.js file-->
+        <img src="{{images.[0].url}}" alt="artist image">
+        <div>
+            <h2>{{name}}</h2>
+
+
+            <button type="submit"><a href="/albums/{{id}}">View albums</a></button>
+            </form>
+        </div>
+        {{/each}}
+    </div>
+
+</body>
+
+</html>
