@@ -1,0 +1,16 @@
+<h1>{{albumsQuery.[0].artists.[0].name}}'s ALBUMS</h1>
+<div class="albums-container row row-cols-1 row-cols-md-3">
+    {{#each albumsQuery}}
+    <div class="col mb-4">
+        <div class="card h-100">
+            <img src=" {{images.[0].url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+            </div>
+            <div class="card-footer">
+                <a class="text-muted" href="/tracks/{{id}}">View Tracks</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

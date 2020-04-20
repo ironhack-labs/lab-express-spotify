@@ -1,0 +1,36 @@
+* {
+    font-family: 'Lobster', cursive;
+}
+
+.home-container h1 {
+    font-size: 90px;
+}
+
+.home-container {
+    background-image: url(/images/spotify-background2.jpg);
+    background-size: cover;
+    height: 100vh;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #cf000f;
+
+}
+
+.artist-search-container {
+    padding: 5rem;
+}
+
+.albums-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 5rem;
+}
+
+h1 {
+    text-align: center;
+}

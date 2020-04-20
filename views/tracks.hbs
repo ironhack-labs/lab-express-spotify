@@ -1,0 +1,17 @@
+<h1>{{tracksQuery.[0].name}}</h1>
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracksQuery}}
+        <tr>
+            <td>{{name}} </td>
+            <td><audio controls src="{{preview_url}}"></audio></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
