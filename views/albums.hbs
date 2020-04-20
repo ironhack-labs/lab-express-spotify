@@ -1,0 +1,7 @@
+{{#each albums}}
+<article>
+    <h2>{{this.name}}</h2>
+    <img src="{{#pickPicture this.images 2}}{{/pickPicture}}" alt="{{this.name}}">
+    <a href="/album/{{this.id}}">View album</a>
+</article>
+{{/each}}
