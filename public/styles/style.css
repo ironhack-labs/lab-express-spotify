@@ -1,0 +1,28 @@
+.container {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.formcontainer {
+  height: 13em;
+  width: 42em;
+  background-color: rgba(255, 255, 255, 0.459);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.button {
+  background-color: #ff6666;
+  height: 2rem;
+  width: 10rem;
+  color: white;
+  font-size: 1rem;
+  border-style: solid;
+  border-color: #ff6666;
+  border-width: 0.05rem;
+}
