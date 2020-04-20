@@ -1,0 +1,38 @@
+section{
+    padding: 40px;
+}
+
+.barre {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    background-color: grey;
+    width: 70vw;
+    line-height: 10vh;
+    height: 10vh;
+    margin-left: 12vw;
+}
+.song{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    row-gap: 4vh;
+    column-gap: 15vw;
+    text-align: left;
+    background-color: ivory;
+    width: 70vw;
+    padding: 2vh 0;
+    margin-left: 12vw;
+}
+
+h2 {
+    color: white;
+    text-align: center;
+    font-size: 2em;
+    margin-bottom: 4vh;
+}
+p{
+    margin-left: 7vw;
+    margin-top: 3vh:
+}
+audio{
+   margin-left: 2vw;
+}

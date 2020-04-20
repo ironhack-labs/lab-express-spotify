@@ -1,0 +1,15 @@
+<section>
+<h2>Here the tracks of your album:</h2>
+<div class="barre">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</div>
+<div class="song">
+{{#each tracks}}
+
+<p>{{this.name}}</p>
+<audio src="{{this.preview_url}}" controls></audio>
+
+{{/each}}
+</div>
+</section>
