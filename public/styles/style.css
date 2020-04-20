@@ -1,0 +1,153 @@
+html,
+body {
+  font-family: sans-serif;
+  margin: 0;
+}
+
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding-top: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: unset;
+}
+
+/* Home Button */
+
+.go-home {
+  color: turquoise;
+  display: block;
+  flex-basis: 100%;
+  padding-bottom: 20px;
+}
+
+.go-home:before {
+  content: "« ";
+}
+
+/* Home Page */
+
+.home-background {
+  height: 100vh;
+  width: 100vw;
+  background-image: url("https://source.unsplash.com/CMnNiQBkwBI");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.home form {
+  padding-top: 35vh;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.home button {
+  margin-top: 20px;
+  border: none;
+  background: lightskyblue;
+  font-family: unset;
+  font-size: 1em;
+  padding: 15px 40px;
+  border-radius: 5px;
+}
+.home input {
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  border: none;
+  background: none;
+  font-size: 1.5em;
+  padding: 4px;
+  border-bottom: 2px solid white;
+  color: white;
+}
+
+.home input::placeholder {
+  text-shadow: 0px 0px 4px rgba(0, 0, 0, 0.5);
+  color: lightgrey;
+}
+
+.home input:focus {
+  outline: none;
+}
+
+/* Results Pages */
+
+.results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.results .result {
+  flex-basis: 30%;
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+}
+
+.results .result .image {
+  width: 100%;
+  padding-bottom: 100%;
+  overflow: hidden;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.image img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.results .result a {
+  background: lightskyblue;
+  padding: 10px 20px;
+  border-radius: 5px;
+  color: white;
+}
+
+/* Tracks Page */
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-weight: bold;
+}
+
+td {
+  border: none;
+  height: 70px;
+  vertical-align: center;
+  color: white;
+}
+
+td:last-child {
+  text-align: center;
+  width: 50px;
+  border-top-right-radius: 50px;
+  border-bottom-right-radius: 50px;
+  padding-right: 10px;
+}
+
+td:first-child {
+  border-bottom-left-radius: 50px;
+  border-top-left-radius: 50px;
+  padding-left: 50px;
+}
+
+tr {
+  background: darkorchid;
+}
+
+tr:nth-child(even) {
+  background: white;
+  height: 10px;
+}

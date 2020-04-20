@@ -1,0 +1,21 @@
+<div class="container">
+  <a href="/" class="go-home">Home</a>
+  <h2>Tracks</h2>
+  <table>
+    {{!-- <tr>
+      <th>Title</th>
+      <th>Listen</th>
+    </tr> --}}
+    {{#each tracks}}
+    <tr>
+      <td>
+        {{this.name}}
+      </td>
+      <td>
+        {{#if this.preview_url}}<audio controls src="{{this.preview_url}}"></audio>{{/if}}
+      </td>
+    </tr>
+    <tr></tr>
+    {{/each}}
+  </table>
+</div>

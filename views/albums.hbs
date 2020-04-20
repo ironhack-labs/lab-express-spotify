@@ -1,0 +1,13 @@
+<div class="results container">
+  <a href="/" class="go-home">Home</a>
+  {{#each albums}}
+  <div class="result">
+    <div class="image" style="background-image: url({{this.images.[1].url}})">
+    </div>
+    <h3>
+      {{this.name}}
+    </h3>
+    <a href="/album/tracks/{{this.id}}">See Tracks</a>
+  </div>
+  {{/each}}
+</div>
