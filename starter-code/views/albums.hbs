@@ -11,10 +11,10 @@
 
 
     <div class="albums-container">
-        {{#each items }}
+        {{#each album }}
         <h1>{{name}}</h1>
         <div>{{cover}}</div>
-        <img src="albumimgagehere.img" alt="album image">
+        <img src={{images.1.url}} alt="album image">
         <button type="submit">View tracks</button>
         {{/each}}
     </div>

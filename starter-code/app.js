@@ -52,10 +52,13 @@ app.get("/artist-search", function (req, res) {
 
 app.get("/albums/:artistId", (req, res, next) => {
   // .getArtistAlbums() code goes here
+  console.log(req.params.artistId, "test");
   spotifyApi
     .getArtistAlbums(req.params.artistId)
-    .then(function (albums) {
-      res.render("albums", albums.body);
+    .then(function (data) {
+      console.log(data.body.items);
+      //res.send(data.body.items);
+      res.render("albums", { album: data.body.items });
     })
     .catch(
       (err) => console.log("The error occurred while loading albums: ", err) //I'm getting an error but the albums are loading. Don't get it.
