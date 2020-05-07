@@ -1,0 +1,32 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+  background-image: url('/public/images/spotify-background.jpeg');
+  background-size: cover;
+}
+
+.searchForm {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: center;
+
+  padding: 70px 250px;
+  background-color: grey;
+}
+
+.searchlabel {
+  font-size: 20px;
+  padding: 7px 100px;
+  margin-bottom: 20px;
+}

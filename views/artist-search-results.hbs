@@ -1,0 +1,8 @@
+<div>
+  {{#each searchArtist}}
+  <img src="{{ images.[0].url }}" width="100"/>
+  <p>{{ name }}</p>
+<a href="/albums/{{ id }}">View Albums</a>
+<hr>
+{{/each}}
+</div>
