@@ -1,0 +1,41 @@
+
+
+  .spotify-nav{
+    background-color: #12c261;
+    color: #bfbfbf;
+}
+
+body {
+  padding: 100px 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background: url(/images/spotify-background.jpeg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+
+.search-form {
+  margin-top: 40vh;
+  padding: 30px 40px;
+  background-color: rgb(255, 153, 0);
+  width: 20vw;
+}
+
+.card-body {
+  background-color: black;
+  color: white;
+}
+
+.title-tracks {
+  background-color: #12c261;
+  color: white;
+}
+
+.track-list {
+  background-color: black;
+  color: white;
+}
+
+

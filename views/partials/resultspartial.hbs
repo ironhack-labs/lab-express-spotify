@@ -1,0 +1,8 @@
+
+{{#with images}}
+<img class="card-img-top mx-auto d-block" src="{{[0].url}}" alt="{{name}}" />
+{{/with}}
+<div class="card-body">
+        <h5 class="card-title"><b>{{name}}</b></h5>
+       <a class="btn btn-success" href="/{{path}}/{{id}}">View {{item}}</a>
+</div>

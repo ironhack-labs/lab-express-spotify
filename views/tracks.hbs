@@ -1,0 +1,18 @@
+<div class="container title-tracks">
+    <div class="d-flex justify-content-between">
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </div>
+</div>
+
+<div class="container track-list">
+    {{#each data.body.items}}
+    <div class="row justify-content-between ">
+        <h7><b>{{name}}</b></h7>
+        <audio controls>
+            <source src="{{preview_url}}">
+        </audio>
+    </div>
+    {{/each}}
+
+</div>

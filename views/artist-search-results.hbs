@@ -1,0 +1,9 @@
+<div class="container ">
+    <div class="row">
+        {{#each data.body.artists.items}}
+        <div class="col-4">
+            {{> resultspartial path="albums" item="Albums"}}
+        </div>
+        {{/each}}
+    </div>
+</div>
