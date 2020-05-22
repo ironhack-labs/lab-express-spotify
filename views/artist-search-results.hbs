@@ -1,0 +1,16 @@
+<section class="results container" style="background-color: rgba(255, 255, 255, 0.6);">
+    <h2>Artist Search Results</h2>
+    <div class="row">
+        {{#each artistSearchDTO}}
+        <div class="col-3">
+            <div class="card">
+                <img class="card-img-top" src="{{this.image}}" alt="{{this.name}}">
+                <div class="card-body bg-secondary text-center">
+                    <h5 class="card-title text-white font-weight-bold">{{this.name}}</h5>
+                    <a name="" id="" class="btn btn-danger font-weight-bold" href="/albums/{{this.name}}/{{this.id}}" role="button">View Albums</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</section>
