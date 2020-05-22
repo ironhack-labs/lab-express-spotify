@@ -1,0 +1,11 @@
+<div class="row">
+    {{#each data.body.items}}
+        <div class="col-md-3">
+            {{this.name}}
+            {{#if this.images.[0].url}}
+            <img src="{{this.images.[1].url}}" alt="Album image">
+            {{/if}}
+            <a href="/view-tracks/{{this.id}}">View tracks</a>
+        </div>
+    {{/each}}
+</div>
