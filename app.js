@@ -43,12 +43,6 @@ app.get('/artist-search', (req, res, next) => {
 })
 
 
-app.get("/tracks/:id", (req, res, next) => {
-    req.params.id
-
-
-
-})
 
 
 app.get('/albums/:artistId', (req, res, next) => {
@@ -68,7 +62,21 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 });
 
+app.get("/tracks/:albumId", (req, res, next) => {
+    albumId = req.params.albumId
+    spotifyApi
+        .getAlbumTracks(albumId)
+        .then(data => res.render('tracks', {
+            tracks: data.body.items
+        }))
+        .catch(err => console.log('The error while searching tracks occurred: ', err))
+    console.log('data', req.params)
+
+})
 
 
 
-app.listen(3003, () => console.log('My Spotify project running on port 3003 🎧 🥁 🎸 🔊'));
+
+
+
+app.listen(3003, () => console.log('My Spotify project running on port 3003 gracias a Marce 🎧 🥁 🎸 🔊'));
