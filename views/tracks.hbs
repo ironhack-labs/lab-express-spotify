@@ -1,3 +1,22 @@
 <section class="results container" style="background-color: rgba(255, 255, 255, 0.6);">
+    <h2>Tracks of {{albumName}}</h2>
+    <h3>{{artistName}}</h2>
+    <div class="container title-tracks">
+        <div class="d-flex justify-content-between">
+            <h1>Title</h1>
+            <h1>Listen</h1>
+        </div>
+    </div>
 
+    <div class="container track-list">
+        {{#each tracks}}
+        <div class="row justify-content-between ">
+            <h7><b>{{this.name}}</b></h7>
+            <audio controls>
+                <source src="{{this.song}}">
+            </audio>
+        </div>
+        {{/each}}
+
+    </div>
 </section>

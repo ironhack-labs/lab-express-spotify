@@ -34,7 +34,7 @@ app.get('/artist-search', (req, res, next) => {
 				let artistDTO = {
 					id: artist.id,
 					name: artist.name,
-					image: 'http://localhost:3000/images/spotify-background.jpg',
+					image: 'http://localhost:3000/images/spotify-background.jpeg',
 				};
 				let image = artist.images.filter((img) => img.width === 300);
 				if (image.length > 0) {
@@ -67,7 +67,7 @@ app.get('/albums/:artistName/:artistId', (req, res, next) => {
 				let albumDTO = {
 					id: album.id,
 					name: album.name,
-					image: 'http://localhost:3000/images/spotify-background.jpg',
+					image: 'http://localhost:3000/images/spotify-background.jpeg',
 				};
 				let image = album.images.filter((img) => img.width === 300);
 				if (image.length > 0) {
@@ -94,27 +94,19 @@ app.get('/tracks/:artistName/:albumName/:albumId', (req, res, next) => {
 		tracks: [],
 	};
 	spotifyApi
-		.getArtistAlbums(req.params.artistId)
+		.getAlbumTracks(req.params.albumId)
 		.then((data) => {
-			//console.log('The received data from the API: ', data.body);
-			data.body.items.forEach((album) => {
-				let albumDTO = {
-					id: album.id,
-					name: album.name,
-					image: 'http://localhost:3000/images/spotify-background.jpg',
+			console.log('The received data from the API: ', data.body);
+			data.body.items.forEach((track) => {
+				let trackDTO = {
+					id: track.id,
+					name: track.name,
+					song: track.preview_url,
 				};
-				let image = album.images.filter((img) => img.width === 300);
-				if (image.length > 0) {
-					albumDTO.image = image[0].url;
-				} else {
-					image = artist.images.filter((img) => img.width === 64);
-					if (image.length > 0) {
-						albumDTO.image = image[0].url;
-					}
-				}
-				albumsDTO.albums.push(albumDTO);
+				console.log(track.external_urls);
+				tracksDTO.tracks.push(trackDTO);
 			});
-			res.render('tracks', albumsDTO);
+			res.render('tracks', tracksDTO);
 		})
 		.catch((err) =>
 			console.log('The error while searching artists occurred: ', err)
