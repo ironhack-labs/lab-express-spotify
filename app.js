@@ -26,6 +26,7 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
+
 // Our routes go here:
 // Main page route
 app.get("/", (req, res, next) => {
@@ -36,31 +37,38 @@ app.get("/", (req, res, next) => {
 app.get("/artist-search", (req, res, next) => {
     console.log(req.query)
     spotifyApi.searchArtists(req.query.artistName)
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
-    res.render('artist-search-results', {artists: data.body.artists.items})
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
+        .then(data => {
+            console.log('The received data from the API: ', data.body);
+            res.render('artist-search-results', {
+                artists: data.body.artists.items
+            })
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 //Albums page route
 app.get("/albums/:artistId", (req, res, next) => {
     console.log(req.params)
     spotifyApi.getArtistAlbums(req.params.artistId)
-   .then(data => {
-       res.render("albums", {albums: data.body})
-   })
-   .catch(err => console.log('The error while searching albums occurred: ', err));
+        .then(data => {
+            res.render("albums", {
+                albums: data.body
+            })
+        })
+        .catch(err => console.log('The error while searching albums occurred: ', err));
 })
 
 // Tracks page route
 app.get("/tracks/:artistId", (req, res, next) => {
     console.log(req.params)
     spotifyApi.getAlbumTracks(req.params.artistId)
-   .then(data => {
-       res.render("tracks", {tracks: data.body.items})
-   })
-   .catch(err => console.log('The error while searching tracks occurred: ', err))
+        .then(data => {
+            res.render("tracks", {
+                tracks: data.body.items
+            });
+            console.log(data.body.items)
+        })
+        .catch(err => console.log('The error while searching tracks occurred: ', err))
 })
 
 // Server listener
