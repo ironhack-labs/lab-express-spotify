@@ -32,7 +32,7 @@ app.get('/artist-search', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.artistName)
         .then(data => {
-            console.log('data from api: ', data.body.artists.items)
+            console.log('data from API: ', data.body.artists.items)
             res.render('artist-search-results', {
                 artists: data.body.artists.items
             })
@@ -43,13 +43,23 @@ app.get('/artist-search', (req, res, next) => {
 })
 
 
-app.get('/albums', (req, res, next) => {
+app.get("/tracks/:id", (req, res, next) => {
+    req.params.id
+
+
+
+})
+
+
+app.get('/albums/:artistId', (req, res, next) => {
+    artistId = req.params.artistId
+
     spotifyApi
-        .getArtistAlbums(req.query.albumName)
+        .getArtistAlbums(artistId)
         .then(data => {
-            console.log('data from api: ', data.body.albums.items)
+            console.log('data from API: ', data.body.items)
             res.render('albums', {
-                albums: data.body.albums.items
+                albums: data.body.items
             })
         })
         .catch(err => console.log('The error while searching albums occurred: ', err));
@@ -61,4 +71,4 @@ app.get('/albums', (req, res, next) => {
 
 
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(3003, () => console.log('My Spotify project running on port 3003 🎧 🥁 🎸 🔊'));
