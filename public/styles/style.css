@@ -1,0 +1,28 @@
+body {
+    background-image: url("https://topesdegama.com/app/uploads-topesdegama.com/2017/05/Logo-Spotify.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: white;
+    font-size: larger;
+}
+#buscador {
+    text-align: center;
+}
+#artist-search{ 
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+  
+}
+#artist-card {
+    border: 3px, solid, white ;
+}
+#album-search {
+    display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   align-items: center;
+}

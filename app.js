@@ -10,7 +10,7 @@ const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/'));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -36,14 +36,26 @@ spotifyApi
   })
   .catch(err => console.log('The error while searching artists occurred: ', err))})
 
-  app.get('/albums/:artistId', (req, res) => {
+  app.get("/albums/:artistId", (req, res) => {
     const id = req.params.artistId;
     spotifyApi.getArtistAlbums(id).then(
       function (data) {
-       res.render('albums', { album: data.body.items });
+       res.render("albums", { album: data.body.items });
       },
       function (err) {
         console.error(err);
+      }
+    );
+  });
+  app.get('/tracks/:albumId', (req, res, next) => {
+    const idA = req.params.albumId;
+  
+    spotifyApi.getAlbumTracks(idA, { limit: 5, offset: 1 }).then(
+      function (data) {
+        res.render('tracks', { track: data.body.items });
+      },
+      function (err) {
+        console.log('Something went wrong!', err);
       }
     );
   });

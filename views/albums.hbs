@@ -1,9 +1,11 @@
-<div>
+<div id="album-search">
   {{#each album}}
+    <div>
   <img src="{{ images.[0].url }}" width="100"/>
   <p>{{ name }}</p>
 
 <a href="/tracks/{{ id }}">View Tracks</a>
 <hr>
+</div>
 {{/each}}
 </div>
