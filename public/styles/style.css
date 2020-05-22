@@ -1,0 +1,13 @@
+body {
+	background-image: url('/images/spotify-background.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+.home {
+	height: 800px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	background: transparent;
+}
