@@ -41,7 +41,8 @@ app.get('/artist-search', (req, res) => {
                 if (data.body.artists.items[i].images.length > 0) {
                     artistSearched.lista.push({
                         name: data.body.artists.items[i].name,
-                        img: data.body.artists.items[i].images[0].url
+                        img: data.body.artists.items[i].images[0].url,
+                        id: data.body.artists.items[i].id
                     })
                 } else {
                     artistSearched.lista.push({
@@ -55,11 +56,35 @@ app.get('/artist-search', (req, res) => {
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
-
 })
 
+app.get('/albums/:id', (req, res) => {
+    spotifyApi.getArtistAlbums(req.params.id) //string digitada no campo Artista
+        .then(data => {
+            console.log('The albums received data from the API: ', JSON.stringify(data.body));
+            console.log(data.body.items[0].name);
+            const albumsArtist = {
+                disco: [],
+            };
 
 
+            for (let i = 0; i < data.body.items.length; i++) {
+                if (data.body.items[i].images.length > 0) {
+                    albumsArtist.disco.push({
+                        name: data.body.items[i].name,
+                        img: data.body.items[i].images[0].url,
+                    })
+                } else {
+                    albumsArtist.disco.push({
+                        name: data.body.items[i].name,
+                        img: "https://data.pixiz.com/output/user/frame/preview/api/big/5/0/4/8/1968405_67bf5.jpg"
+                    })
+                }
 
-
+            }
+            res.render('albums', albumsArtist) //parametros: para onde, o que se envia
+            // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
