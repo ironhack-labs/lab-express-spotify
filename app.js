@@ -24,7 +24,7 @@ spotifyApi
 // Our routes go here:
 app.get('/', (req, res) => {
     res.render("index", {
-        data: "ready"
+        data: "Busca tu artista favorito:"
     })
 })
 
