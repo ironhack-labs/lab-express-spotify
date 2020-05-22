@@ -1,0 +1,11 @@
+<main class="">
+    <h1>Albums</h1>
+    {{#each albums }}
+    {{> cardPartial}}
+    <a href="/tracks/{{this.id}}"><button class="btn btn-danger mb-2">View Tracks</button></a>
+    </div>
+
+    </div>
+    {{/each}}
+
+</main>
