@@ -14,10 +14,10 @@ app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
-    clientId: process.env.ff68f21888204789b564f02f4ed83ad1,
-    clientSecret: process.env.b43a857f31d444f9bc4da9f78cf2b631
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET
   });
-  
+
   // Retrieve an access token
   spotifyApi
     .clientCredentialsGrant()
@@ -25,5 +25,17 @@ const spotifyApi = new SpotifyWebApi({
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
+app.get("/", (req, res, next) => {
+    
+    res.render("index");
+});
 
+app.get("/artist-search", (req, res, next) => {
+    spotifyApi
+    .searchArtists(req.query.artist)
+    .then(data => {
+        console.log(data.body);
+      res.render("artist-search-results",{data: data}), err => console.error("An error occured : ", err)
+    });
+  });
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
