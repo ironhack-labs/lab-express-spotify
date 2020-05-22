@@ -2,7 +2,9 @@
     <ul style="list-style-type:none;">
         {{#each data.body.items}}
         <li>{{this.track_number}}. {{this.name}}</li>
+        {{#if this.preview_url}}
         <li><audio controls src="{{this.preview_url}}"></audio></li>
+        {{/if}}
         {{/each}}
     </ul>
 </div>
