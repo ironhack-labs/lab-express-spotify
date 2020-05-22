@@ -54,7 +54,14 @@ app.get("/albums/:artistId", (req, res, next) => {
 })
 
 // Tracks page route
-
+app.get("/tracks/:artistId", (req, res, next) => {
+    console.log(req.params)
+    spotifyApi.getAlbumTracks(req.params.artistId)
+   .then(data => {
+       res.render("tracks", {tracks: data.body.items})
+   })
+   .catch(err => console.log('The error while searching tracks occurred: ', err))
+})
 
 // Server listener
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
