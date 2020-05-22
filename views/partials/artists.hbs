@@ -1,0 +1,9 @@
+<div class="col-md-4">
+    {{#if images.[0].url}}
+        <img class="artist-img" src="{{images.[0].url}}" alt="Artist pic"/>
+    {{/if}}
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <p class="card-text"><a href="/albums/{{id}}">View Albums</a></p>
+  </div>
+</div>

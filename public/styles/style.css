@@ -1,0 +1,15 @@
+.card-container {
+  display: flex;
+  padding: 10% 20%;
+  justify-content: space-around;
+}
+
+.card-container img {
+  object-fit: cover;
+  object-position: center;
+  height: 100px;
+}
+
+body {
+    background-color: red;
+}
