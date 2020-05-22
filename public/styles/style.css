@@ -1,0 +1,25 @@
+#main {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#home {
+    width: 40%;
+    height: 30%;
+    background-color: rgba(255, 235, 205, 0.3);
+    padding: 40px 200px;
+}
+
+#home form {
+    padding-top: 20px;
+}
+
+#home input {
+    display: block;
+    margin: 10px auto;
+}
+
+.card-opacity {
+    background-color: rgba(245, 245, 245, 0.4);
+}
