@@ -1,8 +1,20 @@
 <h1>Tracks</h1>
 
-{{#each tracks}}
-
-    <h5>{{name}}</h5>
-    <audio src={{preview_url}} controls></audio>
-
-{{/each}}
+<div class="container">
+    <table class="table">
+    <thead>
+        <tr class="table-dark">
+            <th scope="col">Title</th>
+            <th scope="col">Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+            {{#each tracks}}
+                <tr class="table-secondary">
+                    <th scope="row">{{name}}</th>
+                    <td><audio src={{preview_url}} controls></audio></td>
+                </tr>
+            {{/each}}
+    </tbody>
+    </table>
+</div>
