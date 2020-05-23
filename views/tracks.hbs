@@ -12,7 +12,11 @@
             {{#each tracks}}
                 <tr class="table-secondary">
                     <th scope="row">{{name}}</th>
-                    <td><audio src={{preview_url}} controls></audio></td>
+                    {{#if preview_url}}
+                        <td><audio src={{preview_url}} controls></audio></td>
+                    {{else}}
+                        <td>Not available preview</td>
+                    {{/if}}
                 </tr>
             {{/each}}
     </tbody>
