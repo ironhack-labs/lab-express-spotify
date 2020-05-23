@@ -23,3 +23,8 @@
 .card-opacity {
     background-color: rgba(245, 245, 245, 0.4);
 }
+
+h1 {
+    color: blanchedalmond;
+    text-align: center;
+}

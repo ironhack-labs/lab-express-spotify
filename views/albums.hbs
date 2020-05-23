@@ -1,8 +1,21 @@
 <h1>Albums</h1>
 
-{{#each albums}}
+<div class="container">
 
-    <h5>{{name}}</h5>
-    <a href="/tracks/{{id}}" class="btn btn-primary">View Tracks</a>
+    <div class="row">
 
-{{/each}}
+        {{#each albums}}
+
+            <div class="card col-md-4 col-lg-3 text-center my-3 card-opacity" style="width: 18rem;">
+                <img class="card-img-top" src={{images.0.url}} alt="Card image cap">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <a href="/tracks/{{id}}" class="btn btn-danger">View Tracks</a>
+                </div>
+            </div>
+
+        {{/each}}
+
+    </div>
+
+</div>
