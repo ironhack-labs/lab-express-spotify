@@ -1,0 +1,14 @@
+<table class="table table-hover table-dark">
+    <thead>
+        <tr>
+            <th scope="col">Track Number</th>
+            <th scope="col">Title</th>
+            <th scope="col">Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+        {{> trackPartial}}
+        {{/each}}
+    </tbody>
+</table>
