@@ -3,3 +3,26 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
 }
+
+#album-cover {
+    width: 100%;
+    max-width: 250px;
+    max-height: 250px;
+    height: 100%;
+    border-radius: 10px;
+    
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card {
+    margin: 15px;
+    width: 100%;
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}

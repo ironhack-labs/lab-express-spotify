@@ -1,11 +1,19 @@
-{{#each data.body.artists.items}}
-    <div class="card">
-        <div class="cover">
-            <img src={{images.[1].url}}>
+<div class="container">
+    {{#each data.body.artists.items}}
+        <div class="card">
+            <div class="cover">
+                {{#unless images.length}}
+                <img id="album-cover" src="/images/no-img.jpg">    
+                {{else}}
+                <img id="album-cover" src={{images.[1].url}}>
+                {{/unless}}
+
+            </div>
+            <div class="album-info-group">
+                <section class="artist-name">{{name}}</section>
+                
+                <a href="/artist/{{album}}" class="btn red-btn" type="submit">View Album</a>
+            </div>
         </div>
-        <div class="album-info-group">
-            <section class="artist-name">{{name}}</section>
-            <a href="/artist/{{album}}" class="btn red-btn" type="submit">View Album</a>
-        </div>
-    </div>
-{{/each}}
+    {{/each}}
+</div>

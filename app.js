@@ -35,6 +35,7 @@ app.get("/artist-search", (req, res, next) => {
     .searchArtists(req.query.artist)
     .then(data => {
         console.log(data.body);
+
       res.render("artist-search-results",{data: data}), err => console.error("An error occured : ", err)
     });
   });
