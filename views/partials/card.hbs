@@ -1,0 +1,21 @@
+<div class="col-sm-3">
+    <div class="card text-left mt-5">
+        {{#if images.[0].url}}
+        <div class="cover" style="overflow: hidden; max-height: 240px;">
+            <img class="card-img-top" src="{{images.[0].url}}" alt="{{name}}">
+        </div>
+        {{/if}}
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            {{#ifEquals type 'artist'}}
+            <a href="/albums/{{id}}" title="Click to see albums" class="btn btn-m btn-danger">Click
+                to see
+                albums</a>
+            {{/ifEquals}}
+            {{#ifEquals type 'album'}}
+            <a href="/albums/{{id}}/tracks" title="Click to see tracks" class="btn btn-m btn-danger">Click to see
+                tracks</a>
+            {{/ifEquals}}
+        </div>
+    </div>
+</div>
