@@ -1,0 +1,11 @@
+<h1>Results</h1>
+
+<div class="row">
+    {{#each artists.items}}
+    <div class="col-md-3">
+        <img src="{{images.0.url}}" style="width: 100%;">
+        <p>{{name}}</p>
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
+</div>
