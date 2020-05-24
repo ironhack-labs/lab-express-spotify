@@ -1,0 +1,9 @@
+#index {
+  height: 100vh;
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
+.search-bar-container {
+  width: 50%;
+}

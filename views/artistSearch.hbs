@@ -1,11 +1,10 @@
-<main class=""></main>
-<h1>Artist search</h1>
-{{#each artist }}
-{{> cardPartial}}
-<a href="/albums/{{this.id}}"><button class="btn btn-danger mb-2">View Albums</button></a>
-</div>
+<main class="row d-flex m-0 mt-5">
+    {{#each artist }}
+    {{> cardPartial}}
+    <a href="/albums/{{this.id}}"><button class="btn btn-danger mb-2">View Albums</button>
+    </a>
+    </div>
+    </div>
+    {{/each}}
 
-</div>
-
-{{/each}}
 </main>

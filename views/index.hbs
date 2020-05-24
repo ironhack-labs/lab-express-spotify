@@ -1,6 +1,9 @@
-<main>
-    <form action="/artist-search">
-        <input type="text" name="artist">
-        <input type="submit" value="Search for an Artist">
-    </form>
+<main id="index" class="d-flex align-items-center justify-content-center">
+    <div class="search-bar-container p-5 ">
+        <form action="/artist-search" class="d-flex flex-column align-items-center">
+            <input type="text" name="artist" placeholder="What do you want to listen?" id="search-bar"
+                class="col-lg-8 form-control">
+            <input type="submit" value="Search for an Artist" class="col-lg-3 mt-3 btn btn-danger">
+        </form>
+    </div>
 </main>
