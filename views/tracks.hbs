@@ -1,14 +1,22 @@
-<h1>Tracks</h1>
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col" style="padding-left: 10vw">Title</th>
+            <th scope="col" class="text-right" style="padding-right: 10vw">Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each items}}
+        <tr>
+            <td style="padding-left: 10vw">{{name}}</td>
+            <td class="text-right" style="padding-right: 10vw">
+                <audio controls>
+                    <source src="{{preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </td>
+        </tr>
+        {{/each}}
 
-<div class="row">
-    {{#each items}}
-    <div class="col-md-3">
-        <p>{{name}}</p>
-        <audio controls>
-            <source src="{{preview_url}}" type="audio/mpeg">
-            Your browser does not support the audio element.
-        </audio>
-        <audio src="{{preview_url}}">Play</audio>
-    </div>
-    {{/each}}
-</div>
+    </tbody>
+</table>

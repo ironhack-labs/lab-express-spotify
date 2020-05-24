@@ -1,0 +1,15 @@
+.background {
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: cover;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.background form {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 500px;
+    padding: 50px;
+}

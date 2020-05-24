@@ -1,11 +1,16 @@
-<h1>Results</h1>
-
-<div class="row">
-    {{#each artists.items}}
-    <div class="col-md-3">
-        <img src="{{images.0.url}}" style="width: 100%;">
-        <p>{{name}}</p>
-        <a href="/albums/{{id}}">View Albums</a>
+<div class="container">
+    <h1 class="text-center mt-5 mb-4">Results</h1>
+    <div class="row">
+        {{#each artists.items}}
+        <div class="col-md-3">
+            <div class="card text-center text-white bg-dark mb-4">
+                <img class="card-img-top" src="{{images.0.url}}">
+                <div class="card-body">
+                    <h5 class="card-title mb-4">{{name}}</h5>
+                    <a href="/albums/{{id}}" class="btn btn-danger">View Albums</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
     </div>
-    {{/each}}
 </div>
