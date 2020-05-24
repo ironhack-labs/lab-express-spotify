@@ -1,0 +1,23 @@
+.bg-imagen{
+    background-image:url("../images/spotify-background.jpeg") ;
+    height: 100vh;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+.container{
+    height: 100%
+}
+     
+
+form{
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;   
+}
+
+#artist{
+    width: 90%;
+    padding: 10px;
+}
