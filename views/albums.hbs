@@ -1,0 +1,15 @@
+<h1>EL FAMOSO PARAM</h1>
+
+<div class="row">
+
+    {{#each data.body.items}}
+
+    <div class="card" style="width: 18rem;">
+        <img class="card-img-top" src="{{this.images.[0].url}}" alt="Card image cap">
+        <div class="card-body">
+            <h5 class="card-title"> {{this.name}}</h5>
+            <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
