@@ -1,0 +1,10 @@
+<div class="container">
+      {{#each data.body.items}}
+        <div class="track-row">
+            {{name}}
+            <audio controls>
+                <source src="{{preview_url}}" type="audio/mp3">
+            </audio>
+        </div>
+      {{/each}}
+</div>

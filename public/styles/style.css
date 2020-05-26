@@ -26,3 +26,15 @@ body {
     flex-direction: column;
     justify-content: space-between;
 }
+
+.track-row {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 15px;
+    color: white;
+    align-items: center;
+    font-size: 1.5em;
+    background-color: rgb(125, 49, 49, 0.5);
+    padding: 10px;
+}

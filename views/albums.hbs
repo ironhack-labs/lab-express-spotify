@@ -1,5 +1,5 @@
 <div class="container">
-    {{#each data.body.artists.items}}
+    {{#each data.body.items}}
         <div class="card">
             <div class="cover">
                 {{#unless images.length}}
@@ -7,13 +7,9 @@
                 {{else}}
                 <img id="album-cover" src={{images.[1].url}}>
                 {{/unless}}
-
             </div>
-            <div class="album-info-group">
-                <section class="artist-name">{{name}}</section>
-                
-                <a href="/albums/{{id}}" class="btn red-btn" type="submit">View Albums</a>
-            </div>
+            <a href="/view-tracks/{{id}}" class="btn red-btn" type="submit">View tracks</a>
         </div>
+       
     {{/each}}
 </div>

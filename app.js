@@ -39,4 +39,26 @@ app.get("/artist-search", (req, res, next) => {
       res.render("artist-search-results",{data: data}), err => console.error("An error occured : ", err)
     });
   });
+
+  app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then( data => {
+      res.render("albums",{data: data}), err => console.error("An error occured : ", err)
+    });   
+  });
+
+  app.get('/view-tracks/:albumId', (req, res, next) => {
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then( data => {
+      // res.send(data)
+      console.log(data.body)
+      res.render("tracks",{data: data}), err => console.error("An error occured : ", err)
+    });   
+  });
+
+
+
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
