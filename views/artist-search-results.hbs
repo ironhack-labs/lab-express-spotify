@@ -1,11 +1,19 @@
 <div class="row">
-    {{#each data.body.artists.items}}
-        <div class="col-md-3">
-            {{this.name}}
-            {{#if this.images.[0].url}}
-            <img src="{{this.images.[1].url}}" alt="Artist image">
-            {{/if}}
-            <a href="/albums/{{this.id}}">View Albums</a>
-        </div>
-    {{/each}}
+    <div class="card-columns m-5">
+        {{#each data.body.artists.items}}
+            <div class="card artists-cards m-2">
+                {{#if this.images.[0].url}}
+                    <img class="card-img-top artist-img" src="{{this.images.[1].url}}" alt="Artist image">
+                {{else}}
+                    <img class="card-img-top artist-img" src="./images/artist_no_img.png" alt="Artist image">
+                {{/if}}
+                <div class="card-body artists-cards-body text-white">
+                    <h4 class="card-title">{{this.name}}</h4>
+                    <p class="card-text d-flex justify-content-center">
+                        <button class="btn btn-danger"><a href="/albums/{{this.id}}" class="text-white">View Albums</a></button>
+                    </p>
+                </div>
+            </div>
+        {{/each}}
+    </div>
 </div>

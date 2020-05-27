@@ -1,0 +1,47 @@
+body {
+    height: 800px;
+    margin: 0;
+}
+
+.index-bg {
+    background-image: url("../images/spotify-background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%;
+}
+
+.form-cont {
+    height: 150px;
+    width: 500px;
+    background-color: rgba(255, 255, 255, .5);
+}
+
+.artists-cards {
+    max-width:300px;
+}
+
+.artist-img {
+    width:100%;
+    height: auto;
+}
+
+.artists-cards-body {
+    background-color: rgb(90, 90, 90);
+}
+
+.view-albums {
+    background-color: salmon;
+}
+
+.tracks-bar {
+    height: 75px;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.track-line {
+    background-color :rgb(241, 241, 241);
+    margin: 2px 0;
+    font-weight: 500;
+}

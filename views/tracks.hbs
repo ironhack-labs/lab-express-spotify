@@ -1,6 +1,10 @@
+<nav class="navbar navbar-expand-sm navbar-dark bg-dark text-white d-flex justify-content-between tracks-bar px-5">
+    <div>Title</div>
+    <div>Listen</div>
+</nav>
 <div class="row">
     {{#each data.body.items}}
-        <div class="col-md-3">
+        <div class="col-md-12 d-flex justify-content-between align-items-center px-5 track-line">
             {{this.name}}
             <audio controls>
                 <source src={{this.preview_url}} type="audio/mp3">
