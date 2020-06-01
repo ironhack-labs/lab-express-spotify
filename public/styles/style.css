@@ -45,6 +45,7 @@ body {
 }
 .track{
     display: flex;
+    background-color: white;
     flex-direction: row;
     justify-content: space-between;
 }
