@@ -87,10 +87,9 @@ app.get("/tracks/:albumId", (req, res, next) => {
           .then((data) => {
               const { items } = data.body;
                 console.log(items)
-                let newTracks = items.map((track) => {
-                  let song = track.preview_url;
-                  let name = track.name;
-                  return { song, name};
+              let newTracks = items.filter((track) => {
+                    // console.log(track.preview_url)
+                  return track.preview_url !== null;
                 });
                 res.render("tracks.hbs", { newTracks });
           })
