@@ -1,0 +1,8 @@
+<div>
+    {{#each newTracks}}
+        <h1>{{this.name}}</h1>
+        <audio controls>
+            <source src="{{this.song}}">
+        </audio>
+    {{/each}}
+</div>
