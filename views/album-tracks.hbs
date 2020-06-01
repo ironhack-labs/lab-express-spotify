@@ -1,0 +1,13 @@
+<ul class="list-group tracks">
+{{#each tracks}}
+  <li class="list-group-item">
+      <h3 class='track-title'>{{this.name}}</h3>
+      <audio
+        controls
+        src={{this.preview_url}}>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+  </li>
+{{/each}}
+</ul>
