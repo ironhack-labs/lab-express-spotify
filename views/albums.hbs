@@ -1,0 +1,17 @@
+<div id="container-flex">
+    {{#each albums}}
+        <div class="card mb-3">
+            {{#if this.image}}
+            <a href="/tracks/{{this.id}}">
+                <img class="card-img-top" src="{{this.image.url}}" alt="Card image cap">
+                </a>
+            {{/if}}
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">
+                <a class="btn btn-primary" href="/tracks/{{this.id}}">View tracks</a>
+            </p>
+        </div>
+        </div>
+    {{/each}}
+</div>
