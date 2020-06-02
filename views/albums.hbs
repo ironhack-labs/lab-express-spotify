@@ -1,0 +1,12 @@
+<div id="album">
+    {{#each items}}
+    <div class="album">
+        <div>{{this.name}}</div>
+        <div>
+            {{#if this.preview_url}}
+            {{else}}
+            {{/if}}
+        </div>
+    </div>
+    {{/each}}
+</div>

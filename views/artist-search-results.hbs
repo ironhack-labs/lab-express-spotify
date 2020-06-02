@@ -1,0 +1,7 @@
+{{#each itemsWithImages}}
+<p>{{this.name}}'s Images</p>
+{{#each this.images}}
+<img src={{this.url}}>
+{{/each}}
+<a target="_blank" href={{this.external_urls.spotify}}><button>View Albums</button></a>
+{{/each}}
