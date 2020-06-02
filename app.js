@@ -23,12 +23,10 @@ app.get("/", (req, res) => {
 });
 
 app.use("/artist-search", searchRoute);
-
 app.use("/albums/", albumsRoute);
-
 app.use("/tracks/", tracksRoute);
 
-//SERVER LISTENER
+//SERVER
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
