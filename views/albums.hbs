@@ -1,0 +1,17 @@
+<h1>Albums for: {{name}}</h1>
+
+<div class="container">
+    {{#each data.body.items}}
+        <div class="card">
+            <div class="cover">
+                {{#unless images.length}}
+                <img id="album-cover" src="/images/no-img.jpg">    
+                {{else}}
+                <img id="album-cover" src={{images.[1].url}}>
+                {{/unless}}
+            </div>
+            <a href="/view-tracks/{{id}}" class="btn red-btn" type="submit">View tracks</a>
+        </div>
+       
+    {{/each}}
+</div>
