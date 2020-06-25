@@ -1,8 +1,10 @@
 <div class="list">
+
     {{#each artist}}
         <div class="card">
             {{> cards}}
             <a href="/albums/{{this.id}}">Albums</a>
         </div>
     {{/each}}
+    
 </div>
