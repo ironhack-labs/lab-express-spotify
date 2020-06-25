@@ -43,8 +43,7 @@ app.get('/artist-search', (req, res) => {
             const artistResult = data.body.artists.items
 
             const artistResultImg = data.body.artists.items.images
-            console.log(artistResultImg)
-
+            // console.log(artistResultImg)
             console.log('The received data from the API: ', artistResult)
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
             res.render('artist-search-results', { artistResult })
