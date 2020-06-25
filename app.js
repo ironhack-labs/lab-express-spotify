@@ -46,10 +46,35 @@ app.get('/artist-search',(req, res) => {
 
 })
 
-app.get('/albums/:artistId', (req, res, next) => {
-    // .getArtistAlbums() code goes here
-  });
+app.get('/albums/:id', (req, res) => {
+  const id = req.params.id
+  spotifyApi.getArtistAlbums(id).then(
+    (data) => {
+      console.log('Artist albums', data.body.items[0].images)
+      res.render('albums', {
+        album: data.body.items
+      })
+    },
+    (err) => {
+      console.error(err)
+    }
+  )
+})
 
+app.get('/tracks/:id', (req, res) => {
+  const id = req.params.id
+  spotifyApi.getAlbumTracks(id).then(
+    function (data) {
+      console.log(data.body.items)
+      res.render('tracks', {
+        tracks: data.body.items
+      })
+    },
+    function (err) {
+      console.log('Something went wrong!', err)
+    }
+  )
+})
 
 
 
