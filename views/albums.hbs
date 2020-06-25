@@ -1,0 +1,27 @@
+<body id="artists">
+    {{>nav}}
+    <section class="container">
+        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
+            {{#each album}}
+            <div class="col-3 mb-4">
+                <div class="card h-100">
+                    <div class="card-header">
+                        {{#if images}}
+                        <div class="img-container"
+                            style="background: url({{images.[0].url}}) no-repeat center center / cover;">
+                        </div>
+                        {{else}}
+                        <div class="img-container no-image">
+                        </div>
+                        {{/if}}
+                    </div>
+                    <a href="/tracks/{{id}}" class="card-body">
+                        <h5 class="card-title">{{name}}</h5>
+                        <p class="card-text">View Tracks</p>
+                    </a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</body>
