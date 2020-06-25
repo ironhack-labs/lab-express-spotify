@@ -1,10 +1,108 @@
+html {
+    height: 100%;
+}
+
+body {
+    padding: 0;
+    margin: 0;
+    height: 100%;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+}
+
+button,
+a {
+    background-color: salmon;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    border: 1px solid seashell;
+    text-decoration: none;
+    margin: 10px;
+}
+
+a{
+    width: 80%;
+    height: 30px;
+    text-align: center;
+}
+
+button:hover,
+a:hover {
+    background-color: rgb(224, 145, 137);
+    color: white;
+}
+
+h1 {
+    margin: 20px
+}
+
+
+
+.index {
+    width: 100%;
+    height: 100%;
+    background-image: url(/images/spotify-background.jpeg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.index input {
+    height: 40px;
+    width: 400px;
+}
+
+.index button {
+    margin-top: 40px;
+    height: 40px;
+    width: 200px;
+}
+
+
+.list {
+    margin: 40px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
 .card {
     width: 200px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(112, 105, 105);
+    color: white;
+    margin: 20px;
 }
 
 .card img {
     width: 100%
+}
+
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(65, 62, 62);
+    color: white;
+}
+
+.song {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(204, 197, 197);
+    border-bottom: 3px solid white;
+    align-items: center;
+}
+
+.song > audio{
+    margin-right: 20px
+}
+
+.song > h3{
+    margin-left: 20px
 }
