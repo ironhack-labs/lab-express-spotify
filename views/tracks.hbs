@@ -1,0 +1,12 @@
+<!-- track_information.hbs -->
+<h1>tracks</h1>
+
+<!-- artist.hbs -->
+<div>
+  {{#each tracks}}
+  <p>{{this.name}}</p>
+  <audio controls="controls">
+    <source src="{{this.preview_url}}" type="audio/mpeg" />
+  </audio>
+  {{/each}}
+</div>
