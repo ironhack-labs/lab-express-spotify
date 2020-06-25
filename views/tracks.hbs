@@ -1,0 +1,27 @@
+{{!-- <h1>Tracks</h1>
+
+{{#each data.items}}
+{{name}}
+<audio
+        controls
+        src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+</audio>
+{{/each}} --}}
+
+<div class="container justify-content-center">
+    <h1>Tracks</h1>
+    <div class="row">
+        {{#each data.items}}
+        <div class="col-12 justify-content-between">
+                    {{name}}
+                <audio controls src="{{preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+        </div>
+
+        {{/each}}
+    </div>
+</div>

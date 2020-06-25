@@ -1,0 +1,21 @@
+{{!-- {{#each data.items}}
+<img src="{{images.0.url}}" alt="Album photo">
+{{name}}
+<a href="/albums/tracks/{{id}}">View Tracks</a>
+{{/each}} --}}
+
+<div class="container justify-content-center">
+    <h1>Albums</h1>
+    <div class="row">
+        {{#each data.items}}
+        <div class="col-4">
+            <article class="artist-container">
+                <img src="{{images.0.url}}" alt="Album photo">
+                {{name}}
+                <a href="/albums/tracks/{{id}}">View Tracks</a>
+            </article>
+        </div>
+
+        {{/each}}
+    </div>
+</div>

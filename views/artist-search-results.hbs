@@ -1,0 +1,15 @@
+<div class="container justify-content-center">
+<h1>Artists found</h1>
+    <div class="row">
+        {{#each data.artists.items}}
+        <div class="col-4">
+            <article class="artist-container">
+                <img src="{{images.0.url}}" alt="Photo">
+                {{name}}
+                <a href="/albums/{{id}}">View Albums</a>
+            </article>
+        </div>
+
+        {{/each}}
+    </div>
+</div>

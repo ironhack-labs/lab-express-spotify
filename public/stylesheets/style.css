@@ -1,0 +1,44 @@
+img{
+    width: 300px;
+
+}
+
+.main-page-container{
+    background-image: url(../images/spotify-background.jpeg);
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.white-container{
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 700px;
+    height: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist-container img{
+    height: 300px;
+    object-fit: cover;
+}
+
+h1 {
+    text-align: center;
+}
+
+.audioTracks{
+    display: flex;
+    justify-content: space-between;
+}
