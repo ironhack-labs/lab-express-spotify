@@ -42,7 +42,6 @@ app.get('/artist-search', (req, res) => {
         .then(data => {
             const artistResult = data.body.artists.items
 
-            const artistResultImg = data.body.artists.items.images
             // console.log(artistResultImg)
             console.log('The received data from the API: ', artistResult)
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
@@ -52,18 +51,29 @@ app.get('/artist-search', (req, res) => {
 
 })
 
-app.get('/albums/:artistId', (req, res, next) => {
+app.get('/albums/:id', (req, res, next) => {
     // .getArtistAlbums() code goes here
     spotifyApi
-        .getArtistAlbums(req.params.artistId)
+        .getArtistAlbums(req.params.id)
         .then(data => {
-            const albumsResult = data.body
+            const albumsResult = data.body.items[0].images[0].url
             console.log(albumsResult)
             res.render('albums', { albumsResult })
-        }, function (err) {
-            console.error(err);
-        });
+        })
+        .catch(error => console.log('Something went wrong when retrieving an album', error))
 
 });
+
+// app.get('/albums/:id', (req, res, next) => {
+//     spotifyApi
+//         .getAlbumTracks(req.params.id)
+//         .then(data => {
+//             const tracksResult = data.body
+//             console.log(tracksResult)
+//             res.render('albums', { tracksResult })
+//         })
+//         .catch(error => console.log('Something went wrong when retrieving a track', error))
+
+// });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
