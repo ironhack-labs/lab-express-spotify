@@ -1,28 +1,20 @@
-require('dotenv').config();
-
 const express = require('express');
 const ejs = require('ejs');
-
-// require spotify-web-api-node package here:
-const SpotifyWebApi = require('spotify-web-api-node');
-const spotifyApi = new SpotifyWebApi({
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
-});
-spotifyApi
-  .clientCredentialsGrant()
-  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-  .catch(error => console.log('Something went wrong when retrieving an access token', error));
-
-
+const path = require('path')
 const app = express();
+const expressLayouts = require('express-ejs-layouts');
+const router = require('./router')
 
 app.set('view engine', 'ejs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
-
-// setting the spotify-api goes here:
+app.set('views', path.join(__dirname, 'views'))
+app.use(express.static(path.join(__dirname, 'public')))
+app.use(expressLayouts)
 
 // Our routes go here:
+app.use('/', router)
+app.use('/artists', router)
+app.use('/albums', router)
+app.use('/tracks', router)
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+app.listen(3000, () => console.log('My Spotify project running on port 30000 - http://localhost:3000/ 🎧 🥁 🎸 🔊'));

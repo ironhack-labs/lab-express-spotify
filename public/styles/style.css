@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+}
+
+/* Home Page */
+.home-container {
+  background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+
+.home-search {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.home-search:hover,
+.home-search:active {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+.form-wrapper {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 12.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+/*Artist Card */
+.list-card {
+  font-family: 'Open Sans', Arial, sans-serif;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  color: #ffffff;
+  text-align: center;
+  max-height: 23rem;
+  border: none;
+  border-radius: 1.25rem;
+  margin-bottom: 1.875rem;
+}
+
+.list-card .background {
+  width: 100%;
+  vertical-align: top;
+  opacity: 0.9;
+  -webkit-filter: blur(5px);
+  filter: blur(5px);
+  -webkit-transform: scale(1.8);
+  transform: scale(2.8);
+}
+
+.list-card .card-content {
+  width: 100%;
+  padding: 0.9375rem 1.5625rem;
+  position: absolute;
+  left: 0;
+  top: 40%;
+}
+
+.list-card .profile {
+  border-radius: 50%;
+  position: absolute;
+  bottom: 60%;
+  left: 50%;
+  max-width: 100px;
+  min-width: 100px;
+  opacity: 1;
+  box-shadow: 3px 3px 20px rgba(0, 0, 0, 0.5);
+  border: 2px solid rgba(255, 255, 255, 1);
+  -webkit-transform: translate(-50%, 0%);
+  transform: translate(-50%, 0%);
+}
+
+.list-card h2 {
+  margin: 0 0 1rem;
+  font-weight: 600;
+  font-size: 1.5625rem;
+}
+
+.list-card h2 a {
+  text-decoration: none;
+  color: #ffffff;
+}
+.list-card h2 a:hover {
+  text-decoration: underline;
+}
+
+.list-card h2 small {
+  display: block;
+  font-size: 15px;
+  margin-top: 10px;
+}
