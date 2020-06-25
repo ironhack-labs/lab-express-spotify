@@ -53,7 +53,6 @@ body {
   width: 100%;
   color: #ffffff;
   text-align: center;
-  max-height: 23rem;
   border: none;
   border-radius: 1.25rem;
   margin-bottom: 1.875rem;
@@ -76,6 +75,9 @@ body {
   left: 0;
   top: 40%;
 }
+.list-card .card-content p {
+  font-size: 0.8rem;
+}
 
 .list-card .profile {
   border-radius: 50%;
@@ -94,7 +96,7 @@ body {
 .list-card h2 {
   margin: 0 0 1rem;
   font-weight: 600;
-  font-size: 1.5625rem;
+  font-size: 1.2625rem;
 }
 
 .list-card h2 a {

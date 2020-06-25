@@ -1,0 +1,101 @@
+<section class="container">
+  <% if (others.length === 0 && albums.length === 0 && singles.length === 0) { %>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center mb-3 mt-3"> Ups hasn`t songs yet </h1>
+      </div>
+  <% } %>
+  <% if (albums.length !== 0) { %>
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mb-3 mt-3">Albums</h1>
+    </div>
+    <% albums.forEach(album => { %>
+    <div class="col-12 col-md-6 col-lg-4">
+      <div class="card list-card">
+        <% if (album.images.length !== 0) { %>
+          <% for(var i=0; i < album.images.length; i++) { %>
+            <% if (i === 0) { %>
+            <img src="<%= album.images[i].url %>" alt="<%= album.images[i].url %>" class="background" />
+            <% } else if (i === 2) { %>
+            <img src="<%= album.images[i].url %>" alt="<%= album.images[i].url %>" class="profile" />
+            <% } %>
+          <% } %>
+        <% } else { %>
+          <img src="/images/default-artists-background.jpg" alt="default image" class="background" />
+          <img src="/images/default-artists-profile.jpg" alt="default image" class="profile" />
+        <% } %>
+        <div class="card-content">
+          <h2>
+            <a hhref="/tracks/<%- album.id %>"><%- album.name %><small class="text-capitalize"><%- album.album_type %></small></a>
+          </h2>
+          <a href="/tracks/<%- album.id %>" class="btn btn-success">Play album</a>
+        </div>
+      </div>
+    </div>
+    <% }) %>
+  </div>
+  <% } %>
+  <% if (singles.length !== 0) { %>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center mb-3 mt-3">Singles</h1>
+      </div>
+      <% singles.forEach(single => { %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card list-card">
+          <% if (single.images.length !== 0) { %>
+            <% for(var i=0; i < single.images.length; i++) { %>
+              <% if (i === 0) { %>
+              <img src="<%= single.images[i].url %>" alt="<%= single.images[i].url %>" class="background" />
+              <% } else if (i === 2) { %>
+              <img src="<%= single.images[i].url %>" alt="<%= single.images[i].url %>" class="profile" />
+              <% } %>
+            <% } %>
+          <% } else { %>
+            <img src="/images/default-artists-background.jpg" alt="default image" class="background" />
+            <img src="/images/default-artists-profile.jpg" alt="default image" class="profile" />
+          <% } %>
+          <div class="card-content">
+            <h2>
+              <a hhref="/track/<%- single.id %>"><%- single.name %><small class="text-capitalize"><%- single.album_type %></small></a>
+            </h2>
+            <a href="/track/<%- single.id %>" class="btn btn-success">Play track</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  <% } %>
+  <% if (others.length !== 0) { %>
+    <div class="row">
+      <div class="col-12">
+        <h1 class="text-center mb-3 mt-3">Othes</h1>
+      </div>
+      <% others.forEach(other => { %>
+      <div class="col-12 col-md-6 col-lg-4">
+        <div class="card list-card">
+          <% if (other.images.length !== 0) { %>
+            <% for(var i=0; i < other.images.length; i++) { %>
+              <% if (i === 0) { %>
+              <img src="<%= other.images[i].url %>" alt="<%= other.images[i].url %>" class="background" />
+              <% } else if (i === 2) { %>
+              <img src="<%= other.images[i].url %>" alt="<%= other.images[i].url %>" class="profile" />
+              <% } %>
+            <% } %>
+          <% } else { %>
+            <img src="/images/default-artists-background.jpg" alt="default image" class="background" />
+            <img src="/images/default-artists-profile.jpg" alt="default image" class="profile" />
+          <% } %>
+          <div class="card-content">
+            <h2>
+              <a hhref="/track/<%- other.id %>"><%- other.name %><small class="text-capitalize"><%- other.album_type %></small></a>
+            </h2>
+            <a href="/track/<%- other.id %>" class="btn btn-success">Play track</a>
+          </div>
+        </div>
+      </div>
+      <% }) %>
+    </div>
+  <% } %>
+</section>

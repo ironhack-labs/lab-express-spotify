@@ -26,27 +26,30 @@ router.get('/', (req, res) => {
 
 router.get('/artists', (req, res) => {
   spotifyApi.searchArtists(req.query.artist)
-  .then(function(data) {
-    console.log(data.body.artists.items[6]);
-    
+  .then(data => {
     res.render('artists', {
       title: 'Artist',
-      param: req.query.artist,
+      searchParam: req.query.artist,
       artistList: data.body.artists.items
     })
-  }, function(err) {
+  }, err => {
     console.error(err);
   });
 })
-router.get('/albums/:id', (req, res) => {
-  spotifyApi.getArtistAlbums(req.params.id, { limit: 10, offset: 20 })
-  .then(function(data) {
-    console.log(data.body);
-    
-    res.render('albums', {
-      title: 'Artist',
+
+router.get('/artist/:id', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.id, { limit: 50 })
+  .then(data => {
+    const albums = data.body.items.filter(item => item.album_type === 'album')
+    const singles = data.body.items.filter(item => item.album_type === 'single')
+    const others = data.body.items.filter(item => item.album_type !== 'single' && item.album_type !== 'album')
+    res.render('artist', {
+      title: 'Albums and Singles',
+      albums: albums,
+      singles: singles,
+      others: others
     })
-  }, function(err) {
+  }, err => {
     console.error(err);
   });
 })

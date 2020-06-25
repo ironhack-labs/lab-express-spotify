@@ -1,10 +1,10 @@
 <section class="container">
   <div class="row">
     <div class="col-12">
-      <h1 class="text-center mb-3 mt-3">Results from: <%- param %></h1>
+      <h1 class="text-center mb-3 mt-3">Results from: <%- searchParam %></h1>
     </div>
     <% artistList.forEach(artist => { %>
-    <div class="col-md-4">
+    <div class="col-12 col-md-6 col-lg-4">
       <div class="card list-card">
         <% if (artist.images.length !== 0) { %>
           <% for(var i=0; i < artist.images.length; i++) { %>
@@ -20,12 +20,12 @@
         <% } %>
         <div class="card-content">
           <h2>
-            <a href="#0"><%- artist.name %><small><%- artist.type %></small></a>
+            <a href="/artist/<%- artist.id %>"><%- artist.name %><small class="text-capitalize"><%- artist.type %></small></a>
           </h2>
           <p>Popularity: <span class="badge badge-pill badge-light"><%- artist.popularity %></span> <br>
           Followers: <span class="badge badge-pill badge-light"><%- artist.followers.total %></span>
           </p>
-          <a href="/albums/<%- artist.id %>" class="btn btn-success">View albums</a>
+          <a href="/artist/<%- artist.id %>" class="btn btn-success">Go artist</a>
         </div>
       </div>
     </div>
