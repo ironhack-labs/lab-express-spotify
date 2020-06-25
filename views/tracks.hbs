@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="row header-row">
+        <span class="col-lg-8">Title</span>
+        <span class="col-lg-4">Listen</span>
+    </div>
+    {{#each tracks}}
+    <div class="row item-row">
+        <span class="col-lg-8">{{this.name}}</span>
+        <span class="col-lg-4"><audio type="audio/mpeg" controls="" src="{{this.preview_url}}">You brownser doesn´t support audio</audio></span>
+    </div>
+    {{/each}}
+</table>
