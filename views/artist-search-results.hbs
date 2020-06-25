@@ -1,9 +1,9 @@
 <div class="artist">
     {{#each artist}}
         <div class="card">
-            <img src=" {{this.images.0.url}}" alt="Group/Artist">
+            <img src=" {{this.images.0.url}}" alt="Artist">
             <h3>{{this.name}}</h3>
-            <button>View Album</button>
+            <a href="/albums/{{this.id}}">View Albums</a>
         </div>
     {{/each}}
 </div>

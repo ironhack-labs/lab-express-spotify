@@ -4,3 +4,7 @@
     flex-direction: column;
     align-items: center;
 }
+
+.card img {
+    width: 100%
+}

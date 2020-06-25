@@ -1,0 +1,8 @@
+<div class="album">
+    {{#each tracks}}
+        <div class="card">
+            <h3>{{this.name}}</h3>
+            <audio type="audio/mpeg" controls="" src="{{this.preview_url}}"></audio>
+        </div>
+    {{/each}}
+</div>
