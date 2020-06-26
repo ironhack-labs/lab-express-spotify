@@ -1,10 +1,16 @@
 {{#each this}}
 
 <div class="card">
-    <img class="card-img" src="{{this.images.[0].url}}" alt="{{this.name}}" srcset="">
+    {{#if images}}
+    <figure>
+        <img class="card-img" src="{{images.[0].url}}" alt="{{this.name}}" srcset="">
+    </figure>
+    {{else}}
+    <figure>
+        <img class="card-img" src="images/nofound.jpg" alt="{{this.name}}" srcset="">
+    </figure>
+    {{/if}}
     <h2 class="card-title">{{name}}</h2>
-    <h4 class="card-subtitle">{{popularity}}</h4>
-    <p class="card-followers">{{followers.total}}</p>
-    <a href="/albuns/{{this.id}}">View Albuns</a>
+    <a class="btn" href="/albuns/{{this.id}}">View Albuns</a>
 </div>
 {{/each}}

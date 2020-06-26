@@ -42,9 +42,16 @@ body{
     margin:20px auto;
     border-radius: 15px;
 }
-
-.card-img{
+figure{
     height: 300px;
+    width: 300px;
+}
+.card-img{
+    width:100%;
+    height: auto;
+    max-height: 300px;
+    object-fit: cover;
+
 }
 .card-title{
     text-align: center;
@@ -64,4 +71,11 @@ body{
 }
 .card-list{
     align-self: start;
+}
+.btn{
+    padding: 10px 20px;
+    background:#0087fe;
+    border-radius: 5px;
+    color: #fff;
+    margin:5px;
 }

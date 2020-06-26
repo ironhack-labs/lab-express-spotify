@@ -46,6 +46,14 @@ const handlerGetAlbums = async (id) => {
         return console.log('Error during album fetch' + error)
     }
 }
+const handlerGetTracks = async (id) => {
+    try {
+        const { body: result } = await spotifyApi.getAlbumTracks(id)
+        return result
+    } catch (error) {
+        return console.log('Error during album fetch' + error)
+    }
+}
 
 // Get and Set Token 
 getAndSetSpotifyToken()
@@ -68,7 +76,12 @@ app.get('/albuns/:id', async (req, res) => {
     const { id } = req.params
     const albums = await handlerGetAlbums(id)
     return res.render('listOfAlbums', albums.items);
-    return res.send(albums.items);
+})
+app.get('/album/:id', async (req, res) => {
+    const { id } = req.params
+    const tracks = await handlerGetTracks(id)
+    // return res.send(tracks.items);
+    return res.render('tracks', tracks.items);
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

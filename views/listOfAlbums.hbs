@@ -1,14 +1,20 @@
+<h1 class="title">Albuns</h1>
 <div class="container">
     {{#each this}}
 
+    {{#if images}}
     <div class="card">
-        <img class="card-img" src="{{images.[0].url}}" alt="{{name}}" srcset="">
+        <figure>
+            <img class="card-img" src="{{images.[0].url}}" alt="{{name}}" srcset="">
+        </figure>
         <h2 class="card-title">{{name}}</h2>
         <h4 class="card-subtitle">{{release_date}}</h4>
         <p class="card-followers">{{total_tracks}}</p>
-        <a href="/albuns/{{id}}">View Tracks</a>
+        <a class="btn" href="/album/{{id}}">View Tracks</a>
 
     </div>
+    {{/if}}
+
     {{/each}}
 
 </div>
