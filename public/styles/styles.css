@@ -9,26 +9,90 @@ li{
 a{
     text-decoration: none;
 }
+
 body{
     background: #f7f9f9;
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
+    
 }
+.navbar{
+    background: #2081c3;
+    width:100%
+}
+.menu{
+    display:flex;
+    padding: 20px;
+    margin-bottom:10px;
+    width: 100%;
+}
+.item-menu a{
+    color: #f7f9f9;
+    margin:0 10px;
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    align-content:center;
+    min-height: 90%;
+    
+}
+
+.main-container{
+    background: rgba(103, 166, 218, 0.324);
+    display: flex;
+    padding:50px;
+    border-radius: 15px;
+    justify-content:center;
+    align-content:center;
+    max-width: 100%;
+}
+form{
+    display: flex;
+    border-radius: 15px;
+    justify-content:space-between;
+    align-content:center;
+    max-width:100%;
+
+
+}
+input[type="text"]{
+    font-size:20px;
+    border-radius: 5px;
+    border: none;
+    margin-right: 10px;
+    
+}
+button{
+    padding: 10px;
+    border-radius:5px;
+    border: none;
+}
+button:hover{
+    background: rgb(45, 0, 247);
+    color: #fff;
+}
+
 .container{
     display: flex;
     flex-wrap: wrap;
+    width:100%;
 }
 .card{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items:center;
-    width:400px;
+    width:300px;
     height: auto;
     border:solid 1px #bfbfbf;
     padding:30px;
     margin:20px auto;
     border-radius: 15px;
+    max-width:100%
 }
 .card{
     display: flex;
@@ -86,9 +150,36 @@ figure{
     align-items:center;
     align-content:center;
     background: #bfbfbf;
-    padding:5px;
-
+    padding:10px;
+    max-width: 960px;
+    margin:5px auto;
+    border-radius:10px;
 }
-.title{
+.track-container:hover{
+    background: #858585;
+}
+figcaption{
     margin: 15px;
+}
+.menu-tracks{
+    display: flex;
+    justify-content:space-between;
+    align-content:center;
+    padding:20px 0;
+    width:100%;
+    max-width: 960px;
+    margin:0 auto;
+    
+}
+
+.footer{
+    background:#0a2c42;
+    color: #fff;
+    padding:15px;
+    display: flex;
+    align-items:center;
+    justify-content: center;
+    
+   
+    width: 100%;
 }
