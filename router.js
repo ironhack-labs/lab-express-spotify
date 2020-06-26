@@ -24,10 +24,10 @@ router.get('/', (req, res) => {
   })
 })
 
-router.get('/artists', (req, res) => {
+router.get('/search', (req, res) => {
   spotifyApi.searchArtists(req.query.artist)
   .then(data => {
-    res.render('artists', {
+    res.render('search', {
       title: 'Artist',
       searchParam: req.query.artist,
       artistList: data.body.artists.items
@@ -46,6 +46,7 @@ router.get('/artist/:id', (req, res) => {
     
     res.render('artist', {
       title: 'Albums and Singles',
+      artistName: req.query.artist,
       albums: albums,
       singles: singles,
       others: others
@@ -60,7 +61,8 @@ router.get('/player/:id', (req, res) => {
   .then(function(data) {
     res.render('player', {
       title: 'Tracks',
-      tracks: data.body.items
+      tracks: data.body.items,
+      artistName: req.query.artist
     })
   }, function(err) {
     console.log('Something went wrong!', err);

@@ -12,8 +12,8 @@ app.use(expressLayouts)
 
 // Our routes go here:
 app.use('/', router)
-app.use('/artists', router)
-app.use('/albums', router)
+app.use('/search', router)
+app.use('/artist', router)
 app.use('/player', router)
 
 

@@ -8,7 +8,7 @@
   <% if (albums.length !== 0) { %>
   <div class="row">
     <div class="col-12">
-      <h1 class="text-center mb-3 mt-3">Albums</h1>
+      <h1 class="text-center mb-3 mt-3">Albums from <%- artistName %></h1>
     </div>
     <% albums.forEach(album => { %>
     <div class="col-12 col-md-6 col-lg-4">
@@ -27,9 +27,9 @@
         <% } %>
         <div class="card-content">
           <h2>
-            <a hhref="/player/<%- album.id %>"><%- album.name %><small class="text-capitalize"><%- album.album_type %></small></a>
+            <a hhref="/player/<%- album.id %>?artist=<%- artistName %>"><%- album.name %><small class="text-capitalize"><%- album.album_type %></small></a>
           </h2>
-          <a href="/player/<%- album.id %>" class="btn btn-success">Play album</a>
+          <a href="/player/<%- album.id %>?artist=<%- artistName %>" class="btn btn-primary">Play album</a>
         </div>
       </div>
     </div>
@@ -58,9 +58,9 @@
           <% } %>
           <div class="card-content">
             <h2>
-              <a hhref="/player/<%- single.id %>"><%- single.name %><small class="text-capitalize"><%- single.album_type %></small></a>
+              <a hhref="/player/<%- single.id %>?artist=<%- artistName %>"><%- single.name %><small class="text-capitalize"><%- single.album_type %></small></a>
             </h2>
-            <a href="/player/<%- single.id %>" class="btn btn-success">Play track</a>
+            <a href="/player/<%- single.id %>?artist=<%- artistName %>" class="btn btn-primary">Play track</a>
           </div>
         </div>
       </div>
@@ -89,9 +89,9 @@
           <% } %>
           <div class="card-content">
             <h2>
-              <a hhref="/player/<%- other.id %>"><%- other.name %><small class="text-capitalize"><%- other.album_type %></small></a>
+              <a hhref="/player/<%- other.id %>?artist=<%- artistName %>"><%- other.name %><small class="text-capitalize"><%- other.album_type %></small></a>
             </h2>
-            <a href="/player/<%- other.id %>" class="btn btn-success">Play track</a>
+            <a href="/player/<%- other.id %>?artist=<%- artistName %>" class="btn btn-primary">Play track</a>
           </div>
         </div>
       </div>

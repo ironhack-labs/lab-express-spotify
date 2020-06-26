@@ -4,8 +4,9 @@ body {
 
 /* Home Page */
 .home-container {
-  background-image: url("https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg");
-  background-size: 100% 100%;
+  background-image: url("../images/spotify-background.jpg");
+  background-size: cover;
+  background-position: center bottom;
   background-repeat: no-repeat;
   height: 100vh;
 }
@@ -19,20 +20,20 @@ body {
   text-align: center;
 }
 
-.home-search {
+.btn-primary, .home-search {
   margin-top: 10px;
   background-color: black;
   border-radius: 0;
   color: white;
-  background-color: #ff6666;
-  border: 1px solid #ff6666;
+  background-color: #2dc5fa;
+  border: 1px solid #2dc5fa;
 }
 
-.home-search:hover,
-.home-search:active {
-  color: #ff6666;
+.btn-primary:hover, .home-search:hover,
+.btn-primary:active, .home-search:active {
+  color: #2dc5fa;
   background-color: white;
-  border: 1px solid #ff6666;
+  border: 1px solid #2dc5fa;
 }
 
 .form-wrapper {
@@ -51,6 +52,7 @@ body {
   position: relative;
   overflow: hidden;
   width: 100%;
+  min-height: 25rem;
   color: #ffffff;
   text-align: center;
   border: none;

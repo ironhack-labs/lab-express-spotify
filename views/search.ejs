@@ -25,7 +25,7 @@
           <p>Popularity: <span class="badge badge-pill badge-light"><%- artist.popularity %></span> <br>
           Followers: <span class="badge badge-pill badge-light"><%- artist.followers.total %></span>
           </p>
-          <a href="/artist/<%- artist.id %>" class="btn btn-success">Go artist</a>
+          <a href="/artist/<%- artist.id %>?artist=<%- artist.name %>" class="btn btn-primary">Go artist</a>
         </div>
       </div>
     </div>
