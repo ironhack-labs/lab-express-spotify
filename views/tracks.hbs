@@ -1,11 +1,16 @@
 <h1 class="title">Tracks</h1>
 <div class="container">
     {{#each this}}
-    <figcaption>{{name}}</figcaption>
-    <audio controls src="{{preview_url}}">
-        Your browser does not support the
-        <code>audio</code> element.
-    </audio>
+    {{#if name}}
+    <div class="track-container">
+        <figcaption class="title">{{name}}</figcaption>
+        <div class="audio">
+            <audio controls src="{{preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </div>
+    </div>
+    {{/if}}
     {{/each}}
-
 </div>

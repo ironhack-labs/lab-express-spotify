@@ -79,3 +79,16 @@ figure{
     color: #fff;
     margin:5px;
 }
+.track-container{
+    display: flex;
+    width: 100%;
+    justify-content:space-between;
+    align-items:center;
+    align-content:center;
+    background: #bfbfbf;
+    padding:5px;
+
+}
+.title{
+    margin: 15px;
+}
