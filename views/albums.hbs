@@ -1,6 +1,6 @@
 <body id="artists">
     {{>nav}}
-    <section class="container">
+    <section class="container" style="margin-top: 10rem;">
         <div class="row row-cols-1 row-cols-md-3 justify-content-center">
             {{#each album}}
             <div class="col-3 mb-4">
@@ -15,7 +15,7 @@
                         </div>
                         {{/if}}
                     </div>
-                    <a href="/tracks/{{id}}" class="card-body">
+                    <a href="/tracks/{{id}}?cover={{images.[0].url}}&album={{name}}" class="card-body">
                         <h5 class="card-title">{{name}}</h5>
                         <p class="card-text">View Tracks</p>
                     </a>

@@ -1,19 +1,30 @@
-<body id="artists">
+<body id="tracks">
     {{>nav}}
     <section class="container">
-        <div class="row row-cols-1 row-cols-md-3 justify-content-center">
-            {{#each tracks}}
-            <div class="col-3 mb-4">
-                <div class="card h-100">
-                    <div class="card-header">
-                    </div>
-                    <h5 class="card-title">{{name}}</h5>
-                    <audio src="{{preview_url}}" controls>
-                        Your browser does not support the <code>audio</code> element.
-                    </audio><audio></audio>
-                </div>
+        <div class="row tracks">
+            <div class="col-3 p-0">
+                <h1>{{artist}}</h1>
+                <h3>{{album}}</h3>
+                <img src="{{cover}}" class="album-cover-big" alt="{{album}} cover">
             </div>
-            {{/each}}
+            <div class="col-8 p-0 track-list">
+                {{#each tracks}}
+                <div class="col-12 d-flex justify-content-between align-items-center track-info">
+                    <div class="track-number">{{track_number}}</div>
+
+                    <h5 class="track-title">{{name}} {{#if explicit}}
+                        <span class="explicit">E</span>
+                        {{/if}}</h5>
+
+
+                    <audio controls>
+                        <source src="{{preview_url}}" type="audio/mp3">
+
+                        Your browser does not support the <code>audio</code> element.
+                    </audio>
+                </div>
+                {{/each}}
+            </div>
         </div>
     </section>
 </body>

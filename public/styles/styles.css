@@ -34,6 +34,16 @@ body {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+}
+
+#homepage .init-form {
+  background: rgba(255, 255, 255, 0.6);
+  padding: 6rem;
+  -webkit-backdrop-filter: blur(10px);
+          backdrop-filter: blur(10px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -42,24 +52,17 @@ body {
           align-items: center;
 }
 
-#homepage .init-form {
-  background: rgba(255, 255, 255, 0.6);
-  padding: 6rem;
-  -webkit-backdrop-filter: blur(10px);
-          backdrop-filter: blur(10px);
-}
-
 #homepage .init-form .form-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -92,6 +95,10 @@ body {
   cursor: pointer;
 }
 
+#homepage .init-form .form-group button:focus {
+  outline: none;
+}
+
 #artists .results {
   padding: 6rem 0 3rem 0;
   border-bottom: 0.1rem solid #ddd;
@@ -118,6 +125,7 @@ body {
 
 #artists .card .card-header {
   padding: 0;
+  background-color: white;
   position: relative;
 }
 
@@ -126,7 +134,7 @@ body {
 }
 
 #artists .card .card-header .img-container.no-image:before {
-  content: 'NO IMAGE';
+  content: 'IMAGE NOT FOUND';
   position: absolute;
   z-index: 0;
   height: 30rem;
@@ -141,10 +149,12 @@ body {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  text-align: center;
+  line-height: 1;
   font-size: 4rem;
-  color: #fff;
+  color: #1db954;
   font-weight: 600;
-  color: #333;
+  border: solid 0.3rem #1db954;
 }
 
 #artists .card .card-body {
@@ -176,11 +186,13 @@ body {
 #artists .card .card-body h5 {
   font-size: 3.2rem;
   font-weight: 600;
+  padding-bottom: 3rem;
 }
 
 #artists .card .card-body .card-text {
   color: #1db954;
   text-transform: uppercase;
+  padding-top: 3rem;
 }
 
 #artists .card .card-body:hover {
@@ -188,5 +200,83 @@ body {
   text-decoration: none;
   -webkit-transition: all 200ms;
   transition: all 200ms;
+}
+
+#artists .card .card-body:hover > h5 {
+  padding-bottom: 0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+#artists .card .card-body:hover > .card-text {
+  padding-top: 0;
+  -webkit-transition: all 200ms;
+  transition: all 200ms;
+}
+
+#tracks .tracks {
+  padding-top: 10rem;
+}
+
+#tracks h1 {
+  font-weight: 600;
+  font-size: 4rem;
+}
+
+#tracks h3 {
+  font-size: 2rem;
+}
+
+#tracks .album-cover-big {
+  width: 20rem;
+  height: 20rem;
+  margin-top: 2rem;
+}
+
+#tracks .album-cover img {
+  width: 6rem;
+  height: 6rem;
+}
+
+#tracks .track-list {
+  margin-top: 8rem;
+}
+
+#tracks .track-info {
+  margin-bottom: 1rem;
+}
+
+#tracks .track-info .track-title {
+  text-align: left;
+  width: 35rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#tracks audio:focus {
+  outline: none;
+}
+
+#tracks .explicit {
+  background-color: #f3f3f3;
+  width: 2rem;
+  height: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 0.3rem;
+  border: solid 0.1rem #878787;
+  color: #878787;
+  margin-left: 1rem;
 }
 /*# sourceMappingURL=styles.css.map */
