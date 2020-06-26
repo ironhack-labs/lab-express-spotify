@@ -1,0 +1,16 @@
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+li{
+    list-style:  none;
+}
+a{
+    text-decoration: none;
+}
+body{
+    background: #f7f9f9;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+}

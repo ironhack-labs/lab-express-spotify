@@ -1,0 +1,10 @@
+{{#each this}}
+
+<div class="artist-card">
+    <img class="card-img" src="{{this.images.[0].url}}" alt="{{this.name}}" srcset="">
+    <h2 class="card-title">{{name}}</h2>
+    <h4 class="card-subtitle">{{popularity}}</h4>
+    <p class="card-followers">{{followers.total}}</p>
+    <a href="/albuns/{{this.id}}">View Albuns</a>
+</div>
+{{/each}}
