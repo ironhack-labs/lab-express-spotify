@@ -23,7 +23,6 @@ body{
 .menu{
     display:flex;
     padding: 20px;
-    margin-bottom:10px;
     width: 100%;
 }
 .item-menu a{
@@ -40,6 +39,19 @@ section{
     min-height: 90%;
     
 }
+.hero-image{
+    background: url("/images/spotify-background.jpeg");
+    height:100vh;
+    width:100vw;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-content:center;
+    justify-content:center;
+    
+}
 
 .main-container{
     background: rgba(103, 166, 218, 0.324);
@@ -48,14 +60,16 @@ section{
     border-radius: 15px;
     justify-content:center;
     align-content:center;
-    max-width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    
 }
 form{
     display: flex;
     border-radius: 15px;
     justify-content:space-between;
     align-content:center;
-    max-width:100%;
+    
 
 
 }
