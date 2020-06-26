@@ -1,6 +1,23 @@
-{{#each artist}}
-    <img src="{{this.images.[0].url}}" alt="Picture">
-    <h1>{{this.name}}</h1>
-    <a href="/albums/{{id}}">View Albums</a>
-    <br>
-{{/each}} 
+<div class="container">
+    <div class="row">
+        {{#each artist}}
+            <div class="col-lg-4 artist-container">
+                {{#if this.images}}
+                <img src="{{this.images.[0].url}}" alt="Picture" class="artist-img">
+                    <div class="artist-info-container">
+                        <p>{{this.name}}</p>
+                        <a href="/albums/{{id}}">View Albums</a>
+                    </div>
+                    {{else}}
+                    <div>
+                        <img src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" class="artist-img">
+                    </div>
+                        <div class="artist-info-container">
+                        <p>{{this.name}}</p>
+                        <a href="/albums/{{id}}">View Albums</a>
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}} 
+    </div>
+</div>

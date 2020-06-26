@@ -1,11 +1,18 @@
-{{#each tracks}}
-<figure>
-    <figcaption>Listen to {{this.name}}</figcaption>
-    <audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</figure>
-{{/each}}
+<div class="container">
+    <div class="row">
+        {{#each tracks}}
+            <div class="col-lg-3 artist-container">
+                <img src="https://images.vexels.com/media/users/3/137413/isolated/preview/4acb8e52632aa9b7c874b878eaf02bc4-icono-de-spotify-logo-by-vexels.png" alt="Picture" class="artist-img">
+                    <div>
+                    <figure>
+                        <figcaption>Listen to {{this.name}}</figcaption>
+                        <audio controls src="{{preview_url}}" class="audio-size">
+                                Your browser does not support the
+                                <code>audio</code> element.
+                        </audio>
+                    </figure>
+                    </div>
+            </div>
+        {{/each}} 
+    </div>
+</div>
