@@ -1,7 +1,14 @@
-<div>
-    {{#each artists as |artist|}}
-    <p>{{artist.name}}</p>
-    <img src="{{artist.images.0.url}}" alt="{{artist.name}}">
-    <a href="/albums/{{artist.id}}">View Tracks</a>
-    {{/each}}
+<div class="container">
+    <div class="row">
+        {{#each artists as |artist|}}
+        <div class="card m-3" style="width: 18rem;">
+            <img class="card-img-top" src="{{artist.images.0.url}}" alt="{{artist.name}}">
+            <div class="card-body text-center bg-secondary">
+                <h5 class="card-title text-white">{{artist.name}}</h5>
+                <a href="/albums/{{artist.id}}" class="btn btn-danger">View Albums</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
+

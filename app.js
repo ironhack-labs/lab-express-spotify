@@ -60,7 +60,9 @@ app.get('/tracks/:id', (req, res, next) => {
   spotifyApi
   .getAlbumTracks(req.params.id)
   .then(data => {
-    res.send(data.body)
+    const searchResults = data.body.items;
+    console.log(data.body.items)
+    res.render('tracks', {tracks: searchResults})
 
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
