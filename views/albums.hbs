@@ -1,0 +1,13 @@
+<div class="row result-container">
+    {{#each items as |album|}}
+        <div class="col-lg-4 card">
+            <img class="card-image" src="{{album.images.[0].url}}" alt="image of {{album.name}}"/>
+            <div>
+                <div class="name">{{album.name}}</div>
+                <a href="/tracks/{{album.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+
+

@@ -1,0 +1,151 @@
+html,
+body {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
+
+#nav-bar {
+    width: 100vw;
+    height: 40px;
+    background-color: #4D4D4D;
+    padding-top: 8px;
+}
+
+#nav-bar a {
+    color: white !important;
+    text-decoration: none !important;
+    padding-left: 20px;
+}
+
+#home-background {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url('../images/spotify-background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
+
+#home-search-form {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    position: relative;
+    left: 25vw;
+    top: 40vh;
+    height: 200px;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.5); 
+}
+
+#home-search-form > input{
+    display: block;
+    width: 60%;
+    height: 40px;
+    margin: 50px auto 10px;
+    border: 1px solid #b6b6b6;
+    border-radius: 5px;
+    font-size: 1.25rem;
+    color: #495057;
+}
+
+#home-search-form > input[type=text] {
+    padding-left: 20px;
+    outline: none;
+    color: inherit;
+}
+
+#home-search-form > button {
+    display: block;
+    height: 2.5rem;
+    font-size: 1.25rem;
+    padding: 0.5rem 0.75rem;
+    margin: 0px auto;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+    color: white;
+}
+
+#home-search-form > button:active,
+#home-search-form > button:visited,
+#home-search-form > button:hover,
+#home-search-form > button:focus {
+    text-decoration: none;
+    background-color: white;
+    outline: none;
+    color: #ff6666;
+}
+
+.result-container {
+    margin: auto; 
+    padding-top: 30px;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 10px 35px !important;
+    border: none !important;
+}
+
+.card-image {
+    width: 100%;
+    height: auto;
+}
+
+.card > div {
+    width: 100%;
+    margin: auto;
+    padding-bottom: 10px;
+    background-color: #4D4D4D;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.card a {
+    padding: 5px;
+    background-color: #ff6666;
+    border-radius: 4px;
+    color: white;
+    font-size: 0.90rem;
+}
+
+.card a:active,
+.card a:visited,
+.card a:hover,
+.card a:focus {
+    color: white;
+}
+
+.tracks-container {
+    width: 80vw;
+}
+
+.track-list-header {
+    margin-top: 20px;
+    line-height: 60px;
+    background-color: #4D4D4D;
+    color: #e6e6e6;
+}
+
+.track-list-row {
+    line-height: 40px;
+    background-color: rgba(77,77,77, 0.08);
+    margin-bottom: 2px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.track-list-row audio {
+    height: 40px;
+}
