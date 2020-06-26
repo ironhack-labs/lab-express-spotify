@@ -43,6 +43,7 @@ router.get('/artist/:id', (req, res) => {
     const albums = data.body.items.filter(item => item.album_type === 'album')
     const singles = data.body.items.filter(item => item.album_type === 'single')
     const others = data.body.items.filter(item => item.album_type !== 'single' && item.album_type !== 'album')
+    
     res.render('artist', {
       title: 'Albums and Singles',
       albums: albums,
@@ -51,6 +52,18 @@ router.get('/artist/:id', (req, res) => {
     })
   }, err => {
     console.error(err);
+  });
+})
+
+router.get('/player/:id', (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.id, { limit: 50 })
+  .then(function(data) {
+    res.render('player', {
+      title: 'Tracks',
+      tracks: data.body.items
+    })
+  }, function(err) {
+    console.log('Something went wrong!', err);
   });
 })
 

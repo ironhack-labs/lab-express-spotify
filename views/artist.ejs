@@ -27,9 +27,9 @@
         <% } %>
         <div class="card-content">
           <h2>
-            <a hhref="/tracks/<%- album.id %>"><%- album.name %><small class="text-capitalize"><%- album.album_type %></small></a>
+            <a hhref="/player/<%- album.id %>"><%- album.name %><small class="text-capitalize"><%- album.album_type %></small></a>
           </h2>
-          <a href="/tracks/<%- album.id %>" class="btn btn-success">Play album</a>
+          <a href="/player/<%- album.id %>" class="btn btn-success">Play album</a>
         </div>
       </div>
     </div>
@@ -58,9 +58,9 @@
           <% } %>
           <div class="card-content">
             <h2>
-              <a hhref="/track/<%- single.id %>"><%- single.name %><small class="text-capitalize"><%- single.album_type %></small></a>
+              <a hhref="/player/<%- single.id %>"><%- single.name %><small class="text-capitalize"><%- single.album_type %></small></a>
             </h2>
-            <a href="/track/<%- single.id %>" class="btn btn-success">Play track</a>
+            <a href="/player/<%- single.id %>" class="btn btn-success">Play track</a>
           </div>
         </div>
       </div>
@@ -70,7 +70,7 @@
   <% if (others.length !== 0) { %>
     <div class="row">
       <div class="col-12">
-        <h1 class="text-center mb-3 mt-3">Othes</h1>
+        <h1 class="text-center mb-3 mt-3">Others</h1>
       </div>
       <% others.forEach(other => { %>
       <div class="col-12 col-md-6 col-lg-4">
@@ -89,9 +89,9 @@
           <% } %>
           <div class="card-content">
             <h2>
-              <a hhref="/track/<%- other.id %>"><%- other.name %><small class="text-capitalize"><%- other.album_type %></small></a>
+              <a hhref="/player/<%- other.id %>"><%- other.name %><small class="text-capitalize"><%- other.album_type %></small></a>
             </h2>
-            <a href="/track/<%- other.id %>" class="btn btn-success">Play track</a>
+            <a href="/player/<%- other.id %>" class="btn btn-success">Play track</a>
           </div>
         </div>
       </div>

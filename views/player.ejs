@@ -1,0 +1,18 @@
+<section class="container">
+  <div class="row">
+    <div class="col-12">
+      <h1 class="text-center mb-3 mt-3">Results from: <%- title %></h1>
+      <% tracks.forEach(artist => { %>
+      <figure>
+        <figcaption>Listen to the <%- artist.name %></figcaption>
+        <audio
+            controls
+            src="<%- artist.preview_url %>">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </figure>
+    <% }) %>
+    </div>
+  </div>
+</section>
