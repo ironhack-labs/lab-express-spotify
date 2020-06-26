@@ -14,3 +14,54 @@ body{
     font-family: Arial, Helvetica, sans-serif;
     height: 100vh;
 }
+.container{
+    display: flex;
+    flex-wrap: wrap;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    width:400px;
+    height: auto;
+    border:solid 1px #bfbfbf;
+    padding:30px;
+    margin:20px auto;
+    border-radius: 15px;
+}
+.card{
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items:center;
+    width:400px;
+    height: auto;
+    border:solid 1px #bfbfbf;
+    padding:30px;
+    margin:20px auto;
+    border-radius: 15px;
+}
+
+.card-img{
+    height: 300px;
+}
+.card-title{
+    text-align: center;
+}
+.card-subtitle{
+    text-align: center;
+    color: #bfbfbf;
+}
+.card-brewed{
+    margin: 10px 0;
+}
+.card-Description{
+    text-align: justify;
+}
+.card-tips{
+    margin: 10px 0;
+}
+.card-list{
+    align-self: start;
+}

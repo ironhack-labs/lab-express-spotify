@@ -1,14 +1,14 @@
-{{#each this}}
+<div class="container">
+    {{#each this}}
 
-<div class="album-card">
-    <img class="card-img" src="{{images.[0].url}}" alt="{{name}}" srcset="">
-    <h2 class="card-title">{{name}}</h2>
-    <h4 class="card-subtitle">{{release_date}}</h4>
-    <p class="card-followers">{{total_tracks}}</p>
-    <a href="/albuns/{{id}}">View Tracks</a>
+    <div class="card">
+        <img class="card-img" src="{{images.[0].url}}" alt="{{name}}" srcset="">
+        <h2 class="card-title">{{name}}</h2>
+        <h4 class="card-subtitle">{{release_date}}</h4>
+        <p class="card-followers">{{total_tracks}}</p>
+        <a href="/albuns/{{id}}">View Tracks</a>
+
+    </div>
+    {{/each}}
 
 </div>
-<p>{{album_group}}</p>
-
-
-{{/each}}
