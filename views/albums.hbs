@@ -1,7 +1,7 @@
 {{#each albums}}
-<div class = "view">
-    <img src="{{this.images.[1].url}}" alt="album image">
-    <p>{{this.name}}</p>
-    <a href="/tracks/{{this.id}}">View tracks</a>
-</div>
+    <div class = "cover-view">
+        <img src="{{this.images.[1].url}}" alt="album image">
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}">View tracks</a>
+    </div>
 {{/each}}

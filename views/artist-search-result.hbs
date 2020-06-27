@@ -1,7 +1,7 @@
 {{#each data}}
-<div class = "view">
-    <img src="{{this.images.[1].url}}" alt="artist image">
-    <p>{{this.name}}</p>
-    <a href="albums/{{this.id}}">View Albums</a>
-</div>
+    <div class = "cover-view">
+        <img src="{{this.images.[1].url}}" alt="artist image">
+        <p>{{this.name}}</p>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
 {{/each}}
