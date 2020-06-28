@@ -1,0 +1,51 @@
+.card-container {
+    padding: 10px 40px;
+}
+
+.card-container img {
+    width: 100%;
+}
+
+.card-title-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4D4D4D;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card-title-container p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+
+
+.card-title-container a {
+    color: #fff;
+    font-size: 12px;
+    background-color: #F86967;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+.track-header {
+  background-color: #4A4A4A;
+  padding: 20px 10px;
+  color: #F6F6F6;
+  font-size: 20px;
+}
+.track-container {
+    background-color: #F6F6F6;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
+.track-container p {
+    margin-bottom: 0;
+}
+audio {
+    width: 300px;
+    height: 54px;
+}
