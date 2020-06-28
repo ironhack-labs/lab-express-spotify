@@ -1,0 +1,16 @@
+<h3>Tracks Result</h3>
+
+<div class="artist-search-results">
+    <div class="row">
+        {{#each tracks}}
+            {{this.name}}
+            <figure>
+            
+            <audio controls src="{{this.preview_url}}">
+                Your browser does not support the 
+                <code>audio</code> element.
+            </audio>
+        </figure>
+        {{/each}}
+    </div>
+</div>
