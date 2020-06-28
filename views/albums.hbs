@@ -1,0 +1,12 @@
+<h3>Albums Result</h3>
+
+<div class="artist-search-results">
+    <div class="row">
+        {{#each albums}}
+            <img src="{{this.images.0.url}}" alt="image">
+            {{this.name}}
+            <form action="/artist-search" method="GET">
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        {{/each}}
+    </div>
+</div>

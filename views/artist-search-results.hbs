@@ -3,8 +3,11 @@
 <div class="artist-search-results">
     <div class="row">
         {{#each artists}}
-            {{!-- {{this.images}} --}}
+            <img src="{{this.images.0.url}}" alt="image">
             {{this.name}}
+            <a href="/albums/{{this.id}}">View Albums</a>
+            {{!-- <form action="/artist-search" method="GET">
+            <button type="submit">View Albums</button> --}}
         {{/each}}
     </div>
 </div>

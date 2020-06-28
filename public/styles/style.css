@@ -4,3 +4,7 @@ body {
 }
 
 .artist-search-results {}
+
+img {
+    height: 70px; 
+}
