@@ -33,13 +33,37 @@ hbs.registerPartials(__dirname + "/views/partials");
 app.get("/", (req, res) => res.render(__dirname + "/views/home.hbs"));
 
 app.get("/artists", (req, res) => {
-  
   spotifyApi
     .searchArtists(req.query.artist)
     .then((data) => {
-      console.log("The received data from the API: ", data.body.artists);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render(__dirname + "/views/artist-search-results.hbs");
+      const arrayArtists = data.body.artists.items;
+      res.render(__dirname + "/views/artist-search-results.hbs", {
+        arrayArtists,
+      });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+app.get("/albums/:artistId", (req, res) => {
+   spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then((data) => {
+      const albumsData = data.body.items;
+      res.render(__dirname + "/views/albums.hbs", { albumsData });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+app.get("/tracks/:artistId", (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.artistId)
+    .then((data) => {
+      const tracksData = data.body.items;
+      res.render(__dirname + "/views/tracks.hbs", { tracksData });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

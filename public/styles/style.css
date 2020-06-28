@@ -1,4 +1,4 @@
-body {
+* {
   margin: 0;
 }
 
@@ -132,4 +132,58 @@ body {
   padding: 20px 10px;
   color: #F6F6F6;
   font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+.container-albums,.continer-artist{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.album, .artist{
+width: 30%;
+}
+
+.album .image, .artist img{
+  width: 100%;
+  }
+
+.btn{
+  background-color: red;
+  color: white;
+  padding: 5px 10px;
+}
+.container-header-tracks{
+  background-color: grey;
+}
+.header-tracks{
+  margin: 0 auto;
+  color:white;
+  display: flex;
+  justify-content: space-between;
+  max-width: 800px;
+}
+
+.container-tracks{
+  margin: 0 auto;
+  max-width: 800px;
+}
+.track{
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 5px;
+  background-color: rgb(243,243,243);
+  padding: 10px;
+}
+.audio{
+  border-radius: 5px;
 }
