@@ -1,3 +1,55 @@
+.index-container {
+    background-image: url(https://static.pexels.com/photos/167605/pexels-photo-167605.jpeg);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.box-center {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.box-imput {
+    display: block;
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    background-image: none;
+    background-clip: padding-box;
+    border: 1px solid rgba(0, 0, 0, .15);
+    border-radius: .25rem;
+    transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
+}
+
+#center {
+    margin-top: 50px;
+    margin-left: 132px;
+    width: 70%;
+}
+
+#center-btn {
+    margin-left: 392px;
+}
+
+
+.button-imput {
+    margin-top: 10px;
+    background-color: black;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+}
+
 .card-container {
     padding: 10px 40px;
 }
@@ -22,8 +74,6 @@
     margin: 0;
 }
 
-
-
 .card-title-container a {
     color: #fff;
     font-size: 12px;
@@ -31,20 +81,24 @@
     border-radius: 5px;
     padding: 4px 10px;
 }
+
 .track-header {
   background-color: #4A4A4A;
   padding: 20px 10px;
   color: #F6F6F6;
   font-size: 20px;
 }
+
 .track-container {
     background-color: #F6F6F6;
     margin-bottom: 2px;
     padding: 10px 0;
 }
+
 .track-container p {
     margin-bottom: 0;
 }
+
 audio {
     width: 300px;
     height: 54px;
