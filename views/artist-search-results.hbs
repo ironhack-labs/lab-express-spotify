@@ -1,13 +1,9 @@
 <div class="continer-artist">
     {{#each arrayArtists }}
     <div class="artist">
-        <img src="{{ images.[0].url}}" alt="">
+        <img src="{{ images.[0].url}}" alt="image {{ name }}">
         <h6>{{ name }}</h6>
         <a class="btn" href="/albums/{{id}}">View Albums</a>
-
     </div>
-
     {{/each}}
-
-
 </div>

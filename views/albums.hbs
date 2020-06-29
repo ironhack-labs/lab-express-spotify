@@ -1,7 +1,7 @@
 <div class="container-albums">
     {{#each albumsData }}
     <div class="album">
-        <img class="image" src="{{images.[0].url}}" alt="image of {{name}}" />
+        <img class="image" src="{{images.[0].url}}" alt="image {{name}}" />
         <div>
             <h6>{{name}}</h6>
             <a class="btn" href="/tracks/{{id}}">View Tracks</a>
