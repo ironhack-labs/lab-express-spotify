@@ -52,6 +52,7 @@ app.get("/albums/:artistId", (req, res) => {
     .then((data) => {
       const albumsData = data.body.items;
       res.render(__dirname + "/views/albums.hbs", { albumsData });
+      
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
