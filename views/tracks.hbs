@@ -1,0 +1,10 @@
+<div id="track-wraper">
+	{{#each items as |track|}}
+	<div class="track-wraper">
+		<p>{{track.name}}</p>
+		<audio Controls>
+			<source src="{{track.preview_url}}" />
+		</audio>
+	</div>
+	{{/each}}
+</div>

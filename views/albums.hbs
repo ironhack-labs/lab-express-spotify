@@ -1,0 +1,12 @@
+<div id="artist">
+		Albums for: {{items.0.artists.0.name}}
+	</div>
+<div id="album-wraper">
+	{{#each items as |album|}}
+	<div clas="album-wraper">
+		<img src="{{album.images.0.url}}" />
+		<p>{{album.name}}</p>
+		<a href="/tracks/{{album.id}}" class="btn btn-primary">View Tracks</a>
+	</div>
+	{{/each}}
+</div>
