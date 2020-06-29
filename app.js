@@ -4,6 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
+
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
@@ -13,7 +14,6 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
-
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET
@@ -32,12 +32,15 @@ app.get('/', (req, res) => {
 });
 
 app.get('/artist-search', (req, res) => {
-  
+  // console.log(req.query);
   spotifyApi
-  .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
+  .searchArtists(req.query.artist)
   .then(data => {
+    const artist = data.body.artists.items;
+    console.log(artist);
+    console.log(artist.images);
     console.log('The received data from the API: ', data.body);
-    res.render('artist-search');
+    res.render('artist-search-results', { artist });
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
