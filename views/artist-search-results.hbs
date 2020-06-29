@@ -1,0 +1,25 @@
+<div class="container">
+    <div class="row">
+        {{#each artist}}
+            <div class="col-lg-4 artist-container">
+                {{#if this.images}}
+                <img src="{{this.images.[0].url}}" alt="Picture" class="artist-img">
+                    <div class="artist-info-container">
+                        <p>{{this.name}}</p>
+                        <a href="/albums/{{id}}">View Albums</a>
+                    </div>
+                    {{else}}
+                    <div>
+                        <img src="https://us.123rf.com/450wm/pavelstasevich/pavelstasevich1811/pavelstasevich181101065/112815953-stock-vector-no-image-available-icon-flat-vector.jpg?ver=6" class="artist-img">
+                    </div>
+                        <div class="artist-info-container">
+                        <p>{{this.name}}</p>
+                        <a href="/albums/{{id}}">View Albums</a>
+                    </div>
+                {{/if}}
+            </div>
+        {{/each}} 
+    </div>
+</div> 
+
+

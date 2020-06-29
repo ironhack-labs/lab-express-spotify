@@ -1,0 +1,73 @@
+.home {
+    background-image: url("https://media.stubhubstatic.com/stubhub-catalog/d_defaultLogo.jpg/t_f-fs-0fv,q_auto:low,f_auto,c_fill,dpr_2.0,$w_750,$h_416/grouping/50187502/81b6c25c8c0cff839c97c7cc8f112c96");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.home-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60%;
+    text-align: center;
+}
+
+.home-search {
+    margin-top: 30px;
+    color: white;
+    background-color: palevioletred;
+    border: 3px solid  palevioletred;
+}
+
+.form-wrapper {
+    background-color: white;
+    width: 50%;
+    height: 200px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+
+.home-search:hover, .home-search:active {
+    color:  palevioletred;
+    background-color: white;
+    border: 3px solid  palevioletred;
+}
+
+#search_bar {
+    width: 100%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+}
+
+.artist-img {
+    width: 100%;
+}
+
+.artist-info-container {
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.artist-info-container p {
+    color: rgb(135, 185, 250);
+    font-size: 18px;
+    margin: 0;
+}
+
+.artist-info-container a {
+    color: #fff;
+    font-size: 12px;
+    background-color:palevioletred;
+    border-radius: 8px;
+    padding: 4px 10px;
+}
+
+audio {
+    width: 100%;
