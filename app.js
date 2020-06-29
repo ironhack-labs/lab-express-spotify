@@ -50,7 +50,8 @@ app.get('/albums/:artistId', (req, res, next) => {
   .getArtistAlbums(req.params.artistId)
   .then(data => {
 
-    console.log('Albums of artist: ', data.body);
+    // console.log('Albums of artist: ', data.body);
+    // res.json(data)
     res.render('albums', {album: data.body.items});
 
   })
@@ -64,7 +65,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
   .getAlbumTracks(req.params.albumId)
   .then(data => {
 
-    console.log('Tracks of albums: ', data.body.items);
+    // console.log('Tracks of albums: ', data.body.items);
     res.render('tracks', {tracks: data.body.items});
 
   })

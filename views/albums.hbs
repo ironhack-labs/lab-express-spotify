@@ -1,14 +1,24 @@
 
-{{#each album}}
+<div class="container">
 
-    <div class="card" style="width: 18rem;">
+    {{#if album}}
+        <h2>Albums for: {{album.0.artists.0.name}}</h2>
+    {{/if}}
 
-        <img src="{{this.images.0.url}}" class="card-img-top" alt="{{this.name}} album cover">
-        <div class="card-body">
-            <h5 class="card-title">{{this.name}}</h5>
-            <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
-        </div>
+    <div class="row">
+
+        {{#each album}}
+            
+            <div class="col-lg-4 artist-container">
+                <img src="{{this.images.0.url}}" class="artist-image" alt="{{this.name}} image">
+                <div class="artist-info-container">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-primary">View albums</a>
+                </div>
+            </div>
+
+        {{/each}}
 
     </div>
 
-{{/each}}
+</div>

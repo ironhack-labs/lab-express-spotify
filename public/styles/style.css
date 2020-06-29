@@ -1,0 +1,102 @@
+
+/* ----HOME---- */
+
+#home {
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    height: 100vh;
+}
+
+.home-container {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 40rem;
+    height: 15rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+}
+
+.home-flex {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-container {
+    width: 400px;
+    height: 40px;
+    margin: 70px 0 20px 130px;
+    padding-left: 10px;
+}
+
+.search-container {
+    width: 300px;
+    height: 50px;
+    margin-left: 185px;
+    color: #ffffff;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+}
+
+.search-container:hover {
+    color: #ff6666;
+    border: 1px solid #ff6666;
+    background-color: #F6F6F6;
+}
+
+/* ----ARTISTS & ALBUMS---- */
+
+.artist-container {
+    padding: 10px 40px;
+}
+
+.artist-info-container {
+    background-color: #4D4D4D;
+    text-align: center;
+    padding-bottom: 10px;
+    color: #ffffff;
+}
+
+.artist-image {
+    width: 100%;
+}
+
+.artist-info-container a {
+    border: 1px solid #ff6666;
+    background-color: #ff6666;
+}
+
+.container h2 {
+    margin: 40px 0 40px 23rem;
+}
+
+/* ----TRACKS---- */
+
+.header-row {
+    background-color: #4A4A4A;
+    padding: 20px 10px;
+    color: #F6F6F6;
+    font-size: 20px;
+}
+
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+.track-item {
+    background-color: #F6F6F6;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
