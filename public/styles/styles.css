@@ -279,4 +279,31 @@ body {
   color: #878787;
   margin-left: 1rem;
 }
+
+#error-page {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: center;
+}
+
+#error-page img {
+  width: 15rem;
+  height: 15rem;
+  margin-top: 10rem;
+}
+
+#error-page h1 {
+  font-size: 8rem;
+  font-weight: 600;
+  color: #1db954;
+}
+
+#error-page a {
+  font-weight: 600;
+  color: #1db954;
+}
 /*# sourceMappingURL=styles.css.map */

@@ -240,3 +240,25 @@ body {
     margin-left: 1rem;
   }
 }
+
+#error-page {
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  img {
+    width: 15rem;
+    height: 15rem;
+    margin-top: 10rem;
+  }
+
+  h1 {
+    font-size: 8rem;
+    font-weight: 600;
+    color: #1db954;
+  }
+
+  a {
+    font-weight: 600;
+    color: #1db954;
+  }
+}

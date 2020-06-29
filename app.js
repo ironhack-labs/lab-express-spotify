@@ -46,9 +46,10 @@ app.get('/artist-search', (req, res) => {
         search: req.query.artist
       })
     })
-    .catch((err) =>
+    .catch((err) => {
       console.log('The error while searching artists occurred: ', err)
-    )
+      res.render('error', err)
+    })
 })
 
 app.get('/albums/:id', (req, res) => {
@@ -61,7 +62,8 @@ app.get('/albums/:id', (req, res) => {
       })
     },
     (err) => {
-      console.error(err)
+      console.log('Something went wrong!', err)
+      res.render('error', err)
     }
   )
 })
@@ -82,6 +84,7 @@ app.get('/tracks/:id', (req, res) => {
     },
     (err) => {
       console.log('Something went wrong!', err)
+      res.render('error', err)
     }
   )
 })
