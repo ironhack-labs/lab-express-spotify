@@ -1,0 +1,22 @@
+<div class="container   mt-5">
+    <div class="row bg-dark text-white pt-3 pb-3">
+        <div class="col-sm-8">
+            Tracks
+        </div>
+        <div class="col-sm-4">
+            Play
+        </div>
+    </div>
+    {{#each data.body.items}}
+    <div class="row mt-1 mb-1 bg-light">
+        <div class="col-sm-8 pt-3">
+            {{this.name}}
+        </div>
+        <div class="col-sm-4 pt-1 pb-2">
+            <video controls="" name="media" style="margin: 0;">
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+            </video>
+        </div>
+    </div>
+    {{/each}}
+</div>

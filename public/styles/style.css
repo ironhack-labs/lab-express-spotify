@@ -1,0 +1,51 @@
+body {
+    box-sizing: border-box;
+}
+
+.card,
+.albums {
+    padding: 10px;
+    margin: 10px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+iframe,
+video {
+    margin: 0;
+    height: 44px;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    outline: none;
+}
+
+.spotify {
+    height: 100vh;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-search {
+    background-color: #ffffff99;
+    padding: 50 50;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    width: 50%;
+}
+
+.logo {
+    width: 300px;
+}
