@@ -1,0 +1,14 @@
+<section>
+    {{#each items as |track|}}
+    <div class="row track-item">
+        <div class="col-lg-8">
+            <figure>
+                <p>Listen to {{track.name}}</p>
+                <div class="col-lg-4">
+                    <audio controls="" src="{{track.preview_url}}" class="audio-size"></audio>
+                </div>
+            </figure>
+        </div>
+    </div>
+    {{/each}}
+</section>

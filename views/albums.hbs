@@ -1,0 +1,12 @@
+<section>
+    <div>
+        <h1>Album for {{items.0.artist.0.name}}</h1>
+    </div>
+    <div>
+        {{#each items as |album|}}
+            <img src="{{album.images.0.url}}" alt="Photo album"/>
+            <span>{{album.name}}</span>
+            <a href="/tracks/{{album.id}}">Views Tracks</a>
+        {{/each}}
+    </div>
+</section>
