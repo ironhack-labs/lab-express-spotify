@@ -1,0 +1,18 @@
+html, body {
+    /*min-height: 100vh;*/
+    height: 100%;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+main {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+}
