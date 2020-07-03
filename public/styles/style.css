@@ -20,7 +20,6 @@ body{
 
 .form-search {
     background-color: rgba(255, 255, 255, 0.6);
-    width: 20em;
     display: flex;
     flex-direction: column;
     align-items:center;
