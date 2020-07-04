@@ -1,0 +1,103 @@
+body{
+  min-height: 100vh;
+}
+
+nav{
+  background-color: black;
+  height: 8vh;
+  display: flex;
+  justify-content: space-around;
+  padding: 1rem;
+}
+nav>a{
+  color: rgb(214, 214, 214);
+  font-weight: bolder;
+  font-size: 1.2rem;
+}
+nav>a:hover{
+  color: #888888;
+}
+.home-page{
+  background-image: url('../images/spotify-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.search-form{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#artistInput{
+  margin: 1rem;
+}
+
+.title{
+  padding: 1.5rem;
+  display: flex;
+  justify-content: center;
+  text-shadow: 3px 1px #888888;
+  font-size: 1.5rem;
+  border-bottom: 1px solid #888888;
+  align-self: center;
+}
+.card-container{
+  background-color: rgb(168, 168, 168);
+  min-height: 100vh;
+  padding: 4rem;
+  padding-top: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+}
+.card{
+  border: 1px solid gray;
+  border-radius: 0.3rem;
+  box-shadow: 5px 10px #888888;
+  width: 18rem;
+  height: 18rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* flex-grow: 1; */
+}
+.view-more-btn{
+  margin: 0.5rem;
+}
+.content{
+  background-color: rgb(168, 168, 168);
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.track-container{
+  margin: 1rem;
+  border: 1px solid black;
+  border-radius: 0.6rem;
+  box-shadow: 5px 10px #888888;
+  background-color: rgb(241,243,244);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+
+}
+.track-card{
+  border-bottom: 1px solid gray;
+  width: 30rem;
+  margin: 1rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.audio-controls{
+  width: 15rem;
+}
