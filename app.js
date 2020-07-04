@@ -45,7 +45,7 @@ const spotifyApi = new SpotifyWebApi({
       res.render("tracks", { tracks });
     });
     
-    app.listen(3000, () =>
+    app.listen((process.env.PORT || 3000), () =>
       console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
     );
 
