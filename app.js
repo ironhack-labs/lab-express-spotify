@@ -31,7 +31,6 @@ const spotifyApi = new SpotifyWebApi({
     
     app.get("/artist-search", async (req, res) => {
       const artistSearched = await spotifyApi.searchArtists(req.query.artist)
-      console.log(artistSearched.body.artists.items)
       res.render("artist-search", { artists: artistSearched.body.artists.items })
     });
     

@@ -1,3 +1,6 @@
+*{
+  font-family: 'Roboto', sans-serif;
+}
 body{
   min-height: 100vh;
 }
@@ -23,8 +26,15 @@ nav>a:hover{
   background-size: cover;
   height: 100vh;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start;
+}
+.home-page>h1{
+  text-shadow: 3px 3px 3px rgb(207, 207, 207);
+  font-size: 3rem;
+  font-weight: bolder;
+  margin: 8rem;
 }
 .search-form{
   display: flex;
