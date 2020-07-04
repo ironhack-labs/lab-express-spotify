@@ -3,10 +3,8 @@
 </div>
 <div class="card-container">
     {{#each albums }}
-    <div class="card">
-        <h6>{{name}}</h6>
-        <img src="{{images.[0].url}}" alt="band" width="150" height="150" />
-        <a href="/albums/tracks/{{id}}"> <button class="btn btn-dark view-more-btn" > View Tracks </button> </a>
-    </div>
+    <a class="card" href="/albums/tracks/{{id}}"> 
+        <img class="card-img" src="{{images.[0].url}}" alt="band" width="150" height="150"> {{name}} </img>
+    </a>
     {{/each}}
 </div>
