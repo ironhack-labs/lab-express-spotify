@@ -162,3 +162,39 @@ audio {
   width: 200px;
   height: 25px;
 }
+
+
+@media only screen and (max-width: 600px){
+  .home-page>h1{
+    text-align: center;
+  }
+  .card-container{
+    justify-content: center;
+    padding: 0;
+  }
+  .card{
+    margin: 0.8rem;
+    height: 6rem;
+    width: 6rem;
+  }
+  .card>h4{
+    font-size: 0.8rem;
+    text-align: center;
+  }
+  .content{
+    width: 100vw;
+  }
+  .track-container{
+    width: 90vw;
+  }
+  .track-card{
+    width: 80vw;
+  }
+  .track-card>h6{
+    font-size: 0.7rem;
+
+  }
+  .audio-controls{
+    width: 40vw;
+  }
+}
