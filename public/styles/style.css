@@ -207,4 +207,7 @@ audio {
     height: 86vh;
     overflow: hidden;
   }
+  .card:hover{
+    font-size: 0.8rem
+  }
 }
