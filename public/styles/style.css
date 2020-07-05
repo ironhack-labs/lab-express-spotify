@@ -197,4 +197,14 @@ audio {
   .audio-controls{
     width: 40vw;
   }
+  footer>p, footer>a{
+    font-size: 0.55rem;
+  }
+  .home-page>h1{
+    margin: 5rem;
+  }
+  .home-page{
+    height: 86vh;
+    overflow: hidden;
+  }
 }
