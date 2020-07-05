@@ -4,7 +4,7 @@
   padding: 0;
 }
 body{
-  min-height: 100vh;
+  min-height: 90vh;
 }
 
 nav{
@@ -52,11 +52,14 @@ footer>a:hover{
   background-image: url('../images/spotify-background.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
+}
+.main{
+  min-height: 90vh;
 }
 .home-page>h1{
   text-shadow: 3px 3px 3px rgb(207, 207, 207);
@@ -84,7 +87,7 @@ footer>a:hover{
 }
 .card-container{
   background-color: rgb(168, 168, 168);
-  min-height: 100vh;
+  min-height: 80vh;
   padding: 4rem;
   padding-top: 0;
   display: flex;
@@ -126,6 +129,7 @@ footer>a:hover{
 }
 
 .content{
+  min-height: 70vh;
   background-color: rgb(168, 168, 168);
   display: flex;
   flex-direction: column;
