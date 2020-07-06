@@ -1,0 +1,251 @@
+* {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+
+  body {
+    min-height: 90vh;
+  }
+  
+  nav {
+    background-color: black;
+    height: 8vh;
+    display: flex;
+    justify-content: space-around;
+    padding: 1rem;
+  }
+
+  nav > a {
+    color: rgb(214, 214, 214);
+    font-weight: bolder;
+    font-size: 1.2rem;
+  }
+
+  nav > a:hover {
+    color: #888888;
+  }
+
+  footer {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: black;
+    color: rgb(131, 131, 131);
+    padding: 0.8rem;
+    font-size: 0.8rem;
+  }
+
+  footer > p {
+    margin: 0;
+  }
+
+  footer > p > a, footer > p > a:hover {
+    color: #888888;
+    /* text-decoration: none; */
+  }
+
+  footer > a {
+    color: rgb(131, 131, 131);
+    display: flex;
+    align-items: center;
+  }
+
+  footer > a:hover {
+    color: rgb(206, 206, 206);
+  
+    text-decoration: none;
+  }
+
+  .home-page {
+    background-image: url('../images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+  }
+
+  .main {
+    min-height: 90vh;
+  }
+
+  .homepage > h1 {
+    text-shadow: 3px 3px 3px rgb(207, 207, 207);
+    font-size: 3rem;
+    font-weight: bolder;
+    margin: 8rem;
+  }
+
+  .search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #artistInput {
+    margin: 1rem;
+  }
+  
+  .title {
+    padding: 1.5rem;
+    display: flex;
+    justify-content: center;
+    text-shadow: 3px 1px #888888;
+    font-size: 1.5rem;
+    border-bottom: 1px solid #888888;
+    align-self: center;
+  }
+
+  .card-container {
+    background-color: rgb(168, 168, 168);
+    min-height: 80vh;
+    padding: 4rem;
+    padding-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .card {
+    border: 1px solid gray;
+    border-radius: 0.3rem;
+    box-shadow: 5px 10px #888888;
+    width: 18rem;
+    height: 18rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    color: white;
+    text-shadow: 3px 3px 5px #2c2c2c;
+  }
+
+  .card:hover {
+    color: black;
+    font-size: 2rem;
+    text-align: center;
+  }
+
+  .card > h4 {
+    margin: 1rem;
+    align-self: center;
+    z-index: 10000;
+    opacity: 80%;
+  }
+
+  .card-img {
+    border-radius: 0.2rem;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+  }
+
+  .card-img:hover {
+    opacity: 50%;
+  }
+  
+  .content {
+    min-height: 70vh;
+    background-color: rgb(168, 168, 168);
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .track-container {
+    margin: 1rem;
+    border: 1px solid black;
+    border-radius: 0.6rem;
+    box-shadow: 5px 10px #888888;
+    background-color: rgb(241,243,244);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+    align-self: center;
+    padding: 0.5rem;
+  }
+
+  .track-card {
+    border-bottom: 1px solid gray;
+    width: 30rem;
+    margin: 1rem;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+  }
+
+  .audio-controls {
+    width: 15rem;
+  }
+
+  audio {
+    filter: sepia(20%) saturate(70%) grayscale(1) contrast(99%) invert(12%);
+    width: 200px;
+    height: 25px;
+  }
+  
+  
+  @media only screen and (max-width: 600px){
+    .homepage > h1 {
+      text-align: center;
+    }
+
+    .card-container {
+      justify-content: center;
+      padding: 0;
+    }
+
+    .card {
+      margin: 0.8rem;
+      height: 6rem;
+      width: 6rem;
+    }
+
+    .card > h4 {
+      font-size: 0.8rem;
+      text-align: center;
+    }
+
+    .content {
+      width: 100vw;
+    }
+
+    .track-container {
+      width: 90vw;
+    }
+
+    .track-card {
+      width: 80vw;
+    }
+
+    .track-card > h6 {
+      font-size: 0.7rem;
+    }
+
+    .audio-controls {
+      width: 40vw;
+    }
+
+    footer > p, footer > a {
+      font-size: 0.55rem;
+    }
+
+    .homepage > h1 {
+      margin: 5rem;
+    }
+
+    .homepage {
+      height: 86vh;
+      overflow: hidden;
+    }
+
+    .card:hover {
+      font-size: 0.8rem
+    }
+  }

@@ -1,0 +1,18 @@
+ 
+{{#with tracks.[0]}}
+<div class="title">
+    {{!-- {{artists.[0].name}}  --}}
+    <h1>Tracks</h1>
+</div>
+{{/with}}
+
+<div class="content">
+    <div class="track-container">
+        {{#each tracks }}
+        <div class="track-card">
+            <h6>{{track_number}}. {{name}}</h6>
+            <audio class="audio-controls" controls src={{preview_url}}></audio>
+        </div>
+        {{/each}}
+    </div>
+</div>
