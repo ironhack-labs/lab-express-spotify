@@ -46,7 +46,6 @@ const spotifyApi = new SpotifyWebApi({
     app.get("/albums/tracks/:tracksId", async (req, res) => {
       const albumTracks = await spotifyApi.getAlbumTracks(req.params.tracksId)
       const tracks = albumTracks.body.items;
-      console.log(tracks)
       res.render("tracks", { tracks });
     });
     
