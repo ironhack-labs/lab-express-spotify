@@ -1,0 +1,26 @@
+#nameAthor {
+  width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#search{
+  top: 35%;
+  left: 35%;
+}
+
+#search input{
+  padding-right: 60px;
+}
+.bg {
+    /* The image used */
+  background-image: url("/images/spotify-background.jpeg");
+    /* Full height */
+  height: 100%;
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}

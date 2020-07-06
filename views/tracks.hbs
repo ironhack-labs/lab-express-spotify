@@ -1,15 +1,7 @@
-<head>
-    <link type="text/css" rel="stylesheet"
-        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
-    <link type="text/css" rel="stylesheet" href="/stylesheets/styles.css" />
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-</head>
-
-
 <div class="container">
     <header class="blog-header py-3">
         <div class="row flex-nowrap justify-content-between align-items-center">
-            <div class="col-4 pt-1">
+            <div class="col-6 pt-1">
                 <p>Title</p> 
             </div>   
             <div class="col-4 d-flex justify-content-end align-items-center">
@@ -19,13 +11,18 @@
     </header>
     <ul class="list-group list-group-flush">
     {{#each tracks}}
-        <div>
-            <li class="list-group-item">{{this.name}}</p> 
-            <audio controls>
-                <source src="{{this.preview_url}}" type="audio/mp3">
-            </audio>
-            </li>
-        </div>
+        <li class="list-group-item list-group-item-secondary">
+            <div class="row">
+                <div class="col-md-6 text-left">
+                    <p id="nameAthor">{{this.name}}</p>
+                </div>
+                <div class="col-md-6 text-right">
+                     <audio controls>
+                        <source src="{{this.preview_url}}" type="audio/mp3">
+                    </audio>    
+                </div>       
+            </div>
+        </li>
     {{/each}}
     </ul>
 </div>

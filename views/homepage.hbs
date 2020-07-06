@@ -1,11 +1,15 @@
 {{!-- GET localhost:3000/search-artist?artist=Elvis --}}
+<div class="bg" style="height: 1000px;">
+    <div id="search" class="card bg-light mb-3 border-dark" style="width: 500px;">
+        <div class="card-body">
+            <h1 class="card-title">The best ever Spotify app</h1>
 
-<form action="/artist-search" method="GET">
-
-    <label for="artistInput">
-        <input id="artistInput" name="artist" />
-    </label>
-    <button type="submit">
-        Search for an artist
-    </button>
-</form>
+            <form action="/artist-search" method="GET">
+                <label for="artistInput">
+                    <input id="artistInput" name="artist" />
+                </label>
+                <button type="submit" class="btn btn-info">Search for an artist</button>
+            </form>
+        </div>            
+    </div>
+</div>
