@@ -199,7 +199,7 @@ audio {
 
   }
   .audio-controls{
-    width: 40vw;
+    max-width: 38vw;
   }
   footer>p, footer>a{
     font-size: 0.55rem;

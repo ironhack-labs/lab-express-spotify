@@ -36,12 +36,17 @@ const spotifyApi = new SpotifyWebApi({
     
     app.get("/albums/:artistId", async (req, res) => {
       const artistAlbums = await spotifyApi.getArtistAlbums(req.params.artistId)
-      res.render('albums', {albums: artistAlbums.body.items})
+      const albums = artistAlbums.body.items.map(item => {
+        item.name = item.name.slice(0,20)
+        return item
+      })
+      res.render('albums', {albums: albums, artist: albums[0].artists[0]})
     });
     
     app.get("/albums/tracks/:tracksId", async (req, res) => {
       const albumTracks = await spotifyApi.getAlbumTracks(req.params.tracksId)
       const tracks = albumTracks.body.items;
+      console.log(tracks)
       res.render("tracks", { tracks });
     });
     
