@@ -57,7 +57,7 @@
     text-decoration: none;
   }
 
-  .home-page {
+  .homepage {
     background-image: url('../images/spotify-background.jpeg');
     background-repeat: no-repeat;
     background-size: cover;
@@ -67,7 +67,7 @@
     align-items: center;
     justify-content: flex-start;
   }
-
+  coqueirocast
   .main {
     min-height: 90vh;
   }
