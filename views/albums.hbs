@@ -1,0 +1,21 @@
+<head>
+    <link type="text/css" rel="stylesheet"
+        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" />
+    <link type="text/css" rel="stylesheet" href="/stylesheets/styles.css" />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+</head>
+
+<div class="album py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            {{#each albums}}
+                <div class="col-md-4">
+                    <img style="height: 350px; width: 100%; display: block;" src="{{images.[0].url}}" alt="">
+                    <p>{{this.name}}</p>
+                    <a class="badge badge-danger" href="/albums/tracks/{{this.id}}">View Tracks</a>
+                </div>
+
+            {{/each}}
+        </div>
+    </div>
+</div>
