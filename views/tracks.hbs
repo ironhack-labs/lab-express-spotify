@@ -10,8 +10,8 @@
     <div class="track-container">
         {{#each tracks }}
         <div class="track-card">
-            <h6>{{track_number}}. {{name}}</h6>
-            <audio class="audio-controls" controls src={{preview_url}}></audio>
+            <h6>{{this.track_number}}{{this.name}}</h6>
+            <audio class="audio-controls" controls src={{this.preview_url}}></audio>
         </div>
         {{/each}}
     </div>

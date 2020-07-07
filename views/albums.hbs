@@ -4,8 +4,8 @@
 </div>
 <div class="card-container">
     {{#each albums }}
-    <a class="card" href="./tracks.hbs"> 
-        <img class="card-img" src="{{images.[0].url}}" alt="band" width="150" height="150"> {{name}} </img>
+    <a class="card" href="/albums/tracks/{{this.id}}"> 
+        <img class="card-img" src="{{images.[0].url}}" alt="band" width="150" height="150"> {{this.name}} </img>
     </a>
     {{/each}}
 </div>
