@@ -1,18 +1,16 @@
- 
-{{#with tracks.[0]}}
-<div class="title">
-    {{!-- {{artists.[0].name}}  --}}
-    <h1>Tracks</h1>
-</div>
-{{/with}}
-
-<div class="content">
-    <div class="track-container">
-        {{#each tracks }}
-        <div class="track-card">
-            <h6>{{this.track_number}}{{this.name}}</h6>
-            <audio class="audio-controls" controls src={{this.preview_url}}></audio>
-        </div>
-        {{/each}}
-    </div>
-</div>
+<ul>
+    {{#each tracks}}
+        <li>
+            <h4>{{this.name}}</h4>
+            <br>
+            {{#if this.preview_url}}
+                <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            {{else}}
+                <p><b>No preview available! Sorry!</b></p>
+            {{/if}}
+        </li>
+    {{/each}}
+</ul>

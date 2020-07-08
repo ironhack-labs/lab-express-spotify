@@ -1,11 +1,14 @@
+ 
+<ul>
+    {{#each albums}}
+        <li>
+            {{this.name}}
+            <br>
+            <img src="{{this.images.2.url}}" alt="{{this.name}}">
+            <br>
 
-<div class="title">
-    <h1>Albums</h1>
-</div>
-<div class="card-container">
-    {{#each albums }}
-    <a class="card" href="/albums/tracks/{{this.id}}"> 
-        <img class="card-img" src="{{images.[0].url}}" alt="band" width="150" height="150"> {{this.name}} </img>
-    </a>
+            {{!-- to see the tracks we need to provide the ID in the URL so it gets picked up by req.params in the route --}}
+            <a href="/tracks/{{this.id}}">View tracks</a>
+        </li>
     {{/each}}
-</div>
+</ul>
