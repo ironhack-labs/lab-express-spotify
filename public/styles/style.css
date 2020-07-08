@@ -1,0 +1,35 @@
+.home-page {
+	background-image: url(../images/spotify-background.jpeg);
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	height: 100vh;
+}
+
+.form-wrapper {
+	padding: 2em;
+	background-color: rgba(232, 232, 232, 0.5);
+	position: absolute;
+	top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 50%;
+    text-align: center;
+}
+
+form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+input {
+	margin: 1em;
+	width: 50%;
+}
+
+.home-btn {
+	color: white;
+	background-color: #ff6666;
+	border: 0;
+	padding: 0.5em;
+}
