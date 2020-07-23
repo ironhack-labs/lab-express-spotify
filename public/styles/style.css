@@ -1,0 +1,169 @@
+* {
+    font-family: sans-serif;
+    line-height: 1.15;
+
+}
+
+.background-index {
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    border: 0;
+     
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: 30%;
+ 
+}
+
+.search-container > form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 90%;
+    height: 80%;
+    background-color: rgba(255, 255, 255, 0.719);
+
+}
+
+.search-container input {
+    width: 60%;
+    height: 2.5rem;
+    padding-left: 1rem;
+    font-size: 1.1rem;
+    border: 1.4px solid lightgray;
+
+}
+.search-container button {
+    background-color: #ff6666;
+    color: white;
+    margin-top: 10px;
+    border: 1px solid #ff6666;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+
+}
+
+.search-container button:hover {
+    background-color: white;
+    color: #ff6666
+}
+
+.artist-result {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* border: 1px solid fuchsia; */
+    height: 100%;
+    width: 100%;
+    background-color: white;
+
+}
+
+.results-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;    
+    /* border: 1px solid green; */
+    height: 90%;
+    width: 90%;
+
+}
+
+.indiv-container {
+    /* border: 1px solid white; */
+    height: 480px;
+    width: 350px;
+    margin: 2rem;
+    box-shadow: 2px 2px 5px black;
+}
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    /* border: 1px solid red; */
+    height: 80%;
+    width: 100%;
+
+}
+
+.img-container > img {
+     width: 100%;
+
+}
+
+.text-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+    height: 20%;
+    color: white;
+    font-size: 1.2rem;
+
+}
+
+.text-container > a {
+    background-color: #ff6666;
+    color: white;
+    border: 1px solid #ff6666;
+    padding: .25rem .5rem;
+    font-size: 1rem;
+    text-decoration: none;
+    border-radius: .5rem;
+}
+
+.text-container > a:hover {
+    background-color: white;
+    color: #ff6666
+}
+
+.text-container > p {
+    text-align: center;
+    margin-bottom: .70rem;
+}
+
+/* ViewTracks */
+
+.viewtrack-results{
+    display: flex;
+    justify-content: center;
+
+}
+.viewtrack-table {
+    width: 75%;
+}
+
+.table-top {
+    border: 1px solid blue;
+    background-color: rgb(82, 82, 82);
+    height: 6rem;
+    color: lightgrey;
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.table-top > th {
+    padding-left: 2rem;
+}
+
+.song-bar {
+    background-color: #f1f3f4;
+}
+
+.name-song {
+    padding-left: 2.5rem;
+    font-weight: bold;
+}

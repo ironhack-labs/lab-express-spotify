@@ -40,10 +40,10 @@ app.get('/artist-search', (req, res, next) => {
 spotifyApi
   .searchArtists(search)    
   .then(data => {
-    console.log('The received data from the API: ', data.body);
+    // console.log('The received data from the API: ', data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     let artist = data.body.artists.items;
-    console.log(artist)
+    // console.log(artist)
     
     res.render('artist-search-results', artist)
   })
@@ -69,7 +69,7 @@ app.get('/albums/:artistId', (req, res, next) => {
 app.get('/viewTracks/:albumId', (req, res, next) => {
 
   let idAlbum = req.params.albumId
-  console.log(idAlbum)
+  // console.log(idAlbum)
 
   spotifyApi
     .getAlbumTracks(idAlbum)

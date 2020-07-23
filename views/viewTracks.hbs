@@ -1,19 +1,18 @@
-
-   <table>
-       <tr>
+<section class="viewtrack-results">
+   <table class="viewtrack-table">
+       <tr class="table-top">
            <th>Title</th>
            <th>Listen</th>
        </tr>
        {{#each this}}
         {{#if name}}
-        <tr>
-            <td>{{name}}</td>
+        <tr class="song-bar">
+            <td class="name-song">{{name}}</td>
             <td>
                 <audio controls src={{preview_url}}></audio>
             </td>
         </tr>
         {{/if}}
        {{/each}}
-       
-
-   </table>
+    </table>
+</section>

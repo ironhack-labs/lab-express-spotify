@@ -1,11 +1,17 @@
-{{#each this}}
-<div>
-    <div>
-        <img src="{{images.[0].[url]}}" alt="image artist">
+<section class="artist-result">
+    <div class="results-container">
+        {{#each this}}
+        {{#if name}}
+        <div class="indiv-container">
+            <div class="img-container">
+                <img src="{{images.[0].[url]}}" alt="image artist">
+            </div>
+            <div class="text-container">
+                <p>{{name}}</p>
+                <a href="/viewTracks/{{id}}">View Tracks</a>
+            </div>
+        </div>
+        {{/if}}
+        {{/each}}
     </div>
-    <div>
-        <p>{{name}}</p>
-        <a href="/viewTracks/{{id}}">View Tracks</a>
-    </div>
-</div>
-{{/each}}
+</section>
