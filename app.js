@@ -31,17 +31,20 @@ app.get("/artist-search", (req, res, next) => {
 app.get("/albums/:artistId", (req, res, next) => {
   let albums = req.params.artistId;
   // console.log(req.params)
-  spotifyApi.getArtistAlbums(albums)
+  spotifyApi
+  .getArtistAlbums(albums)
   .then((data) => {
     // console.log(data.body.items);
     res.render("albums", { cd: data.body.items });
   });
 });
 
+
 app.get("/tracks/:albumId", (req, res, next) => {
-  let {tracks} = req.params.albumId;
+  let tracks = req.params.albumId;
   // console.log(req.params)
-  spotifyApi.getAlbumTracks(tracks)
+  spotifyApi
+  .getAlbumTracks(tracks)
   .then((data) => {
     // console.log(data.body.items);
     res.render("tracks", { song: data.body.items });
