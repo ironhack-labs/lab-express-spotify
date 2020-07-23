@@ -163,6 +163,10 @@
     background-color: #f1f3f4;
 }
 
+.song-bar > td {
+    width: 50%;
+}
+
 .name-song {
     padding-left: 2.5rem;
     font-weight: bold;
