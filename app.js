@@ -55,7 +55,8 @@ app.get('/albums/:artistId', (req, res) => {
             limit: 3
         })
         .then((data) => {
-            res.render('albums', {
+            //console.log(data.body.items);;
+            res.render('albums.hbs', {
                 album: data.body.items
             })
         })
@@ -66,9 +67,9 @@ app.get('/tracks/:albumId', (req, res) => {
     spotifyApi
         .getAlbumTracks(req.params.albumId)
         .then((data) => {
-            console.log('Album tracks', data.body);
+            //console.log(data.body.items);;
             res.render('tracks.hbs', {
-                tracks: data.body
+                tracks: data.body.items
             })
         })
         .catch(err => console.log('The error occurred while getting the tracks:', err));

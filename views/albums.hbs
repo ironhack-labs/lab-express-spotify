@@ -1,6 +1,13 @@
-{{#each album}}
-<div>
-    <h1>{{name}}</h1>
-    <a href="/tracks/{{id}}">See tracks</a>
+<div class="container">
+    <div class="row">
+        {{#each album}}
+        <div class="card">
+            <image class="card-img-top" src={{this.images.0.url}}></image>
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <a href="/tracks/{{this.id}}">Listen tracks</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>
-{{/each}}
