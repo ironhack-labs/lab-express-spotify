@@ -1,0 +1,121 @@
+* {
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Index page CSS */
+
+.main-page {
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0 !important;
+    padding: 0 !important;
+    min-height: 800px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-form {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 45rem;
+    height: 13rem;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#artist-search {
+    height: 2.5rem;
+    width: 27rem;
+    margin-bottom: 1rem;
+    border: rgb(184, 184, 184)  solid 0.5px;
+    border-radius: 5px;
+    box-shadow: 5px;
+    padding-left: 1rem;
+    font-size: 1rem;
+}
+
+.artist-btn {
+    border: none;
+    color: white;
+    background-color: rgb(244, 92, 92);
+    padding: 0.5rem;
+    font-size: 1rem;
+}
+
+/* Artists & Albums Display */
+
+.main-artists {
+    padding: 2rem 8rem;
+    display: flex;
+}
+
+.artist-div {
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.element {
+    padding: 1rem;
+    height: 400px;
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+}
+
+.name-button {
+    background-color: rgb(101, 100, 100);
+    color: white;
+    height: 4rem;
+}
+
+.albums-btn {
+    background-color: rgb(244, 92, 92);
+    color: white;
+    font-weight: 400;
+    text-decoration: none;
+    border-radius: 5px;
+    margin-bottom: 0.5rem;
+}
+
+/* Tracks display */
+
+.top-bar {
+    background-color: rgb(101, 100, 100);
+    color: white;
+    margin: 0;
+    width: 100%;
+    height: 4rem;
+    font-size: 1.2rem;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.titlep {
+    padding-left: 6rem;
+}
+
+.listenp {
+    padding-right: 10rem;
+}
+
+.track-container {
+    background-color: rgb(230, 230, 230);
+    height: 4rem;
+    margin-top: 0.2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
