@@ -1,10 +1,12 @@
 <div class="container">
     <div class="row">
+        <!--"album" comes from line 61, "getArtistsAlbums-->
         {{#each album}}
         <div class="card">
             <image class="card-img-top" src={{this.images.0.url}}></image>
             <div class="card-body">
                 <h5 class="card-title">{{this.name}}</h5>
+                <!--We set the next URL with the album's ID. BACK TO APP.JS-->
                 <a href="/tracks/{{this.id}}">Listen tracks</a>
             </div>
         </div>

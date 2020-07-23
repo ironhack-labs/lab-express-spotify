@@ -1,10 +1,12 @@
 <div class="container">
     <div class="row">
+        <!--"artist" comes from app.js on searchArtist.method-->
         {{#each artist}}
         <div class="card">
             <image class="card-img-top" src={{this.images.0.url}}></image>
             <div class="card-body">
                 <h5 class="card-title">{{this.name}}</h5>
+                <!--Save the id on the button pointing at the next hbs (BACK TO APP.JS ON getArtistAlbums-->
                 <a href="/albums/{{id}}">View albums</a>
             </div>
         </div>
