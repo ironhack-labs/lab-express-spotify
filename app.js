@@ -10,8 +10,27 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-// require spotify-web-api-node package here:
 
+app.get("/", (req, res, next) => {
+  res.render('index');
+});
+
+app.get("/artist-search", (req, res, next) => {
+  let {artist} = req.query;
+  spotifyApi
+  .searchArtists(artist)
+  .then(data => {
+    console.log("artist-search", data.body); 
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+});
+
+
+
+
+
+// require spotify-web-api-node package here:
 
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
