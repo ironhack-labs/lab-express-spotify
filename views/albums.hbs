@@ -1,11 +1,18 @@
 
 <div>
 {{#each cd}}
+<div>
 <h3>Name</h3>
 <h1>{{this.name}}</h1>
+</div>
+  <div>
 <h3>Covers</h3>
 <img src="{{this.images.[0].url}}" alt="">
+</div>
+<div>
 <h3>Button</h3>
 <a href="/tracks/{{this.id}}">View Tracks</a>
+</div>
 {{/each}}
 </div>
+

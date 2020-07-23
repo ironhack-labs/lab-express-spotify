@@ -1,12 +1,15 @@
 
-<div>
+<div class="container-artist">
 {{#each artist}}
-  <h3>Name</h3>
-  <h1>{{this.name}}</h1>
-  <h3>Covers</h3>
+<div class="artist">
+  <div class="artist-img">
   <img src="{{this.images.[0].url}}" alt="">
-  <h3>Button</h3>
-  <a href="/albums/{{this.id}}">View Album</a>
+  </div>
+  <div class="artist-info">
+  <p>{{this.name}}</p>
+  <button><a href="/albums/{{this.id}}">View Album</a></button>
+  </div>
+</div>
 {{/each}}
 </div>
 
