@@ -1,0 +1,7 @@
+{{#each artists}}
+<div class="containerartist">
+<div class="cardtitle"><p>{{this.name}}</p>
+<img src="{{this.images.0.url}}" alt="" class="albumimage">
+ <button type="submit"><a href="/albums/{{this.id}}"class="btn">View Albums</a>
+ </button></div></div>
+{{/each}}

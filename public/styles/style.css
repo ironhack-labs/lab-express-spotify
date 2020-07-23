@@ -1,0 +1,35 @@
+.containerform {
+
+    background: url("../images/spotify-background.jpeg") no-repeat center center /cover;
+    height:100vh;
+    text-align: center;
+    position: relative;
+    vertical-align:middle
+
+}
+.containeritem  {
+    
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+
+}
+.backgroundiv  {
+    background-color: rgba(250, 250, 250, 0.4);
+    width: 500px;
+    height: 150px;
+    position: absolute;
+    left: 50%;
+    top:50%;
+    transform: translate(-50%, -50%);
+}
+.btn  {
+    color:white;
+    background-color: red;
+    border-color: red;
+    margin-top:10px;
+
+}
+
+   
