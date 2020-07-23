@@ -1,12 +1,12 @@
 
-{{!-- 
+
 <div>
-
+{{#each artist}}
 <h3>Name(Artists)</h3>
-<h1>{{this.artists}}</h1>
+<h1>{{this.name}}</h1>
 <h3>Image</h3>
-<p>{{this.images}}</p>
+<img src="{{this.images.[0].url}}" alt="">
 <h3>Button</h3>
-<h3>{{this.album_type}}</h3>
-
-</div> --}}
+<button>{{this.type}}</button>
+{{/each}}
+</div>
