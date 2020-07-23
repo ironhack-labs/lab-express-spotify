@@ -1,0 +1,14 @@
+.form-inline{
+    display: flex;
+    justify-content: center;
+    height: 45em;
+}
+
+.magic{
+    display: inline-block;
+    white-space: nowrap;
+    margin:20px
+}
+.card .card-body {
+    text-align: center;
+}
