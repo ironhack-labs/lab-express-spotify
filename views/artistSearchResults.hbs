@@ -1,0 +1,11 @@
+<div class="allArtists">
+    {{#each data}}
+        <div class="grid-elem">
+
+                <span><h4>{{name}}</h4></span>
+                <img class="album-cover" src="{{images.1.url}}" alt="artist.image">
+                <a class="button" href="/albums/{{id}}">Show Albums</a>
+
+        </div>
+    {{/each}}
+</div>
