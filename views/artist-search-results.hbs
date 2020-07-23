@@ -2,8 +2,9 @@
     <div class="row justify-content-sm-center">
         <div class="col-sm-10 app-content">
             <div class="search-page">
+                <h1>Search filtered by "{{name}}"</h1>
                 <section class="cards">
-                    {{#each this}}
+                    {{#each artists}}
                         {{> cardgroup this}}
                     {{/each}}
                 </section>

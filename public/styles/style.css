@@ -8,6 +8,11 @@ html, body{
     padding: 0;
 }
 
+h1{
+    margin-bottom: 20px;
+    font-weight: 800;
+}
+
 .app-content{
     padding-top: 50px;
     padding-bottom: 50px;
