@@ -1,0 +1,32 @@
+ <div class="container">
+    <div class="row justify-content-sm-center">
+        <div class="col-sm-10 app-content">
+            <div class="tracks-page">
+                <h1>{{nameArtist}} tracks</h1>
+                <section class="tracks">
+                    <table class="tracks_table">
+                        <thead>
+                            <tr>
+                                <th>Title</th>
+                                <th>Listen</th>
+                            </tr>
+                        </thead>
+
+                        <tbody>
+                            {{#each tracks}}
+                            <tr>
+                                <td>
+                                    {{name}}
+                                </td>
+                                <td>
+                                    <audio controls src="{{preview_url}}"></audio>
+                                </td>
+                            </tr>
+                            {{/each}}
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,137 @@
+*{
+    box-sizing: border-box;
+}
+
+html, body{
+    font-size: 62.5%;
+    margin: 0;
+    padding: 0;
+}
+
+.app-content{
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.home-layout{
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+}
+
+    .home-layout .form{
+        border:0;
+        background-color: rgba(255,255,255, 0.6);
+        padding: 40px;
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        max-width: 600px;
+        width: 90%;
+    }
+
+    .home-layout .form form{
+        display: flex;
+        flex-flow: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .home-layout .form form > *{
+        border-radius: 5px;
+    }
+
+    .home-layout .form form button{
+        margin-top: 20px;
+        padding: 10px 20px;
+        background-color: indianred;
+        font-size: 1.6rem;
+        border: 0;
+        color: #fff;
+        transition: all 0.3s ease-in-out;
+        cursor: pointer;
+    }
+
+    .home-layout .form form button:hover{
+        background-color: saddlebrown;
+    }
+
+    .home-layout .form form input{
+        height: 40px;
+        padding: 0 15px;
+        font-size: 1.6rem;
+        border: 0;
+        width: 70%;
+    }
+
+/* Searchs */
+
+.cards{
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -10px;
+}
+
+.cards .card{
+    width: calc(33.33% - 20px);
+    margin: 10px;
+
+}
+
+.cards .card_image{
+    min-height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    background-color: rgba(128, 128, 128, 0.2);
+}
+
+.cards .card_content{
+    padding: 10px;
+    text-align: center;
+}
+
+/* END Searchs */
+
+/* tracks */
+
+.tracks_table{
+    width: 100%;
+}
+
+    .tracks_table thead th,
+    .tracks_table tbody td{
+        padding: 15px 20px;
+    }
+
+    .tracks_table thead th{
+        height: 56px;
+        background-color: rgba(128, 128, 128, 0.3);
+        font-size: 1.8rem;
+        
+    }
+
+    .tracks_table tbody td{
+        font-size: 1.6rem;
+        background-color: rgb(128, 128, 128, 0.1);
+        border-bottom: 2px solid white;
+    }
+
+    .tracks_table tbody td:first-child{
+        width: 50%;
+    }
+
+    .tracks_table tbody td:last-child{
+        width: 50%
+    }
+
+    .tracks_table tbody audio{
+        width: 100%;
+        border: 1px solid #ccc;
+        border-radius: 30px;
+    }
