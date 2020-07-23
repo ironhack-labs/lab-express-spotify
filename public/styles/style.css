@@ -1,14 +1,68 @@
-.form-inline{
+main{
     display: flex;
+    flex-direction: row;
     justify-content: center;
-    height: 45em;
+    flex-wrap: wrap ;
+} 
+.magic {
+  padding: 37px;
+  text-align: center;
 }
-
-.magic{
-    display: inline-block;
-    white-space: nowrap;
-    margin:20px
+.card-body {
+  background-color: #495057;
+  color: #fff;
+  padding: 0.50rem;
 }
-.card .card-body {
-    text-align: center;
+.btn-primary{
+    padding: 0.20rem 0.50rem;
+    background-color: rgb(228, 61, 61);
+    border-color: rgb(228, 61, 61);
+}
+.card-title{
+    margin: 5px;
+}
+.background {
+  background-image: url(../images/spotify-background.jpeg);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+.box {
+  background-color: rgba(255, 255, 255, 0.6);
+  width: 50%;
+  height: 200px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.home-form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%;
+  text-align: center;
+}
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.25;
+  color: #495057;
+  background-color: #fff;
+  background-image: none;
+  background-clip: padding-box;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+  transition: border-color ease-in-out 0.15s, box-shadow ease-in-out 0.15s;
+}
+.home {
+  margin-top: 10px;
+  background-color: black;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
 }
