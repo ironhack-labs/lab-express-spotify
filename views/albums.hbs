@@ -1,0 +1,18 @@
+
+<div>
+  {{#each cd}}
+ 
+<p>{{this.name}}</p>
+
+<img src="{{this.images.[0].url}}" alt="">
+
+
+
+
+<button>
+<a href="/tracks/{{this.id}}">View Tracks</a>
+
+
+  </button>
+  {{/each}}
+</div>
