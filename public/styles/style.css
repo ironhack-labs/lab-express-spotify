@@ -1,0 +1,21 @@
+html,
+body {
+    margin: 0;
+}
+
+.main-search-photo {
+    background-color: blanchedalmond;
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}

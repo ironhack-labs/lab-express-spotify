@@ -1,0 +1,13 @@
+<main class="search-box">
+    {{#each artist}}
+    <h2>{{name}}</h2>
+    <div>
+        {{#if images.[0].url}}
+        <img src="{{images.[0].url}}">
+        {{else}}
+        <img src="/images/default_album_art.png">
+        {{/if}}
+    </div>
+    <a href="/albums/{{id}}">Go to the albums!</a>
+    {{/each}}
+</main>
