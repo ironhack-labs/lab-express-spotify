@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.index-container {
+
+    background: url(/images/spotify-background.jpeg) no-repeat center center / cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.formulario-index>form {
+    background-color: rgba(255, 255, 255, .6);
+    padding: 50px 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formulario-index button {
+    background-color: tomato;
+    color: white;
+    width: 150px;
+    padding: 10px;
+    border: none;
+    margin-top: 10px;
+    font-size: 13px;
+
+}
+
+.formulario-index input {
+    width: 300px;
+    height: 30px;
+    font-size: 15px;
+}
+
+
+.container-artists {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artists {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: grey;
+    color: white;
+    text-align: center;
+    width: 30%;
+    height: 50%;
+    margin: 20px;
+    padding-bottom: 30px;
+}
+
+.artist-img {
+    height: 30%;
+}
+
+.artist-img img {
+    object-fit: cover;
+    width: 100%;
+}
+
+.artist-info a {
+    background-color: tomato;
+    text-decoration: none;
+    color: white;
+    padding: 10px;
+
+}
