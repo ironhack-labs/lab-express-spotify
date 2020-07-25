@@ -228,6 +228,13 @@ audio {
 
 }
 
+audio:focus {
+  outline: none;
+  border-radius: 10px;
+  box-shadow: 0 1rem 2rem rgba(2, 30, 61, 0.5);
+
+}
+
 /************************ media queries *******************/
 @media screen and (min-width: 900px) {
   .form-container {
