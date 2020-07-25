@@ -1,0 +1,236 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+:root {
+  font-size: 62.5%;
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+img {
+  max-width: 100%;
+}
+
+.home {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  background-color: rgba(250, 235, 215, 0.534);
+  width: 90%;
+  margin: 0 auto;
+  padding: 4rem;
+  text-align: center;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-input {
+  width: 100%;
+  padding: 1rem 2rem;
+  margin-bottom: 1rem;
+  font-size: 2rem;
+  border: none;
+  border-radius: 5px;
+}
+
+.form-input:focus {
+  outline: none;
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.658);
+}
+
+.btn-submit {
+  width: 80%;
+  margin-top: 2rem;
+  padding: 1.2rem;
+  border: none;
+  border-radius: 5px;
+  background-color: purple;
+  color: #fff;
+  font-size: 1.8rem;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-submit:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.2);
+  background-color: #fff;
+  color: black;
+}
+
+.btn-submit:active,
+.btn-submit:focus {
+  outline: none;
+  transform: translateY(1px);
+  box-shadow: 1px 2px 10px 11px rgba(0, 0, 0, 0.582);
+  background-color: #fff;
+  color: black;
+}
+
+.box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.artist-container {
+  padding: 2rem 0;
+}
+
+.card-box {
+  max-width: 32rem;
+  margin-right: 1rem;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  -webkit-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 10px 5px 0px rgba(0, 0, 0, 0.75);
+}
+
+.card-img {
+  overflow: hidden;
+}
+
+.card-img img {
+  transition: all 0.6s ease-in-out;
+}
+
+.card-img img:hover {
+  transform: scale(1.2);
+}
+
+.card-content {
+  color: rgb(133, 131, 131);
+  text-align: center;
+  padding-bottom: 3rem;
+}
+
+.card-title {
+  margin-bottom: 2rem;
+  padding: 1rem 0;
+  border-bottom: 1px solid rgb(104, 103, 103);
+}
+
+.btn-album {
+  color: #fff;
+  padding: 1rem 2rem;
+  background-color: rgb(91, 91, 243);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-album:hover {
+  box-shadow: 0 1rem 2rem rgba(2, 30, 61, 0.5);
+  background-color: rgb(38, 38, 240);
+  color: rgb(126, 193, 248);
+}
+
+.btn-album:active,
+.btn-album:focus {
+  outline: none;
+  background-color: rgb(91, 91, 243);
+  color: #fff;
+}
+
+.albums-title {
+  text-align: center;
+  margin: 3rem 0;
+}
+
+.title-result {
+  font-size: 3rem;
+  color: rgb(133, 131, 131);
+  border-top: 1px solid rgb(133, 131, 131);
+  border-bottom: 1px solid rgb(133, 131, 131);
+  width: 80%;
+  margin: auto;
+  padding: 2rem 0;
+}
+
+.new-search {
+  text-align: center;
+  padding-bottom: 4rem;
+  max-width: 90%;
+  margin: 4rem auto 0;
+}
+
+.btn-new-search {
+  color: #fff;
+  padding: 2rem 4rem;
+  background-color: rgb(91, 91, 243);
+  transition: all 0.3s ease-in-out;
+}
+
+.btn-new-search:hover {
+  box-shadow: 0 1rem 2rem rgba(2, 30, 61, 0.5);
+  background-color: rgb(38, 38, 240);
+  color: rgb(126, 193, 248);
+}
+
+.btn-new-search:active,
+.btn-new-search:focus {
+  outline: none;
+  background-color: rgb(91, 91, 243);
+  color: #fff;
+}
+
+.track-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(116, 116, 116);
+  padding: 3rem 2rem;
+  color: rgb(180, 180, 180);
+  font-size: 3rem;
+}
+
+.track-box {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2rem;
+  background-color: #eff1f2;
+  margin-bottom: 1rem;
+  padding: 2rem;
+
+}
+
+audio {
+  display: block;
+
+}
+
+/************************ media queries *******************/
+@media screen and (min-width: 900px) {
+  .form-container {
+    width: 50%;
+  }
+}

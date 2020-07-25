@@ -1,0 +1,29 @@
+<div class="artist-container">
+    <div class="albums-title">
+
+        <h2 class="title-result">{{results.[0].artists.[0].name}}</h2>
+    </div>
+    <div class="box">
+
+
+        {{#each results}}
+
+        <div class="card-box">
+
+            <div class="card-img">
+                <img src="{{this.images.[0].url}}" alt="">
+
+            </div>
+            <div class="card-content">
+                <h2 class="card-title">{{this.name}}</h2>
+                <a class="btn-album" href="/tracks/{{id}}">View Tracks</a>
+            </div>
+        </div>
+        {{/each}}
+
+
+    </div>
+    <div class="new-search">
+        <a class="btn-new-search" href="/">New Search</a>
+    </div>
+</div>

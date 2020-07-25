@@ -1,0 +1,25 @@
+<div class="track-container">
+    <div class="track-title">
+        <h3>Title</h3>
+        <h3>Listen</h3>
+    </div>
+    {{#each results}}
+    <div class="track-box">
+
+        <p>{{this.name}}</p>
+        {{#if this.preview_url}}
+        <audio controls src="{{this.preview_url}}"></audio>
+        {{else}}
+        <p>No tracks availables for this album</p>
+        {{/if}}
+
+    </div>
+
+    {{/each}}
+
+
+    <div class="new-search">
+        <a class="btn-new-search" href="/">New Search</a>
+    </div>
+
+</div>
