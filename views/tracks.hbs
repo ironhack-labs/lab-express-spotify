@@ -1,0 +1,12 @@
+<div class="container-tracks">
+    {{#each tracks}}
+        <div class="track">
+            <p> {{this.name}} </p>
+            <audio controls>
+                <source src={{this.preview_url}} type="audio/ogg">
+                <source src={{this.preview_url}} type="audio/mpeg">
+                Your browser does not support the audio tag.
+            </audio>
+        </div>
+    {{/each}}
+</div>
