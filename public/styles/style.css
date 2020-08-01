@@ -1,0 +1,161 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  font-size: 16px;
+  width: 100%;
+  box-sizing: content-box;
+}
+
+/* Home page */
+.home {
+  background-image: url("/images/spotify-background.jpeg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form-container {
+  background-color: rgba(255, 255, 255, 0.7);
+  height: 300px;
+  width: 800px;
+  display: flex;
+  justify-content: center;
+}
+
+.search-form-container form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 70%;
+}
+
+.search-form-container form > input {
+  width: 100%;
+  padding: 10px;
+  margin: 10px;
+  border: 1px solid lightgrey;
+  border-radius: 6px;
+}
+
+.search-form-container form > button {
+  padding: 10px;
+  margin: 10px;
+  background-color: #f4657a;
+  color: white;
+  border: 0ch;
+  width: 30%;
+}
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin: 10px 50px;
+  flex-wrap: wrap;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-card {
+  width: 300px;
+  height: 360px;
+  margin: 10px 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artist-card > img {
+  width: 100%;
+  height: 80%;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: #5f5f5f;
+  color: white;
+}
+
+.artist-info h3 {
+  padding: 1px;
+  text-align: center;
+}
+
+.artist-info a > button {
+  background-color: #f4657a;
+  padding: 5px 10px;
+  color: white;
+  border: 0px;
+  border-radius: 6px;
+}
+
+.artist-info h4 {
+  padding: 2px;
+  text-align: center;
+}
+
+.tracks-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.track-card {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f3f4;
+  margin: 3px 0;
+}
+
+.audio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.track-info {
+  padding-left: 20px;
+}
+
+.heading {
+  width: 95%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #4a4a4a;
+  padding: 10px;
+}
+
+h1 {
+  width: 250px;
+  color: #bbbfc2;
+  margin-left: 20px;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
