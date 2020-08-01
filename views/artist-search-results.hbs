@@ -1,7 +1,9 @@
-<h2>Search Results</h2>
+<h2>Search Results
 
-{{#each searchResults}}
-<div class="albumBox">
-    <h3>{{title}}</h3>
-    <a href="/views/artist-albums">View Albums</a>
-</div>
+    {{#each artist}}
+    <div class="albumBox">
+        <h3>{{this.name}}</h3>
+        <a href="/views/artist-albums">View Albums</a>
+    </div>
+    {{/each}}
+</h2>
