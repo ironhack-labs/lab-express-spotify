@@ -14,6 +14,7 @@ app.use(express.static(__dirname + '/public'));
 app.use("/", require("./routes/index"));
 app.use("/artist-search", require("./routes/search-routes/search"));
 app.use("/albums", require("./routes/search-routes/search-albums"));
+app.use("/tracks", require("./routes/search-routes/search-tracks"));
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000'));

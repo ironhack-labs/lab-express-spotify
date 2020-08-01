@@ -8,7 +8,8 @@ router.get('/', (req, res, next) => {
         .searchArtists(req.query.search)
         .then(data => {
             const artistData = data.body.artists.items;
-            console.log('The received data from the API: ', artistData);
+            console.log('The received seach data from the API: ', artistData[0]);
+            // console.log('The received data from the API: ', artistData[0].images);
             res.render('artist-search-results', {artistData});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));  
