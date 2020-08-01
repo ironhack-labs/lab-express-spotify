@@ -1,9 +1,8 @@
-<h2>Search Results
+<h2>Search Results</h2>
 
-    {{#each artist}}
-    <div class="albumBox">
-        <h3>{{this.name}}</h3>
-        <a href="/views/artist-albums">View Albums</a>
-    </div>
-    {{/each}}
-</h2>
+{{#each artist}}
+<div class="artistBox">
+    <h3>{{this.name}}</h3>
+    <a href="/albums/{{this.id}}">View Albums</a>
+</div>
+{{/each}}
