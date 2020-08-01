@@ -4,11 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>{{title}}</title>
+    <link rel='stylesheet' href="/stylesheets/style.css" />
 </head>
 
 <body>
+    <div>
+        <form action="/artist-search" method="GET">
+            <label for="searchQueryInput"><input id="searchQueryInput" name="query" type="text"
+                    placeholder="Enter Artist Name"><button>Search for an Artist</button></label></form>
+    </div>
 
+    {{{body}}}
 </body>
 
 </html>
