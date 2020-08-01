@@ -3,13 +3,13 @@ const router  = express.Router();
 const spotifyApi = require('../../config/spotifyConfig');
 
 /* GET search page */
-router.get('/', (req, res, next) => {
+router.get('/album/:artistId', (req, res, next) => {
     spotifyApi
-        .searchArtists(req.query.search)
+        .getArtistAlbums(req.params.artistId)
         .then(data => {
-            const artistData = data.body.artists.items;
+            const artistData = data.body;
             console.log('The received data from the API: ', artistData);
-            res.render('artist-search-results', {artistData});
+            res.render('albums', {artistData});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));  
 });
