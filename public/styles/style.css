@@ -1,0 +1,39 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.container-index{
+    background-image: url(/images/spotify-background.jpeg);
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.form-index {
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+.card {
+    margin: 20px;
+}
+.container-artist {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 5%;
+}
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 5px;
+    background-color: silver;
+    text-align: center;
+    border-radius: 50px;
+}
