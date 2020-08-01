@@ -1,0 +1,108 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 1rem;
+    font-weight: 400;
+    line-height: 1.5;
+    color: #212529;
+    background-color: #fff;
+}
+
+.index {
+    background: url('/images/spotify-background.jpeg') center no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-search {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 500em;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+    padding: 3em 8em;
+}
+
+.form-search > input {
+    margin-bottom: .7em;
+    display: block;
+    width: 350%;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+    line-height: 1.25;
+    color: #495057;
+    background-color: #fff;
+    border: 2px black;
+    border-radius: .25rem;
+}
+.form-search > button {
+    height: 40px;
+    width: 170px; 
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+    padding: .5rem .75rem;
+    font-size: 1rem;
+}
+
+.form-search {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 20em;
+    display: flex;
+    flex-direction: column;
+    align-items:center;
+
+.album-card {
+    padding: 10px 40px;
+}
+
+.card-container{
+    background-color: #4D4D4D;
+    text-align: center;
+    padding-bottom: 10px;
+}
+
+.card-container > p {
+    color: #fff;
+    font-size: 18px;
+    margin: 0;
+}
+
+.card-container > a {
+    color: #fff;
+    font-size: 12px;
+    background-color: #F86967;
+    border-radius: 5px;
+    padding: 4px 10px;
+}
+
+.header-row {
+    background-color: #4A4A4A;
+    padding: 20px 10px;
+    color: #F6F6F6;
+    font-size: 20px;
+}
+
+.item-row {
+    background-color: #F6F6F6;
+    margin-bottom: 2px;
+    padding: 10px 0;
+}
+
+audio {
+    width: 300px;
+    height: 54px;
+}
+
+@media (min-width: 992px) {
+    .col-lg-4 {
+        flex: 0 0 33.333333%;
+        max-width: 33.333333%;
+    }
+} 
+
