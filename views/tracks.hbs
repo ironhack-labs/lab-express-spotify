@@ -1,0 +1,8 @@
+<div class="container text-center">
+    {{#each track}}
+    <div>
+        <div>{{track_number}} {{name}}</div>
+        <audio controls src="{{preview_url}}">Your browser does not support the <code>audio</code> element.</audio>
+    </div>
+    {{/each}}
+</div>
