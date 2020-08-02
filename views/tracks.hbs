@@ -1,0 +1,13 @@
+<!--Iteration 5.Tracks-->
+<div class="songs">
+    <div class="title">
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </div>
+    {{#each tracks}}
+        <div class="song">
+            <h3>{{this.name}}</h3>
+            <audio type="audio/mpeg" controls="" src="{{this.preview_url}}"></audio>
+        </div>
+    {{/each}}
+</div>

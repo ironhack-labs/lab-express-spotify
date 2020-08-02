@@ -1,0 +1,11 @@
+<!--Iteration 3.2.Artist Search Display Results.Setting handlebars,calling partials, and create a link to albums site-->
+<div class="list">
+
+    {{#each artist}}
+        <div class="card">
+            {{> cards}}
+            <a href="/albums/{{this.id}}">Albums</a>
+        </div>
+    {{/each}}
+    
+</div>
