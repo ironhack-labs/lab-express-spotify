@@ -7,18 +7,12 @@
             =============================
             <li> {{name}} </li>
             =============================
-            {{#each artists: }}
+            {{#each images }}
 
-
-
+            <img src={{url}} alt="{{this.url}}">
             {{/each }}
 
-
-            <li>
-                <img src={{images.0.url}} alt="{{this.url}}">
-            </li>
             <a href='/tracks/{{id}}'><button type="submit">View Tracks</button></a>
-
             {{/each }}
     </div>
     </ul>

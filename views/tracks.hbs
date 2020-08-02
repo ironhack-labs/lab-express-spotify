@@ -8,8 +8,11 @@
             {{#each this }}
             =============================
             <li> {{name}} </li>
-            <li> {{preview_url}} </li>
-            =============================
+            <li>
+                <audio controls>
+                    <source src=" {{preview_url}}" type="audio/mpeg">
+                </audio>
+            </li>
 
             {{/each }}
     </div>
