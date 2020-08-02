@@ -1,3 +1,58 @@
-.index-pg {
-  background-image: url("../images/spotify-background.jpeg");
+.index-container {
+  padding: 25px;
+  width: 100%;
+  height: 1000px;
+  background: url(../images/spotify-background.jpeg) no-repeat center;
+  background-size: cover;
+}
+
+.index-div {
+  margin: 10% 5% 0 5%;
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 5% 5% 10% 0;
+  display: flex;
+}
+
+#indx-form {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  display: inline;
+}
+
+.srch-btn {
+  margin-top: 10px;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  margin-left: 30%;
+}
+
+.all-img {
+  width: 65%;
+  height: 65%;
+}
+
+.all-img-container {
+  display: inline-block;
+  width: 65%;
+  height: 25%;
+  padding: 0 10px 10px 10px;
+  background-color: #4d4d4d;
+}
+
+.all-img-container p {
+  color: white;
+  font-size: 1.02rem;
+}
+.all-img-container a {
+  border: none;
+  border-radius: 5px;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+  margin-left: 5%;
+  color: white;
 }

@@ -1,19 +1,17 @@
-<div class="row justify-content-center">
+<div class="d-flex justify-content-around">
 
-    <h2> artist search result </h2>
-    <div>
-        <ul>
-            {{#each this }}
-            =============================
-            <li> {{name}} </li>
-            =============================
-            <li>
-                <img src={{images.0.url}} alt="{{this.url}}">
-            </li>
-            <a href='/albums/{{id}}'><button type="submit">View Albums</button></a>
+    <div class="row ">
+        {{#each this }}
+        {{#if this}}
+        <div class="all-img-card col-md-4  p-1 w-5">
+            <img class="all-img img-fluid w-10 h-10" src={{images.1.url}} alt="{{this.url}}">
+            <div class="all-img-container">
+                <p class="card-title px-4"> {{name}} </p>
+                <a class="btn btn-outline-primary" href='/albums/{{id}}'> View Albums </a>
+            </div>
+        </div>
+        {{/if}}
 
-            {{/each }}
+        {{/each }}
     </div>
-    </ul>
-
 </div>

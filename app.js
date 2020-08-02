@@ -31,9 +31,9 @@ spotifyApi
   );
 
 // // helper function
-// hbs.registerHelper("getArtists", function (arrArtists) {
-//    return arrArtists.reduce((ele))
-// });
+hbs.registerHelper("isdefined", function (value) {
+  return value !== undefined;
+});
 
 // Our routes go here:
 // home page
