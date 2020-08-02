@@ -1,0 +1,26 @@
+<div class="row justify-content-center">
+
+    <h2> artist search result </h2>
+    <div>
+        <ul>
+            {{#each this }}
+            =============================
+            <li> {{name}} </li>
+            =============================
+            {{#each artists: }}
+
+
+
+            {{/each }}
+
+
+            <li>
+                <img src={{images.0.url}} alt="{{this.url}}">
+            </li>
+            <a href='/tracks/{{id}}'><button type="submit">View Tracks</button></a>
+
+            {{/each }}
+    </div>
+    </ul>
+
+</div>
