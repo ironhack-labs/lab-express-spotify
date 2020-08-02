@@ -1,0 +1,24 @@
+<nav>
+    <div class="buttons">
+        <a href="/">Home</a>
+    </div>
+    <div class="buttons">
+        <a href="javascript:history.back()">Artists</a>
+    </div>
+</nav>
+
+<div class='titles'>
+    <h1>Search Results</h1>
+</div>
+
+<div class='albumContainer'>
+    {{#each artistAlbums}}
+        <div class='artistsContainer'>
+            <img src="{{this.images.1.url}}" alt="{{this.name}}">
+            <h2>{{this.name}}</h2>
+            <div class="buttons">
+                <a href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

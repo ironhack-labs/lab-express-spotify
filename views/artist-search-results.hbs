@@ -1,0 +1,27 @@
+<nav>
+    <div class="buttons">
+    <a href="/">Home</a>
+    </div>
+</nav>
+<div class='titles'>
+    <h1>Search Results</h1>
+</div>
+
+<div class='albumContainer'>
+    {{#each artists}}
+        <div class='artistsContainer'>
+            
+            {{#if this.images}}
+                
+                <img src="{{this.images.1.url}}" alt="{{this.name}} picture">
+            {{else}}
+                <img src="https://www.midiaresearch.com/storage/uploads/blog/images/2018/05/Color-Spotify-Logo.jpg" alt="{{this.name}} picture">
+            {{/if}}    
+            <h2>{{this.name}}</h2>
+            <div class="buttons">
+                <a href="/albums/{{this.id}}">View albums</a>
+            </div>
+            
+        </div>
+    {{/each}}
+</div>

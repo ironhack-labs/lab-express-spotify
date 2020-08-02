@@ -1,0 +1,37 @@
+<nav>
+    <div class="buttons">
+        <a href="/">Home</a>
+    </div>
+    <div class="buttons">
+        <a href="javascript:history.back()">Albums</a>
+    </div>
+</nav>
+
+<div class='tracksNavContainer'>
+    <div>
+        <h2>Title</h2>        
+    </div>
+    <div>
+        <h2>Listen</h2>
+    </div>
+</div>
+
+{{#each tracks}}
+    <div class='tracksContainer'>
+        <div>
+            {{this.name}}
+        </div>
+        <div>
+            <figure>
+            <audio
+                controls
+                src={{this.source}}>
+                Your browser doesn't support the <code>audio</code> element.
+                </audio>
+            </figure>
+        </div>
+        
+    </div>
+
+
+{{/each}}
