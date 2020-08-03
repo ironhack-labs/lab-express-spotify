@@ -1,7 +1,29 @@
 body {
     padding: 0;
     margin: 0;
-    
+    background-color: rgb(34, 34, 34);
+    color: white;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #ff6666;
+    color: white;
+    border: none;
+    border-radius: 0.25rem;
+    padding: 0.25rem 1rem;
+    margin-bottom: 1rem;
+}
+
+button:hover {
+    background-color: rgb(255, 190, 190);
+}
+
+button > a {
+    text-decoration: none;
+    color: white;
 }
 
 .container {
@@ -14,16 +36,65 @@ body {
     align-items: center;
 }
 
+.searchContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(73, 73, 73);
+    color: white;
+    width: 23vw;
+    margin: 1rem;
+}
+
+.cardInfo > div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* height: 6vw; */
+
+}
+
+.cardInfo > div > h3 {
+    font-size: 1.5rem;
+}
+
+.cardInfo > img {
+    width: 23vw;
+}
+
+.tracksContainer{
+    margin: 1rem 10rem;
+}
+
+.tracksContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(73, 73, 73);
+    margin: 0.25rem 0;
+    padding: 0.5rem 1rem;
+}
+
 #searchBox {
-    padding: 50px 70px;
-    /* width: 50vw; */
-    background-color: black;
+    padding: 5rem 10rem;
+    background-color: rgba(255, 255, 255, 0.733);
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-/* #searchBox > form {
-    display: flex;
-    flex-direction: column;
-} */
+#searchBox > form > input {
+    width: 29vw;
+    height: 1.5rem
+}
+
+#searchBox button{
+    margin: 1rem auto;
+}

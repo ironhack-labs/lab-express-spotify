@@ -8,7 +8,7 @@ router.get('/:artistId', (req, res, next) => {
         .getArtistAlbums(req.params.artistId)
         .then(data => {
             const albumsData = data.body.items;
-            console.log('The received albums data from the API: ', albumsData[0]);
+            // console.log('The received albums data from the API: ', albumsData[0]);
             res.render('albums', {albumsData});
         })
         .catch(err => console.log('The error while searching albums occurred: ', err));  

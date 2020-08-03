@@ -1,13 +1,15 @@
-<h1>results</h1>
-
-<div>
+<div class="searchContainer">
     {{#each artistData}}
-    <div>
-        <img src="{{ this.images.0.url }}" alt="">
-        <div>
-            <h3>{{this.name}}</h3>
-            <button><a href="/albums/{{this.id}}">View Albums</a></button>
+        <div class="cardInfo">
+            {{#if this.images.0.url}}
+                <img src="{{ this.images.0.url }}" alt="Band cover art">
+            {{else}}
+                <img src="https://www.wolflair.com/wp-content/uploads/2017/01/placeholder.jpg" alt="Band cover art">
+            {{/if}}
+            <div>
+                <h3>{{ this.name }}</h3>
+                <button><a href="/albums/{{ this.id }}">View Albums</a></button>
+            </div>
         </div>
-    </div>
     {{/each}}
 </div>
