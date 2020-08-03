@@ -1,0 +1,15 @@
+<div class="all-products-albums">
+     {{#each album}}
+     <div class="container-products-albums">
+         <div class="covers-albums">
+             <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+         </div>
+         <div class="names-albums">
+             <h2>{{this.name}}</h2>
+         </div>
+         <div class="btn-albums">
+             <a href="/albums/{{this.id}}/tracks">View Tracks</a>
+         </div>
+     </div>
+     {{/each}}
+ </div> 
