@@ -3,15 +3,18 @@
     <div class="row ">
         {{#each this }}
         {{#if this}}
+
         <div class="all-img-card col-md-4  p-1 w-5">
-            <img class="all-img img-fluid w-10 h-10" src={{images.1.url}} alt="{{this.url}}">
+
+            <img class="all-img img-fluid w-10 h-10" src={{images.1.url}} alt="Active">
+
             <div class="all-img-container">
+
                 <p class="card-title px-4"> {{name}} </p>
                 <a class="btn btn-outline-primary" href='/albums/{{id}}'> View Albums </a>
             </div>
         </div>
         {{/if}}
-
         {{/each }}
     </div>
 </div>

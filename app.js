@@ -31,8 +31,11 @@ spotifyApi
   );
 
 // // helper function
-hbs.registerHelper("isdefined", function (value) {
-  return value !== undefined;
+hbs.registerHelper("isEmpty", function (obj) {
+  for (var key in obj) {
+    if (obj.hasOwnProperty(key)) return false;
+  }
+  return true;
 });
 
 // Our routes go here:
@@ -48,6 +51,7 @@ app.get("/artistsearch", (request, response) => {
       // console.log("The received data from the API: ", data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       const artistsSrchRes = data.body.artists.items;
+      console.log(artistsSrchRes.length);
       response.render("artist-search-results.hbs", artistsSrchRes);
     })
     .catch((err) =>

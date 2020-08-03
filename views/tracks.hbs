@@ -2,20 +2,25 @@
 
 <div class="row justify-content-center">
 
-    <h2> TRacks in Ambum </h2>
     <div>
-        <ul>
+        <table class="table">
+            <tr class="thead-dark ">
+                <th> Title </th>
+                <th> Listen </th>
+            </tr>
+
             {{#each this }}
-            =============================
-            <li> {{name}} </li>
-            <li>
-                <audio controls>
-                    <source src=" {{preview_url}}" type="audio/mpeg">
-                </audio>
-            </li>
-
+            {{#if this }}
+            <tr scope="row">
+                <td> {{name}} </td>
+                <td> <audio controls>
+                        <source src=" {{preview_url}}" type="audio/ogg">
+                        <source src=" {{preview_url}}" type="audio/mpeg">
+                    </audio>
+                </td>
+            </tr>
+            {{/if }}
             {{/each }}
+        </table>
     </div>
-    </ul>
-
 </div>
