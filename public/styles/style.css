@@ -1,0 +1,162 @@
+/*home*/
+
+body {
+  margin: 0;
+  font-family: Helvetica;
+  background-color: #2a5030;
+}
+
+.background-img {
+  position: absolute;
+  margin: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.9;
+}
+
+.search-form {
+  position: absolute;
+  top: 43%;
+  left: 33%;
+  width: 33%;
+  height: 10%;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input[type="text"] {
+  width: 90%;
+  padding: 15px 22px;
+  margin: 10px 5%;
+  box-sizing: border-box;
+  border: 0px;
+  border-radius: 25px;
+  outline: none;
+}
+
+button[type="submit"] {
+  font-family: sans-serif;
+  width: 90%;
+  padding: 15px 22px;
+  margin: 10px 5%;
+  box-sizing: border-box;
+  border: 0px;
+  border-radius: 25px;
+  outline: none;
+}
+
+/*Artist*/
+
+.container {
+  box-sizing: border-box;
+  width: 100%;
+  display: flex;
+  margin: 10px 10px;
+  flex-wrap: wrap;
+  padding: 10px 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-card {
+  width: 300px;
+  height: 360px;
+  margin: 10px 30px;
+  padding: 50px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.artist-card > img {
+  width: 100%;
+  height: 80%;
+  border-radius: 25px 25px 0px 0px;
+}
+
+.artist-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
+  align-content: center;
+
+  width: 100%;
+  height: 100%;
+  background-color: #0e7914;
+  color: white;
+  border-radius: 0px 0px 25px 25px;
+}
+
+.artist-info h3 {
+  padding: 1px;
+  text-align: center;
+}
+
+.artist-info a > button {
+  background-color: #010f04;
+  padding: 5px 10px;
+  color: white;
+  border: 0px;
+  border-radius: 6px;
+}
+
+/*Track*/
+
+.tracks-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  border-radius: 25px;
+}
+
+.track-card {
+  width: 95%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #f0f3f4;
+  margin: 3px 0;
+  border-radius: 25px;
+}
+
+.audio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.track-info {
+  padding-left: 20px;
+}
+
+.heading {
+  width: 95%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #0e7914;
+  padding: 10px;
+  border-radius: 25px;
+}
+
+h1 {
+  width: 250px;
+  color: #050505;
+  margin-left: 20px;
+}
+
+.title {
+  text-align: center;
+  width: 100%;
+  padding-top: 10px;
+}
+.song {
+  border-radius: 25px;
+}

@@ -1,0 +1,19 @@
+<section class="tracks-container">
+    <div class='heading'>
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </div>
+    
+    {{#each albumTracks }}
+    <div class="track-card">
+        <div class="track-info">
+            <h4>{{ this.name }}</h4>
+        </div>
+        <div class="audio">
+            <audio controls>
+                <source class= "song" src="{{this.preview_url}}" type="audio/ogg">
+            </audio>
+        </div>
+    </div>
+    {{/each }}
+</section> 
