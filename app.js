@@ -47,12 +47,16 @@ app.get("/artist-search", (req, res, next) => {
 //GET selected artists albums
 
 app.get('/albums/:artistId', (req, res, next) => {
-    spotifyApi.getArtistAlbums(req.params.id)
-        .then(function (data) {
+    spotifyApi.getArtistAlbums(req.params.artistId)
+        .then(data => {
             console.log('Artist albums', data.body);
-        }, function (err) {
-            console.error(err);
+            res.render('albums', {
+                album: data.body.items
+            })
+        })
+        .catch(err => {
+            console.error(`Error getting album: ${err}`);
         });
 });
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))

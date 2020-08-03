@@ -1,7 +1,8 @@
 <h2>Albums from {{artist}}</h2>
 
 <div>
-    {{#each}}
-    <h3>{{this.album.name}}</h3>
-    <a href="{{album.id}}/tracks">View Tracks</a>
+    {{#each album}}
+    <h3>{{name}}</h3>
+    <a href="/getAlbumTracks/{{id}}">View Tracks</a>
+    {{/each}}
 </div>
