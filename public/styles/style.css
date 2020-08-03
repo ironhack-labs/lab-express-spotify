@@ -1,0 +1,23 @@
+body {
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    /* align-items: center; */
+}
+
+.home-container {
+    width: 90%;
+    padding: 20px;
+}
+
+.form-wrapper {
+    width: 500px;
+}
+
+.album-card {
+    width: 200px;
+    padding: 15px;
+}
