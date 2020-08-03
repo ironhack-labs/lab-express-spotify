@@ -1,0 +1,16 @@
+<div class="lists">
+<a href="/"><button class="btn" id="searchOther">Search for another Artist</button></a>
+<div class="row row-cols-1 row-cols-md-3">
+    {{#each artistsArr}}
+    <div class="col mb-4">
+        <div class="card">
+            <img class="card-img-top" src="{{this.images.0.url}}" alt="{{this.name}}" />
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <a href="/albums/{{this.id}}"><button class="btn btn-albums">View Albums</button></a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+</div>

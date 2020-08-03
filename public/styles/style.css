@@ -1,0 +1,95 @@
+#homePage{
+    height: 100vh;
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: 100% 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#homeForm {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#artist {
+    display: block;
+    width: 60%;
+    background-color: #fff;
+    border: 1px solid rgba(0,0,0,.30);
+    border-radius: .25rem;
+    padding: 8px 12px;
+}
+
+.btn {
+    margin-top: 10px;
+    border-radius: 0;
+    color: white;
+    background-color: #ff6666;
+    border: 1px solid #ff6666;
+    font-weight: 400;
+}
+
+.btn:hover{
+    color: #ff6666;
+    background-color: white;
+}
+
+.lists{
+    margin: auto;
+    padding: 20px 50px;
+    background-color: #fdece4;
+    text-align: center;
+}
+
+#searchOther{
+    margin-bottom: 20px;
+}
+
+.card{
+    margin: 10px 30px;
+    background-color: #4d4d4d;
+    color: white;
+    text-align: center;
+    border: none;
+}
+
+.btn-albums{
+    font-size: 14px;
+    border-radius: 5px;
+    padding: 4px 10px
+}
+
+.btn-albums:hover{
+    background-color: #ff6666;
+    color: white;
+    text-decoration: underline;
+}
+
+.lists .card-body{
+    padding: 10px;
+}
+
+.lists .card-title{
+    margin: 0;
+}
+
+
+.header-row {
+    background-color: #4A4A4A;
+    padding: 20px 10px;
+    color: #F6F6F6;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.track-item {
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
