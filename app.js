@@ -28,7 +28,7 @@ const spotifyApi = new SpotifyWebApi({
 
     //ROUTE FOR ARTIST SEARCH HOME PAGE
     app.get('/', (req, res) => {
-        res.render('home', req.params);
+        res.render('home');
       });
 
 
@@ -38,37 +38,52 @@ const spotifyApi = new SpotifyWebApi({
         spotifyApi
             .searchArtists(req.query.artist)
             .then(data => {
+                console.log('Received ARTIST data')
+
                 //deconstruct artist object
-                const { name, images} = data.body.artists.items[0]
-            // console.log('The received ARTISTS from the API: ', data.body.artists.items[0]);
-            
-            const artistIds = data.body.artists.items[0].id
+                const { name, images, id} = data.body.artists.items[0]
 
-            console.log('The received ARTISTS ID from the API: ', artistIds);
-
-            //renders Artist name and Image onto artist-search-results
-            res.render('artist-search-results', {name: name, image:images[0].url, artistIds:artistIds});
+            //renders Artist name, image and artistsIds onto artist-search-results
+            res.render('artist-search-results', {name: name, image:images[1].url, artistIds:id});
             })
   
-        .catch(err => console.log('The error while searching ARTISTS occurred: ', err));
+        .catch(err => console.log('Error while searching ARTISTS: ', err));
         console.log('---------------------------------');
     })
 
 
     // ROUTE FOR ALBUM PAGE
-    app.get("/albums/:artistId", (req, res, next) => {
+    app.get("/albums/:artistId", (req, res) => {
         spotifyApi
             .getArtistAlbums(req.params.artistId)
-            .then((data) => {
-            //console.log("this is the data:", data.body.items);
+            .then(data => {
+                console.log('Received ALBUM data')
+                // console.log("This is the ALBUM data: ", data.body.items);
             
-            res.render("albums", { album: data.body.items });
+            // renders albumObj to albums page
+            res.render("albums", { albumObj:data.body.items });
             })
             
-        .catch((err) =>
-        console.log("The error while searching artists occurred 4: ", err)
-    );
-});
+            .catch(err => console.log('Error while searching Albums: ', err));
+            console.log('---------------------------------');
+        })
+
+
+    //ROUTE FOR TRACKS PAGE
+    app.get('/tracks/:albumId', (req, res) => {
+        spotifyApi
+            .getAlbumTracks(req.params.albumId)
+            .then(data => {
+                console.log('Received TRACK data')
+                // console.log("This is the TRACK data: ", data.body.items);
+
+            // renders trackObj to tracks page
+            res.render("tracks", { trackObj:data.body.items })
+            })
+
+            .catch(err => console.log('Error while searching TRACKS: ', err));
+            console.log('---------------------------------');
+        })
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
