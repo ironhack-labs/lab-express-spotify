@@ -44,7 +44,7 @@ app.get("/artist-search", (req, res, next) => {
 
 });
 
-//GET selected artists albums
+//GET artist albums
 
 app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi.getArtistAlbums(req.params.artistId)
@@ -58,5 +58,18 @@ app.get('/albums/:artistId', (req, res, next) => {
             console.error(`Error getting album: ${err}`);
         });
 });
+
+//GET album tracklist
+app.get('/getAlbumTracks/:albumId', (req, res, next) => {
+    spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then(data => {
+            console.log('The received data from the API: ', data.body.items);
+            res.render('tracks', {
+                track: data.body.items
+            })
+        })
+        .catch(err => console.log(`error getting tracklist: ${err}`));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))
