@@ -1,0 +1,77 @@
+.background-image {
+    background-image: url(/images/spotify-background.jpeg);
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    border: none;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.white-box {
+    width: 700px;
+    margin: 30px;
+    background-color: white;
+    opacity: 0.4;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.search-input {
+    width: 400px;
+    height: 45px;
+    border: solid grey 2px;
+    margin: 20px;
+}
+.search-button {
+    width: 250px;
+    padding: 10px;
+    margin-bottom: 10px;
+    background-color: red;
+    color: white;
+}
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#artist-image {
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+#artist-name {
+    color: navy;
+    font-size: 3em;
+}
+.album-display {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.card {
+    margin-top: 25px;
+    margin-bottom: 25px;
+    text-align: center;
+    display: inline-block;
+}
+.card-img-top {
+    text-align: center;
+    object-fit: contain;
+    width: 200px;
+    height: 200px;
+}
+.card-title {
+    font-size: 0.9vw;
+    color: navy;
+    font-weight: bolder;
+    text-decoration: none;
+    margin-top: 15px;
+}
+a {
+    font-size: 0.9vw;
+}
