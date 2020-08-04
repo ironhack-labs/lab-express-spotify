@@ -1,0 +1,124 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
+
+.home-container {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  width: 50%;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.7);
+  padding: 40px 100px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+}
+
+.btn {
+  width: 100%;
+  display: inline-block;
+  padding: .5em 1.5em;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #00000026;
+  border-radius: .25rem;
+  text-align: center;
+  font-size: 1.1rem;
+}
+
+.btn-red {
+  margin: 0 auto;
+  width: 50%;
+  margin-top: 10px;
+  border-radius: 0;
+  color: white;
+  background-color: #ff6666;
+  border: 1px solid #ff6666;
+}
+
+.btn-red:hover {
+  color: #ff6666;
+  background-color: white;
+  border: 1px solid #ff6666;
+}
+
+
+.main-container {
+  max-width: 90%;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.artist-card {
+  background-color: #4D4D4D;
+  text-align: center;
+  padding-bottom: 10px;
+  flex: 1 1 300px;
+  margin: 20px;
+}
+
+.artist-img {
+  max-width: 100%;
+}
+
+.artist-title {
+  color: #fff;
+  margin-bottom: 10px;
+}
+
+.btn-album {
+  padding: 3px 8px;
+  margin-bottom: 10px;
+  border-radius: 2px;
+  color: white;
+  background-color: #ff6666;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+.tracks-header {
+  background-color: #4A4A4A;
+  color: #BCBCBC;
+  padding: 30px 100px 30px 15px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.track-info {
+  width: 100%;
+  padding: 5px 15px;
+  margin-bottom: 5px;
+  background-color: #F6F6F6;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

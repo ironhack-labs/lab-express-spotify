@@ -1,0 +1,16 @@
+<div class="main-container">
+  {{#each artists }}
+    <div class="artist-card">
+      {{#if images}}
+        <img class="artist-img" src="{{images.0.url}}"></img>
+      {{else}}
+        <img class="artist-img" src="http://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg"></img>
+      {{/if}}
+      
+      <div class="artist-info">
+        <h3 class="artist-title">{{name}}</h3>
+        <a class="btn-album" href='/albums/{{id}}'>View Albums</a>
+      </div>
+    </div>
+  {{/each }}
+</div>
