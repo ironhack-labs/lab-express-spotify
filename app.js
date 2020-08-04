@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
+
 //Iteration 1--Spotify API Setup 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node')
@@ -10,8 +11,10 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+
 //Iteration 3.2.Setting the partial path
 hbs.registerPartials(__dirname + "/views/partials")
+
 //Iteration 1--Spotify API Setup 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
