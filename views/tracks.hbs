@@ -1,8 +1,8 @@
-<section class="container">
+<section class= "track-container">
     {{#each trackObj }}
     <div class="track-card">
-
-        <div class="track-info">
+       
+        <div class = "track-info">
             <p>Track: {{ this.name }}</p>
 
             {{!-- loads audio preview --}}
@@ -10,7 +10,7 @@
                 controls
                 src="{{this.preview_url}}">    
             </audio>
-            
+        
         </div>
     </div>
     {{/each }}

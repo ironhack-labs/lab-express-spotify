@@ -1,9 +1,21 @@
 
 
 {{!-- Create link to ALBUMS page with artistId inside the URL --}}
-<a href="/albums/{{artistIds}}">View Albums</a>
 
+<div class="search-results-container">
+        <h1 id="band-name">
+            {{name}}
+        </h1>
+
+        <button class = "albums-button">
+            <a href="/albums/{{artistIds}}">View Albums</a>
+        </button>
 
 {{!-- Displays Artists name and image --}}
-Name: {{name}}
-<img src={{image}} alt="">
+
+        <div id="artist-image"> 
+            <img  src={{image}} alt="">
+        </div>
+
+
+</div>

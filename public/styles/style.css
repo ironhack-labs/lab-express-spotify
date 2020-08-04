@@ -1,4 +1,115 @@
 html{
-    background-color: aqua;
+    height: 100%;
 }
 
+body {
+     /* border: 1px solid yellow; */
+    font-family: sans-serif;
+    font-weight: 100;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  a, a:hover, a:focus, a:active {
+    text-decoration: none;
+    color: inherit;
+}
+
+  .artist-card{
+      border: 3px solid red;
+  }
+
+
+  /* HOME PAGE */
+  .home-container{
+    width:100%;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-image: url("/images/spotify-background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+      
+  }
+
+  .artist-input{
+    background-color: rgba(255,255,255, 0.3);
+    width: 50%;
+    height: 150px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+
+  }
+
+  #artist-name{
+    margin:15px auto;
+  }
+
+/* SEARCH RESULTS */
+.search-results-container{
+    border: 1px solid red;
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.albums-button{
+    border-radius: 5px;
+    margin: 5px auto;
+}
+
+
+
+
+
+  /* ALBUM PAGE */
+  .album-container{
+      background-color: white;
+      height: 100%;
+      width: 100%;
+      display: inline-flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: space-between;
+  }
+
+
+  /* TRACK PAGE */
+  .track-container{
+    width: 100%;
+    height: 100%;
+    background-color: white;
+    padding: 50px;
+  }
+
+  .track-card {
+      padding: 10px 30px;
+      background-color: lightgrey;
+      margin: 8px;
+      border-radius: 5px;
+      font-size: x-large;
+      display: flex;
+      flex-direction: column;
+      align-content: center;
+      justify-content: center;
+      
+  }
+
+  .track-info{
+      display: flex;
+      justify-content: space-between;
+  }
