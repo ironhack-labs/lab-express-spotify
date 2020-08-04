@@ -1,0 +1,137 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.background-img {
+    position: absolute;
+    margin: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.search-form {
+    position: absolute;
+    top: 43%;
+    left: 33%;
+    width: 33%;
+    height: 10%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+input[type=text] {
+    width: 90%;
+    padding: 15px 22px;
+    margin: 10px 5%;
+    box-sizing: border-box;  
+    border: 0px;
+    border-radius: 25px;
+    outline: none;
+}
+
+button[type=submit] {
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90%;
+    padding: 15px 22px;
+    margin: 10px 5%;
+    box-sizing: border-box;
+    border: 0px;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist {
+    background-color: lightgrey;
+    min-width: 20%;
+    max-width: 20%;
+    margin: 40px;
+    padding-bottom: 30px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.artist img {
+    width: 100%;
+    max-height: 300px;
+    object-fit: cover;
+}
+
+.artist a {
+    background-color: rgb(67, 96, 150);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.album-results {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album {
+    min-width: 20%;
+    max-width: 30%;
+    margin: 40px;
+    padding-bottom: 30px;
+    flex-grow: 1;
+    text-align: center;
+}
+
+.album img {
+    width: 400px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.album a {
+    background-color: rgb(67, 96, 150);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-decoration: none;
+}
+
+.tracks{
+    max-width: 80vw;
+    margin: 30px 10vw 30px 10vw;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+}
+
+header h1 {
+    padding: 0 30px;
+    color: white;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    width: 80vw;
+    background-color: lightgray;
+    margin: 2px 0;
+} 
+
+.track h4 {
+    padding: 0 30px;
+}
+
+.track audio {
+    margin: 3px 5px 0 0;
+    outline: none;
+} 
