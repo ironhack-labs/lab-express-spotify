@@ -1,0 +1,27 @@
+<div class="album-container">
+
+<div class="navigation">
+    <div class="buttons">
+        <a href="/">Back to Home</a>
+    </div>
+    <div class="buttons">
+        <a href="javascript:history.back()">Back to Artist</a>
+    </div>
+</div>
+
+<div class='title'>
+    <h1>Search Results</h1>
+</div>
+
+<div class='row'>
+    {{#each artistAlbums}}
+        <div class='album-card col-sm-4'>
+            <a href="/tracks/{{this.id}}"><img src="{{this.images.1.url}}" alt="{{this.name}}"></a>
+            <h2>{{this.name}}</h2>
+            <div class="buttons">
+                <a href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div> 
+</div>

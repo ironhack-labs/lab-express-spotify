@@ -21,3 +21,13 @@ body {
     width: 200px;
     padding: 15px;
 }
+
+.album-container {
+    display: flex;
+    flex-flow: column;
+    width: 90%;
+    padding: 20px;
+}
+.album-container, .home-container {
+    color: aliceblue;
+}

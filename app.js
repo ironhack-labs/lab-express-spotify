@@ -32,8 +32,8 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 app.use("/", require("./routes/index"));
-const artistRoute = require('./routes/artists.js');
-app.use('/', artistRoute);
+
+app.use('/', require("./routes/spotify"));
 
 app.listen(process.env.PORT, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 
