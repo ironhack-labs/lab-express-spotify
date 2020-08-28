@@ -77,3 +77,36 @@ body {
 .card-body>a:hover {
     font-style: underline;
 }
+
+#tracks-navbar {
+    background-color: #4A4A4A;
+    padding: 20px;
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#tracks-navbar>h4 {
+    width: 300px;
+}
+
+#tracks-navbar>h4:first-child {
+    width: 400px;
+}
+
+.track-item {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: #F6F6F6;
+    min-height: 80px;
+    margin-bottom: 5px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+}
+
+.track-item>p {
+    width: 400px;
+}

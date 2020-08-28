@@ -1,11 +1,14 @@
-<nav id="tracks-navbar">
-    <h2>Title</h2>
-    <h2>Listen</h2>
-</nav>
-<ul>
+</div>
+<div class="container-fluid">
+    <nav id="tracks-navbar">
+        <h4>Title</h4>
+        <h4>Listen</h4>
+    </nav>
     {{#each items}}
-    <h3>{{name}}</h3>
-    <audio controls name="media">
-        <source src="{{preview_url}}"></audio>
+    <div class="track-item">
+        <p>{{name}}</p>
+        <audio controls name="media">
+            <source src="{{preview_url}}">
+        </audio>
+    </div>
     {{/each}}
-</ul>
