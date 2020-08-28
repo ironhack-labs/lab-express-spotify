@@ -1,0 +1,79 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+#landing-page {
+    background-image: url('../images/spotify-background.jpeg');
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#landing-page>form {
+    display: flex;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.5);
+    padding: 60px 150px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 3px;
+}
+
+#landing-page>form>input {
+    width: 30vw;
+    height: 35px;
+    border-radius: 3px;
+    border: none;
+    padding: 5px 15px;
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+}
+
+#landing-page>form>button {
+    background-color: orangered;
+    border-radius: 3px;
+    border: none;
+    color: white;
+    height: 40px;
+    padding: 10px 25px;
+    font-size: 1.1rem;
+    cursor: pointer;
+}
+
+.card {
+    border: none;
+    margin: 15px 0;
+}
+
+.card-body {
+    background-color: #4D4D4D;
+    padding: 0 0 10px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-title {
+    color: white;
+    margin: 0 0 5px 0;
+    font-size: 1.4rem;
+    font-weight: normal;
+    text-align: center;
+}
+
+.card-body>a,
+.card-body>a:hover {
+    background-color: #F86967;
+    border: none;
+}
+
+.card-body>a:hover {
+    font-style: underline;
+}

@@ -1,0 +1,11 @@
+<div class="row">
+    {{#each items}}
+    <div class="card col-lg-4 col-12">
+        <img class="card-img-top" src="{{images.0.url}}" alt="{{name}}">
+        <div class="card-body">
+            <h2 class="card-title">{{name}}</h2>
+            <a class="btn btn-primary" href="/album/{{id}}">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

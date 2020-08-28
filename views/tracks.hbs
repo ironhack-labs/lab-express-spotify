@@ -1,0 +1,11 @@
+<nav id="tracks-navbar">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</nav>
+<ul>
+    {{#each items}}
+    <h3>{{name}}</h3>
+    <audio controls name="media">
+        <source src="{{preview_url}}"></audio>
+    {{/each}}
+</ul>
