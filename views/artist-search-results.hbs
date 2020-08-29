@@ -1,0 +1,19 @@
+<br>
+<h1>Artist Searched: {{search}}</h1>
+<br>
+<br>
+<hr>
+<div class="row">
+    {{#each itemsSearched}}
+    <div class="col-md-4">
+        <div class="card text-justify">
+            <img class="imgArtist rounded mx-auto d-block" src="{{images.[0].url}}" alt="" 
+            onerror="this.src='https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQwcaQD1UYCFEcPAqKTgFyjhLOotqr987HTwA&usqp=CAU';">
+            <div class="card-body">            
+                <div class="flexCenter"><h5 class="card-title">{{name}}</h5></div>
+                <div class="flexCenter"><a href="/albums/{{id}}/" class="buttonSearch" style="background-color:#f14e4e">View Albums</a></div>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>

@@ -1,0 +1,48 @@
+<br>
+<h1> Tracks of {{artistName}} - {{albumName}}</h1>
+<br>
+<br>
+<a href="/albums/{{artistId}}" class="buttonSearch" style="background-color:#f14e4e">Return to {{artistName}}'s Albums</a>
+<hr>
+<div class="row">
+    <div class="col-md-12">
+        <table class="table">
+            <thead class="thead-dark">
+                <tr>
+                <th scope="col" class="th10"># Disc</th>
+                <th scope="col" class="th10"># Track</th>
+                <th scope="col" class="th60">Name</th>
+                <th scope="col" class="th20">Demo</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each itemsTracks}}
+            <tr>
+                <th scope="row">{{disc_number}}</th>
+                <th scope="row">{{track_number}}</th>
+                <td>{{name}}</td>
+                <td>
+                    <audio class="audioHeight" controls>
+                        <source src="{{preview_url}}">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </td>
+            </tr>
+            {{/each}}
+            </tbody>
+        </table>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+
+        let audioTags = document.querySelectorAll(".audioHeight");
+
+        audioTags.forEach(audioTag => {
+            audioTag.volume = 0.5;
+        })
+
+    });
+
+</script>

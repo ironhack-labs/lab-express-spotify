@@ -1,0 +1,115 @@
+.htmlIndex, .bodyIndex {
+    margin:0px;
+    height:100%;
+    padding: 0px;
+}
+
+html, body {
+    margin:0px;
+    padding: 0px;
+}
+
+.divBG
+{
+    position:relative;
+    top:0;
+    left:0;
+    height:100%;
+    width:100%;
+    background: url('../images/spotify-background.jpeg') no-repeat center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.containerIndex
+{
+    width: 800px;
+    height: 180px;
+    background: rgb(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-flow: column;
+    border-radius:1em; 
+}
+
+.parentSearch{
+    width: 80%
+}
+
+.search{
+    padding: 8px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #ccc;
+    width: 100%;
+    border-radius: 4px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+
+}
+
+.parentButton
+{
+    margin-top:20px;
+}
+
+.buttonSearch{
+    padding:0.3em 1.2em;
+    margin:0 0.1em 0.1em 0;
+    border:0.14em solid rgba(255,255,255,0);
+    border-radius:2em;
+    box-sizing: border-box;
+    text-decoration:none;
+    font-family:'Roboto',sans-serif;
+    font-weight:300;
+    color:#FFFFFF;
+    text-shadow: 0 0.04em 0.04em rgba(0,0,0,0.35);
+    text-align:center;
+    transition: all 0.2s;
+    background-color:#f14e4e;
+    width: 200px;
+}
+.buttonSearch:hover{
+    border-color: rgba(255,255,255,1);
+}
+
+.imgArtist
+{
+    max-width:200px;
+    height:auto;
+}
+
+.card
+{
+    margin-bottom: 20px;
+}
+
+.flexCenter
+{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.th10
+{
+    width:10%
+}
+
+.th60
+{
+    width:60%
+}
+
+.th20
+{
+    width:20%
+}
+
+.audioHeight
+{
+    height:30px;
+}
