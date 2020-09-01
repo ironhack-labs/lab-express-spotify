@@ -42,7 +42,10 @@ app.get('/artist-search', (req, res, next) => {
         .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/req.query.artist)
         .then(data => {
          // console.log('The received data from the API: ', data.body);
-          console.log(data.body.artists.items)
+         //CORRECT
+       //  console.log(data.body.artists.items)
+       //try
+        // console.log(data.body.artists.items.images.url)
           // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
           res.render('artist-search-result',  data.body  )
           
