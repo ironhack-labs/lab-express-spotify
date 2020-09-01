@@ -1,0 +1,7 @@
+{{#each artists}}
+<div>
+    <p>{{this.name}}</p>
+    <img src="{{this.images.[1].url}}" alt="{{this.name}}">
+    <a href="/albums/{{this.id}}">View Albums</a>
+</div>
+{{/each}}
