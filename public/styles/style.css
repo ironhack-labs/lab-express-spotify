@@ -1,0 +1,130 @@
+/* general */
+
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 62,5%;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+input:focus, textarea {
+    outline: none ;
+}
+
+img {
+    width: 275px;
+}
+
+/* home page */
+.home-page {
+    background-image: url(/images/spotify-background.jpeg);
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 30vh;
+    text-align: center;
+}
+
+.home-page .form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 35vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-page form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.home-page form input {
+    margin: 5px 0;
+}
+
+.home-page form input:first-child {
+    padding: 8px 8px;
+    width: 20vw;
+    border-radius: 5px;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+.home-page form input:last-child {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff6666;
+    color: white;
+    font-size: 1rem;
+}
+
+/* artist searched page && album-results */
+.search-results ul,
+.album-results ul {
+    list-style: none;
+    background-color: #4D4D4D;
+    padding: 0;
+    width: 275px;
+    height: 345px;
+    text-align: center;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.search-results,
+.album-results {
+    margin: 5% 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.search-results ul div,
+.album-results ul div {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 66px ;
+
+}
+.search-results ul div li:last-child,
+.album-results ul div li:last-child{
+    padding: 5px 2px;
+    width: 100px;
+    border-radius: 5px;
+    background-color: #ff6666;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.search-results ul div li:first-child,
+.album-results ul div li:first-child{
+    font-size: 1rem;
+    font-weight: 500;
+}
+

@@ -1,0 +1,15 @@
+<div class="tracks-album">
+    <ul>
+    <li>Title</li>
+    <li>Listen</li>
+   
+    {{#each items}} 
+    
+        <li>{{name}}</li> 
+        <li><audio controls><source src="{{preview_url}}" type="audio/mp3"></audio></li>
+
+    {{/each}}
+     </ul>
+
+</div>
+

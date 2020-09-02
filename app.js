@@ -56,25 +56,15 @@ app.get('/albums/:artistId', (req, res) => {
 
 })
 
-app.get('/tracks/:id', (req,res) => {
-  const artistId = red.params.artistId
-  
-  spotifyApi
-  .getAlbum(artistId)
-  .then(function(data) {
-    return data.body.tracks.map(function(t) {
-      return t.id;
-    });
+app.get('/:id/tracks', (req,res) => {
+  const albumId = req.params.id
+
+  spotifyApi.getAlbumTracks(albumId)
+  .then(data => {
+    console.log('Artist tracks ', data.body)
+    res.render('tracks', data.body)
   })
-  .then(function(trackIds) {
-    return spotifyApi.getTracks(trackIds);
-  })
-  .then(function(data) {
-    console.log(data.body);
-  })
-  .catch(function(error) {
-    console.error(error);
-  });
+  .catch(err => console.log('The error while viewing artists tracks: ', err))
 })
 
 

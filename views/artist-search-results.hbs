@@ -1,8 +1,15 @@
-<ul>
+<div class="search-results">
     {{#each artists.items}}
-        <li><img src="{{images.[1].url}}" alt="img of {{name}}">  </li> 
-        <li>{{name}}</li> 
-         <li><a href="/albums/{{id}}">View </a></li>
+        <ul>
+            <li><img src="{{images.[0].url}}" alt="img of {{name}}">  </li> 
+            <div>
+                <li>{{name}}</li> 
+                <li><a href="/albums/{{id}}">View albums</a></li>
+            </div>
+
+        </ul>
     {{/each}}
-       
-</ul>
+
+</div>
+
+
