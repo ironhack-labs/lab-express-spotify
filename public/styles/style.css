@@ -6,3 +6,7 @@ img {
 body {
     background-color: pink;
 }
+
+.invisible {
+    display: none;
+}

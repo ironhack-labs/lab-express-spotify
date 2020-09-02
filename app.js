@@ -5,7 +5,6 @@ require("dotenv").config();
 const express = require("express");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
-// require spotify-web-api-node package here:
 const app = express();
 
 app.set("view engine", "hbs");
@@ -31,20 +30,15 @@ spotifyApi
 //CLIENT_SECRET=your clientSecret goes here
 //The .env is referred to in the .gitignore file so you're safe!
 
-// Our routes go here:
-//create a homepage
 app.get("/", (req, res) => {
   res.render("index");
 });
 app.get("/artist-search", (req, res, next) => {
-  //  console.log(data.body.name)
-  console.log(req.query);
-  //  console.log(data.body.artists)
-  spotifyApi
+   spotifyApi
     .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/ req.query.artist) //we take what we put in the search
     .then((data) => {
-    //  console.log("The received data from the API: ", {artistsNode: data.body.artists,}); // artistsNode is kinda a "variable"
-     // console.log(data.body.artists.items)
+      console.log("The received data from the API: ", {artistsNode: data.body.artists,}); // artistsNode is kinda a "variable"
+     // console.log(data.body.artists.items) - debug
       //after we use artistsNode in hbs html file (artistsNode - in each, fields from it - in the html elements)
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("artist-search-result", { artistsNode: data.body.artists });
@@ -60,8 +54,8 @@ app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi
   .getArtistAlbums(artId /* , {limit: 10} */)
   .then(data => {
-    console.log("we get the albums")
-    console.log( data.body.items[0])
+   // console.log("we get the albums")
+   // console.log( data.body.items[0])
     res.render('albums', {albumsNode: data.body.items});
   })
   .catch((err) => {
@@ -73,8 +67,8 @@ app.get('/tracks/:trackId', (req, res, next) => {
   spotifyApi
   .getAlbumTracks(trId)
   .then(data => {
-    console.log('tes tracks')
-    console.log(data.body.items)
+  //  console.log('yes tracks')
+   // console.log(data.body.items[0])
     res.render('tracks', {trackNode: data.body.items} )
   })
   .catch(err => {
