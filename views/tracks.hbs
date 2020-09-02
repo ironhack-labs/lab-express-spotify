@@ -1,8 +1,13 @@
+{{#each trackNode}} 
+
+{{#if this.preview_url}}
 
 <audio controls>
-
-    <source src="{{trackNode.preview_url}}" type="audio/mpeg">
-
-
-
+  
+    <source src="{{this.preview_url}}" type="audio/mpeg" alt="active">
 </audio>
+
+{{else}}
+<h3>No track for this album</h3>
+{{/if}}
+{{/each}}
