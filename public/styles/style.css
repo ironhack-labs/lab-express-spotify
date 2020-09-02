@@ -19,6 +19,11 @@ input:focus, textarea {
 
 img {
     width: 275px;
+    height: 100%;
+}
+
+ul {
+    list-style: none;
 }
 
 /* home page */
@@ -78,8 +83,6 @@ img {
 /* artist searched page && album-results */
 .search-results ul,
 .album-results ul {
-    list-style: none;
-    background-color: #4D4D4D;
     padding: 0;
     width: 275px;
     height: 345px;
@@ -108,9 +111,11 @@ img {
     flex-direction: column;
     align-items: center;
     justify-content: space-evenly;
-    height: 66px ;
-
+    height: 68px ;
+    background-color: #4D4D4D;
+    width: 100%;
 }
+
 .search-results ul div li:last-child,
 .album-results ul div li:last-child{
     padding: 5px 2px;
@@ -126,5 +131,33 @@ img {
 .album-results ul div li:first-child{
     font-size: 1rem;
     font-weight: 500;
+}
+
+/* tracks page */
+.tracks-album table{
+    margin: 50px auto;
+    border-collapse: collapse;
+    width: 75%;
+}
+
+.tracks-album th {
+    text-align: left;
+    background-color:  #4D4D4D;
+    color: white;
+    padding: 25px 20px;
+    border-right: none;
+    border-bottom: 2px solid white;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.tracks-album td {
+    background-color: #F6F6F6;
+    border-bottom: 2px solid white;
+    padding-left: 20px
+}
+
+.tracks-album td:first-child {
+    width: 60%;
 }
 

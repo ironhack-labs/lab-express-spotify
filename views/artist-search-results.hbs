@@ -1,7 +1,11 @@
 <div class="search-results">
     {{#each artists.items}}
         <ul>
+            {{#if images}}
             <li><img src="{{images.[0].url}}" alt="img of {{name}}">  </li> 
+            {{else}}
+            <li><img src="https://www.designshock.com/wp-content/uploads/2016/04/man-4-400.jpg" alt="mock-up, img of {{name}} not available"></li>
+            {{/if}}
             <div>
                 <li>{{name}}</li> 
                 <li><a href="/albums/{{id}}">View albums</a></li>

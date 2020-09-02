@@ -49,7 +49,7 @@ app.get('/albums/:artistId', (req, res) => {
 
   spotifyApi.getArtistAlbums(artistId)
   .then(data => {
-    console.log('Artist albums', data.body);
+    // console.log('Artist albums', data.body);
     res.render('albums', data.body)
   })
   .catch(err => console.log('The error while viewing artists albums: ', err));
@@ -61,7 +61,7 @@ app.get('/:id/tracks', (req,res) => {
 
   spotifyApi.getAlbumTracks(albumId)
   .then(data => {
-    console.log('Artist tracks ', data.body)
+    // console.log('Artist tracks ', data.body)
     res.render('tracks', data.body)
   })
   .catch(err => console.log('The error while viewing artists tracks: ', err))
