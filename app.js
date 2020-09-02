@@ -43,7 +43,7 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/ req.query.artist) //we take what we put in the search
     .then((data) => {
-      console.log("The received data from the API: ", {artistsNode: data.body.artists,}); // artistsNode is kinda a "variable"
+    //  console.log("The received data from the API: ", {artistsNode: data.body.artists,}); // artistsNode is kinda a "variable"
      // console.log(data.body.artists.items)
       //after we use artistsNode in hbs html file (artistsNode - in each, fields from it - in the html elements)
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
@@ -54,19 +54,31 @@ app.get("/artist-search", (req, res, next) => {
     );
 });
 app.get('/albums/:artistId', (req, res, next) => {
-  console.log('line59')
   //artistId === /:artistId from url here
   let artId = req.params.artistId
   //1. use the object
   spotifyApi
-  .getArtistAlbums(artId , {limit: 10})
+  .getArtistAlbums(artId /* , {limit: 10} */)
   .then(data => {
     console.log("we get the albums")
-    console.log( data.body.items[0].images[0].url)
+    console.log( data.body.items[0])
     res.render('albums', {albumsNode: data.body.items});
   })
   .catch((err) => {
     console.log('error during showing the albums', err)
+  })
+})
+app.get('/tracks/:trackId', (req, res, next) => {
+  let trId = req.params.trackId
+  spotifyApi
+  .getAlbumTracks(trId)
+  .then(data => {
+    console.log('tes tracks')
+    console.log(data.body.items[0])
+    res.render('tracks', {trackNode: data.body.items[0]} )
+  })
+  .catch(err => {
+    console.log('err', err)
   })
 })
 
