@@ -6,9 +6,6 @@ const hbs = require('hbs');
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node')
 
-
-
-
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -46,8 +43,8 @@ spotifyApi
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
-  //get artist albums
-  
+
+//get artist albums 
 app.get('/albums/:artistId',(req,res) => {
 const searchAlbum = req.params.artistId
 console.log(searchAlbum)
@@ -60,6 +57,17 @@ spotifyApi
       .catch(err => console.log('Error',err))
 })
 
+app.get('/tracks/:trackId'),(req,res) => {
+    const albumTracks = req.params.trackId
+    console.log(albumTracks)
+
+spotifyApi.getAlbumTracks(albumTracks)
+  .then(data => {
+    console.log('Tracks',data.body);
+    res.render('tracks', data.body)
+  })
+  .catch(err => console.log('Error',err))
+}
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
