@@ -1,0 +1,12 @@
+</div>
+<div class="search-container">
+    {{#each artistArr}}
+    <div class="beers-details">
+        <h3>Name: {{name}}</h3>
+        <a href="/artist-search/{{name}}">
+            <img src="{{images.[0].url}}" alt="  {{name}}">
+        </a>
+        {{/each}}
+
+    </div>
+</div>
