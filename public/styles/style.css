@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-size: 62,5%;
+}
+
+.container-home {
+    background-image: url(/images/spotify-background.jpeg);
+    height: 100%;
+    background-position: top;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    top: 30vh;
+    text-align: center;
+}
+
+.container-home .form-wrapper {
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 50%;
+    height: 35vh;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-home form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.container-home form input {
+    margin: 5px 0;
+}
+
+.container-home form input:first-child {
+    padding: 8px 8px;
+    width: 20vw;
+    border-radius: 5px;
+    border: 1px solid rgb(168, 168, 168);
+}
+
+.container-home form input:last-child {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff6666;
+    color: white;
+    font-size: 1rem;
+}
+
+.container-result{
+    margin: 30px;
+}
+
+.container-result img {
+    width: 300px;
+    height: 300px;
+}
+
+.container-result button {
+    padding: 8px 12px;
+    border: none;
+    background-color: #ff6666;
+    font-size: 1rem;
+}
+
+.container-result button a {
+    text-decoration: none;
+    color: white;
+}

@@ -1,0 +1,7 @@
+<div class="container-albums">
+    {{#each items}}
+        <h1>Albums for: {{name}}</h1>
+        <img src="{{images.[0].url}}" alt="img of {{name}}">
+        <button><a href="/tracks/{{id}}">View albums</a></button>
+    {{/each}}
+</div>
