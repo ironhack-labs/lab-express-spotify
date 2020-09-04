@@ -1,0 +1,9 @@
+<div class='artists-container'>
+{{#each searchedArtistArr}}
+    <div class='artist-container'>
+    <img src="{{images.[1].url}}" alt="">
+    <span>{{name}}</span>   
+    <a href="/albums/{{id}}">View albums</a>
+    </div>
+{{/each}}
+</div>
