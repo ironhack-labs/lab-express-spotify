@@ -1,0 +1,94 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  --button-color: #f86863; 
+}
+
+.container-search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  height: 100vh;
+  width: 100vw;
+  
+  background: black;
+  background-image: url('/images/spotify-background.jpeg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: clamp(500px, 50%, 1000px);
+  height: clamp(150px, 50%, 250px);;
+  background-color: rgba(255,255,255,0.5);
+
+}
+
+.search>form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 75%;
+}
+
+.search>form input {
+  width: 100%;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.search>form button {
+  width: 200px;
+  background: var(--button-color);
+  border: none;
+  color: white;
+  padding: 0.5rem;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem;
+}
+
+.artist-card {
+  display: flex;
+  margin: 1rem;
+  flex-direction: column;
+  justify-content:space-evenly;
+  box-shadow: 0 0 13px 3px rgba(0, 0, 0, 0.5);
+}
+
+.artist-card img {
+  height: 400px;
+}
+
+.artist-info {
+  background-color: #4d4d4d;
+  text-align: center;
+  color: white;
+  /* padding: 1rem; */
+  margin: 0;
+}
+
+.artist-info a {
+  padding: 1rem;
+  background-color: var(--button-color);
+  text-decoration: none;
+  color: white;
+  margin: 1rem;
+  display: inline-block;
+  border-radius: 0.5rem;
+}
+
+.artist-info h1 {
+  margin-bottom: 0;
+}

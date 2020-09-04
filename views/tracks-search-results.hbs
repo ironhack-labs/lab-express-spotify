@@ -1,0 +1,17 @@
+<div class="container">
+<ul>
+{{#each data.items}}
+  <li>
+    <figure>
+        <figcaption>{{track_number}}: {{name}}</figcaption>
+        <audio
+            controls
+            src="{{preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </figure>
+  </li>
+{{/each}}
+</ul>
+</div>
