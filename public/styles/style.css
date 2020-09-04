@@ -1,0 +1,38 @@
+body {
+    font-family: 'Roboto', sans-serif;
+}
+.container {
+    background-image: url("../images/spotify-background.jpeg");
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+background-color: rgba(255, 255, 255, 0.6);
+height: 150px;
+width: 100vh;
+
+}
+.artists-container {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+background-color: white;
+
+}
+.album-container {
+width: 30vw;
+padding: 15px;
+}
+.artist-details {
+    display: flex;
+    flex-wrap: wrap;
+}
