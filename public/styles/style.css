@@ -1,0 +1,118 @@
+body {
+	background: rgba(255, 255, 255, 0.2) url("/images/spotify-background.jpeg") no-repeat;
+	background-size: cover;
+	height: 100%;
+}
+
+.form-container {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 1fr 1fr;
+
+	/* gap: 1px 1px; */
+	grid-template-areas: "input" "button";
+	justify-items: center;
+	align-items: center;
+}
+
+#artist-input {
+	grid-area: input;
+	width: 33%;
+	height: 50%;
+}
+
+#search-btn {
+	color: white;
+	background-color: red;
+	border: none;
+	padding: 25px;
+	outline: inherit;
+	cursor: pointer;
+	grid-area: button;
+	width: 33%;
+	height: 50%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-size: large;
+	font-weight: bold;
+}
+
+#view-album-btn {
+	-webkit-tap-highlight-color: transparent;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	box-sizing: inherit;
+	text-decoration: none;
+	touch-action: manipulation;
+	color: #fff;
+	font-size: 12px;
+	background-color: #f86967;
+	border-radius: 5px;
+	padding: 4px 10px;
+}
+
+.info-text-container {
+	-webkit-tap-highlight-color: transparent;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	box-sizing: inherit;
+	background-color: #4d4d4d;
+	width: 320px;
+	text-align: center;
+	padding-bottom: 10px;
+}
+
+.info-text-container > p {
+	-webkit-tap-highlight-color: transparent;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		sans-serif;
+	font-weight: 400;
+	line-height: 1.5;
+	text-align: center;
+	box-sizing: inherit;
+	color: #fff;
+	font-size: 18px;
+	margin: 0;
+}
+
+#artist-container {
+	-webkit-tap-highlight-color: transparent;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	box-sizing: inherit;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%;
+	padding: 10px 40px;
+}
+
+#artist-container {
+	-webkit-tap-highlight-color: transparent;
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial,
+		sans-serif;
+	font-size: 1rem;
+	font-weight: 400;
+	line-height: 1.5;
+	color: #212529;
+	box-sizing: inherit;
+	position: relative;
+	width: 100%;
+	min-height: 1px;
+	flex: 0 0 33.333333%;
+	max-width: 33.333333%;
+	padding: 10px 40px;
+}
