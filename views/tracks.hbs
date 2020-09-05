@@ -1,0 +1,13 @@
+{{#each albumTracks}}
+
+<p>{{this.name}}</p>
+{{#if this.preview_url}}
+<audio controls src="{{this.preview_url}}">
+  Your browser does not support the
+  <code>audio</code> element.
+</audio>
+{{else}}
+<p>preview not available</p>
+{{/if}}
+
+{{/each}}

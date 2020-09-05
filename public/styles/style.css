@@ -1,0 +1,53 @@
+* {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+.search {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  vertical-align: center;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-image: url('/images/spotify-background.jpeg');
+  /* height: auto; */
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.square {
+  padding: 80px 250px;
+  background-color:rgba(255, 255, 255, 0.6);
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  background-color: white;
+  background-image: none;
+  padding: 10px 100px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  font-size: 17px;
+  /* text-align: left; */
+}
+
+/* ::placeholder {
+  text-align: left;
+} */
+
+button {
+  background-color: #ff6666;
+  color: white;
+  border: 1px solid #ff6666;
+  margin-top: 10px;
+  width: 170px;
+  align-self: center;
+  padding: 10px 0;
+  font-size: 17px;
+}
