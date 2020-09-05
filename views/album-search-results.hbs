@@ -1,0 +1,13 @@
+<div class="container">
+    {{#each items}}
+        <div class="item">
+            <img src={{images.0.url}} width=400px/>
+            <div class="item-stuff">
+                <h1>{{name}}</h1>
+                <form action="/track-search/{{id}}", method="GET">
+                    <button type="submit">View Albums</button>
+                </form>
+            </div>
+        </div>
+    {{/each}}
+</div>
