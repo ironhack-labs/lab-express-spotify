@@ -30,16 +30,12 @@ app.get('/', (req, res) => {
 });
 
 app.get('/artist-search', (req, res) => {
-    console.log(req.query);
 
     spotifyApi
         .searchArtists(req.query.artist)
         .then(data => {
-            console.log('The received data from the API: ', data.body);
             const spotifyArray = data.body.artists.items;
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            // const artistImages = artistArray.map
-
             const artistArray = spotifyArray.map(function (element) {
                 return {
                     name: element.name,
@@ -47,12 +43,6 @@ app.get('/artist-search', (req, res) => {
                     id: element.id
                 };
             });
-
-            console.log(artistArray);
-            // [
-            //     { name: 'brian eva', image: 'https://i.scdn.co/image/1047bf172446f2a815a99ab0a0395099d621be51' },
-            //     { name: 'john henne', image: 'https://i.scdn.co/image/1047bf172446f2a815a99ab0a0395099d621be51' }
-            //     ];
             res.render('artist-search-results', { artistArray });
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -80,12 +70,39 @@ app.get('/albums/:artistId', (req, res, next) => {
                         id: album.id
                     };
                 });
-                console.log('THIS IS THE ALBUMS', albumsArray);
+               
                 res.render('albums', { albumsArray });
             }
             
         }
     );    
+});
+
+
+app.get('/tracks/:albumId', (req, res) => {
+
+    spotifyApi.getAlbumTracks(
+        req.params.albumId, { 
+            limit : 5, 
+            offset : 1 
+        })
+    .then(function(data) {
+      const spotifyTracksArray = data.body.items;
+   
+      const tracksArray = spotifyTracksArray.map(function (track) {
+          return {
+              name: track.name,
+              audio: track.preview_url,
+              id: track.id
+          };
+      });
+   
+      res.render('tracks', { tracksArray});
+
+    }, function(err) {
+      console.log('Something went wrong!', err);
+    });
+
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
