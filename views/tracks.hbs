@@ -1,0 +1,17 @@
+<table class="tg">
+<thead>
+  <tr>
+    <th class="tg-0lax theader">Title</th>
+    <th class="tg-0lax theader">Listen</th>
+  </tr>
+</thead>
+<tbody>
+{{#each tracks }}
+  <tr>
+    <td class="tg-0lax t-track-title">{{this.name}}</td>
+    <td class="tg-0lax"><audio controls src="{{this.preview_url}}"></audio></td>
+  </tr>
+{{/each}}
+
+</tbody>
+</table>
