@@ -6,12 +6,42 @@
 }
 
 #main-page {
+    box-sizing: border-box;
     display: flex;
-    width: 100%;
-    height: 100%;
-    background-image: url('/images/spotify-background.jpeg');
+    height: 100vh;
+    left: 0;
+    top: 0;
+    background: url('/images/spotify-background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
+    align-items: center;
+}
+
+#main-page form {
+    left: 0;
+    top: 0;
+    margin-left: 34%;
+    padding: 100px;
+    background: rgba(211,211,211, 0.5);
+    display: flex;
+    flex-direction: column;
+}
+
+#main-page form input {
+    height: 30px;
+    width: 400px;
+}
+
+#main-page form button {
+    width: 180px;
+    height: 35px;
+    align-self: center;
+    margin-top: 10px;
+    background-color: #f76863;
+    color: #e5eaeb;
+    font-weight: 600;
+    font-size: 1.5rem;
+    border: none;
 }
 
 .container {
@@ -25,6 +55,10 @@
     left: 5%;
     margin-top: 50px;
     
+}
+
+.container.track-container {
+    flex-direction: column;
 }
 
 .item {
@@ -62,4 +96,32 @@
     font-size: 2rem;
     margin: 20px 0;
     border-radius: 15px;
+}
+
+.track-header {
+    width: 100%;
+    height: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    border: 1px solid #4a4a4a;
+    align-items: center;
+    background: #4a4a4a;
+    color: #e5eaeb;
+}
+
+.track {
+    width: 100%;
+    height: 60px;
+    background: lightgray;
+    margin: 1px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.track h1 {
+    margin-left: 30px;
+    font-weight: 600;
+    letter-spacing: 1px;
 }
