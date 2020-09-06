@@ -1,0 +1,58 @@
+ .index img{
+     max-width: 1000px;
+     max-height: 1000px;
+}  
+
+.index form{
+position: absolute;
+    top: 50%;
+    left: 30%;
+}
+
+ .index{
+    background-color:white;
+}
+
+.index button{
+    background-color: red;
+}
+
+  figure {
+    margin: 0;
+}
+
+.artistSearch{
+    display: flex;
+flex-wrap: wrap;
+flex-direction: column;
+}
+
+.insideArtistName{
+     display:flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+ .insideArtistName img{
+    width: 150px;
+        /* padding: 2px; */
+        border-bottom: 50px solid #ccc;
+        /* border-radius: 0 0 50px 50px; */
+} 
+
+.inside-album{
+    display:flex;
+   flex-wrap: wrap;
+   flex-direction: column;
+}
+
+.inside-album img{
+   width: 150px;
+       border-bottom: 50px solid #ccc;
+} 
+
+.outside-album{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
