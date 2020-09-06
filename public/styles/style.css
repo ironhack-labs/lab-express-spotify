@@ -1,0 +1,41 @@
+body {
+  font-family: "Roboto", sans-serif;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.home-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  background-image: url("/images/spotify-background.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+#form {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 45vw;
+  height: 28vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#artist {
+  width: 320px;
+  height: 25px;
+}
+
+.button {
+  background-color: rgba(255, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 15px;
+  margin: 15px;
+}
