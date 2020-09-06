@@ -1,0 +1,11 @@
+<div class="album-container">
+    {{#each searchedArtist}}
+    <h2>{{name}}</h2>
+    {{/each}}
+
+    {{#each artistAlbums}}
+    <img src="{{images.1.url}}" alt="">
+    <h3>{{name}}</h3>
+    <button><a href="/viewtracks/{{id}}">View Tracks</a></button>
+    {{/each }}
+</div>
