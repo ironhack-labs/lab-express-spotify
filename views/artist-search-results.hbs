@@ -1,0 +1,18 @@
+<div class="artist-page">
+
+    {{#each searchedArt}}
+ 
+        
+        <div class="artist-container">
+            
+            <img src="{{images.2.url}}" class="artist-search-image" alt="image for {{name}}">        
+            
+            <h3> {{name}}</h3>
+            
+            <button class="botones"><a href="/albums/{{id}}">View Albums</a></button>
+            
+        </div>
+
+
+    {{/each}}
+</div>
