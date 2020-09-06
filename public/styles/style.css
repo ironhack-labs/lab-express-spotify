@@ -1,0 +1,9 @@
+body {
+  font-family: "Roboto";
+  /* background-image: url("public/images/spotify-background.jpeg"); */
+  background-color: pink;
+}
+
+img {
+  height: 250px;
+}
