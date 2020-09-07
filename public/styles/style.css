@@ -1,0 +1,103 @@
+@import url("https://fonts.googleapis.com/css2?family=Signika:wght@300;600&display=swap");
+
+body {
+  background-color: white;
+  font-family: "Signika", sans-serif;
+  height: 100vh;
+  background-image: linear-gradient(-20deg, #303a50 0%, #191414 100%);
+}
+
+input {
+  width: 250px;
+  font-family: "Signika", sans-serif;
+  padding: 15px 30px;
+  margin: 11px 0;
+  color: #fff;
+  font-size: 18px;
+  border: none;
+  border: 2px solid #2b5239;
+  background-color: #ffffff12;
+  border-radius: 50px;
+}
+
+input:focus,
+textarea:focus,
+button:focus {
+  outline: none;
+}
+
+input:focus {
+  border: 2px solid #1db954;
+  background-color: #ffffff12;
+}
+
+button {
+  text-transform: uppercase;
+  padding: 3% 5%;
+  color: #fff;
+  font-size: 16px;
+  border: 1px solid #1db954;
+  border-radius: 50px;
+  font-family: "Signika", sans-serif;
+  background-color: #1db954;
+}
+
+h2 {
+  color: #fff;
+  font-size: 34px;
+}
+
+h3 {
+  color: #fff;
+}
+
+p {
+  color: #ffffffe0;
+}
+
+hr {
+  border-color: #1db954;
+}
+
+.artist-search-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.arr-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card-container {
+  width: 30vw;
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tracks-container {
+  padding: 3%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+img {
+  width: 180px;
+}
+
+.spotify-btn {
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 3% 7%;
+  color: #fff;
+  font-size: 14px;
+  border-radius: 50px;
+  background-color: #1db954;
+  margin-top: 20px;
+}

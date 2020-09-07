@@ -1,0 +1,17 @@
+<h2>Artist search</h2>
+
+<div class="arr-container">
+
+    <div class="card-container">
+
+        {{#each artistsArr}}
+
+        {{> itemCard this}}
+
+        <a href="/albums/{{id}}" class="spotify-btn">Show albums</a>
+
+        {{/each}}
+
+    </div>
+
+</div>
