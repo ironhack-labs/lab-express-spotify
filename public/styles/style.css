@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: black;
+}
+
+.background-image {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-position: 50% 90%;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    height : 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 250px;
+    height: 25px;
+    border: none;
+    border-radius: 2px;
+}
+
+.home-button {
+    width: 125px;
+    height: 30px;
+    margin-top: 10px;
+    margin-left: 65px;
+    padding: 5px 10px;
+    color: white;
+    background-color: tomato;
+    border: none;
+}
+
+.artist-page {
+    color: white;
+    height: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px;
+}
+
+.artist-container {
+    background-color: gray;
+    width: 15vw;
+    height: 20vw;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-size: 12px;
+}
+
+.artist-searh-image {
+    width: 15vw;
+    height: 15vw;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+}
+
+.buttons {
+    background-color: tomato;
+    border: none;
+    border-radius: 5px;
+}
