@@ -1,12 +1,12 @@
-</div>
 <div class="search-container">
     {{#each artistArr}}
-    <div class="beers-details">
-        <h3>Name: {{name}}</h3>
-        <a href="/artist-search/{{name}}">
-            <img src="{{images.[0].url}}" alt="  {{name}}">
-        </a>
-        {{/each}}
 
-    </div>
+    <h3>Name: {{name}}</h3>
+
+    <img src="{{images.[0].url}}" alt="  {{name}}">
+    <a href="/albums/{{id}}">View Albums</a>
+
+    {{/each}}
+
+
 </div>

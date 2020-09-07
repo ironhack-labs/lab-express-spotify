@@ -1,0 +1,14 @@
+<div class="tracks-container">
+    <ul>
+    {{#each tracksArray}}
+    <li>
+        <p>{{name}}</p>       
+       {{#if audio}}
+     
+        <audio controls src="{{audio}}">audio</audio>
+       
+        {{/if}}
+    </li>
+    {{/each}}
+     </ul>    
+</div>
