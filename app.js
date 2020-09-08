@@ -42,9 +42,10 @@ app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(albums => {
-        // console.log(albums.body);
+
         res.render("albums", {
-            artistAlbums: albums.body.items
+            artistAlbums: albums.body.items,
+            searchedArtist: albums.body.items[0].artists[0].name
         })
     }).catch(error => console.log("error in albums: ", error)) 
   });
