@@ -1,10 +1,19 @@
-{{#each trackNode}}
-{{#if this.preview_url}}
-<audio controls>
-    <source src="{{this.preview_url}}" type="audio/mpeg" alt="active">
-</audio>
-<h3 class="invisible">No track for this album</h3>
-{{else}}
-<h3>Track is not avaliable</h3>
-{{/if}}
-{{/each}}
+<section class="main-page">
+    {{#each trackNode}}
+
+    {{#if this.preview_url}}
+    <div class="track-wrapper">
+        <p>{{this.name}}</p>
+        <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mpeg" alt="active">
+        </audio>
+    </div>
+    <h3 class="invisible">No track for this album</h3>
+    {{else}}
+    <h3>Track is not avaliable</h3>
+
+
+    {{/if}}
+    {{/each}}
+
+</section>

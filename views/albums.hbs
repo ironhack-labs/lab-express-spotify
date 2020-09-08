@@ -1,7 +1,16 @@
-<div class="album-wrapper">
-    {{#each albumsNode}}
-    <h3>{{this.name}}</h3>
-    <img src="{{this.images.[0].url}}" alt="albums-image">
-    <a href='/tracks/{{this.id}}'>See the tracks</a>
-    {{/each}}
+<section class="main-page">
+<h4 class="top-artist">Albums for: {{albumsNode.[0].artists.[0].name}} </h4>
+<div class="artist-info">
+{{#each albumsNode}}
+    <div class="artist-info-wrapper width-album">
+        <div class="artist-image">
+            <img src="{{this.images.[0].url}}" alt="albums-image">
+        </div>
+        <h3 class="text">{{this.name}}</h3>
+        <button class="link-btn">
+            <a href='/tracks/{{this.id}}'>See the tracks</a>
+        </button>
+    </div>
+{{/each}}
 </div>
+</section>

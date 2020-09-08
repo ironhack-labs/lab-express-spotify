@@ -1,12 +1,147 @@
-img {
-    height: 200px;
-    
-}
-
 body {
-    background-color: pink;
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
 }
 
 .invisible {
-    display: none;
+  display: none;
+}
+
+/* index page */
+.banner {
+  background-size: cover;
+  background-image: url("/images/spotify-background.jpeg");
+  position: relative;
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.index-wrapper {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.index-wrapper form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.index-wrapper button {
+  width: 200px;
+  background-color: red;
+  color: white;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 1.2em;
+}
+#search-field {
+  padding: 10px;
+  width: 400px;
+  margin-bottom: 10px;
+}
+
+
+/* Artists page */
+
+.main-page {
+    margin-top: 80px;
+}
+
+.top-artist {
+    
+    font-size: 2em;
+    text-align: center;
+}
+
+img {
+  height: 200px;
+}
+
+.header {
+    background-color: grey;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+   
+}
+
+/* albums page  */
+
+
+.artist-info {
+    
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: space-around;
+
+}
+
+.artist-info-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-left: 20px;
+    margin-bottom: 20px;
+    background-color: grey;
+}
+
+
+.link-btn {
+    background-color: red;
+    padding: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.link-btn a {
+    text-decoration: none;
+    color: white;
+}
+
+/* .width-album {
+    width: 300px;
+} */
+
+.text {
+    text-align: center;
+    width: 200px;
+}
+
+/* audio page */
+
+.track-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-left: 20px;
+    margin-right: 20px;
+    background-color: rgb(188, 181, 181);
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+audio::-webkit-media-controls-play-button,
+     audio::-webkit-media-controls-panel {
+     background-color: rgb(188, 181, 181);
+     color: white;
+     }
+
+
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+}
+
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
 }

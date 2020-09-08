@@ -68,7 +68,7 @@ app.get('/tracks/:trackId', (req, res, next) => {
   .getAlbumTracks(trId)
   .then(data => {
   //  console.log('yes tracks')
-   // console.log(data.body.items[0])
+    console.log(data.body.items[0])
     res.render('tracks', {trackNode: data.body.items} )
   })
   .catch(err => {

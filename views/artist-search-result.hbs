@@ -1,14 +1,17 @@
-<div class="artist-info">
-    <h4>test</h4>
-    {{#each artistsNode.items}}
-    <h3>{{this.name}}</h3>
-    <img src="{{this.images.[0].url}}" alt="">  
-{{!--     Users should be taken to some other page after clicking on 
-    it and there be able to see all the albums of that 
-    particular artist. Hint: the URL should include artist's 
-    id and should change dynamically. --}}
-    <a href="/albums/{{this.id}}">View Albums</a>
-    {{!-- <button>View albums</button> --}}
-    {{/each}}
-</div>
 
+<section class="main-page">
+    <h4 class='top-artist'>Search results</h4>
+    <div class="artist-info">
+        {{#each artistsNode.items}}
+        <div class="artist-info-wrapper">
+            <div class="artist-image">
+                <img src="{{this.images.[0].url}}" alt="">
+            </div>
+            <h3>{{this.name}}</h3>
+            <button class="link-btn">
+                <a href="/albums/{{this.id}}">View Albums</a>
+            </button>
+        </div>
+        {{/each}}
+    </div>
+</section>
