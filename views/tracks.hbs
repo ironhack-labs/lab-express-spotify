@@ -1,10 +1,22 @@
-{{#each items}}
-<p>{{name}}</p>
-    <audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
+<body id='track-page'>
+<header class='title'>
+    <p id='song'>Title</p>
+    <p id='listen'>Listen</p> 
+</header>
 
+{{#each items}}
+<div class='song'>
+    <div id='song-name'>
+    <p>{{name}}</p>
+    </div>
+    <div id='audio'>
+        <audio
+            controls
+            src="{{preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </div>
+</div>
 {{/each}}
+</body>

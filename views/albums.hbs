@@ -1,6 +1,12 @@
+<body id='album-page'>
 {{#each items}}
-<p>{{name}}</p>
-<img src='{{images.[1].url}}' alt="{{name}}" </br>
-<a href="/tracks/{{id}}">View Tracks</a> 
+<div class='album'>
+    <div class='album-info'>
+        <p>{{name}}</p>
+        <img id='album-cover' src='{{images.[1].url}}' alt="{{name}}" </br>
+        <a id='view-tracks' href="/tracks/{{id}}">View Tracks</a> 
+</div>
+</div>
 {{/each}} 
+</body>
 

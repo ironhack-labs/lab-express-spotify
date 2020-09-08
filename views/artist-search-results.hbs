@@ -1,5 +1,11 @@
+<body id='artist-page'>
 {{#each artists.items}}
-<img src='{{images.[1].url}}' alt="{{name}}" </br>
-<p>{{name}}</p>
-<a href="/albums/{{id}}">View Albums</a> 
+<div class='artist'>
+    <div class='description'>
+    <img id='album-cover' src='{{images.[1].url}}' alt="{{name}}" </br>
+         <p>{{name}}</p>
+        <a id='view-album' href="/albums/{{id}}">View Albums</a> 
+    </div>
+</div>
 {{/each}}
+</body>
