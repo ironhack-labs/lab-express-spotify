@@ -1,5 +1,5 @@
 * {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
 }
 
 .search {
@@ -7,47 +7,180 @@
   justify-content: center;
   align-content: center;
   align-items: center;
-  vertical-align: center;
   height: 100%;
   width: 100%;
   position: absolute;
-  background-image: url('/images/spotify-background.jpeg');
-  /* height: auto; */
-  background-repeat: no-repeat;
+  background: url("/images/spotify-background.jpeg") no-repeat center center
+    fixed;
   background-size: cover;
 }
 
 .square {
-  padding: 80px 250px;
-  background-color:rgba(255, 255, 255, 0.6);
+  padding: 80px 150px;
+  background-color: rgba(255, 255, 255, 0.6);
 }
 
 form {
   display: flex;
   flex-direction: column;
+  width: 450px;
+}
+
+h2 {
+  text-align: center;
 }
 
 input {
   background-color: white;
   background-image: none;
-  padding: 10px 100px;
+  width: 100%;
+  padding: 10px 10px;
   border-radius: 5px;
   border: 1px solid gray;
   font-size: 17px;
-  /* text-align: left; */
-}
-
-/* ::placeholder {
   text-align: left;
-} */
+}
 
 button {
   background-color: #ff6666;
   color: white;
   border: 1px solid #ff6666;
   margin-top: 10px;
-  width: 170px;
+  width: 180px;
   align-self: center;
   padding: 10px 0;
   font-size: 17px;
+  font-weight: bold;
+}
+
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artist {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 20px;
+  background-color: darkslategray;
+  color: white;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.artist img {
+  color: white;
+  height: 160px;
+  width: 160px;
+}
+
+.noimage {
+  margin: 0;
+  padding: 0;
+  line-height: 100px;
+  background-color: white;
+  color: darkslategray;
+  height: 160px;
+  width: 160px;
+  text-align: center;
+  font-size: 8px;
+}
+
+.artist p {
+  font-size: 14px;
+  width: 160px;
+  text-align: center;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.artist a {
+  border-radius: 3px;
+  align-self: center;
+  text-decoration: none;
+  color: white;
+  background-color: #ff6666;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.album {
+  display: flex;
+  flex-direction: column;
+  margin: 10px 10px;
+  background-color: darkslategray;
+  color: white;
+  font-weight: bold;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.album img {
+  color: white;
+  height: 160px;
+  width: 160px;
+}
+
+.album p {
+  font-size: 14px;
+  width: 160px;
+  text-align: center;
+  font-weight: bold;
+  margin: 5px 0;
+  padding: 0;
+}
+
+.album a {
+  border: black 1px solid;
+  border-radius: 3px;
+  align-self: center;
+  text-decoration: none;
+  color: white;
+  background-color: #ff6666;
+  padding: 3px;
+  margin-bottom: 10px;
+}
+
+.tracks {
+  width: 80%;
+}
+
+.tableheader {
+  background-color: darkslategrey;
+  color: lightgray;
+  height: 50px;
+}
+
+.tableheader .title {
+  padding-left: 20px;
+  text-align: start;
+}
+
+.tableheader .listen {
+  padding-right: 100px;
+  text-align: end;
+}
+
+.track {
+  background-color: #f1f3f4;
+  font-weight: bold;
+  height: 20px;
+}
+
+.track td {
+  padding-left: 20px;
+  border-bottom: 2px solid white;
+}
+
+.track audio {
+  margin-left: 200px;
+  margin-right: auto;
+  float: right;
 }

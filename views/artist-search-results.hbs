@@ -1,12 +1,13 @@
-{{#each artistsData}}
-
-{{#if this.images}}
-<img src="{{this.images.[2].url}}" alt="">
-{{else}}
-<p>nao possui imagem</p>
-{{/if}}
-<p>{{this.name}}</p>
-<p><a href="/albums/{{this.id}}">View Albums</a></p>
-
-{{/each}}
-
+<section class="artists">
+  {{#each artistsData}}
+  <div class="artist">
+    {{#if this.images}}
+    <img src="{{this.images.[1].url}}" alt="">
+    {{else}}
+    <h6 class="noimage">Image not available</h6>
+    {{/if}}
+    <p>{{this.name}}</p>
+    <p><a href="/albums/{{this.id}}">View Albums</a></p>
+  </div>
+  {{/each}}
+</section>

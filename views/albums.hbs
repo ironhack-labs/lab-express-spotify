@@ -1,11 +1,14 @@
-{{#each artistsAlbums}}
-
-{{#if this.images}}
-<img src="{{this.images.[2].url}}" alt="">
-{{else}}
-<p>nao possui imagem</p>
-{{/if}}
-<p>{{this.name}}</p>
-<p><a href="/tracks/{{this.id}}">View Tracks</a></p>
-
-{{/each}}
+<h2>Albums for: {{artistsAlbums.[0].artists.[0].name}}</h2>
+<section class="albums">
+  {{#each artistsAlbums}}
+  <div class="album">
+    {{#if this.images}}
+    <img src="{{this.images.[1].url}}" alt="">
+    {{else}}
+    <h6 class="noimage">Image not available</h6>
+    {{/if}}
+    <p>{{this.name}}</p>
+    <p><a href="/tracks/{{this.id}}">View Tracks</a></p>
+  </div>
+  {{/each}}
+</section>
