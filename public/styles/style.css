@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2&display=swap');
+
+body,
+html {
+    height: 100%;
+    font-family: 'Baloo 2', cursive;
+}
+
+#container-home {
+    background-image: url("../images/spotify-background.jpeg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    align-items: center;
+}
+
+#container-form {
+    padding: 50px 100px;
+    background-color: rgb(229, 233, 236, 0.3)
+}
+
+#container-form input {
+    padding: 10px 100px;
+    border: grey solid 1px;
+    border-radius: 2px;
+}
+
+#container-btn {
+    padding: 10px 100px;
+}
+
+#container-btn button {
+    background-color: rgb(255, 0, 0, 0.5);
+    color: white;
+    padding: 10px;
+    border: none;
+    font-weight: bolder;
+}
+
+.container-artists {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    margin: 50px 200px;
+}
+
+.container-artist {
+    background-color: grey;
+    margin: 5px;
+}
+
+.container-artist img {
+    width: 300px;
+    height: 300px;
+
+}
+
+.container-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-info p {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.container-info a {
+    background-color: rgb(255, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border: rgb(255, 0, 0, 0.5) solid 1px;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.album-intro {
+    font-size: 2em;
+    text-align: center;
+}
+
+.container-albums {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 30px 0px;
+}
+
+.container-album {
+    background-color: grey;
+    margin: 10px;
+}
+
+.container-album img {
+    width: 450px;
+    height: 450px;
+}
+
+.container-album-info {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container-album-info p {
+    color: white;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.container-album-info a {
+    background-color: rgb(255, 0, 0, 0.5);
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    border: rgb(255, 0, 0, 0.5) solid 1px;
+    border-radius: 5px;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+.tracks-intro {
+    display: flex;
+    justify-content: space-between;
+    background-color: grey;
+    padding: 5px 50px;
+    font-size: 1.5em;
+    font-weight: bolder;
+}
+
+.container-tracks {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 5px;
+    padding: 5px 50px;
+    background-color: rgb(229, 233, 236, 0.5);
+    border: lightgray solid 1px;
+    border-radius: 5px;
+    font-size: 1.2em;
+}

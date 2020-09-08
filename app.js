@@ -21,7 +21,6 @@ spotifyApi
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-
 app.get('/', (req, res, next) => {
     console.log(req.url);
     res.render('index')

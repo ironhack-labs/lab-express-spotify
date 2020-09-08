@@ -1,5 +1,9 @@
+<div class="tracks-intro">
+        <p>Title</p>
+        <p>Listen</p>
+</div>
 {{#each tracks}}
-    <div>
+    <div class="container-tracks">
         <p>{{this.name}}</p>
         <audio controls src="{{this.preview_url}}"></audio>
     </div>
