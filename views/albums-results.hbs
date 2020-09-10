@@ -1,0 +1,14 @@
+<div class="row">
+         
+    {{#each artistAlbums}}
+    <article style ="text-align: center"class="col-md-6 col-lg-4">
+     <div class="card-body">
+   <img src="{{images.1.url}}" class="artist-search-image" alt="images for {{album}}">
+    
+    <h5 style="margin-top: 20px;" class="card-title">{{name}}</h5>
+     <button class="buttons"><a href="/{{id}}/tracks">View tracks</a></button>
+    </div>
+    </article>
+    
+    {{/each}}
+
