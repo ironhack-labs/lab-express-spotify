@@ -1,5 +1,66 @@
-body {
-  padding: 50px;
-  font-family: sans-serif; }
+html, body {
+  height: 100%; }
+
+header {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  height: 100%;
+  min-width: 100%; }
+
+.form-container {
+  background-color: rgba(255, 255, 255, 0.4);
+  width: 900px;
+  height: 250px;
+  margin: 0 auto;
+  position: absolute;
+  left: 30%;
+  top: 35%;
+  width: 700px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.form-container form {
+  width: 100%; }
+
+.form-container input[type=text] {
+  width: 70%; }
+
+.form-container input[type=submit] {
+  background-color: #f26864;
+  border: none;
+  padding: 10px 20px;
+  color: white;
+  font-weight: bold; }
+
+.artists {
+  margin: 50px 0; }
+
+.artists div {
+  background-color: #4d4d4d;
+  width: 300px;
+  padding-bottom: 10px;
+  text-align: center; }
+
+.artists img {
+  object-fit: cover;
+  height: 300px;
+  width: 300px; }
+
+.artists p {
+  color: white;
+  font-weight: bold;
+  padding: 10px;
+  margin-bottom: 0; }
+
+.artists a {
+  background-color: #f26864;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  font-size: 0.8em;
+  font-weight: bold; }
 
 /*# sourceMappingURL=style.css.map */

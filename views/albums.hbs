@@ -1,0 +1,25 @@
+<article class="container">
+
+    <h1>Albums</h1>
+
+    <div class="row">
+
+        {{#each items}}
+
+        <div class="col-sm-6 col-md-4 artists">
+
+            <img src="{{images.[0].url}}" alt="{{name}}">
+
+            <div>
+                <p>{{name}}</p>
+
+                <a href="/tracks/{{id}}">View Tracks</a>
+            </div>
+
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</article>
