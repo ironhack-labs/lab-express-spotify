@@ -1,0 +1,20 @@
+.img-bck {
+  background-image: url("../images/spotify-background.jpeg") ;
+  position: fixed; 
+  background-size: cover;
+  top: 0; 
+  left: 0; 
+	
+  /* Preserve aspet ratio */
+  min-width: 100%;
+  min-height: 100%;
+}
+.form{
+    position: fixed;
+     top: 50%; 
+    left: 40%; 
+}
+
+.cover {
+    width: 150px;
+}

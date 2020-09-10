@@ -1,0 +1,28 @@
+<main class="container">
+
+    <div class="row">
+
+        <div class="col-3">
+            {{#each artists}}       
+                 <div class="card" >
+               
+               
+                <div class="card-body">
+                    <img class="cover" src="{{#each images}}
+                    {{#if @first}}
+                    {{url}}
+                    {{/if}}
+                    {{/each}}" alt="{{name}}">
+                    <h5 class="card-title">{{name}}</h5>
+
+                    <a href="/albums/{{id}}" class="btn btn-secondary">View Details</a>
+                       
+                </div>
+            </div>
+            {{/each}}
+            
+        </div>
+    </div>
+</main>
+
+
