@@ -1,0 +1,27 @@
+<main class = 'container'>
+    <div class= 'card-columns'>
+         {{#each data}}  
+         <article class = 'card'>
+        <img class= 'card-image-top image-flid'src="{{images.1.url}}" alt="">
+        <div class= 'card-body'>
+            <p class = 'card-title'>{{this.name}}</p>
+  
+    
+            <a class= 'btn btn-primary' href="/tracks/{{id}}">listen to tracks</a>
+
+        </div>
+    
+     
+            
+        </article>
+        {{/each}}
+
+
+    </div>
+
+ 
+
+
+    
+</main>
+

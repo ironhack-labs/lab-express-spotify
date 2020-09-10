@@ -1,0 +1,21 @@
+<main class="container">
+    <div class="card-columns">
+        {{#each data}}
+
+        <article class= 'card'>
+
+         <img class= 'card-image-top image-fluid' src="{{images.1.url}}" alt="{{name}}">
+         <div class="card-body">
+             <p class= 'card-title'>{{name}}</p>
+            <a class= 'btn btn-primary' href="/albums/{{id}}">view albums</a>
+         </div>
+            
+        </article>
+
+        {{/each}}
+
+    </div>
+</main>
+
+
+
