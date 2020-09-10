@@ -1,0 +1,16 @@
+body {
+    margin: 0;
+    background-image: url('../images/spotify-background.jpeg');
+    background-size: cover;
+}
+
+main {
+    display: flex;
+}
+
+main form {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
