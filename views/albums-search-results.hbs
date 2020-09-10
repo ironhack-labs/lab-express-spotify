@@ -1,0 +1,21 @@
+<main class="albums-search">
+
+{{#each this.items}}
+
+<article class="album-card">
+
+    <img src="{{images.[0].url}}" alt="{{name}}">
+
+    <h5>{{name}} </h5>
+
+    <a href="/tracks/{{id}}">View Tracks</a>
+
+
+</article>
+
+{{/each}}
+
+
+
+
+</main>

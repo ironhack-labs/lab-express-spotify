@@ -1,0 +1,22 @@
+<main class="tracks-search">
+
+<ul>
+    <li class="header">
+        <span>Title</span>
+        Player
+
+    </li>
+
+    {{#each this.items}}
+    <li><span>{{name}}</span>
+        <audio controls src="{{preview_url}}">
+        </audio>
+    </li>
+    {{/each}}
+
+</ul>
+
+
+
+
+</main>

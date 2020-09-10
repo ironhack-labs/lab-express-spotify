@@ -1,0 +1,60 @@
+body {
+  padding: 50px;
+  font-family: sans-serif; }
+
+.artist-search,
+.albums-search {
+  padding: 40px;
+  display: flex;
+  flex-wrap: wrap; }
+
+.artist-card,
+.album-card {
+  margin: 20px;
+  background-color: #888;
+  color: white;
+  width: 300px;
+  height: 420px;
+  text-align: center; }
+
+.artist-card img,
+.album-card img {
+  width: 100%; }
+
+.artist-card a,
+.album-card a {
+  display: block;
+  width: 200px;
+  height: 80;
+  padding: 10px;
+  background-color: #f55;
+  border-radius: 3px;
+  margin: 5px auto; }
+
+.tracks-search {
+  padding: 40px;
+  display: flex;
+  flex-direction: column; }
+
+.tracks-search li {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+  background-color: #ccc;
+  align-items: center; }
+
+.tracks-search li span {
+  width: 80%; }
+
+.tracks-search li.header {
+  padding: 20px;
+  display: flex;
+  width: 100%;
+  justify-content: stretch;
+  background-color: #888;
+  font-weight: 600;
+  color: white;
+  align-items: center; }
+
+/*# sourceMappingURL=style.css.map */
