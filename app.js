@@ -1,18 +1,22 @@
-require('dotenv').config();
+require('dotenv').config()
+// Database
+require('./configs/mongoose.config')
 
-const express = require('express');
-const hbs = require('hbs');
+// Debugger
+require('./configs/debugger.config')
 
-// require spotify-web-api-node package here:
+// App
+const express = require('express')
+const app = express()
 
-const app = express();
+// Configs
+require('./configs/preformatter.config')(app)
+require('./configs/middleware.config')(app)
+require('./configs/views.configs')(app)
+require('./configs/locals.config')(app)
+require('./configs/api.config')
 
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+// Routes index
+require('./routes')(app)
 
-// setting the spotify-api goes here:
-
-// Our routes go here:
-
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+module.exports = app

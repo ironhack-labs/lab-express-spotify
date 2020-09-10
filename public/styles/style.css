@@ -1,0 +1,36 @@
+body{
+    padding: 50px;
+    font-family: sans-serif;
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: 100%;
+}
+
+form{
+    margin: 20% 40%;
+}
+
+/* .tracks{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+} */
+
+/* .p{
+    width: 400px;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+    height:54px;
+    
+} */
+
+.reduce{
+    width: 300px;
+    margin-left: 0;
+
+}
+.reduce2 {
+    width: 300px;
+    margin-right: 0;
+
+}
