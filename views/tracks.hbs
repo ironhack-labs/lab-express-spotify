@@ -1,0 +1,47 @@
+
+<main class="container">
+    <div style="background-color:rgb(234, 234, 234); display:flex; flex-flow:column nowrap; justify-content:space-between;">
+        {{#each items}}
+        <div style="margin-top:30px; background-color:rgb(246, 238, 238); height:3em; padding-left:20px;"> 
+            {{name}}
+                
+                <audio controls> 
+                    <source src="{{preview_url}}" preload="auto">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio> 
+              
+        </div>
+           
+    {{/each}} 
+    </div>
+</main>
+
+
+
+
+
+<!--
+
+</main>    
+    <div class="list-group">
+        {{#each items}}
+  <p class="list-group-item list-group-item-action active">
+      
+        <audio controls> 
+            <source src="{{preview_url}}" preload="auto">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+  </p>
+
+{{/each}}    
+  
+  
+</div>
+
+
+
+</main>
+
+-->

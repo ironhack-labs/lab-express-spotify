@@ -1,0 +1,41 @@
+
+.spotify-background{
+    background: url(../images/spotify-background.jpeg) no-repeat;
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+}
+
+#spotify-form-box{
+    width: 250px;
+    height:250px;
+    background-color:hsla(0, 0%, 100%, 0.2);
+    margin-top: 200px;
+}
+
+.spotify-form-style{
+    margin-top: 70px;
+    text-align: center;   
+}
+
+#input-artist{
+    width: 350px;
+    display: block;
+    margin: 0 auto;
+}
+
+#spotify-albums-style{
+    margin-top:50px;
+    
+}
+
+.album-title-style{
+    margin-top:20px; 
+    height:3rem;
+}
+
+.spotify-audio-player{
+
+
+
+}

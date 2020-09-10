@@ -1,0 +1,13 @@
+<main class="container">
+    <div class="row">
+        {{#each items}}
+        <div class="col-md-6 col-lg-4 card">
+            <div class="card-body">
+                <img src="{{images.0.url}}" class ="card-img-top" alt="{{name}}">
+                <h5 class="card-title" style="margin-top:20px; height:3rem;">{{name}}</h5>
+                <a href="/tracks/{{id}}" class="btn btn-danger btn-block">View Tracks</a>
+            </div>
+        </div>
+        {{/each}}   
+    </div>
+</main> 

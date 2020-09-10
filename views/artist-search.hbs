@@ -1,0 +1,15 @@
+<main class="container" >
+    <div class="row" id="spotify-albums-style">
+        {{#each artists.items}}
+        <div class="col-md-6 col-lg-4 card">
+            <div class="card-body">
+                <img src="{{images.0.url}}" class ="card-img-top" alt="{{name}}">
+                <h5 class="card-title album-title-style">{{name}}</h5>
+                <a href="/albums/{{id}}" class="btn btn-danger btn-block">View Albums</a>
+            </div>
+        </div>
+        {{/each}}   
+    </div>
+</main> 
+
+
