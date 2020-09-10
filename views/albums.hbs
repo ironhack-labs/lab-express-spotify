@@ -1,0 +1,20 @@
+<section class="container albums">
+
+    <div class="row justify-content-around">
+
+
+        {{#each albums}}
+
+        <div class="col-md-6 col-lg-4 card text-center tarjeta" style="width: 18rem;">
+            <img src="{{images.0.url}}" alt="">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <a class="button" href="/tracks/{{id}}">View Tracks</a>
+            </div>
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</section>

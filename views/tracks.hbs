@@ -1,0 +1,36 @@
+<section class="tracks">
+
+    <div class="row justify-content-between header">
+
+        <div class="col-8">
+            <h2>Title</h2>
+        </div>
+
+        <div class="col-4 listen">
+            <h2>Listen</h2>
+        </div>
+
+    </div>
+
+    {{#each tracks}}
+
+    <div class="row justify-content-between align-items-center tracks">
+
+        <div class="col-8">
+
+            {{name}}
+
+        </div>
+
+        <div class="col-4">
+
+            <audio controls="" name="media">
+                <source src={{preview_url}} type="audio/mpeg"></audio>
+
+        </div>
+
+    </div>
+
+    {{/each}}
+
+</section>

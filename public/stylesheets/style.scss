@@ -1,0 +1,129 @@
+html, body{
+
+  padding: 0;
+  margin: 0
+
+}
+
+.input{
+
+  width: 100%;
+  
+}
+
+.button{
+
+  background-color: salmon;
+  color: white;
+
+  outline: none;
+  border: none;
+
+  padding: 10px 20px
+
+}
+
+a{
+
+}
+
+a:hover{
+
+  text-decoration: none;
+  color: cornsilk;
+  
+
+}
+
+.home{
+
+  background-image: url('/images/spotify-background.jpeg');
+
+  height: 100vh;
+  width: 100%;
+
+  background-size: cover;
+
+  background-repeat: no-repeat;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.home form{
+
+  background-color: rgba($color: #fff, $alpha: .3);
+
+  padding: 40px 110px;
+
+  width: 700px;
+
+}
+
+.home input{
+
+  outline: none;
+  
+  display: block;
+
+  margin: 30px auto
+
+}
+
+.tarjeta{
+
+  border: none;
+
+}
+
+.tarjeta img{
+
+  display: block;
+
+  width: 100%;
+  // height: 100px;
+  //object-fit: cover;
+
+  margin: 20px auto;
+  margin-bottom: 0;
+
+}
+
+.card-body {
+
+  background-color: slategrey;
+
+}
+
+/*TRACKS*/
+
+.header{
+
+  padding: 20px;
+
+  background-color: dimgrey;
+  color: white
+
+}
+
+.tracks{
+
+  background-color: #f1f3f4;
+  margin: 5px 0;
+  border-bottom: white 3px solid;
+
+}
+
+.listen{
+
+  text-align: center;
+
+}
+
+audio {
+
+  outline: none;
+
+}
