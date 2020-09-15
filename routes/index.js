@@ -1,20 +1,26 @@
 const router = require("express").Router();
+const { spotifyApi, configSpotify } = require("../config/spotify-config");
 
-// require spotify-web-api-node package here:
-const SpotifyWebApi = require('spotify-web-api-node');
+configSpotify()
+  .then((data) => {
+    console.log("Spotify API authenticated", data);
+  })
+  .catch((err) => console.error(err));
 
-// setting the spotify-api goes here:
-const spotifyApi = new SpotifyWebApi({
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
-});
+// // require spotify-web-api-node package here:
+// const SpotifyWebApi = require('spotify-web-api-node');
 
-// Retrieve an access token
-spotifyApi
-  .clientCredentialsGrant()
-  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-  .catch(error => console.log('Something went wrong when retrieving an access token', error));
+// // setting the spotify-api goes here:
+// const spotifyApi = new SpotifyWebApi({
+//   clientId: process.env.CLIENT_ID,
+//   clientSecret: process.env.CLIENT_SECRET
+// });
 
+// // Retrieve an access token
+// spotifyApi
+//   .clientCredentialsGrant()
+//   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
+//   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
 
@@ -23,8 +29,7 @@ router.get("/", (req, res) => res.render("home"));
 router.get("/artist-search", (req, res) => {
   // console.log(req.query.artistSearch);
   console.log("ARTISTS PAGE")
-  spotifyApi
-    .searchArtists(req.query.artistSearch)
+  spotifyApi.searchArtists(req.query.artistSearch)
     .then(data => {
       // console.log('The received data from the API: ', data.body.artists);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
@@ -51,7 +56,7 @@ router.get('/tracks/:albumId', async (req, res) => {
   try {
     const dataFromApi = await spotifyApi.getAlbumTracks(req.params.albumId);
     const tracks = dataFromApi.body.items;
-    console.log("track data:", tracks);
+    // console.log("track data:", tracks);
     res.render('tracks', { tracks })
 
   } catch (err) {
