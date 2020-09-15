@@ -1,0 +1,154 @@
+------------------ data ----------------
+
+ {
+  body: {
+    href: 'https://api.spotify.com/v1/artists/6wWVKhxIU2cEi0K81v7HvP/albums?offset=0&limit=20&include_groups=album,single,compilation,appears_on',
+    items: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ],
+    limit: 20,
+    next: 'https://api.spotify.com/v1/artists/6wWVKhxIU2cEi0K81v7HvP/albums?offset=20&limit=20&include_groups=album,single,compilation,appears_on',
+    offset: 0,
+    previous: null,
+    total: 36
+  },
+  headers: {
+    'content-type': 'application/json; charset=utf-8',
+    'cache-control': 'public, max-age=72143',
+    'x-robots-tag': 'noindex, nofollow',
+    'access-control-allow-origin': '*',
+    'access-control-allow-headers': 'Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context',
+    'access-control-allow-methods': 'GET, POST, OPTIONS, PUT, DELETE, PATCH',
+    'access-control-allow-credentials': 'true',
+    'access-control-max-age': '604800',
+    'content-encoding': 'gzip',
+    'strict-transport-security': 'max-age=31536000',
+    'x-content-type-options': 'nosniff',
+    date: 'Tue, 15 Sep 2020 01:54:49 GMT',
+    server: 'envoy',
+    via: 'HTTP/2 edgeproxy, 1.1 google',
+    'alt-svc': 'clear',
+    connection: 'close',
+    'transfer-encoding': 'chunked'
+  },
+  statusCode: 200
+}
+
+------------------ data.body ----------------
+ {
+  href: 'https://api.spotify.com/v1/artists/6wWVKhxIU2cEi0K81v7HvP/albums?offset=0&limit=20&include_groups=album,single,compilation,appears_on',
+  items: [
+    {
+      album_group: 'album',
+      album_type: 'album',
+      artists: [Array],
+      available_markets: [Array],
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/albums/1LoyJQVHPLHE3fCCS8Juek',
+      id: '1LoyJQVHPLHE3fCCS8Juek',
+      images: [Array],
+      name: 'RAMMSTEIN',
+      release_date: '2019-05-17',
+      release_date_precision: 'day',
+      total_tracks: 11,
+      type: 'album',
+      uri: 'spotify:album:1LoyJQVHPLHE3fCCS8Juek'
+    },
+    ...
+    {
+      album_group: 'single',
+      album_type: 'single',
+      artists: [Array],
+      available_markets: [Array],
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/albums/0mm3Hm8e1zYNuU2np9l2ZS',
+      id: '0mm3Hm8e1zYNuU2np9l2ZS',
+      images: [Array],
+      name: 'RADIO',
+      release_date: '2019-04-26',
+      release_date_precision: 'day',
+      total_tracks: 2,
+      type: 'album',
+      uri: 'spotify:album:0mm3Hm8e1zYNuU2np9l2ZS'
+    }
+  ],
+  limit: 20,
+  next: 'https://api.spotify.com/v1/artists/6wWVKhxIU2cEi0K81v7HvP/albums?offset=20&limit=20&include_groups=album,single,compilation,appears_on',
+  offset: 0,
+  previous: null,
+  total: 36
+}
+
+------------------ data.body.items ----------------
+
+ [
+  {
+    album_group: 'album',
+    album_type: 'album',
+    artists: [ [Object] ],
+    available_markets: [
+      'AD', 'AE', 'AL', 'AR', 'AT', 'AU', 'BA', 'BE', 'BG',
+      'BH', 'BO', 'BR', 'BY', 'CA', 'CH', 'CL', 'CO', 'CR',
+      'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG',
+      'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HR',
+      'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP',
+      'KW', 'KZ', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC',
+      'MD', 'ME', 'MK', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO',
+      'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY',
+      'QA', 'RO', 'RS', 'RU', 'SA', 'SE', 'SG', 'SI', 'SK',
+      'SV', 'TH', 'TN', 'TR', 'TW', 'UA', 'US', 'UY', 'VN',
+      'XK', 'ZA'
+    ],
+    external_urls: {
+      spotify: 'https://open.spotify.com/album/1LoyJQVHPLHE3fCCS8Juek'
+    },
+    href: 'https://api.spotify.com/v1/albums/1LoyJQVHPLHE3fCCS8Juek',
+    id: '1LoyJQVHPLHE3fCCS8Juek',
+    images: [ [Object], [Object], [Object] ],
+    name: 'RAMMSTEIN',
+    release_date: '2019-05-17',
+    release_date_precision: 'day',
+    total_tracks: 11,
+    type: 'album',
+    uri: 'spotify:album:1LoyJQVHPLHE3fCCS8Juek'
+  },
+  ...
+  {
+    album_group: 'single',
+    album_type: 'single',
+    artists: [ [Object] ],
+    available_markets: [
+      'AD', 'AE', 'AL', 'AR', 'AT', 'AU', 'BA', 'BE', 'BG',
+      'BH', 'BO', 'BR', 'BY', 'CA', 'CH', 'CL', 'CO', 'CR',
+      'CY', 'CZ', 'DE', 'DK', 'DO', 'DZ', 'EC', 'EE', 'EG',
+      'ES', 'FI', 'FR', 'GB', 'GR', 'GT', 'HK', 'HN', 'HR',
+      'HU', 'ID', 'IE', 'IL', 'IN', 'IS', 'IT', 'JO', 'JP',
+      'KW', 'KZ', 'LB', 'LI', 'LT', 'LU', 'LV', 'MA', 'MC',
+      'MD', 'ME', 'MK', 'MT', 'MX', 'MY', 'NI', 'NL', 'NO',
+      'NZ', 'OM', 'PA', 'PE', 'PH', 'PL', 'PS', 'PT', 'PY',
+      'QA', 'RO', 'RS', 'RU', 'SA', 'SE', 'SG', 'SI', 'SK',
+      'SV', 'TH', 'TN', 'TR', 'TW', 'UA', 'US', 'UY', 'VN',
+      'XK', 'ZA'
+    ],
+    external_urls: {
+      spotify: 'https://open.spotify.com/album/0mm3Hm8e1zYNuU2np9l2ZS'
+    },
+    href: 'https://api.spotify.com/v1/albums/0mm3Hm8e1zYNuU2np9l2ZS',
+    id: '0mm3Hm8e1zYNuU2np9l2ZS',
+    images: [ [Object], [Object], [Object] ],
+    name: 'RADIO',
+    release_date: '2019-04-26',
+    release_date_precision: 'day',
+    total_tracks: 2,
+    type: 'album',
+    uri: 'spotify:album:0mm3Hm8e1zYNuU2np9l2ZS'
+  }
+]
+
+

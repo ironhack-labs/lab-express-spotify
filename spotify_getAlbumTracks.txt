@@ -1,0 +1,89 @@
+------------------ data ----------------
+
+{
+  body: {
+    href: 'https://api.spotify.com/v1/albums/5iT3F2EhjVQVrO4PKhsP8c/tracks?offset=0&limit=20',
+    items: [
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object], [Object],
+      [Object], [Object]
+    ],
+    limit: 20,
+    next: 'https://api.spotify.com/v1/albums/5iT3F2EhjVQVrO4PKhsP8c/tracks?offset=20&limit=20',
+    offset: 0,
+    previous: null,
+    total: 40
+  },
+  headers: {
+    'content-type': 'application/json; charset=utf-8',
+    'cache-control': 'public, max-age=72317',
+    'x-robots-tag': 'noindex, nofollow',
+    'access-control-allow-origin': '*',
+    'access-control-allow-headers': 'Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context',
+    'access-control-allow-methods': 'GET, POST, OPTIONS, PUT, DELETE, PATCH',
+    'access-control-allow-credentials': 'true',
+    'access-control-max-age': '604800',
+    'content-encoding': 'gzip',
+    'strict-transport-security': 'max-age=31536000',
+    'x-content-type-options': 'nosniff',
+    date: 'Tue, 15 Sep 2020 02:16:19 GMT',
+    server: 'envoy',
+    via: 'HTTP/2 edgeproxy, 1.1 google',
+    'alt-svc': 'clear',
+    connection: 'close',
+    'transfer-encoding': 'chunked'
+  },
+  statusCode: 200
+}
+
+------------------ data.body ----------------
+{
+  href: 'https://api.spotify.com/v1/albums/5iT3F2EhjVQVrO4PKhsP8c/tracks?offset=0&limit=20',
+  items: [
+    {
+      artists: [Array],
+      available_markets: [Array],
+      disc_number: 1,
+      duration_ms: 260200,
+      explicit: false,
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/tracks/6lSxM9BKcEZBSDKl2VODsF',
+      id: '6lSxM9BKcEZBSDKl2VODsF',
+      is_local: false,
+      name: 'Come Together - 2019 Mix',
+      preview_url: null,
+      track_number: 1,
+      type: 'track',
+      uri: 'spotify:track:6lSxM9BKcEZBSDKl2VODsF'
+    },
+    ...
+     {
+      artists: [Array],
+      available_markets: [Array],
+      disc_number: 2,
+      duration_ms: 217226,
+      explicit: false,
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/tracks/4w4kzrDRJo9PEJGzh2uK49',
+      id: '4w4kzrDRJo9PEJGzh2uK49',
+      is_local: false,
+      name: 'Something - Studio Demo',
+      preview_url: null,
+      track_number: 3,
+      type: 'track',
+      uri: 'spotify:track:4w4kzrDRJo9PEJGzh2uK49'
+    }
+  ],
+  limit: 20,
+  next: 'https://api.spotify.com/v1/albums/5iT3F2EhjVQVrO4PKhsP8c/tracks?offset=20&limit=20',
+  offset: 0,
+  previous: null,
+  total: 40
+}
+------------------ data.body.items ----------------
+
+

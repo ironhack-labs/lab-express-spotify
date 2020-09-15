@@ -1,0 +1,137 @@
+------------------ data ----------------
+
+
+{
+  body: {
+    artists: {
+      href: 'https://api.spotify.com/v1/search?query=Rammstein&type=artist&offset=0&limit=20',
+      items: [Array],
+      limit: 20,
+      next: null,
+      offset: 0,
+      previous: null,
+      total: 1
+    }
+  },
+  headers: {
+    'content-type': 'application/json; charset=utf-8',
+    'cache-control': 'public, max-age=7200',
+    'x-robots-tag': 'noindex, nofollow',
+    'access-control-allow-origin': '*',
+    'access-control-allow-headers': 'Accept, App-Platform, Authorization, Content-Type, Origin, Retry-After, Spotify-App-Version, X-Cloud-Trace-Context',
+    'access-control-allow-methods': 'GET, POST, OPTIONS, PUT, DELETE, PATCH',
+    'access-control-allow-credentials': 'true',
+    'access-control-max-age': '604800',
+    'content-encoding': 'gzip',
+    'strict-transport-security': 'max-age=31536000',
+    'x-content-type-options': 'nosniff',
+    date: 'Tue, 15 Sep 2020 01:19:21 GMT',
+    server: 'envoy',
+    via: 'HTTP/2 edgeproxy, 1.1 google',
+    'alt-svc': 'clear',
+    connection: 'close',
+    'transfer-encoding': 'chunked'
+  },
+  statusCode: 200
+}
+
+
+------------------ data.body ----------------
+{
+  artists: {
+    href: 'https://api.spotify.com/v1/search?query=Rammstein&type=artist&offset=0&limit=20',
+    items: [ [Object] ],
+    limit: 20,
+    next: null,
+    offset: 0,
+    previous: null,
+    total: 1
+  }
+}
+
+
+[
+  {
+    external_urls: {
+      spotify: 'https://open.spotify.com/artist/6wWVKhxIU2cEi0K81v7HvP'
+    },
+    followers: { href: null, total: 4902714 },
+    genres: [
+      'alternative metal',
+      'german metal',
+      'industrial',
+      'industrial metal',
+      'industrial rock',
+      'neue deutsche harte',
+      'nu metal'
+    ],
+    href: 'https://api.spotify.com/v1/artists/6wWVKhxIU2cEi0K81v7HvP',
+    id: '6wWVKhxIU2cEi0K81v7HvP',
+    images: [ [Object], [Object], [Object] ],
+    name: 'Rammstein',
+    popularity: 81,
+    type: 'artist',
+    uri: 'spotify:artist:6wWVKhxIU2cEi0K81v7HvP'
+  }
+]
+
+------------------ data.body.artists.items[0] ----------------
+{
+  external_urls: { spotify: 'https://open.spotify.com/artist/6wWVKhxIU2cEi0K81v7HvP' },
+  followers: { href: null, total: 4902714 },
+  genres: [
+    'alternative metal',
+    'german metal',
+    'industrial',
+    'industrial metal',
+    'industrial rock',
+    'neue deutsche harte',
+    'nu metal'
+  ],
+  href: 'https://api.spotify.com/v1/artists/6wWVKhxIU2cEi0K81v7HvP',
+  id: '6wWVKhxIU2cEi0K81v7HvP',
+  images: [
+    {
+      height: 640,
+      url: 'https://i.scdn.co/image/121166c58f391a367c24412d8ee29346c157105d',
+      width: 640
+    },
+    {
+      height: 320,
+      url: 'https://i.scdn.co/image/e53c4ffd20251515188d53057910677af3194bac',
+      width: 320
+    },
+    {
+      height: 160,
+      url: 'https://i.scdn.co/image/2cd3cc18d3d8926abd3387d189c190ea3190a3b6',
+      width: 160
+    }
+  ],
+  name: 'Rammstein',
+  popularity: 81,
+  type: 'artist',
+  uri: 'spotify:artist:6wWVKhxIU2cEi0K81v7HvP'
+}
+
+
+------------------ data.body.artists.items[0].images ----------------
+[
+  {
+    height: 640,
+    url: 'https://i.scdn.co/image/121166c58f391a367c24412d8ee29346c157105d',
+    width: 640
+  },
+  {
+    height: 320,
+    url: 'https://i.scdn.co/image/e53c4ffd20251515188d53057910677af3194bac',
+    width: 320
+  },
+  {
+    height: 160,
+    url: 'https://i.scdn.co/image/2cd3cc18d3d8926abd3387d189c190ea3190a3b6',
+    width: 160
+  }
+]
+
+------------------ data.body.artists.items[0].images[0] ----------------
+
