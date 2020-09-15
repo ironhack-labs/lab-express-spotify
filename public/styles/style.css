@@ -100,10 +100,15 @@ thead tr {
   color: white;
 }
 
+
 tr {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+tbody tr:hover {
+  background-color: #e1e3e4;
 }
 
 .line {

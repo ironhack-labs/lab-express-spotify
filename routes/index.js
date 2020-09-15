@@ -51,7 +51,10 @@ router.get('/tracks/:albumId', async (req, res) => {
   try {
     const dataFromApi = await spotifyApi.getAlbumTracks(req.params.albumId);
     // console.log("track data:", tracks);
-    res.render('tracks', { tracks: dataFromApi.body.items })
+    res.render('tracks', {
+      tracks: dataFromApi.body.items.sort(
+        (a, b) => a.track_number - b.track_number)
+    })
 
   } catch (err) {
     console.log('The error while searching artists occurred: ', err);
