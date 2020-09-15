@@ -1,0 +1,29 @@
+<div class="container">
+    <table cellspacing="0" border="0">
+        <thead>
+            <tr>
+                <th class="title">
+                    <h3>Title</h3>
+                </th>
+                <th class="listen">
+                    <h3>Listen</h3>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tracks}}
+            <tr class="line">
+                <td class="title">
+                    {{this.track_number}}. {{this.name}}
+                </td>
+                <td class="listen">
+                    <audio controls>
+                        <source src="{{this.preview_url}}">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>

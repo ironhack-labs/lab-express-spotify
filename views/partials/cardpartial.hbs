@@ -1,0 +1,17 @@
+<div class="div-each">
+    <div class="div-img">
+        {{#if this.images.0.url}}
+        <img src="{{this.images.0.url}}" alt="{{this.name}} image" />
+        {{else}}
+        <img src="" alt="image not found" />
+        {{/if}}
+    </div>
+    <div class="div-info">
+        <h4>{{this.name}}</h4>
+        {{#if album}}
+        <a href="/albums/{{this.id}}">View Albums</a>
+        {{else}}
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+        {{/if}}
+    </div>
+</div>
