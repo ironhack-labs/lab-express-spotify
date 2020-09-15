@@ -28,13 +28,11 @@ router.get("/", (req, res) => res.render("home"));
 
 router.get("/artist-search", (req, res) => {
   // console.log(req.query.artistSearch);
-  console.log("ARTISTS PAGE")
   spotifyApi.searchArtists(req.query.artistSearch)
     .then(data => {
       // console.log('The received data from the API: ', data.body.artists);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      const artists = data.body.artists;
-      res.render("artist-search-results", { artists })
+      res.render("artist-search-results", { artists: data.body.artists })
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 });
@@ -43,21 +41,17 @@ router.get('/albums/:artistId', async (req, res) => {
   try {
     const dataFromApi = await spotifyApi.getArtistAlbums(req.params.artistId);
     // console.log("Data from API:", dataFromApi.body);
-    console.log("ALBUM PAGE")
-    const albums = dataFromApi.body;
-    res.render("albums", { albums })
+    res.render("albums", { albums: dataFromApi.body })
   } catch (err) {
     console.log('The error while searching artists occurred: ', err);
   }
 });
 
 router.get('/tracks/:albumId', async (req, res) => {
-  console.log("TRACKS PAGE");
   try {
     const dataFromApi = await spotifyApi.getAlbumTracks(req.params.albumId);
-    const tracks = dataFromApi.body.items;
     // console.log("track data:", tracks);
-    res.render('tracks', { tracks })
+    res.render('tracks', { tracks: dataFromApi.body.items })
 
   } catch (err) {
     console.log('The error while searching artists occurred: ', err);
