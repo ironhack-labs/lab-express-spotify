@@ -16,8 +16,8 @@ router.get("/", (req, res) => res.render("home"));
 router.get("/artist-search", async (req, res) => {
   try {
     const result = await spotifyApi.searchArtists(req.query.artistSearch);
+    console.log(result.body.artists.items);
     res.render("artist-search-results", { artists: result.body.artists.items });
-    console.log("The received data from the API: ", result.body.artists.items[0]);
   } catch (err) {
     console.log("The error while searching artists occurred: ", err);
   }
