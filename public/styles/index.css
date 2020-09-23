@@ -28,7 +28,7 @@ form {
   flex-wrap: wrap;
 }
 
-.albums {
+.artists {
     justify-content: space-evenly;
     align-items: center;
 }
@@ -37,7 +37,7 @@ form {
   flex-direction: column;
 }
 
-.album {
+.artist {
   width: 200px;
   min-height: 300px;
   justify-content: space-between;
@@ -45,6 +45,6 @@ form {
   border: solid black;
 }
 
-.album img {
+.artist img {
   max-width: 200px;
 }
