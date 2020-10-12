@@ -1,10 +1,10 @@
+<!-- Albums. -->
 {{#each info}}
-
-<div>{{this.name}}</div>
-
-<img src="{{this.images.1.url}}">
-
-<a href="/tracks/{{this.id}}">
-    <button type="submit" class="btn btn-outline-primary">Tracks</button>
-</a>
+    <div class="card border-success mb-3" style="width: 18rem;">
+        <img class="card-img-top" src="{{this.images.1.url}}">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <a href="/tracks/{{this.id}}" class="btn btn-outline-success">Tracks</a>
+        </div>
+    </div>
 {{/each}}

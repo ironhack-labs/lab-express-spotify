@@ -1,15 +1,12 @@
+<!-- Tracks. -->
 {{#each info}}
-
-<div>{{this.name}}</div>
-
-<img src="{{this.images.1.url}}">
-
-<a href="/tracks/{{this.id}}">
-    <button type="submit" class="btn btn-outline-primary">Tracks</button>
-</a>
-
-<audio controls>
-    <source src="{{this.preview_url}}">
-</audio>
-
+    <div class="card border-success mb-3" style="width: 23rem;">
+        <img class="card-img-top" src="{{this.images.1.url}}">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <audio controls>
+                <source src="{{this.preview_url}}">
+            </audio>
+        </div>
+    </div>
 {{/each}}
