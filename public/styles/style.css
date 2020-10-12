@@ -1,0 +1,56 @@
+.container__landing{
+    display: flex;
+    justify-content: center;
+    height: 500px;
+    margin: 50px;
+}
+
+.landing__form{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-items: center;
+}
+
+.landing__form input{
+    width: 500px;
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-bottom: 15px;
+}
+
+.card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artists__container{
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.artists__card {
+    display: flex;
+    align-items: center;
+}
+
+.tracks__container{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+
+}
+
+.tracks__track{
+    margin-bottom: 20px;
+
+}
+
+.tracks__audio{
+    height: 30px;
+
+
+}
