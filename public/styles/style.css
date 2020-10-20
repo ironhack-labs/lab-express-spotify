@@ -1,0 +1,127 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap");
+
+* {
+  font-family: "Roboto", sans-serif;
+}
+
+.home-container {
+  background-image: url("../images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 3rem 4rem;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 450px;
+}
+
+input {
+  padding: 0.5rem 1rem;
+  border-radius: 3px;
+  border: 1px solid rgba(50, 50, 50, 0.3);
+}
+
+button {
+  margin: 0.3rem 0;
+  align-self: center;
+  padding: 0.3rem 2rem;
+  background-color: #fa6a64;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 3px;
+}
+
+.container {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: center;
+}
+
+.div-each {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 300px;
+  margin: 15px 25px;
+  justify-content: space-between;
+  box-sizing: border-box;
+  color: white;
+  background-color: #4d4d4d;
+}
+
+.div-img {
+  height: 300px;
+  width: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.div-img img {
+  object-fit: scale-down;
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.div-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 0 0.5rem 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+  display: inline;
+  background-color: #fa6a64;
+  padding: 0.3rem 1rem;
+  border-radius: 3px;
+}
+
+table {
+  border-collapse: collapse;
+  min-width: 60%;
+}
+
+thead tr {
+  background-color: #4d4d4d;
+  color: white;
+}
+
+tr {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+tbody tr:hover {
+  background-color: #e1e3e4;
+}
+
+.line {
+  background-color: #f1f3f4;
+  border-bottom: 1px solid white;
+}
+
+.title {
+  text-align: left;
+  padding-left: 1rem;
+}
+
+.listen {
+  text-align: center;
+  padding-right: 1rem;
+  width: 300px;
+}
