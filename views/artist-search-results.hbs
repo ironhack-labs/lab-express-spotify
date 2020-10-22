@@ -1,0 +1,11 @@
+<div class="album-cards-grid">
+     {{#each result}}
+    <div class="album-card">
+       
+        <img src="{{this.images.[0].url}}" /><br>
+        <li>{{this.name}}</li><br>
+        <button type="submit" class="album-btn"><a href="/albums/{{this.id}}">View Albums</a></button>
+       
+    </div>
+     {{/each}}
+</div>

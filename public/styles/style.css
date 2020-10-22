@@ -1,0 +1,83 @@
+.background{
+    background-image: url('/images/back.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container{
+    background: rgba(255, 255, 255, 0.507);
+    height: 200px;
+    width: 700px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+input{
+    width: 350px;
+    height: 30px;
+   border: 1px solid rgba(128, 128, 128, 0.479);
+}
+
+.index-btn{
+    width: 160px;
+    height: 30px;
+    margin-top: 30px;
+    background-color: #fa6863;
+    color: white;
+    border: none;
+}
+
+/* Album */
+.album-cards-grid{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    width: 100vw;
+    height: 100%;
+  
+}
+.album-card{
+    flex-wrap: wrap;
+    display: flex;
+    height: 100%;
+    flex-direction: column;
+    width: 380px;
+    justify-content: center;
+    align-items: center;
+  background-color: grey;
+  padding: 20px;
+  margin: 10px
+}
+.album-cards-grid img {
+    width: 300px;
+    height: 300px;
+}
+.album-card li{
+    list-style: none;
+    text-align: center;
+    padding: 10px 50px;
+} 
+.album-btn{
+    width: 160px;
+    height: 30px;
+    background-color: #fa6863;
+    color: white;
+    border: none;
+    margin-bottom: 20px;
+}
+.album-btn a{
+    text-decoration: none;
+    color: white;
+    
+}

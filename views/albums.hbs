@@ -1,0 +1,7 @@
+<div>
+{{#each result}}
+    <img src="{{this.images.[0].url}}" />
+    <li>{{this.name}}</li>   
+    <button type="submit"><a href="/traks/{{this.id}}">View Tracks</a></button>       
+    {{/each}}
+</div>
