@@ -1,0 +1,13 @@
+<section class= "tracks-container">
+    {{#each tracks}}
+<div class="tracks" >
+   
+    <p>{{this.name}}<p>
+    <audio controls>
+    <source src ="{{this.preview_url}}" type="audio/ogg">
+    {{!-- <source src="horse.mp3" type="audio/mpeg"> --}}
+    Your browser does not support the audio element.
+    </audio>
+</div>
+     {{/each}}
+</section>

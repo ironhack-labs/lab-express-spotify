@@ -1,0 +1,16 @@
+   
+   <section class="container">
+    {{#each result}}
+<div class="card" >
+   
+    <img src= {{this.images.[0].url}} />
+    <div class= "info">
+
+    <li>{{this.name}}</li>
+    <a href= "/albums/{{id}}" alt= "">View albums</a>
+
+    </div>
+
+</div>
+     {{/each}}
+</section>
