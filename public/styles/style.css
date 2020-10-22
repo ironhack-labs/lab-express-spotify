@@ -1,0 +1,78 @@
+* { 
+    padding:0;
+    margin:0;
+   
+ }
+
+ .homeContainer {
+
+    background-image: url('/images/spotify-background.jpeg');
+    background-size:     cover;                      /* <------ */
+    background-repeat:   no-repeat;
+    background-position: center center;              /* optional, center the image */
+    height: 600px;
+    position: relative;
+    
+ }
+
+ .cajita {
+    text-align:center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 70px;
+    width: 600px;
+    position:absolute;
+    top: 50%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+  
+ }
+
+ #search {
+    padding: 5px;
+    width: 350px;
+ }
+
+ .mainButton {
+    position:absolute;
+    top: 73%;
+    left: 50%;
+     transform: translate(-50%, -50%);
+     padding: 6px;
+     color: white;
+     background-color: #FA6863;
+     border: none;
+ }
+ 
+ /* Float four columns side by side */
+.column {
+    float: left;
+    width: 25%;
+    padding: 0 10px;
+  }
+  
+  /* Remove extra left and right margins, due to padding in columns */
+  .row {margin: 0 -5px;}
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the counter cards */
+  .card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2); /* this adds the "card" effect */
+    padding: 16px;
+    text-align: center;
+    background-color: #f1f1f1;
+  }
+  
+  /* Responsive columns - one column layout (vertical) on small screens */
+  @media screen and (max-width: 600px) {
+    .column {
+      width: 100%;
+      display: block;
+      margin-bottom: 20px;
+    }
+  }
