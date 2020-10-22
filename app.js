@@ -3,7 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
 
-// require spotify-web-api-node package here:
+const SpotifyWebApi=require('spotify-web-api-node');
 
 const app = express();
 
@@ -11,8 +11,53 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-// setting the spotify-api goes here:
+hbs.registerPartials(__dirname + '/views/partials');
 
-// Our routes go here:
+const spotifyApi = new SpotifyWebApi({
+    clientId: "88b62b78ce304c51a0dcbf00388f257e",
+    clientSecret: "0538b45272bb45c98788de580ec48f94"
+  });
+  
+  // Retrieve an access token
+  spotifyApi
+    .clientCredentialsGrant()
+    .then(data => spotifyApi.setAccessToken(data.body['access_token']))
+    .catch(error => console.log('Something went wrong when retrieving an access token', error));
+
+    app.get('/',(req, res, next)=>{
+        res.render('index');
+    })
+
+    app.get("/artist-search", (req, res, next)=>{
+        spotifyApi.searchArtists(req.query.artist)
+        .then(data=>{
+            let artistsFromApi = data.body.artists.items;            
+            res.render("artist-search-results",{artistsFromApi})
+           
+        })
+        .catch(error => console.log(error));  
+
+    })
+
+    app.get("/albums/:id", (req, res, next)=>{
+        spotifyApi.getArtistAlbums(req.params.id)
+        .then(data=>{
+            let albumsFromApi = data.body.items;            
+            res.render("albums",{albumsFromApi})
+        })
+        .catch(error => console.log(error));  
+
+    })
+
+    app.get("/tracks/:id", (req, res, next)=>{
+        spotifyApi.getAlbumTracks(req.params.id)
+        .then(data=> {
+            let tracksFromApi = data.body.items;
+            console.log(tracksFromApi)
+            res.render("tracks", {tracksFromApi});
+        })
+        .catch(error => console.log(error));  
+    })
+
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
