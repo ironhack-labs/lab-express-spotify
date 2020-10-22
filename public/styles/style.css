@@ -1,0 +1,97 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-size: 62.5%;
+    font-family: 'Nunito', sans-serif;
+}
+
+.container-form{
+    width: 100%;
+    height: 100vh;
+    background: url(/images/spotify-background.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.container-fm{
+    width: 40%;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    background-color:#F7F7F7 ;
+    opacity: 0.6;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    
+}
+.input-search{
+    width: 250%; 
+    padding: 10px;
+    display: flex;
+    
+}
+.input-submit{
+    width: 100%; 
+    background-color: crimson;
+    padding: 5px 15px; 
+    color: white;
+    font-size: 15px;
+}
+.title-albums{
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+
+.container-cards{
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+.card-body{
+    background-color: #545656 ;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.tracks{
+    height: 40%;
+    background-color: #F7F7F7 ;
+    margin: 50px 100px;
+}
+.tracks figure{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.tracks figure h5{
+    padding-left: 40px;
+    padding-top: 10px;
+}
+
+.nav-track{
+    display: flex;
+    justify-content: space-between;
+    background-color:#474848;
+    padding: 20px 80px;
+    color: #CBCECE;
+}

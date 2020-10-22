@@ -1,0 +1,13 @@
+<div class="tracks">
+    <div class="nav-track">
+        <h2>Title</h2>
+        <h2>Listen</h2>
+    </div>
+{{#each datos}}
+<figure>
+    <h5>{{this.name}} - Live / Remastered</h5>
+    <audio controls src="{{this.preview_url}}">Your browser does not support the<code>audio</code> element.
+    </audio>
+</figure>
+{{/each}}
+</div>
