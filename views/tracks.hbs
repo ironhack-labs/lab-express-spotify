@@ -1,0 +1,24 @@
+<!--take you to a page with a list of all of the tracks on a particular album.-->
+<!-- The link to the tracks page should have each album's id in it.-->
+
+<div class="container_artists">
+    <h1 class="artists_title">Tracks</h1>
+
+    <div class="tracks__container">
+        {{#each tracks}}
+        <div class="tracks__track" style="width: 25rem; height: 12rem;">
+            <tr>
+                <td>{{name}}</td>
+                <audio controls class='audio-controls'>
+                    <source src="{{preview_url}}" type="audio">
+                    Your browser does not support the audio element.
+                </audio>
+                </td>
+            </tr>
+            <audio controls class="tracks__audio">
+                <source src="{{preview_url}}">
+            </audio>
+        </div>
+        {{/each}}
+    </div>
+</div>

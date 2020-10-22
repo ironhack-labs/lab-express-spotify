@@ -1,0 +1,129 @@
+/* Generals */
+
+html,
+body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto Condensed", sans-serif;
+  font-size: 16px;
+}
+
+/* Home */
+.form_landing_container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-width: 100%;
+  height: 100%;
+  background-image: url("../images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.form_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(128, 0, 128, 0.377);
+  box-shadow: 25px 30px 80px 15px black;
+  border: 5px solid darkcyan;
+  padding: 7rem 15rem;
+}
+
+.searcher {
+  text-align: center;
+  width: 20rem;
+  height: 3rem;
+  border: 1px solid darkcyan;
+  border-radius: 10px;
+  background-color: white;
+  margin-bottom: 1rem;
+}
+::placeholder {
+  color: black;
+  font-weight: 400;
+}
+
+.btn_form {
+  width: 12rem;
+  height: 3rem;
+  background-color: darkcyan;
+  border: none;
+  color: white;
+  font-weight: 300;
+  font-size: 1.2rem;
+}
+
+/* Artists page */
+
+.container_artists {
+  padding-top: 5rem;
+  min-width: 100%;
+  min-height: 100%;
+  background-color: darkcyan;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.artists_title {
+  font-size: 3rem;
+  color: white;
+  font-weight: 300;
+  letter-spacing: 0.6rem;
+}
+.artists__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 5rem;
+  align-items: center;
+  justify-content: center;
+}
+
+.card {
+  display: flex;
+  margin: 1rem;
+  align-items: center;
+  text-align: center;
+  border-color: white;
+  background-color: rgba(143, 78, 197, 0.726);
+  color: white;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card img {
+  padding-top: 1.5rem;
+}
+
+/* Tracks page */
+
+.tracks__container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+}
+
+.tracks__track {
+  color: white;
+  border: 1px solid red;
+  margin: 1rem;
+  padding: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 100;
+  background-color: rgba(70, 0, 128, 0.726);
+}
+
+.tracks__audio {
+  margin-top: 2rem;
+}

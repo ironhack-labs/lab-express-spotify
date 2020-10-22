@@ -1,0 +1,16 @@
+<div class="container_artists">
+<h3 class="artists_title">Artist results</h3>
+
+<div class="artists__container">
+    {{#each artistsRes}}
+    <div class="card artists__card" style="width: 18rem;height: 18rem;">
+        <img src="{{images.[1].url}}" alt="" style='width:150px'>
+        <div class="card-body">
+            <h6 class="card-title">{{name}}</h6>
+            <!--the URL should include artist's id and should change dynamically.-->
+            <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div> 
+</div> 
