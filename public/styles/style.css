@@ -1,0 +1,67 @@
+.indexImage {
+background-image: url("../images/spotify-background.jpeg");
+height: 50rem;
+width: 90rem;
+background-size: cover;
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+.indexImage form {
+    background-color: rgba(255, 255, 255, 0.397);
+    padding: 8rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.buttonIndex {
+background-color: rgb(241, 53, 53);
+color: white;
+font-size: bold;
+width: 15rem;
+height: 2.5rem;
+margin-top: 1rem;
+}
+
+#inputIndex {
+    width: 20rem;
+}
+
+.results {
+display: flex;
+flex-wrap: wrap;
+justify-content: space-between;
+align-items: center;
+}
+
+.artistImage {
+    width: 16rem;
+}
+
+.artistDetails {
+display: flex;
+flex-direction: column;
+}
+
+.buttonArtist {
+background-color: rgb(241, 53, 53);
+color: white;
+width: 10rem;
+text-align: center;
+text-decoration: none;
+}
+
+.viewAlbum {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+font-weight: bolder;
+background-color: rgb(65, 62, 62);
+height: 5rem;
+width: 16rem;
+text-align: center;
+}

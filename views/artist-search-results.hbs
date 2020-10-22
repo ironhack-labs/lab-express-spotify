@@ -1,0 +1,12 @@
+<div class="results">
+    {{#each searchArtist}}
+    <div class="artistDetails">
+        <img class="artistImage" src={{this.images.0.url}} />
+        <div class="viewAlbum">
+        {{{this.name}}}
+        <a class="buttonArtist" href="/albums/{{this.id}}">View Albums</a>
+        </div>
+        </div>
+    {{/each}}
+
+</div>
