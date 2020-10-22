@@ -1,0 +1,15 @@
+<div class="container-cards">
+
+     {{#each artistSearch}}
+    <div class="cards">
+
+         <img src="{{this.images.[0].url}}" alt="">
+        
+         <div class="text-container">
+             <h5>{{this.name}}</h5>
+             <a href="/albums/{{this.id}}">View Tracks</a>
+         </div>
+    </div>
+     {{/each}}
+     
+ </div>
