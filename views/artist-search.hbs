@@ -1,0 +1,11 @@
+<div class = "big-container">
+{{#each data}}
+<div>
+    <div class="container">
+        <div><img src="{{this.images.0.url}}" alt="artist picture"></div>
+        <h5>{{this.name}}</h5>
+        <button class="btn"><a href="/albums/{{this.id}}">View Album</a></button>
+    </div>
+</div>
+{{/each}}
+</div>

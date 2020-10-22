@@ -1,0 +1,78 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+}  
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    font-size:22px;
+}
+
+.background{
+    background-image: url(/images/spotify-background.jpeg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height:120vh;
+    position: relative;
+}
+
+.form-div {
+    position: absolute;
+    left: 50%;
+    top:40%;
+    transform: translate(-50%, -50%);
+}
+
+.form input {
+    padding:20px 150px;
+    font-size: 20px;
+}
+
+.form button{
+    padding:20px 50px;
+    font-size: 20px;
+    background-color: black;
+    color: white;
+}
+
+/* .big-container{
+    display:flex;
+    flex-direction: row;
+}
+ */
+.container{
+    display:flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items: center;
+    margin: 0 auto;
+
+}
+
+.container img{
+    width: 500px;
+    margin:10px;
+}
+
+h5{
+    font-size: 25px;
+    margin:10px;
+}
+
+.btn{
+    padding:10px 30px;
+    font-size: 18px;
+    background-color:white;
+    border: 1px solid black;
+    margin-bottom: 40px;
+}
+
+.btn a{
+    text-decoration: none;
+    color:black;
+}
