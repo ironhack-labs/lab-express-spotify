@@ -1,0 +1,15 @@
+<div class="container_artists">
+<h1 class="artists_title">Tracks</h1>
+
+<div class="tracks__container">
+    {{#each data}}
+    <div class="tracks__track" style="width: 25rem; height: 12rem;">
+        <span>{{this.track_number}}:</span>
+        <span>{{this.name}}</span><br>
+        <audio controls class="tracks__audio">
+            <source src="{{this.preview_url}}">
+        </audio>
+    </div>
+    {{/each}}
+</div>
+</div>
