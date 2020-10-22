@@ -1,0 +1,13 @@
+<div class='dashboard'>
+
+{{#each albums}}   
+    <div class='result-div'>
+       <div class='img'><img src="{{images.[1].url}}" onerror="https://unsplash.com/photos/ASKeuOZqhYU"alt="imagen"></div> 
+        <div class='name-display'>
+            <h3 class="albumName">{{name}} </h3>
+            <button><a href='/tracks/{{id}}' style="text-decoration:none">View tracks</a></button>
+        </div>
+    </div>
+{{/each}}   
+
+</div>

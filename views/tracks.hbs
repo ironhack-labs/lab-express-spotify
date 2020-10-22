@@ -1,0 +1,27 @@
+<main id='table-main'> 
+<table >
+  <tr>
+    <th>Title</th>
+    <th>Preview</th> 
+  </tr>
+{{#each tracks}}    
+    <tr>
+        <td>{{name}}</td>
+        <td>
+            <audio controls class='audio-controls'>
+                <source src="{{preview_url}}" type="audio">
+                Your browser does not support the audio element.
+            </audio>
+        </td>
+        
+    </tr>
+
+
+{{/each}}  
+  
+</main>      
+
+    
+            
+ 
+
