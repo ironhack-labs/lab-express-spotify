@@ -81,3 +81,19 @@ input{
     color: white;
     
 }
+
+header{
+    height: 100px;
+    background-color: grey;
+    display: flex;
+    justify-content: space-around;
+}
+
+figure{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(177, 176, 176);
+    height: 100%;
+    margin: 3px 0px;
+text-align: center;
+}

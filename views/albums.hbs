@@ -1,7 +1,9 @@
-<div>
-{{#each result}}
-    <img src="{{this.images.[0].url}}" />
-    <li>{{this.name}}</li>   
-    <button type="submit"><a href="/traks/{{this.id}}">View Tracks</a></button>       
+<div class="album-cards-grid">
+    {{#each result}}
+    <div class="album-card">
+        <img src="{{this.images.[0].url}}" />
+        <li>{{this.name}}</li>
+        <button type="submit" class="album-btn"><a href="/traks/{{this.id}}">View Tracks</a></button>
+    </div>
     {{/each}}
 </div>
