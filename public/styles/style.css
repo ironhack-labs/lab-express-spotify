@@ -84,11 +84,27 @@ table {
     font-size: 20px;
 }
 
+#albums-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#albums-page > h2 {
+    font-size: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+    margin: 50px 0;
+}
+
 .cards-container {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 5px 200px;
 }
+
 
 .card {
     display: flex;
@@ -131,4 +147,39 @@ table {
     font-size: 15px;
     border-radius: 5px;
     margin: 5px 0;
+}
+
+#tracks-page {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.template {
+    width: 50%;
+}
+
+.template h2 {
+    background-color: rgb(100, 100, 100);
+    color: lightgray;
+    font-size: 30px;
+    padding: 40px 10px;
+}
+
+#names-column p {
+    padding: 13px 10px;
+    font-weight: 600;
+}
+
+#audios-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+#audios-column h2 {
+    width: 100%;
+    text-align: center;
 }

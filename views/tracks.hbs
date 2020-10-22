@@ -1,5 +1,5 @@
-<div>
-    <div>
+<main id="tracks-page">
+    <div class="template" id="names-column">
         <h2>Title</h2>
         {{#each track}}
         <div>
@@ -8,12 +8,17 @@
         {{/each}}
     </div>
 
-    <div>
+    <div class="template" id="audios-column">
         <h2>Listen</h2>
         {{#each track}}
         <div>
-            <p>{{this.preview_url}}</p>
+            <figure>
+                <audio controls src="{{this.preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </figure>
         </div>
         {{/each}}
     </div>
-</div>
+</main>
