@@ -1,0 +1,19 @@
+<div>
+    <div>
+        <h2>Title</h2>
+        {{#each track}}
+        <div>
+            <p>{{this.name}}</p>
+        </div>
+        {{/each}}
+    </div>
+
+    <div>
+        <h2>Listen</h2>
+        {{#each track}}
+        <div>
+            <p>{{this.preview_url}}</p>
+        </div>
+        {{/each}}
+    </div>
+</div>
