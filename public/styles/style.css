@@ -1,0 +1,182 @@
+html, body {
+    height: 100%;font-family: Arial, Helvetica, sans-serif;
+}
+
+/*
+white: #f7f9f9;
+light-blue: #2081c3;
+dark-blue: #0a2c42;
+grey: #bfbfbf;
+font-family: Arial, Helvetica, sans-serif;
+*/
+
+body {
+
+    color: black;
+    background-color: #2a2a2a;
+}
+
+.grid-title {
+    padding: 15px;
+    background-color:#1DB954;
+    margin-bottom: 15px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.bgImage {
+    background-image: url("/images/spotify-background.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.footer {
+    font-size: 1rem;
+    padding: 5px;
+    width: 100%;
+    height: 30px;
+    background-color: #1DB954;
+    color: 	#222;
+    box-shadow: 2px 2px 10px rgba(0,0,0, .3);
+    
+}
+
+.trackTitle {
+    color: #1DB954;
+    background-color:#313131;
+    font-weight: bolder;
+}
+
+.trackTitle > h3 {
+    line-height: 40px;
+    font-weight: bolder;
+}
+
+.trackRow {
+    background-color: #313131;
+    color: #cbcbcc;
+    margin-bottom: 8px;
+    line-height: 40px;
+}
+
+
+h5 {
+    font-weight: bolder;
+    color: #cbcbcb;
+}
+
+.container {
+    margin: 15px auto;
+}
+
+
+.navbar-style{
+    font-size: 1.3rem;
+    background-color: #222;
+    box-shadow: 2px 2px 10px rgba(0,0,0, .3);
+}
+
+a, a:hover {
+    color: #a2a2a2;
+    text-decoration: none;
+    transition: all 0.5s ease-in-out;
+}
+
+.nav-link {
+    border-radius: 4px;
+    transition: all 0.3s ease-in-out;
+    padding-left: 10px;
+}
+
+
+.navbar-dark {
+    background-color: #1DB954;
+}
+
+.navbar-dark .navbar-nav .nav-link {
+    padding: 5px 10px;
+    color: 	#1DB954;
+}
+
+.navbar-dark .navbar-nav .nav-link:hover {
+    color: 	#1DB954;
+}
+
+img {
+    width: 100%;
+    height: auto;
+    max-width: 460px;
+    margin-bottom:30px;
+}
+
+.card {
+    background-color: #222;
+}
+
+.card-title {
+    text-align: center;
+}
+
+.btn-primary {
+    font-size: 1.3rem;
+    padding: 10px 30px;
+    background-color: #373C39;
+    border: 1px solid #373C39;
+    box-shadow: 2px 2px 10px rgba(0,0,0, .3);
+    margin: 15px;
+    transition: all 0.5s ease-in-out;
+    border: 0;
+}
+
+.btn-primary:hover {
+    background-color: #373C39;
+    border: 1px solid #1DB954;
+    box-shadow: 2px 2px 10px rgba(0,0,0, 0);
+    border: 0;
+}
+
+;
+
+.footer-copyright {
+    font-size: 1.3rem;
+}
+
+.card-img-top {
+    width: auto;
+    max-height: 200px;
+    margin-top:30px;
+}
+
+.card {
+    margin-bottom: 30px;
+}
+
+.footer-txt {
+    text-align: center;
+}
+
+.sticky-title {
+    color: #222;
+    font-weight: bolder;
+}
+
+@media only screen and (max-width: 615px) {
+    .footer-txt {
+      font-size:1.1rem;
+    }
+  }
+
+
+  @media only screen and (max-width: 520px) {
+    .footer-txt {
+      font-size:0.9rem;
+    }
+  }
+
+  @media only screen and (max-width: 439px) {
+    .footer-txt {
+      font-size:0.75rem;
+    }
+  }
+

@@ -1,0 +1,13 @@
+<!-- albums.hbs -->
+<div class="container">
+    <div class="row">
+        <div class="col-12">
+            <div class="grid-title"><h3 class="text-center sticky-title">Albums by {{albums.[0].artists.[0].name}}</h3></div>
+        </div>
+    </div>
+    <div class="row">
+        {{#each albums}}
+        {{> albumCard this}}
+        {{/each}}
+    </div>
+</div>

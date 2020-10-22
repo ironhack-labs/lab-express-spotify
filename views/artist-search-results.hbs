@@ -1,0 +1,13 @@
+<!-- artist-search-results.hbs -->
+<div class="container">
+        <div class="row">
+        <div class="col-12">
+            <div class="grid-title"><h3 class="text-center sticky-title">Search results</h3></div>
+        </div>
+    </div>
+    <div class="row">
+        {{#each artists}}
+        {{> artistCard this}}
+        {{/each}}
+    </div>
+</div>
