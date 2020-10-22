@@ -1,0 +1,93 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html,body, .search-panel{
+    height: 100%;
+    width: 100%;
+    margin:0px;
+    padding:0px;
+    font-family: poppins;
+}
+.search-panel{
+    background-image: url("../images/spotify-background.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat;
+    display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.search-container{
+    
+    background:rgba(255,255,255,0.5);
+    padding:50px;
+    padding-bottom: 20px;
+}
+.search-container>form{
+    display: flex;
+	justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    
+}
+.search-container>form>input{
+    width:400px;
+    max-width:400px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+.search-container>form>input:focus{
+    outline: none;
+}
+.search-container>form>button{
+    padding:10px;
+    background-color: rgb(224, 54, 88);
+    color: white;
+    border:none;
+}
+.search-container>form>button:focus{
+    outline:none;
+}
+.search-container>form>button:hover{
+    background-color: rgb(228, 100, 126);
+}
+
+.album-container{
+    width:300px;
+    border:1px solid black;
+    margin:10px;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(87, 87, 87);
+}
+.album-container>img{
+    width:300px;
+}
+
+.albums-container{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+.album-container>p{
+    text-align: center;
+    font-size:16pt ;
+    color:white;
+    padding:0px 30px;
+}
+.album-container>a{
+    text-align: center;
+    text-decoration: none;
+    width:50%;
+    padding:10px;
+    margin-bottom: 20px;
+    background-color: rgb(224, 54, 88);
+    color: white;
+    border:none;
+}
+.album-container>a:hover{
+    background-color: rgb(228, 100, 126);
+}
