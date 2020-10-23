@@ -1,7 +1,18 @@
-{{#each artists}}
+{{!-- {{#each artists}}
     <div class="artists">
-        <img src="{{images}}" alt="">
+        <img src="{{images.0.url}}" alt="">
         <h2>{{this.name}}</h2>
         <a href="/albums/{{this.id}}">View albumss</a>
     </div>
+{{/each}} --}}
+
+{{#each artists}}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top  artist" src="{{this.images.0.url}}" alt="Card image cap">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <button type="button" class="btn btn-primary btn-lg"><a href="/albums/{{this.id}}">View albums</a></button>
+  </div>
+</div>
 {{/each}}
+

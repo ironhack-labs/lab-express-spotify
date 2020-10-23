@@ -3,7 +3,7 @@ require('dotenv').config();
 const { query } = require('express');
 const express = require('express');
 const hbs = require('hbs');
-const SpotifyWebApi = require('spotify-web-api-node');// require spotify-web-api-node package
+const SpotifyWebApi = require('spotify-web-api-node'); // require spotify-web-api-node package
 
 const app = express();
 
@@ -25,15 +25,18 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
+
+//Le decimos que en la dirección base, "/"; nos renderize el index.hbs
 app.get("/", (req, res, next) => {
     res.render("index.hbs");
 });
 
+//
 app.get("/artist-search", (req, res, next) => {
     console.log(req.query.name)
     spotifyApi.searchArtists(req.query.name)
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items[0]);
+    console.log('The received data from the API: ', data.body.artists.items);
     res.render('artist-search-results', {artists: data.body.artists.items});
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
