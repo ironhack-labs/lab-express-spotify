@@ -1,0 +1,11 @@
+<div>
+    {{#each tracks}}
+        <p>{{this.name}}</p>
+        <p>Click on the play button to play a sound:</p>
+        <audio controls>
+            <source src="{{this.external_urls.spotify}}" type="audio/mpeg">
+            <source src="{{this.external_urls.spotify}}" type="audio/ogg">
+            Your browser does not support the audio tag.
+        </audio>
+    {{/each}}
+</div>

@@ -1,0 +1,15 @@
+.full-album {
+    display: flex;
+    flex-direction: row;
+    width: 30%;
+    height: 30%;
+    margin: 2% 1.5% 0% 1.5%;
+}
+.album-img, .band-name, .band-button {
+    display: flex;
+    flex-direction: column;
+}
+
+.album-img {
+    width: 100px;
+}
