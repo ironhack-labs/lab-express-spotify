@@ -14,8 +14,8 @@ app.use(express.static(__dirname + '/public'));
 hbs.registerPartials(__dirname + '/views/partials');
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: "88b62b78ce304c51a0dcbf00388f257e",
-    clientSecret: "0538b45272bb45c98788de580ec48f94"
+    clientId: 
+    clientSecret: 
   });
   
   // Retrieve an access token
