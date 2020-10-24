@@ -44,7 +44,7 @@ app.get("/artist-search", (req, res, next) => {
 
 app.get("/albums/:id", (req, res, next) => {
     spotifyApi.getArtistAlbums(req.params.id)
-  .then(function(data) {
+    .then(function(data) {
     
     let imagesAlbums =  data.body.items;
 
