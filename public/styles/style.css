@@ -1,0 +1,62 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 10px;
+}
+
+form {
+    background-image: url(/images/spotify-background.jpeg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+h2 {
+    font-size: 3.3em;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h3 {
+    font-size: 2em;
+}
+
+p {
+    font-size: 1.2em;
+}
+
+img {
+    width: 300px;
+    margin-bottom: 10px;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.album-container > div {
+    margin: 20px 30px;
+}
+
+a {
+    display: block;
+    font-size: 1.2em;
+    text-decoration: none;
+}
+
+a:link {
+    color: #4C0F57;
+}
+
+a:active {
+    color: #4C0F57;
+}
+
+a:visited {
+    color: #4C0F57;
+}

@@ -1,7 +1,17 @@
-{{#each data }}
-<div>
-    <h4>{{this.name}}</h4>
-    <img src={{this.images.0.url}} />
-    <a href="/tracks/{{this.id}}">View Tracks</a>
+<h2>List of the Albums</h2>
+<div class="album-container">
+    {{#each data }}
+    <div>
+        <h3>{{this.name}}</h3>
+        <p>Release date: {{this.release_date}}</p>
+        <img src={{this.images.0.url}} />
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+    {{/each}}
 </div>
-{{/each}}
+
+<a href="/albums/{{albumId}}/{{next}}">
+Go to Page {{next}}
+</a>
+
+<a>Prev</a>
