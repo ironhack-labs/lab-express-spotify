@@ -1,9 +1,25 @@
-{{#each data }}
-
+<h2>List of the Artists</h2>
 <div class="artist-container">
-    <h4>{{this.name}}</h4>
-    <img src={{this.images.0.url}} />
-    <a href="/albums/{{this.id}}/1">View Albums</a>
+
+    {{#each data.artists.items }}
+    <div>
+        <h3>{{this.name}}</h3>
+        <img src="{{#if this.images.0.url}}{{this.images.0.url}}{{else}}/images/missing-image.png{{/if}}" />
+        <a href="/albums/{{this.id}}/1">View Albums</a>
+    </div>
+    {{/each}}
 </div>
 
-{{/each}}
+<h4>Total found: {{data.artists.total}}</h4>
+
+<div class="buttons-container">
+    <a href="/artist-search?query={{query}}&pageNum={{prev}}" class="{{#if isFirst }}disabled {{/if}}nex-prev-buttons">Previous Page</a>
+    <a href="/artist-search?query={{query}}&pageNum={{next}}" class="{{#if isLast }}disabled {{/if}}nex-prev-buttons">Next Page</a>
+
+</div>
+
+<a href="/" class="homepage-link">Back to Homepage</a>
+<hr>
+<p class="disclaimer-paragraph">Icons made by <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+        rel="nofollow">Freepik</a> from <a href="https://www.flaticon.com/" title="Flaticon" rel="nofollow">
+        www.flaticon.com</a></p>

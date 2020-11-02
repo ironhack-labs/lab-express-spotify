@@ -3,14 +3,8 @@ html, body {
     padding: 0;
     font-family: 'Montserrat', sans-serif;
     font-size: 10px;
+    height: 100%;
 }
-
-form {
-    background-image: url(/images/spotify-background.jpeg);
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: cover;
-  }
 
 h2 {
     font-size: 3.3em;
@@ -20,6 +14,12 @@ h2 {
 
 h3 {
     font-size: 2em;
+    max-width: 300px;
+}
+
+h4 {
+    font-size: 1.8em;
+    text-align: center;
 }
 
 p {
@@ -29,9 +29,59 @@ p {
 img {
     width: 300px;
     margin-bottom: 10px;
+    transition: filter .25s, transform .25s;
 }
 
-.album-container {
+img:hover{
+    filter: brightness(.5);
+    transform: scale(1.125);
+}
+
+.search-page-main-container {
+    background-image: url(/images/spotify-background.jpeg);
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100%; /* relative to the parent element*/
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+form {
+    height: 200px;
+    width: 500px;
+    background-color: white;
+    opacity: 0.9;
+    border-radius: 3px;
+    box-shadow: 3px 3px 20px black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+}
+
+#search-button {
+    box-sizing: border-box;
+    margin-top: 15px;
+    padding: 10px 40px;
+    background-color: #db4b48;
+    color: white;
+    font-size: 1.4em;
+    border: none;
+    border-radius: 3px;
+}
+
+
+.album-container, .artist-container {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -39,14 +89,17 @@ img {
     box-sizing: border-box;
 }
 
-.album-container > div {
-    margin: 20px 30px;
+.album-container > div, .artist-container > div {
+    margin: 20px 40px;
 }
 
 a {
-    display: block;
     font-size: 1.2em;
     text-decoration: none;
+}
+
+.album-container a, .artist-container a {
+    display: block;
 }
 
 a:link {
@@ -60,3 +113,57 @@ a:active {
 a:visited {
     color: #4C0F57;
 }
+
+a.disabled {
+    color: grey;
+    pointer-events: none;
+    font-size: 1.7em;
+    padding: 10px;
+    margin: 30px 15px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 130px;
+    text-align: center;
+}
+
+.buttons-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+}
+
+.nex-prev-buttons {
+    font-size: 1.7em;
+    padding: 10px;
+    margin: 30px 15px;
+    border: 1px solid grey;
+    border-radius: 4px;
+    width: 130px;
+    text-align: center;
+}
+
+.homepage-link {
+    display: block;
+    text-align: center;
+    margin: 30px 0;
+    font-size: 1.4em;
+}
+
+.disclaimer-paragraph {
+    text-align: center;
+    margin: 30px 0;
+}
+
+.disclaimer-paragraph a {
+    font-size: 1.2rem;
+}
+
+hr {
+    width: 30%;
+}
+
+
+

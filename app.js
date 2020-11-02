@@ -1,4 +1,4 @@
-require('dotenv').config(); // reads .env file, node.js stellt das bereit
+require('dotenv').config(); // reads .env file, node.js provides it
 
 const express = require('express');
 const hbs = require('hbs');
@@ -35,30 +35,54 @@ app.get('/', (req, res) => {
 
 app.get('/artist-search', (req, res) => {
 
-    // console.log(req.query.artist)
+    let pageNum = parseInt(req.query.pageNum); // parseInt() function parses a string argument and returns an integer
+    if (isNaN(pageNum) || pageNum < 1) { // isNaN() function determines whether a value is NaN or not
+        pageNum = 1;
+    }
+    const pageSize = 6;
+    const offset = (pageNum - 1) * pageSize; // OR: pageNum * pageSize - pageSize
 
     spotifyApi
-        .searchArtists(req.query.query)
+        .searchArtists(req.query.query, { limit: pageSize, offset: offset })
         .then(data => {
-            console.log('The received data from the API: ', data.body.artists.items,
-                JSON.stringify(data.body.artists.items) // less readable but you have the access to all properties names at once
+            console.log('The received data from the API: ', data.body.artists,
+                // JSON.stringify(data.body.artists.items, null, 2) // less readable / structured but you have the access to all properties names at once
             );
-            res.render("artist-search-results", { data: data.body.artists.items })
+            res.render("artist-search-results", {
+                data: data.body,
+                query: req.query.query,
+                next: pageNum + 1,
+                prev: pageNum - 1,
+                isFirst: pageNum <= 1,
+                isLast: data.body.artists.total <= pageNum * pageSize
+            })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
 })
 
-app.get('/albums/:id/:i', (req, res) => {
-    let next = parseInt(req.params.i) + 3
+app.get('/albums/:id/:pageNum', (req, res) => {
+
+    let pageNum = parseInt(req.params.pageNum);
+    if (isNaN(pageNum) || pageNum < 1) {
+        pageNum = 1;
+    }
+    const pageSize = 6;
+    const offset = (pageNum - 1) * pageSize; // OR: pageNum * pageSize - pageSize
 
     spotifyApi
-        .getArtistAlbums(req.params.id, { limit: 3, offset: next })
+        .getArtistAlbums(req.params.id, { limit: pageSize, offset: offset })
         .then(data => {
             console.log(data.body)
-
             // console.log('The received data from the API: ', data.body.items, JSON.stringify(data.body.items));
-            res.render("albums", { data: data.body.items, albumId: req.params.id, next: next, name: "mir" })
+            res.render("albums", { // what we want to render on the web page
+                data: data.body,
+                artistId: req.params.id,
+                next: pageNum + 1,
+                prev: pageNum - 1,
+                isFirst: pageNum <= 1,
+                isLast: data.body.total <= pageNum * pageSize
+            });
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
