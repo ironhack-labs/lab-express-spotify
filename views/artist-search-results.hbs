@@ -1,5 +1,9 @@
+<div class="result-wrapper">
+{{#each data.body.artists.items}}
 <div class="artist">
-    <img src="url" alt="Name">
-    <h1>Name</h1>
-<a href="/albums/{{someArtistIdGoesHere}}">View albums</a>
+    <img src="{{this.images.url}}" alt="{{this.name}}">
+    <h1>{{this.name}}</h1>
+<a href="/albums/{{this.id}}">View albums</a>
+</div>
+{{/each}}
 </div>

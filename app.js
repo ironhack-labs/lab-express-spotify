@@ -25,11 +25,11 @@ app.get(`/`, (req, res) => {
     res.render(`index`)
 })
 
-app.get(`/artist-search/`, (req, res, next) => {
+app.get(`/artist-search`, (req, res, next) => {
     spotifyApi
-        .searchArtists()
+        .searchArtists((req.query).artist)
         .then(data => {
-            console.log('The received data from the API: ', data.body),
+            console.log('The received data from the API: ', data.body.artists.items[0].images),
                 res.render(`artist-search-results`, {
                     data
                 })
@@ -45,7 +45,17 @@ app.get('/albums/:artistId', (req, res, next) => {
                     data
                 })
         })
-
 })
+
+app.get('/view-tracks/:album', (req, res, next) => {
+    spotifyApi.getAlbumsTracks((req.params).album)
+        .then(data => {
+            console.log('The received data from the API: ', data.body),
+                res.render(`view-tracks`, {
+                    data
+                })
+        })
+})
+
 
 app.listen(PORT, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
