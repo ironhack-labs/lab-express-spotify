@@ -2,10 +2,8 @@ const PORT = 3000;
 const dotenv = require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
-let favicon = require('serve-favicon');
 const path = require('path');
 const SpotifyWebApi = require('spotify-web-api-node');
-
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -22,7 +20,6 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
 
 app.get(`/`, (req, res) => {
     res.render(`index`)
