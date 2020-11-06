@@ -2,7 +2,7 @@
         <span class="artist-names-album"><p>{{#each this.artists}}{{#if @first}}<b> {{this.name}} </b>
             {{else}} - {{this.name}}{{/if}}{{/each}}</p></span>
             {{#if this.images}}
-            {{#each this.images}} {{#if @first}}<img src="{{this.url}}"{{/if}}{{/each}}
+            <img src="{{this.images.0.url}}"
             {{else}}
              <img src="/images/deafault-pic.png"
             {{/if}}
