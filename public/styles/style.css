@@ -104,7 +104,7 @@ button {
 }
 
 .album {
-    height: 400px;
+    min-height: 400px;
 }
 
 .album h2,
