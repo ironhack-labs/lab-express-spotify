@@ -1,0 +1,10 @@
+ 
+<h1>Results for: {{ search }}</h1>
+
+{{#each data}}
+  <div>
+    <img src={{images.0.url}}>
+    <h3>{{name}}</h3>
+    <button> <a href="/albums/{{this.id}}">View Albums</a> </button>
+  </div>
+{{/each}}
