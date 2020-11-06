@@ -95,3 +95,6 @@ h2 {
 .card-bottom button:hover {
     cursor: pointer;
 }
+.tracks-container h2 {
+    padding: 1rem 0rem;
+}
