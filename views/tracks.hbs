@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <ul class="list-group">
+            {{#each tracks}}
+            <li class="list-group-item">
+                <div class="row">
+                    <div class="col-6">
+                        {{name}}
+                    </div>
+                    <div class="col-6">
+                        <audio controls>
+                        <source src={{preview_url}} type="audio/ogg">
+                        <source src={{preview_url}} type="audio/mpeg">
+                        Your browser does not support the audio element.
+                        </audio>
+                    </div>
+                </div>
+            </li>
+            {{/each}}
+        </ul>
+    </div>
+</div>

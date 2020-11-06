@@ -1,0 +1,78 @@
+body {
+    background-color: black;
+}
+
+.website-title {
+    color: white;
+    text-align: center;
+}
+
+.full-height {
+    height: 100vh;
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    height: 100px;
+    width: 100%;
+}
+
+.home-form > * {
+    width: 100%;
+    padding: 5px;
+}
+
+.home-form > .input-form {
+    background-color: transparent;
+    border: 2.5px solid white;
+    height: 35px;
+    border-radius: 7px;
+    color: white;
+}
+
+.home-form > .input-form:active,.input-form:focus,.input-form:hover {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.cropped {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    object-position: center;
+}
+
+.card {
+    border: 2px solid white;
+    width: 270px;
+    color: white;
+    padding: 15px;
+    background-color: transparent;
+    margin: auto;
+    text-align: center;
+}
+
+.card > * {
+    margin-top: 10px;
+}
+
+.margin-top {
+    margin-top: 70px;
+}
+
+.list-group-item {
+    background-color: transparent;
+}
+
+.list-group-item .row {
+    align-items: center;
+}
+
+.list-group {
+    background-color: transparent;
+    color: white;
+    width: 100%;
+}
