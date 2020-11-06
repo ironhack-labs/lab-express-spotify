@@ -36,6 +36,7 @@ button {
     margin: 3px;
     font-family: 'Lato',
         sans-serif;
+    font-size: 18px;
 }
 
 button {
@@ -60,6 +61,7 @@ button {
     background: rgba(27, 36, 27, 0.6);
     margin: 2%;
     border-radius: 15px;
+    box-shadow: 3px 2px 2px black;
 }
 
 .artist img,
@@ -79,6 +81,10 @@ button {
     color: black;
     text-decoration: none;
     font-weight: 600;
+}
+
+.top-track-button {
+    margin-top: 10px;
 }
 
 .home-link {

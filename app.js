@@ -54,5 +54,17 @@ app.get('/view-tracks/:album', (req, res, next) => {
         })
 })
 
+app.get('/top-tracks/:artistID', (req, res, next) => {
+    spotifyApi.getArtistTopTracks((req.params).artistID, "NL")
+        .then(data => {
+            console.log(data)
+            res.render(`top-tracks`, {
+                data
+            })
+        })
+})
+
+
+
 
 app.listen(PORT, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

@@ -1,0 +1,17 @@
+<h1>Top Tracks</h1>
+<div class="track-wrapper">
+    {{#each data.body.tracks}}
+    <div class="one-track">
+<span class="track-info">
+    <p class="artist-names">{{#each this.artists}}
+        {{#if @first}}{{this.name}}
+       {{else}} - {{this.name}}{{/if}}{{/each}}</p>
+    <p class="track-title">{{this.name}}</p>
+</span>
+    <audio controls>
+        <source src="{{this.preview_url}}" type="audio/ogg">
+    </audio>
+    </div>
+    {{/each}}
+</div>
+<a class="home-link" href="/">Search for more artists</a>
