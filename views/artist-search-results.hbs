@@ -2,7 +2,11 @@
 <div class="result-wrapper">
 {{#each data.body.artists.items}}
 <div class="artist">
-{{#each this.images}} {{#if @first}}<img src="{{this.url}}"{{/if}}{{/each}}
+{{#if this.images}}
+            {{#each this.images}} {{#if @first}}<img src="{{this.url}}"{{/if}}{{/each}}
+            {{else}}
+             <img src="/images/deafault-pic.png"
+            {{/if}}
  alt="{{this.name}}">
     <h2>{{this.name}}</h2>
 <a href="/albums/{{this.id}}">View albums</a>
@@ -10,4 +14,4 @@
 </div>
 {{/each}}
 </div>
-<a class="home-link" href="/">Search for more artists</a>
+<a class="home-link" href="/">Search for more!</a>

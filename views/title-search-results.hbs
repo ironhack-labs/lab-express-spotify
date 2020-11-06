@@ -1,7 +1,7 @@
-<h1>Tracks on Album</h1>
+<h1>Search results</h1>
 <div class="track-wrapper">
-    {{#each data.body.items}}
- {{> trackspartial this}}
+    {{#each data.body.tracks.items}}
+{{> trackspartial this}}
     {{/each}}
 </div>
 <a class="home-link" href="/">Search for more!</a>
