@@ -1,10 +1,12 @@
+<h1>Search Results</h1>
 <div class="result-wrapper">
 {{#each data.body.artists.items}}
 <div class="artist">
 {{#each this.images}} {{#if @first}}<img src="{{this.url}}"{{/if}}{{/each}}
  alt="{{this.name}}">
-    <h1>{{this.name}}</h1>
+    <h2>{{this.name}}</h2>
 <a href="/albums/{{this.id}}">View albums</a>
 </div>
 {{/each}}
 </div>
+<a class="home-link" href="/">Search for more artists</a>

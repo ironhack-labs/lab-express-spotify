@@ -70,17 +70,26 @@ button {
 }
 
 .artist a,
-.album a {
+.album a,
+.home-link {
     border: 2px solid black;
     padding: 5px;
     border-radius: 5px;
     background-color: rgba(255, 255, 255, 0.6);
     color: black;
     text-decoration: none;
+    font-weight: 600;
+}
+
+.home-link {
+    margin: 10px;
+    padding: 10px;
+    font-size: 20px;
 }
 
 .artist a:hover,
-.album a:hover {
+.album a:hover,
+.home-link:hover {
     background-color: rgba(255, 255, 255);
 }
 
@@ -88,18 +97,23 @@ button {
     height: 400px;
 }
 
-.album h2 {
+.album h2,
+.artist h2 {
     font-size: 25px;
+    text-align: center;
 }
 
 .artist-names-album {
     display: flex;
     flex-flow: row wrap;
+    font-size: 20px;
+    text-align: center;
 }
 
 .track-wrapper {
     display: flex;
     flex-flow: column nowrap;
+    margin-top: 5px;
 }
 
 .one-track {
