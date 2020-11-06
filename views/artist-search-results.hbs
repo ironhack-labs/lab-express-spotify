@@ -1,0 +1,10 @@
+<h1> search results</h1>
+{{#each data.body.artist.items}}
+<div class="artist-file">
+    <div class="artist-img">
+        <h2 class="artist-name">{{this.name}}</h2>
+        <a href="{{this.albums}}">View Albums</a>
+
+    </div>
+</div>
+{{/each}}
