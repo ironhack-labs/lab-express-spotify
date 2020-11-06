@@ -80,6 +80,9 @@
     text-align: center;
     padding: 0.5rem 0rem;
 }
+h2 {
+    padding-bottom: 0.5rem;
+}
 .card-bottom button {
     background-color: salmon;   
     color: white;
@@ -87,5 +90,8 @@
     padding: 0.5rem 1rem;
     border-radius: 5px;
     border-style: none;
-    margin-top: 0.7rem 0rem;
+    margin-top: 2rem 0rem;
+}
+.card-bottom button:hover {
+    cursor: pointer;
 }

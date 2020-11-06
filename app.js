@@ -21,10 +21,6 @@ const spotifyApi = new SpotifyWebApi({
 // Retrieve an access token
 spotifyApi.clientCredentialsGrant().then(
   function (data) {
-    console.log("The access token expires in " + data.body["expires_in"]);
-    console.log("The access token is " + data.body["access_token"]);
-
-    // Save the access token so that it's used in future calls
     spotifyApi.setAccessToken(data.body["access_token"]);
   },
   function (err) {
@@ -38,11 +34,18 @@ app.get("/artist-search", (req, res, next) => {
     .searchArtists(req.query.artistSearch)
     .then((data) => {
       const artists = data.body.artists.items;
-      console.log(artists[0].images[0].url);
       res.render("artist-search-results", { artists });
     })
     .catch((err) => console.error(err));
 });
+
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId).then((data) => {
+    const albums = data.body.items;
+    res.render("albums", { albums });
+  });
+});
+
 app.get("/", (req, res, next) => {
   res.render("index");
 });

@@ -1,13 +1,12 @@
 <div class="results-container">
-    {{#if artists}}
-    {{#each artists}}
+    {{#if albums}}
+    {{#each albums }}
     <div class="card">
         <div class="img-container">
             <img src="{{this.images.1.url}}" alt="{{this.name}}">
         </div>
         <div class="card-bottom">
             <h2>{{this.name}}</h2>
-            <a href="/albums/{{this.id}}"><button type="button">View Albums</button></a>
         </div>
     </div>
     {{/each}}
