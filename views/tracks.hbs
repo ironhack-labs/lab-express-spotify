@@ -1,0 +1,36 @@
+<div class="card text-white bg-dark my-5">
+  <div class="card-header text-white-50">
+    <div class="row justify-content-between">
+      <div class="col-4 text-left">
+        Name
+      </div>
+      <div class="col-4">
+        Song
+      </div>
+    </div>
+  </div>
+  <ul class="list-group list-group-flush">
+    {{#each tracks}}
+    <div class="list-group-item">
+      <div class="row justify-content-between">
+        <div class="col-8 font-weight-bold text-left">
+          {{name}}
+        </div>
+        <div class="col-4">
+          <div>
+            <figure>
+              <audio controls src={{preview_url}}>
+                Your browser does not support the
+                <code>audio</code> element.
+              </audio>
+            </figure>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </ul>
+  <div class="card-footer">
+    <small class="text-muted"><a href="/">Search New Artist</a></small>
+  </div>
+</div>
