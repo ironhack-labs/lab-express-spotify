@@ -1,6 +1,3 @@
-<h1>All albums by {{#each data.body.items}}{{#if @first}}{{#each this.artists}}{{#if @first}}{{this.name}}{{/if}}{{/each}}{{/if}}{{/each}}</h1>
-<div class="result-wrapper">
-{{#each data.body.items}}
     <div class="album">
         <span class="artist-names-album"><p>{{#each this.artists}}{{#if @first}}<b> {{this.name}} </b>
             {{else}} - {{this.name}}{{/if}}{{/each}}</p></span>
@@ -8,6 +5,3 @@
         <h2>{{this.name}}</h2>
         <a href="/view-tracks/{{this.id}}">View Tracks</a>
     </div>
-{{/each}}
-</div>
-<a class="home-link" href="/">Search for more artists</a>

@@ -2,11 +2,8 @@ const PORT = 3000;
 const dotenv = require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
-const path = require('path');
 const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
-
-
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
@@ -41,7 +38,7 @@ app.get(`/artist-search`, (req, res, next) => {
 app.get('/albums/:artistID', (req, res, next) => {
     spotifyApi.getArtistAlbums((req.params).artistID)
         .then(data => {
-            res.render(`albums`, {
+            res.render(`albums-by-artist`, {
                 data
             })
         })
@@ -67,5 +64,22 @@ app.get('/top-tracks/:artistID', (req, res, next) => {
         })
         .catch(err => console.log('An error occured: ', err));
 });
+
+
+app.get('/new-releases', (req, res, next) => {
+    spotifyApi.getNewReleases({
+            limit: 10,
+            offset: 0,
+            country: 'NL'
+        })
+        .then(function (data) {
+            console.log(data.body.albums.items);
+            res.render(`new-releases`, {
+                data
+            })
+        })
+        .catch(err => console.log('An error occured: ', err));
+});
+
 
 app.listen(PORT, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

@@ -1,0 +1,7 @@
+<h1>New released albums</h1>
+<div class="result-wrapper">
+{{#each data.body.albums.items}}
+{{>albumpartial this}}
+{{/each}}
+</div>
+<a class="home-link" href="/">Search for more artists</a>

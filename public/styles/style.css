@@ -73,7 +73,8 @@ button {
 
 .artist a,
 .album a,
-.home-link {
+.home-link,
+.new-releases-link {
     border: 2px solid black;
     padding: 5px;
     border-radius: 5px;
@@ -81,13 +82,15 @@ button {
     color: black;
     text-decoration: none;
     font-weight: 600;
+    font-size: 18px;
 }
 
 .top-track-button {
     margin-top: 10px;
 }
 
-.home-link {
+.home-link,
+.new-releases-link {
     margin: 10px;
     padding: 10px;
     font-size: 20px;
@@ -95,7 +98,8 @@ button {
 
 .artist a:hover,
 .album a:hover,
-.home-link:hover {
+.home-link:hover,
+.new-releases-link:hover {
     background-color: rgba(255, 255, 255);
 }
 
