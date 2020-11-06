@@ -10,6 +10,7 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 app.use(express.urlencoded({extended : true}))
+hbs.registerPartials(path.join(__dirname, "views/partials"));
 
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -19,7 +20,7 @@ const spotifyApi = new SpotifyWebApi({
 app.get("/", (req, res) => {
     spotifyApi
         .clientCredentialsGrant()
-        .then(data => {spotifyApi.setAccessToken(data.body['access_token']); console.log(data.body['access_token'])})
+        .then(data => spotifyApi.setAccessToken(data.body['access_token']))
         .catch(error => console.log('Something went wrong when retrieving an access token', error));
     res.render("homePage");
 })

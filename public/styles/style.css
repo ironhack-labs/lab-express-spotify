@@ -2,6 +2,50 @@ body {
     background-color: black;
 }
 
+nav {
+    background-color: black;
+    color:white;
+    height: 60px;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    padding: 0 !important;
+    z-index: 1;
+}
+
+.navbar {
+    height: 100%;
+}
+
+.back-button {
+    color: white;
+    font-weight: bold;
+}
+
+.back-button:hover {
+    cursor: pointer;
+    text-decoration: none;
+    color: white;
+}
+
+.custom-col {
+    width: 100%;
+    position: absolute;
+    box-sizing: border-box;
+    text-align: center;
+    left: 0;
+    text-transform: uppercase;
+    letter-spacing: 7px;
+    font-size: 22px;
+    font-weight: bold;
+    z-index: -1;
+}
+
+hr {
+    border: 1px solid white;
+    margin: 0;
+}
+
 .website-title {
     color: white;
     text-align: center;
@@ -75,4 +119,8 @@ body {
     background-color: transparent;
     color: white;
     width: 100%;
+}
+
+audio {
+    outline: none;
 }
