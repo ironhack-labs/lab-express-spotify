@@ -1,7 +1,11 @@
 <div class="track-wrapper">
     {{#each data.body.items}}
-    <a href="{{this.preview_url}} ">Play</a>
-    <p class="artist-name">{{#each this.artists}}{{this.name}}{{/each}}</p>
+    <p class="artist-name">{{#each this.artists}}
+        {{#if @last}}{{this.name}}
+       {{else}}{{this.name}} - {{/if}}{{/each}}</p>
     <p class="track-title">{{this.name}}</p>
+    <audio controls>
+        <source src="{{this.preview_url}}" type="audio/ogg">
+    </audio>
     {{/each}}
 </div>
