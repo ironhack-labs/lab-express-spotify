@@ -1,17 +1,7 @@
 <h1>Tracks on Album</h1>
 <div class="track-wrapper">
     {{#each data.body.items}}
-    <div class="one-track">
-<span class="track-info">
-    <p class="artist-names">{{#each this.artists}}
-        {{#if @first}}{{this.name}}
-       {{else}} - {{this.name}}{{/if}}{{/each}}</p>
-    <p class="track-title">{{this.name}}</p>
-</span>
-    <audio controls>
-        <source src="{{this.preview_url}}" type="audio/ogg">
-    </audio>
-    </div>
+ {{> trackspartial this}}
     {{/each}}
 </div>
 <a class="home-link" href="/">Search for more artists</a>

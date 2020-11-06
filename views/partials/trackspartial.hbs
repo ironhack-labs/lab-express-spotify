@@ -1,0 +1,11 @@
+    <div class="one-track">
+<span class="track-info">
+    <p class="artist-names">{{#each this.artists}}
+        {{#if @first}}{{this.name}}
+       {{else}} - {{this.name}}{{/if}}{{/each}}</p>
+    <p class="track-title">{{this.name}}</p>
+</span>
+    <audio controls>
+        <source src="{{this.preview_url}}" type="audio/ogg">
+    </audio>
+    </div>

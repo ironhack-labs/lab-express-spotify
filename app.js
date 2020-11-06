@@ -6,8 +6,11 @@ const path = require('path');
 const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
 
+
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+hbs.registerPartials(__dirname + "/views/partials");
 app.use(express.static(__dirname + '/public'));
 
 const spotifyApi = new SpotifyWebApi({
