@@ -154,6 +154,10 @@ button:hover {
     margin: 0;
 }
 
+.track-title {
+    font-style: italic;
+}
+
 footer {
     width: 100%
 }
