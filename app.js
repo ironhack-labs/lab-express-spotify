@@ -1,8 +1,9 @@
-require('dotenv').config();
 const PORT = 3000;
+const dotenv = require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
-
+let favicon = require('serve-favicon');
+const path = require('path');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
@@ -21,6 +22,8 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
+app.use(favicon(path.join(__dirname, 'public', 'images', 'favicon.ico')));
+
 app.get(`/`, (req, res) => {
     res.render(`index`)
 })
@@ -29,7 +32,7 @@ app.get(`/artist-search`, (req, res, next) => {
     spotifyApi
         .searchArtists((req.query).artist)
         .then(data => {
-            console.log('The received data from the API: ', data.body.artists.items[0].images),
+            console.log('The received data from the API: ', data.body.artists),
                 res.render(`artist-search-results`, {
                     data
                 })
@@ -37,10 +40,10 @@ app.get(`/artist-search`, (req, res, next) => {
         .catch(err => console.log('The error while searching artists occurred: ', err))
 })
 
-app.get('/albums/:artistId', (req, res, next) => {
+app.get('/albums/:artistID', (req, res, next) => {
     spotifyApi.getArtistAlbums((req.params).artistID)
         .then(data => {
-            console.log('The received data from the API: ', data.body),
+            console.log('The received data from the API: ', data.body.items.artists),
                 res.render(`albums`, {
                     data
                 })
@@ -48,9 +51,9 @@ app.get('/albums/:artistId', (req, res, next) => {
 })
 
 app.get('/view-tracks/:album', (req, res, next) => {
-    spotifyApi.getAlbumsTracks((req.params).album)
+    spotifyApi.getAlbumTracks((req.params).album)
         .then(data => {
-            console.log('The received data from the API: ', data.body),
+            console.log('The received data from the API: ', data.body.items.artists),
                 res.render(`view-tracks`, {
                     data
                 })

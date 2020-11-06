@@ -2,7 +2,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: rgb(27, 131, 150);
-    background-image: url("/images/spotify-background.jpeg");
+    background-image: url("/images/spotify-background2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
@@ -10,6 +10,8 @@ body {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    font-family: 'Lato',
+        sans-serif;
 }
 
 main {
@@ -17,4 +19,29 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+}
+
+.result-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: row wrap;
+}
+
+.artist {
+    width: 300px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 4%;
+    color: white;
+    background: rgba(27, 36, 27, 0.6);
+    margin: 2%;
+    border-radius: 15px;
+}
+
+.artist img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
 }

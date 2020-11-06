@@ -1,0 +1,7 @@
+<div class="track-wrapper">
+    {{#each data.body.items}}
+    <a href="{{this.preview_url}} ">Play</a>
+    <p class="artist-name">{{#each this.artists}}{{this.name}}{{/each}}</p>
+    <p class="track-title">{{this.name}}</p>
+    {{/each}}
+</div>
