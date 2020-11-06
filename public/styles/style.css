@@ -1,7 +1,7 @@
 body {
     margin: 0;
     padding: 0;
-    background-color: rgb(27, 131, 150);
+    background-color: #23CF5F;
     background-image: url("/images/spotify-background2.jpg");
     background-size: cover;
     background-repeat: no-repeat;
@@ -19,6 +19,27 @@ main {
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    min-height: 500px;
+}
+
+.home {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input,
+button {
+    border-radius: 5px;
+    padding: 5px;
+    margin: 3px;
+    font-family: 'Lato',
+        sans-serif;
+}
+
+button {
+    font-weight: 600;
 }
 
 .result-wrapper {
@@ -28,7 +49,8 @@ main {
     flex-flow: row wrap;
 }
 
-.artist {
+.artist,
+.album {
     width: 300px;
     display: flex;
     align-items: center;
@@ -40,8 +62,72 @@ main {
     border-radius: 15px;
 }
 
-.artist img {
+.artist img,
+.album img {
     width: 200px;
     height: 200px;
     border-radius: 50%;
+}
+
+.artist a,
+.album a {
+    border: 2px solid black;
+    padding: 5px;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.6);
+    color: black;
+    text-decoration: none;
+}
+
+.artist a:hover,
+.album a:hover {
+    background-color: rgba(255, 255, 255);
+}
+
+.album {
+    height: 400px;
+}
+
+.album h2 {
+    font-size: 25px;
+}
+
+.artist-names-album {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.track-wrapper {
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+.one-track {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    margin: 5px;
+    background-color: rgba(27, 36, 27, 0.6);
+    padding: 8px;
+    border-radius: 10px;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color: white;
+}
+
+.track-info p {
+    margin: 0;
+}
+
+footer {
+    width: 100%
+}
+
+footer span {
+    padding: 4px 10px
 }
