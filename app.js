@@ -42,7 +42,7 @@ app.get('/albums/:artistID', (req, res, next) => {
                 data
             })
         })
-        .catch(err => console.log('An error occured: ', err));
+        .catch(err => console.log('An error occurred: ', err));
 });
 
 app.get('/view-tracks/:album', (req, res, next) => {
@@ -52,7 +52,7 @@ app.get('/view-tracks/:album', (req, res, next) => {
                 data
             })
         })
-        .catch(err => console.log('An error occured: ', err));
+        .catch(err => console.log('An error occurred: ', err));
 });
 
 app.get('/top-tracks/:artistID', (req, res, next) => {
@@ -62,7 +62,7 @@ app.get('/top-tracks/:artistID', (req, res, next) => {
                 data
             })
         })
-        .catch(err => console.log('An error occured: ', err));
+        .catch(err => console.log('An error occurred: ', err));
 });
 
 
@@ -73,12 +73,11 @@ app.get('/new-releases', (req, res, next) => {
             country: 'NL'
         })
         .then(function (data) {
-            console.log(data.body.albums.items);
             res.render(`new-releases`, {
                 data
             })
         })
-        .catch(err => console.log('An error occured: ', err));
+        .catch(err => console.log('An error occurred: ', err));
 });
 
 
