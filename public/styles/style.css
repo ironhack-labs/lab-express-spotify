@@ -1,0 +1,11 @@
+body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+  }
+
+  .centerSearch {
+      margin-top: 400px;
+      margin-left: 500px;
+  }
