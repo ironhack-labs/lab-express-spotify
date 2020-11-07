@@ -23,3 +23,40 @@ body {
 #search-form {
     padding-left: 150px;
 }
+
+.artists {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.artists a {
+    color: limegreen;
+    font-size: 1.5em;
+}
+
+.artists h2 {
+    color: white;
+    padding-top: 90px;
+}
+
+.albums {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+}
+
+.albums a {
+    color: limegreen;
+    font-size: 1.5em;
+}
+
+.albums h2 {
+    color: white;
+    padding-top: 90px;
+}
+
+.tracks {
+    color: white;
+}
