@@ -1,0 +1,79 @@
+body {
+
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+}
+
+
+.background {
+   /* -webkit-filter: blur(2px); */
+   background-image: url('../images/spotify-background.jpeg');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+   z-index: 1;
+   height: 80vh;
+   width: 120vh;
+   filter:blur(2px);
+
+}
+
+.foreground {
+    position: absolute;
+    top: 28%;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    z-index: 5;
+    width: 45%;
+    padding: 5vh;
+    text-align: center;
+    background-color: rgba(255, 255, 255,0.5);
+    color: #ffff;
+
+    /* background-color: white;
+    width: 50vh;
+    filter: blur(5px); */
+    
+}
+
+
+
+.btnModel{
+    
+    padding: 1vh 2vh;
+    background-color: rgb(214, 50, 50);
+    border: none;
+    color: white;
+    font-family: 'Roboto', sans-serif;
+    border-radius:2px;
+       
+}
+a{
+    text-decoration: none;
+    color: white;
+    margin: 2vh;
+}
+
+    /* background-color: white;
+    width: 50vh;
+    filter: blur(5px); */
+    
+.exhibits{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+   
+   
+    /* width: 5vh;
+    padding: 1vh;
+    text-align: center;
+    background-color: rgba(255, 255, 255,0.5);
+    color: #ffff; */
+
+}
