@@ -31,6 +31,7 @@ app.get('/', (req, res) => {
 })
 
 
+//iteration 2
 app.get('/artists-search', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.artists)
@@ -45,6 +46,7 @@ app.get('/artists-search', (req, res, next) => {
 
 })
 
+//iteration 4
 app.get('/albums/:id', (req, res) => {
     const { id } = req.params;
     spotifyApi
@@ -57,8 +59,21 @@ app.get('/albums/:id', (req, res) => {
 })
 
 
-console.log("this worked")
+//iteration 5
+app.get("/tracks/:albumId", (req, res) => {
+    spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then((data) => {
+            const tracks = data.body.items;
+            res.render("tracks", { tracks });
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
+});
 
+
+
+
+console.log("this worked")
 
 
 

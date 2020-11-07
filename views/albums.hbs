@@ -3,7 +3,8 @@
     {{#each albums}}
 <li> {{this.name}}</li>
 <br>
-<img src={{this.image.1.url}} alt="album-cover">
-<a href="">View Tracks</a>
+<img src="{{this.images.1.url}}" alt="{{this.name}}">
+<h2>{{this.name}}</h2>
+<a href="/tracks/{{this.id}}"><button type="button">View Tracks</button></a>
 {{/each}}
 </ul>

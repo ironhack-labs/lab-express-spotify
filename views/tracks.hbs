@@ -1,0 +1,17 @@
+
+
+    
+    {{#if tracks}}
+    {{#each tracks }}
+    <div class="p-3 w-full">
+
+    <h2>{{this.name}}</h2>
+
+    </div>
+    <audio controls>
+    <source src="{{this.preview_url}}" type="audio/mpeg">
+    </audio>
+    {{/each}}
+    {{else}}
+        <p>No artist information found.</p>
+    {{/if}}
