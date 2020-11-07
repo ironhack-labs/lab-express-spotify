@@ -1,11 +1,21 @@
 <div class="container-fluid ">
     <div class="row">
         <div class="col-12 text-center">
-
-            Artist : 
-            <p>{{this.name}}</p>
-            
-
+            Artist found : 
+            <ul>
+                {{#each artists}}
+                <li>
+                    {{this.name}} <br>
+                    {{#if this.images}}
+                    <img src="{{this.images.2.url}}" alt="{{this.name}}">
+                    {{else}}
+                    <img src="https://www.stefkamusic.com/wp-content/themes/soundcheck/images/default-artwork.png" alt="{{this.name}}" style="width: 160px;">
+                    {{/if}}
+                    <br>
+                    <a href="/albums/{{this.id}}">View albums</a>
+                </li>
+                {{/each}}
+            </ul>
         </div>
     </div>
 </div>

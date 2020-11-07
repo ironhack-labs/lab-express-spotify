@@ -1,4 +1,55 @@
 *{
     background-color: black;
+    color: rgb(30, 215, 96);
+}
+div{
+   padding: 20px;
+}
+li{
+    list-style-type: none;
+}
+.home-btn{
+    padding: 10px 30px;
+    width: 200px;
+    margin: 10px;
+    border: 1px solid rgb(30, 215, 96);
+    border-radius: 20px;
+}
+.home-btn:hover{
+    background-color: rgb(30, 215, 96);
+    text-decoration: none;
+}
+.home-btn a{
+   color: rgb(30, 215, 96);
+   text-decoration: none;
+}
+.home-btn a:hover{
     color: white;
+    text-decoration: none;
+}
+.input-field{
+    padding: 10px 30px;
+    width: 500px;
+    margin: 20px;
+    border: 1px solid rgb(30, 215, 96);
+}
+.Research-btn{
+    padding: 10px 30px;
+    width: 500px;
+    margin: 10px;
+    border: 1px solid rgb(30, 215, 96);
+    border-radius: 20px;
+}
+.Research-btn:hover{
+    background-color: rgb(30, 215, 96);
+    color: black;
+}
+.card-btn{
+    padding: 10px;
+    border: 1px solid rgb(30, 215, 96);
+    border-radius: 20px;
+}
+.card-btn:hover{
+    background-color: rgb(30, 215, 96);
+    color: black;
 }

@@ -1,0 +1,22 @@
+<div class="container-fluid ">
+    <div class="row">
+        <div class="col-12 text-center">
+
+            <ul>
+
+                {{#each albums}}
+                <li>
+                    {{this.name}}
+                </li>
+                <br>
+                <img src="{{this.images.1.url}}" alt="album cover">
+                <a href="/tracks/{{this.id}}">View Tracks</a>
+                {{/each}}
+
+
+
+            </ul>
+
+        </div>
+    </div>
+</div>
