@@ -55,7 +55,7 @@ app.get('/albums/:id', (req, res) => {
             const { items } = data.body;
             res.render("albums", { albums: items });
         })
-        .catch(err => console.log('The error while searching artists occurred: ', err));
+        .catch(err => console.log('The error while searching albums occurred: ', err));
 })
 
 
@@ -67,7 +67,7 @@ app.get("/tracks/:albumId", (req, res) => {
             const tracks = data.body.items;
             res.render("tracks", { tracks });
         })
-        .catch(err => console.log('The error while searching artists occurred: ', err));
+        .catch(err => console.log('The error while searching tracks occurred: ', err));
 });
 
 
