@@ -1,5 +1,5 @@
 <div class="artistdiv"> 
-  {{#each artists}}
+  {{#each albums}}
   <div class="artistcard">
     {{#if this.images}}
     <img class="artistimg" src="{{this.images.0.url}}" alt="{{this.name}}">
@@ -8,7 +8,7 @@
     {{/if}}
     <div class="artisttext">
       <p class="artistname">{{ this.name }}</p>
-      <a href="/albums/{{this.id}}">View Albums</a>
+      <a href="/tracks/{{this.id}}">View Tracks</a>
     </div>
     
   </div>

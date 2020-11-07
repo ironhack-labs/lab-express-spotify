@@ -3,6 +3,7 @@ require('dotenv').config();
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
+const { CLIENT_ID, CLIENT_SECRET } = process.env;
 
 const app = express();
 
@@ -29,16 +30,42 @@ app.get('/', (request, response) => {
 
 app.get('/artist-search', (request, response) => {
   const { artist } = request.query
-  console.log({artist});
   
   spotifyApi
-  .searchArtists(artist)
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
-    response.render('artist-search')
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
+    .searchArtists(artist)
+    .then(data => {
+      const { items } = data.body.artists;
+      response.render('artist-search', {artists: items});
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
   
+});
+
+app.get('/albums/:id', (request, response) => {
+  const { id } = request.params;
+
+  spotifyApi
+    .getArtistAlbums(id)
+    .then((data) => {
+      const { items } = data.body;
+      response.render('albums', { albums : items });
+    })
+    .catch(err => console.log('The error while searching albums occurred: ', err));
+
+});
+
+app.get('/tracks/:albumId', (request, response) => {
+  const { albumId } = request.params;
+
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      const { items } = data.body;
+      response.render('tracks', { tracks : items})
+      console.log(items);
+    })
+    .catch(err => console.log('The error while searching tracks occurred: ', err));
+
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

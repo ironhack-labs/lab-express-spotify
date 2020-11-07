@@ -1,5 +1,6 @@
 body {
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar {
@@ -52,4 +53,73 @@ body {
   color: white;
   padding: 10px 15px;
   border: none;
+}
+
+.artistcard {
+  width: 400px;
+  height: 550px;
+  text-align: center;
+  border: 1px solid black;
+  margin: 25px;
+}
+
+.artistimg {
+  width: 400px;
+  height: 400px;
+  margin: 0px;
+}
+
+.artistdiv {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artisttext {
+  background-color: #4D4D4D;
+  display: flex;
+  flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+
+}
+
+.artisttext a {
+  padding: 5px 10px;
+  background-color: #EF6D69;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-bottom: 28px;
+}
+
+.artistname {
+  color: white;
+  font-size: 1.3em;
+  height: 50px;
+}
+
+.tracksdiv {
+  width: 1000px;
+  margin: 50px auto;
+  }
+
+.titletracks {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4A4A4A;
+  color: #C0C1C1;
+  padding-left: 25px;
+  padding-right: 150px;
+}
+
+.trackdiv {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F6F6F6;
+  padding: 0px 25px;
+  margin-bottom: 5px;
 }
