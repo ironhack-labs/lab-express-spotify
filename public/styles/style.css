@@ -1,0 +1,189 @@
+body {
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: fixed; 
+    min-width: 100%;
+    min-height: 100%;
+    display: grid;
+    margin: 0;
+
+}
+
+.mainPageDiv {
+    align-self: center;
+    margin-left: 28%;
+    background-color: rgba(255, 255, 255, 0.6);
+    width: 45%;
+    height: 25%;
+    border-radius: 1%;
+}
+
+.formDiv {
+    margin-top: 55px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+}
+
+.mainInput {
+width: 350px;
+padding: 6px;
+border-radius: 5%;
+margin-bottom: 10px;
+border: 1px solid lightgrey;
+}
+
+.mainButton {
+    background-color: #fa6863;
+    color: white;
+    border-radius: 5%;
+    border: none;
+    padding: 7px 9px 7px 9px;
+    margin-left: 30%;
+}
+
+#page2body{
+    background-image: none;
+}
+
+.page2img {
+    width: 200px;
+    height: 200px;
+}
+
+.page2container {
+    margin-left: 20%;
+}
+
+.page2Div {
+    width: 85%;
+
+}
+
+.artistCard {
+    margin: 10px;
+}
+
+.page2h2 {
+    color: white;
+    font-size: 10px;
+    text-align: center;
+    vertical-align: middle;
+    margin-bottom: 0px;
+}
+
+.page2button {
+    background-color: #fa6863;
+    border-radius: 5%;
+    border: none;
+    padding: 2px 4px 2px 4px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    margin-left: 3em;
+    margin-bottom: 20px;
+}
+
+.page2a {
+    color: white;
+    font-size: 10px;
+}
+
+.cardDiv {
+    background-color:#555;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.albumsBody {
+    background-image: none;
+}
+
+.albumsLi {
+    color: white;
+    font-size: 12px;
+    list-style-type: none;
+    height: 50px;
+    text-align: center;
+    vertical-align: middle;
+    padding-top: 25px;
+}
+
+.albumsUl {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.albumsCard {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    margin: 10px;
+}
+
+.albumsImg {
+    object-fit: cover;
+    width: 150px;
+    height: 150px;
+}
+
+.albumsButton {
+    width: 80%;
+    font-size: 10px;
+    margin-left: 10%;
+    background-color: #fa6863;
+    border-radius: 5%;
+    border: none;
+    margin-bottom: 10px;
+}
+
+.page3a {
+    color: white;
+    font-size: 10px;
+}
+
+.albumsText {
+    background-color:#555;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.tracksBody {
+    background-image: none;
+}
+
+.tracksNav {
+    background-color: #555;
+    color: darkgrey;
+}
+
+.tracksUl {
+    display: flex;
+    flex-direction: column;
+}
+
+.tracksCard {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgb(236, 235, 235);
+    margin: 10px;
+}
+
+#audioName {
+    width: 300px;
+    margin-left: 50px;
+    margin-top: 5px;
+}
+
+#audioSound {
+    margin-left: 450px;
+}
+
+.tracksUl{
+    list-style-type: none;
+}
