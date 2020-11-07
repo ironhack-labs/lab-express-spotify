@@ -1,0 +1,18 @@
+<body class="albumsBody">
+    <div class="container">
+        <ul class="albumsUl">
+            {{#each albums}}
+            <div class="albumsCard">
+                <img src={{this.images.2.url}} alt="albumcover" class="albumsImg">
+                <div class="albumsText">
+                    <li class="albumsLi">{{this.name}}</li>
+                    <br>
+                    <button class="albumsButton"><a href="/tracks/{{this.id}}" class="page3a">View Tracks</a></button>
+                </div>
+            </div>
+            {{/each}}
+
+        </ul>
+
+    </div>
+</body>

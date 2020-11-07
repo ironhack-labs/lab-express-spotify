@@ -1,0 +1,25 @@
+<body id="page2body">
+  <div class="page2container">
+    <div class="row page2Div">
+      {{#each artists}}
+      <div class="artistCard">
+        {{#if this.images}}
+        {{!-- if statement checks if there is an image or not --}}
+        <img src="{{this.images.2.url}}" alt="{{this.name}}" class="page2img">
+        {{else}}
+        <img src="/images/defaultPic.jpg" alt="no picture" class="page2img">
+        {{/if}}
+        <div class="cardDiv">
+          <br>
+          <h2 class="page2h2">{{this.name}}</h2>
+          <br>
+          <button class="page2button">
+            <a href="/albums/{{this.id}}" class="page2a">View Albums</a>
+          </button>
+        </div>
+      </div>
+
+      {{/each}}
+    </div>
+  </div>
+</body> 

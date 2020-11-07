@@ -1,0 +1,33 @@
+<body class="tracksBody">
+
+    <nav class="navbar tracksNav">
+        <span class="navbar-brand mb-0 h1 navT1">Title</span>
+        <span class="navbar-brand mb-0 h1 navT2">Listen</span>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container">
+            <div class="row">
+                <ul class="tracksUl">
+                    {{#each tracks}}
+                    <div class="tracksCard">
+                        <div id="audioName">
+                            <li class="trackLi">{{this.name}}</li>
+                            <br>
+                        </div>
+                        <div id="audioSound">
+                            {{#if this.preview_url}}
+                            <audio controls>
+                                <source src="{{this.preview_url}}" type="audio/mpeg">
+                            </audio>
+                            {{else}}
+                            <p>no preview found</p>
+                            {{/if}}
+                        </div>
+                    </div>
+                    {{/each}}
+                </ul>
+            </div>
+        </div>
+    </nav>
+</body>
