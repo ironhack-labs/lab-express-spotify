@@ -1,0 +1,11 @@
+
+ <div class="artist-card">
+        {{#if this.images}}
+            <img class="artist-img" src="{{this.images.0.url}}" alt="{{this.name}}">
+        {{else}}
+            <img class="artist-img" src="/images/no-pic.png" alt="{{this.name}}">
+        {{/if}}
+        <h2 class="artist-name">{{this.name}}</h2>
+        <a href="albums/{{this.id}}" class="btn">View Albums</a>
+</div>
+

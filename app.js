@@ -2,15 +2,20 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
+const path = require('path');
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
 
+hbs.registerPartials(__dirname + "/views/partials");
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+
+
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -34,12 +39,37 @@ app.get("/artist-search", (req, res) => {
     spotifyApi
       .searchArtists(req.query.artist)
       .then(data => {
-        res.render("artist-search-results", data.body)
-        console.log('The received data from the API: ', data.body);
+        res.render("artist-search-results", { artist : data.body.artists.items })
+        console.log(data.body.artists.items);
    
   })
       .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
+
+app.get("/albums/:id", (req, res) => {
+    const { id } = req.params
+
+    spotifyApi
+      .getArtistAlbums(id)
+      .then(data => { 
+          const { items } = data.body;
+          res.render("albums", { albums: items });
+      });
+      
+});
+
+
+app.get("/tracks/:albumId", (req, res) => {
+    const { albumId } = req.params
+
+    spotifyApi
+      .getAlbumTracks(albumId)
+      .then((data) => {
+          const { items } = data.body
+          res.render("tracks", { tracks: items })
+      })
+      .catch(err => console.log('The error while searching tracks occurred: ', err));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

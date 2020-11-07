@@ -1,0 +1,132 @@
+/* Green 1DB954 */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;400;500;600;700&display=swap');
+
+body {
+    background-color: 2bcb2c;
+    margin: 0;
+    padding: 0;
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    font-family: 'Montserrat';
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form-container {
+    background-color: rgba( 0, 0, 0, 0.5);
+    width: 400px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    margin-top: 300px;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 20px;
+}
+
+h1 {
+    color: grey;
+    font-weight: 500;
+    margin: 20px;
+    
+}
+
+.artist-card {
+    width: 300px;
+    height: 420px;
+    margin: 10px;
+    background-color: black;
+    text-align: center;
+}
+
+.artist-img {
+    width: 300px;
+    height: 300px;
+}
+
+.artist-name {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+}
+
+.btn {
+    background-color: #1db954;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+}
+
+.search-btn {
+    background-color: #1db954;
+    padding: 10px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+.form-input {
+    border-color:#cccccc; 
+    border-style:solid; 
+    padding:6px; 
+    font-size:14px; 
+    border-width:0px;  
+}
+
+.form-input:focus {
+    outline: none; 
+}
+
+.album-card {
+    width: 400px;
+    height: 520px;
+    margin: 10px;
+    background-color: black;
+    text-align: center;
+}
+
+.album-img {
+    width: 400px;
+    height: 400px;
+}
+
+.album-name {
+    color: white;
+    font-weight: 500;
+    font-size: 25px;
+    font-style: italic;
+}
+
+.tracklist {  
+    list-style: none;
+    margin-left: -25px;
+}
+
+.tracklist-container {
+    background-color: #2C2C2B;
+    width: 60%;
+    list-style: none;
+    padding: 35px;
+}
+
+h3 {
+    color: white;
+    font-weight: 300;
+}
+
+.inline-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
