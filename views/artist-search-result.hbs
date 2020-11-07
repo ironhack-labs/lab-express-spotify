@@ -1,0 +1,9 @@
+<h1>Artist results</h1>
+
+{{#each artistsArray }}
+    <div>
+        <img src="{{images}}" alt="">
+        <p>{{name}}</p>
+        <a href="/albums/{{id}}"><button>View albums</button></a>
+    </div>
+{{/each}}

@@ -1,0 +1,48 @@
+body {
+    background-color: #f2f2f2e8;
+    font-size: 16px;
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vw;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    opacity: .8;
+    cursor: pointer;
+}
+
+nav ul {
+    padding: 0;
+}
+
+nav ul li {
+    list-style: none;
+}
+
+#index-background {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url("https://media.npr.org/assets/img/2018/08/21/ttt-esperanza-spalding-edit_custom-7add6df824cae3e27a4da59d44b133abec6fc896.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#index-background input {
+    height: 40px;
+    width: 150px;
+}
+
+#index-background .button {
+    background-color: brown;
+    color: white;
+    width: 80px;
+    cursor: pointer;
+}
