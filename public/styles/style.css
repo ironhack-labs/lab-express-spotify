@@ -1,0 +1,58 @@
+button,
+a {
+  color: white !important;
+  font-weight: bold !important;
+  background-color: #1db954 !important;
+  border-color: #1db954 !important;
+  margin: 1rem;
+  padding: 0.8rem !important;
+  font-size: smaller !important;
+  text-transform: uppercase;
+}
+
+a {
+  margin: 0;
+}
+
+.divisor {
+  background-image: url("../images/spotify-background.jpeg") !important;
+  background-size: cover;
+  background-repeat: no-repeat !important;
+  background-position: center;
+}
+
+.div-trans {
+  background-color: whitesmoke;
+  background-color: #2828285d;
+  padding: 4rem 0rem;
+  width: 75%;
+  margin: 3rem 5rem;
+}
+
+.grey {
+  background-color: #282828 !important;
+}
+
+.grey-c {
+  color: #282828 !important;
+}
+
+body {
+  color: white;
+  background-color: #181818;
+  font-weight: bold;
+}
+
+.artist-name {
+  font-weight: bolder;
+  margin: 2rem;
+}
+
+.tracks {
+  margin-left: 0 !important;
+  margin-right: 0 !important;
+}
+
+span {
+  font-size: larger;
+}

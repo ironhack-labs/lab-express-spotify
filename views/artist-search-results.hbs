@@ -1,0 +1,10 @@
+<div>
+    <h1 class="text-center artist-name display-5">Resultados de: {{back}}</h1>
+</div>
+<div class="container">
+    <div class="row row-cols-3">
+        {{#each data}}
+        {{> artistCard this}}
+        {{/each}}
+    </div>
+</div>

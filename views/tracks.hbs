@@ -1,0 +1,13 @@
+<div class="grey d-flex justify-content-between px-5 py-3 align-items-baseline">
+    <div class="d-flex flex-row justify-content-center align-items-baseline">
+        <a class="display-2 grey" style="font-size: 1.5rem!important; font-weight:lighter" href="/albums/{{artistId}}">
+            < </a>
+                <h3 class="display-5">Tracks</h3>
+    </div>
+    <h3 class="display-5">Listen</h3>
+</div>
+<div class="row row-cols-1 d-flex justify-content-between my-2 px-5 tracks">
+    {{#each data}}
+    {{> tracksSection this}}
+    {{/each}}
+</div>
