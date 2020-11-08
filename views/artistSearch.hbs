@@ -1,4 +1,9 @@
 <h1>Search results</h1>
 <div class="container">
-    <p>{{data.body}}</p>
+  <!-- <p>{{data.body}}</p> -->
+  <ul class="people_list">
+    {{#each info}}
+      <li>{{this}}</li>
+    {{/each}}
+  </ul>
 </div>
