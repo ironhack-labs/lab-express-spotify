@@ -33,13 +33,14 @@ app.get("/", (req, res) => {
   res.render("index")
 })
 
-app.get("/artist-search", (req, res, next) => {
-  // console.log(req.query);
-  spotifyApi.searchArtists('Love')
+app.get("/artistSearch", (req, res, next) => {
+  const artist = req.query
+  console.log(req.query.artistSearch);
+  spotifyApi.searchArtists(req.query.artistSearch)
   .then(function(data) {
-    console.log('Search artists by "Love"', data.body);
+    // console.log('Search artists by "Love"', data.body);
     const artists = data.body;
-    res.render("artist-search-results", { artists });
+    res.render("artistSearch", { artists });
   }, function(err) {
     console.error(err);
   });
