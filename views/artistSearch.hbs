@@ -1,13 +1,10 @@
 <div class="container">
-
-    <div class="row">
-        <div class="grid-title">
-          {{#each info}}
-          <!-- ask for partials -->
-          {{> artistCard this}}
-          {{/each}}
-        </div>
-
+  <div class="row">
+    <div class="row -md-6">
+      {{#each info}}
+        {{> artistCard this}}
+      {{/each}}
     </div>
+  </div>
 
 </div>
