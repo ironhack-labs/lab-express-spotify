@@ -2,12 +2,12 @@
     <ul>
         {{#each albums}}
         <li>
-            <div>
-            <h1>{{this.name}}</h1>
-            <img src={{this.images.1.url}} alt="album">
-            <a href="#">View Tracks</a>
-        </div>
-        </li>
+        <h1>{{this.name}}</h1>
+        <img src={{this.images.1.url}} alt="album">
+        <a href="/tracks/{{this.id}}">See Tracks</a>
         {{/each}}
+        </li>
     </ul>
 </div>
+
+
