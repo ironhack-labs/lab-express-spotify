@@ -1,15 +1,17 @@
-body{
- background-image: url("../images/spotify-background.jpeg");
- height: 100%;
- width: 100%;
- background-size: cover;
- display: flex;
+body {
+  background-image: url("../images/spotify-background.jpeg");
+  height: 100%;
+  width: 100%;
+  background-size: cover;
+  display: flex;
   align-items: center;
- justify-content: center;
+  justify-content: center;
 }
 
-.form{
+.form {
+  /* opacity: 0.5; */
+  background-color: white;
   text-align: center;
   margin: 20% 0 0 0;
- padding: 0px;
+  padding: 2em 10em ;
 }
