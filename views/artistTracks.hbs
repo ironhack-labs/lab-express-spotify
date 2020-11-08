@@ -1,11 +1,9 @@
-<div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
+<h1>Tracks</h1>
+<div class="container">
+    <div class="row">
+      {{#each tracks}}
+        {{> artistTracksCard this}}
+      {{/each}}
+    </div>
 
-  <img class="card-img-top d-block mx-auto" src="{{images.[0].url}}" alt="{{name}}">
-
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <a href="albums/{{id}}">
-      <!-- <button type="submit" class="btn btn-danger d-block mx-auto">View Albums</button> -->
-      </a>
-  </div>
 </div>
