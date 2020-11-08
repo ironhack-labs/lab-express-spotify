@@ -9,8 +9,8 @@ body {
 }
 
 .form {
-  /* opacity: 0.5; */
-  background-color: white;
+  background: rgba(255, 255, 255, 0.5);
+
   text-align: center;
   margin: 20% 0 0 0;
   padding: 2em 10em ;
