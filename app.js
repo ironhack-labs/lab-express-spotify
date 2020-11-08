@@ -24,9 +24,6 @@ spotifyApi
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
-// router.get("/", () => {
-//   render("layout")
-// })
 
 app.get("/", (req, res) => {
 
@@ -35,12 +32,11 @@ app.get("/", (req, res) => {
 
 app.get("/artistSearch", (req, res, next) => {
   const artist = req.query
-  console.log(req.query.artistSearch);
   spotifyApi.searchArtists(req.query.artistSearch)
   .then(function(data) {
     // console.log('Search artists by "Love"', data.body);
-    const artists = data.body;
-    res.render("artistSearch", { artists });
+    let info = data.body.artists.items
+    res.render("artistSearch", {info});
   }, function(err) {
     console.error(err);
   });
