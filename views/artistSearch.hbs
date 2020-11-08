@@ -1,12 +1,15 @@
-<h1>Search results</h1>
-<div class="row">
-      <div class="col-12">
-          <div class="grid-title"><h3 class="text-center sticky-title">Search results</h3></div>
-      </div>
-  </div>
+<div class="container">
+
   <div class="row">
-      {{#each info}}
-      <!-- ask for partials -->
-      {{> artistCard this}}
-      {{/each}}
+
+    <div class="col-sm">
+        <div class="grid-title">
+          {{#each info}}
+          <!-- ask for partials -->
+          {{> artistCard this}}
+          {{/each}}
+        </div>
+
+    </div>
+
 </div>
