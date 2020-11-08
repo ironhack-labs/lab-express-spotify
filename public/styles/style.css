@@ -4,6 +4,12 @@ body{
  width: 100%;
  background-size: cover;
  display: flex;
- align-items: center;
+  align-items: center;
  justify-content: center;
+}
+
+.form{
+  text-align: center;
+  margin: 20% 0 0 0;
+ padding: 0px;
 }
