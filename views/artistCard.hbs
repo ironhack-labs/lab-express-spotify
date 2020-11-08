@@ -1,18 +1,4 @@
-<script src="" type="text/javascript">
-  function deleteAllCookies() {
-    var cookies = document.cookie.split(";");
 
-    for (var i = 0; i < cookies.length; i++) {
-      var cookie = cookies[i];
-      var eqPos = cookie.indexOf("=");
-      var name = eqPos > -1 ? cookie.substr(0, eqPos) : cookie;
-      document.cookie = name + "=;expires=Thu, 01 Jan 1970 00:00:00 GMT";
-    }
-  }
-
-
-  deleteAllCookies()
-</script>
 <div class="card text-white bg-dark ">
       <img class="card-img-top d-block mx-auto" src="{{images.[0].url}}" alt="{{name}}">
       <div class="card-body">
@@ -21,22 +7,3 @@
 
       </div>
     </div>
-
-<!-- <div class="card text-white bg-dark mb-3" style="max-width: 18rem;">
-
-  <img class="card-img-top d-block mx-auto" src="{{images.[0].url}}" alt="{{name}}">
-
-  <div class="card-body">
-    <h5 class="card-title">{{name}}</h5>
-    <form action="/artistSearch" method="GET">
-
-      <div class="artistSearch">
-        <label for="albums/{{id}}"></label>
-        <input type="text" name="albums/{{id}}" class="form-control" id="albums/{{id}}" placeholder="" value="">
-
-
-      </div>
-      <br>
-      <button type="submit" class="btn btn-danger d-block mx-auto">View Albums</button>
-  </div> -->
-</div>
