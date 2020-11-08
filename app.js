@@ -51,7 +51,9 @@ app.get('/albums/:artistId', (req, res, next) => {
     (data) => {
       const albums = data.body.items;
       console.log(albums);
-      res.render("artistAlbum",{albums})
+      res.render("artistAlbum", {
+        albums
+      })
 
     },
     (err) => {
@@ -59,6 +61,30 @@ app.get('/albums/:artistId', (req, res, next) => {
     }
   );
 });
+
+app.get('/albums/tracks/:albumId', (req, res, next) => {
+  console.log(req.params.albumId);
+  spotifyApi.getAlbumTracks(req.params.albumId, {
+      limit: 5,
+      offset: 1
+    })
+    .then(function(data) {
+        const tracks = data.body.items;
+        res.render("artistTracks", { tracks });
+
+    }, function(err) {
+      console.log('Something went wrong!', err);
+    });
+  // spotifyApi.getAlbumTracks(req.params.artistId, { limit : 25, offset : 1 })
+  // .then((data) => {
+  //   // const tracks = data.body.items;
+  //   // res.render("artistTracks", { tracks });
+  //   redirect("/")
+  // }, (err) => {
+  //   console.log('Something went wrong!', err);
+  // });
+});
+
 
 module.exports = app
 
