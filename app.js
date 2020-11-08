@@ -4,6 +4,7 @@ const express = require('express'),
   hbs = require('hbs'),
   router = express.Router(),
   SpotifyWebApi = require('spotify-web-api-node'),
+  chalkAnimation = require('chalk-animation'),
   app = express();
 
 app.set('view engine', 'hbs');
@@ -28,12 +29,23 @@ spotifyApi
 // })
 
 app.get("/",(req, res)=>{
-  console.log(req);
+
   res.render("index")
+})
+
+app.get("/artist-search",(req, res,next)=>{
+  console.log(req.query);
+  spotifyApi
+  .searchArtists(req.query)
+  .then(data => {
+    console.log('The received data from the API: ', data.body);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 module.exports = app
 
 
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(3000, () => chalkAnimation.rainbow('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
