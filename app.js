@@ -33,20 +33,31 @@ app.get("/", (req, res) => {
 })
 
 app.get("/artistSearch", (req, res, next) => {
-  const artist = req.query
+  // const artist = req.query
   spotifyApi.searchArtists(req.query.artistSearch)
-  .then(function(data) {
-    // console.log('Search artists by "Love"', data.body);
-    let info = data.body.artists.items
-    res.render("artistSearch", {info});
-  }, function(err) {
-    console.error(err);
-  });
+    .then(function(data) {
+      // console.log('Search artists by "Love"', data.body);
+      let info = data.body.artists.items
+      res.render("artistSearch", {
+        info
+      });
+    }, function(err) {
+      console.error(err);
+    });
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
-  // .getArtistAlbums() code goes here
-  req.render("/")
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
+    (data) => {
+      const albums = data.body.items;
+      console.log(albums);
+      res.render("artistAlbum",{albums})
+
+    },
+    (err) => {
+      console.error(err);
+    }
+  );
 });
 
 module.exports = app
