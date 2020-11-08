@@ -44,6 +44,11 @@ app.get("/artistSearch", (req, res, next) => {
   });
 })
 
+app.get('/albums/:artistId', (req, res, next) => {
+  // .getArtistAlbums() code goes here
+  req.render("/")
+});
+
 module.exports = app
 
 
