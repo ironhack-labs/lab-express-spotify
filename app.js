@@ -28,8 +28,9 @@ app.get(`/artist-search`, (req, res, next) => {
     spotifyApi
         .searchArtists((req.query).artist)
         .then(data => {
+            const artistList = data.body.artists.items;
             res.render(`artist-search-results`, {
-                data
+                artistList
             })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -39,8 +40,9 @@ app.get(`/title-search`, (req, res, next) => {
     spotifyApi
         .searchTracks((req.query).title)
         .then(data => {
+            const titleList = data.body.tracks.items;
             res.render(`title-search-results`, {
-                data
+                titleList
             })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -49,8 +51,9 @@ app.get(`/title-search`, (req, res, next) => {
 app.get('/albums/:artistID', (req, res, next) => {
     spotifyApi.getArtistAlbums((req.params).artistID)
         .then(data => {
+            const artistAlbums = data.body.items;
             res.render(`albums-by-artist`, {
-                data
+                artistAlbums
             })
         })
         .catch(err => console.log('An error occurred: ', err));
@@ -59,8 +62,9 @@ app.get('/albums/:artistID', (req, res, next) => {
 app.get('/view-tracks/:album', (req, res, next) => {
     spotifyApi.getAlbumTracks((req.params).album)
         .then(data => {
+            const albumTracks = data.body.items;
             res.render(`view-album-tracks`, {
-                data
+                albumTracks
             })
         })
         .catch(err => console.log('An error occurred: ', err));
@@ -69,8 +73,9 @@ app.get('/view-tracks/:album', (req, res, next) => {
 app.get('/top-tracks/:artistID', (req, res, next) => {
     spotifyApi.getArtistTopTracks((req.params).artistID, "NL")
         .then(data => {
+            const topTracks = data.body.tracks;
             res.render(`top-tracks`, {
-                data
+                topTracks
             })
         })
         .catch(err => console.log('An error occurred: ', err));
@@ -84,8 +89,9 @@ app.get('/new-releases', (req, res, next) => {
             country: 'NL'
         })
         .then(function (data) {
+            const newReleases = data.body.albums.items
             res.render(`new-releases`, {
-                data
+                newReleases
             })
         })
         .catch(err => console.log('An error occurred: ', err));
