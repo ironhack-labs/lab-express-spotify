@@ -1,9 +1,13 @@
 <nav class="navbar navbar-light bg-light">
     <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="">
+    <h2>Artist</h2>
     <a class="navbar-brand" href="/">Previous page</a>
 </nav>
-<div class='artistDiv'>
-{{#each data}}
-{{> artistContainer this}}
-{{/each}}
+<div class='container'>
+    <div class="row">
+
+        {{#each data}}
+        {{> artistContainer this}}
+        {{/each}}
+    </div>
 </div>

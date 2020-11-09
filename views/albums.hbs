@@ -1,10 +1,14 @@
 <nav class="navbar navbar-light bg-light">
     <img src="https://storage.googleapis.com/pr-newsroom-wp/1/2018/11/Spotify_Logo_CMYK_Green.png" alt="">
+    <h2>Albums</h2>
     <a onclick='javascript:history.back();return false;' class="navbar-brand" href="/">Previous page</a>
     {{!-- <input type='button' onclick='javascript:history.back();return false;' value='Back'> --}}
 </nav>
-<div class="albumsDiv">
+<div class="container">
+    <div class="row">
+
     {{#each data}}
     {{> albumContainer this}}
     {{/each}}
+    </div>
 </div>
