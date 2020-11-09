@@ -30,18 +30,39 @@ app.get('/', async (req,res)=>{
     res.render("index")
 })
 
+ app.get('/artist-search', (req, res) => {
+   spotifyApi
+     .searchArtists(req.query.artist)
+     .then(data => {
+       console.log('The received data from the API: ', data.body);
+       const dataArtist = [];
+       data.body.artists.items.forEach(ele => dataArtist.push({ ...ele, back: req.query.artist }));
+       res.render('artist-search-results', { data: dataArtist, back: req.query.artist });
+     })
+     .catch(err => console.log('The error while searching artists occurred: ', err));
 
-app.get('/artist-search', (req,res,next)=>{
+ });
+
+ app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi
-    .searchArtists(`${req.query.search}`)
-    .then(data => {
-        const artists=data.body.artists.items
-        res.redirect('artist-search-results', {artists})
-      console.log('The received data from the API: ', artists);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+     .getArtistAlbums(req.params.artistId)
+     .then(data => {
+       console.log('The received data for albums from the API: ', data.body.items);
+       const dataAlbum = [];
+       data.body.items.forEach(ele => dataAlbum.push({ ...ele, artistId: req.params.artistId }));
+       res.render('albums', { data: dataAlbum});
+     })
+     .catch(err => console.log('The error while searching artists occurred: ', err));
+  });
+
+app.get('/albums/:artistId/tracks/:albumId',(req,res,next)=>{
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data=>{
+        console.log('The received data for albums from the API: ', data.body.items)
+        res.render('tracks',{data:data.body.items, artistId:req.params.artistId})
     })
-    .catch(err => console.log('The error while searching artists occurred: ', err));
-  res.render('artist-search-results')
+    .catch(err=>console.log('The error while searching albums occurred:', err))
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

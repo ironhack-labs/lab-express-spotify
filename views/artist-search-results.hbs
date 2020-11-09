@@ -1,2 +1,6 @@
+{{#each data}}
 {{name}}
-<a href="/albums/:id">View Albums</a>
+<img src="{{images.0.url}}" alt="artistImage">
+<button type="submit"> <a href="/albums/{{id}}">
+    View Albums</a></button>
+{{/each}}
