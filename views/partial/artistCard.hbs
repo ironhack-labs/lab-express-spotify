@@ -1,0 +1,14 @@
+<div class="card" style="width: 18rem;">
+  <div class="card-body">
+    <h5 class="card-title">{{back}}</h5>
+    <a href="albums/{{id}}" class="btn my-2 rounded-pill">Artists:</a>
+  </div>
+</div>
+
+<div class="container">
+    <div class="row row-cols-3">
+        {{#each data}}
+        {{> artistCard this}}
+        {{/each}}
+    </div>
+</div>
