@@ -33,8 +33,11 @@ app.get("/", (req, res) => {
 })
 
 app.get("/artistSearch", (req, res, next) => {
-  // const artist = req.query
-  spotifyApi.searchArtists(req.query.artistSearch)
+  const reqQueryArtistSearch = req.query.artistSearch
+  if (reqQueryArtistSearch=="") {
+    res.redirect("/")
+  } else {
+    spotifyApi.searchArtists(reqQueryArtistSearch)
     .then(function(data) {
       // console.log('Search artists by "Love"', data.body);
       let info = data.body.artists.items
@@ -44,6 +47,9 @@ app.get("/artistSearch", (req, res, next) => {
     }, function(err) {
       console.error(err);
     });
+
+  }
+
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
