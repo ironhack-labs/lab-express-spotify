@@ -1,5 +1,14 @@
 <div class="container">
-  <h1 style="color: white">Tracks</h1>
+
+    {{#if tracks}}
+      <h1 style="color: white">Tracks</h1>
+    {{/if}}
+
+
+    {{#unless tracks}}
+      <h2 style="color: white">No tracks available</h2>
+    {{/unless}}
+
     <div class="row">
       {{#each tracks}}
         {{> artistTracksCard this}}
