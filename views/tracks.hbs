@@ -1,17 +1,9 @@
-<div>
-
-    <h1>Tracks for album:</h1>
-
-    {{#each tracks}}
-    <div>
-        {{this.artists.0.name}} - {{this.name}}
-
-        {{#if this.preview_url}}
-        <audio controls src="{{this.preview_url}}"></audio>
-        {{else}}
-        <p>The preview is not available. Sorry!</p>
-        {{/if}}
-    </div>
+<div class="tracks">
+    {{#each data}}
+    <h3>{{this.name}}</h3>
+    <audio controls>
+        <source src="{{this.preview_url}}">
+        <p>Listen to a preview</p>
+    </audio>
     {{/each}}
-
 </div>
