@@ -33,10 +33,10 @@ app.get('/artist-search', (req, res) => {
 
 
   spotifyApi
-    .searchArtists(req.query.artistName)
+    .searchArtists(req.query.artistsName)
     .then(data => {
       const { items } = data.body.artists;
-      res.render('artist-search-results', { artists: items });
+      res.render('artist-search', { artists: items });
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 });
@@ -64,8 +64,9 @@ app.get("/tracks/:albumId", (req, res) => { //const has to match
 
       res.render("tracks", { tracks: items });
     })
-    .catch(err => console.log('The error while searching tracks occurred: ', err));
+    .catch(err => console.log('Oh Hey! An error occurred while searching tracks: ', err));
 
 })
 
-app.listen(3010, () => console.log('My Spotify project running on port 3010 🎧 🥁 🎸 🔊'));
+app.listen(3013, () => console.log('My Spotify project running on port 3013 🎧 🥁 🎸 🔊'));
+
