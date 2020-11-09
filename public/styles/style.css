@@ -1,0 +1,65 @@
+ body, html {
+     height: 100%;
+ }
+.navbar {
+    background-color:#000 !important;
+}
+.navbar a {
+    color: snow !important;
+}
+.navbar img {
+    width: 150px;
+    height: auto;
+}
+.index {
+    background-image: url('../images/spotify-background.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.form-container {
+    padding: 22% 20% 20% 20%;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.form-container .btn {
+    width: 20%;
+    margin: 0 auto;
+}
+
+.form-control {
+    width: 100%;
+}
+.artistDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+.albumsDiv {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    background-color: rgba(0, 0, 0, 0.87);
+}
+.tracksDiv {
+    background-color: rgba(0, 0, 0, 0.87) !important;
+}
+.li-track {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    color: aliceblue !important;
+    background-color: rgba(0, 0, 0, 0.253) !important;
+}
+.card {
+    color: aliceblue !important;
+    margin: 35px auto;  
+     background-color: rgba(0, 0, 0, 0.253) !important;
+}
