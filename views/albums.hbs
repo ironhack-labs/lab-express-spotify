@@ -1,13 +1,38 @@
-<div>
-   {{#if albums}}
-   {{#each albums}}
-   <ul>
-        <li><img src="{{this.images.1.url}}" alt="{{this.name}}"></li>
-        <li>{{this.name}}</li>
-        <li><a href="/tracks/{{this.id}}">View Tracks</a></li>
-   </ul>
+
+    <div class="column">
+        {{#if albums}}
+            {{#each albums}}
+                <ul>
+                    <li><img src="{{this.images.1.url}}" alt="{{this.name}}"></li>
+                    <li><h2>{{this.name}}</h2></li>
+                    <li><a href="/tracks/{{this.id}}">View Tracks</a></li>
+                </ul>
+            {{/each}}
+        {{else}}
+        <p>not found</p>
+        {{/if}}
+    </div>
+
+
+{{!-- <div class="card">
+    {{#if albums}}
+    {{#each albums}}
+  <div class="card-image">
+    <figure class="image is-4by3">
+      <img src="{{this.images.1.url}}" alt="{{this.name}}">
+    </figure>
+  </div>
+  <div class="card-content">
+      <div class="media-content">
+        <p class="title is-4">{{this.name}}</p>
+      </div>
+    </div>
+
+    <div class="content">
+      <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
     {{/each}}
-   {{else}}
-   <p>not found</p>
-   {{/if}}
-</div>
+    {{else}}
+    <p>not found</p>
+    {{/if}}
+</div> --}}

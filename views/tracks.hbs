@@ -3,10 +3,10 @@
    {{#each tracks}}
    <ul>
         
-        <li>{{this.name}}</li>
+        <li><h2>{{this.name}}</h2></li>
         <li><audio controls>
-    <source src="{{preview_url}}">
-</audio></li>
+            <source src="{{preview_url}}">
+        </audio></li>
    </ul>
     {{/each}}
    {{else}}

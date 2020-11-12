@@ -1,0 +1,21 @@
+#layout-body {
+    background: black;
+}
+
+
+#search {
+    width: 50%;
+}
+
+#home {
+    background: url("/images/1200px-Avicii_Tribute_Concert.jpg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+#form-container {
+    padding-top: 5rem;
+    padding-bottom: 5rem;
+    background-color: rgba(0, 0, 0, 0.678);
+}
