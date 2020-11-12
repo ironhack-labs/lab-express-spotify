@@ -1,0 +1,14 @@
+body{
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+h1{
+    color: rgb(41, 176, 41);
+}
+
+form{
+    color: white;
+}
