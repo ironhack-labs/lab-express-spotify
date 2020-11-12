@@ -1,0 +1,9 @@
+<h1>Tracks</h1>
+
+{{#each dataTracks.items}}
+<figure>
+    <figcaption>{{this.name}}</figcaption>
+    <audio controls src="{{this.preview_url}}">
+    </audio>
+</figure>
+{{/each}}
