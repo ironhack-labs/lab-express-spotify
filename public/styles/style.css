@@ -1,0 +1,43 @@
+
+/* HOME */
+
+.container {
+  position: relative;
+  width: 100vw;
+}
+.background {
+  position: absolute;
+  width: 100%;
+  z-index: 0;
+}
+.artist-search-form {
+  position: absolute;
+  background-color: rgba(255, 255, 255, 0.5);
+  z-index: 20;
+  top: 25vw;
+  right: 15vw;
+  width: 50%;
+  height: 50%;
+  padding: 4rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#artistSearch {
+  width: 75%;
+  margin: 0.5rem auto 0 auto;
+  padding: 0.25rem;
+  border: none;
+}
+
+.artist-search-form button {
+  background-color: #f75c65;
+  color: whitesmoke;
+  border: none;
+  margin: 0.5rem auto 0 auto;
+  padding: 0.3rem 0.6rem;
+  font-weight: bold;
+}
