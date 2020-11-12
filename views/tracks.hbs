@@ -1,0 +1,15 @@
+<div>
+   {{#if tracks}}
+   {{#each tracks}}
+   <ul>
+        
+        <li>{{this.name}}</li>
+        <li><audio controls>
+    <source src="{{preview_url}}">
+</audio></li>
+   </ul>
+    {{/each}}
+   {{else}}
+   <p>not found</p>
+   {{/if}}
+</div>
