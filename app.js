@@ -27,8 +27,6 @@ spotifyApi
 
 // Our routes go here:
 
-
-
 app.get('/', (req, res, next) => {
     res.render('home')
 })
@@ -44,8 +42,6 @@ app.get('/artist-search', (req, res, next) => {
             console.error('The error while searching artists occurred: ', err)
         })
 })
-
-
 app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi
         .getArtistAlbums(req.params.artistId)
@@ -62,8 +58,5 @@ app.get('/albums/tracks/:albumId', (req, res, next) => {
         })
         .catch(err => console.error('The error while getting tracks ocurred: ', err))
 })
-
-
-
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
