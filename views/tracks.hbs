@@ -1,0 +1,13 @@
+<h1>Tracks:</h1>
+
+<div>
+    <article>
+        {{#each tracks.items}}
+       
+        <h3>{{this.name}}</h3> 
+        <audio controls src="{{this.preview_url}}" type = "audio"></audio>
+
+
+        {{/each}}
+    </article>
+</div>

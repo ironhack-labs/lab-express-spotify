@@ -1,0 +1,10 @@
+form{
+    margin: 20% 0;
+}
+ .bg{
+    background-image: url('/images/spotify-background.jpeg');
+    background-size:cover;
+}
+input{
+    margin: 10px 0;
+}

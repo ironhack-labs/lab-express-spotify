@@ -1,0 +1,16 @@
+<h1>Results:</h1>
+{{search}}
+<div class="container">
+    <div class="row justify-content-center space-between">
+    <article>
+        {{#each artist.items}}
+        <div class="col-md-3">
+        <img src="{{this.images.[0].url}}" />
+        <h3>{{this.name}}</h3> 
+        <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+
+        {{/each}}
+        </article>
+    </div>
+</div>
