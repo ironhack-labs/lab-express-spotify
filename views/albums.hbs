@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="row">
+
+        {{#each albums}}
+
+        <div class="col-4">
+
+            {{#if images}}
+            <img src="{{images.1.url}}" alt="">
+            {{else}}
+            <p>Image not found</p>
+            {{/if}}
+            <p>{{name}}</p>
+            <a href="/tracks/{{id}}" class="btn btn-light btn-md">Let me see those trackity tracks</a>
+        </div>
+        {{/each}}
+    </div>
+</div> 

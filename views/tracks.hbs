@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="row">
+
+        {{#each tracks}}
+        <div class="col-10">
+            {{name}}
+	{{!-- A track object comes with a preview_url, which is the source for a 30-second preview of a particular song.
+	 You can plug this into an HTML audio tag, and it will play the preview. --}}
+            <audio controls src="{{preview_url}}">Preview</audio>
+			
+        </div>
+        {{/each}}
+    </div>
+</div> 
