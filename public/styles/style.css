@@ -1,0 +1,98 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    padding: auto;
+    margin: auto
+}
+button{
+    display: block;
+    border: none;
+    margin: .6rem 0;
+    padding: .5rem 1rem;
+    color: white;
+    background-color: tomato;
+    border-radius: .2rem;
+    font-weight: bold;
+}
+input{
+    width: 150%;
+    height: 1.5rem;
+    text-align: center;
+}
+#home{
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: top;
+    padding: 16% 0;
+}
+#search{
+    background-color: rgba(250, 250, 250, .5);
+    height: 200px;
+    width: 50%;
+}
+#tracks{
+    background-color: rgba(0, 0, 0, .6);
+    color: rgb(200, 200, 200);
+    padding: 0 10rem 0 1.5rem;
+}
+.container{
+    display: flex
+}
+.row{
+    flex-direction: row;
+}
+.column{
+    flex-direction: column;
+}
+.content-center{
+    justify-content: center;
+}
+.content-between{
+    justify-content: space-between;
+}
+.align-center{
+    align-items: center;
+}
+.wrap{
+    flex-wrap: wrap;
+}
+.card{
+    margin: 1rem 2rem .2rem 2rem;
+    background-color: dimgray;
+    color: white;
+    text-align: center;
+
+}
+.card-small{
+    width: 160px;
+}
+.card-big{
+    width: 300px;
+}
+.card img{
+    object-fit:cover;
+    object-position: top;
+}
+.card-big img{
+    height: 300px;
+    width: 300px;
+}
+.card-small img{
+    height: 160px;
+    width: 160px;
+}
+.card a{
+    text-decoration: none;
+    display:inline;
+    width: 70%;
+    color: white;
+    background-color: tomato;
+    border-radius: .2rem;
+    padding: .5rem;
+    margin: 0 0 1rem 0;
+}
+.listen{
+    background-color: rgba(0, 0, 0, .03);
+    padding: .5rem 0 .5rem 1rem;
+    margin: .2rem 0;
+}

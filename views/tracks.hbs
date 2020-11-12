@@ -1,0 +1,21 @@
+<div id="tracks" class="container row content-between">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</div>
+
+        {{#each items}}
+        <div class="container row content-between listen">
+            <div>
+                <h4>{{name}}</h4>
+            </div>
+            <div>
+                <audio controls>
+                    <source src="{{preview_url}}">
+                </audio>
+            </div>
+        </div>
+
+
+
+    {{/each}}
+

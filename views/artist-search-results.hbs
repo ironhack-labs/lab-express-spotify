@@ -1,0 +1,15 @@
+
+<div class="container row wrap">
+
+    {{#each items}}
+
+    <div class="card card-small container column align-center">
+        <img src="{{this.images.[2].url}}" alt="">
+        <h4>{{this.name}}</h4>
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+
+
+    {{/each}}
+
+</div>
