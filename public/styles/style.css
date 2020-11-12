@@ -1,0 +1,24 @@
+.background-home {
+    background: black;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    width: auto;
+    height: 800px;
+    background-position: center;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 350px;
+}
+
+.sinborde {
+    border: 0;
+  }
