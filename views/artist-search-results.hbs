@@ -1,1 +1,15 @@
-<button><a href="/albums/someArtistIdGoesHere">View Albums</a></button>
+<div class="container">
+    <div class="row">
+        {{#each artists}}
+        <div class="col-4">
+            {{#if images}}
+            <img src="{{images.1.url}}" alt="">
+            {{else}}
+            <p>No hay imagen</p>
+            {{/if}}
+            <p>{{this.name}}</p>
+            <a href="/albums/{{id}}" class="btn btn-dark btn-sm">View albums</a>
+        </div>
+        {{/each}}
+    </div>
+</div>
