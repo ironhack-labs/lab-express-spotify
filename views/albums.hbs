@@ -1,0 +1,11 @@
+<ul>
+    {{#if albums}}
+   {{#each albums}}
+    <li>{{{this.name}}}</li>      
+    <li><img src="{{this.images.1.url}}" alt="{{this.name}}"></li>
+    <button type="submit"><a href='/tracks/{{this.id}}'>VIEW TRACKS</a></button>     
+    {{/each}}
+   {{else}}
+   <p>not found</p>
+   {{/if}}
+</ul>
