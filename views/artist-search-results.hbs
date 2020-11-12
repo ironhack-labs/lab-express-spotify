@@ -1,0 +1,22 @@
+<H1>ARTISTAS</H1>
+
+{{!-- {{#each items}}
+
+<article>
+  <img src={{images.0.url}} alt="Artist image">
+  <h3>{{name}}</h3>
+  <a href="/albums/{{id}}">Views Albums</a>
+</article>
+
+{{/each}} --}}
+
+
+{{#each items}}
+<div class="card" style="width: 18rem;">
+  <img src={{images.0.url}} class="card-img-top" alt="Artist image">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5> 
+    <a href="/albums/{{id}}" class="btn btn-primary">Views Albums</a>
+  </div>
+</div>
+{{/each}}

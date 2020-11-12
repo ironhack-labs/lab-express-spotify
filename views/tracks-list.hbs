@@ -1,0 +1,23 @@
+<h1>SOMOS LAS CANCIONES</h1>
+
+{{!-- <div class="container">
+  <head>
+    <h4>Title</h4>
+    <h4>Listen</h4>
+  </head>
+{{#each items}}
+    <audio src="{{preview_url}}" ></audio>
+{{/each}}
+</div> --}}
+
+{{#each items}}
+  <figure>
+      <figcaption>{{name}}</figcaption>
+      <audio
+          controls
+          src="{{href}}">
+              Your browser does not support the
+              <code>audio</code> element.
+      </audio>
+  </figure>
+{{/each}}
