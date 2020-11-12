@@ -1,0 +1,13 @@
+<h1>Soy el resultado de la búsqueda</h1>
+
+{{#each items}}
+
+<p>Mostrando resultados de artistas {{name}} </p>
+
+{{#each images}}
+
+<img src="{{url}}" alt="imagen">
+
+{{/each}}
+<a href="/albums/{{id}}">View Albums</a>
+{{/each}}
