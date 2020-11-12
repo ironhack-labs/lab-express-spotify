@@ -1,0 +1,22 @@
+<h2>Albums</h2>
+<div class="container">
+
+
+    <div class="row">
+        <div class="col-md-4">
+{{#each albums}}
+
+<img src="{{images.0.url}}">
+<p>{{this.name}}</p>
+<a href="/albums/{{id}}" class="btn btn-dark btn-sm">Albums</a>
+
+{{/each}}
+
+
+
+        </div>
+
+        
+    </div>
+
+</div>
