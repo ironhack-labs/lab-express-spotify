@@ -1,0 +1,63 @@
+results!
+{{#each artist}}
+
+    <p>
+        name: {{ name }}
+    </p>
+
+    <p>
+        <img src="{{images.[0].url}}" alt="{{name}}">
+    </p>
+
+    <p>
+        <button><a href="/albums/{{id}}">View Album</a></button>
+    </p>
+
+{{/each}}
+
+
+{{!-- artists: {
+    href: 'https://api.spotify.com/v1/search?query=ted+leo&type=artist&offset=0&limit=20',
+    items: [ [Object], [Object], [Object], [Object], [Object], [Object] ],
+    limit: 20,
+    next: null,
+    offset: 0,
+    previous: null,
+    total: 6
+  }
+} --}}
+
+{{!-- Retrieving a track's metadata in spotify-web-api-node version 1.4.0 and later:
+
+{
+  "body": {
+    "name": "Golpe Maestro",
+    "popularity": 42,
+    "preview_url":
+      "https://p.scdn.co/mp3-preview/4ac44a56e3a4b7b354c1273d7550bbad38c51f5d",
+    "track_number": 1,
+    "type": "track",
+    "uri": "spotify:track:3Qm86XLflmIXVm1wcwkgDK"
+  },
+  "headers": {
+    "date": "Fri, 27 Feb 2015 09:25:48 GMT",
+    "content-type": "application/json; charset=utf-8",
+    "cache-control": "public, max-age=7200"
+  },
+  "statusCode": 200
+} --}}
+
+{{!-- {
+    external_urls: {
+      spotify: 'https://open.spotify.com/artist/5hbH3dvtk49g07qpc1QwPe'
+    },
+    followers: { href: null, total: 26070 },
+    genres: [ 'alternative rock', 'indie rock' ],
+    href: 'https://api.spotify.com/v1/artists/5hbH3dvtk49g07qpc1QwPe',
+    id: '5hbH3dvtk49g07qpc1QwPe',
+    images: [ [Object], [Object], [Object] ],
+    name: 'Ted Leo and the Pharmacists',
+    popularity: 37,
+    type: 'artist',
+    uri: 'spotify:artist:5hbH3dvtk49g07qpc1QwPe'
+  } --}}

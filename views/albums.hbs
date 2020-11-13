@@ -1,0 +1,33 @@
+{{!-- Iteration 4 --}}
+albums!
+{{#each artistID }}
+    <p>
+        {{name}}
+    </p>
+
+    <p>
+        <img src="{{images.[0].url}}" alt="{{name}}">
+    </p>
+
+    <p>
+        <button><a href="/track/{{id}}">View Tracks</a></button>
+    </p>
+
+{{/each}}
+
+{{!-- {
+      album_group: 'album',
+      album_type: 'album',
+      artists: [Array],
+      available_markets: [Array],
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/albums/07ZJma4DINFMI3a8XhsJIA',
+      id: '07ZJma4DINFMI3a8XhsJIA',
+      images: [Array],
+      name: 'Shake the Sheets',
+      release_date: '2004',
+      release_date_precision: 'year',
+      total_tracks: 11,
+      type: 'album',
+      uri: 'spotify:album:07ZJma4DINFMI3a8XhsJIA'
+    }, --}}
