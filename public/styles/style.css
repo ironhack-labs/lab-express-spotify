@@ -1,0 +1,44 @@
+.tracks-table {
+  margin: 20px;
+}
+
+.tracks-header {
+  display: flex;
+  justify-content: space-between;
+  background-color: black;
+  color: white;
+  padding: 0px 20px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: cornsilk;
+  margin: 2px;
+}
+
+audio {
+  width: 200px;
+}
+
+h4 {
+  margin: 10px;
+  width: 400px;
+}
+
+.albums {
+  width: 100vw;
+  display: flex;
+}
+.album-card {
+  width: 300px;
+  padding: 20px;
+}
+
+.artists {
+  display: flex;
+}
+.artist-card {
+  padding: 20px;
+}
