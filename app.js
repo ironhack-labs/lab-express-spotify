@@ -30,12 +30,8 @@ app.get("/", (req, res) => {
 //step 2 display results for artist
 app.get("/artist-search", (req, res) => {
   spotifyApi
-    .searchArtists(req.query.artist)
+    .searchArtists(req.query.artist) // .value from search input by user
     .then((data) => {
-      console.log(
-        "The received data from the API: ",
-        data.body.artists.items[0].images[0]
-      );
       res.render("artist-search-results.hbs", {
         artistsData: data.body.artists.items,
       });
@@ -44,11 +40,11 @@ app.get("/artist-search", (req, res) => {
       console.log("The error while searching artists occurred: ", err)
     );
 });
+//get albums
 app.get("/albums/:id", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.id, { limit: 5 })
     .then((data) => {
-      console.log(data.body.items);
       res.render("albums", { albums: data.body.items });
     })
     .catch((error) => {
@@ -60,7 +56,6 @@ app.get("/tracks/:id", (req, res) => {
   spotifyApi
     .getAlbumTracks(req.params.id, { limit: 5 })
     .then((data) => {
-      console.log(data.body.items);
       res.render("tracks", { tracks: data.body.items });
     })
     .catch((error) => {
