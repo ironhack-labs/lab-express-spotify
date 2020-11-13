@@ -1,4 +1,19 @@
-{{#each view-tracks}}
-<h3>{{name}}</h3>
-<audio src="{{preview_url}}" controls></audio>
-{{/each}}
+<div class="container">
+    <div class="row">
+        <div class="col-9 mt-1 bg-dark text-white p-2">
+            <h4>Title</h4>
+        </div>
+        <div class="col-3 mt-1 bg-dark text-white p-2">
+            <h4>Listen</h4>
+        </div>
+        {{#each view-tracks}}
+        <div class="col-9 p-2">
+            <h6>{{name}}</h6>
+        </div>
+        <div class="col-3 p-2">
+            <audio src="{{preview_url}}" controls></audio>
+
+        </div>
+        {{/each}}
+    </div>
+</div>

@@ -1,7 +1,14 @@
-{{#each albums}}
+<div class="container">
+    <div class="row row-cols-3">
+        {{#each albums}}
+        <div class="col">
+            <img src="{{images.0.url}}" class="card-img-top" alt="...">
+            <div class="card-body text-center">
+                <h6 class="card-title">{{name}}</h6>
+                <a href="/view-tracks/{{id}}" class="btn btn-primary">View Tracks</a>
 
-<h1>{{name}}</h1>
-<img src="{{images.0.url}}" alt="">
-<a href="/view-tracks/{{id}}">View Tracks</a>
-
-{{/each}}
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
