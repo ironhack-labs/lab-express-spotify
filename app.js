@@ -33,6 +33,28 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/artist-search", (req, res) => {
+  //"/artist-search" comes from the form <form action="/artist-search">, from index.hbs
+
+  // return (
+  spotifyApi
+    .searchArtists(req.query.artist)
+    //"query" is property of req
+    //"artist" in req.query.artist comes from index.hbs, from name prop in name="artist"
+    .then((data) => {
+      // console.log("req.query.artist", req.query.artist);
+      // res.json(data.body.artists);
+      // console.log("data from the api", data);
+      // console.log(data.body.artists.items[0]);
+      res.render("artist-search-results", {
+        dataFromApi: data.body.artists.items,
+      });
+    })
+    .catch((err) => console.log("Error in searchArtists: ", err));
+
+  // );
+});
+
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
