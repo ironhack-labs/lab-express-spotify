@@ -1,0 +1,21 @@
+<div class="tracksList">
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Preview</th>
+        </tr>
+        {{#each track}}
+        <tr>
+            
+            <td>{{track_number}}. {{name}}</td>
+            <td>
+            <audio controls>
+
+                <source src='{{preview_url}}'>
+                I don't want to play that!
+            </audio>
+            </td>
+        </tr>
+        {{/each}}
+    </table>
+</div>
