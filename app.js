@@ -51,8 +51,17 @@ app.get("/artist-search", (req, res) => {
       });
     })
     .catch((err) => console.log("Error in searchArtists: ", err));
-
   // );
+});
+
+//req.params.<the name of the route parameter from the "app.get("/albums:artistId"...>
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId).then((data) => {
+    console.log(data.body.items[0]);
+    res.render("albums", {
+      albumsData: data.body.items,
+    });
+  });
 });
 
 app.listen(3000, () =>
