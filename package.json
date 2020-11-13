@@ -1,7 +1,7 @@
 {
   "name": "starter-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
   "main": "app.js",
   "scripts": {
     "dev": "nodemon app.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC",
+  "license": "BSD",
   "devDependencies": {
     "nodemon": "^2.0.2"
   },
@@ -20,5 +20,14 @@
     "hbs": "^4.1.1",
     "mongoose": "^5.10.13",
     "spotify-web-api-node": "^5.0.0"
+  },
+  "readmeFilename": "readme.md",
+  "gitHead": "a8031379abbf5fede0f1eda391a969850754917f",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/VictorIzquier2/lab-express-spotify.git"
+  },
+  "bugs": {
+    "url": "https://github.com/VictorIzquier2/lab-express-spotify/issues"
   }
 }

@@ -1,6 +1,15 @@
 
-/* HOME */
+/* General */
+:root{
+  --spotify-white: whitesmoke;
+  --spotify-first: black;
+  --Spotify-second: #2fba5e;
+  --Spotify-third: #febf6c;
+  --Spotify-fourth: #f75c65;
 
+}
+
+/* HOME */
 .container {
   position: relative;
   width: 100vw;
@@ -9,6 +18,13 @@
   position: absolute;
   width: 100%;
   z-index: 0;
+}
+
+#artistSearch {
+  width: 75%;
+  margin: 0.5rem auto 0 auto;
+  padding: 0.25rem;
+  border: none;
 }
 .artist-search-form {
   position: absolute;
@@ -25,19 +41,98 @@
   align-items: center;
   text-align: center;
 }
-
-#artistSearch {
-  width: 75%;
-  margin: 0.5rem auto 0 auto;
-  padding: 0.25rem;
-  border: none;
-}
-
 .artist-search-form button {
-  background-color: #f75c65;
-  color: whitesmoke;
+  background-color: var(--Spotify-fourth);
+  color: var(--spotify-white);
   border: none;
+  border-radius: 1rem;
   margin: 0.5rem auto 0 auto;
   padding: 0.3rem 0.6rem;
   font-weight: bold;
 }
+
+/* ARTIST SEARCH RESULTS */
+.searchResults-h1{
+  font-family: 'Heebo', sans-serif;
+  background-color: var(--spotify-first);
+  color: var(--spotify-white);
+  text-align: center;
+  font-weight: 900;
+  padding: 1rem 0;
+  margin: 0;
+}
+.albums-container{
+  background-color: var(--spotify-white);
+  display: flex;
+  justify-content: center;
+  align-items: baseline;
+  flex-wrap: wrap;
+}
+.album {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  margin: 0.5rem;
+  width: 19rem;
+  height: auto;
+}
+.album img {
+ max-height: 18rem;
+ max-width: 18rem;
+ margin: 0.5rem;
+}
+.album h2 {
+  font-family: 'Heebo', sans-serif;
+}
+.album button {
+  background-color: var(--Spotify-second);
+  color: var(--spotify-white);
+  border: none;
+  border-radius: 3rem;
+  margin: 0 0 1rem 0;
+  padding: 0.3rem 1rem;
+  font-weight: bold;
+}
+.album button a {
+  text-decoration: none;
+  color: var(--spotify-white);
+  font-weight: bold;
+}
+
+/* Tracks */
+
+.tracks-h1 {
+  display: flex;
+  justify-content: space-between;
+  font-family: 'Heebo', sans-serif;
+  background-color: var(--spotify-first);
+  color: gainsboro;
+  padding: 0.5rem;
+}
+.tracks-h1 span {
+  margin: 0 1rem;
+}
+.tracks-h1 span:last-child {
+  margin-right: 5rem;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  background-color: whitesmoke;
+  margin: 0.25rem 0;
+}
+@media(max-width: 640px){
+  .track {
+    flex-direction: column;
+    align-items: baseline;
+  }
+}
+.track h3 {
+  font-family: 'Heebo', sans-serif;
+  max-width: 55vw;
+  margin-left: 1rem;
+}
+

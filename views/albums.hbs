@@ -1,0 +1,12 @@
+<h1 class="searchResults-h1">Album Results</h1>
+<div class="albums-container">
+  {{#if albums}}
+    {{#each albums}}
+      <div class="album">
+        <img src="{{this.images.1.url}}" alt="{{this.name}}">
+        <h2>{{{this.name}}}</h2>
+        <button type="submit"><a href="/tracks/{{this.id}}">View Tracks</a></button>
+      </div>
+    {{/each}}
+  {{/if}}
+</div>
