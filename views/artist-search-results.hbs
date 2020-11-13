@@ -3,8 +3,8 @@
    {{#each artists}}
    <ul>
         <li><img src="{{this.images.1.url}}" alt="{{this.name}}"></li>
-        <li>{{this.name}}</li>
-        <li><a href="/albums/{{this.id}}">View Albums</a></li>
+        <li class="title is-2">{{this.name}}</li>
+        <li><a class="button is-danger is-rounded" href="/albums/{{this.id}}">View Albums</a></li>
    </ul>
     {{/each}}
    {{else}}

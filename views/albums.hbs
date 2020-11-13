@@ -4,8 +4,8 @@
             {{#each albums}}
                 <ul>
                     <li><img src="{{this.images.1.url}}" alt="{{this.name}}"></li>
-                    <li><h2>{{this.name}}</h2></li>
-                    <li><a href="/tracks/{{this.id}}">View Tracks</a></li>
+                    <li class="title is-3">{{this.name}}</li>
+                    <li><a class="button is-danger is-rounded" href="/tracks/{{this.id}}">View Tracks</a></li>
                 </ul>
             {{/each}}
         {{else}}
