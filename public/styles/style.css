@@ -1,0 +1,20 @@
+* {
+  color: black;
+  margin: 0;
+  box-sizing: border-box;
+  font-size: 16px;
+}
+h2 {
+  font-size: 2rem;
+}
+
+.album-button {
+  border: solid 1px red;
+  padding: 5px;
+  text-decoration: none;
+  background-color: red;
+  margin: 5px;
+}
+
+.album-cover {
+}
