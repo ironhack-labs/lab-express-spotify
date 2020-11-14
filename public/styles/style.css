@@ -1,0 +1,27 @@
+.landingPage {
+  background: url(/images/spotify-background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 700px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.formBackground {
+  background-color: white;
+  opacity: 0.3;
+  width: 400px;
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#artistSearch {
+  background-color: tomato;
+  color: white;
+  border-radius: 10%;
+  flex-direction: column;
+}
