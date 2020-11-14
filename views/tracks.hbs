@@ -1,0 +1,33 @@
+{{#each track}}
+<h3>{{name}}</h3>
+<figure>
+    <audio controls src={{preview_url}}>
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+</figure>
+
+
+
+
+{{!-- <div class="trackList">
+    {{#each albumList}}
+    <table>
+            <tr>
+                <th>Title</th>
+                <th>Listen</th>
+            </tr>
+            <tr>
+                <th>{{name}}</th>
+                <th>
+                    <figure>
+                        <audio
+                        controls
+                        src={{preview_url}}>
+                            Your browser does not support the
+                            <code>audio</code> element.
+                        </audio>
+                    </figure>
+                </th>
+            </tr>
+        </table> --}}

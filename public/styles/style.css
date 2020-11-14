@@ -1,0 +1,110 @@
+body {
+color: black;
+font-family: roboto, Arial, Helvetica, sans-serif;
+}
+
+.index-form-container {
+    background-image: url('/images/spotify-background.jpeg');
+    /* background-color:#762d2d; */
+    background-position: 0 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin: auto;
+    color:white;
+    align-content: center;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+    
+}
+.block {
+    padding: 70px 100px;
+    background-color: white;
+    opacity: 40%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: space-around;
+	align-items: center;
+	align-content: center;
+}
+.index-form input {
+    padding: 2.5px 60px;
+    font-size: 1.5rem;
+    margin-bottom: auto;
+}
+.button {
+    margin: 3ex 5ex;
+    padding: 5px 12px;
+    color:white;
+    background-color:orangered;
+    font-size: 1.5rem;
+    align-content: center;
+
+}
+
+.aSearch {
+    width: 10vw;
+    padding:5px;
+    border-radius: 10px;
+    text-decoration: none;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: flex-start;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 0 5px;
+    color: white;
+    background-color: #EF6867;
+    /* margin: 0 0 5px 0;
+    padding: 0 0 ;
+    border: none;
+    color:black;
+    font-size: 1em;
+    align-content: center; */
+
+}
+.card {
+    width: 30vw;
+    padding:5px 0 5px 0;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+	align-content: flex-start;
+    font-size: 1em;
+    text-align: center;
+    margin: 0 0 0 5px;
+    color: white;
+    
+}
+.name {
+    width: 30vw;
+    padding:5px 0 5px 0;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: flex-start;
+    text-align: center;
+    background-color: #4D4D4D;
+    
+    
+}
+
+.imgCard {
+    width: 30vw;
+    padding: 0 5px;
+}
+h3 {
+    margin: 0;
+    font-size: 1.5em;
+}
