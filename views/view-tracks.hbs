@@ -1,0 +1,42 @@
+
+
+
+<div class="d-flex">
+<table class="table table-dark"  >
+  <thead>
+    <tr>
+     
+       <th scope="col">Last</th>
+      
+         <th scope="col" style="text-align:center; width:160px">Handle</th>
+       
+      
+
+    </tr>
+  </thead>
+  
+  <tbody>
+    
+    {{#each track}}
+  
+    <tr >
+      
+      <td class="display-5">{{this.name}}</td>
+      <td class="d-flex justify-content-end">
+        <audio controls>
+      <source src="{{this.preview_url}}" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+      </td>
+     
+    </tr>
+    
+    {{/each}}
+  </tbody>
+ 
+</table>
+</div>
+
+
+
+

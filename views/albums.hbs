@@ -1,0 +1,14 @@
+
+
+
+<div class="d-flex flex-wrap justify-content-around">
+{{#each album}}
+<div class="card" style="width: 18rem;">
+  <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
+  <div class="card-body bg-dark">
+    <h5 class="card-title text-light">{{this.name}}</h5>
+    <a href="/view-track/{{this.id}}" class="btn btn-primary">View track</a>
+  </div>
+</div>
+{{/each}}
+</div>
