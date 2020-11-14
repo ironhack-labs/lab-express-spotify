@@ -56,12 +56,30 @@ app.get("/artist-search", (req, res) => {
 
 //req.params.<the name of the route parameter from the "app.get("/albums:artistId"...>
 app.get("/albums/:artistId", (req, res, next) => {
-  spotifyApi.getArtistAlbums(req.params.artistId).then((data) => {
-    console.log(data.body.items[0]);
-    res.render("albums", {
-      albumsData: data.body.items,
-    });
-  });
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then((data) => {
+      // res.json(data.body.items[0]);
+
+      // console.log("-----albums", data.body.items[0]);
+      res.render("albums", {
+        albumsData: data.body.items,
+      });
+    })
+    .catch((err) => console.log("Error in get albums: ", err));
+});
+
+app.get("/tracks/:tracksId", (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.tracksId)
+    .then((data) => {
+      // console.log(data.body);
+      // res.json(data.body.items[0]);
+      res.render("tracks", {
+        tracksData: data.body.items,
+      });
+    })
+    .catch((err) => console.log("Error in get tracks: ", err));
 });
 
 app.listen(3000, () =>
