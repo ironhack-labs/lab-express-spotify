@@ -1,10 +1,27 @@
-<div class="albums">
+{{!-- without style --}}
+
+{{!-- <div class="albums">
     {{#each albums}}
-        
         <h3>{{name}}</h3>
         <img src="{{images.[0].url}}" alt="{{name}}">
         <button> 
             <a href="/tracks/{{id}}"> View Tracks </a>
         </button>
+    {{/each}}
+</div> --}}
+
+{{!-- bootstrap card --}}
+
+<div class="row row-cols-1 row-cols-md-4" style="padding-left: 50px; padding-right: 30px">
+    {{#each albums}}
+    <div class="col mb-4">
+        <div class="card p-5 border-0">
+          <img src="{{images.[0].url}}" class="card-img-top rounded" alt="{{name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/tracks/{{id}}" class="btn btn-primary btn-lg border-0 active" style="background-color:rgb(188, 147, 212); color:darkcyan" role="button" aria-pressed="true"> View Tracks </a>
+          </div>
+        </div>
+    </div>
     {{/each}}
 </div>

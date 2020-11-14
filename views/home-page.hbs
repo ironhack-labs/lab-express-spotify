@@ -1,7 +1,11 @@
-<div class="search-bar">
-    <form action="/artist-search", method="GET">
-        <label for="artist"></label>
-        <input type="text" name="q" id="artist">
-        <button type="submit">Search by an Artist</button>
-    </form>
+<div class="container-fluid bg-image">
+    
+    <nav class="navbar navbar-light bg-light">
+      <form class="form-inline" style="width: 550px; height: 100px; display:flex; flex-direction:column; justify-content: space-around" action="/artist-search", method="GET">
+        <input class="form-control mr-sm-2" type="text" name="q" id="artist" placeholder="The Beatles" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> Search by an Artist </button>
+      </form>
+    </nav>
+
 </div>
+

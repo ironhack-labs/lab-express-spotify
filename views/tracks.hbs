@@ -1,9 +1,24 @@
-<div class="view-tracks">
+{{!-- <div class="view-tracks">
     {{#each tracks}}
         <div class="track-container">
-            <h3>{{name}}</h3>
+            <h6>{{name}}</h6>
             <audio src="{{preview_url}}" alt="{{name}}" controls></audio>
         </div>
+    {{/each}}
+</div> --}}
+
+{{!-- bootstrap card --}}
+
+<div class="row row-cols-1 row-cols-md-3">
+    {{#each tracks}}
+    <div class="col mb-4">
+        <div class="card p-5 border-0">
+          <audio src="{{preview_url}}" alt="{{name}}" controls></audio>
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+          </div>
+        </div>
+    </div>
     {{/each}}
 </div>
 

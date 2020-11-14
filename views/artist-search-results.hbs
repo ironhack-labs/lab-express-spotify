@@ -1,4 +1,6 @@
-<div class="artist-search-result">
+{{!-- without style --}}
+
+{{!-- <div class="artist-search-result">
     {{#each artist}}
         <img src="{{images.[0].url}}" alt="{{name}}">
         <h3>{{name}}</h3>
@@ -6,8 +8,22 @@
             <a href="/albums/{{id}}"> View Albums </a>
         </button>
     {{/each}}
+</div> --}}
 
+{{!-- style with bootstrap card --}}
+
+<div class="row row-cols-1 row-cols-md-3" style="padding-left: 50px; padding-right: 30px">
+    {{#each artist}}
+    <div class="col mb-4">
+        <div class="card p-5 border-0">
+          <img src="{{images.[0].url}}" class="card-img-top rounded" alt="{{name}}">
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/albums/{{id}}" class="btn btn-primary btn-lg border-0 active" style="background-color: rgba(94, 255, 0, 0.342); color:darkorchid" role="button" aria-pressed="true"> View Albums </a>
+          </div>
+        </div>
+    </div>
+    {{/each}}
 </div>
-
 
 

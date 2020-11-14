@@ -1,0 +1,14 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+}
+
+.bg-image {
+    background-image: url("/images/spotify-background.jpeg");
+    background-position: center;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
