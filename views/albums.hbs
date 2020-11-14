@@ -1,11 +1,13 @@
-Albums for {{artist.name}}
+<div class="all">
+  {{#each albums}}
 
-{{#each albums}}
+  <div class="card">
+    <img src="{{images.0.url}}" alt="Image of the album">
+    <div class="description">
+      <h1>{{name}}</h1>
+      <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
+  </div>
 
-<div class="album-card">
-  <img src="{{images.0.url}}" alt="Image of the album">
-  <h1>{{name}}</h1>
-  <a href="/tracks/{{id}}">View Tracks</a>
+  {{/each}}
 </div>
-
-{{/each}}

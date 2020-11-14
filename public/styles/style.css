@@ -1,7 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  font-family: 'Open Sans'; 
 }
 
 .main {
@@ -16,10 +19,149 @@
 
 .form {
   background: rgba(255,255,255,0.4);
-  padding: 80px 100px;
+  padding: 50px 100px;
 }
 
 form {
   display: flex;
   flex-direction: column;
+}
+
+form input {
+  width: 350px;
+  padding: 5px;
+}
+
+form button {
+  background: #ff6666;
+  border: none;
+  outline: none;
+  color: #fff;
+  padding: 5px 10px;
+  width: 200px;
+  margin-top: 15px;
+  cursor: pointer;
+  align-self: center;
+  font-size: 18px;
+}
+
+.all {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: 20px 0 40px -20px; 
+}
+
+.card {
+  width: 300px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 20px;
+  margin-top: 20px;
+}
+
+.card img {
+  height: 300px;
+}
+
+.description {
+  background: #4d4d4d;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10px 10px 15px;
+}
+
+.description h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.description a {
+  text-decoration: none;
+  color: #fff;
+  background: #ff6666;
+  font-size: 14px;
+  padding: 2px 8px;
+  margin-top: 5px;
+  border-radius: 5px;
+}
+
+.tracks {
+  margin: 40px 0; 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.table-head {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+  background: #4d4d4d;
+  color: #fff;
+  padding: 10px 20px;
+}
+
+.title-small {
+  display: none;
+}
+
+.table-body {
+  width: 700px;
+  margin-top: -5px;
+}
+
+.table-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f6f6f6;
+  margin-top: 5px;
+  padding: 5px 0 5px 20px;
+}
+
+@media only screen and (max-width: 760px) {
+  .table-head {
+    width: 100%;
+  }
+  .table-body {
+    width: 100%; 
+  }
+}
+
+@media only screen and (max-width: 650px) {
+  .form {
+    padding: 0;
+    width: 100vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  form input {
+    width: 80vw;
+  }
+  form button {
+    width: 60vw;
+  }
+}
+
+@media only screen and (max-width: 590px) {
+  .table-line {
+    flex-direction: column;
+  }
+  .table-head {
+    justify-content: center;
+  }
+  .title {
+    display: none;
+  }
+  .listen {
+    display: none;
+  }
+  .title-small {
+    display: flex;
+  }
 }

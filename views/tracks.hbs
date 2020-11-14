@@ -1,7 +1,21 @@
-{{#each tracks}}
-<h3>{{name}}</h3>
-<audio controls src="{{preview_url}}">
-  Your browser does not support the
-  <code>audio</code> element.
-</audio>
-{{/each}}
+<div class="tracks">
+
+  <div class="table-head">
+    <div class="title">Title</div>
+    <div class="listen">Listen</div>
+    <div class="title-small">Tracks</div>
+  </div>
+
+  <div class="table-body">
+    {{#each tracks}}
+    <div class="table-line">
+      <h3>{{name}}</h3>
+      <audio controls src="{{preview_url}}">
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </div>
+    {{/each}}
+  </div>
+
+</div>
