@@ -1,0 +1,11 @@
+<div>
+    {{#each tracks}}
+    <div>
+        <h3>{{name}}</h3>
+        <audio controls src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+        </audio>
+    </div>
+    {{/each}}
+</div>
