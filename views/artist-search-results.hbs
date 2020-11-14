@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="row mt-5">
+        {{#each artistInfo}}
+            <div class="col-4">
+                <div class="card text-center text-white bg-dark mb-3" style="width: 18rem;">
+                    {{#if this.images.[0].url}}
+                        <img class="card-img-top" src="{{{this.images.[0].url}}}" alt="Img cap">
+                    {{else}}
+                        <img class="card-img-top" src="images/imgReplacement.svg" alt="Img cap">
+                    {{/if}}
+                    <div class="card-body">
+                        <p class="card-text">{{this.name}}</p>
+                        <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>

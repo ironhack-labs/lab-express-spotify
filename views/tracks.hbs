@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="table-responsive mt-5">
+            <table class="table table-lg">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col"><span class="display-4">Title</span></th>
+                        <th scope="col" class="text-center"><span class="display-4">Listen</span></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each trackInfo}}
+                        <tr>
+                            <td>{{this.name}}</td>
+                            <td class="text-center"><img class='listenImg' src="/images/playTrack.png"></td>
+                        </tr>
+                   {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>

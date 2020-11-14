@@ -1,0 +1,28 @@
+body{
+    background-color:white;
+}
+
+.jumbotron {
+    position: relative;
+    background-image:  url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow:hidden;
+    height: 100vh;
+    margin-bottom: -500px;
+}
+
+#opaqueDiv{
+    /* height: 200px; */
+    background-color: whitesmoke;
+    opacity:  0.6;
+    margin-top: 35vh;
+}
+
+#searchField{
+    width:75%;
+}
+
+.listenImg{
+    width:50%;
+}
