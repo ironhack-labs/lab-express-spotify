@@ -41,9 +41,9 @@ h3 {
 }
 
 .cover-tag p {
-  display: flex;
+  display: block;
   font-size: 1.2rem;
-
+  text-align: center;
   color: white;
   padding: 10px;
 }
