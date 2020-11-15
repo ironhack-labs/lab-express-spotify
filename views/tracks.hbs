@@ -1,0 +1,12 @@
+{{#each albumTracks}}
+<div>
+    <div>
+        <img src="{{this.images}}" alt="{{this.name}}">
+    </div>
+    <div>
+      <h2>{{this.name}}</h2>
+      <a class="btn " href="{{this.preview_url}}">Play {{this.name}}</a>
+      <a class="btn " href="{{this.external_urls.spotify}}">Show {{this.name}}</a>
+    </div>
+</div>
+{{/each}}

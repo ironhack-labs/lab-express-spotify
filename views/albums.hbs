@@ -1,0 +1,12 @@
+{{#each artistAlbums}}
+<div>
+    <div>
+        <img src="{{this.images}}" alt="{{this.name}}">
+    </div>
+    <div>
+      <h2>{{this.name}}</h2>
+      <a class="btn " href="{{this.external_urls.spotify}}">Go to {{this.name}}</a>
+      <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+</div>
+{{/each}}
