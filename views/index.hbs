@@ -4,3 +4,47 @@
     <input type="text" name="artistName" placeholder="Artist name">
     <button type='submit'> Submit </button>
 </form>
+
+
+
+
+
+
+{{!-- MATT --}}
+{{!-- 
+<form action="/post-test" method="post">
+    <input type="text" name="artistName" placeholder="Artist name">
+    <input type="text" name="song" placeholder="song">
+    <input type="text" name="album" placeholder="album">
+    <button type='submit'> Submit </button>
+</form>
+
+<button onclick="getAlbums()">Get albums</button>
+<button onclick="postTest()">post test</button>
+
+<script>
+    
+    {{!-- const getAlbums = () => {
+        
+        const result = fetch('http://localhost:3000/test/matt?id=test&test=123')
+            .then(response => response.json())
+            .then(data => console.log(data));
+        
+        console.log(result)
+        return result
+    }; --}}
+
+    {{!-- const postTest = () => {  
+       
+        const result = fetch('http://localhost:3000/post-test',{
+            method: 'POST', // *GET, POST, PUT, DELETE, etc.
+            body: JSON.stringify({
+                id: 1,
+                name: "matt"
+            })
+        })
+            .then(response => response)
+            .then(data => console.log(data));
+    }; --}}
+
+</script> 

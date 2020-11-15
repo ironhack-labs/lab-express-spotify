@@ -1,0 +1,10 @@
+<h1>Artists found: </h1>
+
+{{#each artists}}
+    <div>
+        <h3> {{name}} </h3>
+        <img src="{{images.0.url}} " alt="{{name}}">
+        <a href="/albums/{{id}}">View albums</a>
+        {{!-- {{external_urls.spotify}} --}}
+    </div>
+{{/each}}
