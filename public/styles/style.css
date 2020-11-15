@@ -1,0 +1,49 @@
+body {
+}
+.backgroundImage {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100vw;
+  height: 100vh;
+  border: 5px solid;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  background-color: black;
+  position: relative;
+}
+.nav-link {
+  color: white;
+}
+.logo {
+  width: 120px;
+}
+.form {
+  width: 700px;
+  text-align: center;
+  padding: 40px 170px;
+  background-color: rgba(250, 250, 240, 0.4);
+  margin: 0px auto;
+  margin-top: 50vh;
+  z-index: 1;
+}
+.card {
+  margin: 10px 5px;
+  text-align: center;
+}
+.card-body {
+  color: white;
+  background-color: #3f3f3f;
+}
+.grey {
+  background-color: grey;
+}
+.right {
+  text-align: right;
+  margin-right: 10px;
+}
+.rightListen {
+  text-align: center;
+}

@@ -1,0 +1,35 @@
+{{!-- {{#each items}}
+{{name}}
+<img src="{{images.0.url}}">
+<a href="/tracks/{{id}}">View Tracks</a>
+{{/each}} --}}
+
+{{!-- <div class="card" style="width: 18rem;">
+    {{#each items}}
+    <img src="{{images.0.url}}" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <a href="/tracks/{{id}}" class="btn btn-danger">View Tracks</a>
+    </div>
+    {{/each}}
+</div> --}}
+
+<div class="container">
+    <div class="row">
+        {{#each items}}
+        <div class="col-sm">
+            <div class="card" style="width: 18rem;">
+
+                <img src="{{images.0.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <a href="/tracks/{{id}}" class="btn btn-danger">View Tracks</a>
+                </div>
+
+            </div>
+
+        </div>
+        {{/each}}
+
+    </div>
+</div>
