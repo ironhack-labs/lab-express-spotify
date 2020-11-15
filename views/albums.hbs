@@ -1,0 +1,12 @@
+<h1 class="text-center">Albums for: {{album.name}}</h1>
+<div class="card-group">
+    {{#each albums}}
+    <div class="card text-center my-2 mx-4 border">
+        <img src="{{images.0.url}}" alt="Image of {{name}}" class="card-img-top">
+        <div class="card-body">
+            <h2 class="card-title">{{name}}</h2>
+            <a href="/albums/{{id}}" class="btn btn-primary">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

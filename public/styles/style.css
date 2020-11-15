@@ -1,3 +1,6 @@
+h2 {
+    font-size: 1.4rem;
+}
 .card {
     min-width: 250px;
     width: 250px;
@@ -20,3 +23,26 @@
 .btn-primary:hover {
     background-color:#F93B34;
 }
+.hero {
+	min-height: 92vh;
+	width: 100vw;
+	display: flex;
+	align-items: center;
+    justify-content: center;
+    background-image: url("https://images.unsplash.com/photo-1509815206612-1b56d36ebecb");
+    background-repeat: no-repeat;
+    background-size: cover; 
+}
+input {
+    width: 30vw;
+    min-width: 300px;
+    text-align: center;
+}
+form .btn {
+    width: 10vw;
+    min-width: 150px;
+    margin: .4rem;
+}
+/* form {
+    background-color: rgba(255,255,255,.2);
+} */
