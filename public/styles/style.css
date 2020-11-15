@@ -1,0 +1,22 @@
+.card {
+    min-width: 250px;
+    width: 250px;
+    max-width: 250px;
+    background-color: #4D4D4D;
+    color: white;
+    justify-content: space-between;
+}
+.card-body {
+    flex: initial;
+}
+.card-img-top {
+    height: 200px;
+    object-fit: cover;
+}
+.btn-primary {
+    background-color: #FA6863;
+    border: #FA6863;
+}
+.btn-primary:hover {
+    background-color:#F93B34;
+}

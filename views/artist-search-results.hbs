@@ -1,0 +1,38 @@
+<h1 class="text-center">Your search results</h1>
+<div class="card-group">
+{{#each artist}}
+{{!-- <div class="col-6 col-sm-4 col-md-3"> --}}
+<div class="card text-center my-2 mx-4 border">
+<img src="{{images.0.url}}" alt="Image of {{name}}" class="card-img-top">
+<div class="card-body">
+<h2 class="card-title">{{name}}</h2>
+<a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+</div>
+</div>
+{{!-- </div> --}}
+{{/each}}
+</div>
+
+
+
+{{!-- <div class="d-flex flex-wrap justify-content-around mx-5">
+    {{#each artist}}
+<div class="col-6 col-md-3 col-xl-2 card p-0 text-center">
+<img src="{{images.0.url}}" alt="Image of {{name}}" class="card-img-top">
+<div class="card-body">
+<h2 class=".card-titl">{{name}}</h2>
+<a href="" class="btn btn-primary">View Albums</a>
+</div>
+</div>
+{{/each}}
+</div> --}}
+
+
+{{!-- {{#each artist}}
+<h2>{{artists.items.0.name}}</h2>
+<h2>{{this.body.name}}</h2>
+<h2>{{body.name}}</h2>
+<h2>{{name}}</h2>
+<h2>{{body.name}}</h2>
+<p>{{artist.body.name}}</p>
+{{/each}} --}}
