@@ -1,11 +1,14 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat&display=swap");
+
 * {
-  color: black;
   margin: 0;
   box-sizing: border-box;
   font-size: 16px;
+  font-family: "Montserrat", sans-serif;
 }
-h2 {
+h3 {
   font-size: 2rem;
+  padding: 5px;
 }
 
 .album-button {
@@ -13,8 +16,112 @@ h2 {
   padding: 5px;
   text-decoration: none;
   background-color: red;
+  color: black;
   margin: 5px;
+  /* margin: 5px; */
 }
 
-.album-cover {
+.cover {
+  display: block;
+  width: 320px;
+  height: 420px;
+  margin: 30px;
+}
+
+.cover-tag {
+  display: flex;
+  background-color: gray;
+  color: white;
+  margin-top: 0;
+  text-align: center;
+  height: 110px;
+  flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.cover-tag p {
+  display: flex;
+  font-size: 1.2rem;
+
+  color: white;
+  padding: 10px;
+}
+a.album-button {
+  display: inline-block;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  flex-direction: row;
+}
+
+img {
+  margin-bottom: 0;
+  display: block;
+}
+
+.main {
+  display: flex;
+  height: 100vh;
+  background-image: url("/images/spotify-background.jpeg");
+  object-fit: fill;
+  background-size: cover;
+  background-position: center center;
+  justify-content: center;
+  align-items: center;
+  background-repeat: no-repeat;
+}
+
+.search-box {
+  display: flex;
+  height: 20vh;
+  width: 60vw;
+  background-color: white;
+  justify-content: center;
+  align-items: center;
+  opacity: 0.8;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px;
+}
+
+table {
+  width: 100%;
+}
+td {
+  display: flex;
+  width: 100%;
+  height: 60px;
+  background-color: darkgray;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+}
+tr {
+  display: block;
+  width: 100%;
+  border: none;
+  margin: 1px;
+}
+th {
+  display: flex;
+  background-color: black;
+  color: white;
+  width: 100%;
+  justify-content: space-between;
+  height: 80px;
+  align-items: center;
+}
+p.theader {
+  margin-left: 30px;
+  margin-right: 150px;
 }

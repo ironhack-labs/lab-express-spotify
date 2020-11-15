@@ -1,6 +1,17 @@
-{{#each data.body.items }}
+<div class="container">
 
-<p>{{this.name}}</p>
-<img src="{{this.images.1.url}}" alt="">
-<a href="/tracks/{{this.id}}">View tracks<a>
-        {{/each}}
+    {{#each data.body.items }}
+    <div class="cover">
+        <img src="{{this.images.1.url}}" alt="" width="320" height="320">
+
+        <div class="cover-tag">
+            <p>{{this.name}}</p>
+
+            <a class="album-button" href="/tracks/{{this.id}}">View tracks<a>
+
+        </div>
+    </div>
+    {{/each}}
+
+
+</div>

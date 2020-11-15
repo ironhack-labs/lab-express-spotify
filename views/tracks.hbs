@@ -1,12 +1,15 @@
 <table>
     <tr>
-        <td>TITLE</td>
-        <td>LISTEN</td>
+        <th>
+            <p class="theader">TITLE</p>
+
+            <p class="theader">LISTEN</p>
+        </th>
     </tr>
     {{#each data.body.items }}
     <tr>
-        <td>{{this.name}}</td>
-        <td>
+        <td>{{this.name}}
+
             <figure>
                 <audio controls src="{{this.preview_url}}">
                     Your browser does not support the
@@ -18,8 +21,5 @@
             </figure>
         </td>
     </tr>
-
+    {{/each}}
 </table>
-
-
-{{/each}}
