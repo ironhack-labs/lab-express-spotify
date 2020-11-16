@@ -1,0 +1,32 @@
+Here are 5 of the tracks I found:
+
+
+<table>
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+        <tr>
+            <td>{{name}}</td>
+            <td><audio controls>
+                    <source src={{preview_url}} type="audio/mpeg">
+                </audio></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+
+{{!-- {{#each tracks}}
+<div>
+    <h1>{{name}}</h1>
+    <audio controls>
+        <source src={{preview_url}} type="audio/mpeg">
+    </audio>
+</div>
+{{/each}} --}}

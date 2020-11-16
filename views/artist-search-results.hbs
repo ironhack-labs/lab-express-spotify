@@ -1,0 +1,11 @@
+Here are the artists I found for your search:
+
+{{#each foundArtists}}
+
+<div>
+    <img src="{{images.0.url}}" alt="artist image">
+    <h1>{{name}}</h1>
+    <a href="/albums/{{id}}">View Albums</a>
+</div>
+
+{{/each}}
