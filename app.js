@@ -37,7 +37,7 @@ app.get('/artist-search-results', (req, res) => {
     // .searchArtists('Love') // Ex. from docs
     .searchArtists(searchedArtist)
     .then(data => {
-      console.log('The received data from the API: ', data.body.artists.items[0].images[0].url)
+      console.log('The received data from the API: ', data.body.artists.items)
       res.render('artist-search-results', {
         artist: data.body.artists.items
       })
@@ -79,7 +79,28 @@ app.get('/albums/:artistId', (req, res, next) => {
 // res.render('movies', { moviesList: searchedMovies })
 
 
+app.get('/albums/:albumId/tracks', (req, res, next) => {
+  // .getArtistAlbums() code goes here
+  const albumID = req.params.albumId;
+  // const artistName = req.params.artistName;
+  spotifyApi
+    // .searchArtists('Love') // Ex. from docs
+    spotifyApi.getAlbumTracks(albumID)
+    .then (data => {
+      console.log("Trackdaten",data.body.items)
+      res.render('tracks', {tracks:data.body.items})
+    })
+    
+    // .then(data => {
+    //   console.log('The received data from the API: ', data)
+    //   res.render('/albums/:artistId', {
+    //     albums: data
+    //   })
 
+      // res.json(artist.body); // to see json in browser
+    // })
+    .catch(err => console.log('The error while searching albums occurred: ', err));
+});
 
 
 /* Direkt von Spotifys Doku */

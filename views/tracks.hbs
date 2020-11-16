@@ -1,0 +1,18 @@
+<h1 class="text-center">Tracks for: {{artist.name}}'s{{album.name}}</h1>
+{{#each tracks}}
+<ul>
+    <li>
+    <figure>
+    <figcaption>{{track_number}}. {{name}}</figcaption>
+    <audio
+        controls
+        src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+    </li>
+</ul>  
+    </div>
+    {{/each}}
+</div>
