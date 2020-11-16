@@ -1,0 +1,14 @@
+{{#each albumTracks}}
+
+<figure>
+    <figcaption>
+        {{this.name}}
+    </figcaption>
+    {{#if this.preview_url}}
+        <audio controls src="{{this.preview_url}}"></audio>
+    {{else}}
+        <p>Sorry no track available</p>
+    {{/if}}
+</figure>
+
+{{/each}}

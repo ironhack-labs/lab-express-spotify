@@ -1,0 +1,15 @@
+{{#each artistsAlbums}}
+
+<div class="card" style="width: 18rem;">
+  <img src="{{#if images}}{{images.0.url}}{{else}}/images/default.jpeg{{/if}}" class="card-img-top" alt="{{this.name}}">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <ul>
+        <li>Released: {{this.release_date}}</li>
+        <li>Tracks: {{this.total_tracks}}</li>
+    </ul>
+    <a href="/tracks/{{this.id}}" class="btn btn-primary">View tracks</a>
+  </div>
+</div>
+
+{{/each}}
