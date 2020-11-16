@@ -1,0 +1,33 @@
+.wrapper {
+    display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+	align-content: center;
+}
+
+.artist-wrapper {
+    /* outline: 1px solid blue; */
+    width: 30%;
+    display: flex;
+	flex-direction: column;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+    align-content: center;
+    margin: 10px;
+}
+
+.artist-wrapper p {
+	text-align: center;
+	width:50%;
+}
+
+.artist-wrapper img {
+    width: 100px;
+}
+
+.img-albums {
+	width: 200px;
+}

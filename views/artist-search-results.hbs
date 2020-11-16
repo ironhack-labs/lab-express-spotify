@@ -1,0 +1,18 @@
+
+{{#each artist}}
+
+    <div class="artist-wrapper">
+
+        <p>{{name}}</p>
+
+        {{#if images}}
+            <img src="{{images.[1].url}}" alt="{{name}} album">
+        {{else}}
+            <img src="/images/no-photo.jpg">
+        {{/if}}
+
+        <a href="/albums/{{id}}"><button>View Albums</button></a>
+
+    </div>
+
+{{/each}}
