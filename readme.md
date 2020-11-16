@@ -10,7 +10,7 @@
 
 Today, we're going to build an Express app to search Spotify for artists, albums, and tracks. Also, we'll be able to play a preview of some of these songs.
 
-To see the final product check out the deployed version: https://spotify-lab.herokuapp.com.
+<!-- To see the final product check out the deployed version: https://spotify-lab.herokuapp.com. -->
 
 It may seem like a lot, but let's break it down into steps!
 
