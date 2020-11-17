@@ -14,7 +14,7 @@
 }
 
 #main_input {
-    color: white;
+    background-color: white;
     margin: 10px;
     border-color: rgb(134, 127, 127, 0.4);
     border-radius: 5px;
@@ -39,3 +39,13 @@
     border: none;
 }
 
+.list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.list_image{
+    width: 150px;
+}
