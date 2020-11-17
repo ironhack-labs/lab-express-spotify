@@ -1,11 +1,14 @@
-{{#each tracksId}}
-    <p>{{this.name}}</p>
-    <figure>
-    <audio
-        controls
-        src="{{this.preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</figure>
-{{/each}}
+  <div class="row mt-4 ">
+      <div class="col-lg-6 offset-lg-3">
+          <h1>Tracks</h1>
+            {{#each tracksId}}
+            <p>{{this.name}}</p>
+            <figure>
+                <audio controls src="{{this.preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </figure>
+            {{/each}}
+      </div>
+  </div>    

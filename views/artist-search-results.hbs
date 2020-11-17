@@ -1,8 +1,17 @@
-<h1>Search results</h1>
-{{#each spotifyArtists}}
+  <div class="row mt-4 ">
+      <div class="col-lg-6 offset-lg-3">
+          <h1>Artists</h1>
+          {{#each spotifyArtists}}
+            <div class="card mt-3">
+                 <img class="card-img-top" src="{{this.images.0.url}}" alt="{{this.images.0.url}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                        <div class="text-right">
+                        <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+                    </div>
+                </div>
+            </div>
+          {{/each}}
+      </div>
+  </div>    
 
-    <h5>{{this.name}}</h5>
-    <img src="{{this.images.0.url}}" alt="">
-    <a href="/albums/{{this.id}}">View Albums</a>
-
-{{/each}}
