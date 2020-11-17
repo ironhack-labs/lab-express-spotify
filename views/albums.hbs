@@ -1,0 +1,9 @@
+<h1>Albums</h1>
+  {{#each Albums}}
+    <img src="{{this.images.0.url}}" alt="Album Covers">
+    <h5>{{this.name}}</h5>
+    <br>
+    <button type="submit" onclick="location.href='/tracks/{{ this.id }}'">Tracks</button>
+  {{/each}}
+  <br>
+  <a href="/">Return to Homepage</a>

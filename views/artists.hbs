@@ -1,0 +1,7 @@
+<h1>Artists</h1>
+  {{#each Artists}}
+    <img src="{{this.images.0.url}}" alt="Artist images">
+    <h5>{{this.name}}</h5>
+    <button type="submit" onclick="location.href='/albums/{{ this.id }}'">View Albums</button>
+  {{/each}}
+  <a href="/">Return to Homepage</a>
