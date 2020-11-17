@@ -1,4 +1,10 @@
-{{#each artists}}
-<h2>{{this.name}}</h2>
-<a href="/albums/{{this.id}}">View Albums</a>
-{{/each}}
+<div id="grid-container">
+        {{#each artists}}
+            <div class="grid-item">
+                <h2>{{this.name}}</h2>
+                <img src="{{images.[0].url}}" />
+                <a href="/albums/{{this.id}}">View Albums</a>
+            </div>
+        {{/each}}
+    </div>
+</div>
