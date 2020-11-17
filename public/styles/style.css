@@ -1,5 +1,41 @@
-body {
+.main {
     display: flex;
     justify-content: center;
-    background-color: blue;
+    background-image: url("../images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-position: unset;
+    background-size: cover; 
 }
+
+.form_main {
+    display: flex;
+    justify-content: center;
+    padding-top: 20%;
+}
+
+#main_input {
+    color: white;
+    margin: 10px;
+    border-color: rgb(134, 127, 127, 0.4);
+    border-radius: 5px;
+    width: 80%;
+    padding: 5px;
+}
+
+#main_page{
+    width: 300px;
+    padding: 50px;
+    background:rgba(255,255,255, 0.5);
+    justify-content: center;
+    text-align: center;
+    align-content: center;
+}
+
+#main_submit{
+    margin: 10px;
+    background-color: rgb(248, 98, 98);
+    color: white;
+    padding: 8px;
+    border: none;
+}
+
