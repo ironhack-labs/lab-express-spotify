@@ -4,7 +4,12 @@
     {{#each artists}}
     <div class="col mb-4">
         <div class="card">
+            {{#if images}}
             <img src="{{images.[0].url}}" class="card-img-top" alt="{{name}}">
+            {{else}}
+            <img src="http://via.placeholder.com/640" class="card-img-top" alt="{{name}}">
+            {{/if}}
+            
             <div class="card-body">
                 <h5 class="card-title">{{name}}</h5>
                 <a href="/albums/{{id}}" class="card-text">View albums</a>
@@ -13,4 +18,3 @@
     </div>
     {{/each}}
 </div>
-
