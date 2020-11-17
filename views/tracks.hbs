@@ -1,0 +1,18 @@
+<div class="card" style="width: 100%;">
+    <div class="card-header">
+        <h3>Title</h3>
+        <h3>Listen</h3>
+    </div>
+    <ul class="list-group list-group-flush">
+        {{#each tracks}}
+        <li class="list-group-item" class="track-info">
+            <div>
+                <h4>{{name}}</h4>
+            </div>
+            <div>
+                <audio controls src="{{preview_url}}" alt="{{name}}"></audio>
+            </div>
+        </li>
+        {{/each}}
+    </ul>
+</div>

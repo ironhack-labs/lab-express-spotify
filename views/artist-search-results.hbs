@@ -1,0 +1,16 @@
+<h1>Artists found:</h1>
+
+<div class="row row-cols-1 row-cols-md-2">
+    {{#each artists}}
+    <div class="col mb-4">
+        <div class="card">
+            <img src="{{images.[0].url}}" class="card-img-top" alt="{{name}}">
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <a href="/albums/{{id}}" class="card-text">View albums</a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
