@@ -1,0 +1,45 @@
+body, html {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+
+}
+
+.backgroundImg {
+    background-image: url("/images/spotify-background.jpeg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 100px 200px;
+    background-color: rgba(255, 255, 255, 0.3)
+}
+
+
+.search-field {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;   
+}
+
+.search-field input {
+    height: 30px;
+    width: 400px;
+}
+
+.search-button {
+    color: white;
+    background-color: red;
+    border: none;
+    padding: 10px 15px;
+}

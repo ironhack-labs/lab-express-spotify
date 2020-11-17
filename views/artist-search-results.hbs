@@ -1,0 +1,8 @@
+<h1>Search results</h1>
+{{#each spotifyArtists}}
+
+    <h5>{{this.name}}</h5>
+    <img src="{{this.images.0.url}}" alt="">
+    <a href="/albums/{{this.id}}">View Albums</a>
+
+{{/each}}
