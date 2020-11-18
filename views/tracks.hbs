@@ -1,0 +1,9 @@
+<div>
+    <ol class="item-list">
+    {{#each tracks}}
+        <li>{{this.name}} <br> 
+        <audio controls src="{{this.preview_url}}"></audio>
+        </li>
+    {{/each}}  
+    </ol>
+</div>
