@@ -1,4 +1,13 @@
-{{#each albums}}
-    <p>{{this.name}}</p>
-    <a href="/albums/{{this.id}}/tracks">View Tracks</a>
-{{/each}}
+<div id="grid-container">
+    {{#each albums}}
+        <div class="grid-item">
+            <h2>{{this.name}}</h2>
+            {{#if this.images.[0].url}}
+                <img src="{{images.[0].url}}" alt="albums"/>
+                {{else}}
+                <img src="/images/Spotify_logo.png" alt="albums" />
+            {{/if}}
+            <a href="/albums/{{this.id}}/tracks">View Tracks</a>
+        </div>
+    {{/each}}
+</div>

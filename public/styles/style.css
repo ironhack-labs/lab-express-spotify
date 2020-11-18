@@ -25,14 +25,17 @@ body {
 
 form input {
     width: 400px;
-    height: 25px;
+    height: 35px;
     border: none;
+    border-radius: 8px;
 }
 
 form button {
-    background-color: #FF6666;
+    background-color: #1DB954;
     color: white;
+    font-size: 1.2em;
     border: none;
+    border-radius: 8px;
     padding: 10px 20px;
     margin-top: 5px;
 }
@@ -56,4 +59,40 @@ form button {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+}
+
+a {
+    color: white;
+    background-color: #1DB954;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 8px;
+}
+
+.tracks {
+    width: 50%;
+    margin-top: 20px;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.tracks th {
+    padding-top: 12px;
+    padding-bottom: 12px;
+    padding-left: 10px;
+    text-align: left;
+    background-color: #1DB954;
+    color: white;
+}
+
+.name {
+    padding-left: 10px;
+}
+
+.tracks tr:nth-child(even) {
+    background-color: #F8F8F8;
+}
+
+.tracks tr:hover {
+    background-color: #f2f2f2;
 }

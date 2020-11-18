@@ -1,11 +1,19 @@
-{{#each tracks}}
-    <p>{{this.name}}</p>
-    <figure>
-    <audio
-        controls
-        src="{{this.preview_url}}">
+<table class="tracks">
+    <tr>
+        <th>Track</th>
+        <th>Listen</th>
+    </tr>
+    {{#each tracks}}
+    <tr>
+        <td class="name">{{this.name}}</td>
+        <td>
+            <figure>
+            <audio controls src="{{this.preview_url}}">
             Your browser does not support the
             <code>audio</code> element.
-    </audio>
-</figure>
-{{/each}}
+            </audio>
+            </figure>  
+        </td>
+    </tr>
+    {{/each}}
+</table>

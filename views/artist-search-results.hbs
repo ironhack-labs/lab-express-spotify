@@ -2,7 +2,11 @@
         {{#each artists}}
             <div class="grid-item">
                 <h2>{{this.name}}</h2>
-                <img src="{{images.[0].url}}" />
+                {{#if this.images.[0].url}}
+                    <img src="{{images.[0].url}}" alt="artist"/>
+                    {{else}}
+                    <img src="/images/Spotify_logo.png" alt="artist" />
+                {{/if}}
                 <a href="/albums/{{this.id}}">View Albums</a>
             </div>
         {{/each}}
