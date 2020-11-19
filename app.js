@@ -57,24 +57,18 @@ const spotifyApi = new SpotifyWebApi({
     });
 
 
-    
-    // app.get('/', (req, res) => {
-    //   spotifyApi
-    //     .getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE', { limit: 10, offset: 20 })
-    //     .then(
-    //       function(data) {
-    //         const options = {
-    //           artist: data.body
-    //         }
-    //         res.render('artist', options)
-    //         console.log('artist', options)
-    //       },
-    //       function(err) {
-    //         console.error(err);
-    //       }
-    //     );
-    //     // res.render('artist')
-    // });
+    // Get tracks in an album
 
+    app.get('/tracks/:id', (req, res, next) => {
+
+      spotifyApi.getAlbumTracks(req.params.id)
+      .then(function(data) {
+        console.log(data.body.items);
+        res.render('tracks', { id: data.body.items });
+      }, function(err) {
+        console.log('Something went wrong!', err);
+      });
+
+    });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
