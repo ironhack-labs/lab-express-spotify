@@ -1,0 +1,19 @@
+.btn{
+    display: block;
+}
+
+.item-list li:nth-child(even) {
+   background-color: rgb(209, 224, 224)
+   margin-top: 5px;
+   margin-bottom: 5px;
+}
+
+.item-list li:nth-child(odd) {
+    background-color: rgba(209, 224, 224, 0.8);
+    margin-top: 5px;
+    margin-bottom: 5px;
+ }
+
+ .audio-tab {
+     width: 100%;
+ } 

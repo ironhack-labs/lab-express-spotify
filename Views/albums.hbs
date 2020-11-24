@@ -1,0 +1,13 @@
+<div>
+    {{#each albums}}
+        <section>
+            {{#if this.images.[0].url}}
+                <img src='{{this.images.[0].url}}' alt="Album">
+            {{else}}
+                <img src='https://via.placeholder.com/640' alt="Album">
+            {{/if}}
+            <h1>{{this.name}}</h1>
+            <a class="btn" href="/albums/{{this.id}}/tracks">View Tracks</a>
+        </section>
+    {{/each}}  
+</div>
