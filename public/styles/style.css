@@ -12,25 +12,49 @@ body {
   align-items: center;
   justify-content: center;
 }
-#artist-search #button {
+#button {
   background-color: rgb(216, 80, 18);
   color: white;
 }
-.caratulas{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-around;
+.caratulas {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
-.eachCaratula{
-    width: 30%;
-    
-    margin: 10px;
- 
+.eachCaratula {
+  width: 30%;
+
+  margin: 10px;
 }
-.eachCaratula .img{
-    background-repeat: no-repeat;
-    /* background-attachment: fixed; */
-    background-position: center;
-    background-size: cover;
-    height: 400px;
+.eachCaratula .img {
+  background-repeat: no-repeat;
+  /* background-attachment: fixed; */
+  background-position: center;
+  background-size: cover;
+  height: 400px;
+}
+.datos {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color:#4d4d4d;
+  color: white;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+.datos p{
+    margin:5px;
+}
+.datos #button{
+    border-radius: 5px;
+}
+table{
+    width: 40%;
+    margin: 30px;
+    background-color:#4d4d4d; 
+    color: white;
+}
+table td{
+    background-color:#928e8e; 
 }

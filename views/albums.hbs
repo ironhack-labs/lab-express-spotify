@@ -1,14 +1,20 @@
-{{#each items }}
+<section class="caratulas">
 
-<div>
-    <img id="img" src="{{images.0.url}}" alt="image-artist">
-    <p>{{name}}</p>
-    <form action="/view-Tracks/{{id}}" , method="GET" id="album-search">
+    {{#each items }}
 
-        <label for="button"></label>
-        <input type="submit" value="View Tracks" id="button">
-    </form>
+    <div class="eachCaratula">
+        {{!-- <img id="img" src="{{images.0.url}}" alt="image-artist"> --}}
+        <div class="img" style="background-image: url('{{images.0.url}}');"></div>
+        <div class="datos">
+            <p>{{name}}</p>
+            <form action="/view-Tracks/{{id}}" , method="GET" id="album-search">
 
-</div>
+                <label for="button"></label>
+                <input type="submit" value="View Tracks" id="button">
+            </form>
+        </div>
+    </div>
 
-{{/each}}
+    {{/each}}
+
+</section>
