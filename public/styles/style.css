@@ -1,0 +1,66 @@
+* {
+  margin: 0; 
+  padding: 0; 
+  font-family: monospace;
+}
+
+body {
+    color: black;
+    background-color: light-blue;
+    padding: 20px;
+}
+
+#home-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 100px;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+#search-input {
+    width: 300px;
+    padding: 5px;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 5px 10 px;
+}
+
+.page-title {
+    display: flex;
+    justify-content: center;
+    padding-bottom: 10px;
+}
+
+.card-header {
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.track-info {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#header-listen {
+    margin-right: 100px;
+}
+
+#header-title {
+    margin-left: 100px;
+}
