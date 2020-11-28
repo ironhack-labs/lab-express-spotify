@@ -1,0 +1,11 @@
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Listen</th>
+    </tr>
+    {{#each items }}
+       <tr><td>{{name}}</td><td><audio controls ><source src="{{preview_url}}"> </audio></td></tr> 
+
+    {{/each}}
+
+</table>

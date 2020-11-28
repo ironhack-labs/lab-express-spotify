@@ -49,7 +49,7 @@ app.get('/artist-search', (req, res) => {
 });
 
 app.get('/albums/:id', (req, res) => {
-    console.log(req.param.id)
+    //console.log(req.param.id)
   spotifyApi.getArtistAlbums(req.params.id).then(
     function (data) {
       console.log('Artist albums', data.body);
@@ -63,6 +63,22 @@ app.get('/albums/:id', (req, res) => {
   //res.render('albums');
   //res.send(req.query);
 });
+
+app.get('/view-Tracks/:id', (req, res) => {
+
+    spotifyApi.getAlbumTracks(req.params.id).then(
+        function (data) {
+          console.log('Tracks', data.body);
+          const { items } = data.body;
+          res.render('tracks', { items });
+        },
+        function (err) {
+          console.error(err);
+        }
+      );
+    //res.render('index');
+    //res.send(req.query);
+  });
 
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
