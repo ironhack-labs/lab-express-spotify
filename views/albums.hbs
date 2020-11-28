@@ -1,0 +1,9 @@
+<div class="allArtist">
+{{#each data.body.items}}
+  <div class="card">
+  <img src={{this.images.[0].url}} alt="imagen">
+  <h2>{{this.name}}</h2>
+  <button><a href="/tracks/{{this.id}}">View tracks</a></button>
+  </div>
+{{/each}}
+</div>
