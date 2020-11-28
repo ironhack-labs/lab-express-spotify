@@ -1,0 +1,14 @@
+{{#each items }}
+
+<div>
+    <img id="img" src="{{images.0.url}}" alt="image-artist">
+    <p>{{name}}</p>
+    <form action="/view-Tracks/{{id}}" , method="GET" id="album-search">
+
+        <label for="button"></label>
+        <input type="submit" value="View Tracks" id="button">
+    </form>
+
+</div>
+
+{{/each}}
