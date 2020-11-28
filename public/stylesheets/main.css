@@ -1,16 +1,87 @@
 @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
 body {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+}
+
+body a {
+  text-decoration: none;
+}
+
+body .button {
+  width: fit-content;
+  background-color: #fa6863;
+  color: #ffffff;
+  padding: 0.75em 1em;
+  display: block;
+  border-radius: 10px;
 }
 
 body #form-section {
   background-image: url("../images/spotify-background.jpeg");
   height: 100vh;
   background-size: cover;
+  display: flex;
+  align-items: center;
 }
 
 body #form-section form {
-  background-color: #FFFFFF;
+  margin: 0 auto;
+  background-color: #ffffffb5;
   display: flex;
-  flex-direction: colum;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 50%;
+  padding: 2em;
+}
+
+body #form-section form label {
+  margin-bottom: 10px;
+  width: 80%;
+}
+
+body #form-section form label input {
+  width: 100%;
+  padding: 5px;
+}
+
+body #form-section form button {
+  border: unset;
+}
+
+body #artist-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 2em;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+body #artist-list article {
+  width: 30%;
+  margin: 20px 0;
+}
+
+body #artist-list article img {
+  width: 100%;
+}
+
+body #artist-list article div {
+  background-color: #4d4d4d;
+  text-align: center;
+  padding: 1em;
+  min-height: 180px;
+}
+
+body #artist-list article div h3 {
+  color: #ffffff;
+  size: 1.5em;
+  line-height: 1.5em;
+}
+
+body #artist-list article div a {
+  margin: 20px auto;
+  font-size: 0.75em;
 }

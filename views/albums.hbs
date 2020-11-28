@@ -1,5 +1,5 @@
+<h1>Albums for: {{name}}</h1>
 <section id="artist-list">
-    <h1>Albums for: {{name}}</h1>
     {{#each info}}
     <article class="album">
         {{#if images}}
@@ -10,7 +10,7 @@
         {{/if}}
         <div>
             <h3 class="title">{{name}}</h3>
-            <a href="/tracks/{{id}}">View Tracks</a>
+            <a href="/tracks/{{id}}" class="button">View Tracks</a>
         </div>
     </article>
     {{/each}}

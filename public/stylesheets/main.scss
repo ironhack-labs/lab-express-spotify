@@ -2,15 +2,75 @@
 @import "variables";
 body {
   font-family: "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  a {
+    text-decoration: none;
+  }
+  .button {
+    width: fit-content;
+    background-color: $red;
+    color: $white;
+    padding: 0.75em 1em;
+    display: block;
+    border-radius: 10px;
+  }
   #form-section {
     background-image: url("../images/spotify-background.jpeg");
     height: 100vh;
     background-size: cover;
+    display: flex;
+    align-items: center;
     form {
+      margin: 0 auto;
       background-color: $whiteOpacity;
       display: flex;
-      flex-direction: colum;
-      
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+      padding: 2em;
+      label {
+        margin-bottom: 10px;
+        width: 80%;
+        input {
+          width: 100%;
+          padding: 5px;
+        }
+      }
+      button {
+        border: unset;
+      }
+    }
+  }
+
+  #artist-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 1200px;
+    article {
+      width: 30%;
+      margin: 20px 0;
+      img {
+        width: 100%;
+      }
+      div {
+        background-color: $grey;
+        text-align: center;
+        padding: 1em;
+        min-height: 180px;
+        h3 {
+          color: $white;
+          size: 1.5em;
+          line-height: 1.5em;
+        }
+        a {
+          margin: 20px auto;
+          font-size: 0.75em;
+        }
+      }
     }
   }
 }
