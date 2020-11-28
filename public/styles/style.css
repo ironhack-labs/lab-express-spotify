@@ -16,3 +16,21 @@ body {
   background-color: rgb(216, 80, 18);
   color: white;
 }
+.caratulas{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.eachCaratula{
+    width: 30%;
+    
+    margin: 10px;
+ 
+}
+.eachCaratula .img{
+    background-repeat: no-repeat;
+    /* background-attachment: fixed; */
+    background-position: center;
+    background-size: cover;
+    height: 400px;
+}
