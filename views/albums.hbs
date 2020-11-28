@@ -1,0 +1,17 @@
+<section id="artist-list">
+    <h1>Albums for: {{name}}</h1>
+    {{#each info}}
+    <article class="album">
+        {{#if images}}
+        <img src="{{images.0.url}}" alt="album img">
+        {{else}}
+        <img src="https://community.mp3tag.de/uploads/default/original/2X/a/acf3edeb055e7b77114f9e393d1edeeda37e50c9.png"
+            alt="">
+        {{/if}}
+        <div>
+            <h3 class="title">{{name}}</h3>
+            <a href="/tracks/{{id}}">View Tracks</a>
+        </div>
+    </article>
+    {{/each}}
+</section>

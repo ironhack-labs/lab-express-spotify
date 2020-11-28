@@ -1,0 +1,16 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap");
+@import "variables";
+body {
+  font-family: "Noto Sans JP", sans-serif;
+  #form-section {
+    background-image: url("../images/spotify-background.jpeg");
+    height: 100vh;
+    background-size: cover;
+    form {
+      background-color: $whiteOpacity;
+      display: flex;
+      flex-direction: colum;
+      
+    }
+  }
+}

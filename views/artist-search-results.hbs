@@ -1,0 +1,15 @@
+<section id="artist-list">
+    {{#each artistInfo}}
+    <article class="album">
+        {{#if images}}
+        <img src="{{images.0.url}}" alt="album img">
+        {{else}}
+        <img src="https://sprucesounds.com/wp-content/themes/sprucesounds/assets/img/artist-placeholder.jpg" alt="">
+        {{/if}}
+        <div>
+            <h3 class="artist">{{name}}</h3>
+            <a href="/albums/{{name}}/{{id}}">View Albums</a>
+        </div>
+    </article>
+    {{/each}}
+</section>
