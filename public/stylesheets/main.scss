@@ -13,6 +13,10 @@ body {
     padding: 0.75em 1em;
     display: block;
     border-radius: 10px;
+    &:hover {
+      background-color: $grey;
+      border: 1px solid $white;
+    }
   }
   #form-section {
     background-image: url("../images/spotify-background.jpeg");
@@ -28,7 +32,7 @@ body {
       justify-content: space-between;
       align-items: center;
       width: 50%;
-      padding: 2em;
+      padding: 4em 2em;
       label {
         margin-bottom: 10px;
         width: 80%;
@@ -43,6 +47,13 @@ body {
     }
   }
 
+  .album-h1 {
+    text-align: center;
+    margin-top: 2em;
+    font-size: 1.5em;
+    font-weight: 600;
+  }
+
   #artist-list {
     display: flex;
     flex-wrap: wrap;
@@ -55,12 +66,17 @@ body {
       margin: 20px 0;
       img {
         width: 100%;
+        object-fit: cover;
+        height: 300px;
       }
       div {
         background-color: $grey;
         text-align: center;
         padding: 1em;
         min-height: 180px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
         h3 {
           color: $white;
           size: 1.5em;
@@ -69,6 +85,86 @@ body {
         a {
           margin: 20px auto;
           font-size: 0.75em;
+        }
+      }
+    }
+  }
+  #tracks {
+    padding: 2em;
+    margin: 0 auto;
+    max-width: 1200px;
+    div {
+      display: flex;
+      background-color: $grey;
+      h2 {
+        color: $white;
+        display: block;
+        padding: 1.5em;
+        text-align: center;
+        width: 35%;
+        font-size: 1.25em;
+        font-weight: 500;
+      }
+      h2:first-child {
+        width: 65%;
+        text-align: left;
+      }
+    }
+    .track {
+      display: flex;
+      background-color: $light-grey;
+      margin-bottom: 4px;
+      align-items: center;
+      padding: 1em 2em;
+      p {
+        width: 65%;
+        font-weight: 500;
+      }
+      audio {
+        width: 35%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1024px) {
+  body {
+    #artist-list {
+      article {
+        width: 48%;
+        img {
+          height: 350px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    #artist-list {
+      article {
+        width: 100%;
+        div {
+          min-height: unset;
+        }
+        img {
+          height: 350px;
+        }
+      }
+    }
+    #tracks {
+      div {
+        display: none;
+      }
+      .track {
+        flex-wrap: wrap;
+        p {
+          width: 100%;
+        }
+        audio {
+          margin-top: 10px;
+          width: 100%;
         }
       }
     }
