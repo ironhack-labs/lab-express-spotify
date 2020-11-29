@@ -1,0 +1,16 @@
+{{#each infoArtist}}
+<div class="column" style="display: table;
+    float: left;
+    width: 30%;
+    padding: 10px 10px;">
+    <div class="card_2">
+
+        <img src="{{images.1.url}}" >
+          <h3 style="color: blanchedalmond;">{{name}}</h3>
+       
+        <p>{{description}}</p>
+       <a href="/albums/{{id}}" class="btn btn-primary " >View Albums!</a>
+        
+    </div>
+</div>
+{{/each}}

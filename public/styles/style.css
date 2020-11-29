@@ -1,0 +1,19 @@
+body{
+    background-image: url("/public/images/spotify-background.jpeg");
+}
+
+.column{
+    display: table;
+    float: left;
+    width: 30%;
+    padding: 10px 10px;
+    font-weight: bold;
+}
+
+.column img{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width:100px;
+    height:350px; 
+}
