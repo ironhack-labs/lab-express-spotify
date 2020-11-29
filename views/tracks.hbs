@@ -1,0 +1,14 @@
+<div class="estruct-tracks">
+  <div class="header">
+    <h1>Title</h1>
+    <h1 class="right">Listen</h1>
+  </div>
+    {{#each tracks}}
+     <div class="tracks" align="center">
+      <h3>{{name}}</h3>
+    <audio controls>
+      <source src="{{preview_url}}" type="audio/ogg" >
+    </audio>
+      </div>
+{{/each}}
+</div>
