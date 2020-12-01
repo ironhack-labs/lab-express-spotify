@@ -1,14 +1,12 @@
-<h1>ARTIST-SEARCH-RESULTS</h1>
-{{!-- display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). --}}
-
-
+<div class="artist-search-results">
 {{#each artist}}
-    <p>{{this.name}}</p>
-    <img src="{{this.images.[0].url}}" alt="">
-    <a href="/albums/{{this.id}}">View Albums</a>
+    <div class="each-artist">
+        <img src="{{this.images.[0].url}}" alt="">
+        <p>{{this.name}}</p>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
 {{/each}}
+</div>
 
 
 
-
-<a href="/albums/{{this.id}}">View albums</a>
