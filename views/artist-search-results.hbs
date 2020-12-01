@@ -1,0 +1,7 @@
+{{#each data}}
+<div>
+    <a href="/albums/{{ this.id }}"><img src={{ this.images.[1].url }} /></a>
+    <h1>{{ this.name }}</h1>
+
+</div>
+{{/each}}

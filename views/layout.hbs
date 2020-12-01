@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" type="text/css"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.1/css/bulma.min.css" />
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar has-background-primary-dark" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a class="navbar-item" href="https://www.spotify.com/br/">
+                    <img src="https://developer.spotify.com/assets/branding-guidelines/icon1@2x.png" width="112"
+                        height="28" />
+                </a>
+
+                <a role="button" class="navbar-burger burger" aria-label="menu" aria-expanded="false"
+                    data-target="navbarBasicExample">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+
+            <div id="navbarBasicExample" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="/home"> Home </a>
+
+                    <a class="navbar-item" href="javascript:history.back()"> Back </a>
+
+
+                </div>
+
+
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="container is-flex is-justify-content-center is-fullwidth">
+            <div>{{{ body }}}</div>
+        </div>
+    </main>
+</body>
+
+</html>
