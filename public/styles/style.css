@@ -1,0 +1,13 @@
+body {
+    background: url("https://impacttourism.ca/wp-content/uploads/2019/07/background-music-means-sound-track-and-melody.jpg");
+    background-size: cover;
+}
+
+#main{
+    height: 100vh;
+}
+
+.card{
+    width: 200px;
+    margin: 40px;
+}

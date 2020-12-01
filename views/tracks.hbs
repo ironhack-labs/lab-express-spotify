@@ -1,0 +1,21 @@
+<div class="container">
+	<table class="table">
+		<tr>
+			<thead>
+				<th>Title</th>
+				<th>Listen</th>
+			</thead>
+		</tr>
+		<tbody>
+			{{#each tracks}}
+            <tr>
+                <td>{{this.name}}</td>
+                <td> <audio
+        controls
+        src={{this.preview_url}}>
+    </audio></td>
+            </tr>
+			{{/each}}
+		</tbody>
+	</table>
+</div>
