@@ -1,0 +1,90 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+* {
+  margin: 0 0;
+}
+
+body {
+  margin: 0 0;
+  background-color: rgb(214, 214, 214);
+  font-family: "Open Sans", sans-serif;
+}
+
+.navbar {
+  background-color: rgb(26, 106, 160);
+  height: 70px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-nav {
+  color: white;
+  text-decoration: none;
+}
+
+input {
+  width: 500px;
+  padding: 10px;
+  margin-top: 200px;
+  border: 0;
+}
+
+.input {
+  display: flex;
+  justify-content: center;
+}
+
+button {
+  padding: 10px;
+  margin-top: 200px;
+  border: 0;
+  color: white;
+  background-color: rgb(26, 106, 160);
+}
+
+.artists {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(192, 192, 192);
+  border-radius: 15px;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  padding: 10px;
+}
+
+img {
+  width: 50px;
+  margin: 10px;
+}
+
+.info p {
+  color: rgb(128, 128, 128);
+}
+
+.info a {
+  text-decoration: none;
+  color: rgb(26, 106, 160);
+}
+
+.albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(192, 192, 192);
+  border-radius: 15px;
+  width: 120px;
+  height: 120px;
+  margin: 20px;
+  padding: 10px;
+}

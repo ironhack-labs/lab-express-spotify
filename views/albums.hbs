@@ -1,17 +1,19 @@
 
-<div>
-
-      <!-- this aponta para cada elemento da array -->
+<div class="artists">
+ {{#if albums.length}}
       {{#each albums}}
-    {{ this.name }}
+      <div class="info">
+            <p>{{ this.name }}</p> 
 
       <img src="{{images.[2].url}}">
 
         <a href="/tracks/{{this.id}}">View Tracks</a>
+      </div>
 
-     <p></p>
 
      {{/each}}
 
-
+  {{else}}
+  <p>No results.</p>
+  {{/if}}
 </div>

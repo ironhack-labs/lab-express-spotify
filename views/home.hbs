@@ -1,44 +1,17 @@
-<div class="mt-5">
+<div>
   <form action="/artist-search" method="GET">
-    <div class="field has-addons">
-      <div class="control">
+    <div class="input">
+      <div>
         <input
           class="input"
           type="text"
-          placeholder="Search for an user..."
+          placeholder="Search for an artist..."
           name="search"
         />
       </div>
-      <div class="control">
-        <button type="submit" class="button is-info">Search</button>
+      <div class="button">
+        <button type="submit">Search</button>
       </div>
     </div>
   </form>
-
-  {{!-- {{#if users.length}}
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Name</th>
-        <th>E-mail</th>
-        <th>Website</th>
-        <th>Actions</th>
-      </tr>
-    </thead>
-    <tbody>
-      <!-- this aponta para cada elemento da array -->
-      {{#each users}}
-      <tr>
-        <td>{{ this.name }}</td>
-        <td>{{ this.email }}</td>
-        <td>{{ this.website }}</td>
-        <td><a href="/user/{{ this.id }}">See details</a></td>
-      </tr>
-      {{/each}}
-    </tbody>
-  </table>
-
-  {{else}}
-  <p>No results.</p>
-  {{/if}}
-</div> --}}
+  </div>

@@ -1,13 +1,8 @@
 
-<div>
-
-      <!-- this aponta para cada elemento da array -->
+<div class="tracks">
       {{#each tracks}}
-    {{ this.name }}
+  <p>{{ this.name }}</p>  
 
-
-    {{!-- <audio src="{{ this.preview_url }}">O seu navegador não suporta o elemento <code>audio</code>.
-</audio> --}}
 
 <audio controls>
 
@@ -17,11 +12,7 @@
 
  </audio>
 
-
-
-     <p></p>
-
-     {{/each}}
-
+  {{/each}}
 
 </div>
+
