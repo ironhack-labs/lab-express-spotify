@@ -6,6 +6,7 @@
 html,
 body {
   width: 100vw;
+  height: 100vh;
 
   font-family: "Roboto", Helvetica, Arial, sans-serif;
   font-size: 10px;
@@ -14,39 +15,30 @@ body {
   background-color: rgb(25, 20, 20);
 }
 
-a {
+.link {
   color: rgb(25, 20, 20);
   text-decoration: none;
   font-size: 2rem;
   border-bottom: 2px solid transparent;
 }
 
-a:hover {
+.link:hover {
   color: rgb(30, 215, 96);
   border-bottom: 2px solid rgb(30, 215, 96);
 }
 
-.flex-row {
+nav {
+  width: 97vw;
+  background-color: rgba(255, 255, 255, 0.9);
+  height: 70px;
+  padding: 0 5rem 0 1.5rem;
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  flex-direction: row;
   align-items: center;
   justify-content: space-between;
-}
-
-header {
-  width: 100%;
-}
-
-nav {
-  width: 97%;
-  height: 70px;
-  background-color: rgba(255, 255, 255);
-  padding: 0 2rem;
-  position: fixed;
-}
-
-ul li {
-  list-style: none;
+  z-index: 20;
 }
 
 nav img {
@@ -55,6 +47,140 @@ nav img {
 }
 
 .main {
-  margin-top: 75px;
+  width: 100vw;
+  height: 100vh;
+  margin-top: 90px;
   color: white;
+}
+
+.search-form {
+  width: 100vw;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -60px;
+}
+
+.search-form input,
+.search-form button {
+  font-size: 2rem;
+  height: 5rem;
+  border: none;
+  background-color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem;
+}
+
+.search-form input {
+  width: 30vw;
+  border-radius: 10px 0 0 10px;
+}
+
+.search-form input:placeholder-shown {
+  font-style: italic;
+}
+
+.search-form button {
+  font-weight: 500;
+  color: white;
+  background-color: rgb(30, 215, 96);
+  border-radius: 0 10px 10px 0;
+}
+
+.artists {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-bottom: 6rem;
+}
+
+.artist {
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(87, 81, 81, 0.8);
+  border-radius: 0 0 8px 8px;
+}
+
+.artist img {
+  width: 30rem;
+  height: 30rem;
+}
+
+.artist a {
+  width: 30rem;
+  text-decoration: none;
+  color: white;
+  font-size: 1.5rem;
+  text-align: center;
+}
+
+.artist h3 {
+  margin: 0.8rem;
+}
+
+.tracks {
+  width: 80vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  margin: 0 auto;
+
+  font-size: 1.8rem;
+}
+
+.tracks h2 {
+  font-size: 4rem;
+  color: rgb(30, 215, 96);
+  margin: 2rem 0 5rem;
+}
+
+.tracks table {
+  width: 70vw;
+  margin: 0 auto 4rem;
+  table-layout: fixed;
+}
+
+.tracks table th {
+  font-size: 2rem;
+  line-height: 2.5;
+  background-color: rgb(30, 215, 96);
+  color: white;
+}
+
+.tracks td {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(25, 20, 20, 0.9);
+}
+
+footer a {
+  margin: 1rem 3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+}
+
+footer a img {
+  width: 30px;
+  margin: 0 1rem;
 }

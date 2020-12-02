@@ -68,13 +68,17 @@ app.get("/tracks/:albumId", (req, res, next) => {
   spotifyApi
     .getAlbumTracks(albumId, { limit: 10, offset: 1 })
     .then((data) => {
-      console.log("Album information", data.body.items);
+      console.log("Album information", data.body.items[0].artists);
       const tracks = data.body.items;
       return res.render("tracks", { track: tracks });
     })
     .catch((err) => {
       console.error(err);
     });
+});
+
+app.get("/about", (req, res) => {
+  res.render("about");
 });
 
 app.listen(4000, () =>
