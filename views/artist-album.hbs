@@ -1,0 +1,8 @@
+<div>
+
+{{#each album}}
+<img style="height: 300px;width: 300px;" src={{ this.images.[0].url }}></img>
+<div>{{ this.name }}</div>
+<a href="/album-playlist/{{ this.id }}">Listen this album</a>
+{{/each}}
+</div>
