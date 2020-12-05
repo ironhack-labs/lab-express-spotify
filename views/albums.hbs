@@ -1,0 +1,13 @@
+<p>work in progress</p>
+<div class="album-container">
+{{#each data}}
+<div class="album-card">
+<img style="width: 200px;height: 160px;object-fit: scale-down;margin-bottom: -5px;" src="{{this.images.[0].url}}">
+<div class="text-album">
+<h1>{{this.name}}</h1>
+<a href="/tracks/{{this.id}}">view track</a>
+</div>
+</div>
+{{/each}}
+
+</div>

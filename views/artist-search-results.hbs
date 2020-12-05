@@ -1,0 +1,13 @@
+
+<div class="artist-container">
+{{#each artists}}
+<div class="artist-card">
+<img style="width: 200px;height: 160px;object-fit: scale-down;margin-bottom: -5px;" src="{{this.images.[0].url}}">
+<div class="artist-block-text">
+<h1>{{this.name}}</h1>
+<a href="/albums/{{this.id}}">view album</a>
+</div>
+</div>
+{{/each}}
+
+</div>
