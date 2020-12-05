@@ -1,0 +1,17 @@
+.home-page{
+        width: 100vw;
+        height: 100vh;
+        background-image: url("/images/spotify-background.jpeg");
+        background-position: center;
+        background-size: cover;
+        background-repeat: no-repeat;
+}
+img{
+        width: 160px;
+        height: 160px; 
+}
+
+.download-icon{
+        width: 10px;
+        height: 10px;
+}

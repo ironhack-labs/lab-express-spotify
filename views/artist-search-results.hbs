@@ -1,0 +1,20 @@
+<div class="result-page">
+        {{#each info}}
+
+        <div class="album-item">
+
+                {{#isdefined this.images.[2].url}}
+                  <img src={{this.images.[2].url}} alt="{{this.name}}" class="album-item-image">
+                {{else}}
+                 <img src="/images/spotify-background.jpeg" alt="{{this.name}}" class="album-item-image">
+                {{/isdefined}}
+
+                <p class="album-item-name">{{this.name}}</p>
+                <a href="/albums/{{this.id}}" class="album-item-link">View Albums</a>
+        </div>
+
+
+        {{/each}}
+</div>
+
+
