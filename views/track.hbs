@@ -1,11 +1,38 @@
-<h1>Albums for : {{listTrack.[0].artists.[0].name}}</h1>
-<div class="track-page">
+{{!-- <div class="track-page">
         {{#each listTrack}}
         <div>
 
                 <p>{{this.name}}</p>
                 <audio controls src="{{this.preview_url}}"></audio>
-                <a href="{{this.external_urls.spotify}}"><img src="/images/download.png" alt="download" class="download-icon"></a>
+                <a href="{{this.external_urls.spotify}}"><img src="/images/download.png" alt="download"
+                                class="download-icon"></a>
         </div>
         {{/each}}
-</div>
+</div> --}}
+
+<table>
+        <thead>
+                <tr>
+                        <th>Title</th>
+                        <th>Listen</th>
+                </tr>
+        </thead>
+        <tbody>
+                {{#each listTrack}}
+                <tr>
+
+                        <th>
+                                <p>{{this.name}}</p>
+                        </th>
+                        <th>
+                                <audio controls src="{{this.preview_url}}"></audio>
+                                <a href="{{this.external_urls.spotify}}">
+                                        <img src="/images/download.png" alt="download" class="download-icon">
+                                </a>
+                        </th>
+
+
+                </tr>
+                {{/each}}
+        </tbody>
+</table>

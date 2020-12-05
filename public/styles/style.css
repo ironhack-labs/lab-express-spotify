@@ -1,4 +1,23 @@
-.home-page{
+html {
+        font-size: 15px;
+        color: white;
+}
+
+body {
+        position: relative;
+}
+
+a {
+        text-decoration: none;
+        color: white;
+}
+
+h1 {
+        color: black;
+        text-align: center;
+}
+
+.home-page {
         width: 100vw;
         height: 100vh;
         background-image: url("/images/spotify-background.jpeg");
@@ -6,12 +25,158 @@
         background-size: cover;
         background-repeat: no-repeat;
 }
-img{
-        width: 160px;
-        height: 160px; 
+
+.home-page form {
+        background-color: rgba(255, 255, 255, 0.3);
+        padding: 2rem 10rem;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
 }
 
-.download-icon{
-        width: 10px;
-        height: 10px;
+.home-page form input {
+        padding: 0.4rem;
+        width: 50vh;
 }
+
+.button {
+        background-color: red;
+        display: inline-block;
+        text-align: center;
+        margin: 1rem;
+        padding: .5rem;
+        border: none;
+}
+
+
+.result-page {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        width: 100vw;
+}
+
+.album-item {
+        width: 25%;
+        min-height: 35rem;
+        height: 100%;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        margin: 1rem;
+
+        background-color: gray;
+
+        position: relative;
+}
+
+.album-item img {
+        width: 100%;
+        height: 70%;
+}
+
+.album-item p {
+        font-weight: bold;
+        font-size: 1.1rem;
+        text-align: center;
+        padding: 0.3rem;
+}
+
+
+table {
+        color: black;
+        text-align: left;
+        width: 100%;
+        border-collapse: collapse;
+}
+
+thead {
+        background-color: rgb(65, 58, 58);
+
+}
+
+thead th {
+        color: white;
+        opacity: 0.5;
+        padding-top: 1.5rem;
+        padding-bottom: 1.5rem;
+        font-size: 1.3rem;
+}
+
+thead th:first-child {
+        width: 70%;
+        padding-left: 1rem;
+}
+
+thead th:last-child {
+        text-align: center;
+        width: 30%;
+}
+
+tbody tr th:first-child {
+        padding-left: 1rem;
+}
+
+tbody tr th:last-child {
+        display: flex;
+        align-items: center;
+}
+
+.download-icon {
+        width: 1.5rem;
+        height: 1.5rem;
+}
+
+
+/* Responsive */
+
+@media (max-width:1000px) {
+        html {
+                font-size: 12px;
+        }
+
+        .home-page form {
+
+                padding: 2rem 3rem;
+        }
+}
+
+@media (max-width:700px) {
+        .album-item {
+                width: 40%;
+                height: 35rem;
+        }
+        .home-page form {
+                padding: 2rem 2rem;
+        }
+        .home-page form input {
+                width: 100%;
+        }
+        .button {
+                margin: 1rem 0rem;
+                padding: .5rem;
+        }
+}
+
+@media (max-width:650px) {
+        html {
+                font-size: 9px;
+        }
+
+        .album-item {
+                width: 80%;
+        }
+
+        .home-page form input {
+                width: 100%;
+        }
+}
+
+

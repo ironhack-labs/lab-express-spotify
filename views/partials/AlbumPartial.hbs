@@ -1,7 +1,7 @@
-                {{#isdefined this.images.[2].url}}
-                <img src={{this.images.[2].url}} alt="{{this.name}}" class="album-item-image">
-                {{else}}
-                <img src="/images/spotify-background.jpeg" alt="{{this.name}}" class="album-item-image">
-                {{/isdefined}}
+{{#isdefined this.images.[1].url}}
+<img src={{this.images.[1].url}} alt="{{this.name}}" class="album-item-image">
+{{else}}
+<img src="/images/spotify-background.jpeg" alt="{{this.name}}" class="album-item-image">
+{{/isdefined}}
 
-                <p class="album-item-name">{{this.name}}</p>
+<p class="album-item-name">{{this.name}}</p>

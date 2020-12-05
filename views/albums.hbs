@@ -1,15 +1,13 @@
-<div class="albums-page">
+<h1>Albums for : {{listAlbums.[0].artists.[0].name}}</h1>
+
+<div class="result-page">
         {{#each listAlbums}}
-        <div>
-                {{#isdefined this.images.[2].url}}
-                <img src={{this.images.[2].url}} alt="{{this.name}}" class="album-item-image">
-                {{else}}
-                <img src="/images/spotify-background.jpeg" alt="{{this.name}}" class="album-item-image">
-                {{/isdefined}}
 
-                <p class="album-item-name">{{this.name}}</p>
-                <a href="/albums/tracks/{{this.id}}" class="album-item-link">View Tracks</a>
-
+        <div class="album-item">
+                {{> AlbumPartial}}
+                <a href="/albums/tracks/{{this.id}}" class="album-item-link button">View Tracks</a>
         </div>
+
+
         {{/each}}
 </div>

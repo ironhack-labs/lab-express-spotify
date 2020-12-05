@@ -13,8 +13,6 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-//register partials
-hbs.registerPartials(__dirname + "/views/partials");
 
 //create a helper for displaying images
 hbs.registerHelper('isdefined', function (value, opts) {
@@ -33,6 +31,9 @@ hbs.registerHelper('button', function(page, opts){
                 return "View Tracks"
         }
 })
+
+//register partials
+hbs.registerPartials(__dirname + "/views/partials");
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -75,9 +76,9 @@ app.get("/albums/:artistId", async (req, res) => {
         .getArtistAlbums(req.params.artistId)
         .then(data => {
                 const listAlbums = data.body.items
-                console.log("Artist albums: ", listAlbums);
+                // console.log("Artist albums: ", listAlbums);
                 res.render("albums", {listAlbums})
-                // res.json(data.body.items[0].name)
+                // res.json(listAlbums[0].artists[0].name)
         })
         .catch(err => console.log(err));
 
