@@ -1,0 +1,8 @@
+<div>
+    {{#each database}}
+    <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+    <p>{{this.name}}</p>
+    <a href="/albums/someArtistIdGoesHere">View Albums</a>
+
+    {{/each}}
+</div>
