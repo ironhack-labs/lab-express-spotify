@@ -7,7 +7,7 @@ const hbs = require("hbs");
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
 
-// setting the spotify-api goes here:
+// setting the spotify-api:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
@@ -49,6 +49,40 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
+//route to view albums
+app.get("/albums/:artistId", (req, res) => {
+  // Get an artist
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
+    function (data) {
+      const listOfAlbum = data.body.items;
+      console.log("this is the result", listOfAlbum);
+      res.render("albums", { listOfAlbum });
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+});
+
+// route to  view track
+app.get("/albums/tracks/:trackId", (req, res) => {
+  // Get tracks in an album
+  spotifyApi.getAlbumTracks(req.params.trackId).then(
+    function (data) {
+      console.log(data.body.items);
+      const tracksOfAlbum = data.body.items;
+      res.render("tracks", { tracksOfAlbum });
+    },
+    function (err) {
+      console.log("Something went wrong!", err);
+    }
+  );
+});
+
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
+
+// app.listen(process.env.PORT, () => {
+//     console.log("http://localhost:" + process.env.PORT);
+//   });
