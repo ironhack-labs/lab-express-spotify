@@ -37,12 +37,12 @@ form{
     cursor: pointer;
 }
 
-.artist-search{
+.artist-search, .allAlbums{
     display: flex;
     flex-wrap: wrap;
 }
 
-.allElement{
+.allElement , .albums{
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -51,7 +51,6 @@ form{
 }
 
 .description{
-    /* width: 150%; */
     text-align: center;
     margin: 10px;
 }
@@ -69,3 +68,10 @@ form{
     border-radius: 5px;
 }
 
+.titleOfAlbums{
+    text-align: center;
+}
+
+.imgAlbums{
+    width: 150px;
+}
