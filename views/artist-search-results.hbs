@@ -1,0 +1,15 @@
+<div class="container">
+	<div class="row fluid">
+		{{#each artists}}
+
+		<div class="card">
+			<img src="{{this.images.[0].url}}" class="card-img-top" alt="..." />
+			<div class="card-body">
+				<h5 class="card-title">{{ this.name }}</h5>
+				<a href="/albums/{{ this.id }}" class="btn btn-primary">view albums</a>
+			</div>
+		</div>
+
+		{{/each}}
+	</div>
+</div>
