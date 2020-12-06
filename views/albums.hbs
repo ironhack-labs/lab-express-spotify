@@ -1,8 +1,11 @@
-<h1>Albums</h1>
-<ul>
+<div class="albums">
     {{#each albums}}
-    <li>{{this.name}}</li>
-    <img src="{{this.images.[0].url}}" alt="{{this.name}}" width="150px">
-    <a href="/tracks/{{this.id}}">VIEW TRACKS</a>
+    <div class="albums-grid">
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+        <div class="infos">
+            <p>{{this.name}}</p>
+            <a href="/tracks/{{this.id}}">VIEW TRACKS</a>
+        </div>
+    </div>
     {{/each}}
-</ul>
+</div>
