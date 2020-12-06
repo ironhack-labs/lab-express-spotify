@@ -47,15 +47,25 @@ form{
     flex-direction: column;
     align-items: center;
     margin: 20px;
+    width: 50vh;
 }
 
 .description{
     /* width: 150%; */
     text-align: center;
+    margin: 10px;
+}
+
+.description h1{
+    margin: 10px;
 }
 
 .link{
     text-decoration: none;
-    color: black;
+    color: white;
+    background: coral;
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 5px;
 }
 
