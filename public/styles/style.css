@@ -1,0 +1,16 @@
+body {
+  background: url('http://www.fabuloussavers.com/new_wallpaper/Rock_Show_Music_Wallpapers_freecomputerdesktopwallpaper_2560.jpg');
+  background-size: cover;
+  background-position: fixed;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+#main {
+  height: 100vh;
+}
+
+.card {
+  width: 200px;
+  margin: 40px;
+}

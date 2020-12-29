@@ -1,5 +1,14 @@
-<h1>Spotify Artist Search Engine</h1>
-<form action="/artist-search", method="GET">
-    <input type="search" placeholder="Search for your artist" name="q">
-    <button>Search</button>
-</form>
+<div id="main" class="container d-flex justify-content-center align-items-center">
+ <form class="form-inline" method="GET" action="/artist-search">
+ 	<input
+ 		type="text"
+ 		class="form-control mb-2 mr-sm-2"
+ 		id="inlineFormInputName2"
+         placeholder="Type your artist here"
+         name="q"
+ 	/>
+ 	<button type="submit" class="btn btn-primary mb-2">
+ 		Search
+ 	</button>
+ </form>
+</div> 

@@ -35,19 +35,41 @@ app.get('/', (request, response) => {
   response.render('home');
 });
 
-app.get("/artist-search", (req, res) => {
+app.get('/artist-search', (req, res) => {
+  spotifyApi
+    .searchArtists(req.query.q)
+    .then((data) => {
+      res.render('artist-search-results', { artists: data.body.artists.items });
+    })
+    .catch((err) =>
+      console.log('The error while searching artists occurred: ', err)
+    );
+});
+
+app.get('/albums/:id', (req, res) => {
+  spotifyApi
+    .getArtistAlbums(req.params.id)
+    .then((data) => {
+      res.render('albums', { albums: data.body.items });
+    })
+    .catch((err) =>
+      console.log('The error while searching albums occurred: ', err)
+    );
+});
+
+app.get('/tracks/:id', (req, res) => {
     spotifyApi
-      .searchArtists(req.query.search)
+      .getAlbumTracks(req.params.id)
       .then((data) => {
-        res.render("artist-search-results", { artists: data.body.artists.items });
+        res.render('tracks', { tracks: data.body.items });
       })
       .catch((err) =>
-        console.log("The error while searching artists occurred: ", err)
+        console.log('The error while searching tracks occurred: ', err)
       );
   });
 
 app.get('*', (request, response) => {
-    response.render('error');
+  response.render('error');
 });
 
 app.listen(3000, () =>

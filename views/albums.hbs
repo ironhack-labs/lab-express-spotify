@@ -1,11 +1,11 @@
 <div class="container">
  	<div class="row fluid">
- 		{{#each artists}}
+ 		{{#each albums}}
  		<div class="card">
  			<img src="{{this.images.[0].url}}" class="card-img-top" alt="..." />
  			<div class="card-body">
  				<h5 class="card-title">{{ this.name }}</h5>
- 				<a href="/albums/{{ this.id }}" class="btn btn-primary">View Albums</a>
+ 				<a href="/tracks/{{ this.id }}" class="btn btn-primary">View Tracks</a>
  			</div>
  		</div>
  		{{/each}}
