@@ -51,4 +51,27 @@ app.get(`/albums/:id`, (req,res,next) => {
   });
 });
 
+app.get(`/tracks/Lid`, (req,res,next) => {
+  spotifyApi
+  .getAlbumTracks(req.params.id)
+  .then((data) => {
+    res.render(`view-tracks`, {tracks: data.body.items});
+  })
+  .catch((error) => {
+    console.log(`error showing tracks ${error}`);
+  });
+});
+
+app.get(`/tracks/:id`, (req,res,next) => {
+  spotifyApi
+  .getAlbumTracks(req.params.id)
+  .then((data) => {
+    res.render(`tracks`, {tracks: data.body.items});
+  })
+  .catch((error) => {
+    console.log(`Error while getting tracks ${error}`);
+  })
+});
+
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
