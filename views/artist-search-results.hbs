@@ -1,0 +1,37 @@
+{{!-- {
+    external_urls: {
+      spotify: 'https://open.spotify.com/artist/3nFkdlSjzX9mRTtwJOzDYB'
+    },
+    followers: { href: null, total: 5856979 },
+    genres: [ 'east coast hip hop', 'hip hop', 'pop rap', 'rap' ],
+    href: 'https://api.spotify.com/v1/artists/3nFkdlSjzX9mRTtwJOzDYB',
+    id: '3nFkdlSjzX9mRTtwJOzDYB',
+    images: [ [Object], [Object], [Object] ],
+    name: 'JAY-Z',
+    popularity: 85,
+    type: 'artist',
+    uri: 'spotify:artist:3nFkdlSjzX9mRTtwJOzDYB'
+  }, --}}
+
+
+
+
+<div class="searchResults results">
+    {{#each searchResults}}
+    <div class="searchResultBox">
+    {{#if this.images.[0].url}}
+      <img src="{{this.images.[0].url}}" alt="{{this.name}} album">
+      {{else}}
+      <img src="/images/no-album-art.jpeg" alt="{{this.name}} album">
+      {{/if}}
+        <div class="searchResultBoxText">
+            <h4>{{this.name}}</h4>
+            <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+
+

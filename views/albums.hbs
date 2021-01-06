@@ -1,0 +1,32 @@
+
+<div class="searchResults results">
+    {{#each albumResults}}
+    <div class="searchResultBox">
+     <img src="{{this.images.[0].url}}" alt="album">
+        <div class="searchResultBoxText">
+            <h4>{{this.name}}</h4>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
+
+
+
+{{!-- {
+      album_group: 'album',
+      album_type: 'album',
+      artists: [Array],
+      available_markets: [Array],
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/albums/4FWniI3ta1ws6H3XN4oHnz',
+      id: '4FWniI3ta1ws6H3XN4oHnz',
+      images: [Array],
+      name: 'Delacorte Theatre Act 2',
+      release_date: '2020-07-23',
+      release_date_precision: 'day',
+      total_tracks: 8,
+      type: 'album',
+      uri: 'spotify:album:4FWniI3ta1ws6H3XN4oHnz'
+    }, --}}
+

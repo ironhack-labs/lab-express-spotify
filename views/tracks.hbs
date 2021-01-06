@@ -1,0 +1,29 @@
+
+      {{#each tracksResults}}
+
+  <h2>{{this.name}}</h2>
+  <audio controls>
+  <source src="{{this.preview_url}}" >
+  </audio>
+      
+      {{/each}}
+      
+      
+      
+      
+      
+      {{!-- artists: [Array],
+      available_markets: [Array],
+      disc_number: 1,
+      duration_ms: 178219,
+      explicit: true,
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/tracks/1hax70ddJihyYcW7RlOP84',
+      id: '1hax70ddJihyYcW7RlOP84',
+      is_local: false,
+      name: 'Hero',
+      preview_url: 'https://p.scdn.co/mp3-preview/01b51cf755996f78a1ec82f1dc4088477281a17f?cid=c057f2399cae4f5296543778461096d5',
+      track_number: 8,
+      type: 'track',
+      uri: 'spotify:track:1hax70ddJihyYcW7RlOP84' --}}
+    
