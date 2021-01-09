@@ -13,12 +13,12 @@ height: 100vh
 
 nav{
   background: white;
+  width: 100%;
 }
 
-.results{
-  background: white;
-  height: 100vh;
-}
+
+
+
 
 .searchResults {
   display: flex;
@@ -36,6 +36,7 @@ nav{
   justify-content: center;
   align-items: center;
   flex-direction: column;
+ margin: 0 1.5vw 25px;
 }
 
 .searchResultBox > img {
@@ -46,7 +47,7 @@ nav{
 .searchResultBoxText {
   background-color: gray;
   width: 100%;
-  height: 30%;
+  height: fit-content;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -56,3 +57,72 @@ nav{
 .searchResultBoxText h4 {
   margin: 0;
 }
+
+
+.results{
+  background: white;
+  height: 100vh;
+}
+
+.flexTitle{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  background-color: rgb(52, 52, 52);
+  align-items: flex-start;
+
+}
+
+.flexTitle h2{
+  color: lightgray;
+  padding: 0px 125px 0 15px;
+}
+.flexTracks h4{
+  padding-left: 15px;
+}
+
+.flexTracks{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(246, 243, 243);
+  border-bottom: 2px solid white;
+}
+
+
+.searchDiv{
+display: flex;
+margin: calc(20% - 21px)  0; 
+background: rgba(255, 255, 255, 0.324);
+height: 220px;
+width: 700px;
+align-items: center;
+justify-content: center;
+}
+
+.searchForm{
+  height: 75px;
+  width: 75%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searchForm input{
+  width: 75%;
+  padding: 7px;
+}
+
+
+.searchForm button{
+    width: 25%;
+    background: red;
+    border: none;
+    padding: 10;
+    padding: 10px 10px;
+  color: white;
+}
+
+

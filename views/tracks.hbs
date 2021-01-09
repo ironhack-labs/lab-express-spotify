@@ -1,13 +1,15 @@
+<div class="results" >
+  <div class="flexTitle" ><h2>Title</h2> <h2>Listen</h2> </div>
+{{#each tracksResults}}
 
-      {{#each tracksResults}}
-
-  <h2>{{this.name}}</h2>
-  <audio controls>
-  <source src="{{this.preview_url}}" >
-  </audio>
-      
-      {{/each}}
-      
+  <div class="flexTracks">
+    <h4>{{this.name}}</h4>
+   <audio controls>
+    <source src="{{this.preview_url}}" >
+    </audio>
+  </div>
+  {{/each}}
+</div>    
       
       
       

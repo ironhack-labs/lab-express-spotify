@@ -25,6 +25,8 @@ app.use(express.static(__dirname + '/public'));
 
 // Our routes go here:
 app.use('/', require('./routes/index'))
+
+
 // same as above 
 // const index = require('./routes/index');
 // app.use('/', index);  //this down here on bottom
@@ -33,3 +35,5 @@ app.use('/', require('./routes/index'))
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+
