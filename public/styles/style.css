@@ -1,0 +1,7 @@
+.searchResultBox {
+    height: 300px;
+    width: 200px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+};
