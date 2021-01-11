@@ -1,0 +1,8 @@
+{{#each this}}
+{{!-- name --}}
+<h3>{{name}}</h3>
+{{!-- cover --}}
+<img src={{images.0.url}} height="200" alt={{name}} sizes="" srcset="">
+{{!-- button --}}
+<a href="/albums/{{this.id}}/tracks">View Tracks</a>
+{{/each}}
