@@ -1,0 +1,13 @@
+<div class="container mb-3">
+<div class="row">
+    {{#each items as | item |}}
+        <div class="card col-3">
+            <img class="card-img-top" src="{{ item.images.0.url }}">
+            <div class="card-body">
+            <h3>Album: {{ item.name }}</h3>
+            <a class="btn btn-primary" href="/tracks/{{ item.id }}">Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
+</div>

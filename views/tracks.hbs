@@ -1,0 +1,11 @@
+{{#each items as | item |}}
+<div class="container mb-3">
+    <div class="card">
+        <div class="card-body">
+           <h3>Track: {{ item.name }}</h3>
+           <audio controls src="{{ item.preview_url }}"></audio>
+        </div>
+    </div>
+</div>
+
+{{/each}}
