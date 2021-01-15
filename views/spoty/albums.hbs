@@ -1,0 +1,24 @@
+<div class="container ">
+
+        <div class="mx-auto">
+            <h1 class="text-center my-4 text-white">Albums of {{artistName}}</h1>
+        </div>
+
+        <div class="row ">
+
+        {{#each artistAlbumsArr as |album| }}
+          
+            <div class="col-4">
+                <div class="column card m-3 bg-secondary">
+                    <div class="mx-auto my-3 px-3 mt-4">
+                         <img src="" alt="" style="width:100px; height:200px;">
+                    </div>
+                    <p class="text-center px-3 text-white">{{album.name}}</p>
+                    <a type="submit" name="albumId" class="mx-auto bg-danger p-2  rounded mb-3 text-white" href="/tracks/{{album.id}}" >View Tracks</a>
+                </div>
+            </div>
+          
+        {{/each}}
+    </div>
+
+</div>

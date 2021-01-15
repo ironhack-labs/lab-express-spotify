@@ -1,0 +1,13 @@
+    
+<div class="container card mx-auto my-5" style="max-width: 400px;">
+    <div class="py-3">
+         {{#each previewTracks as |track|}}
+             <figure class="d-flex flex-column align-items-center card bg-secondary py-3">
+                 <figcaption class="text-white mb-3">{{track.name}}</figcaption>
+                 <audio controls src={{track.preview_url}}>
+                    <code>audio</code> element.
+                 </audio>
+             </figure>
+         {{/each}}
+    </div>
+</div>
