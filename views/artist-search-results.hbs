@@ -1,0 +1,10 @@
+<h2>Artist Search Result</h2>
+<ul>
+    {{#each data.items}}
+    <div class='searchResultBox'>
+    <h5>{{name}}</h5>
+    <img src={{images.0.url}} alt="" height="200" srcset="">
+    <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
+</ul>  
