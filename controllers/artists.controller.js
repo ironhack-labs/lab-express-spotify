@@ -19,9 +19,32 @@ module.exports.search = (req, res, next) => {
 spotifyApi
     .searchArtists(req.query.artist)
         .then(data => {
-            console.log('The received data from the API: ', data.body);
             res.render('artist-search-results', { data: data.body.artists })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 }
 
+module.exports.albums = (req, res, next) => {
+    const {id} = req.params    
+    spotifyApi
+    .getArtistAlbums(id)
+        .then(data =>  {
+            res.render('albums', {albums: data.body.items})
+
+        }, 
+        function(err) {
+            console.error(err);
+        });
+} 
+
+module.exports.tracks = (req, res, next) => {    
+    spotifyApi.getAlbumTracks(req.params.id, { limit : 5, offset : 1 })
+        .then(data =>  {
+        res.render('tracks', {tracks: data.body.items})
+            }, 
+        function(err) {
+            console.log('Something went wrong!', err);
+  });
+
+
+}
