@@ -1,0 +1,10 @@
+<div class="tracks-container">
+  {{#each tracks.items as |track|}}
+    <div class="track-container bg-dark">
+      <h5 class="card-title mb-3">{{track.name}}</h5>
+      <audio controls>
+        <source src="{{track.preview_url}}" type="audio/mpeg">
+    </audio>
+    </div>
+  {{/each}}
+</div>

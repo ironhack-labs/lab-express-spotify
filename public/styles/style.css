@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home-container {
+    height: 95vh;
+    width: 100%;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+}
+
+.form-container {
+    width: 500px;
+    height: 350px;
+    position: absolute;
+	top:0;
+	bottom: 0;
+	left: 0;
+    right: 0;
+    margin: 35vh 0 0 10vw;
+    padding: 30px;
+    padding-bottom: 50px;
+    background-color: rgba(0, 0, 0, 0.425);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+button {
+    width: 100%;
+}
+
+.form-container h1 {
+    color: white;
+    font-weight: 700;
+}
+
+.container {
+    width: max-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-bottom: 100px;
+    margin-top: 50px;
+}
+
+nav .container-fluid {
+    padding: 0 10vw 0 10vw;
+}
+
+nav .navbar-brand {
+    font-weight: 700;
+}
+
+h5 {
+    color: white;
+}
+
+.tracks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 70px 0 100px 0;
+}
+
+.track-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 800px;
+    padding: 30px;
+    margin-bottom: 25px;
+    border-radius: 5px;
+}

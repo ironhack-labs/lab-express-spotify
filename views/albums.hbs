@@ -1,0 +1,11 @@
+<div class="container">
+  {{#each albums.items as |album|}}
+  <div class="card text-center m-3" style="width: 18rem;">
+    <img src="{{album.images.0.url}}" class="card-img-top" alt="holi">
+    <div class="card-body bg-dark">
+      <h5 class="card-title mb-3">{{album.name}}</h5>
+      <a href="/album/{{album.id}}/tracks" class="btn btn-warning">View tracks</a>
+    </div>
+  </div>
+  {{/each}}
+</div>

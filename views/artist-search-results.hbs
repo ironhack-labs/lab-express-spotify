@@ -1,0 +1,11 @@
+<div class="container">
+  {{#each artists as |artist|}}
+  <div class="card text-center m-3" style="width: 18rem;">
+    <img src="{{#if artist.images.0.url}}{{artist.images.0.url}}{{else}}../images/microphone.jpg{{/if}}" class="card-img-top" alt="{{artist.name}}" style="height:286px;">
+    <div class="card-body bg-dark">
+      <h5 class="card-title mb-3">{{artist.name}}</h5>
+      <a href="/albums/{{artist.id}}" class="btn btn-warning">View Albums</a>
+    </div>
+  </div>
+  {{/each}}
+</div>
