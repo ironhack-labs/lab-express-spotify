@@ -1,0 +1,24 @@
+html {
+
+        background: url("/images/spotify-background.jpeg") no-repeat center center fixed; 
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
+}
+
+body {
+    background-color:rgba(0, 0, 0, 0.0) !important
+}
+
+#search-box {
+    background-color:rgba(255, 255, 255, 0.5)
+}
+
+.vertical-center {
+    min-height: 100%;  /* Fallback for browsers do NOT support vh unit */
+    min-height: 100vh; /* These two lines are counted as one :-)       */
+  
+    display: flex;
+    align-items: center;
+  }

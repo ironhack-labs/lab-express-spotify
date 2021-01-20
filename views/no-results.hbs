@@ -1,0 +1,17 @@
+<div id="main-bg" class="container-fluid vertical-center">
+    <div id="search-box" class="container pb-5 mb-5">
+        <p></p>
+        <h2 class="text-center">No artists found :(</h2>
+        <h2 class="text-center">Try again!</h2>
+        <form action="/artist-search", method="GET">
+            <div class="mb-3 pb-4 pt-2 m-4 .bg-white">
+                <input type="text" class="form-control" id="formGroupExampleInput" name="name" placeholder="Artist name" required>
+            </div>
+            <div class="position-relative">
+                <div class="position-absolute top-0 start-50 translate-middle">
+                    <button type="submit" class="btn btn-danger mb-3 mt-3">Search for an artist</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>

@@ -1,0 +1,24 @@
+<div class="container vertical-center">
+<table class="table g-4 p-5">
+  <thead>
+    <tr class="table-dark">
+      <th scope="col">#</th>
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each results.items}}
+    <tr class="table-light">
+      <th scope="row">{{track_number}}</th>
+      <td>{{name}}</td>
+      <td>
+        <audio controls src="{{preview_url}}">
+            Your browser does not support the <code>audio</code> element.
+        </audio>
+    </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
+</div>
