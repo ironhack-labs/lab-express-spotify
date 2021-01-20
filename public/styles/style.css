@@ -4,3 +4,8 @@ body {
     background-size: cover;
     background-color: black;
 }
+
+.card img {
+    height: 220px;
+    object-fit: cover;
+}

@@ -1,9 +1,29 @@
-<div class="container">
+{{!-- <div class="container">
     <div class="row row-cols-lg-4 row-cols-md-3">
         {{#each artists}}
         <div class="col">
+            <img src="{{images.[0].url}}" onerror="/images/spotify-background.jpeg" alt="{{this.name}}">
             <h3>{{name}}</h3>
             <button>View Albums</button>
+        </div>
+        {{/each}}
+    </div>
+</div> --}}
+
+<div class="container mx-auto">
+    <div class="row row-cols-lg-4 row-cols-md-3">
+        {{#each artists}}
+        <div class="col mx-1">
+            <div class="card text-white bg-secondary" style="width: 18rem;">
+                <img class="card-img-top" src="{{images.[0].url}}" alt="{{this.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk
+                        of
+                        the card's content.</p> --}}
+                    <a href="/albums" class="btn btn-danger">View Albums</a>
+                </div>
+            </div>
         </div>
         {{/each}}
     </div>
