@@ -9,7 +9,3 @@ body {
     height: 220px;
     object-fit: cover;
 }
-
-audio {
-    object-fit: cover;
-}

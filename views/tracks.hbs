@@ -1,22 +1,22 @@
-<div class="container mx-auto">
-    <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
-        {{#each tracks}}
-        <div class="col mx-3 my-2 d-flex align-items-strecth">
-            <div class="card text-white bg-secondary" style="width: 18rem;">
-                <div class="card-body">
-                    <h5 class="card-title">{{name}}</h5>
-                    {{!-- <p class="card-text">Some quick example text to build on the card title and make up the bulk
-                        of
-                        the card's content.</p> --}}
-                    <audio
-                        controls
-                        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-    </div>
-</div>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+      {{#each tracks}}
+    <tr>
+      <th scope="row">{{name}}</th>
+      <td>
+        <audio 
+            controls 
+            src="{{preview_url}}">
+            <p>Your browser does not support the <code>audio</code> element<p>.
+        </audio>
+      </td>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
