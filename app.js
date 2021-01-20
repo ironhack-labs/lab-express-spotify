@@ -26,17 +26,23 @@ app.get('/artist-search', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.search)
         .then(data => {
-            console.log('The received data from the API: ', data.body.artists.items[0]);
-            // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
             const artists = data.body.artists.items;
             res.render('artist-search-results', {artists: artists});
-            //res.send(artists)
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
-// app.get('/artist-search-results/:id', (req, res, next) => {
-//     res.render('artist-search-results', data.body)
-// })
+app.get('/albums/:id', (req, res, next) => {
+    spotifyApi.getArtistAlbums(req.params.id).then(
+        function(data) {
+          console.log('Artist albums', data.body.items);
+          const albums = data.body.items;
+          res.render('albums', {albums: albums});
+        },
+        function(err) {
+          console.error(err);
+        }
+    );
+})
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
