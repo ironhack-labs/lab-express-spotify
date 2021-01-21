@@ -78,7 +78,6 @@ app.get('/playlist/:id', (req, res, next) => {
     spotifyApi
         .getPlaylist(req.params.id)
         .then(function(data) {
-            console.log(data.body.tracks.items)
             res.render('playlist', { playlists:  data.body.tracks.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -87,7 +86,6 @@ app.get('/playlist/:id', (req, res, next) => {
 app.get('/category/:id', (req, res, next) => {
     spotifyApi.getPlaylistsForCategory(req.params.id, { limit: 36, country: 'ES'})
     .then(function(data) {
-        console.log(data.body.playlists.items);
         res.render('category', { playlists:  data.body.playlists.items})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
