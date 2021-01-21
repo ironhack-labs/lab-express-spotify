@@ -20,8 +20,11 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
+//Partials
+hbs.registerPartials(__dirname + '/views/partials');
+
 // Our routes go here:
-app.get('/', (req, res, next) => res.render('index'));
+app.get('/', (req, res, next) => res.render('index', {layout: false}));
 
 app.get('/artist-search', (req, res, next) => {
     spotifyApi
@@ -46,9 +49,8 @@ app.get('/albums/:id', (req, res, next) => {
 })
 
 app.get('/tracks/:id', (req, res, next) => {
-    spotifyApi.getAlbumTracks(req.params.id, { limit : 30, offset : 1 })
+    spotifyApi.getAlbumTracks(req.params.id, { limit : 6, offset : 1 })
   .then(function(data) {
-    console.log(data.body);
     const tracks = data.body.items;
     res.render('tracks', {tracks: tracks});
   }, function(err) {

@@ -1,11 +1,26 @@
-body {
+.home-page {
     background-image: url("../images/spotify-background.jpeg");
     background-position: center;
     background-size: cover;
     background-color: black;
+    height: 10rem;
+    background-repeat: no-repeat;
 }
 
 .card img {
     height: 220px;
     object-fit: cover;
+}
+
+img[src="images/spotify-icon-white.png"] {
+    width: 50px;
+    z-index: 1;
+}
+
+.spotify-green {
+    color: #00B172;
+}
+
+.navbar {
+    background-color: #00B172;
 }

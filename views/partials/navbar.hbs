@@ -1,0 +1,11 @@
+<nav class="navbar navbar-light justify-content-between fixed-top px-5">
+    <div>
+        <a class="navbar-brand" href="/"><img src="images/spotify-icon-white.png" alt="spotify-logo.png"></a>
+    </div>
+    <form class="form-inline" action="/artist-search" method="GET">
+        {{!-- <input type="search" name="search" id="search-input" placeholder="Write artist name here"> --}}
+        <input class="form-control mr-sm-2 col" name="search" type="search" placeholder="Search for an artist"
+            aria-label="Search">
+        <button class="col">Search</button>
+    </form>
+</nav>
