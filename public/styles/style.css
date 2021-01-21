@@ -1,5 +1,24 @@
 body {
+  position: relative;
+  padding-top: 50px;
   background-image: url("/images/spotify-background.jpeg");
+  background-position: 0 0;
   background-repeat: no-repeat;
   background-size: cover;
+  background-color: black;
 }
+
+header {
+  height: 750px;
+  margin: auto;
+}
+
+.formSr {
+  padding: 30px 100px 30px 100px;
+}
+
+.navbg {
+  background-color: rgba(255, 255, 255, 0.774);
+  /* width: 400px; */
+}
+
