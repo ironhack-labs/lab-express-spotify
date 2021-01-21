@@ -1,3 +1,58 @@
-<form action="/artist-search" method="GET">
-    <input class="form-control form-control-lg" type="text" name="artist" placeholder="Search artist">
-</form>
+<div class="search-heading pt-5 pb-2 py-md-5">
+    <div class="container">
+        <div class="heading mb-4">
+            <h1 class="mb-1 display-4">Search an Artist</h1>
+            <p>Cuanto más escuches, mejores serán las recomendaciones.</p>
+        </div>
+
+        <form action="/artist-search" method="GET">
+            <div class="row">
+                <div class="col-sm-10 mb-2 mb-sm-0">
+                    <input class="form-control form-control-lg" type="text" name="artist" placeholder="Search artist">
+                </div>
+                <div class="col-sm-2 d-grid">
+                    <button type="submit" class="btn btn-lg btn-light btn-block">Search</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<div class="container mb-5">
+    <div class="row mt-5">
+        {{#each categories}}
+            <div class="col-6 col-sm-2 px-2">
+                <a href="/category/{{id}}" class="card mb-3">
+                    <div class="card-body p-2">
+                        <div class="row justify-content-center align-items-center">
+                            <div class="col">
+                                <img src="{{icons.[0].url}}" class="rounded img-fluid" alt="">
+                            </div>
+                            <div class="col-8">
+                                <span class="pl-3">{{name}}</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+
+    <div class="heading mt-5">
+        <h2 class="mb-1">Top Playlists</h2>
+    </div>
+
+    <div class="row mt-5">
+        {{#each playlists}}
+            <div class="col-6 col-sm-2 px-2">
+                <a href="/playlist/{{id}}" class="card mb-3">
+                    <div class="card-body">
+                        <img src="{{images.[0].url}}"class="img-fluid rounded mb-3" alt="">
+                        <h6 class="mb-0">{{name}}</h6>
+                        <small>{{dotdotdot description}}</small>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>

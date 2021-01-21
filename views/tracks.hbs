@@ -1,5 +1,35 @@
-{{#each tracks}}
-    {{name}}
-    <audio src="{{preview_url}}" preload="auto" controls></audio>
-    <br>
-{{/each}}
+<div class="container my-5">
+
+    {{#each tracks}}
+
+        <div class="card mb-3">
+            <div class="card-body">
+                <div class="row align-items-center justify-content-between">
+                    <div class="col-8">
+                        {{name}}<br>
+                        {{#each artists}} <small>{{name}}</small>{{/each}}
+                    </div>
+                    <div class="col">
+                        <div class="text-center">
+                            <button data-track="{{id}}" data-url="{{preview_url}}" class="btn btn-light playBtn">Play</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    {{/each}}
+
+    <script>
+        let audio = undefined
+        document.querySelectorAll('.playBtn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                if(audio !== undefined){
+                    audio.pause()
+                }
+                audio = new Audio(btn.dataset.url);
+                audio.play()
+            })
+        });
+    </script>
+</div>

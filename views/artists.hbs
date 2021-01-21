@@ -1,6 +1,23 @@
-{{#each artists}}
-    <img src="{{images.[0].url}}" height="45px" alt="">
-    {{name}}
-    <a href="/albums/{{id}}">View Albums</a>
-    </br></br>
-{{/each}}
+<div class="search-heading py-5">
+    <div class="container">
+        <div class="heading mb-4">
+            <h1 class="mb-1 display-4">Artistas</h1>
+            <p>Estos son los resultados para su búsqueda: "{{name}}"</p>
+        </div>
+    </div>
+</div>
+
+<div class="container my-5">
+    <div class="row mt-5">
+        {{#each artists}}
+            <div class="col-6 col-sm-2">
+                <a href="/albums/{{id}}" class="card mb-3">
+                    <div class="card-body">
+                        <img src="{{images.[0].url}}"class="img-fluid rounded mb-3" alt="">
+                        <h6 class="mb-0">{{name}}</h6>
+                    </div>
+                </a>
+            </div>
+        {{/each}}
+    </div>
+</div>
