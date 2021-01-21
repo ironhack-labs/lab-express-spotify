@@ -1,0 +1,22 @@
+html{
+   background-image: url('../images/spotify-background.jpeg');
+   background-size: cover;
+  
+  
+}
+
+.formu{
+    position: absolute;
+    padding-top: 300px;
+    padding-left: 380px;
+}
+
+.form-tex-input{
+    width: 500px;
+
+}
+.btn{
+    margin-left: 200px;
+    background: red;
+    
+}
