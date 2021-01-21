@@ -92,5 +92,5 @@ app.get('/category/:id', (req, res, next) => {
 })
 
 
-const PORT = process.env.PORT
-app.listen(PORT, () => console.log(`My Spotify project running on port ${PORT} 🎧 🥁 🎸 🔊`));
+const port = process.env.PORT || 3000
+app.listen(port, () => console.log(`My Spotify project running on port ${PORT} 🎧 🥁 🎸 🔊`));
