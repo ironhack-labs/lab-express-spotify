@@ -40,7 +40,7 @@ app.get('/', (req, res, next) => {
     Promise
         .all([promise1, promise2])
         .then(data => {
-            res.render('home', { title: 'Spotify api', playlists:  data[1].body.playlists.items, categories: data[0].body.categories.items })
+            res.render('home', { title: 'Spotify api | By Manuel Carrillo', playlists:  data[1].body.playlists.items, categories: data[0].body.categories.items })
         })
         .catch(err => console.log('The error while searching playlists occurred: ', err));
 })
@@ -49,7 +49,7 @@ app.get('/artist-search', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.artist)
         .then(data => {
-            res.render('artists', { artists: data.body.artists.items, name: req.query.artist, title: 'Artistas - Resultados para su búsqueda'})
+            res.render('artists', { title: 'Artist search', artists: data.body.artists.items, name: req.query.artist, title: 'Artistas - Resultados para su búsqueda'})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -58,7 +58,7 @@ app.get('/albums/:id', (req, res, next) => {
     spotifyApi
         .getArtistAlbums(req.params.id)
         .then(data => {
-            res.render('albums', { albums: data.body.items })
+            res.render('albums', { title: 'Albums', albums: data.body.items })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -67,7 +67,7 @@ app.get('/tracks/:id', (req, res, next) => {
     spotifyApi
         .getAlbumTracks(req.params.id)
         .then(data => {
-            res.render('tracks', { tracks: data.body.items })
+            res.render('tracks', { title: 'Artist tracks', tracks: data.body.items })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -78,7 +78,7 @@ app.get('/playlist/:id', (req, res, next) => {
     spotifyApi
         .getPlaylist(req.params.id)
         .then(function(data) {
-            res.render('playlist', { playlists:  data.body.tracks.items})
+            res.render('playlist', { title: 'Playlists', playlists:  data.body.tracks.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -86,7 +86,7 @@ app.get('/playlist/:id', (req, res, next) => {
 app.get('/category/:id', (req, res, next) => {
     spotifyApi.getPlaylistsForCategory(req.params.id, { limit: 36, country: 'ES'})
     .then(function(data) {
-        res.render('category', { playlists:  data.body.playlists.items})
+        res.render('category', { title: 'Category playlists', playlists:  data.body.playlists.items})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 })
