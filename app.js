@@ -13,7 +13,7 @@ app.use(express.static(__dirname + '/public'));
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET
-  });
+});
 
 // Retrieve an access token
 spotifyApi
