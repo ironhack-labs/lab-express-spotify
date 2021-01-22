@@ -5,13 +5,22 @@
         <div class="card mb-3">
             <div class="card-body">
                 <div class="row align-items-center justify-content-between">
+                    <div class="col-2 col-sm-1">
+                        <img src="/images/placeholder.png" class="img-fluid rounded" alt="">
+                    </div>
                     <div class="col-8">
-                        {{track.name}}<br>
+                        <h6 class="mb-0">{{track.name}}</h6>
                         {{#each track.artists}} <small>{{name}}</small>{{/each}}
                     </div>
-                    <div class="col">
+                    <div class="col-2">
                         <div class="text-center">
-                            <button data-track="{{id}}" data-url="{{track.preview_url}}" class="btn btn-light playBtn">Play</button>
+                            {{#if track.preview_url}}
+                                <button data-track="{{id}}" data-url="{{track.preview_url}}" class="btn btn-light btn-circle playBtn">
+                                    <i class="fas fa-play"></i>
+                                </button>
+                            {{else}}
+                                <small>No disponible</small>
+                            {{/if}}
                         </div>
                     </div>
                 </div>
@@ -22,14 +31,34 @@
 
     <script>
         let audio = undefined
-        document.querySelectorAll('.playBtn').forEach(btn => {
+        let btns = document.querySelectorAll('.playBtn')
+
+        // Pause music
+        let pauseMusic = (btn) => {
+            btns.forEach(btn => {
+                btn.innerHTML = '<i class="fas fa-play"></i>'
+            });
+            btn.innerHTML = '<i class="fas fa-pause"></i>'
             btn.addEventListener('click', () => {
-                if(audio !== undefined){
-                    audio.pause()
-                }
-                audio = new Audio(btn.dataset.url);
-                audio.play()
+                btn.innerHTML = '<i class="fas fa-play"></i>'
+                audio.pause()
+                setListener()
             })
-        });
+        }
+
+        const setListener = () => {
+            btns.forEach(btn => {
+                btn.addEventListener('click', () => {
+                    if(audio){
+                        audio.pause()
+                    }
+                    audio = new Audio(btn.dataset.url);
+                    audio.play()
+
+                    pauseMusic(btn)
+                })
+            });
+        }
+        setListener()
     </script>
 </div>

@@ -68,3 +68,27 @@ h1, h2, .display-4 {
 .search-heading {
     background-image: linear-gradient(#08a06e 0%, #08a06e62 50%, #08a06e00 100%);
 }
+
+.search-heading-blue {
+    background-image: linear-gradient(#5099f26e 0%, #5099f262 50%, #5099f200 100%);
+}
+
+.search-heading-orange {
+    background-image: linear-gradient(#fc63366e 0%, #fc633662 50%, #fc633600 100%);
+}
+
+
+.btn-circle {
+    width: 40px;
+    height: 40px;
+    padding: 8px 0px;
+    border-radius: 20px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 1.42857;
+    transition: 0.3s;
+}
+
+.btn-circle:hover {
+    transform: scale(1.15);
+}

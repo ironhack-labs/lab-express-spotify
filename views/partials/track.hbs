@@ -1,0 +1,21 @@
+<div class="card mb-3">
+    <div class="card-body">
+        <div class="row align-items-center justify-content-between">
+            <div class="col-8">
+                {{name}}<br>
+                {{#each artists}} <small>{{name}}</small>{{/each}}
+            </div>
+            <div class="col">
+                <div class="text-center">
+                    {{#if preview_url}}
+                        <button data-track="{{id}}" data-url="{{preview_url}}" class="btn btn-light btn-circle playBtn">
+                            <i class="fas fa-play"></i>
+                        </button>
+                    {{else}}
+                        <small>No disponible</small>
+                    {{/if}}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
