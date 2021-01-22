@@ -34,15 +34,12 @@ app.get('/', (req, res, next) => {
 
 
 app.get('/search-artist', (req, res, next) => {
-  console.log(req.query.name)
   spotifyApi
   .searchArtists(req.query.name)
   .then(data => {
-    console.log(data.body);
     if (data.body.artists.total == 0) {
       res.render('no-results')
   } else {
-      console.log(data.body.artists.items)
       res.render('artist-search-results', { results: data.body.artists})
   }
   })

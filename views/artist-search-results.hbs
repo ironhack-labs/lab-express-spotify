@@ -1,6 +1,9 @@
-<h1>hi</h1>
-{{#each results.items}}
-
-{{> artist }}
-
-{{/each}}
+<div class="container">
+    <div class="row">
+        {{#each results.items}}
+        <div class="col  py-3">
+            {{> artist }}
+        </div>
+        {{/each}}
+    </div>
+</div>
