@@ -1,15 +1,15 @@
 <table class="table">
   <thead class="thead-dark">
     <tr>
-      <th scope="col">Title</th>
-      <th scope="col">Listen</th>
+      <th scope="col-6">Title</th>
+      <th scope="col-6" class="d-flex justify-content-center">Listen</th>
     </tr>
   </thead>
   <tbody>
       {{#each tracks}}
     <tr>
       <th scope="row">{{name}}</th>
-      <td>
+      <td class="d-flex justify-content-end">
         <audio 
             controls 
             src="{{preview_url}}">

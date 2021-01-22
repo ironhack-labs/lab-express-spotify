@@ -1,7 +1,15 @@
 <div class="container mx-auto">
     <div class="row row-cols-lg-4 row-cols-md-3 row-cols-sm-2">
         {{#each albums}}
-        {{> artistPartial}}
+        <div class="col mx-3 my-2 d-flex justify-content-evenly align-items-stretch">
+            <div class="card text-white bg-secondary d-flex justify-content-center" style="width: 18rem;">
+                <img class="card-img-top" src="{{images.[0].url}}" alt="{{this.name}}">
+                <div class="card-body align-items-end">
+                    <h5 class="card-title">{{name}}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-danger">View Albums</a>
+                </div>
+            </div>
+        </div>
         {{/each}}
     </div>
 </div>

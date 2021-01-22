@@ -1,11 +1,12 @@
-<nav class="navbar navbar-light justify-content-between fixed-top px-5">
-    <div>
-        <a class="navbar-brand" href="/"><img src="images/spotify-icon-white.png" alt="spotify-logo.png"></a>
+<nav class="navbar navbar-light justify-content-between align-items-baseline fixed-top px-5">
+    <div class="col-4">
+        <a class="navbar-brand" href="/"><img src="images/spotify-icon-white.png" alt="spotify-icon.png"></a>
     </div>
-    <form class="form-inline" action="/artist-search" method="GET">
-        {{!-- <input type="search" name="search" id="search-input" placeholder="Write artist name here"> --}}
-        <input class="form-control mr-sm-2 col" name="search" type="search" placeholder="Search for an artist"
-            aria-label="Search">
-        <button class="col">Search</button>
-    </form>
+    <div class="d-flex flex-row align-items-center justify-content-center col-8">
+        <form class="form-inline d-flex flex-row" action="/artist-search" method="GET">
+            <input class="form-control mx-2 col-md-8 col-sm-6" name="search" type="search" placeholder="Search"
+                aria-label="Search">
+            <button class="btn col-md-4 col-sm-6 btn-danger">Search</button>
+        </form>
+    </div>
 </nav>

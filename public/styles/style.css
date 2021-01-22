@@ -1,10 +1,24 @@
+body>div {
+    height: 46rem;
+}
+
 .home-page {
     background-image: url("../images/spotify-background.jpeg");
     background-position: center;
     background-size: cover;
     background-color: black;
-    height: 10rem;
+    height: 50rem;
     background-repeat: no-repeat;
+}
+
+.white-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 4rem 12rem;
+}
+
+.layout {
+    padding-top: 4rem;
+    /* height: 100rem; */
 }
 
 .card img {
@@ -23,4 +37,42 @@ img[src="images/spotify-icon-white.png"] {
 
 .navbar {
     background-color: #00B172;
+}
+
+textarea:focus,
+input[type="text"]:focus,
+input[type="password"]:focus,
+input[type="datetime"]:focus,
+input[type="datetime-local"]:focus,
+input[type="date"]:focus,
+input[type="month"]:focus,
+input[type="time"]:focus,
+input[type="week"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="url"]:focus,
+input[type="search"]:focus,
+input[type="tel"]:focus,
+input[type="color"]:focus,
+.uneditable-input:focus,
+button:focus,
+input[type="text"]:active {
+    border-color: rgba(0, 177, 114, 1);
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 177, 114, 0.6);
+    outline: 0 none;
+}
+
+audio:focus {
+    border-color: rgba(0, 177, 114, 1);
+    border-radius: 2rem 2rem;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset, 0 0 8px rgba(0, 177, 114, 0.6);
+    outline: 0 none;
+}
+
+audio {
+    width: 20rem;
+}
+
+a:hover {
+    color: white;
 }
