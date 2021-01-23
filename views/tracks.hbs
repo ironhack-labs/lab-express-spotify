@@ -1,0 +1,24 @@
+<nav class='track-nav'>
+
+    <div class='title-nav'>
+        <h2>Title</h2>
+    </div>
+
+    <div class='listen-nav'>
+        <h2>Listen</h2>
+    </div>
+
+</nav>
+
+<div class='tracks-container'>
+    {{#each tracks}}
+    <div class='track' data-aos='fade-up'>
+        <h2>{{this.name}}</h4>
+        <audio controls src="{{this.preview_url}}">Audio</audio>
+    </div>
+    {{/each}}
+</div>
+
+
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script src='/src/main.js' type='text/javascript'></script>
