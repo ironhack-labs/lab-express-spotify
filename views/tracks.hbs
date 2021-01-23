@@ -1,0 +1,14 @@
+<div class="pages">
+
+           {{#each tracksData }} 
+ 
+    <div class="card sm-3">
+        <div class="card-body sm">
+           <h3>Track: {{ this.name }}</h3>
+           <audio controls src="{{ this.preview_url }}"></audio>
+        </div>
+    </div>
+
+
+      {{/each}}
+        </div>

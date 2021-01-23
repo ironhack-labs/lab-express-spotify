@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    backgroun
+}
+
+
+.container {
+    margin: 25% 25%;
+    padding: 10px 50px 10px 50px;
+    background-color: rgba(255,255,255,0.5);
+    width: 600px;
+}
+.btn {
+    margin-top: 10px;
+    margin-left: 140px;
+}
+
+.pages {
+    margin: 2% 5% 0 5%;
+}
+
+.sm-3 {
+    width: 450px;
+    background-color: lightslategrey;
+}
