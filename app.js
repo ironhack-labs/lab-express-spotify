@@ -72,9 +72,6 @@ app.get("/tracks/:albumId", (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-app.get("/users", (req, res, next) => {
-  res.render("users-search.hbs");
-});
 
 app.get("/playlists", (req, res, next) => {
   res.render("playlists-search.hbs");
