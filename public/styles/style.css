@@ -1,9 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Potta+One&display=swap');
+
 body{
     background-image: url(/images/spotify-background.jpeg);
     background-size: cover;
+    font-family: 'Potta One', cursive;
+}
+
+h5{
+    font-family: 'Potta One', cursive;
 }
 
 h1{
     color:white
 }
 
+.hTitles{
+    text-align: center;
+    height: 30%;
+    padding: 10%;
+}
+
+.initialForm{
+   
+    
+    text-align: center;
+}
+
+.search-bar{
+    text-align: center;
+}

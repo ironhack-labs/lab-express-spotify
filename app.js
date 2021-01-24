@@ -1,4 +1,4 @@
-require('dotenv').config();
+require("dotenv").config()
 
 const express = require('express');
 const hbs = require('hbs');
@@ -18,7 +18,6 @@ app.use(express.static(__dirname + '/public'));
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID, 
     clientSecret: process.env.CLIENT_SECRET 
-    
   });
   
   // Retrieve an access token
@@ -37,7 +36,7 @@ app.get('/artist-search', function (req, res) {
   spotifyApi
   .searchArtists(req.query.search)
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items);
+    //console.log('The received data from the API: ', data.body.artists.items);
     const artists = data.body.artists.items
     res.render('artist-search-results',{artists})
   })
@@ -48,7 +47,7 @@ app.get('/albums/:id', function (req, res) {
   spotifyApi
   .getArtistAlbums(req.params.id)
   .then(data => {
-    console.log('Artist albums', data.body)
+    //console.log('Artist albums', data.body)
     const albums= [...data.body.items]
     res.render('albums',{albums: albums})
   
@@ -60,7 +59,7 @@ app.get('/albums/:id', function (req, res) {
 app.get('/tracks/:id', function (req, res) {
 spotifyApi.getAlbumTracks(req.params.id)
   .then(data => {
-    console.log(data.body)
+    //console.log(data.body)
     const tracks= [...data.body.items]
     res.render('tracks',{tracks: tracks})
   })

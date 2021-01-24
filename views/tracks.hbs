@@ -1,8 +1,8 @@
 
 
 <div class="container">
-    <div class="row">
-    <div class="col-sm">
+    <div class="row" class='tracksTitles'>
+    <div class="col-sm" >
       Title
     </div>
     <div class="col-sm">
@@ -15,11 +15,10 @@
       {{this.name}}
     </div>
      <div class="col-md">
-       <audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
+       <audio controls>
+           <source src="{{preview_url}}" type="audio/ogg" />
+         <source src="{{preview_url}}" type="audio/mpeg" />
+             
     </audio>
     </div>
   </div>
