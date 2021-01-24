@@ -28,11 +28,11 @@ const spotifyApi = new SpotifyWebApi({
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
-
+//HOMEPAGE
 app.get('/', function (req, res) {
   res.render('home')
 })
-
+//SEARCH ARTISTS
 app.get('/artist-search', function (req, res) {
   spotifyApi
   .searchArtists(req.query.search)
@@ -43,7 +43,7 @@ app.get('/artist-search', function (req, res) {
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
-
+//ALBUMS
 app.get('/albums/:id', function (req, res) {
   spotifyApi
   .getArtistAlbums(req.params.id)
@@ -55,5 +55,16 @@ app.get('/albums/:id', function (req, res) {
   })
   .catch(err => console.log('The error while searching albums occurred: ', err));
 })
+
+//TRACKS 
+app.get('/tracks/:id', function (req, res) {
+spotifyApi.getAlbumTracks(req.params.id)
+  .then(data => {
+    console.log(data.body)
+    const tracks= [...data.body.items]
+    res.render('tracks',{tracks: tracks})
+  })
+  .catch(err => console.log('The error while searching tracks occurred: ', err))
+})  
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
