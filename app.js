@@ -52,12 +52,12 @@ app.get('/albums/:id',(req,res,next) =>{
   
   spotifyApi.getArtistAlbums(req.params.id)
   .then(function(data) {
-    console.log('Artist albums', data.body);
+//    console.log('Artist albums', data.body);
     const albums = [...data.body.items];
    
     res.render("albums",{albums : albums});
   }, function(err) {
-    console.error(err);
+    console.log('Something went wrong!', err);
   });
 
 })
@@ -67,7 +67,7 @@ app.get('/tracks/:id', (req,res,next) => {
   // Get tracks in an album
   spotifyApi.getAlbumTracks(req.params.id, { limit : 5, offset : 1 })
   .then(function(data) {
-    console.log('Albumn tracks ', data.body);
+ //   console.log('Albumn tracks ', data.body);
     const tracks = [...data.body.items];
     res.render("tracks",{tracks : tracks});
   }, function(err) {
