@@ -1,4 +1,4 @@
-* {
+html {
     margin: 0 auto;
 }
 
@@ -25,6 +25,9 @@ body {
     padding: 10px;
     outline: none;
     border-radius: 3px;
+    text-transform: uppercase;
+    color: rgb(75, 69, 69);
+    font-weight: 600;
 }
 
 .form-div {
@@ -51,7 +54,13 @@ body {
 }
 
 .label-button:hover {
-    transition: 0.5 ease-in;
+    transition: 0.15s ease-in;
     color: rgba(224, 17, 17, 0.8);
 }
 
+#albums {
+    display: flex;
+    flex-direction: row;
+    border: 10px solid red;
+    max-width: 200px;
+}
