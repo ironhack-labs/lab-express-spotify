@@ -16,9 +16,8 @@ app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
-    clientId: process.env.CLIENT_ID, //
-    clientSecret: process.env.CLIENT_SECRET //
-
+    clientId: process.env.CLIENT_ID, 
+    clientSecret: process.env.CLIENT_SECRET 
     
   });
   
@@ -45,5 +44,16 @@ app.get('/artist-search', function (req, res) {
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
+app.get('/albums/:id', function (req, res) {
+  spotifyApi
+  .getArtistAlbums(req.params.id)
+  .then(data => {
+    console.log('Artist albums', data.body)
+    const albums= [...data.body.items]
+    res.render('albums',{albums: albums})
+  
+  })
+  .catch(err => console.log('The error while searching albums occurred: ', err));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
