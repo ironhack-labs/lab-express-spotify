@@ -1,0 +1,13 @@
+
+<div class='artist-container'>
+    {{#each playlists}}
+    <div class='artists' data-aos='zoom-in'>
+        <div class='info'>
+        <img src="{{this.images.0.url}}" alt="">
+        <h3>{{this.name}}</h3>
+        <h4>Owner:  {{this.owner.display_name}}</h5>
+        <button><a href="/playlists/{{this.id}}">View Playlist</a></button>
+        </div>
+    </div>
+    {{/each}}
+</div>
