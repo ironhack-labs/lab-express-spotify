@@ -28,4 +28,52 @@ app.get('/',(req,res,next) => {
 
 })
 
+app.get('/artist-search',(req,res,next) =>{
+ 
+ // console.log(req.query.textSearch)
+ 
+  
+    spotifyApi
+  .searchArtists(req.query.textSearch)
+  .then(data => {
+   // console.log('The received data from the API: ', data.body.artists.items);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    
+    const items = data.body.artists.items;
+   
+    res.render("artist-search-results",{items : items});
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+  
+ 
+})
+
+app.get('/albums/:id',(req,res,next) =>{
+  
+  spotifyApi.getArtistAlbums(req.params.id)
+  .then(function(data) {
+    console.log('Artist albums', data.body);
+    const albums = [...data.body.items];
+   
+    res.render("albums",{albums : albums});
+  }, function(err) {
+    console.error(err);
+  });
+
+})
+
+app.get('/tracks/:id', (req,res,next) => {
+
+  // Get tracks in an album
+  spotifyApi.getAlbumTracks(req.params.id, { limit : 5, offset : 1 })
+  .then(function(data) {
+    console.log('Albumn tracks ', data.body);
+    const tracks = [...data.body.items];
+    res.render("tracks",{tracks : tracks});
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
