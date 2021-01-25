@@ -12,6 +12,10 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+// Register the location for handlebars partials here:
+
+hbs.registerPartials(__dirname + '/views/partials')
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -30,14 +34,16 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/artist-search', (req, res, next) => {
-    console.log(req.query.nameArtist)
+    //console.log(req.query.nameArtist)
     spotifyApi
-    .searchArtists(req.query)
-    .then(data => { res.render('artist-search-result', {artist : data.nameArtist})
-        //console.log('The received data from the API: ', data.body);       
-    })
-    .catch(err => console.log('The error while searching artists occurred: ', err));
+    .searchArtists(req.query.nameArtist)
+      .then(data => {
+        //console.log(data.body.artists.items)
+        res.render('artist-search-result', { artist: data.body })
+      })
+        //console.log('The received data from the API: ', data.body)       
+    .catch(err => console.log('The error while searching artists occurred: ', err))
 })
 
-
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
