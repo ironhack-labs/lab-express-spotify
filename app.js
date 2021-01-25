@@ -8,6 +8,7 @@ const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+
 app.use(express.static(__dirname + '/public'));
 
 const spotifyApi = new SpotifyWebApi({
@@ -23,5 +24,19 @@ spotifyApi
 
 
 // Our routes go here:
+
+app.get('/',(req, res, next) => {
+    res.render('index')
+})
+
+app.get('/artist-search-results',(req, res, next) => {
+    spotifyApi
+    .searchArtists(req.query.singer)
+    .then(data => {
+        console.log('The received data from the API: ', data.body);
+        res.render('artist-search-results', {data: data.body.artists})
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
