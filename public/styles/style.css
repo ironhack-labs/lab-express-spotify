@@ -26,7 +26,7 @@ body>div {
     object-fit: cover;
 }
 
-img[src="images/spotify-icon-white.png"] {
+img {
     width: 50px;
     z-index: 1;
 }
@@ -70,7 +70,8 @@ audio:focus {
 }
 
 audio {
-    width: 20rem;
+    width: 100%;
+    max-width: 60rem;
 }
 
 a:hover {

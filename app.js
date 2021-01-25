@@ -4,10 +4,12 @@ const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node')
 const app = express();
+const path = require('path');
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+//app.use(express.static(__dirname + '/public'));
+app.use(express.static(path.join(__dirname, 'public')));
 
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,

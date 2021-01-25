@@ -2,17 +2,17 @@
   <thead class="thead-dark">
     <tr>
       <th scope="col-6">Title</th>
-      <th scope="col-6" class="d-flex justify-content-center">Listen</th>
+      <th scope="col-6" class="align center">Listen</th>
     </tr>
   </thead>
   <tbody>
       {{#each tracks}}
     <tr>
       <th scope="row">{{name}}</th>
-      <td class="d-flex justify-content-end">
+      <td class="align center">
         <audio 
             controls 
-            src="{{preview_url}}">
+            src="{{preview_url}}" class="col">
             <p>Your browser does not support the <code>audio</code> element<p>.
         </audio>
       </td>
