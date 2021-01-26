@@ -1,0 +1,26 @@
+<div class="mt-2">
+    <table class="table table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">
+                    <h2>Title</h2>
+                </th>
+                <th scope="col" class="text-center">
+                    <h2>Listen</h2>
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each results.items}}
+            <tr>
+                <td class="align-middle">{{this.name}}</td>
+                <td class="text-center">
+                    <audio controls src="{{this.preview_url}}">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+</div>

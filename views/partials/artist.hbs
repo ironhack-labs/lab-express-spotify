@@ -1,15 +1,8 @@
-{{!-- <div class="card h-100 text-center">
-    <img src="{{this.images.0.url}}" class="card-img-top" alt="{{this.name}}">
-    <div class="card-body">
-        <h5 class="card-title">{{this.external_urls}}</h5>
-        <a class="card-text" href="/albums/{{id}}"><button type="button" class="btn btn-danger">View Albums</button></a>
-    </div>
-</div> --}}
 
 <div class="card text-center bg-dark text-white" style="width: 18rem;">
     <img class="card-img-top" src="{{this.images.0.url}}" style="height: 18rem;" alt="Card image cap">
     <div class="card-body">
         <h5 class="card-title">{{this.name}}</h5>
-        <a href="#" class="btn btn btn btn-danger">View Albums</a>
+        <a href="/albums/{{this.name}}/{{this.id}}/" class="btn btn btn btn-danger">View Albums</a>
     </div>
 </div>

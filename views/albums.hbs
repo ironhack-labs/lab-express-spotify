@@ -1,0 +1,11 @@
+<h1 class="text-center mt-4">Albums for: {{name}}</h1>
+
+<div class="container">
+    <div class="row">
+        {{#each results.items}}
+        <div class="col  py-3">
+            {{> album }}
+        </div>
+        {{/each}}
+    </div>
+</div>
