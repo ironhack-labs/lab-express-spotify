@@ -41,4 +41,15 @@ spotifyApi
   .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
+app.get('/albums/:id',(req,res,next)=>{
+  spotifyApi
+  .getArtistAlbums(req.params.id)
+  .then((data)=>{
+    res.render('albums',{albums:data.body.items});
+  })
+  .catch((error) =>{
+    console.log( `${error} cannot display albums `)
+  })
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
