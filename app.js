@@ -35,14 +35,38 @@ app.get('/artist-search',(req,res,next)=>{
   console.log(req.query.name)
     spotifyApi
     
-  .searchArtists(req.query)
+  .searchArtists(req.query.name)
   .then(data => {
-    console.log('The received data from the API : ', data.body);
+    console.log('The received data from the API : ', data.body.artists.items);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    res.render('artist-search-results',{artists:data.body.artists.items})
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
+//-------------------------------------------------------------------------
+app.get('/albums/:id', (req, res, next) => {
+  // .getArtistAlbums() code goes here
+  spotifyApi.getArtistAlbums(req.params.id).then(
+    (data)=> {
+     res.render('albums', {albums:data.body.items})
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+});
 
-const PORT = process.env.PORT || 3000
+app.get('/tracks/:id',(req,res,next)=>{
+  spotifyApi.getAlbumTracks(req.params.id, { limit : 5, offset : 1 })
+  .then(
+    (data) =>{
+    //console.log(data.body);
+    res.render('tracks',{tracks:data.body.items})
+  }, function(err) {
+    console.log('Something went wrong!', err);
 
-app.listen(PORT, () => console.log(`My Spotify project running on port ${PORT} 🎧 🥁 🎸 🔊`));
+})
+})
+
+
+app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
