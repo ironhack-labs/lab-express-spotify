@@ -33,8 +33,11 @@ app.get('/artist-search-results',(req, res, next) => {
     spotifyApi
     .searchArtists(req.query.singer)
     .then(data => {
-        console.log('The received data from the API: ', data.body);
-        res.render('artist-search-results', {data: data.body.artists})
+        console.log('The received data from the API: ', data.body.artists)
+        const dataReceived = {
+            element: data.body.artists.items
+        };
+        res.render('artist-search-results', dataReceived)
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 })
