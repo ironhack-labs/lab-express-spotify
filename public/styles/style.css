@@ -69,11 +69,6 @@ audio:focus {
     outline: 0 none;
 }
 
-audio {
-    width: 100%;
-    max-width: 60rem;
-}
-
 a:hover {
     color: white;
 }
