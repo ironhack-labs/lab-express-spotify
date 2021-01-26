@@ -14,7 +14,7 @@ app.use(express.static(__dirname + '/public'));
 
 // Register the location for handlebars partials here:
 
-hbs.registerPartials(__dirname + '/views/partials')
+// hbs.registerPartials(__dirname + '/views/partials')
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -46,11 +46,11 @@ app.get('/artist-search', (req, res, next) => {
 })
 
 app.get('/albums/:id', (req, res, next) => {
-  //console.log(req.params.artistId)
+  //console.log(req.params.id)
   spotifyApi
   .getArtistAlbums(req.params.id)
     .then(data => {
-      //console.log(data.body)
+      //console.log(data.body.items)
       res.render('albums', { albums: data.body })
   })
   .catch(err => console.log('The error while searching albums occurred: ', err))
@@ -61,7 +61,7 @@ app.get('/tracks/:id', (req, res, next) => {
   spotifyApi
   .getAlbumTracks(req.params.id)
     .then(data => {
-      console.log(data.body)
+      //console.log(data.body.items)
       res.render('tracks', { tracks: data.body })
   })
   .catch(err => console.log('The error while searching tracks occurred: ', err))

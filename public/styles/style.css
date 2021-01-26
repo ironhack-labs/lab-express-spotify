@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;900&display=swap');
+
+/* COMMON */
+
+.home-button{
+    border: #fb6862 1px solid;
+    background-color: #fb6862;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+}
+
+
+/* INDEX */
+
+.home {
+    font-family: 'Lato', sans-serif;
+    background-image: url('../images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    width: 500px;
+    margin: 300px auto;
+    background-color: rgba(4, 21, 22, 0.43);
+}
+
+.form-group input{
+    width: 300px;
+    margin: 0 auto;
+}
+
+.search {
+    text-align: center;
+    padding: 40px;
+}
+
+.btn {
+    background-color: #fb6862;
+    border: none;
+    margin-top: 10px;
+}
+
+/* ARTIST-SEARCH-RESULT & ALBUMS*/
+
+.btn-view {
+    border: #fb6862 1px solid;
+    background-color: #fb6862;
+    width: max-content;
+    padding: 10px;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #fff;
+    margin: 0 auto 20px auto;
+}
+
+.card-deck {
+    margin: 50px 20px 0px 20px;
+}
+
+.card {
+    border: none;
+}
+
+.image-artist-album {
+    width: 300px;
+    height: 300px;
+    margin: 20px auto;
+}
+
+.card h2{
+    text-align: center;
+}
+
+/* TRACKS */
+
+table {
+    margin-top: 50px;
+    border: none;
+}
+
+.thead-dark {
+    background-color: #fb6862;
+    font-size: 2em;
+    color: #fff;
+}
+
+.title-songs {
+    font-size: 1.5em; 
+}
+
+.audio {
+    text-align: center;
+}
+
+
