@@ -31,6 +31,15 @@ app.get('/', (req, res, next)=>{
   res.render('home-page')  
 })
 
+app.get('/artist-search', (req, res, next) =>{
+  spotifyApi
+    .searchArtists(req.query.artist)
+    .then(data => {
+      console.log('The received data from the API: ', data.body.artists.items); 
+      res.render('artists', { artists: data.body.artists.items })
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

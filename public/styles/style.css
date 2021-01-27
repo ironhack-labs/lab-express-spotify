@@ -5,6 +5,7 @@
     margin: 0;
     padding: 0;
 }
+
 .body{
     text-decoration: none;
     box-sizing: border-box;
@@ -63,7 +64,6 @@
 .first-section form{
    text-align: center;
    padding-top: 4%; 
-   
 }
 
 .form-background{
@@ -91,10 +91,10 @@
     border: none;
     margin: 5px;
 }
+
  ::placeholder {
   font-size: 1.1em;
 }
-
 
 /*SECOND SECTION*/
 
@@ -198,3 +198,9 @@
     padding-top: 8% ;
     
 }
+
+/*ARTIST*/
+.card{
+
+}
+
