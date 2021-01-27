@@ -1,20 +1,22 @@
 
 
-<div class="container tracksback">
+<div class="container margin__container ">
     <div class="row" class='tracksTitles'>
-    <div class="col-sm my-5" >
+    <div class="col-sm my-5 left__column" >
       <h3>Title</h3>
     </div>
-    <div class="col-sm my-5">
+    <div class="col-sm my-5 right__column">
       <h3>Listen</h3>
     </div>
   </div>
   {{#each tracks}}
   <div class="row">
-    <div class="col-md">
-      {{this.name}}
+    <div class="col-md left__column">
+      <div class='song__title'>
+     {{this.name}}
+     </div>
     </div>
-     <div class="col-md">
+     <div class="col-md right__column">
        <audio controls>
            <source src="{{preview_url}}" type="audio/ogg" />
          <source src="{{preview_url}}" type="audio/mpeg" />

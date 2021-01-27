@@ -16,8 +16,17 @@ h1{
 
 .hTitles{
     text-align: center;
-    height: 30%;
-    padding: 10%;
+    height: 20%;
+    padding: 5%;
+    background-color: rgba(255,255,255,0.2);
+    margin-bottom: 10%;
+    border-bottom-left-radius: 5px; 
+    border-bottom-right-radius: 5px; 
+}
+
+.home__title{
+    font-size: 4em;
+    color: red;
 }
 
 .initialForm{
@@ -31,3 +40,29 @@ h1{
     width: 100%;
 }
 
+.left__column{
+    background-color: rgba(255,255,255,0.5);
+    border-top-left-radius: 25px;
+    border-bottom-left-radius: 25px;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    
+}
+
+.right__column{
+    background-color: rgba(255,255,255,0.5);
+    border-top-right-radius: 25px;
+    border-bottom-right-radius: 25px;
+    padding: 10px 10px;
+    margin: 10px 0px;
+    text-align: center;
+}
+
+.margin__container{
+    margin: 20px auto 80px;
+}
