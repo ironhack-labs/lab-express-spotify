@@ -22,10 +22,12 @@ h1{
 
 .initialForm{
    
-    
+    width: 40%;
     text-align: center;
 }
 
 .search-bar{
     text-align: center;
+    width: 100%;
 }
+
