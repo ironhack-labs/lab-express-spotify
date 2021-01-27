@@ -1,0 +1,15 @@
+#home{
+    background-image: url('/images/spotify-background.jpeg');
+    height:100vh;
+    background-size: contain;
+}
+
+#home-form {
+    background-color:#ffffff80;
+    padding: 40px 80px;
+}
+
+.btn-primary{
+    border-color: #FA6863 !important;
+    background-color: #FA6863 !important;
+}
