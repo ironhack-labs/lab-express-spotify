@@ -1,9 +1,9 @@
 body{
-    background-image: url("/images/spotify-background.jpeg");
-    background-repeat: no-repeat; 
-	background-size: cover; 
-	margin: 0;
+
+	background: url("/images/spotify-background.jpeg") no-repeat center center fixed; 
+	background-size: cover;
 }
+
 
 .index{
     width: 500px;
@@ -22,6 +22,14 @@ body{
 .card-style{
 	margin: 20px;
 	padding: 10px;
+}
+
+.center-items{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	
+	min-height: 100%;
 }
 
 .img-size{
