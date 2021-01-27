@@ -24,14 +24,6 @@ body{
 	padding: 10px;
 }
 
-.center-items{
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	
-	min-height: 100%;
-}
-
 .img-size{
 	width: 100%;
 	height: 95%;
