@@ -1,0 +1,24 @@
+<div class="tracksDiv">
+    {{#each tracks as |artists|}}
+    <table class="table">
+        <thead class="table-dark">
+            <tr>
+                <th scope="col">{{artist.track}}</th>
+                <th scope="col">Listen</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">1</th>
+                <audio id="Test_Audio" controls>
+
+                    <source src="..." type="audio">
+
+                </audio>
+
+            </tr>
+
+        </tbody>
+    </table>
+    {{/each}}
+</div>

@@ -1,0 +1,11 @@
+<div class="albumDiv">
+    {{#each albumDiv as |artists|}}
+    <div class="card" style="width: 18rem;">
+        <img src="{{album.image_url}}" class="card-img-top" alt="{{album.name}}.">
+        <div class="card-body">
+            <h5 class="card-title">{{album.name}}</h5>
+            <a href="#" class="btn btn-primary">View Albums</a>
+            {{/each}}
+        </div>
+    </div>
+</div>
