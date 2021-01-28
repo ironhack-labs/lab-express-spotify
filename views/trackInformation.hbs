@@ -1,0 +1,26 @@
+<div class="container mt-5 track_cabecera">
+    <div class="row">
+        <div class="col title__cab">
+           <h2>Title</h2>
+        </div>
+    
+        <div class="col Listen__cab">
+            <h2>Listen</h2>
+        </div>
+</div>
+{{#each tracks}}
+<div class="container mt-3">
+    <div class="row">
+            <div class="col title__track">
+                {{this.name}}
+            </div>
+        
+            <div class="col repro">
+            <audio controls src="{{this.preview_url}}" style="background-color: #F6F6F6; ">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+            </div>    
+    </div>
+</div>
+{{/each}}    

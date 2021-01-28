@@ -16,12 +16,14 @@
 .nav-bar{
     height: 80px;
     width: 100%;
-    margin-top: 10px;
+    background-color: #1A1A1A;
+    color: white;
 }
 
 .nav-bar img{
     height: 65px;
     padding: 0 50px;
+    padding-top:15px ;
 }
 
 .nav-bar ul{
@@ -39,13 +41,13 @@
 
 .nav-bar ul, li, a{
     font-size: 22px;
-    color: black;
+    color: rgb(255, 255, 255);
     text-decoration: none;
 }
 
 /*PRIMER SECTION*/
 .first-section{
-    background-image: url("../images/spotify-background.jpeg");
+    background-image: url("/images/spotify-background.jpeg");
     height: 800px;
     position: 0 0;
     background-repeat: no-repeat;
@@ -53,6 +55,7 @@
     padding:50px;
     background-position: center;
 }
+
 
 .first-section h1{
     color: #FFF;
@@ -201,6 +204,49 @@
 
 /*ARTIST*/
 .card{
-
+    color: white;
+    background-color: #4D4D4D;
+    border: none;
 }
 
+.card-title{
+    text-align: center;
+}
+
+.img-fluid{
+    height: 24rem;
+    width: 24rem;
+}
+
+.btn-artists{
+    background-color: #EF6866;
+    color: white;
+    display: block;
+}
+
+/*Tracks*/
+.title__cab{
+    background-color: #4A4A4A;
+    color: rgb(195,195,195);
+    text-align: center;
+    padding: 10px;
+}
+
+.Listen__cab{
+    text-align: center;
+    color: rgb(195,195,195);
+    background-color: #4A4A4A;
+    padding-top: 10px ;
+}
+
+
+.title__track{
+    background-color: #F6F6F6;
+    text-align: center;
+    padding-top: 15px ;
+}
+
+.repro{
+   background-color: #F6F6F6; 
+   padding-left: 220px ;
+}
