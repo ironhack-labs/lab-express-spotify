@@ -1,18 +1,26 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <img src="../public/images/spotify-background.jpeg" class="img-fluid" alt="...">
-<form>
-  <div class="mb-3">
-    <label for="Search" class="form-label">Search</label>
-    <input type="text" class="form-control" id="search-bar" aria-describedby="search-bar">
-  <button type="submit" class="btn btn-primary">Search for an Artist</button>
-</form>
+<div>
 
-</body>
-</html>
+<div class="row search-row">
+        <div class="col-md-12 search-col box">
+
+            <div class="inner-box">
+                <form method="GET" action="/artist-search">
+                    <div class="form-group">
+                        <input type="text" placeholder="search artists" name="search" required>
+                        <div style="width:100%; margin-top: 5%;" class="inner-centering">
+                            <button type="submit" class="btn">Search for an Artist</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <img id="cover-img" src="/public/images/spotify-background.jpeg" class="img-fluid" alt="...">
+
+
+
+
+
+</div>

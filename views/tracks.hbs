@@ -1,24 +1,28 @@
 <div class="tracksDiv">
-    {{#each tracks as |artists|}}
     <table class="table">
         <thead class="table-dark">
+
             <tr>
-                <th scope="col">{{artist.track}}</th>
+                <th scope="col">name</th>
                 <th scope="col">Listen</th>
             </tr>
         </thead>
         <tbody>
+            {{#each tracks as |track|}}
             <tr>
-                <th scope="row">1</th>
-                <audio id="Test_Audio" controls>
+                <th scope="row">{{track.name}}</th>
+                <th>
+                    <audio id="Test_Audio" controls>
 
-                    <source src="..." type="audio">
+                        <source src="{{track.preview_url}}" type="audio/mpeg">
 
-                </audio>
+                    </audio>
+                </th>
 
             </tr>
+            {{/each}}
 
         </tbody>
     </table>
-    {{/each}}
+
 </div>

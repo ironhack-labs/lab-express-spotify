@@ -1,0 +1,28 @@
+search-col {
+    background-color: grey;
+}
+
+.btn {
+    background-color: #fa6863;
+}
+
+.box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.search-row {
+    position: absolute;
+}
+
+.inner-box {
+    width: 500px;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

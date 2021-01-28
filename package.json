@@ -2,9 +2,10 @@
   "name": "starter-code",
   "version": "1.0.0",
   "description": "",
-  "main": "app.js",
+  "main": "node app.js",
   "scripts": {
-    "dev": "nodemon app.js css",
+    "start": "app.js",
+    "dev": "nodemon -e hbs,js,css app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
