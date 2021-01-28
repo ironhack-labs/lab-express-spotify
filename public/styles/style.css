@@ -13,3 +13,8 @@
     border-color: #FA6863 !important;
     background-color: #FA6863 !important;
 }
+
+.card-img-top{
+    height: 30vh;
+    object-fit: cover;
+}
