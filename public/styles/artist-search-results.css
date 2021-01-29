@@ -19,11 +19,11 @@
         margin-bottom: 45px;
     }
     
-    .card-body {
+    .artistDiv .card-body {
         background-color: grey;
     }
     
-    .row {
+    .artistDiv .row {
         margin-left: 100px;
     }
     

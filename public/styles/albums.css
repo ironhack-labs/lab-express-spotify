@@ -19,12 +19,9 @@ h1 {
     margin-bottom: 45px;
 }
 
-.card-body {
-    background-color: grey;
-}
-
+.albumDiv,
 .row {
-    margin-left: 100px;
+    margin-left: 30px;
 }
 
 .albumDiv,
@@ -42,7 +39,10 @@ h6 {
 }
 
 .albumDiv .albumImage {
-    width: 259px;
-    height: 250px;
     object-fit: cover;
+}
+
+.albumDiv .card-body {
+    background-color: grey;
+    width: 280px;
 }

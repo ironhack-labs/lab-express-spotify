@@ -1,21 +1,18 @@
 <div class="albumDiv">
+
+    <h1>Albums</h1>
     <div class="container">
-        <h1>Albums</h1>
-        <div class="row">
-            <div class="card-deck">
-                <div class="card">
-                    {{#each albums as |album|}}
-                    <div class="card" style="259px">
-                        <img class="card-img-top albumImage" src="{{album.images.[0].url}}" class="card-img-top"
-                            alt="{{album.name}}">
-                        <div class="card-body">
-                            <h6 class="card-title">{{album.name}}</h5>
-                                <a href="/tracks/{{album.id}}" class="btn btn-primary">View Tracks</a>
-                                {{/each}}
-                        </div>
-                    </div>
+        <div class="row row-cols-3 ">
+            {{#each albums as |album|}}
+            <div class="card">
+                <img class="card-img-top albumImage" src="{{album.images.[0].url}}" class="card-img-top"
+                    alt="{{album.name}}">
+                <div class="card-body">
+                    <h6 class="card-title">{{album.name}}</h5>
+                        <a href="/tracks/{{album.id}}" class="btn btn-primary">View Tracks</a>
                 </div>
             </div>
+            {{/each}}
         </div>
     </div>
 </div>

@@ -24,6 +24,12 @@ search-col {
 }
 
 .nav-item {
-    font-color: white;
-    font-weight: bold
+    color: white;
+    font-weight: bold;
+    margin-left: 180px;
+    font-size: 20px;
+}
+
+.logo {
+    margin-left: 50px;
 }

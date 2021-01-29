@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 const express = require('express');
 const hbs = require('hbs');
 
@@ -13,8 +15,8 @@ app.set('views', __dirname + '/views');
 app.use('/public', express.static(__dirname + '/public'));
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: '6a0b32c0b0d04d74aead579a0fdac8d3',
-    clientSecret: '4258381fddf5403b9695f67b954dcc89'
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET
 });
 
 // setting the spotify-api goes here:
@@ -30,6 +32,7 @@ spotifyApi
 app.get('/', (req, res) => {
     res.render('home');
 });
+
 
 app.get('/artist-search', (req, res) => {
     //console.log(req.query.search)
@@ -56,7 +59,7 @@ app.get('/tracks/:albumId', (req, res) => {
     spotifyApi
         .getAlbumTracks(req.params.albumId, { limit: 5, offset: 1 })
         .then(data => {
-            console.log('tracks information', data.body);
+            // console.log('tracks information', data.body);
             res.render('tracks', { tracks: data.body.items })
         })
         .catch(error => console.log(error));

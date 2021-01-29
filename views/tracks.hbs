@@ -1,16 +1,15 @@
 <div class="tracksDiv">
-    <table class="table">
-        <thead class="table-dark">
-
+    <table class="table table-secondary">
+        <thead class="table-dark ">
             <tr>
-                <th scope="col">name</th>
-                <th scope="col">Listen</th>
+                <th scope="col"><p class="id">Title</p></th>
+                <th scope="col"><p class="id">Listen</p></th>
             </tr>
         </thead>
         <tbody>
             {{#each tracks as |track|}}
             <tr>
-                <th scope="row">{{track.name}}</th>
+                <th scope="row"><p>{{track.name}}</p></th>
                 <th>
                     <audio id="Test_Audio" controls>
 
@@ -18,11 +17,8 @@
 
                     </audio>
                 </th>
-
             </tr>
             {{/each}}
-
         </tbody>
     </table>
-
 </div>
