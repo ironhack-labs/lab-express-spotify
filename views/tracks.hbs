@@ -1,0 +1,13 @@
+<div class="container py-5">
+    <div class="row bg-dark border border-light p-2">
+    <div class="col-md-8">
+        <h2 class="text-white">Title</h2>
+    </div>
+    <div class="col-md-4">
+        <h2 class="text-white">Listen</h2>
+    </div>
+</div>
+    {{#each tracks as |track|}}
+            {{>audio}}
+    {{/each}}    
+</div>
