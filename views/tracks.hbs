@@ -1,0 +1,7 @@
+<div>
+  {{#each tracks.items as |detail|}}
+      <h5>{{detail.name}}</h5>
+      <audio src="{{detail.preview_url}}" type="audio/mpeg" controls>
+    </audio>
+  {{/each}}
+</div>
