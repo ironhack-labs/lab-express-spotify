@@ -1,0 +1,13 @@
+  <div class="col">
+    <div class="card h-100">
+        {{#if images.0.url }}
+            <img src="{{images.0.url}}" class="card-img-top" alt="{{name}} picture">        
+        {{else}}
+            <img src="https://via.placeholder.com/600.png?text=Image+no+avalible" class="card-img-top" alt="Image no avalible">      
+        {{/if}} 
+      <div class="card-body d-flex justify-cotent-center align-items-center flex-column bg-dark">
+        <h5 class="card-title text-white">{{this.name}}</h5>
+        <a href="/albums/{{id}}" class="btn btn-primary">View tracks</a>
+      </div>
+    </div>
+  </div>
