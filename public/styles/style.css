@@ -1,5 +1,14 @@
+body,
+html {
+    height: 100%;
+}
+
 body>div {
     height: 46rem;
+}
+
+body>.container {
+    padding-bottom: 35rem;
 }
 
 .home-page {
@@ -7,13 +16,18 @@ body>div {
     background-position: center;
     background-size: cover;
     background-color: black;
-    height: 50rem;
     background-repeat: no-repeat;
+    /* position: fixed;
+    top: 0;
+    left:0;
+    height: 100%;
+    width: 100%; */
 }
 
 .white-box {
     background-color: rgba(255, 255, 255, 0.5);
     padding: 4rem 12rem;
+    margin-top: 15rem;
 }
 
 .layout {

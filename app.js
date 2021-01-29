@@ -26,7 +26,7 @@ spotifyApi
 hbs.registerPartials(__dirname + '/views/partials');
 
 // Our routes go here:
-app.get('/', (req, res, next) => res.render('index', {layout: false}));
+app.get('/', (req, res, next) => res.render('index', { layout: false} ));
 
 app.get('/artist-search', (req, res, next) => {
     spotifyApi

@@ -13,13 +13,13 @@
 
 <body class="layout">
     {{> navbar}}
+    
     <main class="container mt-5 mb-3 d-flex justify-content-center">
         {{{ body }}}
     </main>
 
-    <footer class="navbar bg-dark d-flex justify-content-center align-items-baseline">
-        <p class="text-white">Ironhack Lab - Developed by <a href="https://github.com/xavirepi" target="_blank" class="spotify-green">Javier Repi</a></p>
-    </footer>
+    {{> footerPartial}}
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>

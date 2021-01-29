@@ -9,9 +9,9 @@
     <link rel="stylesheet" href="/styles/style.css" />
 </head>
 
-<body class="home-page">
+<div class="home-page">
     <div class="d-flex justify-content-center align-items-center">
-        <div class="white-box">
+        <div class="white-box align-self-center">
             <form class="form-inline d-flex flex-column justify-content-center align-items-center" action="/artist-search" method="GET">
                 {{!-- <input type="search" name="search" id="search-input" placeholder="Write artist name here"> --}}
                 <input class="form-control mr-sm-2 col mb-1" name="search" type="search" placeholder="Search for an artist"
@@ -20,18 +20,14 @@
             </form>
         </div>
     </div>
-
-    <footer class="navbar bg-dark d-flex justify-content-center align-items-baseline">
-        <div>
-            <a class="navbar-brand mx-3" href="/"><img src="images/spotify-icon-white.png" alt="spotify-logo.png"></a>
-        </div>
-        <p class="text-white mx-3">Ironhack Lab - Developed by <a href="https://github.com/xavirepi" target="_blank" class="spotify-green">Javier Repi</a></p>
-    </footer>
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW"
         crossorigin="anonymous"></script>
 
-</body>
+</div>
+<footer class="navbar bg-dark d-flex justify-content-center align-items-baseline">
+    <p class="text-white">Ironhack Lab - Developed by <a href="https://github.com/xavirepi" target="_blank"
+            class="spotify-green">Javier Repi</a></p>
+</footer>
 
 </html>
