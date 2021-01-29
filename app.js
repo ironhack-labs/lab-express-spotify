@@ -7,6 +7,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+hbs.registerPartials( __dirname + '/views/partials')
 
 const SpotifyWebApi = require('spotify-web-api-node');
 const spotifyApi = new SpotifyWebApi({
@@ -24,12 +25,20 @@ app.get('/', (req, res, next) => {
   res.render('home')
 })
 
+app.get('/artists', (req, res, next) => {
+  res.render('top-artists')
+})
+
 // apuntes inés-> url/artist-search?search=búsqueda del usuario.  console.log(req.query) // => { search: loquesea }
 app.get('/artist-search', (req, res, next) => {
 spotifyApi.searchArtists(req.query.search)
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items);
-    res.render('artist-search-results', { artists: data.body.artists.items})
+    console.log('The received data from the API: ', data.body.artists.items)
+    if (data.body.artists.items.length >= 1) {
+      res.render('artist-search-results', { artists: data.body.artists.items, search: req.query.search})
+    } else {
+      res.render('error', {search: req.query.search})
+    }
   }) 
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -39,7 +48,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 console.log(req.params)
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then(data => {
-    res.render('albums', { albums: data.body.items })
+    res.render('albums', { albums: data.body.items, author: data.body.items[0].artists[0].name})
+    console.log(data.body.items[0].artists[0].name)
   })
   .catch(err => console.log('The error while searching artists occurred: ', err))
 })
@@ -50,6 +60,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
     .then(data => {
       console.log(data.body.items)
       res.render('tracks', { tracks: data.body })
+      console.log(data.body)
     })
     .catch(err => console.log('The error while searching artists occurred: ', err))
   })

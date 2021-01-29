@@ -6,6 +6,24 @@
     -o-background-size: cover;
 }
 
+.grey-box {
+    background-color: rgba(171, 233, 204, 0.219);
+    width: 90%;
+}
+
+.no-deco {
+    text-decoration: none;
+}
+
+.green {
+    background-color: rgba(171, 233, 204, 0.219);
+}
+
+
+.searching{
+    color: grey;
+}
+
 .form-background {
     width: 50%;
     height: 20%;

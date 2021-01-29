@@ -1,7 +1,10 @@
-<div>
+{{> navbar}}
+
+<div class"container">
   {{#each tracks.items as |detail|}}
-      <h5>{{detail.name}}</h5>
-      <audio src="{{detail.preview_url}}" type="audio/mpeg" controls>
-    </audio>
+  <div class="row m-4 align-items-sm-center">
+      <h6 class="col-3 green m-2 p-3">{{detail.name}}</h6>
+      <audio class="col-3 m-2" src="{{detail.preview_url}}" type="audio/mpeg" controls></audio>
+  </div>
   {{/each}}
 </div>

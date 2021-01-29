@@ -1,5 +1,21 @@
-<div>
-  {{#each artists as |detail|}}
-      <h5>{{detail.name}}<a href="/albums/{{detail.id}}" > -> View album</a></h5>
-  {{/each}}
+{{> navbar}}
+
+<div class="container">
+
+  <div class="row m-3 green p-2 align-item-sm-center">
+    <h4>Results for: <i class="searching">{{search}}</i></h4>
+  </div>
+
+  <div class="row justify-content-center align-item-sm-center">
+    {{#each artists as |detail|}}
+        <div class="card col-3 m-3">
+          <div class="card-body">
+            <img src="{{#if detail.images.0.url}}{{detail.images.0.url}}{{else}}../images/no-singer.jpg{{/if}}" class="card-img-top" alt="{{detail.name}}">
+              <h5 class="card-title mt-3">{{detail.name}}</h5>
+              <a href="/albums/{{detail.id}}" class="btn btn-light btn-sm"> > Albums</a>
+          </div>
+        </div>
+    {{/each}}
+  </div>
+
 </div>

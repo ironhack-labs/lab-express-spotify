@@ -1,5 +1,20 @@
-<div>
-  {{#each albums as |detail|}}
-      <h5>{{detail.name}}<a href="/tracks/{{detail.id}}" > -> View tracks</a></h5>
-  {{/each}}
+{{> navbar}}
+
+<div class="container green">
+
+  <div class="row m-3 p-2 align-item-sm-center">
+    <h4>💿  {{author}}'s albums</h4>
+  </div>
+
+  <div class="row justify-content-center align-item-sm-center">
+    {{#each albums as |detail|}}
+        <div class="card col-3 m-3">
+          <div class="card-body">
+              <h5 class="card-title">{{detail.name}}</h5>
+              <img src="{{#if detail.images.0.url}}{{detail.images.0.url}}{{else}}../images/default.jpg{{/if}}" class="card-img-top" alt="{{detail.name}}">
+              <a href="/tracks/{{detail.id}}" class="btn btn-success btn-lg mt-3">🎧      Listen</a>
+          </div>
+        </div>
+    {{/each}}
+  </div>
 </div>
