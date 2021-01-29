@@ -1,9 +1,10 @@
-search-col {
-    background-color: grey;
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+* {
+    font-family: 'Lato', sans-serif;
 }
 
-.btn {
-    background-color: #fa6863;
+search-col {
+    background-color: grey;
 }
 
 .box {
@@ -18,11 +19,11 @@ search-col {
     position: absolute;
 }
 
-.inner-box {
-    width: 500px;
-    height: 200px;
-    background-color: rgba(255, 255, 255, 0.5);
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.search {
+    width: 350px;
+}
+
+.nav-item {
+    font-color: white;
+    font-weight: bold
 }

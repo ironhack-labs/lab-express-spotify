@@ -13,8 +13,8 @@ app.set('views', __dirname + '/views');
 app.use('/public', express.static(__dirname + '/public'));
 
 const spotifyApi = new SpotifyWebApi({
-    clientId: '3',
-    clientSecret: '9'
+    clientId: '6a0b32c0b0d04d74aead579a0fdac8d3',
+    clientSecret: '4258381fddf5403b9695f67b954dcc89'
 });
 
 // setting the spotify-api goes here:

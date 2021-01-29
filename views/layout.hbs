@@ -16,7 +16,7 @@
 
 </head>
 
-<nav class="navbar navbar-expand-lg  navbar-light" style="background-color: #fa6863;">
+<nav class="navbar navbar-expand-lg  navbar-dark" style="background-color: #fa6863;">
     <div class="container-fluid">
         <a class="navbar-brand">
             <img src="/public/images/Spotify_Logo.png" alt="Spotify Logo" width="10%" height="10%"
@@ -28,16 +28,16 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
                 <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="/home">Home</a>
+                    <a class="nav-link active" aria-current="page" href="/">Home</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/artist-search-results">Artist</a>
+                    <a class="nav-link active" href="/artist-search">Artists</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/albums">Album</a>
+                    <a class="nav-link active" href="/albums/:artistId">Albums</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link active" href="/tracks">Tracks</a>
+                    <a class="nav-link active" href="/tracks/:albumId">Tracks</a>
                 </li>
             </ul>
         </div>

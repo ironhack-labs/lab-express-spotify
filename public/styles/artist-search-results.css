@@ -1,0 +1,48 @@
+    @import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+    * {
+        font-family: 'Lato', sans-serif;
+    }
+    
+    .artistDiv .card {
+        width: 284px;
+        height: 280px;
+        border: none;
+        margin: 0 auto;
+        margin-bottom: 98px;
+    }
+    
+    .artistDiv,
+    h1 {
+        color: #fa6863;
+        text-align: center;
+        margin-top: 45px;
+        margin-bottom: 45px;
+    }
+    
+    .card-body {
+        background-color: grey;
+    }
+    
+    .row {
+        margin-left: 100px;
+    }
+    
+    .artistDiv,
+    h6 {
+        color: white;
+    }
+    
+    .artistDiv .btn {
+        background-color: #fa6863;
+        color: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: none;
+    }
+    
+    .albumImage {
+        width: 280px;
+        height: 250px;
+        object-fit: cover;
+    }

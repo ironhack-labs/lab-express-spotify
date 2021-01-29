@@ -1,11 +1,20 @@
 <div class="artistDiv">
-    {{#each artistsSearch as |artist|}}
-    <div class="card" style="width: 18rem;">
-        <img src="{{artist.images.[0].url}}" class="card-img-top" alt="{{artist.name}}">
-        <div class="card-body">
-            <h5 class="card-title">{{artist.name}}</h5>
-            <a href="/albums/{{artist.id}}" class="btn btn-primary">View Albums</a>
+    <div class="container">
+        <h1>Artist Search Result</h1>
+        <div class="row">
+            {{#each artistsSearch as |artist|}}
+            <div class="card" style="259px">
+                <img class="card-img-top artistImage" src="{{artist.images.[0].url}}" alt="{{artist.name}}">
+                <div class="card-body">
+                    <h6 class="card-title">{{artist.name}}</h5>
+
+                        <a href="/albums/{{artist.id}}" class="btn btn-primary">View Albums</a>
+
+                </div>
+            </div>
             {{/each}}
+
+
         </div>
     </div>
 </div>
