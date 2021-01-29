@@ -1,12 +1,19 @@
-<div class="row">
-  <div class="col">
-    <form action="/artist-search-results" method="GET" class="index">
-      <div class="mb-3">
-        <h2>Find your artist</h2>
-        <input type="search" name="artist" class="form-control" id="singerform" aria-describedby="emailHelp"
-          placeholder="Introduce an artist name">
-      </div>
-      <button type="submit" class="btn btn-danger mt-2">Search for an artist</button>
-    </form>
-  </div>
-</div>
+<section id="cover" class="min-vh-100">
+    <div id="cover-caption">
+        <div class="container">
+            <div class="row">
+                <div class="col-xl-5 col-lg-6 col-md-8 col-sm-10 mx-auto text-center form p-4">
+                    <h1 class="display-4 py-2">Find artist in Spotify</h1>
+                    <div class="px-2">
+                        <form action="/artist-search-results" method="GET" class="justify-content-center">
+                            <div class="form-group">
+                                <input type="search" name="artist" class="form-control" id="singerform" placeholder="Type an artist name">
+                            </div>
+                            <button type="submit" class="btn btn-danger mt-2">Search</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

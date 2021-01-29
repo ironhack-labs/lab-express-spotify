@@ -1,9 +1,8 @@
-<h2>albums</h2>
-
 <div class="container-fluid">
   <div class="row">
+    <h2 class="text-center mb-4 mt-4">Albums</h2>
     {{#each data.items}}
-    <div class="card card-style" style="width: 22rem;">
+    <div class="card card-style text-center" style="width: 20rem;">
       <img class="card-img-top img-size" src="{{this.images.[0].url}}" alt="{{this.name}} album">
       <div class="card-body">
         <h5 class="card-title">{{this.name}}</h5>
