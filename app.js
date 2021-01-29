@@ -33,27 +33,26 @@ app.get('/artist-search-results', (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-      data.body.artists.items.forEach(item => console.log(item));
-      res.render('artist-search-results', { data: data.body })
+      res.render('artist-search-results', { data: data.body , term: req.query.artist})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
-app.get('/albums/:albumId', (req, res, next) => {
+app.get('/albums/:albumId/artist/:artistName', (req, res, next) => {
   spotifyApi
     .getArtistAlbums(req.params.albumId)
     .then(data => {
-      res.render('albums', { data: data.body })
+      res.render('albums', { data: data.body, artistName: req.params.artistName })
     })
     .catch(err => console.log('The error while searching artists occurred: ', err))
 })
 
-app.get('/tracks/:trackId', (req, res, next) => {
+app.get('/tracks/:trackId/artist/:artistName/albumTitle/:albumName', (req, res, next) => {
   spotifyApi
     .getAlbumTracks(req.params.trackId)
     .then(data => {
       console.log(data)
-      res.render('tracks', { data: data.body })
+      res.render('tracks', { data: data.body, artistName: req.params.artistName, albumName: req.params.albumName})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err))
 })

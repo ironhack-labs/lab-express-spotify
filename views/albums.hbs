@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <h2 class="text-center mb-4 mt-4">Albums</h2>
+    <h2 class="text-center mb-4 mt-4">{{artistName}} albums</h2>
     {{#each data.items}}
     <div class="card card-style text-center" style="width: 20rem;">
       <img class="card-img-top img-size" src="{{this.images.[0].url}}" alt="{{this.name}} album">
       <div class="card-body">
         <h5 class="card-title">{{this.name}}</h5>
-        <a href="/tracks/{{this.id}}" class="btn btn-primary">View tracks</a>
+        <a href="/tracks/{{this.id}}/artist/{{../artistName}}/albumTitle/{{this.name}}" class="btn btn-primary">View tracks</a>
       </div>
     </div>
     {{/each}}

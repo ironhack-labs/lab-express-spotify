@@ -1,12 +1,12 @@
 <div class="container-fluid">
   <div class="row">
-    <h2 class="text-center mb-4 mt-4">Search Results</h2>
+    <h2 class="text-center mb-4 mt-4">Search Results containing {{term}}</h2>
     {{#each data.artists.items}}
     <div class="card card-style text-center" style="width: 20rem;">
       <img class="card-img-top img-size" src="{{#unless this.images.[0].url}} /images/unkown_artist.jpg {{else}} {{this.images.[0].url}} {{/unless}}" alt="{{this.name}} cover">
       <div class="card-body">
         <h5 class="card-title">{{this.name}}</h5>
-        <a href="/albums/{{this.id}}" class="btn btn-primary">View albums</a>
+        <a href="/albums/{{this.id}}/artist/{{this.name}}" class="btn btn-primary">View albums</a>
       </div>
     </div>
     {{/each}}
