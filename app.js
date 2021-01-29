@@ -24,13 +24,15 @@ app.get('/', (req, res, next) => {
   res.render('home')
 })
 
+// url/artist-search?search=búsqueda del usuario
 app.get('/artist-search', (req, res, next) => {
-  spotifyApi
-  .searchArtists(req.query)
+  console.log(req.query) // => { search: loquesea }
+spotifyApi
+  .searchArtists(req.query.search)
   .then(data => {
-    console.log('The received data from the API: ', data.body);
-    res.render('artist-search-results')
-  })
+    console.log('The received data from the API: ', data.body.artists.items);
+    res.render('artist-search-results', { artists: data.body.artists.items})
+  }) 
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
