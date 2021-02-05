@@ -1,0 +1,11 @@
+<h1>Index here</h1>
+<div>
+    <form action="/artist-search" method="GET">
+        <label for="artist"></label>
+        <input type="text" name="search" id="artist">
+        <button type="submit">Search</button>
+    </form>
+</div>
+{{#each artists }}
+    <p>{{this.name}}</p>
+{{/each}}
