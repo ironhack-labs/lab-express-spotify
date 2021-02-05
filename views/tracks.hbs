@@ -1,0 +1,23 @@
+<div id="tracks" class="container">
+    <div class="row">
+        <div class="col-sm-6 d-flex align-items-center mt-2 pr-0 bg-info">
+            <h4 class="m-3"><b>Title</b></h4>
+        </div>
+        <div class="col-sm-6 d-flex justify-content-center align-items-center mt-2 pl-0 bg-info">
+            <h4 class="m-3"><b>Listen</b></h4>
+        </div>
+        {{#each tracks }}
+        <div class="col-md-6 col-sm-12 d-flex align-items-center mt-2 pr-0 bg-light">
+            <h5 class="m-0">{{name}}</h5>
+        </div>
+        <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center mt-2 pl-0 bg-light">
+            <audio
+                controls
+                src="{{preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </div>
+        {{/each }}
+    </div>
+</div>

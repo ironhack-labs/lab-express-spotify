@@ -52,6 +52,7 @@ app.get('/albums/:artistId', (req, res) => {
         .getArtistAlbums(req.params.artistId)
         .then(resData => {
             let albums = resData.body.items;
+            console.log(resData);
             albums = albums.map(album => {
                 // get album uri code only
                 album.uri = album.uri.split(":")[2];
@@ -60,9 +61,20 @@ app.get('/albums/:artistId', (req, res) => {
                 else album.images = album.images[0];
                 return album;
             });
-            res.render('albums', {albums});
+            res.render('albums', {albums: albums});
         })
         .catch(error => console.log(error));
+})
+
+app.get('/tracks/:tracksId', (req, res) => {
+    spotifyApi
+        .getAlbumTracks(req.params.tracksId, { limit : 10, offset : 1 })
+        .then(resData => {
+            let tracks = resData.body.items
+            res.render('tracks', {tracks})
+        })
+        .catch(error => console.log(error));
+    
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
