@@ -1,0 +1,14 @@
+<div class="tracklist">
+
+{{#each data.items}}
+  <div class="track" >{{ this.name}}
+    {{#if this.preview_url}} <span> Track preview not available. </span>
+    {{else}}
+    <audio controls src="{{this.preview_url}}">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+    {{/if}}
+ </div>
+{{/each}}
+</div>
