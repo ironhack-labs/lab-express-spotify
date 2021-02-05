@@ -1,0 +1,24 @@
+body {
+    box-sizing: border-box;
+    margin: 0;
+}
+#bg-image {
+    width: 100vw;
+    height: 100vh;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-container {
+    width: 60%;
+    height: 30%;
+    background-color: rgba(255, 227, 194, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+}
