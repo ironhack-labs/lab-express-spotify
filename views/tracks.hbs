@@ -1,0 +1,10 @@
+<h1>Tracks by Album</h1>
+{{#each tracks}}
+    <ul>
+        <li>{{this.name}}</li>
+        <br>
+        <audio controls>
+            <source src="this.preview_url">
+        </audio>
+    </ul>
+{{/each}}
