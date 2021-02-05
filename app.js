@@ -35,7 +35,7 @@ app.listen(3000, () =>
 
 app.get("/", (req, res, next) => {
   console.log("index page reached");
-  res.render("index");
+  res.status(200).render("index");
 });
 
 app.get("/artist-search/:artist", (req, res, next) => {
