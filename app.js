@@ -33,9 +33,15 @@ app.get('/artist-search', (req, res) => {
     spotifyApi
         .searchArtists(req.query.search.toLowerCase())
         .then(resData => {
-            const artists = resData.body.artists.items;
+            let artists = resData.body.artists.items;
+            // replace artist without image
+            artists = artists.map(artist => {
+                if (artist.images.length === 0) artist.images = {url : "/images/default.png"};
+                else artist.images = artist.images[0];
+                return artist;
+            });
             console.log(artists);
-            res.render('index', {artists})
+            res.render('artist-search-results', {artists: artists})
         })
         .catch(error => console.log(error))
 })

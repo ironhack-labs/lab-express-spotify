@@ -1,0 +1,19 @@
+<div id="beers">
+    <div class="container">
+        <div class="row">
+            {{#each artists }}
+            <div class="col-lg-4 col-md-6 col-sm-12 p-3">
+                <div class="card ">
+                    <a href="/beers/" class="card-link"></a>
+                    {{!-- <img class="card-img-top" src="{{images.0.url}}" alt="{{name}}"> --}}
+                    <img class="card-img-top" src="{{images.url}}" alt="{{name}}">
+                    <div class="card-body">
+                        <h5 class="card-title d-flex justify-content-center">{{ name }}</h5>
+                        <a href="#" class="btn btn-primary">View Albums</a>
+                    </div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
