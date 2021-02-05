@@ -1,5 +1,7 @@
 require("dotenv").config();
 
+var morgan = require("morgan");
+
 const express = require("express");
 const hbs = require("hbs");
 
@@ -18,11 +20,12 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: process.env.CLIENT_SECRET,
 });
 
+console.log(spotifyApi);
+
 // Retrieve an access token
 spotifyApi
   .clientCredentialsGrant()
   .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
-  // .then((data) => console.log(JSON.stringify(data)))
   .catch((error) =>
     console.log("Something went wrong when retrieving an access token", error)
   );
@@ -38,6 +41,43 @@ app.get("/", (req, res, next) => {
   res.status(200).render("index");
 });
 
-app.get("/artist-search/:artist", (req, res, next) => {
-  console.log(req.params);
+app.get("/artist-search/", (req, res, next) => {
+  console.log("artist search reached");
+  const artist = req.query;
+  console.log("str", artist.artist);
+  spotifyApi
+    .searchArtists(artist.artist)
+    .then((data) => {
+      console.log(artist);
+      console.log(
+        "The received data from the API: ",
+        JSON.stringify(data.body)
+      );
+      res.render("artist-search-results", data.body.artists);
+      // res.send(JSON.stringify(data.body));
+      return;
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+app.get("/albums/:artistID", (req, res, next) => {
+  console.log("artist search reached");
+  const artistID = req.params.artistID;
+  console.log("str", artistID);
+  spotifyApi
+    .getArtistAlbums(artistID)
+    .then((data) => {
+      console.log(
+        "The received data from the API: ",
+        JSON.stringify(data.body)
+      );
+      // res.render("artist-search-results", data.body.artists);
+      res.send(JSON.stringify(data.body));
+      return;
+    })
+    .catch((err) =>
+      console.log("The error while searching albums occurred: ", err)
+    );
 });
