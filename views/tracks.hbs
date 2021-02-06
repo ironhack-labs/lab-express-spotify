@@ -1,14 +1,24 @@
-<div class="tracklist">
-
-{{#each data.items}}
-  <div class="track" >{{ this.name}}
-    {{#if this.preview_url}} <span> Track preview not available. </span>
-    {{else}}
-    <audio controls src="{{this.preview_url}}">
-        Your browser does not support the
-        <code>audio</code> element.
-    </audio>
-    {{/if}}
- </div>
-{{/each}}
-</div>
+<table class="table-fixed border-separate border border-green-800">
+    <thead>
+        <tr>
+            <th class'w-1/3 border border-green-600 bg-green-200'>Track name</th>
+            <th class'w-1/1 border border-green-600 bg-green-200'>Preview</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+        <tr>
+            <td class="border border-green-600 bg-green-50">{{name}}</td>
+            <td class="border border-green-600 bg-green-50">
+                {{#if preview_url}} <span> Track preview not available. </span>
+                {{else}}
+                <audio controls src='{{preview_url}}'>
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+                {{/if}}
+            </td>
+            {{/each}}
+        </tr>
+    </tbody>
+</table>

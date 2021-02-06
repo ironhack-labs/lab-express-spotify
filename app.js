@@ -54,11 +54,13 @@ app.get('/albums/:artistId', (req, res, next) => {
 });
 
 app.get('/album-tracks/:albumId', (req, res, next) => {
+    
     spotifyApi
     .getAlbumTracks(req.params.albumId) 
     .then(data => {
-        //res.send(data.body.items)
-       res.render('tracks', {data : data.body})
+        //res.send(data.body.items
+      res.render('tracks', {tracks : data.body.items})
+      console.log('fetched tracks')
     })
     .catch(err => console.log('The error while fetching artists albums: ', err));
 });
