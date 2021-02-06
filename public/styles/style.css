@@ -1,0 +1,162 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+}
+
+img {
+    width: 300px;
+    height: 300px;
+}
+
+.noImage {
+    width: 240px;
+    height: 240px;
+    padding: 30px;
+}
+
+#artistsWrap {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 40px;
+    margin: 0 auto;
+    width: 80%;
+}
+
+#artistCard {
+    text-align: center;
+    width: 300px;
+    background-color: #4d4d4d;
+    height: 500px;
+    margin-left: 70px;
+    margin-bottom: 40px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+}
+
+#artistCard p {
+    font-size: 20px;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+#artistCard a {
+    padding: 10px;
+    background-color: #ef6866;
+    color: white;
+    border-radius: 10px;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+#artistCard a:hover {
+    opacity: 0.8;
+}
+
+#artistNameAlbums {
+    padding-top: 20px;
+    margin-bottom: 0;
+    font-weight: bold;
+    font-size: 40px;
+}
+
+#tracksList {
+    list-style: none;
+    width: 100%;
+    padding: 0;
+    margin: 80px 0 0 0;
+}
+
+#tracksList li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: #f6f6f6;
+    margin-bottom: 6px;
+    padding: 10px 140px 10px 100px;
+}
+
+#tracksList p {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+#trackHeader {
+    background-color: #4a4a4a;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    color: #c2c2c3;
+    font-size: 24px;
+    font-weight: bold;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+}
+
+#trackHeader p {
+    padding: 0 350px 0 100px;
+}
+
+#noTracks {
+    position: relative;
+    top: 130px;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#indexBackground {
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color:rgba(255, 255, 255, .4);
+    width: 30%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+}
+
+form input {
+    height: 13%;
+    width: 50%;
+    margin-bottom: 15px;
+    font-size: 20px;
+    padding: 5px;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #ef6866;
+    color: white;
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    font-size: 18px;
+}
+
+form button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}

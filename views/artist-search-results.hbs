@@ -1,0 +1,22 @@
+
+{{#if infoArtist}}
+
+<div id="artistsWrap">
+ {{#each infoArtist}}
+ <div id="artistCard">
+
+    {{#if images.0.url}}
+        <img src="{{images.0.url}}" alt="Artist image">
+
+    {{else}}
+        <img class="noImage" src="/images/spotify.png" alt="No image">
+    {{/if}}
+
+    <p>{{this.name}}</p>
+    <a href="/albums/{{this.id}}">View Albums</a>
+    
+ </div>
+ {{/each}}
+</div>
+
+{{/if}}
