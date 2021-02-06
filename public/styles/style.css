@@ -1,0 +1,50 @@
+body {
+    margin: 0 auto;
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+form {
+    border: 5px solid gray;
+    width: 35%;
+    height: 100px;
+    margin-top: 300px;
+    margin-left: 450px;
+    background-color: rgb(169, 169, 169, 0.5);
+}
+
+input {
+    display: block;
+    width: 80%;
+    margin: 20px 10px 15px 40px;
+}
+
+button {
+    color: white;
+    background-color: red;
+    padding: 5px;
+    margin-left: 180px;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: rgb(169, 169, 169, 0.5);
+    border: 5px solid gray;
+    width: 30%;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    margin-left: 500px;
+}
+
+h2 {
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
+}
+
+img {
+    margin-top: 20px;
+}
