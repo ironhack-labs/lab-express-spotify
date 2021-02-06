@@ -1,0 +1,10 @@
+{{#each this.body.artists.items}}
+    {{name}}
+{{/each}}
+
+<form action="/search-albums/:artistId" method="GET">
+
+    <input type="text" name="album" placeholder="Search an album" />
+    <button type="submit">Search for an Album</button>
+    
+</form>
