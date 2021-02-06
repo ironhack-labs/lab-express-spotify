@@ -1,0 +1,9 @@
+<div>
+    {{#each trucksResults}}
+    <h3>{{this.name}}</h3>
+        <audio src={{this.preview_url}} id="audio-controls" controls></audio> {{!-- specify an aurdio id, otherwise, assigns controls to the albumId --}}
+        {{!--<audio src={{this.href}} id="audio-controls" controls></audio>
+        <audio src={{this.external_urls.spotify}} id="audio-controls" controls></audio>--}}
+        <hr>
+    {{/each}}
+</div>
