@@ -53,7 +53,8 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 app.get('/tracks/:albumId', (req, res, next) => {
     spotifyApi.getAlbumTracks(req.params.albumId).then((tracks) => {
-        console.log('tracks', tracks.body);
+        console.log('tracks: ', tracks.body.items);
+        res.render('tracks', { tracks: tracks.body.items });
     });
 });
 const PORT = 3609;

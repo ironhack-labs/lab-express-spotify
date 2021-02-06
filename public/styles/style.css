@@ -1,17 +1,15 @@
 body {
-    box-sizing: border-box;
     margin: 0;
 }
 #bg-image {
     width: 100vw;
     height: 100vh;
     background-image: url('/images/spotify-background.jpeg');
-    background-size: contain;
+    background-size: cover;
     background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* overflow: hidden; */
 }
 
 .search-container {
@@ -26,7 +24,7 @@ body {
 .results-container {
     width: 100vw;
     height: 100vh;
-    margin: 0 auto;
+    /* margin: 0 auto; */
     padding: 75px 0;
     display: flex;
     flex-wrap: wrap;
@@ -54,12 +52,30 @@ a {
     text-decoration: none;
     background-color: #d1152e;
     width: 35%;
-    text-decoration: none;
     color: #fff;
-    margin-top: 10px;
     margin-bottom: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
+    border-radius: 5px;
+}
+#tracks-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 5% 0 5%;
+    height: 13%;
+    width: 100%;
+    color: #eee;
+    background-color: #939e9e;
+}
+#tracks-header h3 {
+    padding: 0 10% 0 10%;
+}
+footer {
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    position: fixed;
+    bottom: 0;
 }
