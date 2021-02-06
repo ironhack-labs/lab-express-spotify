@@ -1,9 +1,24 @@
+{{!-- <div id="index-body">
+    <div class="element-container">
+        <div class="form-container">
+            <form action="/artist-search" method="GET">
+                <label for="artist"></label>
+                <input type="text" name="search" id="artist">
+                <button type="submit">Search</button>
+            </form>
+        </div>
+    </div>
+</div> --}}
+
 <div id="index-body">
-    <div>
-        <form action="/artist-search" method="GET">
-            <label for="artist"></label>
-            <input type="text" name="search" id="artist">
-            <button type="submit">Search</button>
-        </form>
+    <div class="d-flex justify-content-center align-items-center h-100 w-100">
+        <div class="form-container d-flex justify-content-center">
+            <form action="/artist-search" method="GET" class="form d-flex flex-column justify-content-center align-items-center">
+                {{!-- <label for="artist"></label> --}}
+                <input type="text" name="search" id="artist" placeholder="
+The Beatles" class="text-center" required>
+                <button type="submit" class="btn-search btn btn-primary bg-danger"><h5 class="p-0 m-0">Search for an Artist</h5></button>
+            </form>
+        </div>
     </div>
 </div>
