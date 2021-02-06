@@ -1,0 +1,83 @@
+#homebackground{
+    height: 100vh;
+    width: 100vw;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.button{
+    background-color: coral;
+    color: white;
+    border-radius: 8px;
+    padding: 10px;
+    border: none;
+}
+
+#field{
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    width: 200px;
+}
+
+.artist{
+    width: 300px;
+    background-color: rgb(46, 46, 46);
+    color: white;
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.artist img{
+    width: 300px;
+    margin-bottom: 20px;
+}
+
+.artist a{
+    text-decoration: none;
+    color: white;
+    background-color: coral;
+    border-radius: 8px;
+    padding: 10px;
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 20px;
+    margin-top: 0;
+}
+
+.artist p{
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+    width: 250px;
+}
+
+.artistDisplay{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.preview{
+    width: vw100;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 10px;
+    font-family: "Helvetica Neue", Helvetica, sans-serif;
+    background-color: rgba(213, 213, 213, 0.66);
+}
+
+.preview p{
+  margin-right: 15px;
+  margin-left: 15px;    
+}
+
+
+

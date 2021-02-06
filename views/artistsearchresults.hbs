@@ -1,0 +1,18 @@
+<div class="artistDisplay">
+
+{{#each extractedInfo}}
+<div class="artist">
+    <img src="{{this.image.url}}" alt="{{this.name}} photo">
+    <p>{{this.name}}</p><br>
+    <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+{{/each}}
+
+</div>
+
+
+
+
+
+
+
