@@ -1,0 +1,41 @@
+body {
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    text-align: center;
+}
+
+button {
+    background-color: red;
+    color: #ffffff;
+    display: flex;
+    align-self: flex-end;
+    justify-content: space-evenly;
+    margin-top: 10px;
+}
+
+a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1,
+h2 {
+    color: #ffffff;
+}
+
+#home-div {
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin-top: 20%;
+    margin-left: 20%;
+    margin-right: 20%;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    background: #ffffff;
+    opacity: 0.6;
+}
+
+input {
+    padding-left: 20px;
+}
