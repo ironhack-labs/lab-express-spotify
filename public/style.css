@@ -1,0 +1,40 @@
+nav {
+    background: radial-gradient(circle, rgba(255,87,87,1) 0%, rgba(190,2,2,0.22673031026252988) 98%);
+    height: 40px;
+    padding: 15px 30px 15px; 
+    
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 30px;
+    font-weight: bold;
+    color: white; 
+}
+
+/*.home{
+    position: absolute; 
+    background-image: url('../images/spotify-background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}*/
+
+.background-image {
+    
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+   
+}
+
+
+
+.artist-search{
+    background-color: aqua;
+    display: flex;
+    flex-direction: column;
+    align-items:center; 
+
+}
