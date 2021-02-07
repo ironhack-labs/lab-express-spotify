@@ -1,0 +1,11 @@
+.buscador{
+    position: absolute;
+    background-color: white;
+    height: 400px;
+    width: 600px;
+    top: 0px;
+}
+
+body{
+    background-color: red;
+}

@@ -1,0 +1,14 @@
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col">
+            {{#each this}}
+            <div class="card" style="width: 60rem;">
+            <audio controls src="{{cancion}}"></audio>
+            <div class="card-body">
+            <h5 class="card-title">{{nombre}}</h5>
+            </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="container d-flex justify-content-center">
+    <div class="row">
+        <div class="col">
+            {{#each this}}
+<div class="card" style="width: 18rem;">
+  <img src="{{fotos.url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{nombre}}</h5>
+    <a class="btn btn-primary" href="/albums/{{id}}">Ver albums</a>
+  </div>
+</div>
+{{/each}}
+        </div>
+    </div>
+</div>
