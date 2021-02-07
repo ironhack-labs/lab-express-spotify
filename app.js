@@ -63,7 +63,7 @@ app.get("/artist-search/", (req, res, next) => {
 });
 
 app.get("/albums/:artistID", (req, res, next) => {
-  console.log("artist search reached");
+  console.log("album search reached");
   const artistID = req.params.artistID;
   console.log("str", artistID);
   spotifyApi
@@ -73,11 +73,33 @@ app.get("/albums/:artistID", (req, res, next) => {
         "The received data from the API: ",
         JSON.stringify(data.body)
       );
-      // res.render("artist-search-results", data.body.artists);
-      res.send(JSON.stringify(data.body));
+      res.render("album-search-results", data.body);
+      // res.send(JSON.stringify(data.body));
       return;
     })
     .catch((err) =>
       console.log("The error while searching albums occurred: ", err)
+    );
+});
+
+app.get("/albums/tracks/:albumID", (req, res, next) => {
+  console.log("album search reached");
+  const albumID = req.params.albumID;
+  console.log("str", albumID);
+  spotifyApi;
+
+  spotifyApi
+    .getAlbumTracks(albumID, { limit: 5, offset: 1 })
+    .then((data) => {
+      console.log(
+        "The received data from the API: ",
+        JSON.stringify(data.body)
+      );
+      res.render("track-search-results", data.body);
+      // res.send(JSON.stringify(data.body));
+      return;
+    })
+    .catch((err) =>
+      console.log("The error while searching tracks occurred: ", err)
     );
 });

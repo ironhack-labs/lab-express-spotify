@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+
+<!-- name image button   -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul> 
+
+    {{#each items}}
+
+     <li>
+        
+        {{this.name}}
+
+        {{#with images.[0]}} 
+            <img src={{this.url}} width="100px"/>
+        {{/with}}
+
+        <a href="/albums/tracks/{{this.id}}">View Tracks</a>
+
+     </li>    
+
+    {{/each}}
+
+    </ul>
+</body>
+</html>
