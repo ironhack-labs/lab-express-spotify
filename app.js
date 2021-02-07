@@ -2,12 +2,10 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
+const app = express();
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node')
-
-
-const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
@@ -30,8 +28,15 @@ app.get('/', (req, res) => {
     res.render('index')
 })
 
-app.get('/artist-search-results', (req, res) => {
-    res.render('artist-search', {})
+app.get('/artist-search', (req, res) => {
+    res.render('artist-search-results', {
+        name: artistName,
+        url: imageUrl
+    })
+})
+
+app.get('/artist-search-results/:albums', (req, res) => {
+    res.render('/artist-search-results/:albums', { })
 })
 
 

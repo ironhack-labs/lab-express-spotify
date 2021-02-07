@@ -1,9 +1,9 @@
 <body>
     <div>
-        {{#each  }}
-            <h3>{{  }}</h3>
-            <img src=" {{  }} " alt="" >
-            <a href=" {{  }} " >View albums</a>
+        {{#each searchedArtist }}
+            <h3>Artist {{ artistName }}</h3>
+            <img src=" {{ imgURL }} " alt="" >
+            <a href="/artist-search-results/:albums" >View albums</a>
         {{/each}}
     </div>
 </body>
