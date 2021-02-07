@@ -1,10 +1,20 @@
 
+<header class="songsHeader">
+      <img src="{{artistAlbum.body.images.[1].url}}" alt="">
+    <div>
+    <h2> <i> Artist: </i><b>{{artistAlbum.body.artists.[0].name}} </b></h2>
+    <h2> <i>Album: </i><b>{{artistAlbum.body.name}} </b></h2>
+    <h3> <i>Release Date: </i><b>{{releaseDate}} </b></h3>
+</div>
+  
+</header>
+
 <table class="songs">
-    <tr>
-        <th >Song</th>
+    <tr class="headers">
+        <th>Songs</th>
         <th>Listen</th>
     </tr>
-     {{#each trackCheck.body.items}}
+     {{#each tracks.body.items}}
     <tr class="tracks"> 
         <td>
             {{name}}

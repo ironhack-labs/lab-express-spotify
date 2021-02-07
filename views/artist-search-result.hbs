@@ -1,11 +1,19 @@
+<header class="albumHeader">
+
+ Artist Searched: <b>{{search}} </b>
+
+
+</header>
+
+
 <div class="megaSearch">
 
-{{#each artistSearched.body.artists.items}}
+{{#each dataArtist.body.artists.items}}
 
 <div class="result artist">
- {{#each images.[1]}}
-<img src="{{this}}" alt="">
-{{/each}}
+
+<img src="{{images.[1].url}}" alt="">
+
 <div class="nameBtn">
 <p class="name">{{name}}</p>
 

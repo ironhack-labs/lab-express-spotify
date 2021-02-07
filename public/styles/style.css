@@ -1,6 +1,8 @@
-html{
+body,html{
     font-family: Arial, Helvetica, sans-serif;
-    background-color: bisque;
+    background-color: lightgray;
+    margin: 0;
+    padding: 0;
 }
 
 #index{
@@ -17,8 +19,9 @@ html{
     flex-direction: column;
     position: fixed;
     top: 50%;
-    right: 30%;
+    left: 50%;
     height: 100px;
+    margin-left: -250px;
     justify-content: space-between;
 }
 
@@ -40,11 +43,15 @@ html{
     border-radius: 5px;
     width: 200px;
     align-self: center;
+   
 }
 
 input{
     height:40px;
     width: 500px;
+     border: solid 1px;
+     font-size: 20px;
+     text-indent:5%;
 }
 
 .megaSearch{
@@ -66,7 +73,8 @@ input{
 }
 
 .result img{
-   width: 250px
+    width: inherit;
+   height: 320px;
 }
 
 .btnResult {
@@ -77,21 +85,61 @@ input{
 .nameBtn{
     padding-top: 10px;
     display: flex;
-    width: 250px;
+    width: inherit;
     flex-direction: column;
     background-color: darkslategray;
     align-items: center;
     align-content: flex-end;
     justify-content: flex-end;
     text-align: center;
-
-
 }
+
+.albumHeader{
+    height: 80px;
+    text-indent: 20px;
+    margin: 0;
+    margin-bottom: 10px;
+    background-color: darkslategray;
+    color: white;
+    font-size: 30px;
+    vertical-align: middle;
+    padding-top: 20px;
+}
+
+.songsHeader{
+    display: flex;
+    justify-content: stretch;
+    align-items: flex-start;
+    align-content: flex-start;
+    height: 150px;
+    text-indent: 10px;
+    margin: 0;
+    margin-bottom: 2px;
+    background-color: darkslategray;
+    color: white;
+    font-size: 15px;
+    vertical-align: middle;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.songsHeader img{
+    width: 150px;
+    height: 150px;
+    margin-left: 10px;
+}
+.songsHeader div{
+    margin-left: 20px;
+}
+
+
+
 
 .name{
     color: white;
     font-size: 15px;
     font-weight: bold;
+    
 }
 
 .songs{
@@ -136,4 +184,12 @@ audio{
     margin-top: 5px;
     margin-bottom: 5px;
     color: gray;
+    width: 400px
 }
+
+.headers{
+    text-align: left;
+    text-indent: 30px;
+    font-size: 20px;
+}
+

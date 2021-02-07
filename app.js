@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const { request } = require('express');
 const express = require('express');
 const hbs = require('hbs');
 
@@ -32,23 +33,32 @@ app.get('/artist-search', async(req,res,next) => {
   let   clientPageSearch = req.query.artistSearch
   let   artistSearched =  await spotifyApi.searchArtists(clientPageSearch)
 
-    res.render('artist-search-result',{artistSearched})
-   //console.log(artistSearched.body.artists.items[0])
+    res.render('artist-search-result',
+    {
+    dataArtist: artistSearched,
+    search: clientPageSearch}
+    )
+   //console.log(artistSearched.body.artists.items)
 })
 
 app.get("/albums/:artistId",async (req,res,next)=>{
     let aId = String(req.params.artistId)
     let albumCheck = await spotifyApi.getArtistAlbums(aId)
     
-    //console.log(albumCheck.body.items[0])
+    //console.log(albumCheck.body.items[0].artists[0])
     res.render("albums",{albumCheck})
 })
 
 app.get("/tracks/:albumId", async(req,res, next)=> {
     let album = await String(req.params.albumId)
+    let albumCheck = await spotifyApi.getAlbum(album)
     let trackCheck = await spotifyApi.getAlbumTracks(album)
-    console.log(trackCheck.body.items[0])
-    res.render("tracks", {trackCheck})
+    console.log(albumCheck.body)
+    res.render("tracks", {
+      tracks: trackCheck,
+      artistAlbum:albumCheck,
+      releaseDate: albumCheck.body.release_date
+    })
 })
 /*${artistClick}*/
 //'23wEWD21D4TPYiJugoXmYb'

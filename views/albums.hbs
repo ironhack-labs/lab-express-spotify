@@ -1,10 +1,17 @@
+<header class="albumHeader">
+
+ Artist Album's: <b>{{this.albumCheck.body.items.[0].artists.[0].name}} </b>
+
+
+</header>
+
 <div class="megaSearch">
 {{#each albumCheck.body.items}}
   <div class="result artist">
 
-    {{#each images.[1]}}
-    <img src="{{this}}" alt="">
-    {{/each}}
+    
+    <img src="{{images.[1].url}}" alt="">
+    
 
     <div class="nameBtn">
     <p class="name">{{name}}</p>
