@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+#index {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://atlantis.nyc3.digitaloceanspaces.com/styled/2a1cb6a7e8474c5889225bb9b41ea92f");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#index div {
+  width: 50vw;
+  height: 30vh;
+  background-color: rgba(255, 255, 255, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#index form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#index button {
+  width: 150px;
+  height: 30px;
+  color: white;
+  background-color: rgba(246, 73, 73, 0.8);
+  border: 1px solid rgb(246, 73, 73);
+  border-radius: 3px;
+  margin-top: 20px;
+}
+
+input {
+  height: 30px;
+  width: 400px;
+  padding: 5px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#artists {
+  margin: 50px;
+  text-align: center;
+  background-color: rgb(61, 61, 61);
+  color: white;
+  font-weight: 700;
+  height: 250px;
+}
+
+#artists img {
+  width: 200px;
+  height: auto;
+}
+
+#artists a {
+  background-color: rgb(255, 93, 39);
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 20px;
+  color: white;
+}
+
+#albums {
+  margin: 50px;
+  text-align: center;
+  background-color: rgb(61, 61, 61);
+  color: white;
+  font-weight: 700;
+  height: 250px;
+}
+
+#albums img {
+  width: 200px;
+  height: auto;
+}
+
+#albums a {
+  background-color: rgb(255, 93, 39);
+  text-decoration: none;
+  border: none;
+  border-radius: 3px;
+  padding: 5px;
+  margin: 20px;
+  color: white;
+}
