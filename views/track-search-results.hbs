@@ -15,7 +15,9 @@
      <li>
         <div>    
             {{this.name}}
-            <a href={{this.preview_url}}>Preview</a>
+            <audio controls>
+                <source type="audio/mpeg" src={{this.preview_url}} >
+            </audio> 
         </div> 
      </li>    
     {{/each}}
