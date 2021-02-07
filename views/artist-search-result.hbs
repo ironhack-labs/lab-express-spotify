@@ -1,0 +1,19 @@
+<div class="megaSearch">
+
+{{#each artistSearched.body.artists.items}}
+
+<div class="result artist">
+ {{#each images.[1]}}
+<img src="{{this}}" alt="">
+{{/each}}
+<div class="nameBtn">
+<p class="name">{{name}}</p>
+
+<a class="btn btnResult" href="/albums/{{id}}">View Albums</a>
+</div>
+</div>
+{{/each}}
+
+</div>
+ <!-- console.log(artistSearched.body.artists.items
+ )-->

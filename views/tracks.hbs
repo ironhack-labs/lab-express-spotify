@@ -1,0 +1,18 @@
+
+<table class="songs">
+    <tr>
+        <th >Song</th>
+        <th>Listen</th>
+    </tr>
+     {{#each trackCheck.body.items}}
+    <tr class="tracks"> 
+        <td>
+            {{name}}
+        </td>
+        <td>
+             <audio controls src="{{preview_url}}"></audio>
+        </td>
+        
+    </tr>
+     {{/each}}
+</table>

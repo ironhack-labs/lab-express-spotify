@@ -1,0 +1,15 @@
+<div class="megaSearch">
+{{#each albumCheck.body.items}}
+  <div class="result artist">
+
+    {{#each images.[1]}}
+    <img src="{{this}}" alt="">
+    {{/each}}
+
+    <div class="nameBtn">
+    <p class="name">{{name}}</p>
+    <a class="btn btnResult" href="/tracks/{{id}}">View Songs</a>
+    </div>
+    </div>
+{{/each}}
+</div>
