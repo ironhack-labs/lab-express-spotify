@@ -28,6 +28,7 @@ body {
     padding: 75px 0;
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
 }
 .result-card {
     display: flex;
@@ -68,9 +69,23 @@ a {
     width: 100%;
     color: #eee;
     background-color: #939e9e;
+    margin-bottom: 10%;
 }
 #tracks-header h3 {
     padding: 0 10% 0 10%;
+}
+.results-container ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+}
+.results-container ul li {
+    width: 80vw;
+    display: flex;
+    justify-content: space-between;
+}
+audio {
+    width: 300px;
 }
 footer {
     display: flex;

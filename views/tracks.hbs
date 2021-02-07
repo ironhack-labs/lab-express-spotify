@@ -4,6 +4,9 @@
         <h3>Listen</h3>
     </div>
     {{#each tracks}}
-        <audio src="{{tracks.0.preview_url}}"></audio>
+    <ul>
+        <li>{{name}}<audio  src="{{preview_url}}" type="audio/mpeg" controls></audio></li>
+    </ul>
+        
     {{/each}}
 </div>
