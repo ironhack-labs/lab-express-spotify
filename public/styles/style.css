@@ -1,0 +1,52 @@
+body {
+    margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+    font-family: 'Roboto', Arial, Helvetica, sans-serif;
+    background: url('/images/spotify-background.jpeg') no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+   
+}
+
+.container{
+    padding: 20px;
+    text-align: center;
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.btn {
+	background-color: rgb(219, 79, 79);
+	border: 0;
+	outline: 0;
+	padding: 0;
+	transition: all 200ms ease-in;
+    cursor: pointer;
+    padding: 10px 20px;
+    color: white;
+}
+.btn:hover {
+	background-color:  rgb(207, 45, 45);
+}
+
+.form {	
+    width: 600px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.5);
+    box-shadow: 0 6px 10px 0 rgba(0, 0, 0 , .1);
+    padding: 30px 15px;
+}
+.field{
+    color: gray;
+    padding-left: 7px;
+    font-size: 18px;
+    width: 80%;
+    height: 30px;
+    margin: 20px 0;
+}
