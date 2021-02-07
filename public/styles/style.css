@@ -85,7 +85,7 @@ a {
     justify-content: space-between;
 }
 audio {
-    width: 300px;
+    width: 40%;
 }
 footer {
     display: flex;
