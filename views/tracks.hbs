@@ -1,0 +1,15 @@
+<ul>
+    {{#each displayInfo}}
+        <li>
+        <article class="tracks">
+        <p>{{this.name}}</p>
+            <audio controls>
+                <source src="{{this.preview}}" type="audio/mp3">
+                Your browser does not support the audio tag.
+            </audio>
+            <a href="{{this.externalLink}}">Open in Spotify</a>
+        </article>
+        </li>
+    {{/each}}
+</ul> 
+
