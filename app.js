@@ -39,11 +39,17 @@ app.get('/search-artist', async(req, res, next)=>{
     res.render('artistsearchresults', datosApi.body.artists.items)
 })
 
-app.get('/search-albums/:artistId', async(req, res, next)=>{
-    const dataid = req.query.album
-    const datosApiAlbum = await spotifyApi.getArtistAlbums(dataid)
-    console.log(datosApiAlbum.body.album)
-    res.render('albumsinformation', datosApiAlbum.body.album)
+app.get('/albums/:artistId', async (req, res, next) => {
+    let albumId = req.params.artistId
+    const getAlbums = await spotifyApi.getArtistAlbums(albumId) 
+    //console.log(getAlbums.body.items[0])
+    res.render('albums', getAlbums.body.items)
+})
+app.get('/tracks/:albumId', async (req, res, next) => {
+    let trackId = req.params.albumId
+    const getTracks = await spotifyApi.getAlbumTracks(trackId)
+    //console.log(getTracks.body.items[0])
+    res.render('tracks', getTracks.body.items)
 })
 
 
