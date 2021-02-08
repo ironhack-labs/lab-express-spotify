@@ -1,13 +1,13 @@
-{{#each this.body.artists.items}}
-    <p>{{{this.name}}}</p>
-    <p>{{{this.images}}}</p>
-    <p>{{{this.href}}}</p>
-    
+
+
+{{#each this}}
+
+<div class="card" style="width: 18rem;">
+  <img src="{{this.images.[0].url}}" class="card-img-top" alt="...">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="#" class="btn btn-primary">View Album</a>
+  </div>
+</div> 
 {{/each}}
 
-{{!-- {{#each artistSearched.body.artists.items}}
-{{this.name}}
- {{!-- {{#each images.[0]}} --}}
-{{!-- <img src="{{this}}" alt="">
-{{/each}}
-{{/each}} --}} 

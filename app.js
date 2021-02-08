@@ -4,13 +4,10 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
-//const bodyParser =require('body-parser')
-
+const app = express();
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
-
-const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
@@ -34,16 +31,6 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-/*const middlewarePersonalizado = (req,res,next) =>{
-    console.log("Hola, soy el cadenero")
-    next()
-}
-
-const middlewarePersonalizadoVIP = (req,res,next) =>{
-    console.log("Hola, soy el cadenero VIP")
-}
-*/
-
 // 3. RUTAS
     // Our routes go here:
 
@@ -59,17 +46,13 @@ app.get("/artist-search", async (req,res)=>{
     const data = req.query.artist
     const datosApiRespuesta = await spotifyApi.searchArtists(data)
 
-    const extractedInfo = await datosApiRespuesta.body.artists.items.map((elem)=>({
-        name: elem.name,
-        image: elem.images[0],
-        id: elem.id
-    }))
-   console.log(datosApiRespuesta.body.artists)
-    // console.log(datosApiRespuesta.body.artists.items[0].images)
 
-    res.render("artistsearchresults",{datosApiRespuesta})
+   //console.log(datosApiRespuesta.body.artists.items)
+     console.log(datosApiRespuesta.body.artists.items)
 
-})
+    res.render("artistsearchresults",datosApiRespuesta.body.artists.items)
+
+});
 
 
 
