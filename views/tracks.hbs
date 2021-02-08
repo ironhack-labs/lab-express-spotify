@@ -1,0 +1,15 @@
+<header style="display: flex; justify-content:space-between;align-items:center;background-color:gray" >
+    <h1 style="padding-left:10px;">Title</h1>
+    <h1 style="margin-right:100px;">Listen</h1>
+</header>
+{{#each this}}
+{{#if this.preview_url}}
+<div style="display: flex; justify-content:space-between;align-items:center;background-color:lightgray;margin: 5px 0">
+    <p style="padding-top: 10px;padding-left:10px">{{this.name}}</p>
+    <audio controls src="{{this.preview_url}}" style="height: 40px;">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+</div>
+{{/if}}
+{{/each}}

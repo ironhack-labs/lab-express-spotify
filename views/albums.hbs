@@ -1,0 +1,30 @@
+
+<div class="container">
+    <div class="row justify-content-around">
+        {{#each this}}
+        {{#if this.name}}
+        {{#if this.images.[0].url}}
+        <div class="col-md-4" style="margin-bottom: 20px;">
+            <div class="card">
+                <img class="card-img-top" src="{{this.images.[0].url}}" alt="{{this.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
+                </div>
+            </div>
+        </div>
+        {{else}}
+        <div class="col-md-4">
+            <div class="card">
+                <img class="card-img-top" src="./images/playlist.png" alt="{{this.name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
+                </div>
+            </div>
+        </div>
+        {{/if}}
+        {{/if}}
+        {{/each}}
+    </div>
+</div>
