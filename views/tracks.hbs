@@ -1,0 +1,13 @@
+{{#each trackResults}} 
+
+ 
+ <h2>{{this.name}}</h2>
+
+<audio
+        controls
+        src="{{this.preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+
+{{/each}}
