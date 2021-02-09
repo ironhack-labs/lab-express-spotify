@@ -59,9 +59,21 @@ app.get("/artist-search", async (req,res,next)=>{
 app.get("/albums/:artistId",async(req,res,next)=>{
     const idAlbum = req.params.artistId;
     const spotifyAlbum = await spotifyApi.getArtistAlbums(idAlbum);
-    console.log("la respuesta es")
-    console.log(spotifyAlbum.body.items)
+    //console.log("la respuesta es")
+    //console.log(spotifyAlbum.body.items)
     res.render('albums',spotifyAlbum.body.items)
+})
+
+// Iteration 5: get tracks
+
+app.get("/tracks/:trackId",async(req,res,next)=>{
+    const idTrack = req.params.trackId;
+    const spotifyTrack = await spotifyApi.getAlbumTracks(idTrack);
+
+    console.log("los tracks son")
+    console.log(spotifyTrack.body.items)
+
+    res.render('tracks',spotifyTrack.body.items)
 })
 
 // SERVIDORES
