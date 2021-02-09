@@ -42,19 +42,27 @@ app.get ("/",(req,res,next)=>{
     res.render("home")
 })
 
-app.get("/artist-search", async (req,res)=>{
+// ITERATION 2. Display results for artist search
+app.get("/artist-search", async (req,res,next)=>{
     const data = req.query.artist
     const datosApiRespuesta = await spotifyApi.searchArtists(data)
 
-
-   //console.log(datosApiRespuesta.body.artists.items)
-     console.log(datosApiRespuesta.body.artists.items)
+//    console.log("mi respuesta es")
+  // console.log(datosApiRespuesta.body.artists.items)
 
     res.render("artistsearchresults",datosApiRespuesta.body.artists.items)
 
 });
 
+//Iteration 4: view albums
 
+app.get("/albums/:artistId",async(req,res,next)=>{
+    const idAlbum = req.params.artistId;
+    const spotifyAlbum = await spotifyApi.getArtistAlbums(idAlbum);
+    console.log("la respuesta es")
+    console.log(spotifyAlbum.body.items)
+    res.render('albums',spotifyAlbum.body.items)
+})
 
 // SERVIDORES
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
