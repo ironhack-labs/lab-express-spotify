@@ -1,11 +1,17 @@
 
 
 {{#each this}}
-<p>{{this.name}}</p>
-<p>{{this.id}}</p>
+{{!-- <p>{{this.name}}</p>
 <img src="{{this.images.[0].url}}">
 </br>
-<a href="/albums/:artistId">View Albums</a>
+<a href="/albums/{{this.id}}">View Albums</a> --}}
 
+<div class="card" style="width: 18rem;">
+  <img src="{{this.images.[0].url}}" class="card-img-top" >
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+  </div>
+</div>
 {{/each}} 
 
