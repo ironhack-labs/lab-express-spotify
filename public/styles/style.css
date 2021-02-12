@@ -1,21 +1,47 @@
-html{
-    background-image: url('../images/spotify-background.jpeg');
-    background-size: cover;
- 
- 
- }
- 
- .form{
-     position: absolute;
-     
- }
- 
- .form-tex-input{
-     width: 500px;
- 
- }
- .btn{
-     margin-left: 200px;
-     background: red;
- 
- } 
+#home_background {
+	background-image: url("/images/spotify-background.jpeg");
+	background-size: cover;
+	background-repeat: no-repeat;
+	height: 100vh;
+	width: 100vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#search_wrapper {
+	background-color: rgba(255,255,255, 0.4);
+	width: 500px;
+	height: 200px;
+}
+
+#search_wrapper > form {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	height: 100%;
+}
+
+#search_wrapper > form > input {
+	width: 80%;
+}
+
+#search_wrapper > form > button {
+	margin-top: 10px;
+	background-color: coral;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+}
+
+#artists_wrapper, #albums_wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.artist, .album {
+	margin: 15px 0px;
+}

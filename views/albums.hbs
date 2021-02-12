@@ -1,0 +1,14 @@
+<div class="container">
+	<div class="col">
+		<div class="row">
+			<h1>Results for: {{query}}</h1>
+		</div>
+		<div class="row">
+			<div id="albums_wrapper">
+				{{#each albums}}
+				{{>card class="album" image=images.[0].url name=name id=id route="tracks" label="View tracks"}}
+				{{/each}}
+			</div>
+		</div>
+	</div>
+</div>
