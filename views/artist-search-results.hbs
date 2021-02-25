@@ -1,0 +1,12 @@
+<div class=" d-flex justify-content-around flex-row flex-wrap m-5">
+    {{#each results}}
+    <div class="card m-2 text-center text-white bg-secondary" style="width: 16rem;">
+        <img class="card-img-top" src="{{this.images.[0].url}}" alt="{{name}}" width="16rem" />
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/albums/{{id}}" class="btn btn-danger">Go to Albums!</a>
+        </div>
+    </div>
+
+    {{/each}}
+</div>

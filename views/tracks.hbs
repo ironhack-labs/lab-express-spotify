@@ -1,0 +1,19 @@
+<div class="container mt-3">
+    <table class="table">
+        <thead class="thead-dark">
+            <tr>
+                <th scope="col">Title</th>
+                <th scope="col">Listen</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each track}}
+            <tr>
+                <th class="align-middle" scope="row">{{this.name}}</th>
+                <td><audio controls src={{this.preview_url}}></audio></td>
+            </tr>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+</div>
