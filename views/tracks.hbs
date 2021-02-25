@@ -1,0 +1,17 @@
+<div class="super">
+  <a href="/">Home</a>
+</div>
+<div class="container mt-5">
+  <ul class="list-group">
+    {{#each data}}
+    <li class="list-group-item">
+      <div class="d-flex align-items-center justify-content-between">
+        <h5>{{ this.name }}</h5>
+        <audio controls>
+          <source src="{{ this.preview_url }}" type="audio/mpeg" />
+        </audio>
+      </div>
+    </li>
+    {{/each}}
+  </ul>
+</div>
