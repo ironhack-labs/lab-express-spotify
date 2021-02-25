@@ -1,0 +1,18 @@
+<h1 class="d-flex justify-content-center m-2">
+  Albums for: {{ albumResults.[0].artists.name }}
+</h1>
+<div class="container d-flex flex-row flex-wrap">
+  {{#each albumResults}}
+  <div class="card m-3" style="width: 18rem">
+    <img
+      src="{{this.images.0.url}}"
+      class="card-img-top"
+      alt="{{ this.artists.name }}"
+    />
+    <div class="card-body text-center bg-dark text-light">
+      <h5 class="card-title">{{ this.name }}</h5>
+      <a href="/tracks/{{ this.id }}" class="btn btn-danger">View Tracks</a>
+    </div>
+  </div>
+  {{/each}}
+</div>

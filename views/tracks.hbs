@@ -1,0 +1,18 @@
+<table class="table m-2">
+  <thead>
+    <tr class="bg-dark text-light">
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tracksResults}}
+    <tr>
+      <td>{{ this.name }}</td>
+      <td>
+        <audio src="{{ this.preview_url }}" controls></audio>
+      </td>
+    </tr>
+    {{/each}}
+  </tbody>
+</table>
