@@ -1,0 +1,10 @@
+{{#if artist}}
+{{#each album}}
+<div>
+    <h3>{{this.name}}</h3>
+    <img src="{{this.image}}" alt="{{this.name}} photo">
+</div>
+{{/each}}
+{{else}} 
+<h1>Could not find artist</h1>
+{{/if}}
