@@ -1,0 +1,17 @@
+body {
+    background: rgb(29, 185, 84);
+    background: radial-gradient(circle, rgba(29, 185, 84, 1) 0%, rgba(25, 20, 20, 1) 100%);
+}
+
+.home-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 95vh;
+    width: 95vw;
+    margin: auto;
+}
+
+.go-button {
+    width: 100%;
+}
