@@ -33,7 +33,7 @@ app.get("/", (req, res) => {
   console.log("Home page is visible!");
 });
 
-// Artist search (back-end)
+// Artist search results page
 app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.artist)
@@ -44,6 +44,20 @@ app.get("/artist-search", (req, res) => {
     })
     .catch((err) => {
       console.log("Houston, we have a problem...", err);
+    });
+});
+
+// Artist's albums page
+app.get("/albums/:artistId", (req, res) => {
+  const artistId = req.params.artistId;
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then((data) => {
+      res.render("/albums", { data: data });
+      console.log(data);
+    })
+    .catch((err) => {
+      console.log("We have an error!", err);
     });
 });
 
