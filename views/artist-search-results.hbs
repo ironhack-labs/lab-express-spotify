@@ -3,5 +3,5 @@
 {{#each artists}}
 <p>{{ this.name }}</p>
 <img src="{{this.images.0.url}}">
-<a href="#">View Albums</a>
+<a href="/albums/{{this.id}}">View Albums</a>
 {{/each}}

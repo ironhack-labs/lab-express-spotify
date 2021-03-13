@@ -49,9 +49,17 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
-// app.get("/artist-search-results", (req, res) => {
-//   res.render("artist-search-results");
-// });
+app.get("/albums/:artistId", (req, res) => {
+  const artistId = req.params.artistId;
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then((albumsReturned) => {
+      res.render("/albums", { albumsReturned: albumsReturned });
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
