@@ -3,4 +3,5 @@
 {{#each albumsReturned}}
 <p>{{ this.name }}</p>
 <img src="{{ this.images.0.url }}" alt="">
+<a href="/tracks/{{this.id}}">View Tracks</a>
 {{/each}}
