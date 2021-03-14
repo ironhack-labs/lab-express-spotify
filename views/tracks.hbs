@@ -1,0 +1,11 @@
+<h1>View Tracks</h1>
+
+<ul>
+    {{#each tracks}}
+    <li>
+        {{name}} <audio controls src={{preview_url}}>
+            Your browser does not support the
+            <code>audio</code> element.</audio>
+    </li>
+    {{/each}}
+</ul>
