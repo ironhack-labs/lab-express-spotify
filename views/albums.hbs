@@ -1,1 +1,7 @@
-<h1>Albums for</h1>
+<h1>Albums page</h1>
+
+{{#each albums}}
+<img src="" alt="The cover of the album">
+<h3>{{ title }}</h3>
+<button><a href="{{ images.0.url }}">View Tracks</a></button>
+{{/each}}

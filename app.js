@@ -53,8 +53,9 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(artistId)
     .then((data) => {
-      res.render("/albums", { data: data });
-      console.log(data);
+      const arrayOfAlbums = data.body.items;
+      res.render("albums", { albums: arrayOfAlbums });
+      console.log("Yay! Successfully accesssed the albums!", arrayOfAlbums);
     })
     .catch((err) => {
       console.log("We have an error!", err);
