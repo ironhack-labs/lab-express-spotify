@@ -1,0 +1,19 @@
+<h1>Tracks page</h1>
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Listen</th>
+    </tr>
+
+    {{#each tracks}}
+    <tr>
+        <td>{{name}} - Name of the album</td>
+        <td>
+            <audio controls>
+                <source src="{{ preview_url }}" type="audio">
+            </audio>
+        </td>
+    </tr>
+    {{/each}}
+</table>

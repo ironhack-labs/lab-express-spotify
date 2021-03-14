@@ -40,7 +40,7 @@ app.get("/artist-search", (req, res) => {
     .then((data) => {
       const arrayOfArtists = data.body.artists.items;
       res.render("artist-search-results", { artists: arrayOfArtists });
-      console.log("The received data from the API", arrayOfArtists);
+      console.log("Nice! We received the results of the search for an artist!");
     })
     .catch((err) => {
       console.log("Houston, we have a problem...", err);
@@ -55,10 +55,25 @@ app.get("/albums/:artistId", (req, res) => {
     .then((data) => {
       const arrayOfAlbums = data.body.items;
       res.render("albums", { albums: arrayOfAlbums });
-      console.log("Yay! Successfully accesssed the albums!", arrayOfAlbums);
+      console.log("Yay! Successfully accesssed the albums of an artist!");
     })
     .catch((err) => {
       console.log("We have an error!", err);
+    });
+});
+
+// Album's tracks page
+app.get("/:albumId", (req, res) => {
+  const albumId = req.params.albumId;
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      const tracks = data.body.items;
+      res.render("tracks", { tracks: tracks });
+      console.log("Wohooo! We accessed the track of the album!", tracks);
+    })
+    .catch((err) => {
+      console.log("Error occured when accessing tracks", err);
     });
 });
 
