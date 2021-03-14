@@ -1,7 +1,7 @@
 <div>
     {{#each artists}}
     <h1>{{name}}</h1>
-    {{images}}
-    {{!-- {{data.body.artists.items.name}} --}}
+    <img src="{{images.[0].url}}" alt="{{ name }}" />
+    <button type="submit"><a href="/albums/{{id}}">View Albums</a></button>
     {{/each}}
 </div>

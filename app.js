@@ -30,9 +30,42 @@ app.get("/artist-search-results", (req, res) => {
     spotifyApi
   .searchArtists(req.query.artist)
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items);
+    //console.log('The received data from the API: ', data.body.artists.items);
     const artists = data.body.artists.items;
+    // wanted to know how to get the image:
+    // artists.forEach((element) => {
+    //   console.log(element.images[0])
+    // })
     res.render("artist-search-results", {artists} )
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+})
+app.get('/albums/:artistId', (req, res) => {
+  // console.log(req.params)
+  // console.log(req.params.artistId)
+  const artistId = req.params.artistId;
+  spotifyApi
+  .getArtistAlbums(artistId)
+  .then(data => {
+    //console.log('Artist albums', data.body);
+    const albums = data.body.items;
+    res.render("albums", {albums})
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+})
+app.get('/tracks/:trackId', (req, res) => {
+  // console.log(req.params)
+  // console.log(req.params.trackId)
+  const trackId = req.params.trackId;
+  spotifyApi
+  .getAlbumTracks(trackId) 
+  .then(data => {
+    const tracks = data.body.items;
+    //console.log('tracks:', tracks);
+    // tracks.forEach((element) => {
+    //   console.log(element.preview_url)
+    // })
+    res.render("tracks", {tracks})
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
