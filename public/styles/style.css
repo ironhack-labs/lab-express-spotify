@@ -1,6 +1,8 @@
 body {
     background: rgb(29, 185, 84);
     background: radial-gradient(circle, rgba(29, 185, 84, 1) 0%, rgba(25, 20, 20, 1) 100%);
+    width: 80vw;
+    margin: auto;
 }
 
 .home-container {
@@ -15,3 +17,38 @@ body {
 .go-button {
     width: 100%;
 }
+
+.artist-search-results {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    /* align-items: center; */
+}
+
+
+
+.artist-card {
+    width: 18rem;
+    /* height: 33%; */
+    /* display: flex; */
+    /* justify-content: center; */
+    /* margin: auto; */
+}
+
+
+.artist-card img {
+    /* max-width: 25%; */
+    border-radius: 5%;
+}
+/*
+.artist-card-inner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 50%;
+    height: 50%;
+    background-color: white;
+    border-radius: 5%;
+} */

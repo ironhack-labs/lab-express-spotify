@@ -1,0 +1,16 @@
+{{!-- <div class="artist-card">
+    <div class="artist-card-inner">
+        <div class="artist-text">
+            <h5> {{this.name}}</h5>
+        </div>
+        <img src="{{this.images.0.url}}" alt="{{this.name}}">
+    </div>
+</div> --}}
+
+<div class="card text-white bg-success artist-card text-center row col-md-6 gx-3 gy-5">
+    <img src="{{this.images.0.url}}" alt="{{this.name}}">
+    <div class="card-body">
+        <h5> {{this.name}}</h5>
+        <a href="/albums/{{this.id}}" class="btn btn-primary">See Albums</a>
+    </div>
+</div>
