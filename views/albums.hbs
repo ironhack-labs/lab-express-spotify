@@ -1,0 +1,14 @@
+<div class="layout">
+    <a href="/">Home</a>
+    <h1>Albums Results</h1>
+    <div class="container d-flex flex-wrap">
+        {{#each albums}}
+
+        <h2>{{this.name}}</h2>
+        <div class="card m-2" style="width: 18rem"></div>
+        <img src="{{this.images.0.url}}" width="100px" alt="Albums of an artist">
+        <button><a href="/tracks/{{ id }}">View Tracks</a></button>
+        {{/each}}
+    </div>
+</div>
+</div>

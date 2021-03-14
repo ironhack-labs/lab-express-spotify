@@ -1,0 +1,16 @@
+<div class="layout">
+    <a href="/">Home</a>
+    <h1>View Tracks</h1>
+    <div class="tracks"> {{#each tracks}} <ul>
+            <li>
+                {{this.albumId}}
+                <h2>{{ this.name }}</h2>
+                <audio controls src="{{ preview_url }}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </li>
+        </ul>
+        {{/each}}
+    </div>
+</div>
