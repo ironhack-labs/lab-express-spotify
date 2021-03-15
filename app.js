@@ -1,4 +1,5 @@
 const dotenv = require("dotenv").config();
+const { SSL_OP_SSLEAY_080_CLIENT_DH_BUG } = require("constants");
 const express = require("express");
 const hbs = require("hbs");
 const app = express();
@@ -51,10 +52,15 @@ app.get("/albums/:id", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.id)
     .then((data) => {
-      console.log("The received data from the API: ", data);
-    })
-    // res.render("artistsearchresults", {
-    // searchTerm: data.body.artists.items,
+      console.log(data.body.items[0],data.body.items[1]);
+      for (i = 0; i < data.body.items.length; i++) {
+        console.log(data.body.items[i].name, data.body.items[i].images[0].url);
+      }
+      res.render("albums",{ albumsdata : data.body.items });
+      // res.send(data.body.items[0].images[0].url);
+      })
+    
+
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
