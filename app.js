@@ -4,20 +4,15 @@ const express = require("express");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
 
-// require spotify-web-api-node package here:
-
-const app = express();
-
-app.set("view engine", "hbs");
-app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/public"));
-
+//a gente não coloca credenciais porque qualquer um que ver nosso repositório vai ver. Daí usa essa biblioteca do dotend para conseguir mudar o jeito que isso é exibido no código. e daí cria o '.env' e coloca as credenciais dentro desse arquivo somente. Lembrar de não deixar com espaço
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
 });
 
 // Retrieve an access token
+// A gente precisa gerar uma token a partir de .clientCredentialsGrant
+//essa token a gente usa sempre que vamos pegar artistas, músicas...
 spotifyApi
   .clientCredentialsGrant()
   .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
@@ -25,23 +20,23 @@ spotifyApi
     console.log("Something went wrong when retrieving an access token", error)
   );
 
+const app = express();
+
+app.set("view engine", "hbs");
+app.set("views", __dirname + "/views");
+app.use(express.static(__dirname + "/public"));
+
 app.get("/", (req, res) => {
-  console.log("Debora e michelle hackers demais!!!");
   res.render("home");
 });
 
-spotifyApi
-  .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-  .then((data) => {
-    console.log("The received data from the API: ", data.body);
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-  })
-  .catch((err) =>
-    console.log("The error while searching artists occurred: ", err)
-  );
-
-app.get("/ albums /: artistId", (req, res, next) => {
-  // .getArtistAlbums () o código vai aqui
+//query é um pedido de informação, dado, consulta ou solicitar uma requisição
+//o que é esse data? kkk
+app.get("/artist-search", async (req, res) => {
+  res.render("artist-search-results");
+  const { artistName } = req.query;
+  const data = await spotifyApi.searchArtists(artistName);
+  console.log(data.body.artists.items);
 });
 
 app.listen(3000, () =>
