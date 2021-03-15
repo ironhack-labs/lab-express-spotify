@@ -68,15 +68,4 @@ app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
 
-/*app.get("/albums/:artistId", (req, res) => {
-  const artistId = req.params.artistId;
-  spotifyApi
-    .getArtistAlbums(artistId)
-    .then((albumsReturned) => {
-      // console.log("ALBUMS RETURNED: ", albumsReturned.body.items);
-      res.render("albums", { albumsReturned: albumsReturned.body.items });
-    })
-    .catch((err) => {
-      console.log(err);
-    });
-});*/
+
