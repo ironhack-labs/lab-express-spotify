@@ -1,0 +1,32 @@
+body, html {
+    margin: 0;
+    padding: 0;
+}
+
+.backgroundImage {
+    background-image: url("/images/spotify-background.jpeg");
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search {
+    background-color:lightgrey;
+    width: 400px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.input {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
