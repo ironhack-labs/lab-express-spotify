@@ -33,10 +33,19 @@ app.get("/", (req, res) => {
 //query é um pedido de informação, dado, consulta ou solicitar uma requisição
 //o que é esse data? kkk
 app.get("/artist-search", async (req, res) => {
-  res.render("artist-search-results");
   const { artistName } = req.query;
-  const data = await spotifyApi.searchArtists(artistName);
-  console.log(data.body.artists.items);
+
+  try {
+    const {
+      body: {
+        artists: { items },
+      },
+    } = await spotifyApi.searchArtists(artistName);
+
+    response.render("artist-search-results", { items });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.listen(3000, () =>

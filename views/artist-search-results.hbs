@@ -1,9 +1,14 @@
-{{#if artist}}
 {{#each album}}
+<main>
 <div>
-    <h3>{{this.name}}</h3>
-    <img src="{{this.image}}" alt="{{this.name}} photo">
+    <img src="{{this.images.[0].url}}" alt="{{this.name}} photo">
 </div>
+<div>
+    <h2>{{this.name}}</h2>
+
+    <a href="">View Albuns</a>
+</div>
+</main>
 {{/each}}
 {{else}} 
 <h1>Could not find artist</h1>
