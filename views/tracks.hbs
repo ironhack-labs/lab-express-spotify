@@ -1,0 +1,11 @@
+{{#each trackdata}}
+    <div class="track-row">
+        <div class="track-info">
+            {{this.track_number}}.{{this.name}}
+        </div>
+        <div class="preview">
+            <audio class="audio-player" controls src="{{this.preview_url}}">Your browser does not support this
+                preview.</audio>
+        </div>
+    </div>
+{{/each}}

@@ -54,12 +54,11 @@ app.get("/albums/:id", (req, res) => {
     .then((data) => {
       // console.log(data.body.items[0],data.body.items[1]);
       // for (i = 0; i < data.body.items.length; i++) {
-        // console.log(data.body.items[i].name, data.body.items[i].images[0].url);
+      // console.log(data.body.items[i].name, data.body.items[i].images[0].url);
       // }
       res.render("albums",{ albumsdata : data.body.items });
-      // res.send(data.body.items[0].images[0].url);
-      })
-    
+      // res.send(data.body.items);
+    })
 
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -68,16 +67,12 @@ app.get("/albums/:id", (req, res) => {
 
 app.get("/tracks/:albumid", (req, res) => {
   spotifyApi
-    .getArtistAlbums(req.params.albumid)
+    .getAlbumTracks(req.params.albumid)
     .then((data) => {
-      // console.log(data.body.items[0], data.body.items[1]);
-res.send(data)      // for (i = 0; i < data.body.items.length; i++) {
-        // console.log(data.body.items[i].name, data.body.items[i].images[0].url);
-      // }
-      // res.render("albums",{ albumsdata : data.body.items });
-      // res.send(data.body.items[0].images[0].url);
-      })
-    
+      
+      res.render("tracks",{ trackdata : data.body.items });
+      // res.send(data.body.items[0]);
+    })
 
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

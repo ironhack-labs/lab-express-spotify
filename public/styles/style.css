@@ -6,7 +6,12 @@ body {
     rgba(25, 20, 20, 1) 100%
   );
   width: 80vw;
+  height: 100vh;
   margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .home-container {
@@ -53,3 +58,16 @@ body {
     background-color: white;
     border-radius: 5%;
 } */
+
+.track-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: black;
+  color: white;
+  border-radius: 1rem;
+}
+
+.preview {
+  background: transparent;
+}
