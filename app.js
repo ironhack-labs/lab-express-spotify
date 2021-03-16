@@ -22,7 +22,6 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 
 app.get("/", (req, res) =>{
     res.render("index");
@@ -31,26 +30,49 @@ console.log(req, "you opened the homepage")
 ;
 
 app.get("/artist-search", (req, res) =>{
-    const artist = req.query;
-    // ************ MAybe dont need this??
-
-    console.log(artist, "is the query");
+    console.log(req.query, "is the query");
     console.log(req.query.artist, "this is the value from the artist key")
 // ******* TESTS
-
-
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-      console.log('The received data from the API: ', data.body);
-      console.log(data.body.artists.items);
+      // console.log('The received data from the API: ', data.body);
+      // console.log("this are the results:", data.body.artists.items);
       res.render("artist-search-result", {artists: data.body.artists.items});
-      // ********** WHY DO I PASS AN OBJECT 
       // ********** is the artists a declaration? link to each??
+      // ********** it is an array, why do i send an object?
       // ********** WHY DO I HAVE TWO DIRECTORIES
 
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
+app.get("/albums/:mufasa", (req, res) =>{
+  console.log(req.params.mufasa, "is the params & id");
+  const allAlbumsLink = req.params.mufasa;
 
+  spotifyApi.getArtistAlbums(allAlbumsLink)
+  .then(function(data) {
+    console.log('Artist albums', data.body.items);
+    res.render("albums", {albums: data.body.items})
+  }, function(err) {
+    console.error(err);
+  });
+})
+
+app.get("/tracks/:mufasa", (req, res) =>{
+
+  spotifyApi.getAlbumTracks(req.params.mufasa, { limit : 5, offset : 1 })
+  .then(function(data) {
+    console.log("this is data.body", data.body);
+    res.render("tracks", {tracks: data.body.items})
+  
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+
+})
+
+
+
+app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
