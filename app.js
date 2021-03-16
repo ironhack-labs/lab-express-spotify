@@ -1,6 +1,3 @@
-// Client ID 091d20fbe8fc45c4a35e4d203ee430bd
-// Client Secret 1ed288cefd7f452f9760b73677f20179
-
 require("dotenv").config();
 
 const express = require("express");
