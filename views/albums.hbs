@@ -1,18 +1,15 @@
 <div>
-{{#if items}} 
 {{#each items}}
+{{#if this.images}} 
 <main>
 <div>
     <img src="{{this.images.[0].url}}" alt="{{this.name}} photo">
+{{/if}}
 </div>
 <div>
     <h2>{{this.name}}</h2>
-
-    <a href="/albums/{{this.id}}">View Albuns</a>
+    <a href="/albums/{{this.id}}">View Tracks</a>
 </div>
 </main>
 {{/each}}
-{{else}}
-<h1>Could not find artist</h1>
-{{/if}}
 </div>
