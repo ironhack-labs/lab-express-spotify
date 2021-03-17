@@ -1,11 +1,13 @@
-<h1>View Tracks</h1>
+<div class="search results">
+    <h1>View Tracks</h1>
 
-<ul>
-    {{#each tracks}}
-    <li>
-        {{name}} <audio controls src={{preview_url}}>
-            Your browser does not support the
-            <code>audio</code> element.</audio>
-    </li>
-    {{/each}}
-</ul>
+    <ul class="tracks">
+        {{#each tracks}}
+        <li>
+            {{name}} <audio controls src={{preview_url}}>
+                Your browser does not support the
+                <code>audio</code> element.</audio>
+        </li>
+        {{/each}}
+    </ul>
+</div>

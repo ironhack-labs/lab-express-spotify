@@ -1,12 +1,13 @@
-<h1>View Albums from {{artistName}}</h1>
-
-<ul>
-    {{#each albums}}
-    <li>
-        <img src="{{images.0.url}}" alt="{{name}} album image" width="300px">
-        {{name}}
-        <a href='/tracks/{{id}}'>View Tracks</a>
-    </li>
-    {{!-- images.0.whateverProperty --}}
-    {{/each}}
-</ul>
+<div class="search results">
+    <h1>View Albums from {{artistName}}</h1>
+    <ul>
+        {{#each albums}}
+        <li>
+            <img src="{{images.0.url}}" alt="{{name}} album image" width="200px">
+            {{name}}
+            <a href='/tracks/{{id}}'>View Tracks</a>
+        </li>
+        {{!-- images.0.whateverProperty --}}
+        {{/each}}
+    </ul>
+</div>

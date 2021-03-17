@@ -93,6 +93,7 @@ app.get("/tracks/:someAlbumIdGoesHere", (req, res) => {
       console.log("The error while searching for album tracks occured: ", err)
     );
 });
+
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );

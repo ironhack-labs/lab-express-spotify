@@ -1,0 +1,66 @@
+*{
+    font-family: 'Varela Round', sans-serif;    
+    margin:0;
+}
+
+.home-page{
+    background: center / contain no-repeat url("../images/spotify-background.jpeg");
+    background-size: cover;
+    min-width: 100vw;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100px;
+    background-color: #1d110a;
+    padding: 10px 20px;
+    color: #f53f2d;
+    border-radius: 3px;
+    box-shadow: 0px 0px 10px #1d110a;
+}
+
+button, a {
+    background-color: #fce679;
+    border-style: none;
+    padding: 10px;
+    margin: 0px 10px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.tracks {
+    list-style: none;
+}
+
+ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 230px;
+    padding: 10px;
+    margin: 20px;
+    background-color: white;
+    box-shadow: 0px 0px 15px white;
+
+}
+
+.tracks {
+    list-style: none;
+    display:inline;
+    justify-content: center;
+}

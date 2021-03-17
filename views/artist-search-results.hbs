@@ -1,12 +1,14 @@
-<h1>Here are the results</h1>
-<ul>
-    {{#each artists}}
-    {{!-- Display artist image, name, button --}}
-    <li>
-        <img src="{{images.0.url}}" alt="{{name}} artist image" width="300px">
-        {{name}}
-        <a href='/albums/{{id}}'>View Albums</a>
-    </li>
-    {{!-- images.0.whateverProperty --}}
-    {{/each}}
-</ul>
+<div class="search results">
+    <h1>Here are the results</h1>
+    <ul>
+        {{#each artists}}
+        {{!-- Display artist image, name, button --}}
+        <li>
+            <img src="{{images.0.url}}" alt="{{name}} artist image" width="200px">
+            <div>{{name}}</div>
+            <a href='/albums/{{id}}'>View Albums</a>
+        </li>
+        {{!-- images.0.whateverProperty --}}
+        {{/each}}
+    </ul>
+</div>
