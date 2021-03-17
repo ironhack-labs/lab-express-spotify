@@ -1,0 +1,12 @@
+<h1>Album Tracks</h1>
+
+{{#each tracksReturned}}
+<p>{{ this.name }}</p>
+<audio controls></audio>
+<source src="{{ this.preview_url }}" type="audio">
+</audio>
+
+
+{{!-- <audio src="{{ this.preview_url }}">{{ this.name }}</audio> --}}
+
+{{/each}}
