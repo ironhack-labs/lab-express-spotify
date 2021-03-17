@@ -30,3 +30,44 @@ body, html {
     align-items: center;
 }
 
+.artists {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+.artists img{
+    width: 300px;
+}
+.containerArtists button {
+    margin: 20px;
+}
+.containerArtists {
+    margin: 30px;
+    background-color: burlywood;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.albums {
+    display: flex;
+    flex-wrap: wrap;
+    background-color: aqua;
+}
+.albums img{
+    width: 300px;
+}
+.containerAlbums button {
+    margin: 20px;
+}
+.containerAlbums {
+    margin: 30px;
+    background-color: burlywood;
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
