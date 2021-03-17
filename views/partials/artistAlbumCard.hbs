@@ -1,0 +1,10 @@
+<div>
+    {{#if this.images}}
+    <img src="{{this.images.[0].url}}" alt="{{this.name}}-image-profile">
+    {{else}}
+    <img src="/images/image-not-found.jpg" alt="{{this.name}}defout-image-profile">
+    {{/if}}
+</div>
+<div>
+    <h2>{{this.name}}</h2>
+</div>

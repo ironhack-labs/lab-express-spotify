@@ -1,0 +1,8 @@
+<main>
+{{#each items}}
+    {{>artistAlbumCard this}}
+    <div>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+{{/each}}
+</main>
