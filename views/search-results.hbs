@@ -1,0 +1,11 @@
+{{#each this}}
+<div>
+    <h1>{{this.name}}</h1>
+    {{#each this.images}}
+    {{#if @first}}
+    <img src={{this.url}} alt="">
+    {{/if}}
+    {{/each}}
+    <a href="/albums/{{this.id}}">View Albums</a>
+</div>
+{{/each}}
