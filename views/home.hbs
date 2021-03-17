@@ -1,0 +1,12 @@
+<main>
+    <div>
+        {{#each items}}
+    <form action="/artist-search" method="GET">
+        <div>
+            <input type="text" name="artistName"/>
+            <button class="btn btn-primary" type="submit">Search for an Artist</button>
+        </div>
+    </form>
+    {{/each}}
+    </div>
+</main>
