@@ -45,6 +45,8 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then((data) => {
+      // const currentArtist = data.body.items[0].artists[0].name;
+      // console.log(currentArtist);
       res.render("albums", { albumsFound: data.body.items });
     })
     .catch((err) =>
