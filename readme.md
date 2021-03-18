@@ -16,12 +16,12 @@ It may seem like a lot, but let's break it down into steps!
 
 ## Requirements
 
-- Fork this repo
-- Clone this repo
+-   Fork this repo
+-   Clone this repo
 
 ## Submission
 
-- Upon completion, run the following commands:
+-   Upon completion, run the following commands:
 
 ```
 $ git add .
@@ -29,7 +29,7 @@ $ git commit -m "done"
 $ git push origin master
 ```
 
-- Create Pull Request so your TAs can check up your work.
+-   Create Pull Request so your TAs can check up your work.
 
 ## The key helper: `spotify-web-api-node` npm package
 
@@ -39,8 +39,8 @@ For the purpose of this exercise, we will be using the [`spotify-web-api-node` n
 
 **In this lab, we have two main goals**:
 
-- We are going to apply our knowledge of GET method and when and why to use `req.query` and `req.params`.
-- We are going to practice how to **read the documentation** (of this npm package particularly) and how to use the examples provided by the docs to successfully finish all the iterations.
+-   We are going to apply our knowledge of GET method and when and why to use `req.query` and `req.params`.
+-   We are going to practice how to **read the documentation** (of this npm package particularly) and how to use the examples provided by the docs to successfully finish all the iterations.
 
 ### Registering the app and getting the credentials
 
@@ -73,30 +73,35 @@ In the next few steps, you'll create all of the files that you need. So far, you
 3. Inside of the `app.js` file, require `spotify-web-api-node`.
 
 ```js
-const SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require("spotify-web-api-node");
 ```
 
 4. Inside of the `app.js` file, you'll find the place where you should paste the following code:
 
 ```javascript
 const spotifyApi = new SpotifyWebApi({
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
 });
 
 // Retrieve an access token
 spotifyApi
-  .clientCredentialsGrant()
-  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-  .catch(error => console.log('Something went wrong when retrieving an access token', error));
+    .clientCredentialsGrant()
+    .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
+    .catch((error) =>
+        console.log(
+            "Something went wrong when retrieving an access token",
+            error
+        )
+    );
 ```
 
 5. See this above?
 
 ```js
 const spotifyApi = new SpotifyWebApi({
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET,
 });
 ```
 
@@ -135,9 +140,9 @@ lab-express-spotify
 As we can see, in your _app.js_ we have required all the packages we need for now:
 
 ```javascript
-const express = require('express');
-const hbs = require('hbs');
-const SpotifyWebApi = require('spotify-web-api-node');
+const express = require("express");
+const hbs = require("hbs");
+const SpotifyWebApi = require("spotify-web-api-node");
 ```
 
 We are good to go. Let's open the [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) documentation and start our journey!
@@ -164,12 +169,14 @@ The method we will use from the npm package is: `spotifyApi.searchArtists()`. In
 
 ```javascript
 spotifyApi
-  .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
+    .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
+    .then((data) => {
+        console.log("The received data from the API: ", data.body);
+        // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    })
+    .catch((err) =>
+        console.log("The error while searching artists occurred: ", err)
+    );
 ```
 
 In order to display the found artists' information, create `artist-search-results.hbs` file inside `views` folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let's move to the next step.
@@ -193,8 +200,8 @@ So let's create a new page - `albums.hbs` where all the results will be displaye
 Your route should look like the following:
 
 ```javascript
-app.get('/albums/:artistId', (req, res, next) => {
-  // .getArtistAlbums() code goes here
+app.get("/albums/:artistId", (req, res, next) => {
+    // .getArtistAlbums() code goes here
 });
 ```
 
@@ -215,7 +222,7 @@ A track object comes with a `preview_url`, which is the source for a 30-second p
 
 ### The summary of requirements
 
-- Total of five pages with (1)artist / (2)album / (3)track information (all populated from Spotify) + (4)layout + (5)home.
-- Some styling, it doesn't have to look like the example.
+-   Total of five pages with (1)artist / (2)album / (3)track information (all populated from Spotify) + (4)layout + (5)home.
+-   Some styling, it doesn't have to look like the example.
 
 Happy Coding! 💙
