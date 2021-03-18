@@ -1,0 +1,84 @@
+html, body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+    height: 100%;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    height: 100vh;
+}
+
+.opaque-box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: absolute;
+    height: 250px;
+    width: 600px;
+    background-color: #ffffff;
+    border: 1px solid black;
+    opacity: 0.4;
+}
+
+.input {
+    background-color: white;
+    height: 25px;
+    width: 350px;
+}
+
+.search-button {
+    color: white;
+    background-color: red;
+    border-color: red;
+    padding: 5px 10px;
+    margin-top: 20px;
+    margin-left: 30%;
+}
+
+.artist-img, .album-img {
+    width: 250px;
+    height: 250px;
+}
+
+.each {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    flex-flow: row wrap;
+}
+
+.artists, .albums {
+    padding: 0 100px;
+    word-wrap:break-word;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    flex-flow: column wrap;
+    color: white;
+    background-color: grey;
+    border-color: grey;
+    margin-top: -5px;
+    margin-bottom: 20px;
+    width: 250px;
+    text-align: center;
+}
+
+.button {
+    color: white;
+    background-color: rgb(207, 97, 97);
+    border-color: rgb(207, 97, 97);
+    margin-top: -30px;
+    margin-bottom: 10px;
+    padding: 5px;
+}
