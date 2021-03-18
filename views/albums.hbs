@@ -1,6 +1,14 @@
 <h1>Albums for: {{artistsFound}}</h1>
-{{#each albumsFound}}
-<img src="{{images.0.url}}" alt="{{name}}">
-<h2>{{name}}</h2>
-<a href="/tracks/{{id}}">View tracks</a>
-{{/each}}
+<div class="resultPage">
+    {{#each albumsFound}}
+    <div class="resultCard">
+        {{#if images}}
+        <img src="{{images.0.url}}" alt="{{name}}">
+        {{else}}
+        <img src="/images/spotifyicon.png" alt="Spotify logo">
+        {{/if}}
+        <h3>{{name}}</h3>
+        <button><a href="/tracks/{{id}}">View tracks</a></button>
+    </div>
+    {{/each}}
+</div>
