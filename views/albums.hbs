@@ -1,7 +1,8 @@
-<h1>Albums from {{artists}}</h1>
+<h1>Albums from {{ name }}</h1>
 
 {{#each albums}}
-<img src="{{images.0.url}}" alt="{{name}} album image">
-<h1>{{name}}</h1>
+<h3>{{name}}</h1>
+<img src="{{images.0.url}}" alt="{{name}} album image" width="100px">
+
 <a href="/tracks/{{id}}">View tracks</a>
 {{/each}}

@@ -42,7 +42,7 @@ app.get("/artist-search", (req, res) => {
             // );
 
             res.render("artist-search-results", {
-                artists: data.body.artists.items,
+                artistResult: data.body.artists.items,
             });
         })
         .catch((err) =>

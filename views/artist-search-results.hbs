@@ -1,7 +1,7 @@
 <h1>Artists</h1>
 
-{{#each artists}}
-<h1>{{name}}</h1>
-<img src="{{images.0.url}}" alt="{{name}} image">
+{{#each artistResult}}
+<h3>{{name}}</h1>
+<img src="{{images.0.url}}" alt="{{name}} image" width="100px">
 <a href="/albums/{{id}}">View albums</a>
 {{/each}}
