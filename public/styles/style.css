@@ -50,12 +50,18 @@ body, html {
     justify-content: center;
     align-items: center;
 }
-
+#h1 {
+    margin: 0;
+    padding-top: 20px;
+    text-align: center;
+    background-color: aqua;
+}
 .albums {
     display: flex;
     flex-wrap: wrap;
     background-color: aqua;
 }
+
 .albums img{
     width: 300px;
 }

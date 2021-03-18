@@ -47,9 +47,15 @@ app.get('/albums/:artistId', (req, res) => {
   spotifyApi
   .getArtistAlbums(artistId)
   .then(data => {
-    //console.log('Artist albums', data.body);
+    //console.log('Artist albums', data.body.items);
     const albums = data.body.items;
-    res.render("albums", {albums})
+    //console.log(albums[0].artists[0].name)
+    const artistName = albums[0].artists[0].name;
+    //console.log(artistName);
+    // albums.forEach((element) => {
+    //   console.log(element.artists[0].name)
+    // })
+    res.render("albums", {albums,artistName});
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
