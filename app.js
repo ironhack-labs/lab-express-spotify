@@ -62,6 +62,18 @@ app.get("/albums/:artistId", (req, res) => {
         );
 });
 
+app.get("/tracks/:albumId", (req, res) => {
+    spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then((data) => {
+            // console.log("data: ", data.body.items[0]);
+            res.render("tracks", { tracks: data.body.items });
+        })
+        .catch((err) =>
+            console.log("The error while searching artists occurred: ", err)
+        );
+});
+
 app.listen(3000, () =>
     console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
