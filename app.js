@@ -32,7 +32,7 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.artist)
     .then((data) => {
-      console.log("The received data from the API", data.body);
+      //console.log("The received data from the API", data.body);
       res.render("artist-search-results", { artists: data.body.artists.items });
     })
     .catch((err) =>
@@ -40,27 +40,25 @@ app.get("/artist-search", (req, res) => {
     );
 });
 app.get("/albums/:artistId", (req, res) => {
+  const artistId = req.params.artistId;
   spotifyApi
-    .getArtistAlbums(req.params.artistID)
+    .getArtistAlbums(artistId)
     .then((data) => {
-      res.render("albums", {
-        artist: data.body.items[0].artists[0].name,
-        albums: data.body.items,
-      });
+      res.render("albums", { albums: data.body.items });
     })
     .catch((err) => {
-      console.log("there was an error", err);
+      console.log("Error with albums occurred", err);
     });
 });
-
-app.get("/tracks/:trackId", (req, res) => {
+app.get("/:albumId", (req, res) => {
+  const albumId = req.params.albumId;
   spotifyApi
-    .getAlbumTracks(req.params.artistID)
+    .getAlbumTracks(albumId)
     .then((data) => {
-      res.render("tracks", data.body.items);
+      res.render("tracks", { tracks: data.body.items });
     })
     .catch((err) => {
-      console.log(err);
+      console.log("Error occured when accessing tracks", err);
     });
 });
 app.listen(3000, () =>
