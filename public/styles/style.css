@@ -67,21 +67,23 @@ h1 {
 }
 
 .resultCard {
-  max-width: 250px;
+  width: 250px;
   margin: 0 15px 30px;
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: dimgrey;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  overflow: hidden;
 }
 
 h3 {
+  width: 250px;
   font-size: 0.75em;
-  font-weight: 400;
+  font-weight: 300;
   color: white;
+  text-align: center;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .trackList {
