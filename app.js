@@ -34,7 +34,6 @@ app.get("/", (req, res) => {
 //o que é esse data? kkk
 //data -- coisas que vem do spotify
 app.get("/artist-search-results", async (req, res) => {
-  console.log(req);
   const { artistName } = req.query;
   try {
     const {
@@ -63,6 +62,20 @@ app.get("/albums/:artistId", async (request, response) => {
     console.log(error);
   }
 });
+
+app.get("/album/:albumId", async (request, response) => {
+  const { albumId } = request.params;
+  
+  try {
+    const {
+      body: { items }
+     } = await spotifyApi.getAlbumTracks(albumId);
+
+    response.render("tracks", { items });
+  } catch (error) {
+    console.log(error);
+  }
+})
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
