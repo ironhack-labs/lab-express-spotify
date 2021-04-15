@@ -117,31 +117,34 @@ html{
 .contenedor{
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    margin-top: 15%;
 }
 .home{
     padding: 1rem;
     background-color: rgba(17, 16, 14, 0.9);
-    -webkit-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    -webkit-box-shadow: 17px 20px 22px 2px rgb(0 0 0 / 49%);
     -moz-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
-    box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    box-shadow: 17px 20px 22px 2px rgb(0 0 0 / 49%);
     border-radius: 1rem;
-    width: 20rem; 
+    width: 20rem;
     color: white;
     margin: 2rem;
-    height: 10rem;
+    height: 13rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
 .home form{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-top: 2rem;
 }
 .home form input{
     padding: 1rem 1rem;
     border-radius: 0.5rem;
+    text-align: center;
 }
 .home form button{
     margin-top: 1rem;
