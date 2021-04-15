@@ -1,0 +1,121 @@
+html{
+    margin: 0;
+}
+#home {
+    position: absolute;
+    z-index: -1;
+    height: 100vh;
+    width: 100vw;
+}
+
+#artist-form {
+    position: absolute;
+    left: 20vw;
+    top: 25vh;
+    background-color: rgba(255, 255, 255, 0.61);
+    width: 60vw;
+    padding: 60px 160px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+form input {
+    margin: 20px;
+    width: 400px;
+    text-align: center;
+    padding: 20px;
+    font-size: 1.2em;
+}
+
+form button {
+    font-weight: bold;
+    font-size: 1.2em;
+    word-spacing: 8px;
+    letter-spacing: 4px;
+    margin: 20px;
+    color: white;
+    background-color: rgb(182, 28, 28);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#albumsh2 {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+}
+
+#card-img {
+    margin-top: 40px;
+    height: 400px;
+    width: 415px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#card-img img{
+    height: 400px;
+    width: 420px;
+}
+
+.card-info {
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(56, 56, 56, 0.829);
+}
+
+.card-info h3 {
+    font-size: 1.6em;
+    text-align: center;
+    color: white;
+}
+
+.card-info a {
+    text-decoration: none;
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 5px 10px;
+    background-color: rgba(170, 29, 29, 0.541);
+    color: white;
+}
+
+.tracks-header {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    font-size: 2.5em;
+    font-weight: bold;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.inline {
+    display: inline;
+}
+
+.track {
+    height: 70px;
+    background-color: lightgray;
+    margin-top: 5px;
+    font-size: 1.6em;
+    font-weight: bold;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+}

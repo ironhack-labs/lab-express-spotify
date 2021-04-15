@@ -1,0 +1,17 @@
+<div class="tracks-header">
+    <span>Title</span>
+    <span>Listen</span>
+</div>
+<div class="container">
+    <div class="row">
+        {{#each tracks}}
+
+            <div class="col-12 track">
+                <p class="inline">{{name}}</p>
+                <audio controls>
+                    <source src="{{preview_url}}" type="audio/mpeg" class="inline"/>
+                </audio>
+            </div>
+        {{/each}}
+    </div>
+</div>
