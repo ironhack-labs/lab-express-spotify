@@ -1,8 +1,10 @@
+<div class="canciones">
 {{#each song}}
-<div>
-{{name}}
+<div class="cancion">
+<p>{{name}}</p>
 <audio controls>
     <source src="{{preview_url}}">
 </audio>
 </div>
 {{/each}}
+</div>

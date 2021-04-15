@@ -1,7 +1,11 @@
+
+<h1>Resultados de tu búsqueda:</h1>
+<div class="artistas">
 {{#each array}}
-<div>
-{{name}}
+<div class="artista">
 <img src="{{images.0.url}}" alt="artist img">
+<p>{{name}}</p>
 <a href="/albums/{{id}}">View Albums</a>
 </div>
 {{/each}}
+</div>

@@ -1,8 +1,10 @@
-<h1>Resultados de tu búsqueda</h1>
+<h1>Albumes de {{album.0.artists.0.name}}:</h1>
+<div class="albumes">
 {{#each album}}
-<div>
-{{name}}
+<div class="album">
 <img src="{{images.0.url}}" alt="album img">
+<p>{{name}}</p>
 <a href="/tracks/{{id}}">See all Tracks</a>
 </div>
 {{/each}}
+</div>

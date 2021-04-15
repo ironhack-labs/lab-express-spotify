@@ -1,0 +1,155 @@
+html{
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.artistas{
+    max-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+
+.artista{
+    color: white;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(17, 16, 14, 0.9);
+    -webkit-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    -moz-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);  
+    border-radius: 1rem; 
+}
+.artista a{
+    text-decoration: none;
+    color: black;
+    background-color: tan;
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem;
+    font-weight: 600;
+}
+.artista p{
+    width: 10rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.artista img{
+    width: 10rem;
+    height: 10rem;
+}
+
+.albumes{
+    max-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+
+
+.album{
+    color: white;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(17, 16, 14, 0.9);
+    -webkit-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    -moz-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    border-radius: 1rem;  
+}
+.album a{
+    text-decoration: none;
+    color: black;
+    background-color: tan;
+    border-radius: 0.5rem;
+    padding: 0.1rem 1rem;
+    font-weight: 600;
+}
+.album p{
+    width: 10rem;
+    margin: 1rem 0;
+    text-align: center;
+}
+.album img{
+    width: 10rem;
+    height: 10rem;
+}
+.canciones{
+    max-width: 80vw;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin: 0 auto;
+}
+.cancion{
+    color: white;
+    margin: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: rgba(17, 16, 14, 0.9);
+    -webkit-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    -moz-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    border-radius: 1rem;
+}
+.cancion p{
+    margin: 1rem 0;
+    text-align: center;
+    color: white;
+    align-content: center;
+}
+.contenedor{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.home{
+    padding: 1rem;
+    background-color: rgba(17, 16, 14, 0.9);
+    -webkit-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    -moz-box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    box-shadow: 17px 20px 22px 2px rgba(0,0,0,0.49);
+    border-radius: 1rem;
+    width: 20rem; 
+    color: white;
+    margin: 2rem;
+    height: 10rem;
+}
+.home form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 2rem;
+}
+.home form input{
+    padding: 1rem 1rem;
+    border-radius: 0.5rem;
+}
+.home form button{
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: tan;
+    border-radius: 0.5rem;
+}
+h1{
+    color: white;
+    text-align: center;
+}
