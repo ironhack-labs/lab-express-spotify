@@ -65,4 +65,14 @@ app.get('/albums/:artistId', (req, res) => {
     .catch((err) => console.log('Error rendering albums ==> ', err));
 });
 
+app.get('/tracks/:albumId', (req, res)=>{
+    const { albumId } = req.params;
+    spotifyApi
+    .getAlbumTracks(albumId)
+  .then((data) => {
+    res.render('tracks', {tracks: data.body.items})
+  })
+  .catch((err) => console.log('Error rendering albums ==> ', err));
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
