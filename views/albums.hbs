@@ -1,9 +1,9 @@
-<h1>Welcome to the Albums Page</h1>
-
 {{#each albums}}
-    <div>
-        <img src="{{images.1.url}}" alt="{{name}} cover">
+    <div class="card">
+        <img src="{{images.1.url}}" alt="{{name}} cover" style="width: 20%;">
+        <div class="container">
         <h3>{{name}}</h3>
-        <button><a href="/tracks/{{id}}">View Tracks</a></button>
+        <button><a class="anchor" href="/tracks/{{id}}">View Tracks</a></button>
+        </div>
     </div>
 {{/each}} 

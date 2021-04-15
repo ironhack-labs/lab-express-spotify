@@ -42,19 +42,6 @@ app.get('/artist-search', (req, res) => {
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
-/* app.get('/albums/:artistId', (req, res) => {
-
-    spotifyApi
-    .getArtistAlbums(req.params)
-        .then((data) => {
-            const artistAlbums = {artistsAlbums: data.body.items}
-                res.render('albums', { albums: data.body.items })
-            })
-            .catch((err) =>{ 
-                console.log(err)
-            })
-}) 
- */
 app.get('/albums/:artistId', (req, res) => {
      const { artistId } = req.params;
   spotifyApi

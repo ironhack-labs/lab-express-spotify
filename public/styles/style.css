@@ -1,0 +1,65 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+  }
+  
+  form {
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  form > div {
+    width: 40%;
+    max-width: 600px;
+    height: 150px;
+    background-color: #fff;
+    opacity: 0.8;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  button {
+    margin-top: 20px;
+    height: 40px;
+    width: 130px;
+    background-color: #fa6863;
+    border: none;
+    color: #fff;
+    
+  }
+  
+ input {
+    margin-top: 40px;
+    border-radius: 6px;
+    border: 1px solid gray;
+    width: 200px;
+    height: 30px;
+    padding: 10px;
+  }  
+
+ .anchor {
+    text-decoration: none;
+    color: white;
+ }
+
+ .card {
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    transition: 0.3s;
+    display: flex;
+    align-items: center;
+    margin: 30px;
+  }
+  
+  .container {
+    padding: 30px 16px;
+  }
+
