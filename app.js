@@ -49,4 +49,15 @@ app.get('/albums/:artistId', (req, res, next) => {
     .catch((err)=>{console.log(err)})
   });
 
+  app.get('/tracks/:albumId', (req, res, next) => {
+    console.log(req.params)
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then((data)=>{
+        console.log(data.body)
+       const track = {song : data.body.items}
+       res.render(`tracks`, track)
+    })
+    .catch((err)=>{console.log(err)})
+  });  
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
