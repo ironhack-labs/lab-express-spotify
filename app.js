@@ -31,12 +31,29 @@ app.get('/', (req, res)=>{
 })
 
 app.get('/artist-search', (req, res)=>{
-    spotifyApi.searchArtists()
-    .then((data) => {
-        console.log('Data received: ', data.body)
+    spotifyApi.searchArtists(req.query.searchArtist)
+    .then((result) => {
+        res.render('artist-search-results', {data: result.body.artists.items})
     })
     .catch((err) => {
         console.log(err)
+    })
+})
+
+app.get('/albums/:artistId', (req, res)=>{
+    spotifyApi.getArtistAlbums(req.params.artistId)
+    .then((result)=>{
+        res.render('albums', {data: result.body.items})
+    })
+    .catch((err)=>{
+        console.log(err)
+    })
+})
+
+app.get('/tracks/:albumId', (req, res)=>{
+    spotifyApi.getAlbumTracks(req.params.albumId)
+    .then((result)=>{
+        res.render('tracks', {data: result.body.items})
     })
 })
 

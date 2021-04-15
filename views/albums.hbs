@@ -1,9 +1,9 @@
 <div class="inside-container">
     {{#each data}}
         <div class="artist-card">
-            <h3>{{name}}</h3>
+            <h3 id="album-title">{{name}}</h3>
             <img class="artist-img" src="{{images.1.url}}" alt="{{name}} - image">
-            <a href="/albums/{{id}}">View Albums</a>
+            <a href="/tracks/{{id}}">View Tracks</a>
         </div>
     {{/each}}
 </div>
