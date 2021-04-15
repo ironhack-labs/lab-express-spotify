@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row justify-content-center">  
+    {{#each a}}
+        <div class="card col-3 artist">
+            {{#if images.0.url}}
+            <img src="{{images.0.url}}" class="card-img-top" alt="{{name}}">
+            {{else}}
+            <img src="https://onmining.com/app/webroot/img/No_Image_Available.jpg" alt="NO IMAGE AVAILABLE">
+            {{/if}}
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <a href="/albums/{{id}}" class="btn btn-outline-dark">View Albums</a>
+            </div>
+        </div>
+    {{/each}}
+    </div>  
+</div> 
+
+
+

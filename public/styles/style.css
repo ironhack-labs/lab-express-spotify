@@ -1,0 +1,24 @@
+body{
+    background-image: url("https://www.conciertoslanzarote.com/wp-content/uploads/2019/07/Phe-Festival-Tenerife-2019.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.searcher{
+    width: 50vw;
+}
+.form{
+    height: 100vh;
+    width:100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.artist{
+    margin: 50px 10px;
+    padding: 0px;
+}
+.artist>img{
+    height: 250px;
+    max-width:285px;
+}
