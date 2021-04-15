@@ -1,0 +1,9 @@
+<h1>Welcome to the Albums Page</h1>
+
+{{#each albums}}
+    <div>
+        <img src="{{images.1.url}}" alt="{{name}} cover">
+        <h3>{{name}}</h3>
+        <button><a href="/tracks/{{id}}">View Tracks</a></button>
+    </div>
+{{/each}} 
