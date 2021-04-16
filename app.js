@@ -48,13 +48,36 @@ app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi
   .getArtistAlbums(req.params.artistId)
   .then(
-    function(data) {
+      
+    function(data) {        
       const artistAlbums = data.body.items;
       res.render('albums', { artistAlbums });
+      console.log(artistAlbums);
     },
     function(err) {
       console.error(err);
     });
 })
+
+app.get('/tracks/:albumId', (req, res) => {
+    console.log(req.params.albumId);
+  spotifyApi
+// .getAlbumTracks('', { limit : 5, offset : 1 })
+  .getAlbumTracks(req.params.albumId)
+  .then(
+      
+    function(data) {
+    
+    const albumTracks = data.body.items;
+    res.render('tracks', { albumTracks });
+    console.log(albumTracks);
+   
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+})
+
+
+
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
