@@ -1,12 +1,12 @@
 <div>
     <h1>Results</h1>
     {{#each artists.items}}
-        <h2>{{this.name}}</h2>
+        <h2>{{name}}</h2>
         {{#each images}}
             {{#if @first}}
                 <img src="{{this.url}}" alt="{{name}}-photo">
             {{/if}}
         {{/each}}
-        <a href="">View Albums</a>
+        <a href="/albums/{{id}}">View Albums</a>
     {{/each}}
 </div>
