@@ -29,7 +29,7 @@ app.get('/artist-search', (req, res) => {
     spotifyApi
         .searchArtists(req.query.q)
         .then(data => {
-            console.log('The received data from the API: ', data.body.artists.items[0]);
+            //console.log('The received data from the API: ', data.body.artists.items[0]);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
             res.render('artist-search-results', { artists: data.body.artists.items })
         })
@@ -45,6 +45,18 @@ app.get('/album/:artistId', (req, res) => {
             res.render('albums', { albumartist: data.body.items })
         }, function (err) {
             console.error(err);
+        });
+})
+
+app.get('/tracks/:albumId', (req, res) => {
+
+    spotifyApi.getAlbumTracks(req.params.albumId)
+        .then(data => {
+            console.log(data.body);
+            res.render('tracks', { tracklists: data.body.items })
+
+        }, function (err) {
+            console.log('Something went wrong!', err);
         });
 })
 
