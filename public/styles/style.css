@@ -1,0 +1,17 @@
+
+.background-img {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    padding: 0;
+}
+
+#submit{
+    background-color: red;
+    color: #fff;
+}
