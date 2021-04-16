@@ -1,0 +1,32 @@
+html{
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    font-size: 16px;
+}
+
+body{
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-content: center;
+}
+
+form{
+    padding: 10em;
+}
+
+img{
+    height: 100px;
+}
+
+
+button{
+    background-color: coral;
+    padding: 1em 2em;
+    margin: 3em;
+    border: none;
+}
+
+input{
+    padding: 2em 10em;
+}
