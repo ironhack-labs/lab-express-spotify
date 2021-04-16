@@ -1,0 +1,17 @@
+{{!-- getAlbumTracks
+A track object comes with a preview_url, which is the source for a 30-second preview of a particular song. You can plug
+this into an HTML audio tag, and it will play the preview. --}}
+
+{{#each tracks}}
+
+<article class="tracks">
+    <span>{{this.name}}</span>
+    {{#if this.preview_url}}
+    <span>{{this.preview_url}}</span>
+    {{else}}
+    <span>no preview_url</span>
+    {{/if}}
+
+</article>
+
+{{/each}}

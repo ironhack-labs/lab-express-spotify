@@ -1,0 +1,23 @@
+{{!-- searchArtists --}}
+
+{{#each artists}}
+
+<article class="artists">
+    {{this.name}}
+
+
+    {{#if this.images.1.url}}
+    <img src="{{this.images.1.url}}" alt="{{this.name}}" />
+    {{else if this.images.0.url}}
+    <img src="{{this.images.0.url}}" alt="{{this.name}}" />
+    {{else}}
+    <span>no image</span>
+    {{/if}}
+
+
+
+
+    <a href="/albums/{{this.id}}">View albums</a>
+</article>
+
+{{/each}}

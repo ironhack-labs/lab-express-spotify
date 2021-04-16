@@ -1,0 +1,16 @@
+{{!-- getArtistAlbums Make sure you show the name and the cover of each album and add a button/link to see the tracks
+(next iteration).
+--}}
+
+
+{{#each albums}}
+
+<article class="albums">
+    {{this.name}}
+    {{#if this.img}}
+    <img src="{{this.img}}" alt="{{this.name}}" />
+    {{/if}}
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+</article>
+
+{{/each}}
