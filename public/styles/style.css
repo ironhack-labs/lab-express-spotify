@@ -8,11 +8,17 @@ body,html{
 }
 
 /* Common styles */ 
-#frontpage,
+main,
+.label-container,
 #frontpage form{
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+body{
+    display: flex;
+    justify-content: center;
 }
 
 #frontpage{
@@ -40,4 +46,31 @@ body,html{
     padding: 8px;
     margin-top: 7px;
     border: none;
+}
+
+/* Album and tracks style */
+
+#albums,
+#artists{
+    flex-wrap: wrap;
+    width: 1080px;
+}
+
+.container{
+    width: 300px;
+    height: 370px;
+    margin: 10px 30px;
+}
+
+.container img{
+    width: 100%;
+    height: 310px;
+    object-fit: cover;
+}
+
+.label-container{
+    background-color: #4d4d4d;
+    width: 100%;
+    height: 60px;
+    margin-top: -3px;
 }
