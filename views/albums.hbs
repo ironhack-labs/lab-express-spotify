@@ -1,9 +1,16 @@
-{{#each items}}
-    <p>{{name}}</p>
-    {{#each images}}
-        {{#if @first}}
-            <img src="{{url}}" alt="{{name}}-photo">
-        {{/if}}
+<h1>Albums</h1>
+<div class="card-container">
+    {{#each items}}
+        <div class="card" style="width: 18rem;">
+            {{#each images}}
+                {{#if @first}}
+                    <img src="{{url}}" class="card-img-top" alt="{{name}}-photo">
+                {{/if}}
+            {{/each}}
+            <div class="card-body">
+                <h5 class="card-title">{{name}}</h5>
+                <a href="/tracks/{{id}}" class="btn btn-primary">View Tracks</a>
+            </div>
+        </div>
     {{/each}}
-    <a href="/tracks/{{id}}">View Tracks</a>
-{{/each}}
+</div>

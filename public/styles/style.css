@@ -1,46 +1,51 @@
-*{
-    margin: 0;
-    padding: 0;
+* {
+  margin: 0;
+  padding: 0;
 }
-.index-container{
-    background-image: url("/images/spotify-background.jpeg");
-    height: 100vh;
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center;
+.index-container {
+  background-image: url("/images/spotify-background.jpeg");
+  height: 100vh;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
 }
 
-.form-container{
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 50px 100px;
+  position: absolute;
+  background-color: #ffffff96;
+  top: 40%;
+  left: 35%;
+}
+
+.form-container form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-container form input {
+  width: 350px;
+  padding: 8px;
+  border: 1px solid grey;
+  border-radius: 3px;
+  margin: 15px;
+}
+
+.form-container form button {
+  background-color: #ff000094;
+  color: white;
+  border: none;
+  border-radius: 2px;
+  padding: 10px;
+  font-size: 15px;
+  width: 150px;
+}
+
+.card-container {
     display: flex;
-    justify-content: center;
-    align-content: center;
-    padding: 50px 100px;
-    position: absolute;
-    background-color: #ffffff96;
-    top: 40%;
-    left: 35%;
+    flex-wrap: wrap;
 }
-
-.form-container form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
-.form-container form input{
-    width: 350px;
-    padding: 8px;
-    border: 1px solid grey;
-    border-radius: 3px;
-    margin: 15px;
-}
-
-.form-container form button{
-    background-color: #ff000094;
-    color: white;
-    border: none;
-    border-radius: 2px;
-    padding: 10px;
-    font-size: 15px;
-    width: 150px;
-    }

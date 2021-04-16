@@ -1,12 +1,16 @@
-<div>
-    <h1>Results</h1>
+<h1>Results</h1>
+<div class="card-container">
     {{#each artists.items}}
-        <h2>{{name}}</h2>
+    <div class="card" style="width: 18rem;">
         {{#each images}}
-            {{#if @first}}
-                <img src="{{url}}" alt="{{name}}-photo">
-            {{/if}}
+        {{#if @first}}
+        <img src="{{url}}" class="card-img-top" alt="{{name}}-photo">
+        {{/if}}
         {{/each}}
-        <a href="/albums/{{id}}">View Albums</a>
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+        </div>
+    </div>
     {{/each}}
 </div>
