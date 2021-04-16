@@ -1,16 +1,32 @@
 {
-  "name": "starter-code",
-  "version": "1.0.0",
-  "description": "",
-  "main": "app.js",
-  "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "devDependencies": {
-    "nodemon": "^2.0.2"
-  }
+    "name": "starter-code",
+    "version": "1.0.0",
+    "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js",
+        "dev": "nodemon -e '*' app.js",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "nodemon": "^2.0.7"
+    },
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/adrianasencio1992/lab-express-spotify.git"
+    },
+    "bugs": {
+        "url": "https://github.com/adrianasencio1992/lab-express-spotify/issues"
+    },
+    "homepage": "https://github.com/adrianasencio1992/lab-express-spotify#readme",
+    "dependencies": {
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "hbs": "^4.1.2",
+        "mongo": "^0.1.0",
+        "spotify-web-api-node": "^5.0.2"
+    }
 }
