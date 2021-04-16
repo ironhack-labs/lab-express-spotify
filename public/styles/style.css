@@ -8,7 +8,7 @@
     align-items: center;
     height: 300px;
     padding:0 20px;
-    margin-left: 40%;
+    margin-left: 600px;
 }
 
 .nav >h1{
@@ -21,6 +21,7 @@ a {
     border:blueviolet solid 5px;
     border-radius: 25px;
     font-size: 25px;
+    padding: 5px;
 }
 .contents {
     padding-top: 400px;
@@ -35,4 +36,8 @@ body {
     border: red solid 15px;
     border-radius: 25px;
     padding: 20px 20px;
+}
+
+.parts > img{
+    width : 400px;
 }
