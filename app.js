@@ -79,16 +79,18 @@ spotifyApi.getArtistAlbums(artistId)
 
 app.get('/view-tracks/:id', (req, res) =>{
 
-  spotifyApi.getAlbumTracks(req.params.id)
+  spotifyApi
+    .getAlbumTracks(req.params.id, { limit: 5, offset: 1 })
 
-  .then((result) => {
+    .then(
+      (result) => {
+        res.render('view-tracks', { tracks: result.body.items });
+      },
 
-    
-    res.render('view-tracks', {tracks:result.body.items});
-  },
-
-  (err)=> {console.log('Something went wrong!', err);
-  });
+      (err) => {
+        console.log('Something went wrong!', err);
+      }
+    );
 })
 
 
