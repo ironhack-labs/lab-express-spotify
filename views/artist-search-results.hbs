@@ -1,7 +1,7 @@
-<div id="search-results">
+<div id="search-results" class="row card-list">
     {{#each searchResults}}
         {{#if this.id}}
-            {{> searchresultscard this}}
+            {{> card this}}
         {{/if}}
     {{/each}}
 </div>

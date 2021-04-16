@@ -27,7 +27,7 @@ const spotifyApi = new SpotifyWebApi({
   
 // Our routes go here:
 app.get('/', (req, res) => {
-    res.status(200).render('index');
+    res.status(200).render('index', {navbar:false});
 });
 
 app.get('/artist-search', (req, res) => {
@@ -36,7 +36,7 @@ app.get('/artist-search', (req, res) => {
         .searchArtists(searchedArtist)
         .then(data => {
             const searchResults = data.body.artists.items;
-            res.status(200).render('artist-search-results', {searchResults});
+            res.status(200).render('artist-search-results', {searchResults, navbar:true});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
@@ -46,7 +46,7 @@ app.get('/albums/:id', (req, res) => {
         getArtistAlbums(req.params.id)
         .then(data => {
             const albums = data.body.items;
-            res.status(200).render('artist-albums', {albums});
+            res.status(200).render('artist-albums', {albums, navbar:true});
         })
         .catch(err => console.log('The error while loading albums occurred: ', err));
 });
@@ -56,7 +56,7 @@ app.get('/tracks/:id', (req, res) => {
         getAlbumTracks(req.params.id)
         .then(data => {
             const tracks = data.body.items;
-            res.status(200).render('album-tracklist', {tracks});
+            res.status(200).render('album-tracklist', {tracks, navbar:true});
         })
         .catch(err => console.log('The error while loading tracks occurred: ', err));
 });

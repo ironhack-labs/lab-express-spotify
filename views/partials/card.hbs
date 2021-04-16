@@ -1,0 +1,11 @@
+<div class="card col">
+    <div class="img-container">
+        <img src="{{this.images.1.url}}" alt="">
+    </div>
+    <h3 class="card-title">{{this.name}}</h3>
+    {{#if this.album_type}}
+        <a href="/tracks/{{this.id}}" class="card-link">View Tracks</a>
+    {{else}}
+        <a href="/albums/{{this.id}}" class="card-link">View Albums</a>
+    {{/if}}
+</div>
