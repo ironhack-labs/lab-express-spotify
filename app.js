@@ -61,6 +61,41 @@ app.get('/artist-search', (req, res) => {
 );
 })
 
+app.get('/albums/:id/:artistName', (req, res, next) => {
+
+  const artistId = req.params.id;
+
+spotifyApi.getArtistAlbums(artistId)
+
+.then( (result)=> {
+  const data = { artistName: req.params.name, albums: result.body.items };
+    console.log('Artist albums', data.body);
+    res.render('albums', data);
+
+})
+  .catch((err) => {console.log('The error while searching artists occurred: ',err);}
+);
+})
+
+app.get('/view-tracks/:id', (req, res) =>{
+
+  spotifyApi.getAlbumTracks(req.params.id)
+
+  .then((result) => {
+
+    
+    res.render('view-tracks', {tracks:result.body.items});
+  },
+
+  (err)=> {console.log('Something went wrong!', err);
+  });
+})
+
+
+
+
+
+
 
 //const router = express.Router();
 
