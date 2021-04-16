@@ -1,0 +1,12 @@
+<h1>Check out "{{this.albumTitle}}"</h1>
+<div class="bg">
+  {{#each songs }}
+  <figure>
+    <span>{{name}} – {{../albumTitle}}</span>
+    <audio controls="controls" src="{{preview_url}}">
+      Your browser does not support the
+      <code>audio</code> element.
+    </audio>
+  </figure>
+  {{/each}}
+</div>
