@@ -1,0 +1,9 @@
+<div class="parts">
+    <h1>ALBUMS</h1>
+    {{#each albumData.items}}
+    <h1>{{name}}</h1>
+    {{#if images.0.url}}<img src="{{images.0.url}}" alt="no image!">{{/if}}
+    {{#unless images.0.url}}<h3>¯\_(ツ)_/¯</h3>{{/unless}}
+    <a href="/tracks/{{uri}}">listen to tracks</a>
+    {{/each}}
+</div>

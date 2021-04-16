@@ -1,0 +1,9 @@
+<div class="parts">
+    <h1>TRACKS</h1>
+    {{#each trackData.items}}
+    <div>
+        <h1>{{name}}</h1>
+        <audio controls src={{preview_url}}>{{name}}</audio>
+    </div>
+    {{/each}}
+</div>

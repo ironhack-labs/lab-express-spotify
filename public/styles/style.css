@@ -1,0 +1,38 @@
+.nav {
+    background-color: white;
+    border: chartreuse solid 5px;
+    border-radius: 25px;
+    display: flex;
+    position: fixed;
+    flex-direction: row;
+    align-items: center;
+    height: 300px;
+    padding:0 20px;
+    margin-left: 40%;
+}
+
+.nav >h1{
+    color: crimson;
+    padding-bottom: 60px;
+}
+
+a {
+    background-color: cyan;
+    border:blueviolet solid 5px;
+    border-radius: 25px;
+    font-size: 25px;
+}
+.contents {
+    padding-top: 400px;
+}
+
+body {
+    background-image: url('/images/tie.jpg');
+}
+
+.parts {
+    background-color: greenyellow;
+    border: red solid 15px;
+    border-radius: 25px;
+    padding: 20px 20px;
+}

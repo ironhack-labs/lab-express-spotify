@@ -1,0 +1,9 @@
+
+<div class="parts">
+    {{#each searchedMusic.artists.items}}
+    <h1>{{name}}</h1>
+    {{#if images.0.url}}<img src="{{images.0.url}}" alt="no image!">{{/if}}
+    {{#unless images.0.url}}<h3>¯\_(ツ)_/¯</h3>{{/unless}}
+    <a href="/albums/{{uri}}">albums</a>
+    {{/each}}
+</div>
