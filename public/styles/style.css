@@ -6,6 +6,9 @@ body,html{
     width: 100vw;
     font-size: 10px;
 }
+h3{
+    margin: 0;
+}
 
 /* Common styles */ 
 main,
@@ -93,3 +96,26 @@ body{
 }
 
 /* tracks style */
+#tracks{
+    flex-direction: column;
+    width: 70%;
+}
+header {
+    width: 100%;
+    height: 150px;
+    background-color: #4d4d4d;
+    color: white;
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+}
+#tracks section{
+    width: 100%;
+}
+#tracks section div{
+    display: flex;
+    justify-content: space-between;   
+}
+.track-name{
+    font-size: 2rem;
+}

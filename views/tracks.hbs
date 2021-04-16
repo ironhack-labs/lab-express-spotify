@@ -3,12 +3,12 @@
         <h3>Title</h3>
         <h3>Listen</h3>
     </header>
-    <main>
+    <section>
         {{#each this.items}}
             <div>
-                <p>{{name}}</p>
+                <p class="track-name">{{name}}</p>
                 <audio controls src="{{preview_url}}"></audio>
             </div>
         {{/each}}
-    </main>
+    </section>
 </main>
