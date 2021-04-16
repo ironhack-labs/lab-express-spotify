@@ -1,126 +1,144 @@
-body,html{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    height: 100vh;
-    width: 100vw;
-    font-size: 10px;
+body,
+html {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	height: 100vh;
+	width: 100vw;
+	font-size: 10px;
+	font-family: Arial, Helvetica, sans-serif;
 }
-h3{
-    margin: 0;
+h3,
+a {
+	margin: 0;
 }
 
-/* Common styles */ 
+/* Common styles */
 main,
 .label-container,
 #frontpage form,
-.label-container{
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.label-container {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 
-body{
-    display: flex;
-    justify-content: center;
+body {
+	display: flex;
+	justify-content: center;
 }
 
-#frontpage{
-    background-image: url('/images/spotify-background.jpeg');
-    background-size: cover;
-    height: 100%;
-    width: 100%;
+#frontpage {
+	background-image: url("/images/spotify-background.jpeg");
+	background-size: cover;
+	height: 100%;
+	width: 100%;
 }
 
 #frontpage form {
-    height: 200px;
-    width: 600px;
-    background-color: rgba(255, 255, 255, 0.5);
-    flex-direction: column;
+	height: 200px;
+	width: 600px;
+	background-color: rgba(255, 255, 255, 0.5);
+	flex-direction: column;
+	border-radius: 10px;
 }
 
-#frontpage form input{
-    padding: 10px;
-    width: 300px;
+#frontpage form input {
+	padding: 15px;
+	width: 350px;
+	border-radius: 10px;
+	border: none;
+	font-size: 1.6rem;
+	margin-bottom: 20px;
 }
 #frontpage form button,
-.label-container a{
-    background-color: #d16464;
-    color: white;
-    font-size: 1.8rem;
-    padding: 8px;
-    margin-top: 7px;
-    border: none;
+.label-container a {
+	background-color: #d16464;
+	border-radius: 10px;
+	color: white;
+	font-size: 1.8rem;
+	padding: 12px;
+	border: none;
 }
 
-/* Artists and albums style */
+/* Artists and albums styles */
 #albums,
-#artists{
-    flex-wrap: wrap;
-    width: 1080px;
+#artists {
+	flex-wrap: wrap;
+	width: 1080px;
 }
 
-.container{
-    width: 300px;
-    height: 370px;
-    margin: 10px 30px;
+.container {
+	width: 300px;
+	height: 370px;
+	margin: 10px 30px;
 }
 
-.container img{
-    width: 100%;
-    height: 80%;
-    object-fit: cover;
+.container img {
+	width: 100%;
+	height: 75%;
+	object-fit: cover;
 }
 
-.label-container{
-    background-color: #4d4d4d;
-    width: 100%;
-    height: 20%;
-    margin-top: -3px;
-    flex-direction: column;
+.label-container {
+	background-color: #4d4d4d;
+	width: 100%;
+	height: 25%;
+	margin-top: -3px;
+	flex-direction: column;
 }
-.label-container h4{
-    margin: 0;
-    color: white;
-    font-size: 1.6rem;
-    text-align: center;
-    text-overflow: ellipsis;
-    white-space: nowrap;
-    overflow: hidden;
-    width: 90%;
+.label-container h4 {
+	margin: 0;
+	color: white;
+	font-size: 1.9rem;
+	text-align: center;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width: 90%;
 }
-.label-container a{
-    border-radius: 10px;
-    font-size: 1.6rem;
-    text-decoration: none;
+.label-container a {
+	border-radius: 5px;
+	font-size: 1.4rem;
+	text-decoration: none;
+    padding: 7px 5px;
+    margin-top: 10px;
 }
 
-/* tracks style */
-#tracks{
-    flex-direction: column;
-    width: 70%;
+/* Tracks styles */
+#tracks {
+	flex-direction: column;
+	width: 60%;
+	align-self: flex-start;
 }
 header {
-    width: 100%;
-    height: 80px;
-    background-color: #4d4d4d;
-    color: white;
-    font-size: 2.5rem;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 15px 15px;
+	width: 100%;
+	height: 80px;
+	background-color: #4d4d4d;
+	color: white;
+	font-size: 2.5rem;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+header h3 {
+	margin: 0px 90px;
 }
 
-#tracks section{
-    width: 100%;
+#tracks section {
+	width: 100%;
 }
 
-#tracks section div{
-    display: flex;
-    justify-content: space-between;   
+#tracks section div {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 80px;
+	padding: 0px 40px;
+	background-color: #ededed;
+	margin: 5px 0px;
 }
 
-.track-name{
-    font-size: 2rem;
+.track-name {
+	font-size: 2rem;
 }
