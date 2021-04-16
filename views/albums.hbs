@@ -1,0 +1,13 @@
+<div class="search-results-container">
+    <h1>{{artistAlbums.0.artists.0.name}} albums</h1>
+
+    {{#each artistAlbums}}
+    <div class="search-result">
+        <img class="album-img" src="{{images.0.url}}" alt="{{name}} Cover">
+        <div class="name-container">
+            <h2>{{name}}</h2>
+            <a href="/tracks/{{id}}">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

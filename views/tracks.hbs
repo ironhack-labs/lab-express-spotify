@@ -1,0 +1,13 @@
+<h1 class="tracks-page-header">Listen to the album from {{albumTracks.0.artists.0.name}}</h1>
+
+{{#each albumTracks}}
+<figure>
+    <figcaption>Listen to {{name}}:</figcaption>
+    <audio
+        controls
+        src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+{{/each}}
