@@ -10,7 +10,8 @@ body,html{
 /* Common styles */ 
 main,
 .label-container,
-#frontpage form{
+#frontpage form,
+.label-container{
     display: flex;
     justify-content: center;
     align-items: center;
@@ -39,7 +40,8 @@ body{
     padding: 10px;
     width: 300px;
 }
-#frontpage form button{
+#frontpage form button,
+.label-container a{
     background-color: #d16464;
     color: white;
     font-size: 1.8rem;
@@ -48,8 +50,7 @@ body{
     border: none;
 }
 
-/* Album and tracks style */
-
+/* Artists and albums style */
 #albums,
 #artists{
     flex-wrap: wrap;
@@ -64,13 +65,31 @@ body{
 
 .container img{
     width: 100%;
-    height: 310px;
+    height: 80%;
     object-fit: cover;
 }
 
 .label-container{
     background-color: #4d4d4d;
     width: 100%;
-    height: 60px;
+    height: 20%;
     margin-top: -3px;
+    flex-direction: column;
 }
+.label-container h4{
+    margin: 0;
+    color: white;
+    font-size: 1.6rem;
+    text-align: center;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    width: 90%;
+}
+.label-container a{
+    border-radius: 10px;
+    font-size: 1.6rem;
+    text-decoration: none;
+}
+
+/* tracks style */
