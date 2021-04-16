@@ -1,0 +1,87 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    font-family: "Roboto";
+    font-size: 16px;
+}
+
+body {
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    font-size: 4em;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.164);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search-form {
+    margin: 20% auto;
+    width: 50vw;
+    height: 30vh;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn {
+    background: tomato;
+    color: white;
+    margin: 10px;
+    border-radius: 2px;
+    border: 0px;
+    padding: 10px 40px;
+    font-weight: 600;
+    font-size: 1.3em;
+}
+
+.text-input {
+    color: black;
+    padding: 10px 20px;
+    font-size: 1.5em;
+    border-radius: 2px;
+    text-align: center;
+    border: 0px;
+}
+
+.container-collection {
+    max-width: 60vw;
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-element {
+    background-color: rgba(68, 68, 68, 0.562);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 460px;
+    min-height: 460px;
+    margin: 20px;
+}
+
+.artist img {
+    width: 360px;
+    height: 360px;
+}

@@ -1,0 +1,16 @@
+<div class="container-collection">
+{{#each albums}}
+    <div class="container-element">
+        <img src="{{images.1.url}}" alt="{{name}}" >
+        <h3>
+            {{name}}
+        </h3>
+        <p>Date: {{release_date}}</p>
+        <a href="/tracks/{{id}}">
+            <button class="btn">
+                View Tracks
+            </button>
+        </a>
+    </div>
+{{/each}}
+</div>

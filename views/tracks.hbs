@@ -1,0 +1,14 @@
+<div class="container-collection">
+{{#each tracks}}
+    <div class="container-element">
+        <h3>
+            {{name}}
+        </h3>
+        {{#if uri}}
+        <audio src="{{uri}}"></audio>
+        {{else}}
+        <p>no audio preview provided</p>
+        {{/if}}
+    </div>
+{{/each}}
+</div>
