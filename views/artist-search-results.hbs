@@ -4,7 +4,7 @@
         <h2>{{name}}</h2>
         {{#each images}}
             {{#if @first}}
-                <img src="{{this.url}}" alt="{{name}}-photo">
+                <img src="{{url}}" alt="{{name}}-photo">
             {{/if}}
         {{/each}}
         <a href="/albums/{{id}}">View Albums</a>

@@ -2,8 +2,8 @@
     <p>{{name}}</p>
     {{#each images}}
         {{#if @first}}
-            <img src="{{this.url}}" alt="{{name}}-photo">
+            <img src="{{url}}" alt="{{name}}-photo">
         {{/if}}
     {{/each}}
-    <a href="">View Tracks</a>
+    <a href="/tracks/{{id}}">View Tracks</a>
 {{/each}}
