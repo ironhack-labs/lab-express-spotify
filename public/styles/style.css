@@ -1,0 +1,186 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@700&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.home-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url(/images/crowd-bg.jpeg);
+    background-position: center;
+    background-size: contain;
+}
+
+.home-container > div {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+    border-radius: 2px;
+}
+
+.home-container form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.home-container form input {
+    width: 300px;
+    margin: 10px;
+}
+
+.home-container form button {
+    color: white;
+    margin: 10px;
+    padding: 7px 15px;
+    background-color: crimson;
+    border-radius: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.artists-container img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    border-radius: 50%;
+}
+
+.artists-container {
+    width: 100vw;
+    /* height: 100vh; */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/images/crowd-bg.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.artists-div {
+    color: white;
+    margin: 20px;
+    width: 130px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 2px;
+}
+
+.artists-div {
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 0px 0px 2px black;
+}
+
+.artists-div a {
+    text-decoration: none;
+    color: white;
+    font-size: 8px;
+    padding: 3px 10px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.albums-container img {
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+
+.albums-container {
+    width: 100vw;
+    /* height: 100vh; */
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/images/crowd-bg.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.albums-div {
+    color: white;
+    margin: 20px;
+    width: 130px;
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: none;
+    border-radius: 2px;
+}
+
+.albums-div {
+    text-align: center;
+    font-size: 12px;
+    text-shadow: 0px 0px 2px black;
+}
+
+.albums-div a {
+    text-decoration: none;
+    color: white;
+    font-size: 8px;
+    padding: 3px 10px;
+    background-color: black;
+    border: 1px solid white;
+    border-radius: 3px;
+}
+
+.tracks-container {
+    width: 100vw;
+    background: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), url(/images/crowd-bg.jpeg);
+    background-position: center;
+    background-size: contain;
+    background-attachment: fixed;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.tracks-container > div {
+    width: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: white;    
+}
+
+.tracks-container figure {
+    font-size: 10px;
+    width: 80%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.tracks-container audio {
+    width: 220px;
+    height: 40px;
+    margin: 10px;
+}

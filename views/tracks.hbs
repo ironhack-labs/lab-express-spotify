@@ -1,0 +1,20 @@
+<div class="tracks-container">
+
+    <div>
+        <h4>Title</h4>
+        <h4>Listen</h4>
+    </div>
+
+    {{#each tracks}}
+    <figure class="audio-div">
+        <figcaption>{{this.name}}</figcaption>
+        <audio
+            controls
+            src="{{this.preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </figure>
+    {{/each}}
+
+</div>
