@@ -1,0 +1,14 @@
+<section>
+    <header>
+        <h3>Title</h3>
+        <h3>Listen</h3>
+    </header>
+    <main>
+        {{#each this.items}}
+            <div>
+                <p>{{name}}</p>
+                <audio controls src="{{preview_url}}"></audio>
+            </div>
+        {{/each}}
+    </main>
+</section>
