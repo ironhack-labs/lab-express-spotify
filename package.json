@@ -18,6 +18,7 @@
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
     "hbs": "^4.1.2",
+    "mongoose": "^5.12.4",
     "spotify-web-api-node": "^5.0.2"
   }
 }
