@@ -1,13 +1,13 @@
-<h1>Albums</h1>
+<main id="albums-results">
 
-<div>
+
     {{#each artistAlbums}}
-
-    <img src="{{images.0.url}}" alt="{{name}}">
-
-    <p>{{name}}</p>
-
-    <a href="/tracks/{{id}}">View Tracks</a>
-
+    <div class="container">
+        <img src="{{images.0.url}}" alt="{{name}}">
+        <div>
+            <h3>{{name}}</h3>
+            <a href="/tracks/{{id}}" class="search-button">View Tracks</a>
+        </div>
+    </div>
     {{/each}}
-</div>
+</main>

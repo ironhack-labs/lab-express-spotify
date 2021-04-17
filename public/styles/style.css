@@ -5,6 +5,7 @@ html {
   font-size: 10px;
   height: 100%;
   width: 100%;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
 #index-page {
@@ -33,19 +34,101 @@ html {
 }
 
 #index-page form input {
-    padding: 10px;
-	width: 350px;
-    border:2px solid lavender;
-	border-radius: 8px;
-    margin-top: 20px;
-	margin-bottom: 15px;
+  padding: 10px;
+  width: 350px;
+  border: 2px solid lavender;
+  border-radius: 8px;
+  margin-top: 20px;
+  margin-bottom: 15px;
 }
 
 .search-button {
-	background-color: tomato;
-	border-radius: 10px;
-	color: white;
-	padding: 10px;
-    border: none;
-	border-radius: 5px;
+  background-color: tomato;
+  border-radius: 10px;
+  color: white;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+#artists-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  text-align: center;
+  border: 2px solid #eee;
+  box-sizing: border-box;
+  box-shadow: 2px 2px 10px 0 #eee;
+  margin: 10px;
+  max-width: 30%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+.container img {
+  max-width: 100%;
+}
+
+.container div {
+  background-color: dimgray;
+  padding-bottom: 20px;
+  padding-top: 0px;
+  color: white;
+}
+
+h3 {
+  padding-bottom: 2px;
+  padding-top: 0px;
+  margin-top: 5px;
+}
+
+#albums-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#tracks-results {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-start;
+  background-clip: padding-box;
+  margin:0 20px 0 30px;
+}
+
+#tracks-results header {
+  background-color: dimgray;
+  color:gainsboro; 
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+  justify-content: space-between;
+}
+
+h2 {
+  font-size: 20px;
+  padding: 5px 120px 5px 20px;
+}
+
+#tracks-results div {
+  width: 100%;  
+  display: flex;
+  justify-content: space-between;
+	align-items: center;
+  height: 80px;
+	background-color:ghostwhite;
+	margin-top: 5px;
+}
+
+.track-name {
+  font-size: 20px;
+  padding-left: 20px;
+  font-weight: bold;
 }

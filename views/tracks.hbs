@@ -1,13 +1,14 @@
-
-
-<h1>Tracks</h1>
-{{#each albumTracks}}
-
-<div class="track">
-<p class="inline">{{name}}</p>
+<main id="tracks-results">
+  <header>
+    <h2>Title</h2>
+    <h2>Listen</h2>
+  </header>
+  {{#each albumTracks}}
+  <div class="track">
+    <p class="track-name">{{name}}</p>
     <audio controls>
-      <source src="{{preview_url}}" type="audio/mpeg" class="inline"/>
+      <source src="{{preview_url}}" type="audio/mpeg" class="track-test" />
     </audio>
-</div>
-
-{{/each}}
+  </div>
+  {{/each}}
+</main>
