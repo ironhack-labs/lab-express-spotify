@@ -1,0 +1,17 @@
+<div class="tracks-header">
+<span>Title</span>
+<span>Listen</span>
+</div>
+<div class="container">
+  <div class="row">
+    {{#each track}}
+
+    <div class="col-12 track">
+      <p>{{this.name}}</p>
+      <audio controls src="{{this.preview_url}}"></audio>
+    </div>
+    {{/each}}
+  </div>
+</div>
+
+

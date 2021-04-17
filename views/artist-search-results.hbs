@@ -1,0 +1,23 @@
+<h2 class ="albums-h2">Artists:</h2>
+
+<div class="container">
+  <div class="row">
+    {{#each artists}}
+
+    <div class="col-4">
+      {{#if this.images}}
+          <img src="{{this.images.1.url}}" alt="{{this.name}} - image">
+          {{else}}
+          <img src="/images/spotify-logo.jpeg" alt="{{this.name}} - image">
+          {{/if}}
+
+      <div class="card-info">
+        <h3>{{this.name}}</h3>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    
+      </div>
+    </div>
+    {{/each}}
+  </div>
+
+</div>
