@@ -1,0 +1,224 @@
+* {
+  box-sizing: border-box;
+}
+
+/*   https://codepen.io/meodai/pen/rNedxBa then modified */
+
+:root {
+  --color-light: white;
+  --color-dark: #212121;
+  --color-signal: #2081c3;
+  --color-background: var(--color-light);
+  --color-text: var(--color-dark);
+  --color-accent: var(--color-signal);
+  --size-bezel: 0.5rem;
+  --size-radius: 4px;
+  line-height: 1.4;
+  font-family: 'Inter', sans-serif;
+  font-size: calc(0.6rem + 0.4vw);
+  color: var(--color-text);
+  background: var(--color-background);
+  font-weight: 300;
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+main {
+  width: 100%;
+  margin: auto;
+}
+/* first page */
+.formcont {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/spotify-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.formcont .formcontinner {
+  width: 30vw;
+  height: 15vh;
+  background-color: rgba(255, 255, 255, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.formcont form {
+  width: 15vw;
+  display: flex;
+  flex-direction: column;
+}
+.nothingfound {
+  font-weight: 900;
+  font-size: large;
+}
+
+/*   https://codepen.io/meodai/pen/rNedxBa then modified */
+
+.input {
+  position: relative;
+}
+.input__label {
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: calc(var(--size-bezel) * 0.75) calc(var(--size-bezel) * 0.5);
+  margin: calc(var(--size-bezel) * 0.75 + 3px) calc(var(--size-bezel) * 0.5);
+  white-space: nowrap;
+  transform: translate(0, 0);
+  transform-origin: 0 0;
+  transition: transform 120ms ease-in;
+  font-weight: bold;
+  line-height: 1.2;
+}
+.input__field {
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  border: 3px solid currentColor;
+  padding: calc(var(--size-bezel) * 1.5) var(--size-bezel);
+  color: currentColor;
+  background: transparent;
+  border-radius: var(--size-radius);
+}
+.input__field:not(:-moz-placeholder-shown) + .input__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--color-accent);
+}
+.input__field:not(:-ms-input-placeholder) + .input__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--color-accent);
+}
+.input__field:focus + .input__label,
+.input__field:not(:placeholder-shown) + .input__label {
+  transform: translate(0.25rem, -65%) scale(0.8);
+  color: var(--color-accent);
+  background: var(--color-background);
+}
+
+.button-group {
+  margin-top: calc(var(--size-bezel) * 2.5);
+}
+
+.buttonbig,
+.button,
+button {
+  color: currentColor;
+  background: var(--color-accent);
+  border: none;
+  border-radius: var(--size-radius);
+}
+.buttonbig,
+button {
+  padding: var(--size-bezel) calc(var(--size-bezel) * 2);
+  font-weight: 900;
+}
+.button {
+  padding: calc(var(--size-bezel) / 2) calc(var(--size-bezel) * 2);
+  font-weight: 300;
+  text-decoration: none;
+  text-align: center;
+}
+.buttonbig {
+  text-decoration: none;
+}
+
+/* gallery for both pages with images 
+https://codepen.io/SebinNyshkim/pen/MxxjaN modified
+*/
+.gallery {
+  display: flex;
+  flex-flow: row wrap;
+  align-content: flex-start;
+  align-items: stretch;
+  width: 100%;
+  margin: auto;
+}
+.gallery .galleryItem {
+  flex: 1 1 auto;
+  margin: 0.3em;
+  border: 1px solid black;
+  position: relative;
+  width: 12em;
+  height: 13em;
+  overflow: hidden;
+}
+@media (min-width: 40em) {
+  .gallery .galleryItem {
+    width: 10em;
+    height: 10em;
+  }
+}
+@media (min-width: 80em) {
+  .gallery .galleryItem {
+    width: 17em;
+    height: 17em;
+  }
+}
+.gallery .galleryItem:hover img {
+  transform: scale(1.2);
+}
+.gallery a {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.gallery img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.2s;
+}
+.gallery figcaption {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: #fff;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 1em;
+  text-align: center;
+}
+
+/* extra */
+.gallery .noimg {
+  background-image: url('/images/placeholder_spotify.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+/* tracks */
+.tracks {
+  margin: 50px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  border-top: 1px solid black;
+}
+.grid > span {
+  padding: 8px 12px;
+  border-bottom: 1px solid black;
+}
+
+.grid > span.headgrid {
+  padding: 20px 12px;
+  background-color: var(--color-accent);
+  color: white;
+  font-size: x-large;
+}
+.grid > span.headgrid.center {
+  text-align: center;
+}

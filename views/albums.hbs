@@ -1,16 +1,21 @@
-{{!-- getArtistAlbums Make sure you show the name and the cover of each album and add a button/link to see the tracks
-(next iteration).
---}}
+<div class="gallery albums">
 
+    {{#each albums}}
 
-{{#each albums}}
+    <figure class="galleryItem">
 
-<article class="albums">
-    {{this.name}}
-    {{#if this.img}}
-    <img src="{{this.img}}" alt="{{this.name}}" />
-    {{/if}}
-    <a href="/tracks/{{this.id}}">View Tracks</a>
-</article>
+        <a href="/tracks/{{this.id}}">
 
-{{/each}}
+            {{#if this.img}}
+            <img src="{{this.img}}" alt="{{this.name}}" />
+            {{else}}
+            <div class="noimg">&nbsp;</div>
+            {{/if}}
+
+        </a>
+        <figcaption>{{this.name}}<a class="button" href="/tracks/{{this.id}}">View Tracks</a></figcaption>
+
+    </figure>
+
+    {{/each}}
+</div>

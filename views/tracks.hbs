@@ -1,17 +1,26 @@
 {{!-- getAlbumTracks
 A track object comes with a preview_url, which is the source for a 30-second preview of a particular song. You can plug
 this into an HTML audio tag, and it will play the preview. --}}
+<div class="tracks">
+    <div class="grid">
 
-{{#each tracks}}
+        <span class="headgrid c1">Title</span><span class="headgrid center c2">Listen</span>
+        {{#each tracks}}
 
-<article class="tracks">
-    <span>{{this.name}}</span>
-    {{#if this.preview_url}}
-    <span>{{this.preview_url}}</span>
-    {{else}}
-    <span>no preview_url</span>
-    {{/if}}
+        <span class="c1">{{this.name}}</span>
+        {{#if this.preview_url}}
+        <span class="c2">
 
-</article>
+            <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </span>
 
-{{/each}}
+        {{else}}
+        <span class="c2">&nbsp;</span>
+        {{/if}}
+
+        {{/each}}
+    </div>
+</div>

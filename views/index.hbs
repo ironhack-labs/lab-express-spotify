@@ -1,5 +1,13 @@
-<form action="/artist-search" method="GET">
-    <label for="artistName">Enter an artist name</label>
-    <input type="text" id="artistName" name="q">
-    <button type="submit">Search for an Artist</button>
-</form>
+<div class="formcont">
+    <div class="formcontinner">
+        <form action="/artist-search" method="GET">
+            <label class="input">
+                <input class="input__field" type="text" name="q" placeholder=" " />
+                <span class="input__label">Enter an artist name</span>
+            </label>
+            <div class="button-group">
+                <button>Search for an Artist</button>
+            </div>
+        </form>
+    </div>
+</div>

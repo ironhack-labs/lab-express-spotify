@@ -1,23 +1,25 @@
-{{!-- searchArtists --}}
+<div class="gallery artists">
 
-{{#each artists}}
+    {{#each artists}}
 
-<article class="artists">
-    {{this.name}}
-
-
-    {{#if this.images.1.url}}
-    <img src="{{this.images.1.url}}" alt="{{this.name}}" />
-    {{else if this.images.0.url}}
-    <img src="{{this.images.0.url}}" alt="{{this.name}}" />
-    {{else}}
-    <span>no image</span>
-    {{/if}}
+    <figure class="galleryItem">
 
 
+        <a href="/albums/{{this.id}}">
+
+            {{#if this.images.1.url}}
+            <img src="{{this.images.1.url}}" alt="{{this.name}}" />
+            {{else if this.images.0.url}}
+            <img src="{{this.images.0.url}}" alt="{{this.name}}" />
+            {{else}}
+            <div class="noimg">&nbsp;</div>
+            {{/if}}
+
+        </a>
+        <figcaption>{{this.name}}<a class="button" href="/albums/{{this.id}}">View Albums</a></figcaption>
 
 
-    <a href="/albums/{{this.id}}">View albums</a>
-</article>
+    </figure>
 
-{{/each}}
+    {{/each}}
+</div>
