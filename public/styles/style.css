@@ -1,0 +1,153 @@
+html,
+body {
+  margin: 0px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+}
+
+.header {
+  width: 100%;
+  text-align: center;
+  background: #1ed760;
+  border-radius: 3px;
+  padding: 1vh;
+  color: white;
+  font-size: 2rem;
+}
+
+.header a {
+  text-decoration: none;
+  color: white;
+}
+
+h2 {
+  padding-right: 20%;
+  padding-left: 4%;
+}
+
+h4 {
+  color: white;
+  font-size: 18px;
+  width: 80%;
+  text-align: center;
+}
+
+.landing-page {
+  height: 100vh;
+  width: 100vw;
+  background-image: linear-gradient(rgb(88, 0, 0), rgb(88, 0, 0)),
+    url('../images/spotify-background.jpeg');
+  background-size: cover;
+  background-blend-mode: saturation;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center-field {
+  background: rgba(255, 255, 255, 0.5);
+  width: 55vw;
+  height: 20vh;
+  border-radius: 3px;
+}
+
+.center-field,
+.center-field form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+form#search {
+  width: 100%;
+}
+
+input#search-field {
+  width: 60%;
+  font-size: 18px;
+  padding: 8px;
+  color: rgb(71, 70, 70);
+  border-radius: 3px;
+  border: 0.5px solid;
+}
+
+.button {
+  font: bold 20px Arial;
+  text-decoration: none;
+  background-color: #f34d4d;
+  color: #ffffff;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+}
+
+.center-field .button {
+  margin-top: 8px;
+}
+
+.collection {
+  width: 90vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-top: 8vh;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  width: 30%;
+  background: #1ed760;
+  margin-bottom: 5vh;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.collection img {
+  width: 100%;
+}
+
+.card .button {
+  margin-bottom: 5vh;
+}
+
+.tracks-page {
+  width: 90vw;
+}
+
+.rows-header {
+  background: #1ed760;
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5vh;
+}
+
+.rows {
+  margin-top: 4vh;
+  display: flex;
+  flex-direction: column;
+  /* justify-content: space-between; */
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #d0e9d0;
+  padding: 1vh 1vw;
+  margin: 2vh 0vw;
+  border-radius: 40px;
+}
+
+.title {
+  padding-left: 12px;
+  font-size: 19px;
+  font-weight: bold;
+  color: #000000b8;
+}
