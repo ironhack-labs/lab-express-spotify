@@ -1,0 +1,12 @@
+<section>
+    <div class="topbartracks">
+        <h2>Title</h2>
+        <h2>Listen</h2>
+    </div>
+    {{#each tracks}}
+    <article class="trackarticle">
+            <h3>{{this.name}}</h3>
+            <audio controls src="{{this.preview_url}}"></audio>
+    </article>
+    {{/each}}
+</section>

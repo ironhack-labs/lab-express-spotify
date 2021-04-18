@@ -1,0 +1,115 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+.body{
+    background-image: url(../images/spotify-background.jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    background-color: rgba(255, 255, 255, 0.4);
+    padding: 60px;
+    width: 55vw;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    border-radius: 5px;
+}
+
+.form input{
+    width: 80%;
+    height: 3em;
+    align-self: center;
+    border-radius: 5px;
+    border: 1px rgba(0, 0, 0, 0.3);
+    font-size: 1em;
+    color: black;
+    margin:10px;
+    padding-left: 20px;   
+}
+
+.form button{
+    width: 35%;
+    height: 3em;
+    font-size: 1em;
+    align-self: center;
+    color:white;
+    background-color: rgba(255, 0, 0, 0.7);
+    border: none;
+    border-radius: 5px;
+}
+
+.artistsearch{
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    text-align: center;
+    gap: 10px;
+}
+
+.artistsearch img{
+    width: 100%;
+    height: 22em;
+}
+
+.artistarticle{
+    width: 28%;
+    height: 28em;
+    background-color: rgb(68, 68, 68);
+    margin: 15px 20px;
+}
+
+.artistarticle p{
+    color: white;
+    font-size: 1em;
+    margin-top: 5%;
+    margin-bottom: 15px;
+}
+.artistarticle a{ 
+    color: white;
+    background-color: rgba(236, 93, 91, 1);
+    font-size: 1.2em;
+    text-decoration: none;
+    padding: 5px;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.topbartracks{
+    display: flex;
+    justify-content: space-between;
+    color: darkgray;
+    background-color: rgb(68, 68, 68);
+    height: 15vh;
+    padding: 2em;
+    margin: 0 2em;
+
+}
+
+.trackarticle{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(68, 68, 68, 0.2);
+    height: 10vh;
+    margin: 3px 2em;
+}
+
+.trackarticle audio{
+    margin: 0.5em;
+    width: 30vw;
+    
+}
+
+.trackarticle h3{
+    margin: 1em;
+}

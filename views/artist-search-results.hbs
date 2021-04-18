@@ -1,0 +1,18 @@
+
+<section class="artistsearch">
+    {{#each artists}}
+    <article class="artistarticle">           
+            {{#if this.images}}
+            <figure>
+                <img src="{{this.images.0.url}}" alt="{{this.name}}">
+            </figure>
+            {{else}}
+            <figure>
+                <img src="https://loremflickr.com/640/360" alt="{{this.name}}">
+            </figure>
+            {{/if}}
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}">View Albums</a> 
+    </article>
+    {{/each}}
+</section>
