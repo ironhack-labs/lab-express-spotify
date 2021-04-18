@@ -1,20 +1,23 @@
-<h2>Tracks of {{albumName}}</h2>
-<div class="track-player">
-    <div class="header">
-        <div class="">Title</div>
-        <div class="">Listen</div>
-    </div>
-    <div class="track">
-        {{#each tracks}}
-        <div class="track-name">
-            {{name}}
+<div class="result-list">
+    <h1>Tracks of "{{albumName}}"</h1>
+
+    <div class="track-player">
+        <div class="header">
+            <div class="">Title</div>
+            <div class="">Listen</div>
         </div>
-        <div class="track-preview">
-            <audio controls src="{{preview_url}}">
-                Your browser does not support the
-                <code>audio</code> element.
-            </audio>
+        <div class="track">
+            {{#each tracks}}
+            <div class="track-name">
+                {{name}}
+            </div>
+            <div class="track-preview">
+                <audio controls src="{{preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </div>
+            {{/each}}
         </div>
-        {{/each}}
     </div>
 </div>

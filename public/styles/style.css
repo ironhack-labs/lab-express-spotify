@@ -2,8 +2,17 @@
 
 body {
   font-family: "Lato", sans-serif;
+  font-weight: 400;
   color: #191414;
   font-size: 18px;
+}
+
+h1 {
+  font-weight: 700;
+}
+
+h2 {
+  font-weight: 400;
 }
 
 button {
@@ -53,7 +62,7 @@ button:hover {
   padding: 10px;
 }
 
-.search-result-list {
+.result-list {
   padding: 50px;
   width: 100%;
   box-sizing: border-box;
@@ -61,19 +70,19 @@ button:hover {
   background-size: contain;
 }
 
-.search-result-list h1 {
+.result-list h1 {
   color: #fff;
 }
 
-.search-result-list-flex {
+.result-list-flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
 }
 
-.artist-card {
+.card {
   box-sizing: border-box;
-  width: 30%;
+  width: 28%;
   margin: 20px;
   text-align: center;
   background-color: #505050;
@@ -81,42 +90,81 @@ button:hover {
   border-radius: 5px;
 }
 
-.artist-card h2 {
+.card h2 {
   font-size: 1.7rem;
   margin: 5px 0 0 0;
 }
 
-.artist-card img {
+.card img {
   width: 100%;
-  height: 400px;
+  height: 300px;
   object-fit: cover;
   object-position: center;
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
 }
 
-.artist-card button {
+.card button {
   margin: 10px 0 15px;
   padding: 5px 10px;
 }
 
-@media (max-width: 980px) {
-  .artist-card {
-    width: 42%;
+.track-player {
+  background-color: #fff;
+  color: #191414;
+  border-radius: 5px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.track-player .header {
+  display: flex;
+  justify-content: space-between;
+}
+.track-player .header > * {
+  width: 50%;
+  text-align: center;
+  font-size: 1.3rem;
+  padding: 10px;
+}
+
+.track-player .track {
+  font-weight: 300;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 10px 20px;
+}
+
+.track-player .track > * {
+  width: 50%;
+  display: flex;
+  align-items: center;
+  padding: 10px 0;
+}
+
+@media (max-width: 1200px) {
+  .card {
+    width: 44%;
   }
-  .artist-card img {
+  .card img {
     height: 200px;
   }
 }
 
 @media (max-width: 500px) {
-  .search-result-list {
+  .result-list {
     padding: 30px;
   }
-  .artist-card {
+  .card {
     width: 100%;
   }
-  .artist-card img {
+  .card img {
     height: 200px;
+  }
+  .track-player .header {
+    display: none;
+  }
+  .track-player .track > * {
+    width: 100%;
   }
 }

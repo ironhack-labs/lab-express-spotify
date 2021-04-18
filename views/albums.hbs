@@ -1,14 +1,18 @@
-{{!-- <h2>Albums for: {{albums.0.artists.0.name}}</h2> --}}
-<h2>{{artistName}}</h2>
-
-{{#each albums}}
-<img src="
-    {{#if images}}
-        {{ images.0.url }}
-    {{else}}
-        /images/noimageavailable.png
-    {{/if}}
-" alt="">
-<h3>{{name}}</h3>
-<a href="/tracks/{{id}}"><button>View Tracks</button></a>
-{{/each}}
+<div class="result-list">
+    <h1>Album results for: {{artistName}}</h1>
+    <div class="result-list-flex">
+        {{#each albums}}
+        <div class="card">
+            <img src="
+                {{#if images}}
+                    {{ images.0.url }}
+                {{else}}
+                    /images/noimageavailable.png
+                {{/if}}
+            " alt="">
+            <h2>{{name}}</h2>
+            <a href="/tracks/{{id}}"><button>View tracks</button></a>
+        </div>
+        {{/each}}
+    </div>
+</div>

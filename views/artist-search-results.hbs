@@ -1,8 +1,8 @@
-<div class="search-result-list">
-    <h1>Search results for: "{{searchedItem}}"</h1>
-    <div class="search-result-list-flex">
+<div class="result-list">
+    <h1>Search results for: {{searchedItem}}</h1>
+    <div class="result-list-flex">
         {{#each artistList}}
-        <div class="artist-card">
+        <div class="card">
             <img src="
                 {{#if images}}
                     {{ images.0.url }}
