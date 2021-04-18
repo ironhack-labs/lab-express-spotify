@@ -1,0 +1,22 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.searchForm {
+  background-image: url("../images/spotify-background.jpeg");
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-position: center;
+  background-size: cover;  
+  height: 100vh;
+}
+
+.searchForm form {
+  background-color: white;
+  opacity: 0.6;
+  padding: 50px;
+
+}
