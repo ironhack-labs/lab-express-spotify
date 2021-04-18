@@ -1,0 +1,95 @@
+* {
+    margin: 0;
+    padding: 0px;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+#home-div, #artist-div-page {
+    background-size: cover;
+    width: 100vw;
+
+}
+
+#home-div {
+    background-image: url("/images/rave-img.jpg");
+    /* Photo by <a href="https://unsplash.com/@bantersnaps?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">bantersnaps</a> on <a href="https://unsplash.com/s/photos/rave?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">Unsplash</a> */
+    height: 100vh;
+  
+    display: flex;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+}
+
+#home-div > form > * {
+    border-radius: 10px;
+    display: inline-block;
+    padding: 10px;
+}
+
+button {
+    background-color: rgb(14, 9, 87);
+    color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+#artist-div-page {
+    background-image: url("/images/dj-img.jpg");
+
+}
+
+#album-div-page {
+    background-image: url("/images/concert-img.jpg");
+
+}
+
+#tracks-div-page {
+    background-image: url("/images/drumkit-img.jpg");
+
+}
+
+#artist-div-page,  #album-div-page, #tracks-div-page {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-size: cover;
+
+}
+
+.artist-div, .album-div, #album-tracks {
+    width: 40%;
+    margin: auto;
+    background-color: rgba(248,215,215,0.65);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 40px;
+    padding: 50px 0;
+}
+
+#album-tracks {
+    width: 60%;
+}
+
+.artist-div img, .album-div img {
+    width: 55%;
+    max-height: 500px;
+    margin: 30px 0;
+}
+
+.track-div {
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 70%;
+}
+
+.track-div > * {
+    padding: 5px;
+    display: inline-block;
+
+}

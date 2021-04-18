@@ -1,0 +1,12 @@
+<div id="album-div-page">
+   {{#each artistAlbums}}
+    <div class="album-div">
+        <h1>{{name}}</h1>
+        {{#if this.images}}
+            <img src="{{this.images.1.url}}" alt="Cover image">
+        {{/if}}
+        <a  href="/tracks/{{this.id}}"><button>View Tracks</button></a>
+    </div>
+    
+    {{/each}} 
+</div>

@@ -1,0 +1,14 @@
+<div id="tracks-div-page">
+    <div id="album-tracks">
+        {{#each albumTracks}}
+            <div class="track-div">
+                <h1>{{name}}</h1>
+                {{#if preview_url}}
+                    <audio controls src="{{preview_url}}">play</audio>
+                {{/if}}
+            </div>
+        {{/each}}
+    </div>
+    
+</div>
+
