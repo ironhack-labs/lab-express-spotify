@@ -1,11 +1,18 @@
-{{#each artistList}}
-<h1>{{name}}</h1>
-<img src="
-    {{#if images}}
-        {{ images.0.url }}
-    {{else}}
-        /images/noimageavailable.png
-    {{/if}}
-" alt="Image of {{name}}">
-<a href="/albums/{{id}}"><button>View albums</button></a>
-{{/each}}
+<div class="search-result-list">
+    <h1>Search results for: "{{searchedItem}}"</h1>
+    <div class="search-result-list-flex">
+        {{#each artistList}}
+        <div class="artist-card">
+            <img src="
+                {{#if images}}
+                    {{ images.0.url }}
+                {{else}}
+                    /images/noimageavailable.png
+                {{/if}}
+            " alt="Image of {{name}}">
+            <h2>{{name}}</h2>
+            <a href="/albums/{{id}}"><button>View albums</button></a>
+        </div>
+        {{/each}}
+    </div>
+</div>

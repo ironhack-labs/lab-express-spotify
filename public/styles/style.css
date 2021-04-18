@@ -1,0 +1,122 @@
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap");
+
+body {
+  font-family: "Lato", sans-serif;
+  color: #191414;
+  font-size: 18px;
+}
+
+button {
+  border: none;
+  background-color: #1db954;
+  color: #fff;
+  cursor: pointer;
+  transition: transform 300ms;
+  border-radius: 5px;
+}
+
+button:hover {
+  transform: scale(0.9);
+}
+
+.search {
+  background-image: url("/images/concert.jpg");
+  background-size: cover;
+  background-position: bottom center;
+  background-repeat: no-repeat;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search form {
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 50px 80px;
+  display: flex;
+  flex-flow: column;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.search form input[type="text"] {
+  width: 500px;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.search form button {
+  width: 300px;
+  margin-top: 20px;
+  padding: 10px;
+}
+
+.search-result-list {
+  padding: 50px;
+  width: 100%;
+  box-sizing: border-box;
+  background-image: url("/images/spotify-theme-music-bkg-dark.png");
+  background-size: contain;
+}
+
+.search-result-list h1 {
+  color: #fff;
+}
+
+.search-result-list-flex {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.artist-card {
+  box-sizing: border-box;
+  width: 30%;
+  margin: 20px;
+  text-align: center;
+  background-color: #505050;
+  color: #fff;
+  border-radius: 5px;
+}
+
+.artist-card h2 {
+  font-size: 1.7rem;
+  margin: 5px 0 0 0;
+}
+
+.artist-card img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  object-position: center;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.artist-card button {
+  margin: 10px 0 15px;
+  padding: 5px 10px;
+}
+
+@media (max-width: 980px) {
+  .artist-card {
+    width: 42%;
+  }
+  .artist-card img {
+    height: 200px;
+  }
+}
+
+@media (max-width: 500px) {
+  .search-result-list {
+    padding: 30px;
+  }
+  .artist-card {
+    width: 100%;
+  }
+  .artist-card img {
+    height: 200px;
+  }
+}

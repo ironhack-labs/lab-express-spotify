@@ -22,18 +22,16 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-// Our routes go here:
 app.get('/', (req, res) => {
     res.render('index');
 });
 
 app.get('/artist-search', (req,res) => {
-    // res.send(req.query.q)
     spotifyApi
         .searchArtists(req.query.q)
         .then(data => {
             // console.log('The received data from the API: ', data.body);
-            res.render('artist-search-results', { artistList: data.body.artists.items})
+            res.render('artist-search-results', { artistList: data.body.artists.items, searchedItem: req.query.q})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -42,13 +40,11 @@ app.get('/albums/:artistId', (req,res) => {
     spotifyApi
         .getArtistAlbums(req.params.artistId)
         .then((albumData) => {
-            // console.log(data.body.items[0].artists[0].name);
             spotifyApi
             .getArtist(req.params.artistId)
                 .then((artistData) => {
                     res.render('albums', { albums: albumData.body.items, artistName: artistData.body.name})
                 })
-            // res.render('albums', { albums: data.body.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
