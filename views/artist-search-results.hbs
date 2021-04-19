@@ -1,0 +1,22 @@
+<h2>Artists</h2>
+
+<div class="container">
+    <div class="row">
+        {{#each artists}}
+        <div>
+            <div id="card-img">
+                {{#if images.1.url}}
+                <img src={{images.1.url}} alt="{{name}} photo">
+                {{else}}
+                <img src="/images/no-image.jpg" alt="{{name}} photo">
+                {{/if}}
+            </div>
+
+            <div class="card-info">
+                <h3>{{name}}</h3>
+                <a href="/albums/{{id}}/{{name}}">View Albums</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
