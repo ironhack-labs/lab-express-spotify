@@ -1,0 +1,11 @@
+<section>
+
+    {{#each tracks}}
+    <article>
+        <span>{{this.name}}</span>
+
+
+    <audio controls src="{{this.preview.url}}"></audio>
+    </article>
+    {{/each}}
+</section>
