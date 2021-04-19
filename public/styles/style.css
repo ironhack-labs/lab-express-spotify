@@ -1,0 +1,11 @@
+
+
+
+
+.search{
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    background-image: url("/images/spotify-background.jpeg");
+    
+}
