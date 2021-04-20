@@ -1,0 +1,16 @@
+<h1>views/tracks.hbs</h1>
+
+{{#each tracksList}}
+<u style="list-style: none">
+    <li>
+        <figure>
+            <figcaption>{{name}}</figcaption>
+            <audio controls src="{{preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+
+    </li>
+    </ul>
+    {{/each}}

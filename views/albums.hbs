@@ -1,0 +1,13 @@
+<h1>views/albums.hbs</h1>
+
+{{#each albumList}}
+<ul>
+    <li>
+        <h3>{{name}}</h3>
+        <img src="{{images.0.url}}">
+        <form action="/albums/tracks/{{id}}">
+            <input type="submit" value="View Tracks" />
+        </form>
+    </li>
+</ul>
+{{/each}}

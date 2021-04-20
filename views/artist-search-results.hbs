@@ -1,0 +1,13 @@
+<h1>views/artist-search-result.hbs</h1>
+
+{{#each artistList}}
+<ul>
+    <li>
+        <h1>{{name}}</h1>
+        <img src="{{images.0.url}}">
+        <form action="/albums/{{id}}">
+            <input type="submit" value="View Artist" />
+        </form>
+    </li>
+</ul>
+{{/each}}
