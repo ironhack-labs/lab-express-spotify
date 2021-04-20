@@ -1,0 +1,12 @@
+<h1>Spotify</h1>
+
+<div>
+    {{#each tracks}}
+    <h2>
+        {{name}}
+    </h2>
+    <audio controls>
+        <source src="{{preview_url}}" >
+    </audio>
+    {{/each}}
+</div>
