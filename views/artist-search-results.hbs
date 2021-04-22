@@ -1,0 +1,24 @@
+
+
+{{#each result}}
+    <h1>
+    {{ name }}
+    </h1>
+    <br>
+
+    <img src=" {{ images.[0].url }} " height="200"/> 
+    
+    <br>
+    </br>
+    {{#each genres}}
+        <li>
+        {{ this }}
+        </li>
+    {{/each}}
+
+    <br>
+
+    Followers: {{ followers.total }}
+
+    <a href="/albums/{{id}}" >View Albums</a>
+{{/each}}
