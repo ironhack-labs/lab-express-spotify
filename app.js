@@ -45,10 +45,10 @@ app.get('/artist-search', (req, res) => {
 app.get('/albums/:artistId', (req, res, next) => {
     // .getArtistAlbums() code goes here
     spotifyApi.getArtistAlbums(req.params.artistId)
-        .then(function (data) {
-            console.log('Artist albums', data.body.items[0].artists[0].name);
+        .then(data => {
             res.render('albums', { artistAlbums: data.body.items })
-        }, function (err) {
+        })
+        .catch(err => {
             console.error(err);
         });
 });
@@ -58,9 +58,9 @@ app.get('/tracks/:albumId', (req, res, next) => {
     // .getAlbumTracks() code goes here
     spotifyApi.getAlbumTracks(req.params.albumId)
         .then(function (data) {
-            //console.log('Album tracks', data.body);
             res.render('tracks', { albumTracks: data.body.items })
-        }, function (err) {
+        })
+        .catch(err => {
             console.error(err);
         });
 });
