@@ -1,0 +1,20 @@
+<div class="track__cards">
+    <header class="tracks__header">
+        <h2>Track</h2>
+        <h2>Listen</h2>
+    </header>
+    <div class="tracks__container">
+    {{#each allTracks}}
+    <div class="card track__card" style="width: 100%;">
+        <div class="card-body track__body">
+            <div class="track">{{this.name}}</div>
+             <figure>
+                <audio controls src="{{this.preview_url}}"> Your browser does not support the <code>audio</code> element.
+                </audio>
+            </figure>
+   
+        </div>
+    </div>
+    {{/each}}
+    </div>
+</div>

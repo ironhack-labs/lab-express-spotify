@@ -1,0 +1,17 @@
+<div class="cards">
+    {{#each allArtists}}
+    <div class="card" style="width: 18rem;">
+        <div class="img__wrapper">
+            {{#if this.images.1.url}}
+            <img class="card-img-top" src="{{this.images.1.url}}" alt="Card image cap">
+            {{else}}
+            <img class="beer_card__img" src="/images/beers.png" alt="{{this.name}}"/>
+            {{/if}}
+        </div>
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <a href="/albums/{{this.id}}" class="btn card__btn btn-primary">View Albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

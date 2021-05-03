@@ -1,0 +1,96 @@
+.hero_image {
+  background-image: url("/images/spotify-background.jpeg"); /* The image used */
+  background-color: #cccccc; /* Used if the image is unavailable */
+  height: 100vh; /* You must set a specified height */
+  background-position: center; /* Center the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
+main {
+    position: relative;
+}
+
+.form__wrapper {
+    width: 50%;
+    background-color:rgba(255,255,255, 0.5);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 5rem 0;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form__input {
+    width: 60%;
+}
+
+.btn {
+    width: 40%;
+    background-color: #e88467;
+    border: none;
+}
+
+.btn::after,
+.btn::before {
+    border: none;
+}
+
+.btn:hover {
+    background-color: crimson;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.img__wrapper {
+    height: 70%;
+}
+
+.card-img-top{
+    height: 100%;
+}
+.card {
+    margin: 1rem;
+    padding: 0;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 30%;
+}
+
+.card__btn {
+    width: 60%;
+}
+
+.tracks__header {
+    background-color: black;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    padding: 2rem;
+    padding-right: 8rem;
+}
+
+.track__body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-right: 2rem;
+    align-items:center;
+}
+
+figure {
+    margin: 0;
+}
