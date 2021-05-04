@@ -1,0 +1,25 @@
+<table class="table table-sm" width="300px">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tracks}}
+        <tr>
+            <th scope="row">{{this.name}}</th>
+            {{#if this.preview_url}}
+                <td>
+                <audio controls src="{{this.preview_url}}"></audio>
+                </td>
+            {{else}}
+                <td>
+                    No preview found
+                </td>
+            {{/if}}
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
+

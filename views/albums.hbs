@@ -1,0 +1,16 @@
+<div class="card-deck art-cards">
+    {{#each albums}}
+        <div class="card text-center m-2">
+            {{#if this.images}}
+            <img class="card-img-top album-cover align-middle" src="{{this.images.1.url}}" alt="{{this.name}}">
+            {{/if}}
+            <div class="card-body align-middle">
+                <h5 class="card-title">{{this.name}}</h5>
+                
+            </div>
+            <div class="card-footer border-0 bg-white">
+                <a class="btn btn-danger" href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
