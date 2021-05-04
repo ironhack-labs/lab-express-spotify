@@ -1,8 +1,8 @@
 require('dotenv').config();
-
 const express = require('express');
 const hbs = require('hbs');
-
+const favicon = require('serve-favicon');
+const path = require('path');
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -19,6 +19,8 @@ spotifyApi
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 const app = express();
+
+app.use(favicon(path.join(__dirname, 'public/images', 'favicon.ico')));
 
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -37,7 +39,6 @@ app.get('/artist-search', (req, res) => {
     const {artist} = req.query;
     spotifyApi.searchArtists(artist)
     .then(data => {
-        console.log(`Search artists by ${artist}`, data.body.artists.items[0]);
         res.render('artist-search-results', {allArtists: data.body.artists.items});
     }, err => {
         console.error(err);
@@ -45,14 +46,17 @@ app.get('/artist-search', (req, res) => {
 });
 
 app.get('/albums/:id', (req, res, next) => {
-    const artistId = req.params.id;
-    spotifyApi.getArtistAlbums(artistId)
-    .then(albumsFromApi => res.render('albums', {allAlbums: albumsFromApi.body.items}));
+    const {id} = req.params;
+    spotifyApi.getArtistAlbums(id)
+    .then(albumsFromApi => {
+        res.render('albums', {allAlbums: albumsFromApi.body.items})
+    });
+    
 });
 
 app.get('/tracks/:id', (req, res, next) => {
-    const trackId = req.params.id;
-    spotifyApi.getAlbumTracks(trackId)
+    const {id} = req.params;
+    spotifyApi.getAlbumTracks(id)
     .then(tracksFromApi => res.render('tracks', {allTracks: tracksFromApi.body.items}));
 });
 

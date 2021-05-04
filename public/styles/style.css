@@ -83,11 +83,23 @@ main {
     padding-right: 8rem;
 }
 
+.tracks__container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-right: 2rem;
+}
+
+.track__cards {
+    background-color: lightgrey;
+}
+
 .track__body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    padding-right: 2rem;
+    margin-right: 1rem;
+    padding-right: 1rem;
     align-items:center;
 }
 
