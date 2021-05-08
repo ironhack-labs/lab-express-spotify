@@ -1,0 +1,18 @@
+<div>
+    {{#each allTracks}}
+    <div>
+        <div>
+            {{#if this.preview_url}}
+            <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mp3">
+            </audio>
+            {{else}}
+            No Preview Available
+            {{/if}}
+        </div>
+        <div>
+            {{this.name}}
+        </div>
+    </div>
+    {{/each}}
+</div>

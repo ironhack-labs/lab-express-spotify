@@ -1,0 +1,17 @@
+<div>
+    {{#each allAlbums}}
+    <div>
+        <div>
+            {{#if this.images.0.url}}
+            <img src="{{this.images.0.url}}">
+            {{else}}
+            <img src="{{this.name}}"/>
+            {{/if}}
+        </div>
+        <div>
+            {{this.name}}
+            <a href="/{{this.id}}">View Tracks</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
