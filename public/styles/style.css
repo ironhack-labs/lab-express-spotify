@@ -1,0 +1,90 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.bg{
+    /* background-color: rgb(22, 22, 22); */
+    
+}
+
+.selector{
+    margin: 50px 100px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.title{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+}
+
+.flex{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.margin{
+    margin: 20px;
+}
+
+.content{
+    width: 90%;
+    margin: 80px auto;
+}
+
+.center-vertical{
+    display: flex;
+    align-items: center;
+}
+
+.track-air{
+    margin: 0 15px;
+}
+
+.height-40{
+    height: 40px;
+}
+
+.p-box{
+    width: 100%;
+    height: 800px;
+    background-image: url("/images/spotify-background.jpeg");
+    background-position: 100%;
+    background-repeat: no-repeat;
+    background-position: center top;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.p-box form{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 60%);
+    width: 50%;
+    height: 30%;
+}
+
+.parameters{
+    margin: 10px 0;
+}
+
+.input{
+    width: 70%;
+}
+
+.bg-transp{
+    background-color: rgba(255, 255, 255, 20%);
+}
+
+.navbar:hover {
+    background-color: rgba(255, 255, 255, 30%);  
+}
+
+.bg-color{
+    background-color: rgb(34, 34, 39);
+}

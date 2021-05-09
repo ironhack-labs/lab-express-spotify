@@ -1,0 +1,24 @@
+<div class="selector content"></div>
+    {{#each artists}}
+    {{#if @first}}
+        <h1 class="title text-white">{{this.name}}</h1>
+    {{/if}}
+    {{/each}}
+    <div class="flex margin">
+        {{#each artists}}
+            <div class="margin">
+                <div class="card h-100 text-center text-white bg-dark card-dark border-none mb-3" style="width: 18rem;">
+                    {{#if this.images.1.url}}
+                    <img src="{{this.images.1.url}}" class="card-img-top" alt="...">
+                    {{else}}
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/No_Cover.jpg" class="card-img-top" alt="...">
+                    {{/if}}   
+                    <div class="card-body ">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
