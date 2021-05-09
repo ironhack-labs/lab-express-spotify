@@ -1,0 +1,13 @@
+{{#each albums}}
+<div class="card card-styling" style="width: 18rem;">
+  {{#if this.images}}
+  <img class="card-img-top" src="{{this.images.1.url}}" alt="Card image cap {{this.name}}">
+  {{else}}
+  <img class="card-img-top" src="./images/spotify-background.jpeg" alt="Card image cap {{this.name}}">
+  {{/if}}
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
+  </div>
+</div>
+{{/each}}
