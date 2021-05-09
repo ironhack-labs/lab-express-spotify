@@ -81,7 +81,7 @@
     background-color: rgba(255, 255, 255, 20%);
 }
 
-.navbar:hover {
+.bg-hover:hover {
     background-color: rgba(255, 255, 255, 30%);  
 }
 
