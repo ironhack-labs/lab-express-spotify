@@ -1,0 +1,21 @@
+<div class="selector content">
+
+    <div class="display-6 navbar bg-color text-white mb-2 p-4">
+        <p class="track-air">Title</p>
+        <p class="track-air">Listen</p>
+    </div>
+
+    {{#each tracks}}
+    <div class="bg-hover rounded navbar text-light bg-transp mb-2">
+        <p class="track-air font-weight-bold">{{this.name}}</p>
+        <figure class="track-air">
+            <audio
+                class="align-middle height-40"src="{{this.uri}}" controls="controls" type="audio/mp3">
+                    Your browser does not support the
+                    <code>audio</code> element.
+            </audio>
+        </figure>
+    </div>
+    {{/each}}
+
+</div> 

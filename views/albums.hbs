@@ -1,0 +1,31 @@
+<div class="selector content"></div>
+    <div>
+        {{#each albums}}
+        {{#if @first}}
+        {{!-- data.body.items[0].artists[0].name --}}
+        <div class="title">
+            <h1 class="text-light">Albums for: {{this.artists.0.name}}</h1>
+        </div>
+        {{/if}}
+        {{/each}}
+    </div>
+
+    <div class="flex margin">
+        {{#each albums}}
+        <div class="margin">
+            <div class="flex card h-100 text-center text-white bg-dark card-dark border-none mb-3" style="width: 28rem;">
+                {{#if this.images.0.url}}
+                <img src="{{this.images.0.url}}" class="card-img-top" alt="...">
+                {{else}}
+                <img src="https://upload.wikimedia.org/wikipedia/commons/b/b9/No_Cover.jpg"
+                    class="card-img-top" alt="...">
+                {{/if}}
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div> 
