@@ -1,0 +1,3 @@
+clientId: 369146cc3ba044a3beb5445ca1280ace
+
+clientSecret: af1520a8c0a64a3ca089319eae1b869e

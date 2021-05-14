@@ -1,0 +1,9 @@
+<h1 class="title-pages">Tracks</h1>
+
+<div class="container-track">
+<ul class="list-group list-group-flush">
+  {{#each body}}
+  <li class="list-group-item">{{this.track_number}}&nbsp;&nbsp;&nbsp;&nbsp;{{this.name}} <span><audio controls class="audio-stylying" src="{{this.preview_url}}">play</audio></span></li> 
+  {{/each}}
+</ul>
+</div>
