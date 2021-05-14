@@ -1,13 +1,13 @@
 <h1 class="title-pages">Artists</h1>
 
 <div class="container-cards">
-{{#each items}}
-<div class="card">
-  <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
-  <div class="card-body">
-    <h5 class="card-title">{{this.name}}</h5>    
-    <a href='/albums/:{{this.id}}' class="btn btn-primary">Albums</a>
-  </div>
-</div>
-{{/each}}
+  {{#each items}}
+    <div class="card">
+      <img class="card-img-top" src="{{this.images.0.url}}" alt="Card image cap">
+      <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>    
+        <a href='/albums/:{{this.id}}' class="btn btn-primary">Albums</a>
+      </div>
+    </div>
+  {{/each}}
 </div>
