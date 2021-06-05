@@ -1,18 +1,23 @@
+<div class="container m-5">
 
+  <h1 class="text-center">Search results for {{artists.0.name}}</h1>
 
-<h1>This is your choice</h1>
-
-<div class="row ">
-{{#each artists as |artist|}}
-  <div class="col-4">
-    <div class="card my-5"> 
-        <img src="{{artist.images.0.url}}" class="card-img-top" alt="...">
-        <div class="card-body">
-         <h5 class="card-title">{{artist.name}}</h5>
-         <a href="/albums/{{artist.id}}" class="btn btn-primary">View albums</a>
+  <div class="row">
+    {{#each artists as |artist|}}
+      <div class="col-lg-4 d-flex align-items-stretch text-center">
+        <div class="card my-3 bg-dark">
+          <img
+            src="{{artist.images.1.url}}"
+            class="card-img-top"
+            alt="{{artist.name}}"
+          />
+          <div class="card-body">
+            <h5 class="card-title text-light">{{artist.name}}</h5>
+            <a href="/albums/{{artist.id}}" class="btn btn-danger">View albums</a>
+          </div>
         </div>
-   </div>
-</div>
-{{/each}}
+      </div>
+    {{/each}}
 
+  </div>
 </div>

@@ -1,16 +1,19 @@
-<h1>Albums for: {{albums.0.artists.0.name}}</h1>
-<div class="row ">
-{{#each albums as |album|}}
+<div class="container m-5">
+  <h1>Albums for: {{albums.0.artists.0.name}}</h1>
+  <div class="row">
+    {{#each albums as |album|}}
 
-  <div class="col-4">
-    <div class="card my-5"> 
-        <img src="{{album.images.0.url}}" class="card-img-top" alt="...">
-        <div class="card-body">
-         <h5 class="card-title">{{album.name}}</h5>
-         <a href="/tracklist/{{album.id}}" class="btn btn-primary">View tracks</a>
+      <div class="col-lg-4 d-flex align-items-stretch text-center">
+        <div class="card my-3 bg-dark">
+          <img src="{{album.images.0.url}}" class="card-img-top" alt="..." />
+          <div class="card-body">
+            <h5 class="card-title text-light">{{album.name}}</h5>
+            <a href="/tracklist/{{album.id}}" class="btn btn-danger">View
+              tracks</a>
+          </div>
         </div>
-   </div>
-</div>
+      </div>
 
-{{/each}}
+    {{/each}}
+  </div>
 </div>
