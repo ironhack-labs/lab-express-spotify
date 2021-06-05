@@ -1,0 +1,18 @@
+
+
+<h1>This is your choice</h1>
+
+<div class="row ">
+{{#each artists as |artist|}}
+  <div class="col-4">
+    <div class="card my-5"> 
+        <img src="{{artist.images.0.url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+         <h5 class="card-title">{{artist.name}}</h5>
+         <a href="/albums/{{artist.id}}" class="btn btn-primary">View albums</a>
+        </div>
+   </div>
+</div>
+{{/each}}
+
+</div>
