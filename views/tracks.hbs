@@ -1,0 +1,20 @@
+<div class="container row row-cols-1 row-cols-md-3">
+  <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Title</th>
+        <th scope="col">Listen</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tracks as |track|}}
+        {{#with track}}
+          <tr>
+            <td>{{name}}</td>
+            <td><audio src="{{preview_url}}" controls></audio></td>
+          </tr>
+        {{/with}}
+      {{/each}}
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,13 @@
+<div class="row row-cols-1 row-cols-md-3">
+  {{#each albums as |album|}}
+    {{#with album}}
+      <div class="card mb-2 albums border-0">
+        <img src="{{ images.0.url }}" class="card-img-top" alt="{{ name }}">
+        <div class="card-body">
+          <h5>{{ name }}</h5>
+          <a href="/tracks/{{ id }}">View Tracks</a>
+        </div>
+      </div>
+    {{/with}}
+  {{/each}}
+</div>
