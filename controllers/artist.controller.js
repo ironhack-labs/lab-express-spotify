@@ -49,9 +49,10 @@ module.exports.tracklist = (req, res, next) => {
     spotifyApi.getAlbumTracks(albumId, { limit : 5, offset : 1 })
     
     .then(tracks => {
-        //return res.json(tracks.body);
+//return res.json(tracks.body);
+console.log(tracks.body.items)
         res.render('artist/tracklist', {
-           tracklist: tracks.body 
+           tracklist: tracks.body.items 
         })
     })
     .catch(next)

@@ -1,11 +1,17 @@
-<div class="card" style="width: 18rem;">
+<div class="card" >
   <div class="card-header">
-    Featured
+    <strong>{{tracklist.0.name}}</strong> by <strong>{{tracklist.0.artists.0.name}}</strong>
   </div>
   <ul class="list-group list-group-flush">
     {{#each tracklist as |track|}}
 
-     <li class="list-group-item">{{track.name}}</li>
+     <li class="list-group-item">
+       {{track.name}}
+       <audio  controls
+        src="{{preview_url}}">
+          
+        </audio>
+    </li>
    
      {{/each}}
 
