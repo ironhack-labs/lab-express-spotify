@@ -1,21 +1,7 @@
-var SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyApi = require('../config/spotify.config')
 
-const SpotifyApi = new SpotifyWebApi({
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
-});
-
-// Retrieve an access token
-SpotifyApi
-  .clientCredentialsGrant()
-  .then(data => SpotifyApi.setAccessToken(data.body['access_token']))
-  .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
-
-module.exports.home = (req,res,next) => {
-    res.render('common/home')
-}
 
 
 
