@@ -1,0 +1,8 @@
+
+{{#each data as |track|}}
+    <ol class="list-group list-group-numbered">
+  <li class="list-group-item"><audio controls src="{{track.item.preview_url}}">{{track.item.name}}</audio></li>
+  
+</ol>
+    
+{{/each}}

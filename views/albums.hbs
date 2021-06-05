@@ -1,0 +1,14 @@
+<h1>Albums</h1>
+
+{{#each data as |album|}}
+    <div class="row beer-detail">
+  <div class="col-12 col-md-2 text-center">
+    <img class="img-fluid" src="{{album.images.0.url }}" alt="{{ album.name }}" />
+  </div>
+  <div class="col-12 col-md-10">
+    <h1 class="mb-2">{{ album.name }}</h1>
+  </div>
+  <button> <a href="/tracks/{{album.id}}">View tracks</a> </button>
+</div>
+    
+{{/each}}
