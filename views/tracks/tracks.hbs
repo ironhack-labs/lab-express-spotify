@@ -1,1 +1,16 @@
-dd
+testing tracksss
+
+{{#each tracks as |track|}}
+   <h1>{{track.name}}, </h1>
+   <p>Track: {{track.track_number}}</p>
+
+   <figure>
+    <figcaption><p>Listen {{track.name}}:</p></figcaption>
+    <audio
+        controls
+        src="{{track.preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+{{/each}}

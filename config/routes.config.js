@@ -12,5 +12,5 @@ router.get('/artist-search', artists.doSearch)
 router.get('/albums',albums.albums)
 router.get('/albums/:id', albums.getAlbums)
 router.get('/tracks', tracks.tracks)
-router.get('/tracks/:albumid')
+router.get('/tracks/:id', tracks.getTracks)
 module.exports = router;
