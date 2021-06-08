@@ -1,8 +1,12 @@
-
 {{#each data as |track|}}
-    <ol class="list-group list-group-numbered">
-  <li class="list-group-item"><audio controls src="{{track.item.preview_url}}">{{track.item.name}}</audio></li>
-  
-</ol>
-    
+  <ul class="list-group">
+    <li class="list-group-item">
+      <h5>{{track.name}}</h5>
+      <audio
+        controls
+        src="{{track.preview_url}}"
+      >
+      </audio>
+    </li>
+  </ul>
 {{/each}}
