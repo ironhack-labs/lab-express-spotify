@@ -1,28 +1,21 @@
 <div class="container m-5">
   <h1>Here's your playlist, enjoy!</h1>
   <div class="card">
+
     <div class="card-header">
-      <strong>{{tracklist.0.name}}</strong>
-      by
-      <strong>{{tracklist.0.artists.0.name}}</strong>
+      <strong>{{tracklist.0.name}}</strong> by <strong>{{tracklist.0.artists.0.name}}</strong>
     </div>
+
     <ul class="list-group list-group-flush">
       {{#each tracklist as |track|}}
-
-        <li class="list-group-item">
-          <div class="d-flex justify-content-between">
-            
-              {{track.name}}
-            
-            
-              <audio controls src="{{preview_url}}">
-              </audio>
-            
+      <li class="list-group-item">
+          <div class="d-flex justify-content-between align-items-center align-content-start">            
+              <p>{{track.name}}</p>         
+              <audio controls src="{{preview_url}}"></audio>            
           </div>
-        </li>
-
+      </li>
       {{/each}}
-
     </ul>
+
   </div>
 </div>

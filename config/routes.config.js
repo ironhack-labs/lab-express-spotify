@@ -12,6 +12,4 @@ router.get('/albums/:artistId', artist.album )
 
 router.get('/tracklist/:albumId', artist.tracklist)
 
-
-
 module.exports = router
