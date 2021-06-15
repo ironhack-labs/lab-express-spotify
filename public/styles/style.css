@@ -9,6 +9,11 @@
     height:100vh;
     width: 100vw;
     background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
 }
 
 .search-home{
@@ -16,5 +21,8 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding-top: 50vh;
+    width: 50vw;
+    padding: 50px;
+    background-color:rgba(255,255,255, 0.5);
 }
+

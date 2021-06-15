@@ -1,0 +1,15 @@
+<div>
+  <h2 class="text-center py-2 mb-3 text-white" style="background-color: grey;">
+    TRACKS
+  </h2>
+  <div class="d-flex flex-column mt-5">
+    {{#each tracks}}
+      <div
+        class="d-flex flex-row justify-content-between mx-5 my-2 align-items-center"
+      >
+        <h5>{{name}}</h5>
+        <audio controls src={{preview_url}}></audio>
+      </div>
+    {{/each}}
+  </div>
+</div>

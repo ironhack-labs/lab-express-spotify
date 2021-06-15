@@ -40,20 +40,21 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(search)
     .then((data) => {
-      console.log("The received data from the API: ", data.body);
+      //console.log("The received data from the API: ", data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
 
       const artists = data.body.artists.items;
-      const artistsImage = [];
+      const viewAlbums = true;
 
-      // artists.forEach((artist) => {
-      //   for (let i = 0; i < artist.images.length; i++) {
-      //     console.log(artist.images[i].url);
-      //     artistsImage.push(artist.images[i].url)
-      //   }
-      // });
-
-      res.render("artist-search-results", { artists, artistsImage });
+      const artistData = {
+        info: artists.map((artist) => {
+          return {
+            ...artist,
+            viewAlbums,
+          };
+        }),
+      };
+      return res.render("artist-search-results", artistData);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -62,13 +63,38 @@ app.get("/artist-search", (req, res, next) => {
 
 app.get("/albums/:artistId", (req, res, next) => {
   // .getArtistAlbums() code goes here
-  console.log(req.params)
-  const { artistId } = req.params.id;
+  const { artistId } = req.params;
+  const viewTracks = true;
   spotifyApi
     .getArtistAlbums(artistId)
     .then((data) => {
-      console.log("The received data from the API: ", data.body);
-      res.render("albums",{})
+      //console.log("The received data from the API: ", data.body);
+      const albums = data.body.items;
+      const albumsData = {
+        info: albums.map((album) => {
+          return {
+            ...album,
+            viewTracks
+          };
+        }),
+      };
+      console.log(data.body)
+      res.render("albums", albumsData);
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+app.get("/albums/:albumId/tracks", (req, res, next) => {
+  const { albumId } = req.params;
+
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      //console.log("The received data from the API: ", data.body);
+      const tracks = data.body.items;
+      res.render("tracks", { tracks });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
