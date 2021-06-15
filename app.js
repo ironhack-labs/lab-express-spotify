@@ -5,6 +5,7 @@ const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
+const port = process.env.PORT || 3000;
 
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
@@ -27,19 +28,57 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
- 
-
+//Iteracion 3 step 2
 app.get("/artist-search", (req, res) => {
-    spotifyApi
-  .searchArtists("spotify:local:{artist}")
+  spotifyApi.searchArtists(`${req.query.artist}`)
   .then(data => {
-    console.log('The received data from the API: ', data.body);
-    res.render("artist-search-results");
+    console.log('The received data from the API: ', data.body.artists);
+    res.render("artist-search-results", {
+      items: data.body.artists.items.map((artist) => {
+        if(artist.images.length === 0) {
+          artist.image_url = 'https://cdn.browshot.com/static/images/not-found.png'
+        } else {
+          artist.image_url = artist.images[0].url
+        }
+        return artist
+      })
+    });
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
-    
-  });
+});
 
-app.listen(3000, () =>
+app.get("/albums/:artistId", (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.artistId)
+  .then(data => {
+    console.log('Artist albums', data.body);
+    res.render("albums", {
+      items: data.body.items.map((album) => {
+        if(album.images.length === 0) {
+          album.image_url = 'https://cdn.browshot.com/static/images/not-found.png'
+        } else {
+          album.image_url = album.images[0].url
+        }
+        return album
+      })
+    });
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+});
+
+ app.get("/tracks/:albumId", (req, res) => {
+
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(data => {
+    console.log(data.body);
+    res.render("tracks", {
+      items: data.body.items
+    })
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+
+});
+
+
+app.listen(port, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
