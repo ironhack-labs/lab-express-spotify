@@ -1,14 +1,27 @@
 <div>
-  <h2 class="text-center py-2 mb-3 text-white" style="background-color: grey;">
-    TRACKS
-  </h2>
-  <div class="d-flex flex-column mt-5">
+  <div
+    class="d-flex flex-row align-items-center py-2 mb-1 align-items-center justify-content-between"
+    style="background-color: rgb(73, 73, 73);"
+  >
+    <h4
+      class="text-center text-white" style="margin-left: 12%"
+    >
+      Title
+    </h4>
+    <h4
+      class="text-center text-white" style="margin-right:22%"
+    >
+      Listen
+    </h4>
+  </div>
+  <div class="d-flex flex-column">
     {{#each tracks}}
       <div
-        class="d-flex flex-row justify-content-between mx-5 my-2 align-items-center"
+        class="d-flex flex-row my-1 py-2 pr-2 align-items-center justify-content-between"
+        style="margin-left: 10%;margin-right:10%; background-color: rgb(243, 243, 243);"
       >
-        <h5>{{name}}</h5>
-        <audio controls src={{preview_url}}></audio>
+        <h5 class="col-8">{{name}}</h5>
+        <audio controls src={{preview_url}} class="col-4"></audio>
       </div>
     {{/each}}
   </div>

@@ -78,7 +78,6 @@ app.get("/albums/:artistId", (req, res, next) => {
           };
         }),
       };
-      console.log(data.body)
       res.render("albums", albumsData);
     })
     .catch((err) =>
