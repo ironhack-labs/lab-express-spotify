@@ -1,0 +1,13 @@
+<div>
+    {{#each resultOfSearch}}
+    {{#with this}}
+    <div>
+       <img src="{{images.[0].url}}" alt="Result image">
+    </div>
+    <div>
+        <h3>{{name}}</h3>
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/with}}
+    {{/each}}
+</div>
