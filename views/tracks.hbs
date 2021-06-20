@@ -1,0 +1,11 @@
+<h1>Album tracks:</h1>
+<div class="d-flex flex-column">
+    {{#each track}}
+    {{#with this}}
+      <div class="d-flex flex-row justify-content-between">
+        <h5 class="col-8">{{name}}</h5>
+        <audio controls src={{preview_url}} class="col-4"></audio>
+      </div>
+    {{/with}}
+    {{/each}}
+  </div>

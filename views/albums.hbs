@@ -1,11 +1,11 @@
-<h1>Artist info</h1>
+<h1>Artist Albums</h1>
 {{#each album}}
 {{#with this}}
  <div class="card" style="width: 18rem;">
   <img src="{{images.[0].url}}" class="card-img-top" alt="artist-img">
   <div class="card-body">
     <h5 class="card-title">{{name}}</h5>
-    <a href="" class="btn btn-primary">View Traks</a>
+    <a href="/albums/{{id}}/tracks" class="btn btn-primary">View Tracks</a>
   </div>
 </div>
 {{/with}}
