@@ -1,0 +1,17 @@
+<div>
+    {{#each albums}}
+    <div>
+            <p>{{this.name}}</p>
+
+            <div>
+                {{#if this.images}}
+                    <img src="{{this.images.0.url}}" alt="{{this.name}}">
+                {{else}}
+                    <img src="https://loremflickr.com/640/360" alt="{{this.name}}">
+                {{/if}}
+            </div>
+
+            <a href="/tracks/{{this.id}}">View Tracks</a> 
+    </div>
+    {{/each}}
+</div>
