@@ -1,3 +1,28 @@
 .mainPageBackground {
-    background-image: url("/images/spotify-background.jpeg")
-}
+    background-image: url("/images/spotify-background.jpeg");
+    background-position: center;
+    background-size: cover;
+    padding: 50px 50px;
+  }
+  .search-but {
+    text-align: center;
+  }
+  .white-bkg {
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 70px;
+    margin: 400px 600px;
+  }
+  .input {
+    font-size: 18px;
+    padding: 5px 60px;
+    border-style: none;
+    text-align: center;
+  }
+  .button {
+    background-color: tomato;
+    margin-top: 15px;
+    font-size: 18px;
+    color: white;
+    border-style: none;
+    padding: 5px 20px;
+  }
