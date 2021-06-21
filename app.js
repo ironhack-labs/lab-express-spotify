@@ -30,6 +30,12 @@ app.get("/", (req, res, next) => {
     console.log("ENTRO")
     res.render("index")
 });
+//El resultado del value de la query string (data) lo almacenamos en la variable artists
+//que tiene los values: artist > items
+//Bajamos hasta el nivel items que contiene un array de artistas y 
+//e iteramos por él con el metodo map por cada artista
+//almacenando el contenido en un objeto llamado artistInfo con key info y value informacion de cada artista
+//Esta key info es la que le pasaremos a la vista artist-search-results.hbs
 app.get("/artist-search", (req, res, next) => {
     const { artist } = req.query;
     console.log(artist)
@@ -52,5 +58,34 @@ app.get("/artist-search", (req, res, next) => {
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
 })
+//Pedirle a la BD del package Spotify que nos de los albumes
+//se lo decimos pasandole el parametro id al metodo de la API getArtistAlbums
+app.get('/albums/:artistId', (req, res, next) => {
+    const artistId= req.params.artistId
+    spotifyApi.getArtistAlbums(artistId).then(
+        function (data) {
+            const albums = data.body.items;
+            const albumsInfo = {
+                info: albums.map((album) => {
+                    return {
+                        ...album
+                    }
+                })
+            }
+            console.log('Artist albums', albumsInfo);
+            return new Promise((resolve) => {
+                resolve(albumsInfo)
+            })
+                .then(
+                    res.render("albums", albumsInfo)
+                )
+        },
+        function (err) {
+            console.error(err);
+        }
+    );
+})
+
+
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

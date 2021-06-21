@@ -15,8 +15,14 @@
         <div class="card-body">
             <h5 class="card-title  d-flex flex-column bd-highlight mb-3 align-items-center">
                 {{this.name}}
-                <a class="align-self-center" style="padding-top: 20px;" href="/albums/{{this.id}}"><button
-                        class="btn btn-danger">See Albums</button></a>
+                {{#if this.album_type}}
+                <a class="align-self-center" style="padding-top: 20px;" href="/tracks/{{this.id}}"><button class="btn btn-danger">See
+                       Tracks</button></a>
+                {{else}}
+                <a class="align-self-center" style="padding-top: 20px;" href="/albums/{{this.id}}"><button class="btn btn-danger">See
+                        Albums</button></a>
+                {{/if}}
+              
             </h5>
         </div>
     </div>
