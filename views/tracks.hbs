@@ -1,0 +1,29 @@
+<!-- Iteracion 5-->
+<div class="table-responsive">
+    <table class="table align-middle">
+    <thead>
+        <tr>
+        <th class="text-left" scope="col">Title</th>
+        <th class="text-center" scope="col">Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each items as | item |}}
+        {{#with item}}
+        <tr class="table-light">
+        <td>Listen to {{name}}</td>
+        <td> 
+            <audio
+                class="d-flex ms-auto"
+                controls
+                src="{{preview_url}}">
+                    Your browser does not support the
+                    <code>audio</code> element.
+                </audio>
+            </td>
+        </tr>
+        {{/with}}
+        {{/each}}
+    </tbody>
+    </table>
+</div>

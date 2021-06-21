@@ -1,0 +1,73 @@
+:root {
+  --color-btn-danger: #fa6863;
+  --color-gray: #4a4a4a;
+  --color-light-gray: #bbb;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+body {
+	background: url('/images/spotify-background.jpeg'); 
+  background-size: cover;
+	height: 100%;
+  background-position: center;
+}
+table thead {
+  background-color: var(--color-gray);
+  color: var(--color-light-gray)
+}
+
+table thead tr {
+  height: 70px;
+  vertical-align: middle;
+}
+
+#search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  background-color: rgba(250, 250, 250, 0.6);
+  width: 80%;
+  height: 310px;
+}
+
+#search-form input {
+  padding-left: 10px;
+  border-radius: 5px;
+  font-weight: bold;
+  font-size: 18px;
+  height: 50px;
+  width: 90%;
+}
+
+.btn-danger {
+  background-color: #fa6863;
+}
+
+#search-form button {
+  color: white;
+  font-weight: bold;
+  font-size: 17px;
+  margin-top: 20px;
+  border: none;
+  height: 45px;
+}
+
+.card {
+  margin-bottom: 20px;
+}
+
+.card img {
+  height: 200px;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 600px) {
+  #search-form {
+    width: 100%;
+  }
+}
