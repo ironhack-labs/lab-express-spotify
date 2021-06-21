@@ -11,6 +11,7 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
+
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
@@ -24,12 +25,12 @@ spotifyApi
     console.log("Something went wrong when retrieving an access token", error)
   );
 
-app.get("/", (req, res) => {
+app.get("/", (req, res, next) => {
   res.render("index");
 });
 
 //Iteracion 3 step 2
-app.get("/artist-search", (req, res) => {
+app.get("/artist-search", (req, res, next) => {
   spotifyApi.searchArtists(`${req.query.artist}`)
   .then(data => {
     console.log('The received data from the API: ', data.body);

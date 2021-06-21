@@ -13,6 +13,7 @@ body {
 	background: url('/images/spotify-background.jpeg'); 
   background-size: cover;
 	height: 100%;
+  background-position: center;
 }
 table thead {
   background-color: var(--color-gray);
