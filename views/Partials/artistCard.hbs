@@ -1,0 +1,23 @@
+{{!-- <div class="card" style="width: 18rem;">
+    <img src="" class="card-img-top" alt="...">
+    <div class="card-body">
+        <h5 class="card-title">{{this.name}}</h5>
+        <p class="card-text">some quick example text to build on the card title and make up the bulk of the card's
+            content.</p>
+        <a href="#" class="btn btn-primary">go somewhere</a>
+    </div>
+</div> --}}
+<div class="col-md-4" style="margin-bottom: 20px;">
+    <div class="card h-100">
+        <img class="card-img-top" style="height: 400px; ;" src={{#if this.images.[0]}} {{this.images.[0].url}}
+            {{else}} "https://i1.wp.com/alkiansgroup.com/wp-content/uploads/2018/11/male-placeholder-image.jpg?fit=1000%2C1000&ssl=1"
+            {{/if}} alt="{{this.name}} {{this.lastName}}" />
+        <div class="card-body">
+            <h5 class="card-title  d-flex flex-column bd-highlight mb-3 align-items-center">
+                {{this.name}}
+                <a class="align-self-center" style="padding-top: 20px;" href="/albums/{{this.id}}"><button
+                        class="btn btn-danger">See Albums</button></a>
+            </h5>
+        </div>
+    </div>
+</div>

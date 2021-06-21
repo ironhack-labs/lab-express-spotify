@@ -12,7 +12,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname + '/views'));
 app.use(express.static(path.join(__dirname + '/public')));
-
+hbs.registerPartials(__dirname+'/views/Partials')
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -36,9 +36,18 @@ app.get("/artist-search", (req, res, next) => {
     spotifyApi
         .searchArtists(artist)
         .then(data => {
-            console.log('The received data from the API: ', data.body);
+            const artists = data.body.artists.items;
+            const artistsInfo = {
+                info: artists.map((artist) => {
+                    return {
+                        ...artist
+                    }
+                })
+            }
+
+            console.log('The received data from the API: ', data.body.artists.items);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render("index", data)
+            res.render("artist-search-results", artistsInfo)
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
