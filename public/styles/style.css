@@ -5,10 +5,11 @@
 }
 
 .home-page{
-    background-image:url('../images/spotify-background.jpeg');
+    background-image:url('/images/spotify-background.jpeg');
     height:100vh;
     width: 100vw;
-    background-size: cover;
+    background-size: cover; 
+    background-position:center;
     position: relative;
     display: flex;
     justify-content: center;
