@@ -1,0 +1,19 @@
+.tracks-header {
+    background-color: #22272e;
+    height: 100px;
+    color: white
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+.full-height {
+    height: 100%;
+}
+
+li.track {
+    margin: 5px 0;
+    padding: 10px;
+    background-color: #dee0e2;
+}

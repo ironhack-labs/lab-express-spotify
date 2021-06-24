@@ -1,0 +1,17 @@
+
+
+{{!-- name and the cover of each album and add a button/link to see the tracks (next iteration) --}}
+
+<ul>
+{{#each items}}
+    <li>
+        <h3>{{this.name}}</h3>
+        {{#each this.images}}
+            {{#if @first}}
+                <img src={{this.url}} alt="album cover">
+            {{/if}}
+        {{/each}}
+        <a href="/tracks/{{this.id}}">View tracks</a>
+    </li>
+{{/each}}
+</ul>
