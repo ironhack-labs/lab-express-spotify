@@ -1,0 +1,12 @@
+<h1>rendering</h1>
+
+{{#each artists}}
+  <p>{{name}}</p>
+
+  {{#each images}}
+    <img src='{{url}}' alt='' />
+  {{/each}}
+
+  <a href='/albums/{{id}}'>View Albums</a>
+
+{{/each}}
