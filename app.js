@@ -39,14 +39,10 @@ app.get('/artist-search', async (req, res) => {
     const artists = req.query.artists;
     const results = await spotifyWebApi.searchArtists(artists);
     const artistsResult = results.body.artists.items;
+    
     console.log(artistsResult[0].images[0]);
     
-
    res.render("artists-search-results", { artistsResult } );
-    // let results = await spotifyWebApi.searchArtists(/*query string*/);
-    // console.log(results);
-
-
 });
 
 
@@ -57,17 +53,16 @@ app.get("/albums/:id", async (req, res) =>{
 
   res.render("albums", {allAlbums} );
 
-
-  console.log(chosenAlbums)
-  
-  
-})
+   console.log(chosenAlbums)
+});
 
 
 
-// app.get('/artists-search-results', (req, res) => {
-//   const artistsResults = spotifyWebApi.search(artists);
-//   console.log(artistsResults);
-// })
+app.get('/tracks/:albumId', async (req, res) => {
+  const theresult = await spotifyWebApi.getAlbumTracks(req.params.albumId);
+  const tracks = theresult.body.items;
+  res.render("tracks", { tracks });
+
+});
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
