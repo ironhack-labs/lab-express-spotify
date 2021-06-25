@@ -1,0 +1,14 @@
+
+{{#each artistList}} {{!=== in handlebar we can only #each an array, artistList is the key of an object which gives a value of an array ===}}
+
+{{!=== this. is referring to a single element or piece of data, .this is JS is for accessing an object, here it is for an array.
+Now it is not necessary to use it but it used to exist===}}
+
+<img src="{{this.images.[0].url}}" alt="Image">
+<h2>{{this.name}}</h2>
+<p>{{this.description}}</p>
+
+<a href="/albums/{{artistId}}"><p>View Albums</p></a>
+
+
+{{/each }}
