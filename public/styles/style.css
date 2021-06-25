@@ -1,0 +1,57 @@
+.homeImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 60%;
+    height: auto;
+    padding: 0 10%;
+}
+
+body {
+    background-color: lightskyblue;
+}
+
+.homeForm {
+    height: 10em;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: auto;
+    margin-bottom: auto;
+    width: 30%;
+    height: auto;
+}
+
+
+
+#button {
+    background-color: maroon;
+}
+
+.artistInfo {
+    color: white;
+    font-size: 30px;
+    margin-left: 5%;
+    font-weight: bold;
+}
+
+.artistImage {
+    width: 200px;
+    height: auto;
+    float: left;
+    margin-left: 5%;
+}
+
+.track {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    width: 20%;
+    height: auto;
+    font-size: large;
+    font-weight: bold;
+}
+
