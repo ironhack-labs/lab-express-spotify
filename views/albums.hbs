@@ -1,12 +1,12 @@
 {{!-- const name = data.body.artists.items[0].name; --}}
 
 {{#if data}}
-    <div class="artists">
+    <div class="albums">
         {{#each data}}
-            <div id="artist">
-                <img id="bandImage" src="{{this.images.0.url}}" alt="{{this.name}} image">
+            <div id="album">
+                <img id="albumImage" src="{{this.images.0.url}}" alt="{{this.name}} image">
                 <p><span>{{this.name}}</span></p>
-                <a href="/albums/{{this.id}}">View Albums</a>
+                <a href="/tracks/{{this.id}}">View Tracks</a>
 
             </div>
         {{/each}}
