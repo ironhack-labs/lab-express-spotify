@@ -1,4 +1,5 @@
 # Dependency directory
+# Does not push credentials to github
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
 .env
