@@ -35,7 +35,7 @@ res.render('index');
 
 //3.1
 app.get('/artist-search', async (req, res) => {
-    const artistName = req.query.artistName;
+    const artistName = req.query.artistName; //needs a form 
     let results = await spotifyWebAPI.searchArtists(artistName);
     res.render('artist-search-results', {artists: results.body.artists.items});
 });
@@ -43,7 +43,7 @@ app.get('/artist-search', async (req, res) => {
 
 app.get('/albums/:artistId', async (req, res, next) => {
 
-    let albumResults = await spotifyWebAPI.getArtistAlbums(req.params.artistId);
+    let albumResults = await spotifyWebAPI.getArtistAlbums(req.params.artistId); //params - hoevering on a link
 
     console.log(albumResults.body.items);
     

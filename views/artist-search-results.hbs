@@ -1,12 +1,19 @@
 <h1>Artists</h1>
-{{#each artists}}
-<img src="{{images.0.url}}" />
+<div id= "artist-box" class="row">
+    {{#each artists}}
+    <div class="col-md-4 grey-box">
+
+<img class="artist-box-img" src="{{images.0.url}}" />
 <h4>{{name}}</h4>
 
 <a href="/albums/{{id}}">View albums</a>
 <br>
 {{!-- <button type="submit">Search for an Artist</button> --}}
+
+</div>
 {{/each}}
+</div>
+
 
 
 
