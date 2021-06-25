@@ -1,0 +1,12 @@
+<h1>Albums</h1>
+{{#each albums}}
+
+<img src="{{images.0.url}}" />
+<h4>{{name}}</h4>
+
+<a href="/tracks/{{id}}">View tracks</a>
+<br>
+
+<br>
+{{!-- <button type="submit">Search for an Artist</button> --}}
+{{/each}}
