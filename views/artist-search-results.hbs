@@ -1,0 +1,21 @@
+
+{{#each artistList}}
+
+{{!-- <a href="/artist/{{name}}">
+	<img src="{{images[0]}}" alt="image of {{name}}">
+</a> --}}
+
+<h2>
+	Name: {{name}}
+</h2>
+<p>
+	Popularity: {{popularity}}
+    Genre(s): {{genres}}
+    Followers: {{followers.total}}
+
+</p>
+
+ {{!-- <a>
+    <img src="{{images[0]}}" alt="Image of {{name}}">
+    </a> --}}
+    {{/each}}
