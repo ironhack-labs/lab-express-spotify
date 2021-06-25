@@ -1,12 +1,20 @@
-<h1>Albums</h1>
-{{#each albums}}
+<div id="artist-box" class="row">
+    {{#each albums}}
+    <div class="col-md-4 card">
 
-<img src="{{images.0.url}}" />
-<h4>{{name}}</h4>
+        <img class="card-img-top" src="{{images.0.url}}" alt={{name}} />
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a class="card-text" href="/tracks/{{id}}">View tracks</a>
+        </div>
 
-<a href="/tracks/{{id}}">View tracks</a>
-<br>
 
-<br>
-{{!-- <button type="submit">Search for an Artist</button> --}}
-{{/each}}
+
+        {{!-- <button type="submit">Search for an Artist</button> --}}
+
+    </div>
+    {{/each}}
+</div>
+
+
+

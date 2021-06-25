@@ -1,17 +1,19 @@
-<h1>Tracks</h1>
+<div id="header-table"><h4>Title</h4><h4>Listen</h4></div>
+<ul>
 {{#each tracks}}
-
-
-<h4>{{name}}</h4>
+<li><h6>{{name}}</h6>
 <audio controls>
     <source src="{{preview_url}}" type="audio/mpeg">
-    
-</audio>
+
+</audio></li>
 
 
-
-
-
-<br>
 {{!-- <button type="submit">Search for an Artist</button> --}}
 {{/each}}
+
+
+
+</ul>>
+
+
+

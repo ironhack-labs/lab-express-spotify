@@ -31,7 +31,7 @@ body{
 }
 
 #index-input{
-    width: 250px;
+    width: 400px;
     background-color: white;
     border: 0.1px solid rgb(196, 196, 196);
     padding: 5px;
@@ -40,29 +40,73 @@ body{
 
 #index-button{
     background-color: rgb(255, 93, 93);
-    width: 150px;
+    width: 200px;
     border: none;
     color: white;
     padding: 5px;
-    margin: 20px 50px;
+    margin: 20px 100px;
     
 }
 
-
-#artist-box {
-margin: 0 20px;
-margin: 1px solid black;
+#artist-box{
+    display: flex;
+    justify-content: space-evenly;
 
 }
 
+.card{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    border: 1px solid black;
+    width: 400px;
+    margin: 20px 20px;
+}
 
-#grey-box{
+.card-body{
     background-color: grey;
+    width: 400px;
+}
+
+.card-title{
+    color: white;
+    
+    text-align: center;
+    margin: 10px 0px;
+}
+
+.card-text{
+background-color: rgb(255, 93, 93);
+width: 400px;
+border: none;
+color: white;
+padding: 5px;
+margin: 40px 130px;
+text-decoration: none;
+
+}
+
+.card-img-top{
+    width: 400px;
+    height: 450px;
 }
 
 
-.artist-box-img {
-    object-fit: contain;
-    width: 200px;
-    
+#header-table{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin: 5px 0px;
+   
+}
+
+li{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    background-color: rgb(237, 237, 237);
+    margin: 5px 0px;
+   
 }
