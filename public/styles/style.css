@@ -5,3 +5,7 @@
 #albumImage {
     height: 300px;
 }
+
+#track {
+    display: flex;
+}

@@ -46,10 +46,19 @@ app.get('/artist-search', (req, res) => {
 app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi
   .getArtistAlbums(req.params.artistId)
-  //.searchArtists('sarcófago')
   .then(data => {
     console.log('Artist albums: ', data.body);
     res.render('albums', { data: data.body.items, title: 'Artist Albums' });
+  })
+  .catch(err => console.log('Something went wrong: ', err));
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+    spotifyApi
+  .getAlbumTracks(req.params.albumId)
+  .then(data => {
+    console.log('Album tracks: ', data.body);
+    res.render('tracks', { data: data.body.items, title: 'Album tracks' });
   })
   .catch(err => console.log('Something went wrong: ', err));
 });
