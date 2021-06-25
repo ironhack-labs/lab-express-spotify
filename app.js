@@ -15,7 +15,7 @@ app.use(express.static(__dirname + '/public'));
 // setting the spotify-api goes here:
 
 const id = process.env.SECRET;
-console.log(id)
+// console.log(id)
 
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -41,11 +41,13 @@ app.get('/artist-search', (req, res) => {
     spotifyApi
   .searchArtists(req.query.artistName)
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items)
-    
-})
+    console.log('The received data from the API: ', data.body.artists.items);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     // the search results that match this name
+    // res.render(name of hbs file to show, {whatever data you need to pass to the HBS file to display to the user - 
+    // you decide on a key: info to pass})
+    res.render('artist-search-results', {artistList: data.body.artists.items})
+})
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
