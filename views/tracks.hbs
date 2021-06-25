@@ -1,0 +1,21 @@
+<div class="row header">
+    <div class="col-md-6 title">
+        <h1>Title</h1>
+    </div>
+    <div class="col-md-6 listen">
+        <h1>Listen</h1>
+    </div>
+</div>
+
+<div class="row">
+    {{#each tracks}}
+    <div class="col-md-6">
+        {{name}}
+    </div>
+    <div class="col-md-6 d-flex justify-content-end">
+        <audio controls>
+            <source src="{{preview_url}}" type="audio/wav">
+        </audio>
+    </div>
+    {{/each}}
+</div>
