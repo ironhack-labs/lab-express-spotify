@@ -1,0 +1,85 @@
+
+/* Index page */
+#index{
+    background-image: url("/images/spotify-background.jpeg");
+    height: 800px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+#searchBox {
+    display: flex;
+    background-color: rgba(255, 248, 248, 0.5);
+    height: 250px;
+    width: 750px;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#searchBox input {
+    width: 500px;
+    height: 40px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+#searchBox button {
+    background-color: #f05252;
+    color: white;
+    height: 40px;
+    width: 170px;
+    border-top: 10px;
+    border: none;
+}
+
+/* artist-search-results */
+.search {
+    margin: 20px 100px;
+}
+
+.card {
+    margin: 20px 30px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    background-color: #41464b;
+    color: white;
+}
+
+.card img {
+  height: 320px;
+  object-fit: cover;
+}
+
+.card a {
+    background-color: #f05252;
+    
+}
+
+/* albums page */
+
+#albums-h1{
+    text-align: center;
+    margin-top: 10px;
+}
+
+.card-album {
+    margin: 20px 0px;
+    border-radius: 0;
+    border: none;
+}
+
+.card-album img {
+    height: 415px;
+}
+
+/* tracks page */
+
+.nav{
+
+}
