@@ -1,0 +1,15 @@
+{{!-- const name = data.body.artists.items[0].name; --}}
+
+{{#if data}}
+    <div class="artists">
+        {{#each data}}
+            <div id="artist">
+                <img id="bandImage" src="{{this.images.0.url}}" alt="{{this.name}} image">
+                <p><span>{{this.name}}</span></p>
+                <a href="{{this.href}}">View Albums</a>
+
+            </div>
+        {{/each}}
+        {{!-- {{> beerPartial this}} --}}            
+    </div>
+{{/if}}
