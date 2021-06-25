@@ -1,0 +1,16 @@
+{{!--#each artist}}
+
+<p>{{data.name}}</p>
+<p>{{data.images}}</p>
+
+<!--a href="/albums/:artistId">View Albums"></a-->
+
+
+
+{{/each--}}
+
+{{#each data}}
+<p class="artistInfo">{{name}}</p>
+<img src="{{images.[0].url}}" alt="{{name}}" class="artistImage">
+<a href="/albums/{{id}}" class="albumButton">View Albums</a>
+{{/each}}
