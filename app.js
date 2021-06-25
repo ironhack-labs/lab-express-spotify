@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const { response } = require('express');
 const express = require('express');
 const hbs = require('hbs');
 
@@ -25,15 +26,30 @@ spotifyWebApi
     console.log('Something went wrong when retrieving an access token', error)
 );
 
-app.get("/index", (req, res) => {
-    res.render('index');
-})
+app.get("/", (req, res) => {                                       
+    res.render("index");
+})   
 
 //param method
 app.get("/artist-search", async (req, res) => {
-    let results = await spotifyWebApi.searchArtists(/*query string*/);
-    console.log(results);
+    const {artist} = req.query; 
+    console.log(req.query);
+    res.render("artist-search");
 })
+
+//do we do params here???
+router.get('/:artist', (req, res) => {
+    console.log(req.params.artist);
+  });
+
+// spotifyApi
+//   .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
+//   .then(data => {
+//     console.log('The received data from the API: ', data.body);
+//     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+//   })
+//   .catch(err => console.log('The error while searching artists occurred: ', err));
+
 
 // Our routes go here:
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
