@@ -1,0 +1,13 @@
+
+
+{{#each trackList}}
+
+{{!--- inside an each we refer to the item with this, updated versions don't rquire "this" ---}}
+<div>
+
+  <p>{{name}}</p>
+
+  <audio controls src = "{{preview_url}}"></audio>
+
+</div>
+{{/each}}
