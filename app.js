@@ -40,7 +40,7 @@ app.get("/artist-search", (request, response)=> {
     .then(data => {
         let results = data.body.artists.items
         //better: let results = {artistsArray: data.body.artists.items}
-        console.log('The received data from the API: ', results[0].images );
+        console.log('The received data from the API: ', results);
         response.render( "artists-search-results", {results} )
     
     })

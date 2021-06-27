@@ -1,0 +1,199 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&family=Bebas+Neue&family=Fjalla+One&family=Pathway+Gothic+One&display=swap');
+
+body {
+    font-family: 'Poppins';
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+
+/*HOME PAGE - SEARCH */
+.mainPageBackground {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainPageBackground form {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.mainPageBackground form input {
+  font-size: 18px;
+  padding: 5px;
+  border-style: none;
+  text-align: left;
+}
+.mainPageBackground form button {
+  text-align: center;
+  background-color: tomato;
+  font-size: 18px;
+  color: white;
+  border-style: none;
+  padding: 5px 20px;
+}
+
+
+  /* SEARCH RESULTS PAGE  */
+
+.results-page {
+    width: 100%;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.each-result {
+    width: 150px;
+    min-height: 180px;
+    max-height: 180px;
+    margin: 20px;
+    padding: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.each-result img {
+    min-height: 150px;
+    max-width: 150px;
+    min-width: 150px;
+    object-fit: cover;
+}
+
+.result-footer {
+    padding: 3px 0px;
+    width: 100%;
+    height: fit-content;
+    background-color: rgba(47, 78, 106);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    font-size: smaller;
+}
+
+.result-footer a {
+  display: block;
+  text-align: center;
+  background-color: tomato;
+  border-radius: 2px;
+  border-style: none;
+  padding: 2px 5px;
+  text-decoration: none;
+  color: white;
+  margin-bottom: 2px;
+}
+
+.result-footer h6 {
+  text-align: center;
+  margin: 0;
+}
+
+
+/* ALBUMS PAGE  */
+
+.albums-result {
+  width: 200px;
+  min-height: 240px;
+  max-height: 240px;
+  background-color: rgba(47, 78, 106);
+  margin: 20px;
+  padding: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.albums-result img {
+  min-height: 85%;
+  max-width: 200px;
+  min-width: 200px;
+  object-fit: cover;
+}
+
+.albums-footer {
+  margin-top: 2px;
+  padding: 3px 0px;
+  width: 100%;
+  height: fit-content;
+  background-color: rgba(47, 78, 106);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  color: white;
+  font-size: smaller;
+}
+
+.albums-footer a {
+display: block;
+text-align: center;
+background-color: tomato;
+border-radius: 2px;
+border-style: none;
+padding: 2px 5px;
+text-decoration: none;
+color: white;
+margin-bottom: 3px;
+margin-top: 1px;
+}
+
+.albums-footer h6 {
+text-align: center;
+margin: 0 2px;
+}
+
+
+/* TRACKS */
+
+#tracks-table {
+  margin: 5px 15px;
+}
+#tracks-table thead {
+  background-color: rgba(47, 78, 106, 0.5);
+  height: 50px;
+  font-size: larger;
+}
+
+#tracks-table thead th {
+  text-align: left;
+  padding-left: 10px;
+  border-bottom: 2px solid white;
+} 
+
+#tracks-table tbody tr {
+  height: 50px;
+}
+
+#tracks-table audio {
+  margin-top: 5px;
+  height: 35px;
+}
+
+#tracks-table td {
+  align-items: center;
+  background-color: rgba(47, 78, 106, 0.2);
+  border-bottom: 2px solid white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
