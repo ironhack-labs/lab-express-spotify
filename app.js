@@ -26,30 +26,37 @@ spotifyWebApi
     console.log('Something went wrong when retrieving an access token', error)
 );
 
-app.get("/", (req, res) => {                                       
+app.get("/", (req, res) => {
     res.render("index");
-})   
-
-//param method
-app.get("/artist-search", async (req, res) => {
-    const {artist} = req.query; 
-    console.log(req.query);
-    res.render("artist-search");
-})
-
-//do we do params here???
-router.get('/:artist', (req, res) => {
-    console.log(req.params.artist);
   });
 
-// spotifyApi
-//   .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-//   .then(data => {
-//     console.log('The received data from the API: ', data.body);
-//     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-//   })
-//   .catch(err => console.log('The error while searching artists occurred: ', err));
+  //PURPOSE is to search the API for the 
+  app.get('/artist-search', async (req, res) => {
+    let foundArtists = await spotifyWebApi.searchArtists(req.query.artist);     //insert our query string into the search function
+    console.log(foundArtists.body.artists.items);                               //console.log the search result variable
+    let searchResults = foundArtists.body.artists.items;                        //here we search through the API step-by-step
+    res.render("artist-page", { searchResults });                               //render the results on a new page as a promise
+    // console.log(req.query.data.body);
+  });
 
+  //PURPOSE is to redirect the user to an album page, after user has clicked the album-button on the artist-page
+  app.get("/albums/:artistId", async (req, res) => {
+    let foundArtistAlbum = await spotifyWebApi.getArtistAlbums(req.params.artistId);
+    console.log(foundArtistAlbum.body.items);
+    const albums = foundArtistAlbum.body.items;
+    res.render("albums", { albums });
+  });
+
+//   app.get("/artist-page", (req, res) => {
+//     res.render("index");
+//   });
+  
+//   spotifyApi.searchArtists('Love')
+//   .then(function(data) {
+//     console.log('Search artists by "Love"', data.body);
+//   }, function(err) {
+//     console.error(err);
+//   });
 
 // Our routes go here:
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(5000, () => console.log('My Spotify project running on port 5000 🎧 🥁 🎸 🔊'));
