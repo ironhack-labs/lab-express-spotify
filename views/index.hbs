@@ -1,0 +1,23 @@
+<div
+  class="container d-flex justify-content-center align-items-center viewport-content"
+>
+  <div>
+    <form action="/artist-search" method="GET">
+      <div class="input-group">
+        <input type="search" class="form-control rounded" name="search" />
+        <button type="submit" class="btn btn-outline-dark">Search for an Artist</button>
+      </div>
+    </form>
+  </div>
+</div>
+<video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
+  <source
+    src="https://vod-progressive.akamaized.net/exp=1624825085~acl=%2Fvimeo-prod-skyfire-std-us%2F01%2F4722%2F5%2F148614385%2F452088436.mp4~hmac=65882cabbe8b1b8870e1ffcfcedb4c9b1b966a9b07cd8f7f905b4eed31662449/vimeo-prod-skyfire-std-us/01/4722/5/148614385/452088436.mp4?filename=Concert+-+1630.mp4"
+    type="video/mp4"
+  />
+</video>
+<style>
+  video { object-fit: cover; width: 100vw; height: 100vh; position: fixed; top:
+  0; left: 0; } .viewport-content { position: relative; z-index: 1; height:
+  100%; }
+</style>
