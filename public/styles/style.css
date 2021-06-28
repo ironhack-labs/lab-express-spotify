@@ -1,0 +1,23 @@
+
+body {
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.home-img {
+    display: block;
+    width: 100vw;
+    height: auto;
+    margin: auto;
+    background: url('/public/images/spotify-background.jpeg');
+}
+
+
+.homeForm {
+    height: 10em;
+    display: block;
+    margin: auto;
+    width: 35vw;
+    height: auto;
+}
