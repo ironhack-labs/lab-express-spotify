@@ -26,24 +26,50 @@ nav a {
 }
 
 #body {
-    margin: 10px 0 60px 0;
+    margin: 10px 0 0 0;
 }
 
 #home {
-    margin: 40px;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    width: 98.8vw;
+    height: 100vh;
+    margin: -11px 0 0 0;
+}
+
+#div-form {
+    display: flex;
+    justify-content: center;
+    padding: 300px 0;
+}
+
+#home form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    background-color: rgba(240, 228, 228, 0.3);
+}
+
+#artist {
+    margin: 20px;
+    width: 400px;
+    background-color: white;
+}
+
+#btn-submit {
+    margin: 0 0 20px 0;
+    width: 200px;
+    background-color: rgb(228, 87, 87);
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border: 0;
 }
 
 #artist {
     padding: 10px 20px;
     background-color: #bfbfbf;
-    border: 0;
-}
-
-#btn-submit {
-    background-color: #2081c3;
-    font-weight: bold;
-    color: white;
-    padding: 10px 20px;
     border: 0;
 }
 
@@ -111,20 +137,5 @@ nav a {
 
 #track span {
     color: red;
-    font-weight: bold;
-}
-
-footer {
-    background-color: #0a2c42;
-    color: white;
-    position: fixed;
-    bottom: 0;
-    width: 100vw;
-}
-
-footer div {
-    margin-left: 20px;
-    padding: 3px 0;
-    font-size: 0.9em;
     font-weight: bold;
 }
