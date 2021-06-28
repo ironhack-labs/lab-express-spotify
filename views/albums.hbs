@@ -1,0 +1,14 @@
+{{#if data}}
+    <div id="container">
+        {{#each data}}
+            <div id="card">
+                <img id="cardImage" src="{{this.images.0.url}}" alt="{{this.name}} image">
+                <div id="cardInfo">
+                    <p>{{this.name}}</p>
+                    <a href="/tracks/{{this.id}}">View Tracks</a>
+                </div>
+            </div>
+        {{/each}}
+        {{!-- {{> beerPartial this}} --}}            
+    </div>
+{{/if}}
