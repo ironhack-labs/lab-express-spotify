@@ -58,7 +58,8 @@ app.all("/albums/:id", (req, response)=> {
     .catch(err => console.log('Error while searching albums: ', err))
 })
 
-app.all("/albums/tracks/:id", (req, response)=> {
+app.all("/tracks/:id", (req, response)=> {
+    console.log(req.params.id)
     spotifyApi.getAlbumTracks(req.params.id)
     .then( data => {
         let tracksResults = data.body.items
