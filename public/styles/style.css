@@ -1,11 +1,130 @@
-#bandImage {
+body {
+    font-family: "Spartan", sans-serif;
+    background-color: #f7f9f9;
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #2081c3;
+    border-bottom: 2px groove #bfbfbf;
+}
+
+nav div {
+    margin-left: 20px;
+    padding: 20px 0 15px 0;
+}
+
+nav a {
+    padding: 10px;
+    text-decoration: none;
+    color: #f7f9f9;
+    margin: 0 0 0 20px;
+    font-size: 0.9em;
+    font-weight: bold;
+}
+
+#body {
+    margin: 10px 0 60px 0;
+}
+
+#home {
+    margin: 40px;
+}
+
+#artist {
+    padding: 10px 20px;
+    background-color: #bfbfbf;
+    border: 0;
+}
+
+#btn-submit {
+    background-color: #2081c3;
+    font-weight: bold;
+    color: white;
+    padding: 10px 20px;
+    border: 0;
+}
+
+#container {
+    width: 95vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+#card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+    width: 300px;
+}
+
+#cardImage {
+    width: 300px;
     height: 300px;
 }
 
-#albumImage {
-    height: 300px;
+#cardInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #444444;
+    width: 100%;
+    padding: 0 0 15px 0;
+    color: white;
+    font-weight: bold;
+}
+
+#cardInfo a {
+    text-decoration: none;
+    color: white;
+    background-color: #ff4d4d;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 0.8em;
+}
+
+#tracks-header {
+    display: flex;
+    justify-content: space-between;
+    background-color: gray;
+    font-weight: bold;
+    margin: 0 10px 0 10px;
+}
+
+#tracks-header p {
+    margin: 0 230px 0 0;
+    padding: 10px 20px;
 }
 
 #track {
     display: flex;
+    justify-content: space-between;
+    background-color: lightgray;
+    font-size: 0.9em;
+    margin: 0 10px 2px 10px;
+    padding: 0 20px;
+}
+
+#track span {
+    color: red;
+    font-weight: bold;
+}
+
+footer {
+    background-color: #0a2c42;
+    color: white;
+    position: fixed;
+    bottom: 0;
+    width: 100vw;
+}
+
+footer div {
+    margin-left: 20px;
+    padding: 3px 0;
+    font-size: 0.9em;
+    font-weight: bold;
 }

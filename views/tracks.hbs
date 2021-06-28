@@ -1,7 +1,9 @@
-{{!-- const name = data.body.artists.items[0].name; --}}
-
 {{#if data}}
     <div class="tracks">
+        <div id="tracks-header">
+                <p>Title</p>
+                <p>Listen</p>
+        </div>
         {{#each data}}
             <div id="track">
                 <p>{{this.track_number}} <span>{{this.name}}</span></p>

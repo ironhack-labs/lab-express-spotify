@@ -28,7 +28,7 @@ app.get('/', (req, res) => {
     res.render('index', { title: 'Home' });
 });
 
-app.get('/artist-search', (req, res) => {
+app.get('/artists', (req, res) => {
     // console.log(req.query)
     spotifyApi
   .searchArtists(req.query.artist)
@@ -38,7 +38,7 @@ app.get('/artist-search', (req, res) => {
     console.log(data.body.artists.items);
     // console.log(data.body.artists.items[0].images[0].url);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-    res.render('artist-search-results', { data: data.body.artists.items, title: 'Artist Search Results' });
+    res.render('artists', { data: data.body.artists.items, title: 'Artist Search Results' });
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 });
