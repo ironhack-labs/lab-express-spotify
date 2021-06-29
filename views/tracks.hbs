@@ -1,0 +1,20 @@
+<div class="results-page">
+
+<table id="tracks-table" cellspacing="0">
+    <thead>
+        <tr>
+            <th>Title : </th>
+            <th>Listen : </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracksResults }} 
+        <tr>
+            <td>{{ name }}</td>
+            <td><audio controls alt="audio" src="{{preview_url}}" type="audio/mpeg"></audio></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+</div>

@@ -1,0 +1,13 @@
+<div class="results-page">
+    {{#each results }} 
+
+        <span class="each-result">
+            <img src="{{ images.0.url }}" onerror="this.src='/images/noArtistDefault.png';this.onerror='';" alt="artist photo">
+            <div class="result-footer">
+                <h6> {{ name }} </h6>
+                <h6><a href="/albums/{{ id }}"> View Albums </a></h6>
+            </div>
+        </span>
+
+    {{/each}}
+</div>
