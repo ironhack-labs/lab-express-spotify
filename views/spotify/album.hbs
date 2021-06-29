@@ -1,0 +1,10 @@
+<h1>test</h1>
+<section id="albums" class="display-multiple">
+  {{#each items}}
+    <div>
+      <h5>name: {{this.name}}</h5>
+      <img class="small-image" src="{{this.images.0.url}}" alt="" />
+      <a href="/tracks/{{this.id}}">View tracks</a>
+    </div>
+  {{/each}}
+</section>
