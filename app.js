@@ -1,5 +1,4 @@
 require('dotenv').config();
-
 const express = require('express');
 const app = express();
 const hbs = require('hbs');
@@ -31,21 +30,38 @@ app.get('/', (req, res) => {
 
   });
 
+// Route: ARTIST SEARCH
 app.get('/artist-search', (req, res) => {
-	// we need to use the value of the name attribute in the input form - in that case title
-	console.log(req.query.artist);
-
+	//console.log(req.query.artist);
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
-      console.log('The received data from the API: ', data.body.artists.items);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      //console.log('The received data from the API: ', data.body.artists.items);
     res.render('artist-search-results.hbs', {artistsResults: data.body.artists.items})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
-
 })
 
+// Route: ALBUMS of ARTIST
+app.get('/albums/:artistId', (req, res, next) => {
+//console.log(req.params.artistId)
+  spotifyApi
+  .getArtistAlbums(req.params.artistId)
+  .then(data => {
+   //console.log(data.body.items)
+    res.render('albums.hbs', {albums: data.body.items})
+  })
+});  
 
+// Route: TRACKS of ALBUM
+app.get('/tracks/:trackId', (req, res, next) => {
+  //console.log(req.params.trackId);
+  spotifyApi
+  .getAlbumTracks(req.params.trackId)
+  .then(data => {
+    //console.log(data.body.items)
+    res.render('tracks.hbs', {tracks: data.body.items})
+  })
+}); 
 
  app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

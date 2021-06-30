@@ -1,0 +1,30 @@
+.indexBox{
+    background-color: grey;
+    text-align: center;
+    margin-top: 200px;
+    padding-bottom: 10px;
+}
+
+.showArtist{
+    background: rgb(42, 138, 42);
+    padding-bottom: 10px;
+    padding-left: 10px;
+}
+
+.backButton {
+    background-color: black; 
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin-top: 50px;
+    margin-left: 500px;
+  }
+
+img{
+    width: 200px;
+    height: 200px;
+}

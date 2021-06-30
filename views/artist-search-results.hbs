@@ -1,5 +1,12 @@
 {{#each artistsResults}}
 
-        <p>{{name}}</p>
+        <div class="showArtist">
+                <h2>{{name}}</h2>
+                <p> {{genres}}</p>
+        </div>
+
+        <a href="/albums/{{id}}" class="button">View Albums</a> <br>
 
 {{/each}}
+
+<a href="http://localhost:3000/" class="backButton">Back to search</a>
