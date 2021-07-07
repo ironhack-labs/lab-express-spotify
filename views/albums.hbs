@@ -1,0 +1,15 @@
+{{#each albums}}
+      
+<div class="showArtist">
+
+        <h2>{{name}}</h2> 
+        
+        <img src="{{images.0.url}}"/> <br>
+        
+        <a href="/tracks/{{id}}" class="button">view tracks</a>
+
+</div>
+
+{{/each}}
+        
+<a href="http://localhost:3000/" class="backButton">Back to search</a>
