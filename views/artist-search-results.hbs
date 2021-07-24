@@ -1,6 +1,7 @@
 {{! <h1>Artist search results</h1> }}
-
-<img src='{{artist.image}}' alt='artist-image' />
-{{! cover or image or uri??? }}
-<p>{{artist.name}}</p>
-<a href='/albums/{{artist._id}}'>View Albums</a>
+{{#each artists}}
+  <img src='{{this.images.0.url}}' alt='artist-image' />
+  {{! cover or image or uri??? }}
+  <p>{{this.name}}</p>
+  <a href='/artists/{{this.id}}'>View Albums</a>
+{{/each}}

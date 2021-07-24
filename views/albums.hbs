@@ -1,8 +1,8 @@
 {{! <h1>Albums of the Artist</h1> }}
 
-{{#each album}}
-  <img src='{{this.cover}}' alt='artist-albums' />
+{{#each albums}}
+  <img src='{{this.images.0.url}}' alt='artist-albums' />
   {{! cover or image or uri??? }}
   <p>{{this.name}}</p>
-  <a href='/albums/{{this._id}}/tracks'>View Tracks</a>
+  <a href='/albums/{{this.id}}/tracks'>View Tracks</a>
 {{/each}}

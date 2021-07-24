@@ -1,5 +1,5 @@
 require('dotenv').config();
-require('./config/dbConnect');
+// require('./config/dbConnect');
 
 const express = require('express');
 const hbs = require('hbs');
@@ -21,24 +21,10 @@ const artistRouter = require('./routes/artist');
 const albumRouter = require('./routes/albums');
 const trackRouter = require('./routes/tracks');
 
-app.use('/', indexRouter);
-app.use('/artist-search', artistRouter);
-app.use('/albums/:artistId', albumRouter);
-app.use('/albums/:albumId/tracks', trackRouter);
-
-// setting the spotify-api goes here:
-const spotifyApi = new SpotifyWebApi({
-  clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET,
-});
-
-// Retrieve an access token
-spotifyApi
-  .clientCredentialsGrant()
-  .then((data) => spotifyApi.setAccessToken(data.body['access_token']))
-  .catch((error) =>
-    console.log('Something went wrong when retrieving an access token', error)
-  );
+app.use(indexRouter);
+app.use(artistRouter);
+app.use(albumRouter);
+app.use(trackRouter);
 
 // Our routes go here:
 

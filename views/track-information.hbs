@@ -4,10 +4,10 @@
   <h2>Listen</h2>
 </nav>
 <div>
-  {{#each track}}
-    <p></p>
+  {{#each tracks}}
+    <p>{{this.name}}</p>
     <audio controls>
-      <source src='{{this.preview_url}}' type='audio/mpeg' />
+      <source src='{{this.preview_url}}' type='audio/mp3' />
     </audio>
   {{/each}}
 </div>
