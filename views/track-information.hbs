@@ -1,0 +1,13 @@
+{{! <h1>Track information</h1> }}
+<nav>
+  <h2>Title</h2>
+  <h2>Listen</h2>
+</nav>
+<div>
+  {{#each track}}
+    <p></p>
+    <audio controls>
+      <source src='{{this.preview_url}}' type='audio/mpeg' />
+    </audio>
+  {{/each}}
+</div>
