@@ -2,8 +2,6 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
-
-// require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
@@ -29,6 +27,27 @@ spotifyApi
 
 // Our routes go here:
 
+app.get('/', (req, res) => {
+  res.render('home');
+});
+
+app.get('/artist-search', (req, res) => {
+  spotifyApi
+    .searchArtists(req.query.artist)
+    .then((apiRes) => res.render('artist-search-results', { apiRes }));
+});
+app.get('/albums/:id', (req, res) => {
+  let artistId = req.params.id;
+  spotifyApi.getArtistAlbums(artistId).then((apiRes) => {
+    res.render('albums', { apiRes: apiRes.body.items });
+  });
+});
+app.get('/tracks/:id', (req, res) => {
+  let recordId = req.params.id;
+  spotifyApi.getAlbumTracks(recordId).then((apiRes) => {
+   res.render('tracks',{apiRes:apiRes.body.items})();
+  });
+});
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 );

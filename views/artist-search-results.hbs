@@ -1,0 +1,11 @@
+<div id="artistflex">
+{{#each apiRes.body.artists.items}}
+<div class="artistwrapper">
+Artist's name: {{name}} 
+<button>
+<a href="/albums/{{id}}">Records</a>
+</button> <br>
+</div>
+{{/each}}
+</div>
+<img src="{{apiRes.body.artists.items.0.images.0.url}}" alt="">
