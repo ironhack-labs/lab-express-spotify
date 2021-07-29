@@ -25,7 +25,7 @@ const spotifyApi = new SpotifyWebApi({
 // Our routes go here:
 app.get("/", (req, res, next) => res.render('home'));
 app.get("/artist-search", async function (req, res, next) {
-  console.log("req => ", req.query.search);
+  //console.log("req => ", req.query.search);
   const artistName = req.query.search;
   // const data = await spotifyApi.searchArtists(artistName)
   // console.log(data);
@@ -33,7 +33,10 @@ app.get("/artist-search", async function (req, res, next) {
     .searchArtists(artistName)
     .then(data => {
       const artistResult = data.body.artists.items;
-      console.log('The received data from the API: ', artistResult);
+      const artistImages = data.body.artists.items.images;
+      // console.log('The received data from the API: ', artistResult);
+      console.log('The received Images from the API: ', artistImages);
+
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("artist-search-results.hbs", {artistResult: artistResult});
       
