@@ -1,3 +1,9 @@
 body {
-  background-image: url("../images/spotify-background.jpeg");
+  background: no-repeat center url("../images/spotify-background.jpeg");
+  background-size: cover;
+}
+
+#main {
+  text-align: center;
+  margin-top: 25%;
 }

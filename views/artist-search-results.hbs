@@ -1,5 +1,7 @@
-{{#each artists}}
-  <p>{{name}}</p>
-  <img src="{{images.1.url}}" alt="artist" />
-  <a href="/albums/{{id}}">View Albums</a>
-{{/each}}
+<div class="wrapper">
+  {{#each artists}}
+    <p>{{name}}</p>
+    <img src="{{images.1.url}}" alt="artist" />
+    <a href="/albums/{{id}}">View Albums</a>
+  {{/each}}
+</div>
