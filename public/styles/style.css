@@ -1,0 +1,31 @@
+body {
+    background-image: url(/images/spotify-background.jpeg);
+    background-image: no-repeat;
+    background-size: cover;
+    margin: 20px;
+    padding: 0;
+    color: rgb(250, 35, 35);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: rgb(150, 240, 60);
+    color: black;
+    padding: 4px;
+    width: 100%
+}
+
+.artistbox button{
+    text-decoration: none;
+    background-color: rgb(150, 240, 60); 
+    padding: 6px;
+    margin: 5px;
+    border-radius: 14px;
+}
+
+.artistcollection{
+    display: flex;
+    align-items: center;
+}
