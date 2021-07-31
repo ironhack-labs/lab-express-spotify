@@ -10,18 +10,21 @@
     color: white;
     border: none;
     padding: 2px;
-    height: 10vh;
-    width: 10vw;
+    height: 4vh;
+    width: 15vw;
     text-decoration: none;
+    text-align: center;
 }
 
 .artist {
-    background-color: aqua;
+    background-color: #4d4d4d;
     height: 50vh;
-    width: 20vw;
+    width: 35vw;
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 5vh;
+    margin-right: 5vw;
 }
 
 .album {
@@ -91,7 +94,7 @@
 }
 
 .artist-img {
-    height: 50vh;
-    width: 100%;
-    background-color: blue;
+    height: 30vh;
+    margin-top:1vh;
 }
+

@@ -7,11 +7,18 @@
     <title>View Albums</title>
 </head>
 <body>
-    <div class="artist">
-        <div class="artist-img">
-            
+    {{#each artists}}
+        <div class="artist">
+            <div class="artist-img">
+                {{#if images}}
+                    <img class="artist-img" src={{images.[1].url}}></img>
+                {{/if}}
+            </div>
+            <h1>{{this.name}}</h1>
+            {{this.id}}
+            <a class="albums" href="/albums/?artist={{id}}"+>View Albums</a>
         </div>
-        <a class="albums" href="/albums">View Albums</a>
-    </div>
+
+    {{/each}}
 </body>
 </html>
