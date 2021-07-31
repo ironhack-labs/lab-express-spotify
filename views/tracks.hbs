@@ -11,21 +11,20 @@
         <h1 class="title">Title</h1>
         <h1 class="listen">Listen</h1>
     </div>
-    <div class="row">
-        <b>Twist And Shout - Live / Remastered</b>  
-    </div>
-    <div class="row">
-        <b>Twist And Shout - Live / Remastered</b>  
-    </div>
-    <div class="row">
-        <b>Twist And Shout - Live / Remastered</b>  
-    </div>
-    <div class="row">
-        <b>Twist And Shout - Live / Remastered</b>  
-    </div>
-    <div class="row">
-        <b>Twist And Shout - Live / Remastered</b>  
-    </div>
+
+        {{#each tracks}}
+            <div class="row">
+                <div class="trackname">
+                    <b>{{name}}</b> 
+                </div>
+                <audio class="audio" id="myAudio" controls="download">
+                    <source type="audio/ogg" src={{preview_url}}>
+                    <source type="audio/mpeg" src={{preview_url}}>
+                    Your browser does not support the audio element.
+                </audio> 
+                <a class="download" href={{preview_url}} download="preview"><i class="fa fa-download"></i></a>
+            </div>
+        {{/each}}
     <div class="row">
         <b>Twist And Shout - Live / Remastered</b>  
     </div>

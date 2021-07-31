@@ -3,6 +3,7 @@
     color: white;
     border: none;
     padding: 2px;
+    margin-left: 1vw;
 }
 
 .albums {
@@ -65,7 +66,7 @@
     background-color: #4a4a4a;
     color: #b4b4b4;
     display: flex;
-    height: 20vh;
+    height: 10vh;
     display: flex;
     align-items: center;
 }
@@ -77,7 +78,7 @@
 }
 
 .listen {
-    padding-left: 80vw;
+    padding-left: 72.5vw;
     font-family: sans-serif;
     font-size: 20px;
 }
@@ -85,7 +86,7 @@
 .row {
     background-color: #f0ecec;
     border: 1px solid black;
-    height: 20vh;
+    height: 8vh;
     display: flex;
     align-items: center;
     padding-left: 3vw;
@@ -98,3 +99,16 @@
     margin-top:1vh;
 }
 
+.audio {
+    margin-left: 44vw
+}
+
+.trackname {
+    width: 30vw;
+}
+
+.download {
+    border: none;
+    color: black;
+    margin-left: 2vw;
+}
