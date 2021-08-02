@@ -37,11 +37,12 @@ app.get("/artist-search", (req, res) => {
     .then((data) => {
       console.log(
         "The received data from the API: ",
-        data.body.artists.items.name
+        //Items is also an array of object, you need to go into the items array to then display the image object and how they are structured
+        data.body.artists.items[0].images
       );
-      //* res.render("artist-search-results", {
-      // data: data.body.artists.items,
-      //});
+      res.render("artist-search-results", {
+        data: data.body.artists.items,
+      });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
