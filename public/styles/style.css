@@ -3,3 +3,13 @@
   margin: 5px;
   padding: 5px;
 }
+
+.tracks-header {
+  background-color: lightgrey;
+}
+
+.tracks-header,
+.single-track {
+  display: flex;
+  justify-content: space-between;
+}

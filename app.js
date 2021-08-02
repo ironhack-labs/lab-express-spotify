@@ -56,20 +56,22 @@ app.get("/albums/:artistId", (req, res, next) => {
         artist: data.body.items[0].artists[0].name,
         artistId: data.body.items[0].artists[0].id,
       };
-      console.log("ALBUMS ARRAY", albumData.albumsArray);
+      console.log("ALBUMS ARRAY", albumData.albumsArray[0].id);
       res.render("albums", albumData);
     })
     .catch((err) => console.log("error occured while searching for albums", err));
 });
 
-app.get("/albums/artistId/:albumId", (req, res, next) => {
+app.get("/albums/:artistId/:albumId", (req, res, next) => {
   console.log("REQ", req.params);
   spotifyApi
     .getAlbumTracks(req.params.albumId)
     .then((data) => {
-      //   console.log("ONE ALBUM", data.body);
-      res.render("albums/:artistId/:albumId", data);
-      res.send("TRACKS HERE");
+      const tracksData = {
+        tracksArray: data.body.items,
+      };
+      console.log("ONE ALBUM", data.body.items);
+      res.render("tracks", tracksData);
     })
     .catch((err) => console.log("error looking for specific album", err));
 });
