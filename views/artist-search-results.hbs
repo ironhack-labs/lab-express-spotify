@@ -1,9 +1,9 @@
-<div>
+<div class="artists-list">
   {{#each filteredArtistsArr}}
-    <div class="artist-div">
-      <h3>{{this.name}}</h3>
+    <div class="single-item">
       <img src="{{images.1.url}}" alt="" />
-      <a href="/albums/{{this.id}}">View Albums</a>
+      <h3>{{this.name}}</h3>
+      <a class="view-link" href="/albums/{{this.id}}">View Albums</a>
     </div>
   {{/each}}
 </div>

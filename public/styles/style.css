@@ -1,15 +1,115 @@
-.artist-div {
-  border: 1px solid black;
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.landing-page,
+.artist-search,
+.artist-search form,
+.artists-list,
+.single-item,
+.albums-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.artist-search {
+  width: 50%;
+  height: 140px;
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 8px;
+}
+
+.artist-search form {
+  flex-direction: column;
+  width: 80%;
+}
+
+.artist-search form input,
+.artist-search form button {
+  height: 30px;
+  border: none;
+  border-radius: 8px;
+}
+.artist-search form input {
+  width: 100%;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+
+.artist-search form input:focus {
+  outline: none;
+}
+.artist-search form button {
+  width: 120px;
+  background-color: rgba(218, 59, 23);
+  cursor: pointer;
+}
+.artists-list,
+.albums-list {
+  flex-wrap: wrap;
+}
+
+.single-item {
+  flex-direction: column;
   margin: 5px;
   padding: 5px;
+  width: 220px;
+  height: 220px;
+}
+
+.single-item img {
+  height: 180px;
+  margin-bottom: 5px;
+}
+
+.view-link {
+  color: black;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.albums-header {
+  text-align: center;
+  margin: 20px 0;
+}
+.view-link:hover {
+  color: rgba(218, 59, 23);
 }
 
 .tracks-header {
   background-color: lightgrey;
+  padding: 20px;
+  margin-bottom: 20px;
 }
 
 .tracks-header,
 .single-track {
   display: flex;
   justify-content: space-between;
+}
+
+#listen-header {
+  margin-right: 200px;
+}
+
+.tracks-list {
+  padding: 0 20px;
+}
+
+.single-track h4 {
+  font-weight: normal;
+}
+
+.single-track audio {
+  height: 30px;
+  margin: 5px 0;
 }

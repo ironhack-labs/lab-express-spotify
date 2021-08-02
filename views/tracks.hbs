@@ -1,12 +1,12 @@
 <div class="tracks-header">
   <h2>Title</h2>
-  <h2>Listen</h2>
+  <h2 id="listen-header">Listen</h2>
 </div>
 
 <div class="tracks-list">
   {{#each tracksArray}}
     <div class="single-track">
-      <h3>{{this.name}}</h3>
+      <h4>{{this.name}}</h4>
       <audio controls>
         <source src="{{this.preview_url}}" type="audio/mp3" />
       </audio>
