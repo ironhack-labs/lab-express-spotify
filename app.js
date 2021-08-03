@@ -28,6 +28,9 @@ app.use(express.static(__dirname + "/public"));
 // setting the spotify-api goes here:
 
 // Our routes go here:
+app.get("/", (req, res) => {
+  res.render("index");
+});
 
 app.get("/artist-search", (req, res) => {
   console.log(req.query);
@@ -38,7 +41,7 @@ app.get("/artist-search", (req, res) => {
       console.log(
         "The received data from the API: ",
         //Items is also an array of object, you need to go into the items array to then display the image object and how they are structured
-        data.body.artists.items[0].images
+        JSON.stringify(data.body.artists.items[0].images, null, 2)
       );
       res.render("artist-search-results", {
         data: data.body.artists.items,
@@ -49,8 +52,36 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
-app.get("/", (req, res) => {
-  res.render("index");
+app.get("/albums/:artistId", (req, res) => {
+  console.log(req.params);
+  const { artistId } = req.params;
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then((data) => {
+      console.log(data.body);
+      res.render("albums", {
+        data: data.body.items,
+      });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+app.get("/track/:albumId", (req, res) => {
+  console.log(req.params);
+  const { albumId } = req.params;
+  spotifyApi
+    .getAlbumTracks(albumId, { limit: 6, offset: 0 })
+    .then((data) => {
+      console.log(data.body);
+      res.render("track", {
+        data: data.body.items,
+      });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
 });
 
 app.listen(process.env.PORT, () =>
