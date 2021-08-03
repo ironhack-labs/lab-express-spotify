@@ -2,9 +2,16 @@
 
 {{#each albumResult}}
 
+
+<h2> {{name}}</h2>
 <img src="{{images.1.url}}" alt=""> 
-<p>
-    {{name}}
-</p>
+<br>
+
+<a href="/albums/{{id}}/tracks">View tracks</a>
+
+
+<br>
+<br>
 
 {{/each}}
+

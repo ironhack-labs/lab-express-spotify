@@ -1,0 +1,27 @@
+<h1>Tracks on this album</h1>
+
+
+
+<table>
+    <tr>
+        <th>Title</th>
+        <th>Listen</th>
+    </tr>
+{{#each trackResult}}
+    <tr>
+        <td>{{name}}<br></td>
+        <td>
+            <audio 
+                controls
+                src="{{preview_url}}"
+                >
+                Your browser does not support the <code>audio</code> element.
+            </audio>
+        </td>
+    </tr>
+{{/each}}
+</table>
+
+
+
+

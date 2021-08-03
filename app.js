@@ -59,4 +59,20 @@ app.get('/albums/:artistId', async function (req, res, next) {
     })
 });
 
+app.get('/albums/:artistId/tracks', async function (req, res, next) {
+  const artistID = req.params.artistId;
+
+  spotifyApi
+  .getAlbumTracks(artistID, { limit : 5, offset : 1 })
+  .then(function(data) {
+    const trackResult = data.body.items;
+    console.log("trackresults", data.body.items);
+
+    res.render("tracks.hbs", {trackResult: trackResult})
+  }, function(err) {
+    console.log('Something went wrong!', err);
+  });
+
+})
+
 app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
