@@ -15,6 +15,16 @@
   transform: scale(1.08);
 }
 
+.navbar {
+  background-color: #4d4d4d;
+  color: white;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+}
+
 /* Index page */
 
 #background-img {
@@ -42,7 +52,7 @@
 }
 
 #btn-search {
-  width: 7.5vw;
+  width: 8.5vw;
 }
 
 input {
@@ -65,4 +75,27 @@ form {
 .albums {
   display: flex;
   width: 100;
+}
+
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  background-color: #4d4d4d;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  text-align: center;
+  border: none;
+}
+
+.card h5 {
+  color: white;
+}
+
+.card-img-top {
+  min-height: 286px;
+  max-height: 286px;
 }
