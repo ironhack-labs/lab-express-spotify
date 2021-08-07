@@ -25,7 +25,7 @@ const app = express();
 app.set("view engine", "hbs");
 app.set("views", path.join(__dirname + "/views"));
 //app.use(express.static(__dirname + "/public"));
-app.use(express.static(path.join(__dirname, "/public/styles")));
+app.use(express.static(path.join(__dirname, "/public")));
 
 //register partials
 hbs.registerPartials(__dirname + "/views/partials");
@@ -33,12 +33,10 @@ hbs.registerPartials(__dirname + "/views/partials");
 // setting the spotify-api goes here:
 
 // Our routes go here:
-app.get("/", (req, res) => {
-  res.render("index");
-});
 
 app.get("/artist-search", (req, res) => {
   console.log(req.query);
+  8;
   const { artist } = req.query;
   spotifyApi
     .searchArtists(artist)
@@ -87,6 +85,10 @@ app.get("/track/:albumId", (req, res) => {
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
+});
+
+app.get("/", (req, res) => {
+  res.render("index");
 });
 
 app.listen(process.env.PORT, () =>
