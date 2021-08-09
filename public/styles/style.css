@@ -25,6 +25,10 @@
   text-decoration: none;
 }
 
+.navbar-brand {
+  margin-left: 10px;
+}
+
 /* Index page */
 
 #background-img {
@@ -89,6 +93,7 @@ form {
   margin-top: 10px;
   text-align: center;
   border: none;
+  width: 18rem;
 }
 
 .card h5 {
