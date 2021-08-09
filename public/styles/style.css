@@ -5,7 +5,7 @@
   display: block;
   background-color: #ef6866;
   color: white;
-  height: 3.5vh;
+  height: 5vh;
   border: none;
   border-radius: 4px;
   transition: ease-in-out;
@@ -13,6 +13,7 @@
 
 .btn:hover {
   transform: scale(1.08);
+  color: white;
 }
 
 .navbar {
@@ -23,6 +24,7 @@
 .navbar a {
   color: white;
   text-decoration: none;
+  margin-left: 20px;
 }
 
 .navbar-brand {
@@ -56,12 +58,12 @@
 }
 
 #btn-search {
-  width: 8.5vw;
+  width: 15vw;
 }
 
 input {
   width: 20vw;
-  height: 3vh;
+  height: 4vh;
   border-radius: 3px;
   border: none;
   margin-bottom: 10px;
@@ -84,13 +86,16 @@ form {
 .album-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
+  justify-content: space-evenly;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .card {
   background-color: #4d4d4d;
+  width: 22rem;
   margin-bottom: 10px;
-  margin-top: 10px;
+  margin-top: 20px;
   text-align: center;
   border: none;
   width: 18rem;
@@ -98,9 +103,16 @@ form {
 
 .card h5 {
   color: white;
+  height: 72px;
 }
 
 .card-img-top {
-  min-height: 286px;
-  max-height: 286px;
+  min-height: 290px;
+  max-height: 290px;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  height: fit-content;
 }
