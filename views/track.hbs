@@ -1,6 +1,15 @@
-{{#each data}}
-  <audio controls>
-    <source src={{this.preview_url}} type="audio/mpeg" />
-    Your browser does not support the audio tag.
-  </audio>
-{{/each}}
+<div class="card-tracks">
+  <div class="track-titles">
+    <h3>Title</h3>
+    <h3 class="listen">listen</h3>
+  </div>
+  {{#each data}}
+    <div class="tracks">
+      <h5>{{this.name}}</h5>
+      <audio controls>
+        <source src={{this.preview_url}} type="audio/mpeg" />
+        Your browser does not support the audio tag.
+      </audio>
+    </div>
+  {{/each}}
+</div>

@@ -116,3 +116,32 @@ form {
   flex-direction: column;
   height: fit-content;
 }
+
+/*Tracks page*/
+.tracks {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 10px 0;
+  width: 50%;
+  margin: 0 auto;
+}
+.card-tracks {
+  display: flex;
+  flex-direction: column;
+}
+
+.track-titles {
+  background-color: #4d4d4d;
+  display: flex;
+  justify-content: space-evenly;
+  color: white;
+  width: 50%;
+  justify-content: space-between;
+  margin: 0 auto;
+  margin-top: 10px;
+}
+
+.listen {
+  width: 300px;
+}
