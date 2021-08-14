@@ -1,0 +1,25 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    display: -webkit-flex;
+    height: auto;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 90%;
+    margin: 2rem auto 0 auto;
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    margin: .1rem;
+}
+
+.card h4,
+.card h3 {
+    margin: 5px auto
+}
