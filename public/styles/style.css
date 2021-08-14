@@ -122,24 +122,31 @@ form {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 10px 0;
-  width: 50%;
+  width: 60%;
   margin: 0 auto;
+  padding: 0 20px 0 20px;
 }
 .card-tracks {
   display: flex;
   flex-direction: column;
+  margin-top: 50px;
 }
 
 .track-titles {
-  background-color: #4d4d4d;
+  background-color: #ef6866;
+  border-radius: 4px;
   display: flex;
-  justify-content: space-evenly;
   color: white;
-  width: 50%;
+  width: 60%;
+  height: 50px;
   justify-content: space-between;
+  align-items: center;
   margin: 0 auto;
   margin-top: 10px;
+  margin-bottom: 15px;
+  padding: 0 20px 0 20px;
 }
 
 .listen {
