@@ -40,9 +40,9 @@ app.get(`/artist-search`, (req, res) => {
     .searchArtists(req.query.artistName)
     .then((data) => {
       console.log(
-        `The received data from the API:`,
+        `The received data from the API:`
         // JSON.stringify(data.body.artists)
-        JSON.stringify({ data: data.body.artists.items })
+        // JSON.stringify({ data: data.body.artists.items })
       );
       res.render(`artist-search-results`, { data: data.body.artists.items });
     })
@@ -54,3 +54,30 @@ app.get(`/artist-search`, (req, res) => {
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 );
+
+app.get(`/albums/:albumId`, (req, res) => {
+  spotifyApi
+    .getArtistAlbums(req.params.albumId)
+    .then((data) => {
+      // console.log(
+      //   `Artist albums:`,
+      //   // JSON.stringify(data.body.items, null, '\t')
+      // );
+      res.render(`albums`, { data: data.body.items });
+    })
+    .catch((err) => {
+      console.log(`The error appeared during getting the albums info`);
+    });
+});
+
+app.get(`/albums/tracks/:albumId`, (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then((data) => {
+      console.log(`Tracks:`, JSON.stringify(data.body, null, '\t'));
+      res.render(`tracks`, { data: data.body.items });
+    })
+    .catch((err) => {
+      console.log(`The error appeared during getting the tracks info`);
+    });
+});
