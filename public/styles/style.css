@@ -61,6 +61,8 @@ body {
     margin-top: -0.55rem;
     margin-bottom: 1rem;
     padding-bottom: 0.3rem;
+    padding-top: 0.3rem;
+    font-size: 0.5rem;
 }
 
 .form-container {
