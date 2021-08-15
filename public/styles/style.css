@@ -1,22 +1,48 @@
+html,
 body {
-    margin: 0;
+    height: 100%;
     padding: 0;
+    margin: 0;
+    background: url("../images/spotify-background.jpeg") repeat center center;
+    background-size: cover;
+    color: #fff;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 .main {
     display: -webkit-flex;
     height: auto;
-    justify-content: space-between;
+    justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 90%;
+    width: 100%;
+    height: 100%;
     margin: 2rem auto 0 auto;
 }
 
 .card {
-    display: flex;
-    flex-direction: column;
     text-align: center;
     margin: .1rem;
+    position: relative;
+    color: #fff;
+}
+
+.card h4 a {
+    background: #FF8162;
+    cursor: pointer;
+    border-width: 0;
+    border-radius: 3px;
+    display: inline-block;
+    width: 75%;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
 }
 
 .card h4,
@@ -27,4 +53,92 @@ body {
 
 .card img {
     width: 200px;
+}
+
+.card-footer {
+    background-color: grey;
+    margin-top: -0.55rem;
+    margin-bottom: 1rem;
+    padding-bottom: 0.3rem;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    height: 20%;
+    width: 60%;
+    margin: auto;
+    position: relative;
+}
+
+/* to make the text visible when opacity is applied */
+.form-container::before {
+    content: "";
+    border-radius: 3px;
+    background-color: grey;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+
+form {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 75%;
+    position: relative;
+}
+
+input[name='artistName'] {
+    height: 2.2rem;
+    margin-bottom: 1rem;
+    width: 100%;
+}
+
+form button {
+    width: 40%;
+    background: #FF8162;
+    cursor: pointer;
+    border-width: 0;
+    border-radius: 3px;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1rem;
+    line-height: 1.5rem;
+    color: rgb(255, 255, 255);
+    opacity: 1;
+}
+
+
+.track,
+.track-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #BEBEBE;
+    color: #fff;
+    margin: .1rem 1rem;
+    padding: .3rem;
+    border-radius: 3px;
+}
+
+.track {
+    padding-right: 7%;
+    padding-left: 7%;
+}
+
+.track-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    background-color: #707070;
+    margin-bottom: -0.5rem;
+    padding-right: 10%;
+    padding-left: 10%;
 }

@@ -75,7 +75,7 @@ app.get(`/albums/tracks/:albumId`, (req, res) => {
     .getAlbumTracks(req.params.albumId)
     .then((data) => {
       console.log(`Tracks:`, JSON.stringify(data.body, null, '\t'));
-      res.render(`tracks`, { data: data.body.items });
+      res.render(`music-tracks`, { data: data.body.items });
     })
     .catch((err) => {
       console.log(`The error appeared during getting the tracks info`);
