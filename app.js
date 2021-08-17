@@ -58,10 +58,11 @@ app.get('/albums/tracks/:albumId', (req, res) => {
     .getAlbumTracks(req.params.albumId)
     .then((data) => {
         res.render('tracks', { data: data.body.items })
+    })
     .catch((err) => {
-        console.log(`The error occurred while getting the tracks`, err)
+        console.log('The error while getting the albums occurred', err)
     })
-    })
+    
 })
 
 

@@ -1,0 +1,32 @@
+body {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  height: 1200px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  height: 200px;
+  width: 500px;
+  border-radius: 5px;
+  background-color: lightgrey;
+  opacity: 0.5;
+  position: relative;
+  top: 500px;
+  left: 35%;
+}
+
+input[name="artist"] {
+  width: 100%;
+}
+
+form button {
+  background-color: crimson;
+  color: white;
+  cursor: pointer;
+}
