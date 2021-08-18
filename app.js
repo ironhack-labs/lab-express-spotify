@@ -66,7 +66,7 @@ app.get(`/albums/:albumId`, (req, res) => {
       res.render(`albums`, { data: data.body.items });
     })
     .catch((err) => {
-      console.log(`The error appeared during getting the albums info`);
+      console.log(`The error appeared during getting the albums info: ${err}`);
     });
 });
 
@@ -78,6 +78,6 @@ app.get(`/albums/tracks/:albumId`, (req, res) => {
       res.render(`music-tracks`, { data: data.body.items });
     })
     .catch((err) => {
-      console.log(`The error appeared during getting the tracks info`);
+      console.log(`The error appeared during getting the tracks info: ${err}`);
     });
 });
