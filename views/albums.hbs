@@ -1,9 +1,9 @@
 {{#each data}}
 <div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{images.0.url}}" alt="Artist results card">
+    <img class="card-img-top" src="{{images.0.url}}" alt="Albums card">
     <div class="card-body">
         <h5 class="card-title">{{name}}</h5>
-        <a href="/albums/{{id}}" class="btn btn-primary">View album</a>
+        <a href="/albums/tracks/{{id}}" class="btn btn-primary">View tracks</a>
     </div>
 </div>
 {{/each}}
