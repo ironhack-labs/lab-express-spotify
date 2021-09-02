@@ -1,0 +1,15 @@
+<h1>Artist</h1>
+<hr>
+<div class="card" style="width: 18rem;">
+
+    {{#each items}}
+    {{#if images.[0].url}}
+    <img src="{{images.[0].url}}" class="card-img-top" alt="{{name}}">
+    {{/if}}
+    <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+        <hr>
+    </div>
+    {{/each}}
+</div>

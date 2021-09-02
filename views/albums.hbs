@@ -1,0 +1,10 @@
+<h1>Albums</h1>
+<hr>
+{{#each items}}
+{{name}}
+{{#if images.[0].url}}
+<img src="{{images.[0].url}}" alt="{{name}}">
+{{/if}}
+<a href="/tracks/{{id}}">View Tracks</a>
+<hr>
+{{/each}}
