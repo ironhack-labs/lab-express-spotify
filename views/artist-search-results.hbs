@@ -1,0 +1,18 @@
+{{#each artistsArray}}		
+	<div class="col-md-4">
+  		<div class="artist-card">
+			<div class="card-body">
+{{!-- Array de imagenes? como accedo a la posicion 0? --> @OlivierLalonde, I had to use something like {{ websites.[0] }} 
+      "images" : [ {
+        "height" : 640,
+        "url" : "https://i.scdn.co/image/4295b5ff74d4f944367144acbe616b6f62d20b17",
+        "width" : 640
+      }, ... ] Hey Jude... --}}
+      			<img class="artist-image" src="{{this.images.[0].url}}" alt="{{this.name}}"/>
+  				<p class="artist-name">{{this.name}}</p>
+				<a class="artist-albums" href="{{this.uri}}" >View Albums</a>  
+    		</div>
+  		</div>
+	</div>
+{{/each}}
+
