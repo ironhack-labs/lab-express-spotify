@@ -1,0 +1,11 @@
+
+<container>
+    {{#each items}}
+
+    <p>{{name}}</p>
+    <img src={{images.0.url}} height={{images.0.height}} width={{images.0.width}} />
+    <a href='/albums/{{id}}' type="button" class="btn btn-dark">
+        Show the albums
+    </a>
+    {{/each}}
+<container>
