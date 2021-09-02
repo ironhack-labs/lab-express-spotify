@@ -1,0 +1,24 @@
+img {
+    height: 200px;
+    width: auto;
+}
+
+.background {
+    background-image: url(../images/spotify-background.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+}
+
+.center-form {
+    background-color: rgba(255, 255, 255, 0.65);
+    text-align: center;
+    position: absolute;
+    left: 27%;
+    top: 35%;
+    padding: 100px 200px;
+}
+
+.search-bar {
+    width: 500px;
+}

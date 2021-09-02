@@ -1,0 +1,21 @@
+    <h2 class="d-flex justify-content-center m-5 ">ALBUMS</h2>
+<div class="container">
+    <div class="row  ">
+            {{#each data}}
+        <div class="col-md-3 m-4 bg-dark text-white justify-content-center text-center pt-5">
+            <img src="{{images.[0].url}}" alt="{{name}}">
+            <br>
+            <br>
+            {{name}}
+            <br>
+            <br>
+            
+            <a href="/tracks/{{name}}/{{id}}" class="btn btn-danger">View Tracks</a>
+            <br>
+            <br>
+            <br>
+        </div>
+        
+            {{/each}}
+    </div>
+</div>

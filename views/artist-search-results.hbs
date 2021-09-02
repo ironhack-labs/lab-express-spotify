@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row">
+            
+            {{#each data}}
+
+        <div class="col-md-3 mb-4 text-center bg-dark m-4 pt-5 pb-5 text-white">
+                    
+                <img src="{{images.[0].url}}" alt="{{name}}">
+                <br>
+                {{name}}
+                <br>
+                <a class="btn btn-danger" href="/albums/{{name}}/{{id}}">View Albums</a>
+        </div>
+
+            {{/each}}
+    
+
+    
+    </div>
+</div>

@@ -1,0 +1,26 @@
+-
+
+<div class="container">
+    <div class="row bg-dark text-white p-5">
+        <div class="col-md-6">
+            <h2 class="h1">Title</h2>
+        </div>
+
+        <div class="col-md-6">
+            <h2 class="h1">Listen</h2>
+        </div>
+        <br><br><br><br>
+    <div class="row">
+    
+
+{{#each data}}
+        <div class="col-md-6">
+            {{name}}
+        </div>
+
+        <div class="col-md-6">
+            <audio src="{{preview_url}}" controls='true'></audio>
+        </div>
+{{/each}}
+    </div>
+</div>
