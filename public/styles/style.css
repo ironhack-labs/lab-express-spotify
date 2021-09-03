@@ -19,7 +19,12 @@ body{
     justify-content: center;
     align-items: center;
     text-align: center;
-    min-height: 100vh;  
+    min-height: 70vh;  
+}
+.audiocontrol{
+    background-color: rgba(18, 122, 44, 0.795);
+    border-radius: 40px;
+    padding: 15px;
 }
 form{
     background-color: rgba(32, 31, 31, 0.555);
@@ -62,6 +67,10 @@ a{
     text-decoration: none;
     color: inherit;
     text-shadow: 2px 2px rgb(18, 122, 44);
+}
+.name{
+    text-shadow: 2px 2px rgb(18, 122, 44);
+    color:white;
 }
 .nav-item{
     border-radius: 10px;
