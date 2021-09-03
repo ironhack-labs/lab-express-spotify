@@ -1,0 +1,11 @@
+{{#each albumsArray}}		
+	<div class="col-md-4">
+  		<div class="album-card">
+			<div class="card-body">
+      			<img class="album-image" src="{{this.images.[0].url}}" alt="{{this.name}}"/>
+  				<p class="album-name">{{this.name}}</p>
+    		</div>
+  		</div>
+	</div>
+{{/each}}
+

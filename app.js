@@ -42,6 +42,40 @@ app.get('/artist-search', (req, res) => {
 	spotifyApi
   .searchArtists(artistToSearch)
   .then(data => {
+	let artistsArray = data.body.artists.items;
+    //console.log('The received data from the API: ', artistsArray);
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+	res.render('artist-search-results', {artistsArray});
+	})
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+	});
+
+	app.get('/albums/:id', (req, res, next) => {
+		// .getArtistAlbums() code goes here
+		let artistId = req.params.id;
+		//console.log ('id: ' + artistId);
+		//id: 3bgsNtcf5d5h9jbQbohfBK
+		spotifyApi
+			.getArtistAlbums(artistId)
+  				.then((data) => {
+					  let albumsArray = data.body.items;
+					  //console.log ('data: ', data.body.items[0])
+					  //console.log ('albums', albumsArray)//
+					  res.render ('albums', {albumsArray})
+					 /*  data.body.items.forEach ( (album) => {
+						console.log ('data? ' + album)
+					  } ) */
+				  } )
+	})
+
+
+
+
+app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+
+// NotaS
+
 /* 	The received data from the API:  {
 		href: 'https://api.spotify.com/v1/search?query=extremoduro&type=artist&offset=0&limit=20',
 		items: [
@@ -60,14 +94,3 @@ app.get('/artist-search', (req, res) => {
 ...
 		]
 	  } */
-	let artistsArray = data.body.artists.items;
-    console.log('The received data from the API: ', artistsArray);
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-	res.render('artist-search-results', {artistsArray});
-	})
-  .catch(err => console.log('The error while searching artists occurred: ', err));
-	});
-
-
-
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
