@@ -1,0 +1,71 @@
+*{
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 1.2em;
+}
+
+body{
+    background-image: url('/images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-color: rgb(32, 31, 31);
+}
+.title1{
+    background-color: rgba(18, 122, 44, 0.658);
+    padding: 20px 0px;
+}
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;  
+}
+form{
+    background-color: rgba(32, 31, 31, 0.555);
+    border-radius: 10px;
+    padding: 80px 50px;
+}
+input{
+    width: 400px;
+    border: 2px solid rgba(18, 122, 44, 0.795) ;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    text-align: center;
+}
+button{
+    background-color: rgba(18, 122, 44, 0.795);
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+img{
+    width:200px;
+    height: 200px;
+    object-fit: cover;
+}
+.artistname{
+    text-transform: uppercase;
+}
+
+.card{
+    background-color: rgba(167, 167, 167, 0.589);
+}
+.card>img:hover{
+    width: 250px;
+    border-radius: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+    text-shadow: 2px 2px rgb(18, 122, 44);
+}
+.nav-item{
+    border-radius: 10px;
+    text-transform: uppercase ;
+    padding: 10px 20px;
+}
+

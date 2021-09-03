@@ -1,10 +1,11 @@
 <div class='container'>
-  <div class='row'>
-      {{#each data}}
-     <div class="col-6">
-             {{> albumspartials}}
-             <a href="/songs/{{id}}">View Tracks</a>    
+    <h2 class="title1 text-white text-center">Click on your favorite album's image, and check its traks!</h2>
 
+  <div class='row justify-content-center'>
+      {{#each data}}
+     <div class="col-3 text-center">
+            <a href="/songs/{{id}}">{{> albumspartials}}</a>    
+      </div>
       {{/each}}
   </div>
 </div>

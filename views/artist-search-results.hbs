@@ -1,9 +1,10 @@
 <div class='container'>
+  <h2 class="title1 text-white text-center">Click on your favorite singer's image, and check their albums!</h2>
   <div class='row'>
       {{#each data}}
-     <div class="col-6">
-             {{> artistspartials}}
-            <a href="/albums/{{id}}">View Albums</a>    
+     <div class="col-3 my-2">
+             
+            <a href="/albums/{{id}}">{{> artistspartials}}</a> 
     </div>  
       {{/each}}
   </div>
