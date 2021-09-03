@@ -1,0 +1,21 @@
+{{!-- <script>
+function myFunction() {
+    return document.getElementById("artist").value;
+}
+</script> --}}
+{{!-- <h1>Albums from <script>myFunction();</script></h1> --}}
+<h1>Albums from Artist</h1>
+{{#each data}}
+<div>
+    {{#if images.0.url}}
+    <img src="{{images.1.url}}" alt="{{name}}">
+    {{/if}}
+</div>
+<div>
+    <h4>{{name}}</h4>
+</div>
+<div>
+    <a href="/tracks/{{id}}"><button>View Tracks</button></a>
+</div>
+{{/each}}
+
