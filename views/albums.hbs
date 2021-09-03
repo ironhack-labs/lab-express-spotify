@@ -1,8 +1,11 @@
-{{#each data}}
-    <img src="{{images.[0].url}}" alt="">
-    <p>{{name}}</p>
-
-<a href="/tracks/{{id}}">View Tracks</a>
-
-
-{{/each}}
+<div class="container row">
+  {{#each data}}
+      <div class="card col-sm-4">
+        <img class="card-img-top" src="{{images.[0].url}}" alt="Card image cap">
+        <div class="card-body">
+          <h5 class="card-title">{{name}}</h5>
+          <a href="/tracks/{{id}}" class="btn">View Tracks</a>
+        </div>
+      </div>    
+    {{/each}}  
+</div>

@@ -1,0 +1,65 @@
+/* INDEX */
+.index {
+    background-image: url("../images/spotify-background.jpeg");
+    min-width: 100vw;
+    min-height: 100vh;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divForm{
+    background-color: rgba(255, 255, 255, 0.50);
+    width: 40%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#divForm #form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#input{
+    border: 1px solid #c7c7c7;
+    width: 400px;
+}
+
+.btn{
+    margin-top: 10px;
+    width: fit-content;
+}
+
+/* ARTIST SEARCH RESULTS */
+.row{
+    margin: 0px auto;
+}
+
+.card.col-sm-4 {
+    padding: 30px;
+    border: none;
+}
+
+.card-body {
+    background: #4d4d4d;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card-title{
+    color: #fff;
+    text-align: center;
+
+}
+
+.btn{
+    background-color: #ef6866;
+    color: #fff ;
+}
+
+/* ARTIST TRACKS */
