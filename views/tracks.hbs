@@ -1,0 +1,8 @@
+<div class= "totalAlbums">
+    <div class="row">
+        {{#each tracksArr}}
+             <div class="name">{{this.name}}</div>
+             <audio controls src="{{this.preview_url}}"></audio>         
+        {{/each}}
+    </div>
+</div>
