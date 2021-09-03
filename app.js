@@ -41,6 +41,10 @@ app.get('/', (req, res) => {
 // Artist route
 // 3h he estado haciendo el mongoloDB hasta que he visto que el require de la línia #1 estaba comentada...
 app.get('/artist-search', (req, res) => {
+	// Si no pasan artista, reload al index (redirect al index)
+	if (!req.query.artist) {
+		res.redirect('/');
+	}
 	spotifyApi
 		.searchArtists(req.query.artist)
 		.then((data) => {
@@ -53,11 +57,11 @@ app.get('/artist-search', (req, res) => {
 });
 
 // Iteration #4
-app.get('/albums/:albumId', (req, res, next) => {
+app.get('/albums/:albumId', (req, res) => {
 	spotifyApi
 		.getArtistAlbums(req.params.albumId)
 		.then((data) => {
-			// console.log("The received data from the API: ", data.body.items);
+			//console.log('The received data from the API: ', data.body.items);
 			res.render('albums', {
 				data: data.body.items
 			});
