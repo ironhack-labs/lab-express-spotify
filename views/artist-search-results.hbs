@@ -1,9 +1,13 @@
-{{#each data}}
-<div class="card" style="width: 18rem;">
-    <img class="card-img-top" src="{{images.0.url}}" alt="Artist results card">
-    <div class="card-body">
-        <h5 class="card-title">{{name}}</h5>
-        <a href="/albums/{{id}}" class="btn btn-primary">View album</a>
+<div class="row row-cols-1 row-cols-md-3 justify-content-center g-4">
+    {{#each data}}
+    <div class="col-sm-3 m-5">
+        <div class="card h-100">
+            <img class="card-img-top imgBodyArtist" src="{{images.0.url}}" alt="Artist results card">
+            <div class="card-body text-center">
+                <h5 class="card-title">{{name}}</h5>
+                <a href="/albums/{{id}}" class="btn btn-danger">View album</a>
+            </div>
+        </div>
     </div>
+    {{/each}}
 </div>
-{{/each}}

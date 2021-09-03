@@ -61,6 +61,9 @@ app.get('/albums/:albumId', (req, res, next) => {
 			res.render('albums', {
 				data: data.body.items
 			});
+			// res.send({
+			// 	data: data.body.items
+			// });
 		})
 		.catch((err) => console.log('Error when getting albums: ', err));
 });

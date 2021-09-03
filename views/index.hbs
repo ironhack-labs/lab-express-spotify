@@ -1,6 +1,11 @@
-<form action="/artist-search" method="GET">
-    <label>Artist</label>
-    <input type="text" id="artist" name="artist"><br><br>
+<div class="d-flex p-2 container2 container">
+    <div id="formDiv">
+        <div class="d-flex flex-column justify-content-center align-items-center formDivInput">
+            <form action="/artist-search" method="GET" id="divForm">
+                <input type="text" id="artistInput" name="artist" placeholder="Search an artist..."><br><br>
 
-    <button type="submit" value="Submit" class="btn btn-danger"> Search for an artist </button>
-</form>
+                <button type="submit" value="Submit" class="btn btn-danger buttonInput"> Search for an artist </button>
+            </form>
+        </div>
+    </div>
+</div>
