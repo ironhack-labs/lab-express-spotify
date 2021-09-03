@@ -1,0 +1,20 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+
+.artistCard{
+    width: 300px;
+    height: 500px;
+    border: 1px solid black;
+    text-align: center;
+    margin: 50px;
+    
+}
+.artistCard img{
+    width:100%;
+    height: auto;
+}
+
