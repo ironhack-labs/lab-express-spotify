@@ -1,0 +1,25 @@
+<section class="container" id="tracks">
+  <h1 class="section-title">
+    {{albumName}}
+  </h1>
+  <div class="row header">
+    <div class="col-9"><p>Title</p></div>
+    <div class="col-3"><p>Preview</p></div>
+  </div>
+  {{#each tracksData}}
+    <div class="row track mb-1">
+      <div class="col-9 d-flex align-items-center">
+        <p>{{track_number}} · {{name}}</p>
+      </div>
+      <magic-wrapper class="col-3">
+        <span class="pad"></span>
+        <audio controls class="col-12">
+          <source src="{{preview_url}}" type="audio/ogg" />
+          <source src="{{preview_url}}" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        <span class="pad"></span>
+      </magic-wrapper>
+    </div>
+  {{/each}}
+</section>

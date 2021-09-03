@@ -1,0 +1,118 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    font-size: 10px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: whitesmoke;
+}
+
+section {
+    padding: 6rem 0;
+}
+
+#landing {
+    background: url("/images/spotify-background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+}
+
+#landing form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(245, 245, 245, 0.582);
+    padding: 3rem 5rem 2rem 5rem;
+    font-size: 1.2rem;
+}
+
+#landing form input {
+    margin-bottom: 1.5rem;
+    width: 25rem;
+    border: none;
+    padding: .4rem 1rem;
+}
+
+#landing form button {
+    background-color: #fa6863;
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: .5rem 1rem;
+    cursor: pointer;
+}
+
+/* #artist .artist-card, #artist .album-card {
+    
+} */
+
+#artists .artist-card-img, #albums .album-card-img {
+    width: 100%;
+    height: 25rem;
+    object-fit: cover;
+}
+
+#artists .artist-card-footer, #albums .album-card-footer {
+    background-color: #4d4d4d;
+    padding: 1rem 1rem 1.4rem 1rem;
+}
+
+#artists .artist-card-footer button, #albums .album-card-footer button {
+    background-color: #fa6863;
+    border: none;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: .5rem 2rem;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#artists h1, #albums h1, #tracks h1 {
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1rem;
+}
+
+#artists .section-title, #albums .section-title, #tracks .section-title {
+    text-align: center;
+    font-size: 3rem;
+    color: #4d4d4d;
+    padding: 3rem;
+    text-transform: uppercase;
+}
+
+#tracks .header {
+    background-color: #4d4d4d;
+}
+
+
+#tracks .track div {
+    background-color: #fa6863;
+}
+
+#tracks p {
+    margin: 0;
+    font-size: 1.2rem;
+    color: whitesmoke;
+    font-weight: bold;
+    padding: 1rem;
+}
+
+#tracks .pad {
+    background-color: #454545!important;
+    height: 1.4rem;
+}
+
+/*Por el poder de XML!!!*/
+magic-wrapper {
+    display: flex;
+    flex-direction: column;
+    padding: 0!important;
+}

@@ -1,0 +1,32 @@
+<section class="container" id="albums">
+  <h1 class="section-title">
+    Albums for:
+    {{artistName}}
+  </h1>
+  <div class="row g-5">
+    {{#each albumsData}}
+      <div class="col-12 col-md-6 col-lg-4  album-card">
+        {{#if (isundefined images.[0])}}
+          <img src="{{images.[0].url}}" alt="" class="album-card-img" />
+        {{else}}
+          <img
+            src="https://via.placeholder.com/300"
+            alt=""
+            class="album-card-img"
+          />
+        {{/if}}
+        <div
+          class="d-flex align-items-center justify-content-center flex-column album-card-footer"
+        >
+          <h1>{{name}}</h1>
+          <form action="/artists/{{#slug ../artistName}}{{/slug}}/albums/{{#slug name}}{{/slug}}/tracks">
+            <button>View Tracks</button>
+            <input type="hidden" value="{{name}}" name="albumName">
+            <input type="hidden" value="{{id}}" name="albumId">
+           </form>    
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
+

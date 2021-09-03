@@ -1,0 +1,30 @@
+<section class="container" id="artists">
+  <h1 class="section-title">
+    Artists matching "{{query}}"
+  </h1>
+  <div class="row g-5">
+    {{#each artistsData}}
+      <div class="col-12 col-md-6 col-lg-4 artist-card">
+        {{#if (isundefined images.[0])}}
+          <img src="{{images.[0].url}}" alt="" class="artist-card-img" />
+        {{else}}
+          <img
+            src="https://via.placeholder.com/300"
+            alt=""
+            class="artist-card-img"
+          />
+        {{/if}}
+        <div
+          class="d-flex align-items-center justify-content-center flex-column artist-card-footer"
+        >
+          <h1>{{name}}</h1>
+          <form action="/artists/{{#slug name}}{{/slug}}/albums/">
+            <button>View Albums</button>
+            <input type="hidden" value="{{name}}" name="artistName">
+            <input type="hidden" value="{{id}}" name="artistId">
+          </form>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
