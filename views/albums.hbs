@@ -7,7 +7,8 @@
     <img width = "300" height = "300" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png" alt="image of none">
     {{/if}}
     <h1>{{name}}</h1>
-    <p>{{id}}</p>
-   <a href="/albums/{{artists.[0].id}}/{{id}}">View Tracks</a>
+    <div class="btn">
+        <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
 </div>
 {{/each}}

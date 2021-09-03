@@ -16,6 +16,7 @@ const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET
   });
+
 const accessToken = spotifyApi.clientCredentialsGrant()
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
@@ -23,12 +24,10 @@ const accessToken = spotifyApi.clientCredentialsGrant()
 
 // Our routes go here:
 app.get('/', (req, res) => {
-    accessToken;
     res.render('index' , { doctitle : 'home'})
 })
 
 app.get('/artist-search', (req, res)=>{
-    accessToken;
     const artistName = req.query.name;
     spotifyApi
   .searchArtists(artistName)
@@ -40,26 +39,24 @@ app.get('/artist-search', (req, res)=>{
 })
 
 app.get('/albums/:artistId', (req, res)=>{
-    accessToken;
     const artistId = req.params.artistId
     spotifyApi.getArtistAlbums(artistId)
     .then(data => {
-          const albumsArr = data.body.items
-          console.log(albumsArr[0].artists[0].id);
+          const albumsArr = data.body.items // get array of the albums of given artist
           res.render('albums', {albums : albumsArr, doctitle : 'Albums'} )
         })
     .catch(err => console.log('The error while searching albums occurred: ', err));
 })
 
-app.get('/albums/:artistId/:albumId', (req, res) => {
-    accessToken;
+app.get('/tracks/:albumId', (req, res) => {
     const albumId = req.params.albumId;
     console.log(albumId);
-    spotifyApi.getAlbum(albumId)
+    spotifyApi.getAlbumTracks(albumId)
         .then(data => {
-          const tracks = data.body.tracks;
-          console.log(tracks);
-        //   res.render('tracks', {albums : albumsArr, doctitle : 'Albums'} )
+            const tracks = data.body.items; //get tracks array
+            
+            tracks.forEach(track => console.log(track.preview_url))
+            res.render('tracks', {tracks : tracks, doctitle : 'Tarcks'} )
         })
         .catch(err => console.log('The error while searching track occurred: ', err));
     });
