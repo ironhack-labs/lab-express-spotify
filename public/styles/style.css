@@ -1,0 +1,280 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* my CSS */
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 55%;
+  height: 35%;
+  background-color: rgb(214, 212, 212);
+  opacity: 0.5;
+}
+
+#title {
+  margin-bottom: 20px;
+  opacity: 1;
+  width: 300px;
+  color: white;
+}
+
+#searchBtn {
+  width: 180px;
+  height: 40px;
+  background-color: #fa6863;
+  border: none;
+  border-radius: 5px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  opacity: 1;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.search__item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 400px;
+  background-color: rgb(121, 118, 118);
+  margin: 20px;
+}
+
+img {
+  width: 320px;
+  height: 320px;
+}
+
+h1 {
+  font-size: 20px;
+  color: white;
+  margin: 10px 0px;
+}
+
+a {
+  text-decoration: none;
+  font-size: 12px;
+  color: white;
+}
+
+.btn {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 30px;
+  background-color: #fa6863;
+  border: none;
+  border-radius: 5px;
+
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  margin: 5px;
+}
+
+.search__album {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 320px;
+  height: 400px;
+  background-color: rgb(121, 118, 118);
+  margin: 20px;
+}
+
+h2 {
+  font-size: 30px;
+  font-weight: 600;
+  margin: 20px;
+}
+
+table {
+  margin: 30px;
+  width: 90vw;
+}
+
+th {
+  width: 70%;
+  height: 40px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 5px;
+  padding-left: 20px;
+  background-color: gray;
+  font-size: 20px;
+  font-weight: 600;
+  color: azure;
+}
+
+tr {
+  display: flex;
+}
+
+td {
+  width: 70%;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  margin: 5px;
+  background-color: lightgray;
+  padding-left: 10px;
+  font-size: 15px;
+}

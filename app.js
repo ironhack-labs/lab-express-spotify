@@ -50,12 +50,10 @@ app.get('/albums/:artistId', (req, res)=>{
 
 app.get('/tracks/:albumId', (req, res) => {
     const albumId = req.params.albumId;
-    console.log(albumId);
     spotifyApi.getAlbumTracks(albumId)
         .then(data => {
             const tracks = data.body.items; //get tracks array
-            
-            tracks.forEach(track => console.log(track.preview_url))
+            // tracks.forEach(track => console.log(track.preview_url))
             res.render('tracks', {tracks : tracks, doctitle : 'Tarcks'} )
         })
         .catch(err => console.log('The error while searching track occurred: ', err));
