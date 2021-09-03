@@ -1,0 +1,11 @@
+ name and the cover of each album and add a button/link to see the tracks (next iteration)
+
+ <div class= "totalAlbums">
+    <div class="row">
+        {{#each totalAlbumsArr}}
+             <div class="name">{{this.name}}</div>
+             <img class="img" src="{{this.images.[0].url}}" alt="{{this.name}}">
+             <a href="/albums/{{this.id}}">Tracks</a>         
+        {{/each}}
+    </div>
+</div>

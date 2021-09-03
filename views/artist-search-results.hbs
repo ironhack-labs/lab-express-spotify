@@ -1,0 +1,10 @@
+
+<div class= "totalArtists">
+    <div class="row">
+        {{#each totalArtistsArr}}
+             <div class="name">{{this.name}}</div>
+             <img class="img" src="{{this.images.[0].url}}" alt="{{this.name}}">
+             <a href="/albums/{{this.id}}">View Albums</a>         
+        {{/each}}
+    </div>
+</div>
