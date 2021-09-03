@@ -1,0 +1,11 @@
+<h2>TRACKS</h2>
+{{#each tracksList}}
+	<p>{{ name }}</p>
+    <img src="{{ images.1.url }}">
+    {{!-- <a href="/tracks/{{id}}" method="GET">See all tracks from {{ name }}</a> --}}
+	<audio controls>
+    	<source src={{ preview_url }} type="audio/mpeg">
+  		Your browser does not support the audio tag.
+	</audio>
+	{{/each}}
+    

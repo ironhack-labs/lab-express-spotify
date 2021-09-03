@@ -1,2 +1,8 @@
-<h1>SEARCH RESULTS</h1>
-<p>{{artistsList}}</p>
+<h2>SEARCH RESULTS</h2>
+	{{#each artistsList}}
+    
+		<p>{{ name }}</p>
+        <img src="{{ images.1.url }}">
+        <a href="/albums/{{id}}" method="GET">{{ name }}'s albums</a>
+
+	{{/each}}
