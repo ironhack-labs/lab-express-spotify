@@ -1,0 +1,10 @@
+<div class='container'>
+  <div class='row'>
+      {{#each data}}
+     <div class="col-6">
+             {{> artistspartials}}
+            <a href="/albums/{{id}}">View Albums</a>    
+    </div>  
+      {{/each}}
+  </div>
+</div>
