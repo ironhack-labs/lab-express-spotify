@@ -1,0 +1,23 @@
+{{#each data}}
+    <img src="{{images.[0].url}}" alt="">
+    <h1>{{name}}</h1>
+{{!--         <button href="/albums/{{id}}" >View Albums</button> --}}
+    <a href="/albums/{{id}}">View Albums</a>
+{{/each}}
+
+
+{{!-- {
+    external_urls: {
+      spotify: 'https://open.spotify.com/artist/7rtwC0CnSiquLlICYKO3lE'
+    },
+    followers: { href: null, total: 3078 },
+    genres: [],
+    href: 'https://api.spotify.com/v1/artists/7rtwC0CnSiquLlICYKO3lE',
+    id: '7rtwC0CnSiquLlICYKO3lE',
+    images: [ [Object], [Object], [Object] ],
+    name: 'Werdplay',
+    popularity: 35,
+    type: 'artist',
+    uri: 'spotify:artist:7rtwC0CnSiquLlICYKO3lE'
+  },
+ --}}
