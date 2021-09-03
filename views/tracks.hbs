@@ -1,0 +1,12 @@
+{{#each data}}
+  <img src="{{images.0.url}}" />
+  <h1>{{name}}</h1>
+
+  <div>
+    <audio controls>
+      <source src="{{preview_url}}" type="audio/ogg" />
+      <source src="{{preview_url}}" type="audio/mpeg" />
+      Your browser does not support the audio element.
+    </audio>
+  </div>
+{{/each}}
