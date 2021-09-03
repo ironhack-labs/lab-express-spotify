@@ -1,0 +1,20 @@
+<h3>Title</h3>
+
+{{#each songsList}}
+
+<ul>
+    <li>
+        <p>{{name}}</p>
+    </li>
+</ul>
+<ul>
+    <li>
+        <audio controls src="{{preview_url}}">
+            Your browser does not support the
+            <code>Preview</code> element.
+        </audio>
+    </li>
+</ul>
+
+
+{{/each}}

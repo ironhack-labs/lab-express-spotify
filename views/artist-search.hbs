@@ -1,0 +1,25 @@
+<h1>this is the search result</h1>
+
+{{#each artistList}}
+
+<div class="artist-list-box">
+    <div class='artist-second-box'>
+        <div>
+            <h3>
+                {{name}}
+            </h3>
+        </div>
+        <div>
+            {{#if images.1.url}}
+            <img src="{{images.1.url}}" alt="">
+            {{/if}}
+        </div>
+        <div>
+            <button>
+                <a href="/albums/{{id}}">View Albums</a>
+            </button>
+        </div>
+    </div>
+</div>
+
+{{/each}}

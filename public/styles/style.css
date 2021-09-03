@@ -1,0 +1,74 @@
+html body{
+
+    margin:0px;
+    height:100px;
+}
+
+body{
+
+    font-family: 'Inconsolata', monospace;
+}
+
+.search-wrapper{
+
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 300px;
+    margin-left:600px;
+    position:absolute;
+    background-color:aliceblue;
+    opacity: 0.5;
+    width:350px;
+    height:150px;
+    border-radius:5px;
+
+}
+.home-form{
+    display:flex;
+    flex-direction: column;
+    padding:30px;
+}
+
+input{
+    margin-bottom:10px;
+    background:white;
+    outline:none;
+    border-radius:5px;
+    border-top-style: hidden;
+    border-right-style: hidden;
+    border-left-style: hidden;
+    border-bottom-style: groove;
+    background-color:darkgray;
+    width:150px;
+    height:20px;
+}
+
+button{
+    
+    color:darkblue;
+    border-radius:10px;
+}
+.search-background{
+
+    background-color: blue;
+    background-size:cover;
+    height:1000%;
+    background-image: url('/images/spotify-background.jpeg');
+}
+
+.artist-list-box{
+
+    display: flex;
+    align-items:flex-start;
+    justify-content:center;
+    flex-direction: row;
+}
+
+.artist-second-box{
+
+    display:flex;
+    align-items:flex-start
+
+}
