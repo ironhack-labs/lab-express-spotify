@@ -1,6 +1,19 @@
 {{#each albums}}
-<h1>{{name}}</h1>
-<button class="button" onclick="window.location.href='#';">
-    View Tracks
-</button>
+
+    <div>
+
+        <div>
+            <img src="{{images.[0].url}}" alt="image of {{name}}" style="height: 10cm;">
+        </div>
+
+        <div>
+            <h1>{{name}}</h1>
+        </div> 
+
+        <button class="button" onclick="window.location.href='/tracks/{{id}}';">
+         View Tracks
+        </button>
+        
+    </div>    
+
 {{/each}}

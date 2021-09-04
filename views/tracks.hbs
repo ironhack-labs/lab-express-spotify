@@ -1,0 +1,17 @@
+{{#each tracks}}
+
+        <figure>
+            <figcaption>{{name}}</figcaption>
+            <audio
+                controls
+                src="{{preview_url}}">
+                Your browser does not support the
+                 <code>audio</code> element.
+            </audio>
+        </figure>
+
+        {{!-- <button class="button" onclick="window.location.href='/tracks/{{id}}';">
+         View Tracks
+        </button> --}}
+
+{{/each}}
