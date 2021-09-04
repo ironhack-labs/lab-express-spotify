@@ -1,0 +1,8 @@
+{{#each data}}
+<img src='{{images.[0].url}}' alt="a picture of {{name}}">
+<div>
+<h1>{{name}}</h1>
+{{!-- <h1>Popularity:{{Popularity}}</h1> --}}
+<a href="/albums/{{id}}">View Albums</a>
+</div>
+{{/each}}
