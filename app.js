@@ -34,9 +34,11 @@ app.get("/", (req, res) => {
 app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.artist)
-    .then((data) => {
-      // console.log("The received data from the API: ", data.body.artists);
-      res.render("artist-search-results", { data: data.body.artists.items });
+    .then((response) => {
+      console.log("The received data from the API: ", response.body.artists);
+      res.render("artist-search-results", {
+        artists: response.body.artists.items,
+      });
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     })
     .catch((err) =>
@@ -47,18 +49,19 @@ app.get("/artist-search", (req, res) => {
 app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.artistId)
-    .then((data) => {
-      res.render("albums", { data: data.body.items });
+    .then((response) => {
+      console.log(response.body.items[0]);
+      res.render("albums", { albums: response.body.items });
     })
     .catch((err) => console.log("Something went wrong uhh ohhh: ", err));
 });
 
-app.get("/tracks/:albumsId", (req, res) => {
+app.get("/tracks/:albumId", (req, res) => {
   spotifyApi
-    .getAlbumTracks(req.params.albumsId)
-    .then((data) => {
-      console.log({ data: data.body.items });
-      res.render("tracks", { data: data.body.items });
+    .getAlbumTracks(req.params.albumId)
+    .then((response) => {
+      console.log({ tracks: response.body.items });
+      res.render("tracks", { tracks: response.body.items });
     })
     .catch((err) => console.log("Something went wrong uhh ohhh: ", err));
 });
