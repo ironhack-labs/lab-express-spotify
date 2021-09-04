@@ -1,0 +1,8 @@
+{{#each data.body.items}}
+
+<h2>{{this.name}}</h2>
+<audio controls>
+    <source src="{{this.preview_url}}">
+</audio>
+
+{{/each}}
