@@ -22,9 +22,26 @@ body{
     align-items: center;
 }
 
+#search{
+    width:450px;
+    height:30px;
+    border:none;
+}
+#search-btn{
+    width:70px;
+    height:30px;
+    border:none;
+    padding:5px;
+    background-color: rgb(238, 26, 26);
+    color: white;
+    font-family: arial;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
 
 
-
+/*ARTIST AND ALBUMS*/
 
 .container{
     display: flex;
@@ -38,7 +55,7 @@ body{
     height: 400px;
     
     text-align: center;
-    margin: 50px;
+    margin: 100px;
     background-color: rgb(170, 162, 162);
     font-family: arial;
     color: rgb(61, 61, 61);
@@ -48,3 +65,24 @@ body{
     height: auto;
 }
 
+
+
+/*TRACKS*/
+
+.track-container{
+    display:flex ;
+    flex-wrap: wrap;
+    background-color: white;
+}
+
+.tracks{
+    width: 100%;
+    
+    margin: 5px 0;
+    padding: 5px 20px;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(99, 96, 96, 0.438);
+    font-family: arial;
+    font-weight: bold;
+}
