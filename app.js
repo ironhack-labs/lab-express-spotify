@@ -92,3 +92,5 @@ app.get("/tracks/:albumId", (req, res, next) => {
     }
   );
 });
+
+// I NEED TO IMPROVE THE CSS, IT's really bad right now
