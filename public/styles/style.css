@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+body{
+    font-family:raleway;
+}
+.container-body{
+    background: rgb(74,74,74);
+    background: linear-gradient(180deg, rgba(74,74,74,1) 0%, rgb(27, 27, 27) 500px);
+    background-size: cover; 
+}
+
+.logo-header{
+    margin-top:30px;
+    margin-left: 30px;
+    width: 60px;
+    height: 60px;
+    margin-bottom:0;
+}
+
+.logo-header img{
+    width: 100%;
+}
+
+main{
+    margin-bottom: 500px;
+}
+
+
+/*HOME//////////////////////////////////*/
+
+
+.home-container{
+    height: 500px;
+    text-align: center;
+
+
+}
+
+.slogan{
+    color: rgb(177, 177, 177);
+    font-size: 5rem;
+    margin-top:200px;
+
+}
+
+#form{
+    border: 2px solid rgb(177, 177, 177);
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0);
+    width: 500px;
+    height: 100px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 70px;
+    text-align: center;
+
+    
+}
+
+#query{
+    width: 80%;
+    font-size: 2rem;
+    font-weight:300;
+    margin-top:23px;
+    border: none;
+    color: rgb(177, 177, 177);
+    background-color:rgba(255, 0, 0, 0);
+    outline: none;
+
+    
+}
+
+/*////////////////////////////////////////////*/
+
+.artistCard{
+    background-color:rgba(10, 10, 10, 0.521);
+    border-radius:10px;
+    width: 30%;
+    height: 400px;
+    margin-left: 3%;
+    margin-top: 3%;
+    text-align: center;
+    transition: all 0.5s;
+    
+
+}
+
+.artistCard:hover{
+    transform: scale(1.1)
+
+}
+
+.artistCard a{
+    text-decoration: none;
+}
+
+
+
+
+.artistImg{
+    width: 80%;
+    margin-left:auto;
+    margin-right: auto;
+    margin-top: 25px;
+
+}
+
+.artistImg img{
+    width: 270px;
+    height: 270px;
+    border-radius: 50%;
+    background-color:rgba(255, 255, 255, 0);
+    vertical-align:none;
+    width:100%
+
+}
+
+.artistName{
+    color:  rgb(143, 143, 143);
+    margin-top: 30px;
+
+}
+
+.artistName h5{
+    font-size: 1.8rem;
+    font-weight: 200;
+}
+
+
+
+.albumImg{
+    width: 100%;
+    margin-left:auto;
+    margin-right: auto;
+    
+}
+
+.albumImg img{
+    width: 100%;
+    height: auto;
+    background-color:rgba(255, 255, 255, 0);
+    vertical-align:none;
+    width:100%
+}
+
+.albumName{
+    color:  rgb(177, 177, 177);
+    margin-top: 18px;
+
+}
+
+.albumName h5{
+    font-size: 1.2rem;
+    font-weight: 200;
+    margin-bottom: 30px;
+}
+
+.albumHeader{
+    height: 100px;
+    margin-left: 185px;
+    margin-right: 170px;
+    border-bottom:  2px solid rgb(177, 177, 177);
+    margin-bottom: 15px;
+    padding-top: 30px
+}
+
+.albumHeader h1{
+    font-size: 2.5rem;
+    color:  rgb(177, 177, 177);
+    font-weight: 400;
+
+}
+
+
+
+
+
+.trackInfo{
+    display:flex;
+    justify-content:flex-start;
+    align-items:flex-end;
+    padding: 0;
+    background-color:none;
+    width: 50%;
+    height:50px;
+    margin-bottom:30px
+}
+
+.number{
+    font-size:1.2rem;
+    font-weight: 200;
+    color: rgb(136, 136, 136);
+    margin: 0;
+}
+
+.title{
+    font-size:1.3rem;
+    font-weight: 300;
+    color:rgb(177, 177, 177);
+    margin: 0;
+    margin-left: 20px;
+}
