@@ -1,0 +1,11 @@
+<h1>Search results for: {{artist}}</h1>
+{{#each artistList}}
+    <p>{{this.name}}</p>
+    {{#if this.images}}
+        <img src="{{this.images.2.url}}" alt="">
+    {{/if}}
+    <button><a href="/albums/{{this.id}}">View albums</a></button>
+{{/each}}
+
+<br>
+<button><a href="/">Go back</button></button>
