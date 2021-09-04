@@ -1,0 +1,23 @@
+<div class="d-flex flex-wrap justify-content-evenly m-4">
+  {{#each data.body.artists.items}}
+    <div
+      class="bg-image d-flex justify-content-center align-items-end m-2"
+      style="
+      background-image: url('{{this.images.0.url}}');
+      width: 350px; height:450px;
+    "
+    >
+      <div
+        class="d-flex flex-column justify-content-center align-items-center text-white"
+      >
+        <div>
+          <h4>{{this.name}}</h4>
+        </div>
+        <div>
+          <a class="btn btn-danger mb-2" href="/albums/{{this.id}}">View Albums</a>
+        </div>
+        {{!-- <img src="{{this.images.0.url}}" alt="artist image"> --}}
+      </div>
+    </div>
+  {{/each}}
+</div>

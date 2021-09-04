@@ -1,0 +1,37 @@
+{{!-- {{#each data.body.items}}
+  <h1>Albums by {{data.body.items.artists.0.name}}</h1>
+  <ul></ul>
+  <h2>{{this.name}}</h2>
+  <img src="{{this.images.0.url}}" alt="artist image" />
+  <a href="/tracks/{{this.id}}">View Tracks</a>
+
+{{/each}} --}}
+
+<h1>Albums</h1>
+
+<div class="d-flex flex-wrap justify-content-evenly m-4">
+
+  {{#each data.body.items}}
+
+    <div
+      class="bg-image d-flex justify-content-center align-items-end m-2"
+      style="
+      background-image: url('{{this.images.0.url}}');
+      width: 450px; height: 450px;
+    "
+    >
+      <div
+        class="d-flex flex-column justify-content-center align-items-center text-white"
+      >
+        <div>
+          <h4>{{this.name}}</h4>
+        </div>
+        <div>
+          <a class="btn btn-danger mb-2" href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
+        {{!-- <img src="{{this.images.0.url}}" alt="artist image"> --}}
+      </div>
+    </div>
+  {{/each}}
+
+</div>
