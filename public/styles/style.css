@@ -11,7 +11,7 @@ body{
 .logo-header{
     margin-top:30px;
     margin-left: 30px;
-    width: 60px;
+    width: 150px;
     height: 60px;
     margin-bottom:0;
 }
@@ -21,10 +21,20 @@ body{
 }
 
 main{
-    margin-bottom: 500px;
+    margin-bottom: 300px;
 }
 
+bottom{
+    text-align: center;
+    height:100px;
+}
 
+bottom h5{
+    font-size: 0.8rem;
+    font-weight: 300;
+    color: rgb(177,177,177);
+    margin-bottom:50px;
+}
 /*HOME//////////////////////////////////*/
 
 
@@ -35,10 +45,15 @@ main{
 
 }
 
+.logo{
+    width: 5%;
+    margin-top: 100px;
+}
+
 .slogan{
-    color: rgb(177, 177, 177);
+    color: rgb(236, 236, 236);
     font-size: 5rem;
-    margin-top:200px;
+    margin-top:30px;
 
 }
 
