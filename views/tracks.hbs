@@ -1,0 +1,18 @@
+<div id="tracks">
+  <div class="titulo">
+    <p>Title</p>
+    <p>Listen</p>
+  </div>
+
+  {{#each data}}
+
+    <div class="filas">
+      <p class="tituloCancion">{{name}}</p>
+      <audio controls class="audio">
+        <source src="{{preview_url}}" type="audio/mpeg" />
+        Your browser does not support the audio element.
+      </audio>
+
+    </div>
+  {{/each}}
+</div>
