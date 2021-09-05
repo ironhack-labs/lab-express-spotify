@@ -62,7 +62,7 @@ app.get('/albums/:id', (req, res) => {
     spotifyApi
         .getArtistAlbums(req.params.id)
         .then(data => {
-            console.log('The received data from the API: ', data.body.items);
+            console.log('The received data from the API: ', data.body.items[0].artists[0].name);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
             res.render('albums', {
                 data
