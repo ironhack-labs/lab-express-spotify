@@ -1,8 +1,22 @@
+
+
+<table>
+  <thead >
+    <th class="header">Title</th>
+    <th class="header">Listen</th>
+  </thead>
 {{#each data.body.items}}
 
-<h2>{{this.name}}</h2>
-<audio controls>
-    <source src="{{this.preview_url}}">
-</audio>
 
-{{/each}}
+  <tr class="rows">
+    <td>{{this.name}}</td>
+    <td><audio controls>
+        <source src="{{this.preview_url}}">
+    </audio></td>
+    
+  </tr>
+  {{/each}}
+
+</table>
+
+
