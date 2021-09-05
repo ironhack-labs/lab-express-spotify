@@ -30,18 +30,17 @@ app.get("/", (req, res) => {
   res.render("home-page");
 });
 app.get("/artist-search", (req, res) => {
-  res.render("artist-search");
+  spotifyApi
+    .searchArtists(req.query.artistName) /*'HERE GOES THE QUERY ARTIST'*/
+    .then((data) => {
+      console.log("The received data from the API: ", data.body.artists);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render("artist-search-results", { artists: data.body.artists.items });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
 });
-// spotifyApi
-//   .searchArtists("artistName") /*'HERE GOES THE QUERY ARTIST'*/
-//   .then((data) => {
-//     console.log("The received data from the API: ", data.body);
-//     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-//     return spotifyApi.getArtist(data);
-//   })
-  .catch((err) =>
-    console.log("The error while searching artists occurred: ", err)
-  );
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
