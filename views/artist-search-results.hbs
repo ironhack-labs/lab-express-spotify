@@ -1,0 +1,20 @@
+<div class="bg-white h-100">
+    <div class="container text-center">
+        <h1>Albums</h1>
+        <ul class="row">
+            {{#each data.body.artists.items}}
+            <div class="col-md-4">
+                <div class="card-group">
+                <div class="card mb-4">
+                    <img src="{{this.images.1.url}}" class="card-img-top" alt="grey">
+                    <div class="card-footer bg-dark text-white">
+                        <h5 class="card-title">{{this.name}}</h5>
+                        <a class="btn btn-danger btn-sm" href="/albums/{{this.id}}">View Albums</a>
+                    </div>
+                </div>
+            </div>
+            </div>
+            {{/each}}
+        </ul>
+    </div>
+</div>

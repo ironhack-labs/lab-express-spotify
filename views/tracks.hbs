@@ -1,0 +1,7 @@
+<ul>
+    {{#each data.body.items}}
+    <li>{{this.track_number}}. {{this.name}}</li>
+   <audio src="{{this.uri}}"></audio>
+    {{/each}}
+</ul>
+{{!-- type="audio/ogg" --}}

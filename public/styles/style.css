@@ -1,0 +1,14 @@
+/* body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+} */
+
+
+
+.search-box-white {
+    background-color: rgba(255, 255, 255, 0.411);
+}
+
+.card {
+    max-height: 10em;
+}
