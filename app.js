@@ -45,18 +45,37 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
-// app.get("/album/:id", (req, res) => {
-//   spotifyApi
-//     .searchArtists("artistName") //method
-//     .then((data) => {
-//       console.log("The received data from the API: ", data.body);
-//       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-//       res.render("artistName", data.body);
-//     })
-//     .catch((err) =>
-//       console.log("The error while searching artists occurred: ", err)
-//     );
-// });
+//iteration4
+// create albums.hbs con combre, album y boton.
+// create app con la siguiente function...
+
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then(function (data) {
+      console.log("Show some ArtistId", data.body.items);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render("artistId", { albums: data.body.albums.items });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+}); //code not working!!!!!!!!!!!!!!!!!!!!
+
+//iteration5
+
+app.get("/track/:albumId", (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then(function (data) {
+      console.log("Show some albumId", data.body.items);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render("albumId", {});
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
