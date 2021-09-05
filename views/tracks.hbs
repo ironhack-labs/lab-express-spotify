@@ -1,0 +1,13 @@
+<h1>Listen to the tunes</h1>
+
+<ul>
+    {{#each allTracks}}
+    <li>
+        {{this.name}} — <audio controls src="{{this.preview_url}}"></audio>
+
+    </li>
+
+    {{/each}}
+
+
+</ul>
