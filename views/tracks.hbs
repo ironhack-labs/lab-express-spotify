@@ -1,0 +1,28 @@
+<div class="backgroundArtist">
+  <div>
+    <h1>Las canciones del album {{@artist}}son las siguientes: </h1></div>
+  <div class="general">
+    {{#each dataTracks}}
+      <div class="card" style="width: 22rem;">
+        <div class="card-body">
+          <h5 class="card-title">{{name}}</h5>
+          <p class="card-text">
+            <figure>
+              <figcaption></figcaption>
+              <audio controls src="{{preview_url}}">
+                Your browser does not support the
+                <code>audio</code>
+                element.
+              </audio>
+            </figure></p>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+
+
+  <a
+    class="btn btn-primary BtnBack"
+    href="javascript:history.back()"
+    role="button"
+  >Volver a los albumes</a>

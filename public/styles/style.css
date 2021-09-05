@@ -1,0 +1,77 @@
+.homeClass {
+  background-image: url(/images/conciertos.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.homeForm {
+  align-content: center;
+}
+
+.row {
+  height: 40vh;
+}
+
+.align-self-center {
+  display: flex;
+  justify-content: center;
+  margin-top: -4rem;
+}
+
+.align-self-end {
+  display: flex;
+  justify-content: center;
+}
+
+h1 {
+  font-weight: bold;
+  font-size: 4rem;
+  text-align: center;
+}
+
+::placeholder {
+  text-align: center;
+}
+
+.radiusForm {
+  border-radius: 30px;
+  text-align: center;
+}
+
+.lupa {
+  height: 1.75rem;
+}
+
+.redondaButton {
+  border-radius: 150px;
+  margin-left: 2rem;
+  margin-top: -4rem;
+}
+
+.general {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+  margin-top: 2rem;
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.backgroundArtist {
+  background-image: url(/images/conciertos.jpg);
+  background-size: cover;
+}
+
+.BtnBack {
+  margin-top: 3rem;
+  display: flex;
+  justify-content: center;
+}
