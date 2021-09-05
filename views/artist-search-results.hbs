@@ -3,10 +3,10 @@
   {{#each artists}}
     <div>
       <img src={{this.images.2.url}} alt="" />
-    </div>
-    <h2>{{this.name}}</h2>
+      <h2>{{this.name}}</h2>
 
-    <button type="submit">View album</button>
+      <button type="submit"><a href="/albums/someArtistIdGoesHere">View Albums</a></button>
+    </div>
 
   {{/each}}
 

@@ -41,6 +41,19 @@ app.get("/artist-search", (req, res) => {
       console.log("The error while searching artists occurred: ", err)
     );
 });
+// 1.- crear albums.hbs con nombre, album y boton.
+// 2.- crear app con la siguiente funcion
+app.get("/artist-search-results", (req, res, next) => {
+  spotifyApi
+    .getArtistAlbums()
+    .then((data) => {
+      console.log("Artist albums", data.body);
+      // res.render("/albums/:artistId", {});
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
