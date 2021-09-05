@@ -63,7 +63,7 @@ h1 {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: darkgray;
+  background-color: rgb(242 182 59 / 96%);
 }
 
 .backgroundArtist {
