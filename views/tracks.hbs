@@ -1,19 +1,24 @@
-{{#each data}}
-
-
-
-<h1>{{name}}</h1>
-
-
-
-<audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-
-
-
-
-{{/each}}
+<div class="container">
+  <div class="headerTracks d-flex">
+    <div class="titleHeaderTracks">
+      <h1>Title</h1>
+    </div>
+    <div class="listenHeaderTracks">
+      <h1>Listen</h1>
+    </div>
+  </div>
+  {{#each data}}
+    <div class="d-flex align-items-center divContainerTracks">
+      <div class="titleHeaderTracks">
+        <h5 class="trackTitle">{{name}}</h5>
+      </div>
+      <div>
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/ogg" />
+          <source src="{{preview_url}}" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+      </div>
+    </div>
+  {{/each}}
+</div>

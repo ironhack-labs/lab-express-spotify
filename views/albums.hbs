@@ -1,12 +1,18 @@
-{{#each data}}
-
-<img src="{{images.[0].url}}">
-
-<h1>{{name}}</h1>
-<button>  <a href="/tracks/{{id}}" >View Tracks</a></button>
-
-
-
-
-
-{{/each}}
+<div class="row row-cols-1 row-cols-md-3 justify-content-center g-4">
+  {{!-- <h1>{{data.artist.name}}</h1> --}}
+  {{#each data}}
+    <div class="col-sm-3 m-5">
+      <div class="card h-100">
+        <img
+          class="card-img-top imgBodyArtist"
+          src="{{images.0.url}}"
+          alt="Artist results card"
+        />
+        <div class="card-body text-center">
+          <h5 class="card-title">{{name}}</h5>
+          <a href="/albums/tracks/{{id}}" class="btn btn-danger">View tracks</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
