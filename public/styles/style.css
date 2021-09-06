@@ -4,8 +4,14 @@ ul {
     flex-wrap: wrap;
 }
 
+th {
+    padding-left: 16px;
+    padding-right: 120px;
+}
+
 li {
     display: flex;
+    border-radius: 20px;
     flex-direction: column;
     margin: 30px;
     background-color: #343a40;
@@ -18,6 +24,7 @@ img {
     width: 400px;
     height: 484px;
     object-fit: cover;
+    border-radius: 20px;
 }
 
 h1 {
@@ -32,8 +39,24 @@ tr {
     font-weight: bold;
     margin: 30px;
     /* background-color: darkgrey; */
-    /* flex-direction: column; */
+}
 
+td {
+    margin-left: 10px;
+}
+
+.rows {
+    background-color: #6c757d;
+    border-radius: 15px;
+    color: white;
+    /* display: flex;
+    align-items: center; */
+    /* flex-direction: column; */
+}
+
+audio {
+    padding-top: 6px;
+    margin-right: 10px;
 }
 
 thead {
@@ -45,4 +68,14 @@ thead {
 
 table {
     width: 100%;
+}
+
+#artist {
+    padding: 0px 20px 0px 20px;
+    width: 450px;
+    font-size: 30px;
+    border-radius: 20px;
+    border-style: none;
+    outline: none;
+    /* margin: 20px; */
 }
