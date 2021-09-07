@@ -1,2 +1,12 @@
-<h1>busca artista
-</h1>
+<h1>Search results</h1>
+<div>
+  {{#each artists}}
+    <div>
+      <img src={{this.images.2.url}} alt="" />
+      <h2>{{this.name}}</h2>
+      <a href="/albums">View Albums</a>
+    </div>
+
+  {{/each}}
+
+</div>

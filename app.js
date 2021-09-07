@@ -26,16 +26,17 @@ spotifyApi
   );
 
 // Our routes go here:
+// ** Home page Route **
 app.get("/", (req, res) => {
   res.render("home-page");
 });
 app.get("/artist-search", (req, res) => {
   spotifyApi
-    .searchArtists(req.query.artistName) /*'HERE GOES THE QUERY ARTIST'*/
+    .searchArtists(req.query.artist) /*'HERE GOES THE QUERY ARTIST'*/
     .then((data) => {
       console.log("The received data from the API: ", data.body.artists);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results", { artists: data.body.artists.items });
+      res.render("artist-search", { artists: data.body.artists.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -43,12 +44,12 @@ app.get("/artist-search", (req, res) => {
 });
 // 1.- crear albums.hbs con nombre, album y boton.
 // 2.- crear app con la siguiente funcion
-app.get("/artist-search-results", (req, res, next) => {
+app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
-    .getArtistAlbums()
+    .getArtistAlbums(req.params.artistId)
     .then((data) => {
       console.log("Artist albums", data.body);
-      // res.render("/albums/:artistId", {});
+      res.render("albums", { albums: data.body.artist.albums });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
