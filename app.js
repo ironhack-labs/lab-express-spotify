@@ -34,11 +34,11 @@ app.get("/", (req, res) => {
 
 app.get("/artist-search", (req, res) => {
   spotifyApi
-    .searchArtists(req.query.artist) //method
+    .searchArtists(req.query.artist) //query is use in a form
     .then((data) => {
       console.log("The received data from the API: ", data.body.artists);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results", { artists: data.body.artists.items });
+      res.render("artist-search", { artists: data.body.artists.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -50,27 +50,28 @@ app.get("/artist-search", (req, res) => {
 // create app con la siguiente function...
 
 app.get("/albums/:artistId", (req, res, next) => {
+  //end point
   spotifyApi
-    .getArtistAlbums(artistId)
+    .getArtistAlbums(req.params.artistId) //you dont pass this to the .nbs file!!!
     .then(function (data) {
-      console.log("Show some ArtistId", data.body.items);
+      console.log("Show Artist Albums", data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artistId", { albums: data.body.albums.items });
+      res.render("albums", { albums: data.body.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
-}); //code not working!!!!!!!!!!!!!!!!!!!!
+});
 
 //iteration5
 
-app.get("/track/:albumId", (req, res, next) => {
+app.get("/tracks/:trackId", (req, res, next) => {
   spotifyApi
-    .getAlbumTracks(albumId)
+    .getAlbumTracks(req.params.trackId)
     .then(function (data) {
-      console.log("Show some albumId", data.body.items);
+      console.log("Show tracks album", data.body.items);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("albumId", {});
+      res.render("tracks", { track: data.body.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

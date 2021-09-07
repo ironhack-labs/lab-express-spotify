@@ -1,9 +1,9 @@
-
 <h1>Albums</h1>
 
 {{#each albums}}
-    <h2>{{this.name}}</h2>
-    <img src={{this.images.[0].url}} alt="" /> 
-    <button type="submit"><a href="/albums/:artistId"><a></button>  
+<div>
+<img src={{this.images.1.url}} alt="" />
+  <h2>{{this.name}}</h2>
+  <button type="submit"><a href="/tracks/{{this.id}}">View Tracks<a></button>
+</div>
 {{/each}}
-  
