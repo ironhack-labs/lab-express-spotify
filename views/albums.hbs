@@ -1,1 +1,11 @@
-<h1>Albums</h1>
+<h1>Albums for:
+  <span>{{this.artists}}</span>
+</h1>
+{{#each albums}}
+  <div>
+    <img src={{this.images.1.url}} alt="" />
+  </div>
+  <div>{{this.name}}</div>
+  <a href="/track/{{this.id}}">View Tracks</a>
+
+{{/each}}
