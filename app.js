@@ -43,16 +43,33 @@ app.get("/artist-search", (req, res) => {
 });
 
 // Get albums from artist search
-app.get("/albums/:albumId", (req, res) => {
+// app.get("/albums/:albumId", (req, res) => {
+//   spotifyApi
+//   .getArtistAlbums(req.params.albumId).
+//   then(
+//     function (data) {
+//       spotifyApi.getArtist(artistId)
+//       .then((artist) => {
+//         res.render("albums", { data: data.body.items, artist });
+//       })
+//     },
+//     function (err) {
+//       console.error("The error while searching albums occurred: ", err);
+//     }
+//   );
+// });
+
+app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
-  .getArtistAlbums(req.params.albumId).then(
-    function (data) {
-      res.render("albums", { data: data.body.items });
-    },
-    function (err) {
-      console.error("The error while searching albums occurred: ", err);
-    }
-  );
+    .getArtistAlbums(req.params.artistId)
+    .then((data) => {
+      spotifyApi.getArtist(req.params.artistId).then((artist) => {
+        res.render("albums", { data, artist });
+      });
+    })
+    .catch((err) =>
+      console.log("The error while searching for the albums occurred: ", err)
+    );
 });
 
 // Get tracks from album
@@ -65,8 +82,7 @@ app.get("/tracks/:albumId", (req, res) => {
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
-  spotifyApi
-  .getArtistAlbums(req.params.albumId).then(
+  spotifyApi.getArtistAlbums(req.params.albumId).then(
     function (data) {
       res.render("tracks", { data: data.body.items });
     },

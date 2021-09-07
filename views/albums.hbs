@@ -1,11 +1,5 @@
-{{!-- <script>
-function myFunction() {
-    return document.getElementById("artist").value;
-}
-</script> --}}
-{{!-- <h1>Albums from <script>myFunction();</script></h1> --}}
-<h1>Albums from Artist</h1>
-{{#each data}}
+<h1>Albums from {{artist.body.name}}</h1>
+{{#each data.body.items}}
 <div>
     {{#if images.0.url}}
     <img src="{{images.1.url}}" alt="{{name}}">
