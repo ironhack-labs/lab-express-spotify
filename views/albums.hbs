@@ -1,0 +1,17 @@
+<h1>Albums for: {{data.body.items.0.artists.0.name}}</h1>
+
+<ul class="">
+{{#each data.body.items}}
+<div>
+    <li>
+        <img src="{{this.images.0.url}}" alt="artist image">
+        <h2>{{this.name}}</h2>
+        <form  action="/tracks/{{this.id}}">
+    <input class="btn btn-danger" type="submit" value="View Tracks" />
+</form>
+
+    </li>
+</div>
+{{/each}}
+
+</ul>

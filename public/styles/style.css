@@ -1,0 +1,70 @@
+ul {
+    display: flex;
+    flex-direction: row; 
+}
+
+th {
+    padding-left: 15px;
+    padding-right: 100px;
+}
+
+li {
+    display: flex;
+    flex-direction: column;
+    border-radius: 18px;
+    margin: 30px;
+    background-color: #282b2e;
+    align-items: center;
+    color: white;
+    
+}
+
+img {
+    width: 100%;
+    size: cover;
+    border-radius: 20px;
+}
+
+h1 {
+    text-align: center;
+}
+
+tr {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+    margin: 20px;
+}
+
+td {
+    margin-left: 12px;
+}
+
+.rows {
+    background-color: #6c757d;
+    border-radius: 12px;
+    color: white;
+    
+}
+
+thead {
+    background-color: #343a40;
+    height: 70px;
+    font-size: 30px;
+    color: white;
+}
+
+table {
+    width: 100%;
+}
+
+#artist {
+    width: 100%;
+    font-size: 25px;
+}
+
+audio {
+    padding-top: 10px;
+    margin-right: 20px;
+}
