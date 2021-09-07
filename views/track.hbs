@@ -1,0 +1,19 @@
+<table>
+    <thead>
+        <th class="header">Title</th>
+        <th class="header">Listen</th>
+    </thead>
+    {{#each data.body.items}}
+
+
+    <tr class="rows">
+
+        <td>{{this.name}}</td>
+        <td><audio controls>
+                <source src="{{this.preview_url}}">
+            </audio></td>
+
+    </tr>
+    {{/each}}
+
+</table>
