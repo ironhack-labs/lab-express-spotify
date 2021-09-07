@@ -1,0 +1,9 @@
+<h1>SPOTIFY TRACKS</h1>
+<ul>
+  {{#each items}}
+    <li>
+      {{this.name}}
+      <img src="{{this.images.0.url}}" />
+    </li>
+  {{/each}}
+</ul>
