@@ -1,0 +1,16 @@
+<div class='albums'>
+  <h1>Albums for: {{artist.body.name}}</h1>
+
+  {{#each data.body.items}}
+
+    <img class='albumImage' src='{{images.1.url}}' alt='' />
+
+    <div class='albumName'>
+      {{name}}
+
+      <a href='/tracks/{{id}}'><button class='albumBtn'>View Tracks</button></a>
+    </div>
+
+  {{/each}}
+
+</div>

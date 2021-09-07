@@ -1,0 +1,95 @@
+.homepage {
+  background-image: url('../images/spotify-background.jpeg');
+  height: 100vh;
+  width: 100vw;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 350px;
+  height: 30px;
+}
+
+.homeBtn {
+  text-align: center;
+  background-color: tomato;
+  color: white;
+  border: 0;
+  margin: 10px;
+  padding: 10px;
+  left: 40%;
+}
+
+.form {
+  padding: 60px 120px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.artists {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.artistImage {
+  margin: 0 4%;
+  width: 320px;
+}
+
+.artistName {
+  margin: 0 4%;
+  width: 320px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.artistBtn {
+  padding: 10px;
+  background-color: tomato;
+  border: 0;
+  margin-top: 5px;
+  color: white;
+  border-radius: 5px;
+}
+
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  height: 100%;
+}
+
+.albumImage {
+  margin: 0 4%;
+  width: 320px;
+}
+
+.albumName {
+  margin: 0 4%;
+  width: 320px;
+  height: 75px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(53, 53, 53);
+  color: white;
+}
+
+.albumBtn {
+  padding: 10px;
+  background-color: tomato;
+  border: 0;
+  margin-top: 5px;
+  color: white;
+  border: 2px solid black;
+  border-radius: 5px;
+}
