@@ -55,12 +55,12 @@ app.get("/albums/:artistId", (req, res, next) => {
       console.log("The error while searching artists occurred: ", err)
     );
 });
-app.get("/track/:trackId", (req, res, next) => {
+app.get("/track/:albumId", (req, res, next) => {
   spotifyApi
-    .getAlbumTracks(req.params.trackId)
+    .getAlbumTracks(req.params.albumId)
     .then((data) => {
       console.log("Album tracks", data.body.items);
-      res.render("track", { tracks: data.body.items });
+      res.render("track", { track: data.body.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

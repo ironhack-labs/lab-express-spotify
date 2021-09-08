@@ -1,11 +1,14 @@
-<h1>Search results</h1>
+<h2>Search results for: </h2>
 <div>
+
   {{#each artists}}
+    <hr />
+
     <div>
-      <img src={{this.images.2.url}} alt="" />
-      <h2>{{this.name}}</h2>
-      <a href="/albums/{{this.id}}">View Albums</a>
+      <h3>{{this.name}}</h3>
+      <img src={{this.images.1.url}} alt="" />
     </div>
+    <a href="/albums/{{this.id}}">View Albums</a>
 
   {{/each}}
 
