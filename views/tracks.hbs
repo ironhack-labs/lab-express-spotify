@@ -1,0 +1,19 @@
+<h2>Tracks</h2>
+<table>
+    <tr>
+    <th>Title</th>
+    <th>Listsen</th>
+    </tr>
+    {{#each tracks}}
+        {{#if preview_url}}
+            <tr>
+                <td>
+                    <h3>{{name}}</h3>
+                </td>
+                <td>
+                     <audio controls src="{{preview_url}}"></audio>
+                </td>
+            </tr>
+        {{/if}}
+    {{/each}}
+</table>

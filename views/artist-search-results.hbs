@@ -1,0 +1,16 @@
+
+<div class="container">
+    {{#each results}}
+        <div class="search__item">
+            {{#if images}}
+                <img src="{{images.[1].url}}" alt="image of {{name}}">
+            {{else}}
+                <img width = "320" height = "320" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/65/No-Image-Placeholder.svg/1200px-No-Image-Placeholder.svg.png" alt="image of none">
+            {{/if}}
+        <h1>{{name}}</h1>
+        <div class="btn">
+            <a href="/albums/{{id}}">View Albums</a>
+        </div>
+        </div>
+    {{/each}}
+</div>
