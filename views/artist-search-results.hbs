@@ -1,0 +1,12 @@
+<h2>Search results for: {{artist}}</h2>
+<section id="artist-search">
+    {{#each data.body.artists.items}}
+        <span class="artist">
+            <img src="{{this.images.1.url}}" alt="{{this.name}}">
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}"> <button>View Albums</button></a>
+            <br>
+            <br>
+        </span>
+    {{/each}}
+</section>
