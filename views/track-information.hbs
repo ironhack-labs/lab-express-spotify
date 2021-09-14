@@ -1,0 +1,13 @@
+<h1>TRACKS PAGE</h1>
+<p>
+<figure>
+    {{#each tracksAlbums}}
+    <figcaption>{{this.name}}</figcaption>
+    </p>
+    <p>
+    <audio 
+    controls
+    src="{{this.preview_url}}"></audio>
+    </p>
+    {{/each}}
+</figure>
