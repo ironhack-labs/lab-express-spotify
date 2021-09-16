@@ -1,0 +1,18 @@
+<div class="container">
+    <div class="artist-grid">
+        {{#each items}}
+        <div class="card">
+            <div class="cardTop">
+                <img src={{this.images.0.url}} alt="">
+            </div>
+            <div class="cardBottom">
+                <h2>{{this.name}}</h2>
+                <a class="spotify-btn" href="/albums/{{this.id}}">
+                    <img src="/images/spotify.png" alt="">
+                </a>
+            </div>
+        </div>
+        {{/each}}
+
+    </div>
+</div>
