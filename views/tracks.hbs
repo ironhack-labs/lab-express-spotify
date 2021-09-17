@@ -1,0 +1,6 @@
+<ul>
+    {{#each data.body.items}}
+    <li>{{this.track}}</li>
+   <audio controls src="{{this.track.audio}}"></audio>
+    {{/each}}
+</ul>
