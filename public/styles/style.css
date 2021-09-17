@@ -1,0 +1,87 @@
+
+*{
+    padding: 0;
+    margin: 0;
+}
+body{
+    background-color: grey;
+
+}
+
+input{
+    width: 100%;
+    background:white;
+}
+button, a{
+    background: red;
+    color: white;
+    padding: 3px 30px;
+}
+.home{
+    border: 1px red solid;
+    width: 100%;
+    height: 100vh;
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: 100% 100vh;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.form{
+   
+    border: 1px white solid;
+    background-color: white;
+    opacity: 0.7;
+    padding: 100px 300px;
+}
+.inside-form{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.artistas{
+    background: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    
+}
+.album{
+    width: 30%;
+    
+}
+
+.poster{
+  
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+.info{
+    background: grey;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+}
+
+
+.albums{
+    background: white;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+}
+.musica{
+    
+    background:gray;
+    opacity: 0.9;
+    display: flex;
+    
+    align-items: center;
+    justify-content: space-between;
+}
