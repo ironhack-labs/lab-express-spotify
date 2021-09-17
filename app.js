@@ -43,7 +43,7 @@ spotifyApi
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     let artista = data.body.artists.items
     let artistImages= data.body.artists.items[0].images[1].url
-    console.log(artistImages)
+    console.log(artista)
     res.render("artist-search-results",{
         artista:artista
     })
