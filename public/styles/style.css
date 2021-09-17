@@ -1,0 +1,7 @@
+.class{
+    background-image: url(/images/spotify-background.jpeg);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
