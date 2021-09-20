@@ -70,6 +70,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
 app.get('/artist-search', 
   (req, res) => {
     const artist = req.query.artist
+    console.log("querrrryyyyyyyy", req.query.artist)
     console.log(artist)
     spotifyApi
     .searchArtists(artist)
