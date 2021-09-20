@@ -1,0 +1,21 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+}
+.home {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background: url("./../images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.form-1 {
+ background-color: rgba(255, 255, 255, 0.5);
+ padding: 5rem 10rem;
+ /* opacity: 0.5; */
+}
