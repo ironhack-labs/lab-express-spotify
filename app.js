@@ -28,7 +28,7 @@ const spotifyApi = new SpotifyWebApi({
 // Our routes go here:
 
 app.get("/", (req, res) => {
-    res.render("layout")
+    res.render("index")
 })
 app.get("/artist-search", (req, res) => {
   //  console.log(req.query)
@@ -49,34 +49,32 @@ console.log(arti)
   .catch(err => console.log('The error while searching artists occurred: ', err)); 
 });
     
-app.get('/albums/:id', (req, res) => { 
+app.get('/albums/:artistId', (req, res, next) => { 
   //entiendo el trasfondo de id y query (no sale con este) pero no con params (?)
-  const paramsAlb = req.params.id
-  const id = paramsAlb.albums
-  spotifyApi.getArtistAlbums(id)
+  const paramsAlb = req.params
+  const artistId = paramsAlb.artistId
+  console.log(req.params)
+  spotifyApi
+  .getArtistAlbums(artistId)
   .then(data => {
-    const arrayId = data.body.albums.items
-    //auto: console.log('Artist albums', data.body);
-    res.render("albums", {arrayId})
+    res.render('albums', data.body)
   })
   .catch((e) => {
     console.log("Error recibiendo el álbum", e) })
 });
 
-app.get('/tracks/:id', (req, res) => { 
-  //entiendo el trasfondo de id y query (no sale con este) pero no con params (?)
-  const paramsTrac = req.params.id
-  const id = paramsTrac.track
-  spotifyApi.getArtistAlbums(id)
-  .then(data => {
-    const trackId = data.body.items
-    //auto: console.log('Artist albums', data.body);
-    res.render("tracks", {trackId})
-  })
-  .catch((e) => {
-    console.log("Error en la pista", e) })
-});
-
+app.get('/tracks/:albumId',(req, res) =>{
+  const paramTrac = req.params
+  const albumId = paramTrac.albumId
+ spotifyApi
+ .getAlbumTracks(albumId)
+ .then(data => {
+     res.render('tracks',data.body)
+ })
+ .catch(e => {
+     console.log(e);
+ })
+ })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 

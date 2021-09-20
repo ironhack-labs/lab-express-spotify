@@ -1,23 +1,7 @@
-<h1>Álbumes</h1>
-
-<ul>
-    {{#each allAlbums}}
-     <li>
-         {{this.name}}
-         <img src="{{this.images.url}}">
-         <a href="/tracks/{{this.id}}">View Tracks</a>
-     </li>
-     {{/each}}
-</ul> 
-
-<!--<div>
-  <h1>álbumes</h1>
-<ul>
-{{#each artist}}
-    {{this.name}}
-    {{this.albums}}
-
-{{/each}}
-</ul>
+<div>
+    {{#each artist}}
+        <img src={{this.images.url}}>
+                <h2>{{this.name}}</h2>
+        
+    {{/each}}
 </div>
--->
