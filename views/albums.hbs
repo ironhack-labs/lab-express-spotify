@@ -1,0 +1,12 @@
+{{#each data}}
+
+  <div class="card" style="width: 18rem;">
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item"><img class="img" src="{{images.0.url}}" alt="" /></li>
+      <li class="list-group-item"><p class="artist-name">{{name}}</p></li>
+      <li class="list-group-item"><button type="submit">
+          <a href="/album/{{id}}"> View Tracks </a></button></li>
+    </ul>
+  </div>
+
+{{/each}}
