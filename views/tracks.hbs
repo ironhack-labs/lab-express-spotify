@@ -1,0 +1,17 @@
+<section>
+  <div class='container'>
+    <div class='row row-cols-1 row-cols-md-2 g-4 align-items-start py-5'>
+      {{#each items}}
+        <div class=''>
+          <p>{{name}}</p>
+
+          <audio controls>
+            <source src='{{preview_url}}' type='audio/ogg' />
+            <source src='{{preview_url}}' type='audio/mpeg' />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>

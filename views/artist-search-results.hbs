@@ -1,0 +1,31 @@
+<section>
+  <div class='container'>
+    <div class='row row-cols-2 row-cols-md-3 g-4 align-items-start py-5'>
+      {{#each artists}}
+        <div class='col'>
+          <div class='card mb-4 h-100'>
+            <div class='img-container'>
+              {{#if images.0.url}}
+                <img
+                  src='{{images.0.url}}'
+                  alt='{{name}}'
+                  class='card-img-top h-100'
+                />
+              {{else}}
+                <img
+                  src='/images/logo.png'
+                  alt='Spotify'
+                  class='card-img-top'
+                />
+              {{/if}}
+            </div>
+            <div class='card-body bg-dark text-white text-center'>
+              <h5 class='card-title'>{{name}}</h5>
+              <a href='/albums/{{id}}/' class='btn btn-danger'>View Albums</a>
+            </div>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
