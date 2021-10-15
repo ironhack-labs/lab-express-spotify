@@ -27,5 +27,11 @@ spotifyApi
 
 
 // Our routes go here:
+app.get('/', (req, res, next) => {
+    console.log(`We are getting tho homepage`)
+    //res.send(`this is a homepage`)
+    res.render('index')
+});
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+app.listen(3100, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
