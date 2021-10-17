@@ -1,0 +1,102 @@
+body {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    
+}
+
+form {
+    background-color: white;
+    opacity: 0.5 ; 
+    margin: 20% 35%;
+    max-width: 400px;
+    padding: 5%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+button{
+    color: white;
+    background-color: tomato;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    
+}
+
+img {
+    width: 100px;
+    height: 100px;
+
+}
+
+.container-artistSearch {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+    
+}
+
+.artistSearchImg{
+    background-color: grey;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+.artistSearchImg > a {
+    color: white;
+    background-color: tomato;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.container-album {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap:wrap;
+    justify-content: space-between;
+
+}
+
+.albumSearchImg{
+    background-color: grey;
+    color: white;
+    margin: 20px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
+
+
+.albumSearchImg > a {
+    color: white;
+    background-color: tomato;
+    padding: 5px;
+    text-decoration: none;
+    border-radius: 20px;
+
+}
+
+.tracks {
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+.tracks > audio {
+    margin: 10px;
+}
