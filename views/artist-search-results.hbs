@@ -1,0 +1,11 @@
+{{#each items}}
+    <div>
+        <h3>{{name}}</h3>
+        {{#if images.[0].url}}
+            <img src="{{images.[0].url}}" alt="">
+        {{else}}
+            <img src="images/black-square.jpg" alt="">
+        {{/if}}
+        <a href="">Show albums</a>
+    </div>
+{{/each}}
