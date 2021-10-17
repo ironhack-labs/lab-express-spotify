@@ -1,0 +1,15 @@
+
+{{#each albumData}}
+
+<h2>v this is the name of the album v</h2>
+<h2>{{this.name}}</h2>
+
+{{#each this.images}}
+
+<img src="{{this.url}}">
+
+{{/each}}
+
+<button type="submit" onclick="window.location.href='/tracks'">See tracks</button>
+
+{{/each}}

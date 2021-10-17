@@ -29,7 +29,6 @@ spotifyApi
 // Our routes go here:
 app.get('/', (req, res, next) => {
     console.log(`We are getting tho homepage`)
-    //res.send(`this is a homepage`)
     res.render('index')
 });
 
@@ -38,14 +37,24 @@ app.get('/artist-search', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.name)
         .then(data => {
-            console.log('The received data from the API: ', data.body.artists.items[0].images);
-            //res.send(`this was sucessfull` + data.body.artist)
-            // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+            //console.log('The received data from the API: ', data);
             res.render('artist-search-results', {listOfArtists: data.body.artists.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
-})
+});
+
+app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi
+        .getArtistAlbums(req.params.artistId)
+        .then(function (data) {
+            console.log(data.body.items);
+            res.render('albums', { albumData: data.body.items })
+        })
+            
+        .catch(err => console.log('The error while searching album occurred: ', err));
+        })
+
 
 
 app.listen(3100, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
