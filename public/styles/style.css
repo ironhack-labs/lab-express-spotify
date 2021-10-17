@@ -1,0 +1,41 @@
+.body {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+}
+
+.search {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin: 20%;
+  padding: 50px;
+  background-color:#C7CAC8;
+  opacity: 0.7;
+
+}
+
+.submit-btn{
+  background-color: #D84539;
+  color: white;
+  border: none;
+  padding: 5px;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.artist-data{
+  margin: 20px 30px 10px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.artist-search {
+  background-color: grey;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  align-items: center;
+}
