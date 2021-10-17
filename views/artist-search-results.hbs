@@ -1,11 +1,17 @@
-{{#each items}}
-    <div>
-        <h3>{{name}}</h3>
-        {{#if images.[0].url}}
-            <img src="{{images.[0].url}}" alt="">
-        {{else}}
-            <img src="images/black-square.jpg" alt="">
-        {{/if}}
-        <a href="/albums/{{id}}">View albums</a>
-    </div>
-{{/each}}
+<div class="albums">
+    <h1 class="albums-page-title">You may be lookig for...</h1>
+    {{#each items}}
+        <div  class="album">
+            {{#if images.[0].url}}
+                <img src="{{images.[0].url}}" alt="">
+            {{else}}
+                <img src="images/black-square.jpg" alt="">
+            {{/if}}
+            <h3>{{name}}</h3>
+            <a href="/albums/{{id}}">View albums</a>
+        </div>
+    {{/each}}
+</div>
+<div id="back-btn">
+    <a href="/">Back to Search</a>
+</div>

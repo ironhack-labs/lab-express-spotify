@@ -25,9 +25,6 @@ spotifyApi
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-
-
-
 // Our routes go here:
 
 app.get('/', (req, res) => {
@@ -56,10 +53,6 @@ app.get('/tracks/:albumId', (req, res, next) => {
     spotifyApi
         .getAlbumTracks(req.params.albumId)
         .then (data => {
-            console.log('>>>>>>>>>>>>>' + JSON.stringify(data.body.items)
-            
-            
-            )
             res.render('tracks', data.body)
         }) 
 });

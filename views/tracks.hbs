@@ -1,7 +1,12 @@
-<h1>Listen to tracks:</h1>
+<div class="tracks">
+    <h3>Listen to tracks:</h3>
 
-{{#each items}}
-    <p>{{name}}</p>
-    <audio controls src="{{preview_url}}"></audio>
-
-{{/each}}
+    {{#each items}}
+        <div><p>{{name}} ..........</p></div>
+        <div><audio controls src="{{preview_url}}"></audio></div>
+        
+    {{/each}}
+    <div id="back-btn">
+        <a href="/">Back to Search</a>
+    </div>
+</div>

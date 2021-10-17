@@ -1,0 +1,160 @@
+body {
+    font-family: 'Courier New', Courier, monospace;
+    margin: 0
+}
+
+#home {
+    width: 100vw;
+    height: 100vh;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    background-position:center;
+
+}
+
+#home #form {
+    width: 40vw;
+    height: 30vh;
+    background-color: rgba(255, 255, 255, 0.495);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+#home form {
+    font-family: 'Courier New', Courier, monospace;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+}
+
+#form input {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 1rem;
+    width: 25vw;
+    padding: 0.6rem;
+    margin: 1rem;
+}
+
+#search-btn {
+    font-family: 'Courier New', Courier, monospace;
+    color: white;
+    font-size: 1rem;
+    background-color: rgba(213, 18, 70, 0.831);
+    padding: 0.8rem;
+    border: rgb(213, 18, 70) 1px solid;
+}
+
+#search-btn:hover {
+    background-color: rgba(213, 18, 70, 0.39);
+}
+
+.albums {
+    background-color: rgb(0, 0, 0);
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.album {
+    padding: 2rem;
+}
+
+.album img {
+    width: 20vw;
+    height: auto;
+}
+
+.album h3 {
+    font-size: 1.2rem;
+    font-weight: 100;
+    width: 20vw;
+    color: white;
+    text-align: center;
+}
+
+.album a {
+    display: flex;justify-content: space-around;
+    margin: 0 auto;
+    font-weight: 100;
+    text-align: center;
+    color: black;
+    margin: 0 auto;
+    background-color: white;
+    border: white 1px solid;
+    padding: 0.5rem ;
+    text-decoration: none;
+}
+
+.album a:hover {
+    color: white;
+    background-color: black;
+    border: white 1px solid;
+}
+
+#back-btn {
+    margin: 2rem;
+    background-color: rgba(213, 18, 70, 0.721);
+    border: white 1px solid;
+    position: fixed;
+    bottom: 0;
+    right: 0;
+}
+
+#back-btn a {
+    display: block;
+    color: white;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+}
+
+#back-btn a:hover {
+    text-decoration:underline;
+}
+
+
+
+.albums-page-title {
+    width: 100vw;
+    margin: 0;
+    padding: 2rem;
+    color: white;
+    font-size: 3rem;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 3px 3px 3px rgb(255, 0, 68);
+}
+
+.tracks {
+    background-color: rgb(0, 0, 0);
+    height: 100vh;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 2rem;
+}
+
+.tracks h3 {
+    width: 100vw;
+    margin: 0;
+    padding: 1rem;
+    color: white;
+    font-size: 2.5rem;
+    font-weight: 100;
+    text-align: center;
+    text-shadow: 2px 2px 3px rgb(255, 0, 68);
+}
+
+.tracks p {
+    margin: 0;
+    padding: 0;
+    color: white;
+    width: 50vw;
+    font-size: 1.2rem;
+}
