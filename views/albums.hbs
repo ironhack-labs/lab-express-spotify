@@ -1,15 +1,15 @@
 
+
 {{#each albumData}}
+<div class="result-container">
 
-<h2>v this is the name of the album v</h2>
-<h2>{{this.name}}</h2>
+    <img src="{{this.images.[1].url}}">
 
-{{#each this.images}}
+    <div class="colored-album">
+        <h2>{{this.name}}</h2>
 
-<img src="{{this.url}}">
+        <button class="rounded-btn" type="submit" onclick="window.location.href='/tracks/{{this.id}}'">See tracks</button>
+    </div>
 
-{{/each}}
-
-<button type="submit" onclick="window.location.href='/tracks/{{this.id}}'">See tracks</button>
-
+</div>
 {{/each}}

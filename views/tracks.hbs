@@ -1,13 +1,18 @@
+<nav>
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</nav>
 
+<section>
 {{#each trackData}}
 
-<h2>v this is the name of the tracks v</h2>
-<h2>{{this.name}}</h2>
 
+<div id="tracks">
+    <h2>{{this.name}}</h2>
 
-
-<audio controls src="{{this.preview_url}}">henlo</audio>
-
+    <audio controls src="{{this.preview_url}}"></audio>
+</div>
 
 
 {{/each}}
+</section>
