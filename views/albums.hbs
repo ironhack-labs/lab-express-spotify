@@ -1,0 +1,16 @@
+<section>
+<h2>Albums</h2>
+<div>
+
+   <h2>Albums for: {{artists.0.name}}</h2>   {{!-- {{passing array of artists, get 1 artist name}} --}}
+    {{#each data}}
+
+    <img src={{images.0.url}} </img>
+
+     <h2>Albums : {{name}}</h2>     {{!-- {{looping through the albums}} --}}
+     
+
+    {{/each}}
+</div>
+
+</section>
