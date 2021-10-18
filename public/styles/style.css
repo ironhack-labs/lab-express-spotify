@@ -1,0 +1,32 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/background.jpg);
+    width: 100vw;
+    height: 100vh;
+    display: flex;    
+    
+}
+
+.form {
+    width: 30%;
+    height: 200px;
+    background-color: rgba(36, 34, 34, 0.876);
+    text-align: center;
+    margin: auto;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form button {
+    background-color: rgba(165, 42, 42, 0.808);
+    color: cornsilk;
+    height: 50px;
+    
+}
+
+.form input {
+    height: 43px; 
+}

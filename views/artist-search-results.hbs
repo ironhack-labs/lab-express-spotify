@@ -1,9 +1,9 @@
 <p>hello</p>
 {{#each items}}
     <div>
-        <p>hello</p>
-        <h3>{{name}}</h3>
-        {{!-- <img src="{{}}" alt=""> --}}
-        <a href="{{href}}"></a>
+        <p>here is your Artists result</p>
+        <h3>{{this.[0].name}}</h3>
+        {{!-- <img src="{{this.[0].images[0]}}" alt="img"> --}}
+        <a href="{{this.url}}"></a>
     </div>
 {{/each}}
