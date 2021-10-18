@@ -35,7 +35,6 @@ app.get('/artist-search', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.name)
         .then(data => {
-            console.log('The received data from the API: ', data.body.artists.items);
             res.render('artist-search-results', {listOfArtists: data.body.artists.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -45,7 +44,6 @@ app.get('/albums/:artistId', (req, res, next) => {
     spotifyApi
         .getArtistAlbums(req.params.artistId)
         .then(function (data) {
-            console.log(data.body.items);
             res.render('albums', { albumData: data.body.items })
         })
             
@@ -57,8 +55,6 @@ app.get('/tracks/:albumId', (req, res, next) => {
     spotifyApi
         .getAlbumTracks(req.params.albumId)
         .then(function (data) {
-            console.log(data.body.items);
-            //res.send(`henlo`)
             res.render('tracks', { trackData: data.body.items })
         })
 
