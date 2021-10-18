@@ -1,6 +1,11 @@
-.body {
+body {
   background-image: url("/images/spotify-background.jpeg");
   background-size: cover;
+}
+
+h2 {
+  color: white;
+  text-align: center;
 }
 
 .search {
