@@ -2,13 +2,12 @@
 {{#each listOfArtists}}
 <div class="result-container">
 
-<img src="{{this.images.[1].url}}">
+    <img class="artist-img" src="{{this.images.[1].url}}" onerror="this.src='/images/default-image.png'">
 
-<div class="colored">
-<h2>{{this.name}}</h2>
-
-<button class="rounded-btn" type="submit" onclick="window.location.href='/albums/{{this.id}}'">View Album</button>
-</div>
+    <div class="colored">
+        <h2>{{this.name}}</h2>
+        <button class="rounded-btn" type="submit" onclick="window.location.href='/albums/{{this.id}}'">View Album</button>
+    </div>
 
 </div>
 {{/each}}

@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
+const paginate = require('express-paginate');
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -25,15 +26,12 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
-
 // Our routes go here:
 app.get('/', (req, res, next) => {
-    console.log(`We are getting tho homepage`)
     res.render('index')
 });
 
 app.get('/artist-search', (req, res, next) => {
-
     spotifyApi
         .searchArtists(req.query.name)
         .then(data => {
@@ -41,7 +39,6 @@ app.get('/artist-search', (req, res, next) => {
             res.render('artist-search-results', {listOfArtists: data.body.artists.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
-
 });
 
 app.get('/albums/:artistId', (req, res, next) => {
@@ -53,7 +50,7 @@ app.get('/albums/:artistId', (req, res, next) => {
         })
             
         .catch(err => console.log('The error while searching album occurred: ', err));
-        })
+})
 
     
 app.get('/tracks/:albumId', (req, res, next) => {
