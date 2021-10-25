@@ -1,13 +1,7 @@
-{{#each listOfArtists}}
+{{#each this}}
 
     <h2>{{this.name}}</h2>
-
-    {{#each this.images}}
-
-            <img src="{{this.url}}">
-
-    {{/each}}
-
-    <button type="submit">submit</button>
+    <img src="{{this.images.1.url}}">
+    <button type="submit"><a href="/albums/{{this.id}}">View Albums</a></button>
 
 {{/each}}
