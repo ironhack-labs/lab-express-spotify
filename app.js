@@ -96,23 +96,27 @@ app.get('/albums/:artistId', async (req, res) => {
 
 
 
-// test
-app.get('/hello', async (req, res) => {
+// Track
+app.get('/tracks/:id', async (req, res) => {
     
   try {
-    const data = await spotifyApi.getAlbum('5U4W9E5WsYb2jUQWePT8Xm');
-    console.log('Album information', data.body);
-  res.send(data.body);
-    //res.render("index");
+    const trackId = req.params.id;
+    const data = await spotifyApi.getAlbumTracks(trackId);
+    const trackArray = data.body.items;
+    //res.send(trackArray);
+    res.render('tracks', {
+      tracks: trackArray,
+      title: 'Tracks'
+    })
   }
  catch(err) {
   console.error(err);
   }
 });
 
-
-
-
+app.get('/*', (req, res) => {
+  res.render("not-render");
+})
 
 
 // Listen for a port

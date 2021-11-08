@@ -1,0 +1,20 @@
+<div class="track-table">
+  <table>
+    <tr class="header-tracks">
+      <th>Title</th>
+      <th>Listen</th>
+    </tr>
+    {{#each tracks}}
+      {{#if preview_url}}
+        <tr class="row-tracks">
+          <td><p>{{name}}</p></td>
+          <td>
+            <figure>
+              <audio controls src="{{preview_url}}"></audio>
+            </figure>
+          </td>
+        </tr>
+      {{/if}}
+    {{/each}}
+  </table>
+</div>
