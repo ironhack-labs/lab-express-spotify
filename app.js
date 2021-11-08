@@ -35,18 +35,84 @@ spotifyApi
 
   
 // Our routes go here:
-// Test
-app.get('/', async (req, res) => {
-    //res.send('hello spotify')
+// Home page with search button
+app.get('/', (req, res) => {
+  res.render("index", {
+    title: 'Main page',
+  });
+});
+
+// Search and get the Artists
+app.get('/artist-search', async (req, res) => {
+  try {
+    //http://localhost:3000/artist-search?artist=amy
+    // artist --> is the 'name' or the key of the input, where the user typed the query string
+    // http://localhost:3000/artist-search?artist=jack+jonhson
+    const artistToFind = req.query.artist;
+    //console.log(artistToFind);
+     
+    const data = await spotifyApi.searchArtists(req.query.artist);
+    // get the data from the API, to pass it to the view 'artist-search-results'
+    const artistArray = data.body.artists.items;
+    //console.log('The received data from the API: ', data.body);
+    
+    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    // we send to this URL all the information artistArray --> in a variable named: 'artists'
+    //res.send(artistArray)
+    //res.send(artistArray[0].images[0].url)
+    res.render('artist-search-results', {
+      artists: artistArray,
+      title: 'Artist page',
+    });
+  } catch (err) {
+    console.log('The error while searching artists occurred: ', err);
+  }
+});
+
+// View albums after click on View Album
+app.get('/albums/:artistId', async (req, res) => {
+  try {
+  //http://localhost:3000/albums/3GBPw9NK25X1Wt2OUvOwY3
+  const id = req.params.artistId;
+  const albumsResponse = await spotifyApi.getArtistAlbums(id);
+
+  //res.send(albumsResponse)
+  //res.send(albumsResponse.body.items);
+  const albumsArray = albumsResponse.body.items; // to iterate over each album
+  // render to 'albums.hbs', and send the data 'albums: albumsArray'
+  // to access the name of the Artist, not use dot before array [] --> only inside handlebars
+  const nameArtist = albumsResponse.body.items[0].artists[0].name;
+  //res.send(albumsArray)
+  //res.send(nameArtist)
+  res.render('albums', {
+    albums: albumsArray,
+    artistOfAlbum: nameArtist,
+    title: 'Album page',
+  });
+  } catch(err) {
+    console.log('There is no albums to show! Try another artist!', err);
+  }
+})
+
+
+
+// test
+app.get('/hello', async (req, res) => {
+    
   try {
     const data = await spotifyApi.getAlbum('5U4W9E5WsYb2jUQWePT8Xm');
     console.log('Album information', data.body);
-    res.send(data.body);
+  res.send(data.body);
+    //res.render("index");
   }
  catch(err) {
   console.error(err);
   }
 });
+
+
+
+
 
 
 // Listen for a port

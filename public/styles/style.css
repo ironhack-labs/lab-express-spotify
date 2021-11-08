@@ -1,0 +1,201 @@
+  
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Remove default padding */
+ul[class],
+ol[class] {
+	padding: 0;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+ul[class],
+ol[class],
+li,
+figure,
+figcaption,
+blockquote,
+dl,
+dd {
+	margin: 0;
+}
+
+
+/* Set core body defaults */
+body {
+	min-height: 100vh;
+	scroll-behavior: smooth;
+	text-rendering: optimizeSpeed;
+}
+
+/* Remove list styles on ul, ol elements with a class attribute */
+ul[class],
+ol[class] {
+	list-style: none;
+}
+/* Make images easier to work with */
+img {
+	max-width: 100%;
+	display: block;
+}
+
+/* Natural flow and rhythm in articles by default */
+article > * + * {
+	margin-top: 1em;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+
+p {
+  margin-bottom: 15px;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* Variables for colors */
+ :root {
+  --light-grey: #e9e9ec;
+  --dark-grey: #242424;
+  --red: #fb6863;
+  --white: #fff;
+} 
+
+/* Set core body defaults */
+body {
+  font: 400 16px/1.5 "Roboto", Helvetica, Arial, sans-serif;
+  margin: 0;
+  max-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+footer {
+  background-color: var(--dark-grey);
+  color: #626266;
+  padding: 10px;
+  margin: 0;
+}
+
+footer p {
+  margin: 0;
+  font-size: .8rem;
+  text-align: center;
+}
+
+.wrapper-main-image {
+  height: 100vh;
+  width: 100%;
+  background-color: var(--dark-grey);
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-wrapper {
+  width: 60%;
+  height: 20vh;
+  background-color: rgb(255 255 255 / 44%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-wrapper input {
+  width: 80%;
+  border: 0;
+  outline: 0;
+  margin: 1rem 0;
+  border-radius: 2px;
+  color: var(--dark-grey);
+  padding: 7px 20px;
+}
+
+.search-wrapper button {
+  width: 50%;
+  outline: 0;
+  border: 0;
+  padding: 7px 20px;
+  background-color: var(--red);
+  color: var(--white);
+  font-size: .8rem;
+}
+
+.search-wrapper input:focus {
+  box-shadow: 0 0 2px var(--dark-grey);
+}
+
+input::-webkit-input-placeholder {
+  color: #aaaaaa;
+}
+
+.artist-container,
+.album-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+}
+
+.artist-container > *,
+.album-container > * {
+  flex: 0 calc(33% - 5%);
+}
+
+.card-artist,
+.card-album {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #525151;
+  margin: 5% 2%;
+}
+
+.card-artist img, 
+.card-album img {
+  width: 100%;
+  /* width: 140px;
+  height: 140px; */
+}
+
+.card-artist p, 
+.card-album p {
+  color: var(--white);
+  font-size: .8rem;
+}
+
+.card-artist a,
+.card-album a {
+  color: var(--white);
+  font-size: .8rem;
+  background-color: var(--red);
+  padding: 10px 15px;
+  border-radius: 3px;
+  margin-bottom: 10px
+}
+
+
