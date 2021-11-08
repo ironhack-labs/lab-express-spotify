@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&family=Varela+Round&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+  <div class="container">
+
+  </div>
+    {{!-- any page we want to render will be "plugged in" here, in the "body" with triple stashes --}}
+    {{!-- this is the only page that will have full html setup --}}
+    {{!-- if there's anything you want to have on each page, it will come from here
+    ex. navbar, header, footer, etc --}}
+    {{{ body }}} <!-- always use triple curly braces  -->
+  <footer><p>Credits to https://spotify.com/</p></footer>
+</body>
+</html>
