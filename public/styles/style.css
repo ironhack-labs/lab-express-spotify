@@ -1,0 +1,24 @@
+.container-main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://p4.wallpaperbetter.com/wallpaper/829/118/402/spotify-4k-desktop-background-wallpaper-preview.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+.container-main input {
+  height: 30px;
+  border-radius: 15px;
+}
+
+.submit {
+  font-family: Helvetica;
+}
+
+.elements {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
