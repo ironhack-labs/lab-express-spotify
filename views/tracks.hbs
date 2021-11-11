@@ -1,0 +1,9 @@
+<h1>LISTA DE CANCIONES</h1>
+{{#each this}}
+  <p>Titulo : {{name}}</p>
+  <audio controls src={{preview_url}}>
+    Your browser does not support the
+    <code>audio</code>
+    element.
+  </audio>
+{{/each}}

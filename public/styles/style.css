@@ -1,0 +1,32 @@
+.homePage {
+  background-image: url("../images/spotify-background.jpeg");
+  height: 100vh;
+  background-size: cover;
+}
+.form {
+  display: flex;
+  height: 200px;
+  width: 600px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-repeat: no-repeat;
+  background-size: 300px 100px;
+  background-color: white;
+  opacity: 0.4;
+}
+.search {
+  background-color: white;
+  opacity: 1;
+  width: 400px;
+}
+.button {
+  color: white;
+  font-style: bold;
+  font-size: large;
+  margin-top: 10px;
+  background-color: red;
+}
