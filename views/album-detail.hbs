@@ -1,0 +1,14 @@
+<h1>Details</h1>
+{{! Player de Album actual :
+
+Just testing player:
+<iframe src='https://open.spotify.com/embed/album/1DFixLWuPkv3KT3TnV35m3' width='300' height='380' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe> }}
+{{#each items}}
+	<li>
+
+		{{this.name}}
+		<a href='/tracks/{{this.id}}'>To details</a>
+		<iframe src='https://open.spotify.com/embed/album/{{this.id}}' class='player' width='300' frameborder='0' allowtransparency='true' allow='encrypted-media'></iframe>
+	</li>
+
+{{/each}}

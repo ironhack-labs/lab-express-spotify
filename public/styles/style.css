@@ -1,0 +1,7 @@
+.player {
+	height: 120px;
+	transition: all 0.8s ease-in-out;
+}
+.player:hover {
+	height: 300px;
+}
