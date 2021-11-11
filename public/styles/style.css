@@ -1,0 +1,12 @@
+.background {
+    height: 100vh;
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}
