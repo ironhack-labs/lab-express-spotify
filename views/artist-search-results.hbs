@@ -1,0 +1,9 @@
+<div>
+
+    {{#each items}}
+    <h1>{{name}}</h1>
+    <img src={{images.0.url}} height="640" width="640" alt="artist photo">
+    <br>
+    <a href="/albums/{{id}}">View Albums</a>
+    {{/each}}
+</div>
