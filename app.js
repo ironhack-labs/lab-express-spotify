@@ -33,5 +33,28 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
+app.get('/artist-search', (req, res) => {
+    //i am creating the searchArtist variable which will hold the query from the form!
+    const searchArtist = req.query.q
+    // console.log(searchArtist)
+    spotifyApi
+    .searchArtists(searchArtist)
+    // .then(data => {
+    // console.log('The received data from the API: ', data.body);
+    // // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    // })
+    // .then(data => {
+    //     res.send(data.body.artists))
+    // }
+    .then(data => {
+        const artist = data.body.artists.items
+       // const image = data.body.artists.items.images
+        //res.send(image)
+        //console.log(image)
+        res.render('artist-search-results', {artist})
+        //res.send(artist)
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
