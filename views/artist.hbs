@@ -1,0 +1,20 @@
+<div class="wrapper">
+    <main class="container container-artist">
+        <div class="title-container">
+            <a href="javascript:history.back()" class="back">Back to results</a>
+
+            <h1>{{ artist }}</h1>
+        </div>
+
+        <ul class="results">
+            {{#each albums}}
+            <li class="card">
+                <img src="{{images.0.url}}" alt="Cover {{ name }}">
+                <a href="/albums/{{ id }}">
+                    {{name}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+</div>

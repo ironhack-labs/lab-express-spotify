@@ -1,0 +1,200 @@
+@charset "UTF-8";
+/* SASS Document */
+
+/*=============================================== Imports ===============================================*/
+
+@import "mixins";
+@import "reset";
+@import "variables";
+
+/*=============================================== General ===============================================*/
+
+* {
+    outline: none;
+}
+
+body {
+    color: var(--white);
+    background-color: var(--darkest-gray);
+}
+
+.search-wrapper {
+    width: 100%;
+    height: 100vh;
+    @include flexbox(center, center, nowrap);
+    background: url("/images/spotify-background.jpeg");
+    background-position: center;
+    background-size: cover;
+
+    .search-container {
+        background-color: rgba(255, 255, 255, 0.5);
+        padding: var(--margin-xxl);
+        border-radius: var(--radius-l);
+        @include flexbox(center, center, nowrap);
+        flex-direction: column;
+        width: 70vw;
+        min-height: 400px;
+
+        h1 {
+            margin-bottom: var(--margin-l);
+            font-size: 48px;
+        }
+
+        form {
+            @include grid(1fr, var(--margin-s), var(--margin-m));
+            width: 100%;
+            max-width: 400px;
+
+            input {
+                // border: none;
+                border: 1px solid transparent;
+                background-color: var(--white);
+                font-family: var(--font-family);
+                padding: var(--margin-xxs) var(--margin-xs);
+                border-radius: var(--radius-s);
+                font-size: 22px;
+
+                &:focus {
+                    border-color: var(--green);
+                }
+            }
+
+            .btn {
+                justify-self: center;
+                font-size: 22px;
+            }
+        }
+    }
+}
+
+// UI
+.btn {
+    background-color: var(--green);
+    border: none;
+    font-weight: var(--weight-bold);
+    font-size: 16px;
+    padding: var(--margin-xs) var(--margin-s);
+    border-radius: var(--radius-m);
+    transition: all 0.2s ease;
+    color: black;
+    text-decoration: none;
+
+    &:hover {
+        background-color: var(--green-hover);
+    }
+}
+
+.back {
+    color: var(--white);
+    font-weight: var(--weight-bold);
+    text-decoration: none;
+    transition: all 0.2s ease;
+
+    &:hover {
+        color: var(--green);
+    }
+}
+
+// Layout
+.wrapper {
+    display: grid;
+    grid-template-columns: var(--grid-template);
+    padding: var(--grid-padding);
+
+    .container {
+        grid-column: var(--grid-column);
+    }
+}
+
+// Search page
+.title-container {
+    @include flexbox(flex-start, flex-start, nowrap);
+    flex-direction: column;
+    margin-bottom: var(--margin-xxl);
+
+    a {
+        margin-bottom: var(--margin-s);
+    }
+}
+
+.results {
+    @include ulNone();
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: var(--margin-l);
+
+    li {
+        position: relative;
+        width: 100%;
+        aspect-ratio: 1;
+        border-radius: var(--radius-xl);
+        overflow: hidden;
+        // padding: var(--margin-m);
+        transition: all 0.2s ease;
+
+        img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            z-index: 0;
+        }
+
+        &:after {
+            content: "";
+            background-color: rgba(0, 0, 0, 0.5);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+
+        a {
+            position: relative;
+            z-index: 3;
+            padding: var(--margin-m);
+            display: block;
+            width: 100%;
+            height: 100%;
+            color: var(--white);
+            text-decoration: none;
+            font-size: 22px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        &:hover {
+            transform: scale(1.05);
+        }
+    }
+}
+
+.album-container {
+    @include grid(1fr, 0, var(--margin-m));
+
+    .title-item {
+        font-size: 24px;
+    }
+
+    .item {
+        @include grid(2fr 1fr, var(--margin-s), var(--margin-m));
+        align-self: center;
+
+        p {
+            align-self: center;
+        }
+    }
+}
+
+/*=============================================== Components ===============================================*/
+
+/*=============================================== Pages ===============================================*/
+
+/*=============================================== Helpers ===============================================*/
+
+@import "helpers";

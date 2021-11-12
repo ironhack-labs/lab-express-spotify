@@ -1,0 +1,27 @@
+<div class="wrapper">
+    <main class="container">
+        <div class="title-container">
+            <a href="javascript:history.back()" class="back">Back to {{ artist }} page</a>
+            <h1>{{ album }} - {{ artist }}</h1>
+        </div>
+
+        <div class="album-container">
+            <div class="item title-item">
+                <p class="name"><strong>Title</strong></p>
+                <p class="listen"><strong>Listen</strong></p>
+            </div>
+
+            {{#each tracks}}
+            <div class="item">
+                <p class="name">{{ name }}</p>
+
+                <span class="listen">
+                    <audio controls>
+                        <source src="{{ preview_url }}" type="audio/mpeg">
+                    </audio>
+                </span>
+            </div>
+            {{/each}}
+        </div>
+    </main>
+</div>

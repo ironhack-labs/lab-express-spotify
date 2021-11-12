@@ -1,0 +1,21 @@
+<div class="wrapper">
+    <main class="container container-search">
+        <div class="title-container">
+            <a href="/" class="back">Back to homepage</a>
+
+            <h1>Your results for: {{ searched }}</h1>
+        </div>
+
+
+        <ul class="results">
+            {{#each artists}}
+            <li class="card">
+                <img src="{{ images.0.url }}" alt="{{ name }}">
+                <a href="/artists/{{ id }}">
+                    {{name}}
+                </a>
+            </li>
+            {{/each}}
+        </ul>
+    </main>
+</div>
