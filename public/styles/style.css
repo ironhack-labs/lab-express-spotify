@@ -1,0 +1,132 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
+body {
+    margin: 0;
+    padding: 0;
+
+    height: 100vh;
+    width: 100vw;
+    font-family: "Poppins";
+    font-size: 10px;
+
+    word-wrap: normal;
+    word-wrap: break-word;
+}
+
+#home {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-box {
+    height: 35%;
+    width: 50%;
+    background-color: #e2dddda6;
+    border-radius: 5px;
+}
+
+form {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    width: 45%;
+    height: 10%;
+    margin-bottom: 6px;
+    border: 1px solid white;
+    border-radius: 5px;
+}
+
+button {
+    background-color: #ea640d;
+    color: white;
+    height: 10%;
+    width: 20%;
+    border-radius: 5px;
+    border: 1px solid white;
+}
+
+img {
+    height: 100%;
+    width: 100%;
+}
+
+#search-container, #albums-container {
+    margin: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 475px;
+}
+
+#search, #album {
+    border-radius: 10px;
+    width: 20%;
+    margin: 65px;
+    background-color: #686565;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+#track {
+    background-color: #f1f3f4;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    border: 1px solid;
+    margin: 7px;
+    border-radius: 6px;
+    padding: 0 20px 0px 20px;
+}
+
+#track-header {
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+    background-color: #80808061;
+    padding: 0 20px 0 20px;
+    border-radius: 25px;
+    margin: 6px;
+}
+
+h2 {
+    padding: 10px;
+}
+
+a {
+    font-size: 12px;
+    height: 20px;
+    width: 78px;
+    background-color: #ea640d;
+    padding: 8px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: white;
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
