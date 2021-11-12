@@ -1,0 +1,88 @@
+body {
+  margin: 0px;
+  padding: 0px;
+}
+
+.bg {
+  /* The image used */
+  background-image: url("/images/spotify-background.jpeg");
+
+  /* Full height */
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg div {
+  background-color: rgba(255, 255, 255, 0.644);
+  height: 33%;
+  width: 60%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg input {
+  width: 500px;
+  height: 40px;
+}
+
+.bg button {
+  display: inline-block;
+  padding: 0.75rem 1.25rem;
+  color: #fff;
+  font-size: 1rem;
+  letter-spacing: 0.15rem;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  background-color: red;
+
+  margin-top: 10px;
+}
+
+.bg form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.albums-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.album-wrapper {
+  width: 23%;
+  background-color: #4d4d4d;
+  margin-bottom: 20px;
+  color: #fff;
+
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.album-image {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+a {
+  text-decoration: none;
+  padding: 2px 6px 2px 6px;
+  background-color: #eb6766;
+  color: white;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
