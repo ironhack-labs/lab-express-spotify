@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: 'Roboto', sans-serif;
+}
+
+/* Home Page */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.background-img {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  position: relative;
+  z-index: -1;
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  text-align: center;
+  background-color: rgba(243, 243, 243, 0.5);
+  border-radius: 5px;
+  padding: 120px 150px;
+}
+
+.form-input {
+  width: 500px;
+  padding: 10px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  border-style: none;
+}
+
+.form-input:focus {
+  outline: none;
+}
+
+.btn {
+  padding: 15px 30px;
+  background-color: #0ea7b5;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #f3f3f3;
+  cursor: pointer;
+}
+
+.btn:hover,
+.artist-btn:hover {
+  background-color: #0c457d;
+}
+
+/* Artist Search Page */
+.album-image {
+  width: 450px;
+  height: 450px;
+}
+
+.grid-container {
+  display: grid;
+  margin: 100px 150px;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 50px;
+  text-align: center;
+}
+
+.name-frame {
+  display: inline-block;
+  background-color: #e8702a;
+  color: #f3f3f3;
+  width: 450px;
+  height: 80px;
+  padding: 20px 0;
+}
+
+.artist-name {
+  margin-bottom: 20px;
+}
+
+.artist-btn {
+  padding: 10px 25px;
+  background-color: #0ea7b5;
+  border: none;
+  text-decoration: none;
+  border-radius: 5px;
+  color: #f3f3f3;
+  cursor: pointer;
+}

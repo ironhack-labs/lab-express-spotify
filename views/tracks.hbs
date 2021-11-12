@@ -1,0 +1,15 @@
+<div>
+  <h1>Title</h1>
+</div>
+<div>
+  <h1>Listen</h1>
+</div>
+{{#each result}}
+  <h5>{{name}}</h5>
+  <audio controls src='{{preview_url}}'>
+
+  </audio>
+
+{{/each}}
+
+<a href='/'>Back to Artist Search</a>

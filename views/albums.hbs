@@ -1,0 +1,17 @@
+<div class='grid-container'>
+  {{#each result}}
+    <div>
+      <div>
+        <img class='album-image' src='{{images.0.url}}' alt='img' />
+      </div>
+
+      <div class='name-frame'>
+        <h3 class='artist-name'>{{name}}</h3>
+
+        <a class='artist-btn' href='/tracks/{{id}}'>
+          View Tracks
+        </a>
+      </div>
+    </div>
+  {{/each}}
+</div>
