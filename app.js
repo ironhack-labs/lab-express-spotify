@@ -12,6 +12,7 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
+console.log(process.env.CLIENT_ID)
 
 // Our routes go here:
 
