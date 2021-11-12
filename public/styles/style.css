@@ -1,0 +1,38 @@
+body {
+    padding: 0;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    height: 100vh;
+    width: 100vw;
+}
+
+#home {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#white-box {
+    background: rgba(255, 255, 255, 0.4);
+    height: 200px;
+    width: 500px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#white-box input {
+    border: none;
+    height: 20px;
+    padding: 0;
+}
+
+#white-box button {
+    border: none;
+    height: 20px;
+    padding: 0;
+}
