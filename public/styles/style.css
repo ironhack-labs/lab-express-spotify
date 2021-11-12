@@ -79,12 +79,12 @@
   background-color: #e8702a;
   color: #f3f3f3;
   width: 450px;
-  height: 80px;
-  padding: 20px 0;
+  height: 100px;
+  padding: 30px 0;
 }
 
 .artist-name {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .artist-btn {

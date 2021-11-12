@@ -2,7 +2,6 @@ require('dotenv').config()
 
 const express = require('express')
 const hbs = require('hbs')
-const path = require('path')
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node')
@@ -27,9 +26,6 @@ spotifyApi
     console.log('Something went wrong when retrieving an access token', error)
   )
 
-// Partials
-hbs.registerPartials(path.join(__dirname, 'views/partials'))
-
 // Our routes go here:
 
 // Artist Search
@@ -43,7 +39,6 @@ app.get('/artist-search', (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.q.toLowerCase())
     .then((data) => {
-      // console.log('The received data from the API: ', data.body.artists.items)
       res.render('artist-search-results', {
         result: data.body.artists.items,
         docName: 'Artist Page',
@@ -77,25 +72,3 @@ app.get('/tracks/:albumId', (req, res, next) => {
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 )
-
-//  {
-//     external_urls: {
-//       spotify: 'https://open.spotify.com/artist/3WrFJ7ztbogyGnTHbHJFl2'
-//     },
-//     followers: { href: null, total: 21012251 },
-//     genres: [
-//       'beatlesque',
-//       'british invasion',
-//       'classic rock',
-//       'merseybeat',
-//       'psychedelic rock',
-//       'rock'
-//     ],
-//     href: 'https://api.spotify.com/v1/artists/3WrFJ7ztbogyGnTHbHJFl2',
-//     id: '3WrFJ7ztbogyGnTHbHJFl2',
-//     images: [ [Object], [Object], [Object] ],
-//     name: 'The Beatles',
-//     popularity: 88,
-//     type: 'artist',
-//     uri: 'spotify:artist:3WrFJ7ztbogyGnTHbHJFl2'
-//   }
