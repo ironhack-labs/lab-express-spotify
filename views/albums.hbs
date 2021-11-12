@@ -1,0 +1,9 @@
+<div class="container-album">  
+    {{#each items}}
+        <div class="albumSearchImg">
+            <img src = "{{images.[0].url}}">
+            <p>{{name}}</p>
+            <a href="/tracks/{{id}}">Listen to tracks</a>
+        </div>
+    {{/each}}
+</div>
