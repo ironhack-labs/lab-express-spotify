@@ -1,7 +1,9 @@
-<div>
+
+<div class="tracks-wrapper">
+  <h1>Listen to all the Tracks</h1>
   {{#each tracks}}
-    <div>
-      <h1>{{name}}</h1>
+    <div class="track-wrapper">
+      <h3>{{name}}</h1>
       <audio controls>
         <source src="{{preview_url}}" type="audio/mpeg" />
         Your browser does not support the audio element.

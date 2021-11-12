@@ -47,21 +47,18 @@ app.get("/artist-search", (req, res) => {
 app.get("/albums/:id", (req, res) => {
   spotifyApi.getArtistAlbums(req.params.id).then(
     function (data) {
-      console.log("Artist albums", data.body);
       res.render("albums", { albums: data.body.items } || []);
     },
     function (err) {
       console.error(err);
     }
   );
-  // res.send(req.params.id);
 });
 
 app.get("/album-tracks/:id", (req, res) => {
   spotifyApi.getAlbumTracks(req.params.id, { limit: 5, offset: 1 }).then(
     function (data) {
-        console.log(data.body.items[0]);
-      res.render('album-tracks', {tracks: data.body.items});
+      res.render("album-tracks", { tracks: data.body.items });
     },
     function (err) {
       console.log("Something went wrong!", err);

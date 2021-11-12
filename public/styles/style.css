@@ -1,6 +1,9 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins");
+
 body {
   margin: 0px;
   padding: 0px;
+  font-family: "Poppins";
 }
 
 .bg {
@@ -85,4 +88,21 @@ a {
   color: white;
   border-radius: 4px;
   margin-bottom: 10px;
+}
+.tracks-wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+
+}
+.track-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #4d4d4d;
+  padding: 0 50px;
+  width: 80%;
+  margin: 2px;
+  color: white;
+  border-radius: 10px;
 }
