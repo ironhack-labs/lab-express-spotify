@@ -1,0 +1,98 @@
+body,
+button {
+  font-family: 'Righteous', cursive;
+}
+
+.main-container {
+  height: 100vh;
+  background: url('../images/spotify-background.jpeg') no-repeat left top;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-search-results,
+.album-search-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 95%;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 30%;
+  padding: 10px;
+}
+
+.album-image {
+  max-width: 100%;
+  object-fit: contain;
+}
+
+.detail-button {
+  width: 100%;
+  border: none;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.detail-button a {
+  text-decoration: none;
+}
+
+.form-container {
+  width: 50%;
+  height: 20%;
+  background-color: rgba(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+}
+
+form {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form input {
+  padding: 10px;
+  border: none;
+  width: 300px;
+}
+
+form button {
+  border: none;
+  margin-top: 10px;
+  padding: 10px;
+}
+
+.tracks-heading,
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 30px;
+}
+
+.tracks-heading {
+  background-color: rgba(54, 54, 54, 0.5);
+  color: #fff;
+}
+
+.track {
+  border-bottom: 1px solid rgb(117, 112, 112);
+}
+
+.no-image {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(110, 105, 105, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

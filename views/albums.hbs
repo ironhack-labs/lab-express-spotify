@@ -1,0 +1,9 @@
+<div class='album-search-results'>
+  {{#each albumsArr}}
+      <div class="details">
+
+    {{> details}}  
+    <button class="detail-button" type='submit'><a href='/tracks/{{id}}'>View Tracks</a></button>
+  </div>
+  {{/each}}
+</div>

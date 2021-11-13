@@ -1,0 +1,8 @@
+<h2>{{name}}</h2>
+{{#if images.0.url}}
+  <img class='album-image' src='{{images.0.url}}' alt='{{name}}' />
+{{else if images.1.url}}
+  <img class='album-image' src='{{images.1.url}}' alt='{{name}}' />
+{{else}}
+  <div class='no-image'>No Image found</div>
+{{/if}}
