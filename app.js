@@ -27,6 +27,12 @@ const spotifyApi = new SpotifyWebApi({
 app.get("/", (req, res, next) => {
     res.render("index")
 })
+app.get("/artist-search", async (req, res, next) => {
+    // console.log(req.query.search);
+    const artistData = await spotifyApi.searchArtists(req.query.search)
+    console.log(artistData.body);
+    res.render("index")
+})
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
