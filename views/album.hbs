@@ -1,0 +1,12 @@
+<div class="ctn-albums">
+
+{{#each this}}
+<div class="album-card">
+
+<p>
+{{name}}
+</p>
+<img src='{{images.[0].url}}' alt='cover of music album named {{name}}' />
+</div>
+{{/each}}
+</div>
