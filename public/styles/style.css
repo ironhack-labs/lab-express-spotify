@@ -56,3 +56,29 @@ p {
     margin: 0 auto;
     margin-bottom: 2%;
 }
+.discography {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    color: white;
+}
+.discography h1 {
+    text-align: center;
+    width: 100%;
+    font-size: 50pt;
+}
+.discography h2 {
+    text-align: center;
+}
+.album {
+    width: 15%;
+    background-color: white;
+    border-radius: 5px;
+    margin: 2%;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+    color: black;
+}
+.album img {
+    width: 96%;
+    margin: 2%;
+}

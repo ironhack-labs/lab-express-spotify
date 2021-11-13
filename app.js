@@ -7,6 +7,7 @@ const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
 
 app.set('view engine', 'hbs');
+hbs.registerPartials(__dirname + "/views/partials")
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
@@ -28,12 +29,21 @@ app.get("/", (req, res, next) => {
     res.render("index")
 })
 app.get("/artist-search", async (req, res, next) => {
-    console.log("search query: ", req.query.search);
+    // console.log("search query: ", req.query.search);
     const artistData = await spotifyApi.searchArtists(req.query.search)
-    console.log("API Body: ", artistData.body.artists.items);
+    // console.log("API Body: ", artistData.body.artists.items);
     const data = artistData.body.artists.items
+    // console.log(data);
     res.render("artist-search-results", {data})
 })
 
+app.get("/discography/:artist/:id", async (req, res, next) => {
+    const {artist, id} = req.params
+    // console.log(artist, id);
+    let discographyData = await spotifyApi.getArtistAlbums(id)
+    discographyData = discographyData.body.items
+    console.log(discographyData);
+    res.render("discography", {artist, discographyData})
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

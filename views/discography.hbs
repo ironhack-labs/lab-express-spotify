@@ -1,0 +1,14 @@
+<div class="discography">
+    <h1>{{artist}}</h1>
+    {{#each discographyData}}
+        <div class="album">
+            <h2>{{this.name}}</h2>
+            <img src="{{this.images.0.url}}" alt="{{this.images}}" />
+            <a class="btnToAlbums" href="">
+                <div>
+                    <p>Tracks</p>
+                </div>
+            </a>
+        </div>
+    {{/each}}
+</div>
