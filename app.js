@@ -46,4 +46,12 @@ app.get("/discography/:artist/:id", async (req, res, next) => {
     res.render("discography", {artist, discographyData})
 })
 
+app.get("/view-tracks/:album/:id", async (req, res, next) => {
+    const {album, id} = req.params
+    let albumData = await spotifyApi.getAlbumTracks(id)
+    albumData = albumData.body.items
+    console.log(albumData);
+    res.render("view-tracks", {album, albumData})
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

@@ -3,8 +3,8 @@
     {{#each discographyData}}
         <div class="album">
             <h2>{{this.name}}</h2>
-            <img src="{{this.images.0.url}}" alt="{{this.images}}" />
-            <a class="btnToAlbums" href="">
+            <img src="{{this.images.0.url}}" alt="" />
+            <a class="btnToAlbums" href="/view-tracks/{{this.name}}/{{this.id}}">
                 <div>
                     <p>Tracks</p>
                 </div>
