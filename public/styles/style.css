@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.homepage {
+  background-image: url('../images/spotify-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: bottom;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44rem;
+  height: 13rem;
+  background: rgb(255, 255, 255); /* fallback color */
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+}
+
+#search {
+  border: 2px solid #ccc6c4;
+  padding: 9px;
+  margin-bottom: 0.5rem;
+  width: 24rem;
+}
+
+.search-btn {
+  background: red;
+  border: none;
+  color: #fff;
+  font-weight: 900;
+  padding: 11px;
+  margin: 0 auto;
+}
