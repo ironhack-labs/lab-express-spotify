@@ -7,6 +7,7 @@ body {
     align-items: center;
     justify-content: center;
     flex-wrap: wrap;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 h1 {
     text-align: center;
@@ -37,4 +38,21 @@ p {
 .artists img {
     width: 96%;
     margin: 1%;
+}
+.btnToAlbums {
+    text-decoration: none;
+    color: white;
+    font-size: large;
+}
+.btnToAlbums div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: cornflowerblue;
+    border-radius: 5px;
+    width: 70%;
+    height: 50px;
+    margin: 0 auto;
+    margin-bottom: 2%;
 }

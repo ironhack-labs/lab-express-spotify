@@ -2,5 +2,11 @@
 <div class="artists">
     <h1>{{this.name}}</h1>
     <img src="{{images.[0].url}}" alt="{{this.images}}">
+    <a class="btnToAlbums" href="/discography/{{this.name}}/{{this.id}}">
+        <div>
+            <p>Discography</p>
+        </div>
+    </a>
+    </div>
 </div>
 {{/each}}
