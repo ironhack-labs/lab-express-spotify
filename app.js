@@ -28,10 +28,11 @@ app.get("/", (req, res, next) => {
     res.render("index")
 })
 app.get("/artist-search", async (req, res, next) => {
-    // console.log(req.query.search);
+    console.log("search query: ", req.query.search);
     const artistData = await spotifyApi.searchArtists(req.query.search)
-    console.log(artistData.body);
-    res.render("index")
+    console.log("API Body: ", artistData.body.artists.items);
+    const data = artistData.body.artists.items
+    res.render("artist-search-results", {data})
 })
 
 

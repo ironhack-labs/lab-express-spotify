@@ -3,10 +3,17 @@ body {
     background-image: url("/images/spotify-background.jpeg");
     background-size: cover;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
 }
-
+h1 {
+    text-align: center;
+}
+p {
+    text-align: center;
+}
 .search {
     display: flex;
     flex-direction: row;
@@ -18,4 +25,16 @@ body {
     height: 55px;
     border-radius: 5px;
     box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+
+.artists {
+    background-color: white;
+    margin: 1% 1%;
+    width: 15%;
+    border-radius: 5px;
+    box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+}
+.artists img {
+    width: 96%;
+    margin: 1%;
 }
