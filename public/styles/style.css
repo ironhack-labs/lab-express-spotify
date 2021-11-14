@@ -97,3 +97,27 @@ h4 {
 a:hover {
   color: yellow;
 }
+
+// tracks
+nav {
+  display: flex;
+}
+
+nav ul {
+  display: flex;
+  justify-content: space-around;
+  list-style-type: none;
+  background-color: #2a2a2a;
+  color: #bebebe;
+  font-size: 2rem;
+}
+
+nav ul li {
+  padding: 1rem;
+}
+
+.track-list {
+  display: flex;
+  justify-content: space-between;
+  margin: 1rem 16rem;
+}
