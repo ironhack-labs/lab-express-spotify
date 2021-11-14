@@ -1,0 +1,38 @@
+body{
+    font-size: 16px;
+}
+
+.main {
+    height: 100vh;
+    background-image:url("/images/spotify-background.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-box{
+    background-color: #edd8d88a;
+    padding: 3em 6em;
+
+}
+
+input {
+    display: block;
+    padding: 0.6em;
+    margin: 0.4em;
+    border: 1px solid #cbc1c1;
+    font-size: 16px;
+}
+
+input[type="text"]{
+    min-width: 300px;
+    border-radius: 3px;
+}
+
+input[type="submit"]{
+    padding: 0.5em 1em;
+    margin: 0 auto;
+    color: white;
+    background-color: #e35b51;
+}
