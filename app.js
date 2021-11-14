@@ -21,6 +21,10 @@ app.set('views', __dirname + '/views');
 // Make public folder static and available
 app.use(express.static(__dirname + '/public'));
 
+// call method of the hbs package--> registerPartials
+// and as give as a parameter where are going to be the partials
+hbs.registerPartials(__dirname + "/views/partials");
+
 // Spotify -> setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -93,7 +97,6 @@ app.get('/albums/:artistId', async (req, res) => {
     console.log('There is no albums to show! Try another artist!', err);
   }
 })
-
 
 
 // Track

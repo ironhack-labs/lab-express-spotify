@@ -2,13 +2,8 @@
 <div class="album-container">
 	{{#each albums}}
 	<div class="card-album">
-		{{#if images}}
-			<img src="{{images.[0].url}}" alt="{{name}}">
-		{{else}}
-			<img src="images/no-image.jpeg" alt="no image available">
-		{{/if}}
-			<p>{{name}}</p>
-			<a href="/tracks/{{id}}">View Tracks</a>
-		</div>
+    {{> cardImage}}
+		<a href="/tracks/{{id}}">View Tracks</a>
+	</div>
 	{{/each}}
 </div>
