@@ -23,9 +23,17 @@ spotifyApi
   );
 
 // Our routes go here:
-app.get('/', (req, res) => {
-    res.render('home');
-  });
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
+app.get("/artist-search",async (req,res) =>{
+    const artist = req.query.search; 
+    const obtainedArtists = await spotifyApi.searchArtists(artist);
+    const artistsList = obtainedArtists.body.artists.items;
+    res.render("artist-search-results",{artistsList});
+    console.log(artistsList[0].images);
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
