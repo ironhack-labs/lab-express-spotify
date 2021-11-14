@@ -12,9 +12,9 @@ const app = express();
 // config
 app.set('view engine', 'hbs');
 app.set('views', path.join(__dirname + '/views'));
-app.use(express.static(path.join(__dirname + '/public')));
+app.use(express.static(path.join(__dirname + '/public/')));
 
-hbs.registerPartials(__dirname + '/views/partials');
+hbs.registerPartials(__dirname + '/views/partials/');
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({

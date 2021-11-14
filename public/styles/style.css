@@ -1,6 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
 body {
   margin: 0;
   padding: 0;
+  font-family: 'Poppins';
+}
+
+h1 {
+  text-align: center;
+}
+
+h4 {
+  margin: 0;
+  color: #fff;
 }
 
 .homepage {
@@ -43,4 +55,45 @@ body {
   font-weight: 900;
   padding: 11px;
   margin: 0 auto;
+}
+
+// artist page
+.artist-search-results {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.card {
+  font-size: 1.5rem;
+  border: 1px solid grey;
+  margin: 2rem;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 26%;
+}
+
+.card .footer {
+  height: 30%;
+  padding: 15px;
+  margin-top: -10px;
+  background-color: #2a2a2a;
+}
+
+.card .body {
+  flex: 1;
+}
+
+.card .body .album-img {
+  width: 100%;
+  height: auto;
+}
+
+.link-btn-albums {
+  color: #000;
+  text-decoration: none;
+}
+
+a:hover {
+  color: yellow;
 }
