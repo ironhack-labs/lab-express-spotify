@@ -45,14 +45,25 @@ app.get('/artist-search', (req, res) => {
 })
 
 // get albums of the artist
-app.get('/albums/:artistId', (req, res, next) => {
-  const id = req.params.artistId
-  spotifyApi.getArtistAlbums(id)
-  .then((data) => {
-    console.log('Artist albums', data.body);
-    res.render('albums', { albums: data.body.items, doctitle: 'Albums Page'})
-  })
-  .catch(err => console.log('The error while fetching albums occurred: ', err));
+app.get('/albums/:artistId', async (req, res, next) => {
+  try {
+    const result = await spotifyApi.getArtistAlbums(req.params.artistId);
+    const albums = result.body.items;
+    res.render('albums', { albums, doctitle: 'Albums Page' });
+  } catch (err) {
+    next(new Error(err.message))
+  }
+})
+
+// get tracks in an album
+app.get('/tracks/:trackId', async (req, res, next) => {
+  try {
+    const id = req.params.trackId
+    const tracks = await spotifyApi.getAlbumTracks(id, { limit : 5, offset : 1 })
+    res.render('tracks', { tracks, doctitle: 'Album Tracks'})
+  } catch (err) {
+    next(new Error(err.message))
+  }
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
