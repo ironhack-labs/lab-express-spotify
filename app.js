@@ -25,4 +25,21 @@ spotifyApi
 
 // Our routes go here:
 
+app.get('/', (req, res) => {
+  res.render('index.hbs');
+});
+
+app.get('/artist-search', async (req, res) => {
+  const artistFromForm = req.query.artist
+  try {
+    const spotifyArtist = await spotifyApi.searchArtists(artistFromForm)
+    console.log('The received data from the API:', spotifyArtist)
+    res.render('artistSearch.hbs',{
+      spotifyArtist: spotifyArtist.body.artists.items
+    })
+  } catch(err) {
+    console.log('The error while searching artists occurred: ', err)
+  }
+});
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
