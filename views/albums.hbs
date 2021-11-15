@@ -1,8 +1,10 @@
 <div>
-  {{#each artistsResults}}
+  <a href="javascript:history.back()">Back</a>
+
+  {{#each album}}
     <h3>Artist Name: {{this.name}} </h3>
     <img src={{this.images.0.url}} />
     <br />
-    <button><a href="/albums/{{$this.id}}">View Albums</a></button>
+    <button><a href="/tracks/{{this.id}}">View Tracks</a></button>
   {{/each}}
 </div>

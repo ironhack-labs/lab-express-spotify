@@ -1,0 +1,30 @@
+<div>
+
+  <h1>Tracks page</h1>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Listen</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each track}}
+
+        <tr>
+          <td>
+            <p>{{this.name}}</p>
+          </td>
+          <td><audio controls src={{this.preview_url}}>
+              Your browser does not support the
+              <code>audio</code>
+              element.
+            </audio></td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+  <button>
+    <a href="javascript:history.back()">Back</a>
+  </button>
+</div>
