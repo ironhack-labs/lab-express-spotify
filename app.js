@@ -45,7 +45,26 @@ app.get('/artist-search-results/:search', async (req, res)=>{
     }
 })
 
+app.get('albums/:artistId', async (req, res)=>{
+    try {
+        const albums = await (await spotifyApi.searchAlbums(req.params.id)).body.artists.items.id
+        res.render('albums.hbs', {albums})
+    }catch(err){
+        res.render('error.hbs', {errorMsg: "An error while searching albums occurred: "})
+    }
+})
 
+
+
+//PPPPFFFFFFFFFFFFFFFFFF madre mia :(
+// app.get('tracks/:artistId', async (req, res)=>{
+//     try {
+//         const albums = await (await spotifyApi.searchAlbums(req.params.id)).body.artists.items.
+//         res.render('tracks.hbs', {albums})
+//     }catch(err){
+//         res.render('error.hbs', {errorMsg: "An error while searching tracks occurred: "})
+//     }
+// })
   
 
 
