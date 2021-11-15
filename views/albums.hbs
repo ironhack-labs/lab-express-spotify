@@ -1,5 +1,6 @@
-<h1>Artist</h1>
-{{#each artists}}
+<h1>Albums</h1>
+
+{{#each artistAlbums}}
     <div class="col-md-4">
         <div class="card">
             <img class="card-img-top" src="{{this.images.[0].url}}" alt="{{this.name}}"/>
@@ -7,9 +8,9 @@
                 <h5 class="card-title">
                     {{this.name}}
                 </h5>
-                <a class="btn btn-success active text-light" href="/albums/{{this.id}}">
+                {{!-- <a class="btn btn-success active text-light" href="/albums/{{this.id}}">
                     View albums
-                </a>
+                </a> --}}
             </div>
         </div>
     </div>
