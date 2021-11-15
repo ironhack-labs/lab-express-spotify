@@ -1,0 +1,16 @@
+<h2>Search results</h2>
+
+{{#each tracksList}}
+
+<div style="border: 1px solid black; padding:20px">
+    
+    <p> {{this.name}} </p>
+    <audio controls>
+        <source src="{{this.preview_url}}" type="audio/wav">
+    </audio>
+    
+</div>
+    
+{{/each}}
+
+
