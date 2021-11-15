@@ -1,0 +1,9 @@
+<h1>Albums:</h1>
+
+{{#each data}}
+
+<p><img src="{{this.images.0.url}}"alt="photo" height="300px"></p>
+<p>{{this.name}}</p>
+<a href="javascript:history.back()">Back</a>
+
+{{/each}}

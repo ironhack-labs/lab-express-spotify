@@ -1,0 +1,10 @@
+<h1>Search result</h1>
+
+{{#each data}}
+<p>Name: {{this.name}}</p>
+<p><img src="{{this.images.0.url}}"alt="photo"></p>
+
+<a href="/albums/{{this.id}}">View Albums</a>
+{{/each}}
+<a href="javascript:history.back()">Back</a>
+
