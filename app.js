@@ -11,8 +11,7 @@ const SpotifyWebApi = require('spotify-web-api-node');
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET
-  });
-
+});
   spotifyApi
   .clientCredentialsGrant()
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
@@ -35,8 +34,23 @@ app.use(express.urlencoded({extended: false}))
 
 app.get('/', (req, res)=>{
     res.render('home.hbs')
-  })
-  
+})
 
+app.get('/artist-search', (req, res)=>{
+    const artistFromFrom = req.query.artistSearch
+    spotifyApi
+    .searchArtists(artistFromFrom)
+    .then(artistFromDataBase => {
+    //console.log(artistFromDataBase.body.artists.items)
+    const artistResult = artistFromDataBase.body.artists.items
+    res.render("artist-search-results.hbs", {artistResult})
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+   
+})
+
+// app.post('/artist-search', (req, res)=>{
+//     console.log(req.body.artistSearch)
+// })
 
 app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
