@@ -33,8 +33,9 @@ app.get('/', (req, res) => {
 
 app.get('/artist-search/:name', async(req, res) => {
     try{
-        const artists = await (await spotifyApi.searchArtists(req.params.name)).body.artists.items //Returns artists w matching names in []
-        res.render('searchResults.hbs', {  artists })
+        const name = req.params.name
+        const artists = await (await spotifyApi.searchArtists(name)).body.artists.items //Returns artists w matching names in []
+        res.render('searchResults.hbs', { name, artists })
     }
     catch(err){
         console.log(chalk.bgRed('Error:', err))
