@@ -1,15 +1,18 @@
-<ul>
+<div class='result-page'>
+    <table>
+    <tr>
+        <th>Title</th>
+        <th>Listen</th>
+    </tr>
     {{#each tracks}}
-        <li>
-            <h4>{{this.name}}</h4>
-            <br>
-            {{#if this.preview_url}}
-                <audio controls>
-                    <source src="{{this.preview_url}}" type="audio/mpeg">
-                </audio>
-            {{else}}
-                <p><b>No preview available! Sorry!</b></p>
-            {{/if}}
-        </li>
+    <tr>
+        <td>{{this.name}}</td>
+        <td>
+            <audio controls>
+            <source src='{{this.preview_url}}' type='audio/wav'>
+            </audio>
+        </td>
+    </tr>
     {{/each}}
-</ul>
+    </table>
+</div>

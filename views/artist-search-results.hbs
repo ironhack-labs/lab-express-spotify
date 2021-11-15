@@ -1,4 +1,4 @@
-<div class="search-result">
+<div class="result-page">
     <h2>Search Result</h2>
     <div class="artists-list">
             {{#each artists}}
@@ -6,7 +6,7 @@
                 <div class="album-box" style="background-image: url({{this.images.[0].url}})"></div>
                 <div class="info-box">
                     <h3>{{this.name}}</h3>
-                    <a class="btn" href="/albums/{{id}}">View Album</a>
+                    <a class="btn" href="/albums/{{id}}">View Albums</a>
                 </div>
             </div>
             {{/each}}

@@ -42,6 +42,9 @@ button {
     padding: 8px;
     color: white;
 }
+.result-page {
+    padding: 100px;
+}
 .artists-list {
     display: flex;
     flex-direction: row;
