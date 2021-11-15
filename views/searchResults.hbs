@@ -1,7 +1,7 @@
 <div class="container-fluid">
     <div class="container vh-100 d-flex flex-column align-items-center">
         <h1 class="pt-3">Search results for {{this.name}}:</h1>
-        <div id="artists-container" class="d-flex flex-row flex-wrap justify-content-around">
+        <div id="artists-container" class="d-flex flex-row flex-wrap justify-content-between">
             {{#each this.artists}}
             {{> artistCard this}}
             {{/each}}
