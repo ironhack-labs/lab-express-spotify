@@ -2,6 +2,7 @@ require('dotenv').config()
 
 const express = require('express')
 const hbs = require('hbs')
+const chalk = require('chalk')
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node')
@@ -26,5 +27,18 @@ spotifyApi
     .catch(error => console.log('Something went wrong when retrieving an access token', error))
 
 // Our routes go here:
+app.get('/', (req, res) => {
+    res.render('home.hbs')
+})
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))
+app.get('/artist-search/:name', async(req, res) => {
+    try{
+        const artists = await (await spotifyApi.searchArtists(req.params.name)).body.artists.items //Returns artists w matching names in []
+        res.render('searchResults.hbs', {  artists })
+    }
+    catch(err){
+        console.log(chalk.bgRed('Error:', err))
+    }
+})
+
+app.listen(3000, () => console.log(chalk.bgGreen('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')))
