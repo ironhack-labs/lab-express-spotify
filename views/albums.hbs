@@ -1,9 +1,10 @@
 <div class="result-page">
-    <h2>Search Result</h2>
-    <div class="artists-list">
+    <h2>All Albums</h2>
+    <a class="back-btn" href="javascript:history.back()">Back</a>
+    <div class="list">
             {{#each albums}}
-            <div class="artist-card">
-                <div class="album-box" style="background-image: url({{this.images.[0].url}})"></div>
+            <div class="card">
+                <div class="img-box" style="background-image: url({{this.images.[0].url}})"></div>
                 <div class="info-box">
                     <h3>{{this.name}}</h3>
                     <a class="btn" href="/tracks/{{id}}">View Tracks</a>
