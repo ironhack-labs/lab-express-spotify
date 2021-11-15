@@ -37,7 +37,7 @@ app.get('/artist-search', async (req, res)=>{
   try {
     const spotifyArtist = await spotifyApi.searchArtists(req.query.artist)
     res.render('artist.hbs', {
-      spotifyArtist: spotifyArtist.body.artists.items
+      artist: spotifyArtist.body.artists.items
     })
   } catch(err){
     console.log(chalk.bgRed(err))
@@ -45,6 +45,28 @@ app.get('/artist-search', async (req, res)=>{
   
 })
 
+app.get('/albums/:artistId', async (req, res)=>{
+  try {
+    const spotifyAlbums = await spotifyApi.getArtistAlbums(req.params.artistId)
+    res.render('albums.hbs', {
+      albums: spotifyAlbums.body.items
+    })
+  } catch(err) {
+    console.log(chalk.bgRed(err))
+  }
+})
+
+app.get('/tracks/:albumId', async (req, res)=>{
+  try {
+    const spotifyTracks = await spotifyApi.getAlbumTracks(req.params.albumId)
+    console.log(spotifyTracks.body)
+    res.render('tracks.hbs', {
+      tracks: spotifyTracks.body.items
+    })
+  } catch(err) {
+    console.log(chalk.bgRed(err))
+  }
+})
 
 
 

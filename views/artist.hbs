@@ -1,3 +1,10 @@
-<h1>{{spotifyArtist.0.name}}</h1>
-<img src="{{spotifyArtist.0.images.0.url}}" alt="Paul kalkbrenner">
-<button><a href=""></a>Albums</button>
+<div>
+{{#each artist}}
+<h1>{{this.name}}</h1>
+    <img src="{{this.images.0.url}}" alt="{{this.name}}">
+    <form action="/albums/{{this.id}}" method="GET">
+        <button type="submit">View Albums</button>
+    </form>
+{{/each}}
+</div>
+
