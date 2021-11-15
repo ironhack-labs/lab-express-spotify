@@ -58,9 +58,13 @@ h4 {
 }
 
 // artist page
-.artist-search-results {
+.artist-search-results,
+.albums {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  height: 480px;
 }
 
 .card {
@@ -73,13 +77,6 @@ h4 {
   width: 26%;
 }
 
-.card .footer {
-  height: 30%;
-  padding: 15px;
-  margin-top: -10px;
-  background-color: #2a2a2a;
-}
-
 .card .body {
   flex: 1;
 }
@@ -89,8 +86,15 @@ h4 {
   height: auto;
 }
 
+.card .footer {
+  height: 30%;
+  padding: 15px;
+  margin-top: -10px;
+  background-color: #2a2a2a;
+}
+
 .link-btn-albums {
-  color: #000;
+  color: orange;
   text-decoration: none;
 }
 
