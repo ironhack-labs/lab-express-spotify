@@ -31,18 +31,22 @@ const spotifyApi = new SpotifyWebApi({
 
 app.get('/', (req, res)=>{
     res.render('home.hbs')
-  })
+})
 
 app.get('/artist-search-results/:search', async (req, res)=>{
     try {
-        const searchResults = await spotifyApi.searchArtists(req.params.search)
-        console.log(searchResults)
-        res.render('artist-search-results.hbs')
+        // const searchResults = await spotifyApi.searchArtists(req.params.search)
+        const artists = await (await spotifyApi.searchArtists(req.params.search)).body.artists.items
+        // console.log(artists)
+        res.render('artist-search-results.hbs', {artists})
+
     }catch(err){
-        res.render('error.hbs', {errorMsg: "The error while searching artists occurred: "})
+        res.render('error.hbs', {errorMsg: "An error while searching artists occurred: "})
     }
 })
 
+
+  
 
 
 app.listen(3100, () => console.log('My Spotify project running on port 3100 🎧 🥁 🎸 🔊'));
