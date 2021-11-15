@@ -1,9 +1,7 @@
 <div>
-{{#each spotifyArtist}}
-<h1>{{this.name}}</h1>
-<img src="{{this.images.2.url}}" alt="{{this.name}}">
-<form action="/albums/{{this.id}}" method="GET">
-  <button type="submit">View Albums</button>
-</form>
-{{/each}}
+  {{#each spotifyArtist}}
+    <h1>{{this.name}}</h1>
+    <img src='{{this.images.2.url}}' alt='{{this.name}}' />
+    <a href="/albums/{{this.id}}">View Albums</a>
+  {{/each}}
 </div>
