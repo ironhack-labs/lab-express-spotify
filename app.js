@@ -20,12 +20,23 @@ const spotifyApi = new SpotifyWebApi({
 
 const app = express();
 
+//Middleware
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+//Middleware for body-parser
 
+app.use(express.json())
+app.use(express.urlencoded({extended: false}))
 
 // Our routes go here:
+
+app.get('/', (req, res)=>{
+    res.render('home.hbs')
+  })
+  
+
 
 app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
