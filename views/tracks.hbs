@@ -1,17 +1,11 @@
-{{!-- <ul class="list-group">
-     {{#each tracks}}
-  <li class="list-group-item active" aria-current="true">{{this.name}}</li>
-   {{/each}}
-</ul> --}}
-
 <figure>
     {{#each tracks}}
     <figcaption>{{this.name}}</figcaption>
-    <audio
+        <audio
         controls
-        src="https://api.spotify.com/v1/tracks/2BW53FQsAP5jCzElZKpp2E">
+            src="{{this.preview_url}}">
             Your browser does not support the
             <code>audio</code> element.
-    </audio>
+        </audio>
     {{/each}}
 </figure>
