@@ -1,5 +1,6 @@
+<h2>Albums for: {{this.artistName}}</h2>
 <div class="row">
-{{#each artistsList}}
+{{#each albumsList}}
   <div class="col-md-4">
     <div class="card">
       <img class="card-img-top" src="{{this.images.[0].url}}" alt="{{this.name}}" />
@@ -7,7 +8,7 @@
         <h5 class="card-title">
           {{this.name}}
         </h5>
-        <a href="/albums/{{this.id}}" class="btn btn-primary">view Albums</a>
+        <a href="/albums/{{this.id}}" class="btn btn-primary">View Tracks</a>
       </div>
 
     </div>
