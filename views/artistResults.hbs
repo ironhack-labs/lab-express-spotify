@@ -1,0 +1,8 @@
+<h1>Search results:</h1>
+
+<ul>
+    {{#each artists}}
+    <li>{{this.name}}</li>
+    <a href="/albums/{{this.id}}">View Albums</a>
+    {{/each}}
+</ul>
