@@ -1,0 +1,29 @@
+body {
+   font-family: Arial, Helvetica, sans-serif;
+   display: flex;
+   background-image: url(./../images/spotify-background.jpeg);
+}
+
+img {
+   height: 20rem;
+   width: 20rem;
+}
+
+.albums {
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   
+}
+
+.one-album {
+   flex-direction: column;
+   margin: 3%;
+   background-color: rgba(128, 128, 128, 0.452);
+   text-align: center;
+   padding: 1rem;
+}
+
+a {
+   margin-top: 2rem;
+}

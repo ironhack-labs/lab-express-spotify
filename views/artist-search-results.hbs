@@ -1,10 +1,12 @@
-<div>
+<link rel="stylesheet" href="/styles/style-artist.css">
+
+    <div class="artists">
     {{#each artists}}
+    <div class="one-artist">
     <h2>{{this.name}}</h2>
     <img src={{this.images.[0].url}}> {{!-- Dot before index --}}
     <br>
     <a href="/albums/{{this.id}}">View albums</a>
-
+    </div>
     {{/each}}
-
-</div>
+    </div>

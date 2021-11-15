@@ -1,0 +1,21 @@
+body {
+    background-image: url(./../images/spotify-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.search-bar {
+    margin-top: 20%;
+    margin-left: 40%;
+}
+
+.search-bar input {
+    height: 2.5rem; 
+    font-size: 1rem;
+}
+
+.search-bar button {
+    height: 3rem;
+    font-size: 1rem;
+}

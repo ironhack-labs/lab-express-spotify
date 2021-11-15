@@ -1,6 +1,10 @@
-<div>
+<link rel="stylesheet" href="/styles/style-tracks.css">
+
+<div class="tracks">
+     <div class="one-track">
      {{#each tracks}}
     <h3>{{this.name}}</h3>
     <audio controls src="{{this.preview_url}}"></audio>
      {{/each}} 
+     </div>
 </div> 
