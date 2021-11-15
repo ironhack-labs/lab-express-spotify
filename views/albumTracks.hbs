@@ -1,9 +1,8 @@
-<h1>Tracks in {{this.album}}:</h1>
-
-{{#each this.tracks}}
-<p>{{this.name}}</p>
-<audio controls>
-    <source src="{{this.preview_url}}" type="audio/mpeg">
-    Your browser does not support the audio element.
-</audio>
-{{/each}}
+<div class="container vh-100 d-flex flex-column align-items-center">
+    <h1 class="pt-3">Tracks in {{this.album}}:</h1>
+    <div class="d-flex flex-row flex-wrap justify-content-center align-items-center">
+        {{#each this.tracks}}
+        {{>trackPartial this}}
+        {{/each}}
+    </div>
+</div>

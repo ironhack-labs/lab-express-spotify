@@ -1,10 +1,8 @@
-<div class="container-fluid">
-    <div class="container vh-100 d-flex flex-column align-items-center">
-        <h1 class="pt-3">{{this.name}}'s albums:</h1>
-        <div id="artists-container" class="d-flex flex-row flex-wrap justify-content-between">
-            {{#each this.albums}}
-            {{> albumCard this}}
-            {{/each}}
-        </div>
+<div class="container vh-100 d-flex flex-column align-items-center">
+    <h1 class="pt-3">{{this.name}}'s albums:</h1>
+    <div id="artists-container" class="d-flex flex-row flex-wrap justify-content-between">
+        {{#each this.albums}}
+        {{> albumCard this}}
+        {{/each}}
     </div>
 </div>
