@@ -41,8 +41,8 @@ app.get("/", (req, res) => {
 
 app.get("/artist-search", (req, res) => {
   const artistFromForm = req.query.artistSearch;
-  spotifyApi
-    .searchArtists(artistFromForm)
+  spotifyApi.searchArtists(artistFromForm)
+
     .then((artistFromDataBase) => {
       const artistResult = artistFromDataBase.body.artists.items;
       res.render("artist-search-results.hbs", { artistResult });
@@ -53,8 +53,7 @@ app.get("/artist-search", (req, res) => {
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-  spotifyApi
-    .getArtistAlbums(req.params.artistId)
+  spotifyApi.getArtistAlbums(req.params.artistId)
 
     .then((artistFromDataBase) => {
       const albums = artistFromDataBase.body.items;
@@ -66,8 +65,7 @@ app.get("/albums/:artistId", (req, res, next) => {
 });
 
 app.get("/tracks/:albumId", (req, res, next) => {
-  spotifyApi
-    .getAlbumTracks(req.params.albumId)
+  spotifyApi.getAlbumTracks(req.params.albumId)
 
     .then((tracksFromAlbum) => {
         const tracks = tracksFromAlbum.body.items;

@@ -1,0 +1,12 @@
+.home-view {
+    background-image: url(./../images/spotify-background.jpeg);
+    background-size: cover;
+    width: 90%;
+    height: 90vh;
+    margin: 2px auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
