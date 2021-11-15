@@ -8,9 +8,18 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
 
+//Middleware for the view engine
+
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
+
+//Middleware for the public
+
 app.use(express.static(__dirname + '/public'));
+
+//Middleware for body-parser
+app.use(express.json());
+app.use(express.urlencoded({extended: false}))
 
 // setting the spotify-api goes here:
 
@@ -31,6 +40,15 @@ app.get('/', (req, res) => {
 	res.render('index');
 	});
 
+  app.get('/artist-search-results', (req, res) => {
+    spotifyApi
+        .searchArtists(req.query.artists)
+        .then(data => {
+            console.log('The received data from the API: ', data.body);
+            res.render('artist-search-results',{artists:data.body.artists})
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
-
+  
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
