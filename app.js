@@ -41,4 +41,15 @@ app.get('/artist-search/:name', async(req, res) => {
     }
 })
 
+app.get('/albums/:id', async(req, res) => {
+    try{
+        const name = await (await spotifyApi.getArtist(req.params.id)).body.name
+        const albums = await (await spotifyApi.getArtistAlbums(req.params.id)).body.items
+        res.render('albums.hbs', { name, albums })
+    }
+    catch(err){
+        console.log(chalk.bgRed('Error:', err))
+    }
+})
+
 app.listen(3000, () => console.log(chalk.bgGreen('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')))

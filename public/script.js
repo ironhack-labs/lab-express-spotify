@@ -7,5 +7,5 @@ searchArtistButton.addEventListener('click', () => {
     const name = document.getElementById('name').value //Get name value after clicking button
 
     //Change the url so the seach route in the backend activates
-    window.location.href = `http://localhost:3000/artist-search/${name}`
+    window.location.href = `/artist-search/${name}`
 })
