@@ -1,12 +1,14 @@
 <div class="align-center">
   {{#each artist}}
-    <div class="container-artist">
-      <div class="box-artist">
-        <h2>{{this.name}}</h2>
+    <div class="container">
+      <div class="box">
         <img src="{{this.images.0.url}}" alt="{{this.name}}" />
-        <button class="albums-button">
+        <div class="container-button">
+          <h2>{{this.name}}</h2>
+          <button class="button">
           <a href="/albums/{{this.id}}">View Albums</a>
-        </button>
+          </button>
+        </div>
       </div>
     </div>
   {{/each}}
