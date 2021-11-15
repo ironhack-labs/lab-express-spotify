@@ -1,0 +1,21 @@
+
+
+<h2>These are the artist albums</h2>
+
+<div class="row row-cols-1 row-cols-md-3 g-3" >
+    
+ {{#each albums}}
+  <div class="col">
+ <div class="card">
+  <img src="{{this.images.[0].url}}" class="card-img-top" alt="album image">
+  <div class="card-body">
+    <h5 class="card-title">{{this.name}}</h5>
+    
+    <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
+  </div>
+</div>
+</div>
+ {{/each}}
+ </div>
+
+
