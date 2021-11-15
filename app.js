@@ -38,18 +38,25 @@ app.get("/artist-search", async (req, res) => {
   }
 });
 
-app.get("/albums/:artistId", async (req, res,next) => {
+app.get("/albums/:artistId", async (req, res, next) => {
   try {
     const artist = await spotifyApi.getArtist(req.params.artistId);
     const artistName = artist.body.name;
-    const obtainedAlbums = await spotifyApi.getArtistAlbums(req.params.artistId);
+    const obtainedAlbums = await spotifyApi.getArtistAlbums(
+      req.params.artistId
+    );
     const albumsList = obtainedAlbums.body.items;
-    res.render("albums",{albumsList, artistName:artistName});
+    res.render("albums", { albumsList, artistName: artistName });
   } catch (err) {
     console.log("err", err);
   }
 });
 
+app.get("/tracks/:albumId", async (req, res) => {
+  const obtainedTracks = await spotifyApi.getAlbumTracks(req.params.albumId);
+  const tracks = obtainedTracks.body.items;
+  res.render("tracks", {tracks});
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
