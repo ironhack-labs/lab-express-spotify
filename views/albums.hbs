@@ -3,5 +3,6 @@
 <ul>
     {{#each albums}}
     <li>{{this.name}}</li>
+    <a href="/album/{{this.id}}/tracks">View tracks</a>
     {{/each}}
 </ul>
