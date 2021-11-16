@@ -36,7 +36,7 @@ app.get("/artist-search", async (req, res) => {
         const artist = req.query.artistName;
         const foundArtist = await spotifyApi.searchArtists(artist);
         //console.log(foundArtist.body.artists.items);
-        await res.render("artist-search-results", {ArtistList : foundArtist.body.artists.items});
+        res.render("artist-search-results", {ArtistList : foundArtist.body.artists.items});
         /*return foundArtist = spotifyApi
         .searchArtists(({$title: artist, $options: "i"}))
         .then((foundArtists) => {
@@ -58,10 +58,7 @@ app.get("/artist-search", async (req, res) => {
          //console.log(data)
          const albums = data.body.items;
          //console.log("ALBUMS2222",albums)
-         await res.render("albums", {albumsList: albums});
-         const tracksData = await spotifyApi.getAlbumTracks(artistId, {limit: 5})
-         console.log(tracksData);
-        }
+         res.render("albums", {albumsList: albums});}
          catch(err){
              console.log(err)
          }
@@ -70,9 +67,7 @@ app.get("/artist-search", async (req, res) => {
         app.get("/tracks/:tracksID", async (req,res)=>{
             try{
             const tracksData = await spotifyApi.getAlbumTracks(req.params.tracksID);
-            await res.render("tracks" , { tracks: tracksData.body.items });
-
-
+            res.render("tracks" , { tracks: tracksData.body.items });
             }catch(err){
                 console.log(err)
             }
