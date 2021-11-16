@@ -1,8 +1,11 @@
 <div>
 <h3>Artist</h3>
   {{#each items}}
-     <p>{{name}}</p>
+
+     <h2>{{name}}</h2>
+
      <img src={{images.1.url}} alt="artist image" />
+     
      <a href="/albums/{{id}}">View Albums</a>
 
 {{/each}}
