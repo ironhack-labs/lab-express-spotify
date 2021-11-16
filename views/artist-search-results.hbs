@@ -1,12 +1,12 @@
 <div>
-<h3>Artist</h3>
+<h3>Artist Results</h3>
   {{#each items}}
 
      <h2>{{name}}</h2>
 
      <img src={{images.1.url}} alt="artist image" />
-     
-     <a href="/albums/{{id}}">View Albums</a>
+
+     <a href="/artists/{{id}}/albums">View Albums</a>
 
 {{/each}}
 </div>
