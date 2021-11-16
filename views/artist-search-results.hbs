@@ -2,11 +2,11 @@
 
 {{#each artistList}}
 
-<div style="border: 1px solid black; padding:20px">
+<div class="artists-page">
     
     <p> {{this.name}} </p>
-    <p><img src="{{this.images.[0].url}}" width="30%"> </p>
-    <a href="/artist/albums/{{this.id}}">View Albums</a>
+    <img src="{{this.images.[0].url}}" width="30%">
+    <p><a href="/artist/albums/{{this.id}}">View Albums</a></p> 
     
 </div>
     

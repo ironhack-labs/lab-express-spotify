@@ -41,3 +41,14 @@ label {
     width: 100%;
     max-height: 100%;
   }
+
+.track-page, .album-page, .artists-page {
+    border: 1px solid black; 
+    padding: 1rem;
+    margin: 0.5rem;
+    display: table;
+    flex-direction: row;
+    align-items: center;
+    text-align: center;
+
+}
