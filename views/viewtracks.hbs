@@ -1,0 +1,7 @@
+{{#each songLists}}
+  <div style="border: 1px solid black; padding: 20px">
+
+    <p>{{this.name}}</p>
+    <audio controls src="{{this.preview_url}}"></audio>
+  </div>
+{{/each}}
