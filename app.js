@@ -1,81 +1,75 @@
-require('dotenv').config();
+require("dotenv").config();
 
-const express = require('express');
-const hbs = require('hbs');
-const SpotifyWebApi = require('spotify-web-api-node');
+const express = require("express");
+const hbs = require("hbs");
+const SpotifyWebApi = require("spotify-web-api-node");
 
 // require spotify-web-api-node package here:
-
 const app = express();
 
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set("view engine", "hbs");
+app.set("views", __dirname + "/views");
+app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
-    clientId: process.env.CLIENT_ID,
-    clientSecret: process.env.CLIENT_SECRET
+  clientId: process.env.CLIENT_ID,
+  clientSecret: process.env.CLIENT_SECRET,
+});
+
+// Retrieve an access token
+spotifyApi
+  .clientCredentialsGrant()
+  .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
+  .catch((error) =>
+    console.log("Something went wrong when retrieving an access token", error)
+  );
+
+// ROUTES
+app.get("/", (req, res) => {
+  res.render("home.hbs");
+});
+
+app.get("/artist-search-results", async (req, res) => {
+  try {
+    // const searchResults = await spotifyApi.searchArtists(req.params.search)
+
+    const response = await spotifyApi.searchArtists(req.query.search)
+    res.render("artist-search-results.hbs", { artists: response.body.artists.items });
+ } catch (err) {
+    res.render("error.hbs", {
+      errorMsg: "An error while searching artists occurred: ",
+    });
+  }
+});
+
+
+
+app.get("/albums/:artistId", async (req, res) => {
+  try {
+    // console.log(req.params.artistId)
+
+    const response = await spotifyApi.getArtistAlbums(req.params.artistId)
+    res.render("albums.hbs", { albums : response.body.items });
+
+  } catch (err) {
+    res.render("error.hbs", {
+      errorMsg: "An error while searching albums occurred: ",
+    });
+  }
+});
+
+
+app.get("/tracks/:albumId", async (req, res) => {
+    try {
+      const response = await spotifyApi.getAlbumTracks(req.params.albumId);
+      res.render("tracks.hbs", { tracks: response.body.items });
+    } catch (err) {
+      console.log("The error while searching artists occurred: ", err);
+    }
   });
-  
-  // Retrieve an access token
-  spotifyApi
-    .clientCredentialsGrant()
-    .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-    .catch(error => console.log('Something went wrong when retrieving an access token', error));
-  
-
-// Our routes go here:
 
 
-
-app.get('/', (req, res)=>{
-    res.render('home.hbs')
-})
-
-app.get('/artist-search-results/:search', async (req, res)=>{
-    try {
-        // const searchResults = await spotifyApi.searchArtists(req.params.search)
-        const artists = await (await spotifyApi.searchArtists(req.params.search)).body.artists.items
-        console.log(artists)
-        res.render('artist-search-results.hbs', {artists})
-
-    }catch(err){
-        res.render('error.hbs', {errorMsg: "An error while searching artists occurred: "})
-    }
-})
-
-app.get('albums/:artistId', async (req, res)=>{
-    try {
-        const albums = await (await spotifyApi.getArtists(req.params.artistId)).body.artists
-        res.render('albums.hbs', {albums})
-
-
-        // const albums = await (await spotifyApi.getArtistAlbums(req.params.artistId))//.body.items
-        // console.log(albums)
-        // res.render('albums.hbs', {albums: albums.body.items,})
-
-        // const name = await (await spotifyApi.getArtist(req.params.id)).body.name
-        // const albums = await (await spotifyApi.getArtistAlbums(req.params.id)).body.items
-        // res.render('albums.hbs', { name, albums })
-
-    }catch(err){
-        res.render('error.hbs', {errorMsg: "An error while searching albums occurred: "})
-    }
-})
-
-
-
-//PPPPFFFFFFFFFFFFFFFFFF madre mia :(
-// app.get('tracks/:artistId', async (req, res)=>{
-//     try {
-//         const albums = await (await spotifyApi.searchAlbums(req.params.id)).body.artists.items.
-//         res.render('tracks.hbs', {albums})
-//     }catch(err){
-//         res.render('error.hbs', {errorMsg: "An error while searching tracks occurred: "})
-//     }
-// })
-  
-
-
-app.listen(3100, () => console.log('My Spotify project running on port 3100 🎧 🥁 🎸 🔊'));
+app.listen(3100, () =>
+  console.log("My Spotify project running on port 3100 🎧 🥁 🎸 🔊")
+);

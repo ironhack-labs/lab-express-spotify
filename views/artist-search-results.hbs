@@ -4,8 +4,15 @@
 <h1>Search results:</h1>
 
 <ul>
-    {{#each this.artists}}
-    <li>{{this.name}}</li>
-    <a href="/albums/{{this.id}}">View Albums</a>
+    {{#each artists}}
+        <h3 style="font-weight: 700;">{{this.name}}</h3>
+        <img height="400px" src="{{this.images.[0].url}}"/>
+        <br>
+        <br>
+        <a class="btn btn-primary" href="/albums/{{this.id}}">View Albums</a>
+        <br>
+        <br>
+        <br>
+        <br>
     {{/each}}
 </ul>

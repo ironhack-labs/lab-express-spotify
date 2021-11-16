@@ -1,0 +1,11 @@
+<h1>Search results:</h1>
+
+<ul>
+    {{#each tracks}}
+        <h3>{{this.name}}</h3>
+        <audio controls src="{{this.preview_url}}"></audio>
+        <br>
+        <br>
+        <br>
+    {{/each}}
+</ul>

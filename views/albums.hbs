@@ -1,10 +1,13 @@
 <h1>Search results:</h1>
 
 <ul>
-    {{#each this.albums}}
-    <li>{{this.name}}</li>
-    <img src="{{this.images.[0].url}}" alt="{{this.name}}"/>
-    <h5 class="card-title">{{this.name}}</h5>
-    <a href="/tracks/{{this.id}}">View Tracks</a>
+    {{#each albums}}
+        <img height="400px" src="{{this.images.[0].url}}" alt="{{this.name}}"/>
+        <h3 class="card-title">{{this.name}}</h3>
+        <a class="btn btn-primary" href="/tracks/{{this.id}}">View Tracks</a>
+    <br>
+    <br>
+    <br>
     {{/each}}
+
 </ul>
