@@ -1,0 +1,12 @@
+<h1>Results</h1>
+
+{{#each artists}}
+  <div style="border: 1px solid #000000; padding:20px">
+    <p>{{this.name}}</p>
+    <img src="{{this.images.2.url}}" alt="artists photo"/> 
+    {{!-- have to go thru all the steps to get the value we want --}}
+    <a href="/albums/{{this.id}}">View Albums</a>
+    {{!-- ^^ how to get the id from the artist --}}
+  </div>
+{{/each}}
+
