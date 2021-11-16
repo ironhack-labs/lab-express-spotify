@@ -1,0 +1,27 @@
+<h2>Album Tracks</h2>
+
+{{#each tracks}}
+    <div style="border: 1px solid black; padding: 20px">
+        <p>
+            Artists: {{#each this.artists}}
+                <p>
+                    {{this.name}}
+                </p>
+            {{/each}}
+        </p>
+        <p>
+            Song name: {{this.name}}</p>
+        <p>            
+            {{#if this.preview_url}}
+                <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            {{else}}
+                <p><b>No preview available! Sorry!</b></p>
+            {{/if}}
+        </p>
+
+    </div>
+
+{{/each}}

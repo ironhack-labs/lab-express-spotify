@@ -1,0 +1,14 @@
+<h2>Albums</h2>
+
+{{#each albums}}
+    <div style="border: 1px solid black; padding: 20px">
+        <span>
+            <p>Album name:{{this.name}}</p>
+            <p>Total Tracks:{{this.total_tracks}}</p>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+        </span>
+        <span>
+            <p><img src="{{this.images.0.url}}" alt="altimg" width="150px"></p>
+        </span> 
+    </div>
+{{/each}}

@@ -1,0 +1,13 @@
+<h2>Artist's Results</h2>
+
+{{#each artistas}}
+    <div style="border: 1px solid black; padding: 20px">
+
+        <p>{{this.name}}</p>
+        <p><img src="{{this.images.0.url}}" alt="altimg" width="150px"></p>
+        
+        <a href="/albums/{{this.id}}">View Albums</a>
+
+    </div>
+
+{{/each}}
