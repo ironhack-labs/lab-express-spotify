@@ -51,7 +51,8 @@ app.get("/artist-search", async (req, res) => {
 });
 
 app.get("/albums/:artistId", async (req, res) => {
-  console.log("req.params", req.params.artistId);
+  //To capture value from dynamic endpoint we use rq.params
+  //console.log("req.params", req.params.artistId);
   const artistId = req.params.artistId;
 
   const data = await spotifyApi.getArtistAlbums(artistId); //
