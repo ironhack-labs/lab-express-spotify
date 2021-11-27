@@ -1,0 +1,25 @@
+<table class="uk-table uk-table-hover uk-table-divider">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Listen</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+            <tr>
+                <td>{{name}}</td>
+                <td>
+                    {{#if preview_url}}
+                    <audio controls
+                    src={{preview_url}}>
+
+                    </audio>
+                    {{else}}
+                        No hay preview
+                    {{/if}}
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
