@@ -1,0 +1,20 @@
+<p>Results of the search!!</p>
+<h1>Search results:</h1>
+    
+    
+ {{#each artists}}
+<div class="card" style="width: 18rem;">
+  <img src="{{this.images.[0].url}}" class="card-img-top" alt="{{this.name}}" />
+  <div class="card-body">
+    <h5 class="card-title">
+        {{this.name}}</h5>
+    <p class="card-text">
+        <ul>
+        <li> Genres: {{this.genres}} </li>
+        <li> Followers: {{this.followers.total}} </li> 
+        </ul>
+    </p>
+    <a href="/albumsResults/{{this.id}}" class="btn btn-primary">View albums</a>
+  </div>
+</div>
+{{/each}}

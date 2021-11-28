@@ -1,0 +1,23 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+#bkg{
+    background-image: url('/images/Spotify-background-alt.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    filter: grayscale(0.8);
+}
+
+ #Formulary{
+     position: absolute;
+     margin-left: 20%;
+     margin-top: 300px;
+     margin-bottom: auto;
+     margin-right: auto;
+     background-color: rgba(255, 228, 196, 0.623);
+   padding: 40px;
+ }
