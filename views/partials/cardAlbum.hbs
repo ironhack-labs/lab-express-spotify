@@ -1,0 +1,15 @@
+<div>
+    <div class="uk-card uk-card-default">
+        <div class="uk-card-media-top">
+            <img src={{images.[0].url}} width="200" height="200" alt="album cover">
+        </div>
+        <div class="uk-card-body">
+            <h3 class="uk-card-title">{{name}}</h3>
+            {{#if album_type}}
+                <a class="uk-button uk-button-danger" href="/tracks/{{id}}">View Tracks</a>
+            {{else}}
+                <a class="uk-button uk-button-danger" href="/albums/{{id}}">View Artist</a>
+            {{/if}}
+        </div>
+    </div>
+</div>
