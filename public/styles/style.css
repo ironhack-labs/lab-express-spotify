@@ -1,0 +1,12 @@
+.img-back {
+    background-image: url('/images/spotify-background.jpeg');
+    height: 100vh;
+}
+
+#searchArtist {
+    width: 30vw;
+    padding: 7px;
+}
+#searchArtist:focus {
+    outline: none;
+}
