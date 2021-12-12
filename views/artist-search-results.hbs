@@ -1,0 +1,28 @@
+<div class="album py-5 bg-light">
+        <div class="container"> 
+                <div class="title">
+                    <div class="top">
+                        <h1>Search results for: {{search}}</h1>
+                        <a href="/" class="btn btn-primary">New Search</a>
+                    </div>
+                </div>
+          <div class="row text-center">
+            {{#each artist}}
+          <div class="col-md-4" style="padding: 20px">
+                <div class="card" style="width: 23rem;">
+                        <div class="thumbs"> <img class="mx-auto card-img-top" alt={{name}} src={{images.[0].url}}></div>
+                        <div class="card-body scard-body">
+                            <h5 class="card-title">{{name}}</h5>
+                            <p class="card-text">{{tagline}}</p>
+                            <a href="/albums/{{id}}" class="btn btn-primary">Albums</a>
+                        </div>
+                </div>
+           </div>
+            {{/each}}
+          </div>
+        </div>
+      </div>
+
+
+
+

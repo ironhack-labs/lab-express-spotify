@@ -1,0 +1,49 @@
+.thumbs {
+  padding-top: 20px;
+}
+
+.mx-auto {
+  height: 200px;
+  width: 200px;
+}
+
+audio {
+  height: 30px;
+  width: 300px;
+  align-items: right;
+}
+
+.list-group-item {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.title {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.top {
+  margin-left: 30px;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  background-image: linear-gradient(to right top, #000000, #05470a);
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}

@@ -1,0 +1,24 @@
+<div class="album py-5 bg-light">
+        <div class="container">
+              <div class="title" style="margin-left: 20px;">
+                <div class="thumbs"> <img class="mx-auto card-img-top" src={{album.images.[1].url}}></div>
+                <div class="top">
+                    <h1>Artist: {{album.artists.[0].name}}</h1>
+                    <h2>Album: {{album.name}}</h2>
+                     <a href="javascript:history.back()" class="btn btn-primary">Return to Albums</a>
+                </div>
+              </div>
+                <br>
+                <ul class="list-group">
+                     {{#each songs}}
+                  <li class="list-group-item">
+                            <span>{{name}}</span> 
+                            {{#if preview_url}}
+                            <audio controls><source src={{preview_url}} type="audio/mpeg">Your browser does not support the audio tag.</audio>
+                            {{else}}
+                            No preview available
+                            {{/if}}
+                  </li>
+                     {{/each}}
+                </ul>
+</div>

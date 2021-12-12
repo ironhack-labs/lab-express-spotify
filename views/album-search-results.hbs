@@ -1,0 +1,30 @@
+<div class="album py-5 bg-light">
+        <div class="container">
+                <div class="title" style="margin-left: 20px;">
+                <div class="thumbs"> <img class="mx-auto card-img-top" src={{artist.images.[0].url}} ></div>
+                <div class="top">
+                    <h1>Artist: {{artist.name}}</h1>
+                    
+                     <a href="javascript:history.back()" class="btn btn-primary">Return to Search Results</a>
+                </div>
+              </div>
+            <div class="row text-center">
+                {{#each albums}}
+                <div class="col-md-4" style="padding: 20px">
+                    <div class="card" style="width: 23rem;">
+                    <div class="thumbs"> <img class="mx-auto card-img-top"  alt={{name}} src={{images.[0].url}}></div>
+                            <div class="card-body scard-body">
+                            <h5 class="card-title text">{{name}}</h5>
+                            <p class="card-text">{{tagline}}</p>
+                            <a href="/albumSongs/{{id}}" class="btn btn-primary">View Tracks</a>
+                            </div>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+        </div>
+</div>
+
+
+
+
