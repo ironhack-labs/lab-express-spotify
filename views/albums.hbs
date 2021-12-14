@@ -1,0 +1,12 @@
+<div class="row">
+    {{#each albums}}
+        <div class="col-4-md album-card content-center">
+            <img class="content-center" src="{{this.images.[0].url}}" alt="Album cover" width="200px">
+            <div>
+                <p class="content-center">{{this.name}}</p>
+                <a class="content-center" href="/tracks/{{this.id}}">View tracks</a>
+            </div>
+        </div>
+        <br>
+    {{/each}}
+</div>
