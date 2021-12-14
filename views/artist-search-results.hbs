@@ -1,0 +1,11 @@
+<h2>Search results for "{{searchQuery}}"</h2>
+<div class="row">
+    {{#each artists}}
+        <div class="col-4-md spaced">
+            <img src="{{this.images.[0].url}}" width="200px">
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}">View Albums</a>
+            <br>
+        </div>
+    {{/each}}
+</div>

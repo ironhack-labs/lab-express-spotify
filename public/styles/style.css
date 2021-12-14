@@ -1,0 +1,13 @@
+.content-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spaced {
+    width: 300px;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+    margin: 20px 20px;
+}
