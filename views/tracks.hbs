@@ -1,1 +1,18 @@
-<h1></h1>
+<table>
+    <tr>
+        <th>Track</th>
+        <th>Song</th>
+        <th>Preview</th>
+    </tr>
+    {{#each tracks}}
+    <tr>
+        <td>{{this.track_number}}</td>
+        <td>{{this.name}}</td>
+        <td>
+            <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+            </audio>
+        </td>
+    </tr>
+    {{/each}}
+</table>

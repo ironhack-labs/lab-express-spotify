@@ -33,7 +33,7 @@ app.get('/artist-search', function (req, res, next) {
     spotifyApi
         .searchArtists(req.query.artistsearch)
         .then(data => {
-            console.log("data.body.artists.items", data.body.artists.items);
+            // console.log("data.body.artists.items", data.body.artists.items);
             res.render("artist-search-results", { 
                 artists: data.body.artists.items,
                 searchQuery: req.query.artistsearch
@@ -52,8 +52,22 @@ app.get('/albums/:id', function (req, res, next) {
             });
         })
         .catch(err => {
-            console.error(err);
+            console.log("An error occurred: ", err);
         })
+});
+
+app.get('/tracks/:id', function (req, res, next) {
+    spotifyApi
+        .getAlbumTracks(req.params.id)
+        .then(data => {
+            // res.json(data);
+            res.render('tracks', {
+                tracks: data.body.items
+            });
+        })
+        .catch(err => {
+            console.log("An error occurred: ", err);
+        });
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
