@@ -1,13 +1,13 @@
-<table>
+<table class="content-center">
     <tr>
-        <th>Track</th>
-        <th>Song</th>
-        <th>Preview</th>
+        <th></th>
+        <th><p>Song</p></th>
+        <th><p>Audio Preview</p></th>
     </tr>
     {{#each tracks}}
     <tr>
-        <td>{{this.track_number}}</td>
-        <td>{{this.name}}</td>
+        <td><h3>{{this.track_number}}</h3></td>
+        <td><h3>{{this.name}}</h3></td>
         <td>
             <audio controls>
                 <source src="{{this.preview_url}}" type="audio/mpeg">

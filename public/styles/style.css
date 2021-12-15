@@ -1,13 +1,37 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    background-color: rgba(37, 33, 33, 0.973);
+}
+
 .content-center {
     display: flex;
     justify-content: center;
+}
+
+.btn {
+    border: 1px solid black;
+}
+
+.card-title {
+    padding: 10px;
+    border: 1px solid black;
+}
+
+.align-center {
     align-items: center;
+}
+
+.submit-btn {
+    margin-top: 7px;
+    background-color: rgb(123, 255, 0);
+    width: 100%;
 }
 
 .spaced {
     width: 300px;
     display: flex;
-    justify-content: space-between;
+    justify-content: space-evenly;
     padding: 10px 10px;
     margin: 20px 20px;
 }
@@ -16,4 +40,18 @@
     width: 25%;
     padding: 15px;
     margin: 20px 40px;
+}
+
+#background-image {
+    height: 100vh;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+}
+
+th > p {
+    color: white;
+}
+
+td > h3 {
+    color: rgb(180, 175, 175);
 }
