@@ -1,0 +1,31 @@
+<table class="uk-table uk-table-hover uk-table-divider">
+    <thead>
+        <tr>
+            <th>Title</th>
+            <th>Listen</th>
+           
+        </tr>
+    </thead>
+    <tbody>
+        {{#each track}}
+        <tr>
+            <td>{{name}}</td>
+            <td>
+                {{#if preview_url}}
+                    <audio
+                        controls
+                        src={{preview_url}}
+                    >
+                        Tu navegador no tolera esta etiqueta
+                        <code>audio</code>.
+                    </audio>
+                {{else}}
+                    No Hay preview
+                {{/if}}
+            </td>
+        </tr>
+        {{/each}}
+
+
+    </tbody>
+</table>
