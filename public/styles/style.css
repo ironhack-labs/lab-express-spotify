@@ -1,0 +1,58 @@
+.background {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    /* width: 100vw; */
+    height: 100vh;
+}
+  
+.box {
+display: flex;
+justify-content: center;
+align-items: center;
+padding-top: 250px;
+}
+
+.background-opacity {
+display: flex;
+justify-content: center;
+align-items: center;
+width: 600px;
+height: 200px;
+background-color: rgba(255, 255, 255, 0.5);
+}
+
+.search-bar {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+}
+
+input {
+width: 380px;
+margin-bottom: 18px;
+border-color: rgba(255, 255, 255, 0.618);
+border-radius:4px ;
+}
+
+.btn {
+width: 180px;
+background-color: rgb(248, 101, 96) ;
+border-color: rgb(248, 101, 96) ;
+}
+
+  /* artists */
+
+.artists{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist-box{
+    flex-direction: column;
+    padding: 50px;
+}
+
+.artists img{
+      width: 250px;
+}
