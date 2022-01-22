@@ -1,7 +1,6 @@
 require("dotenv").config();
 
 const express = require("express");
-const app = express();
 const hbs = require("hbs");
 
 // require spotify-web-api-node package here:
@@ -24,7 +23,27 @@ spotifyApi
   .catch((error) =>
     console.log("Something went wrong when retrieving an access token", error)
   );
+
 // Our routes go here:
+//Homepage
+app.get("/", (req, res, next) => {
+  res.render("home");
+});
+
+//Artist searched
+
+app.get("/artist-search-results", (req, res, next) => {
+  spotifyApi
+    .searchArtists(req.query.artist)
+    .then((data) => {
+      //   console.log("The received data from the API: ", data.body.artists.items);
+      let searchedArtists = data.body.artists.items;
+      res.render("artist-search-results", { searchedArtists });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")

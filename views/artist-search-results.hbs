@@ -1,0 +1,22 @@
+<container>
+  {{#each searchedArtists}}
+    <div>
+      <article>
+        <h3>{{this.name}}</h3>
+
+        <img src="{{images.0.url}}" alt="artist-image" width="300px" />
+
+        {{#if genres}}
+          <p>Genre:
+            <br />
+            {{genres}}</p>
+        {{/if}}
+
+        <button>
+          <a href="{{this.external_urls.spotify}}"> View albums</a>
+        </button>
+
+      </article>
+    </div>
+  {{/each}}
+</container>
