@@ -1,6 +1,7 @@
 require("dotenv").config();
 
 const express = require("express");
+const res = require("express/lib/response");
 const hbs = require("hbs");
 
 // require spotify-web-api-node package here:
@@ -31,12 +32,10 @@ app.get("/", (req, res, next) => {
 });
 
 //Artist searched
-
 app.get("/artist-search-results", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist)
     .then((data) => {
-      //   console.log("The received data from the API: ", data.body.artists.items);
       let searchedArtists = data.body.artists.items;
       res.render("artist-search-results", { searchedArtists });
     })
@@ -45,16 +44,30 @@ app.get("/artist-search-results", (req, res, next) => {
     );
 });
 
+//Albums
 app.get("/albums/:id", (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.id)
     .then((albums) => {
       let artistAlbums = albums.body.items;
-      console.log(artistAlbums);
       res.render("albums", { artistAlbums });
     })
     .catch((err) => {
       console.log("Some problem while getting the albums", err);
+    });
+});
+
+//Tracks
+app.get("/view-tracks/:id", (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.id)
+    .then((tracks) => {
+      let albumTracks = tracks.body;
+      console.log(albumTracks);
+      res.render("view-tracks", { albumTracks });
+    })
+    .catch((err) => {
+      console.log("Problem with the tracks:", err);
     });
 });
 

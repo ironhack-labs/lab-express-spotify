@@ -2,14 +2,15 @@
   {{#each searchedArtists}}
     <div>
       <article>
-        <h3>{{this.name}}</h3>
+        <h1>{{this.name}}</h1>
 
         <img src="{{images.0.url}}" alt="artist-image" width="300px" />
 
         {{#if genres}}
-          <p>Genre:
-            <br />
-            {{genres}}</p>
+          <h3>Genre:</h3>
+          <p>
+            {{genres}}
+          </p>
         {{/if}}
 
         <button>
