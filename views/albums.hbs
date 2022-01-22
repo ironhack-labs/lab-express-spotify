@@ -1,0 +1,22 @@
+<container>
+  {{#each artistAlbums}}
+    <div>
+      <article>
+        <h3>{{this.name}}</h3>
+
+        <img src="{{images.0.url}}" alt="artist-image" width="500px" />
+
+        <p>Release date:
+          <br />
+          {{this.release_date}}
+        </p>
+
+        <p>Tracks:
+          <br />
+          {{this.total_tracks}}
+        </p>
+
+      </article>
+    </div>
+  {{/each}}
+</container>
