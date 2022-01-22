@@ -1,18 +1,19 @@
-<div>
+<div class="container">
     
     {{#each artists}}
-        <div>
+        <div class=" row mt-5 d-inline-flex">
     
             <div>
                 {{#if images}} 
                     <img src=" {{images.[1].url}}" alt="{{name}}">
-                
                 {{/if}}
+            </div>
+
             <div>
                 <div>{{name}}</div>
                 <a href="/albums/{{id}}">View Albums</a>
             </div>
-            
+
         </div>
     {{/each}}
     
