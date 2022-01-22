@@ -1,0 +1,14 @@
+
+<div class="py-3 px-3 card-list d-flex align-items-center">
+    <div class="flex-fill">
+        <h3 class="card-title h5 mb-0">{{this.name}}</h3>
+        <p class="small text-muted card-text">
+            {{#each this.artists}}
+                {{this.name}},
+            {{/each}}
+        </p>
+    </div>
+    <div class="me-3">
+        <audio controls src="{{this.preview_url}}"> Your browser does not support the <code>audio</code> element. </audio>
+    </div>
+  </div>

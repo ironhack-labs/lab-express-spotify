@@ -1,0 +1,15 @@
+<section class="bg-dark text-white py-3 py-md-5">
+    <div class="container" style="max-width:768px">
+        <div class='mb-3'>
+            <h1 class="h2">{{tracks.length}} Tracks</h1>
+        </div>
+  
+        <div class="row">
+             {{#each tracks}}
+                <div class="col-12">
+                    {{> track this}} 
+                </div> 
+            {{/each}}
+        </div>
+    </div>
+</section>

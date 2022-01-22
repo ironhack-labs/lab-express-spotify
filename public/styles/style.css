@@ -1,0 +1,20 @@
+.intro-page{
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.card{
+    border: 1px solid #4c5258;
+    transition: ease-out .3s;
+}
+.card:hover{
+    border: 1px solid #737a81;
+}
+.card-list{
+    border-bottom: 1px solid #4c5258;
+    background-color: rgba(255,255,255,0);
+    transition: ease-out .3s;
+}
+.card-list:hover{
+    background-color: rgba(255,255,255,0.05);
+}

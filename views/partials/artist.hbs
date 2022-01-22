@@ -1,0 +1,15 @@
+
+<div class="card bg-dark my-3">
+    <a href="/albums/{{this.id}}" class="text-decoration-none text-white">
+    {{#if this.images.0.url}}
+    <img src="{{this.images.0.url}}" alt="Picture of {{this.name}}" class="card-img-top"/>
+    {{else}}
+    <img src="/images/no-photo.jpg" alt="No picture found for {{this.name}}" class="card-img-top"/>
+    {{/if}}
+        
+        <div class="card-body">
+        <h3 class="card-title h6 text-decoration-none text-truncate">{{this.name}}</h3>
+        <p class="small card-text text-decoration-none d-flex align-center"> <img src="/images/thumbs-up.svg" width="16" class="me-2"/> {{this.followers.total}}</p>
+        </div>
+    </a>
+  </div>
