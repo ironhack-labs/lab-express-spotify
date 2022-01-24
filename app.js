@@ -60,9 +60,9 @@ app.get("/albums/:id", (req, res) => {
 //Tracks
 app.get("/view-tracks/:id", (req, res) => {
   spotifyApi
-    .getAlbumTracks(req.params.id)
+    .getAlbumTracks(req.params.id, { limit: 5, offset: 1 })
     .then((tracks) => {
-      let albumTracks = tracks.body;
+      let albumTracks = tracks.body.items;
       console.log(albumTracks);
       res.render("view-tracks", { albumTracks });
     })
