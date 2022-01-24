@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const { application } = require('express');
 const express = require('express');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
@@ -30,5 +31,25 @@ app.get('/', (req, res) => {
     res.render('index');
 });
 
+app.get('/artist-search', (req, res) => {
+    const artist = req.query.artist; // .artist tiene que coincider con el name del input 
+
+    spotifyApi
+  .searchArtists(artist)
+  .then(data => {
+    console.log(data.body)
+    res.render('artist-search-results', {artists:data.body.artists.items});
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+})
+
+app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi
+    .getArtistAlbums(req.params.artistId, { limit: 10, offset: 20 })
+    .then(artistAlbums => {
+        res.render('albums', {albums:artistAlbums.body.items})
+    })
+    .catch(err => console.log('The error while searching albums: ', err));
+  });
 
 app.listen(3001, () => console.log('My Spotify project running on port 3001 🎧 🥁 🎸 🔊'));
