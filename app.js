@@ -12,6 +12,7 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -25,6 +26,9 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
+app.get('/', (req, res) => {
+    res.render('index');
+});
 
 
 app.listen(3001, () => console.log('My Spotify project running on port 3001 🎧 🥁 🎸 🔊'));

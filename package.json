@@ -5,7 +5,7 @@
   "main": "app.js",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js -e hbs, css, js",
+    "dev": "nodemon -e html,css,js,hbs app.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
