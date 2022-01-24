@@ -43,9 +43,9 @@ app.get('/artist-search', (req, res) => {
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
-app.get('/albums/:artistId', (req, res, next) => {
+app.get('/albums/:id', (req, res, next) => {
     spotifyApi
-    .getArtistAlbums(req.params.artistId, { limit: 10, offset: 20 })
+    .getArtistAlbums(req.params.id, { limit: 10, offset: 20 })
     .then(artistAlbums => {
         res.render('albums', {albums:artistAlbums.body.items})
     })
