@@ -63,7 +63,6 @@ app.get("/view-tracks/:id", (req, res) => {
     .getAlbumTracks(req.params.id, { limit: 5, offset: 1 })
     .then((tracks) => {
       let albumTracks = tracks.body.items;
-      console.log(albumTracks);
       res.render("view-tracks", { albumTracks });
     })
     .catch((err) => {

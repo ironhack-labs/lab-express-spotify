@@ -1,23 +1,36 @@
-<container>
+<section id="search-results">
   {{#each searchedArtists}}
-    <div>
-      <article>
-        <h1>{{this.name}}</h1>
 
-        <img src="{{images.0.url}}" alt="artist-image" width="300px" />
+    <div class="card" style="width: 18rem;">
+      {{#if images.0.url}}
+        <img
+          src="{{images.0.url}}"
+          class="card-img-top"
+          alt="{{this.name}}-image"
+        />
+      {{else}}
+
+        <img
+          src="/images/spotify-background.jpeg"
+          class="card-img-top"
+          alt="{{this.name}}-image"
+        />
+      {{/if}}
+
+      <div class="card-body">
+        <h4 class="card-title"><strong>{{this.name}}</strong></h4>
 
         {{#if genres}}
-          <h3>Genre:</h3>
-          <p>
+          <p class="card-text">
+            <strong>Genre:</strong>
+            <br />
             {{genres}}
           </p>
         {{/if}}
 
-        <button>
-          <a href="/albums/{{this.id}}"> View albums</a>
-        </button>
-
-      </article>
+        <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+      </div>
     </div>
+
   {{/each}}
-</container>
+</section>

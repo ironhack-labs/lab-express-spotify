@@ -1,0 +1,91 @@
+/* homepage style */
+body {
+  background-color: lightgrey;
+}
+
+#home-section {
+  background-image: url("../images/spotify-background.jpeg");
+  height: 100%;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#home-section button {
+  margin-top: 10px;
+}
+
+#form-div {
+  background-color: rgba(228, 228, 228, 0.466);
+  height: 25%;
+  width: 40%;
+}
+
+#form {
+  text-align: center;
+  padding: 70px;
+}
+
+/* Artist search results page  */
+#search-results {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 40px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.card {
+  margin: 20px;
+  border: rgba(185, 185, 185, 0.623) solid 2px;
+}
+
+.card-body {
+  padding: 20px;
+  background-color: darkslategray;
+  color: whitesmoke;
+}
+
+.btn {
+  background-color: tomato;
+  border: none;
+  color: whitesmoke;
+  height: 35px;
+}
+
+/* Albums page */
+#albums-page {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  margin: 40px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* View tracks page */
+#section-tracks {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+#section-tracks table {
+  margin: 60px;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#section-tracks th {
+  font-size: 25px;
+  padding: 10px;
+  color: darkslategray;
+}
+
+#section-tracks td {
+  padding: 20px;
+  font-size: 20px;
+}

@@ -1,6 +1,32 @@
-<container>
+<section id="albums-page">
   {{#each artistAlbums}}
-    <div>
+
+    <div class="card bg-dark text-white">
+      {{#if images.0.url}}
+        <img
+          src="{{images.0.url}}"
+          class="card-img"
+          alt="{{this.name}}-image"
+        />
+      {{else}}
+        <img
+          src="/images/spotify-background.jpeg"
+          class="card-img"
+          alt="{{this.name}}-image"
+        />
+      {{/if}}
+
+      <div class="card-img-overlay">
+        <h5 class="card-title"><strong>{{this.name}}</strong></h5>
+
+        <p class="card-text">Tracks: {{this.total_tracks}}</p>
+        <p class="card-text">Release date: {{this.release_date}}</p>
+
+        <a href="/view-tracks/{{this.id}}" class="btn btn-primary">View tracks</a>
+
+      </div>
+    </div>
+    {{!-- <div>
       <article>
         <h1>{{this.name}}</h1>
 
@@ -18,6 +44,6 @@
 
         <h3> <a href="/view-tracks/{{this.id}}"> View tracks </a></h3>
       </article>
-    </div>
+    </div> --}}
   {{/each}}
-</container>
+</section>

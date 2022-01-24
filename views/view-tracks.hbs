@@ -1,11 +1,11 @@
-<container>
+<section id="section-tracks">
   <div>
-    <table>
+    <table class="table table-sm">
       <thead>
 
         <tr>
-          <th>Title </th>
-          <th>Listen</th>
+          <th height="100px">Title </th>
+          <th height="100px">Listen</th>
         </tr>
 
       </thead>
@@ -13,8 +13,12 @@
         {{#each albumTracks}}
 
           <tr>
-            <td>{{name}}</td>
-            <td><audio controls src="{{this.preview_url}}"></audio></td>
+            <td height="80px">{{name}}</td>
+            {{#if this.preview_url}}
+              <td><audio controls src="{{this.preview_url}}"></audio></td>
+            {{else}}
+              <td>this preview is not available</td>
+            {{/if}}
           </tr>
 
         {{/each}}
@@ -22,4 +26,4 @@
       </tbody>
     </table>
   </div>
-</container>
+</section>
