@@ -11,6 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.15"
+  },
+  "dependencies": {
+    "node": "^17.4.0",
+    "spotify-web-api-node": "^5.0.2"
   }
 }
