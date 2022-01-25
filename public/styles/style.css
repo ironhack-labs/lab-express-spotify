@@ -1,16 +1,81 @@
+/*
+spotify-green: #1ed760;
+*/
 
-#albums-search-div {
+body {
+    background-color: black;
+    font-family: Helvetica, sans-serif
+}
+
+p {
+    color: white;
+}
+
+img {
+    -webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
+    filter: grayscale(100%);
+}
+
+/* STYLING HOME */
+
+#background-div {
+    background-image: url("/images/spotify-background.jpeg");
+    filter: grayscale(100%);
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#home-div {
+    position: fixed;
+    left: 50%;
+    top: 45%;
+    transform: translate(-50%, -10%);
+}
+
+form {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-form {
-    position: fixed;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+form > button {
+    width: 220px;
+    height: 50px;
+    margin: 20px 0;
+    background-color: #1ed760;
+    border: 0px none;
+    border-radius: 500px;
+    padding: 10px 20px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 700;
+}
+
+form > button:hover {
+    width: 230px;
+    height: 55px;
+    margin: 18px 0;
+    background-color: #1ed760;
+    border: 0px none;
+    border-radius: 500px;
+    padding: 10px 20px;
+    font-size: 14.5px;
+}
+
+form input {
+    background-color: rgba(255, 255, 255, 1);
+    border: none;
+    width: 500px;
+    height: 50px;
+    border: 0px none;
+    border-radius: 500px;
+    padding: 10px 20px;
+}
+
+#albums-search-div {
     display: flex;
     flex-direction: column;
     align-items: center;
