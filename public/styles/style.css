@@ -2,9 +2,11 @@
     flex-grow: 1;
 }
 .intro-page{
-    background-image: url(/images/spotify-background.jpeg);
+    background-image: url(/images/bg.jpg);
     background-repeat: no-repeat;
     background-size: cover;
+    height: 70vh;
+    max-height: 700px;
 }
 .card{
     border: 1px solid #4c5258;
