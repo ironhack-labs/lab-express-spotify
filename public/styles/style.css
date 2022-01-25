@@ -1,0 +1,38 @@
+/* HOME */
+.home-background {
+    background-image: url('/images/spotify-background.jpeg');
+    height: 100vh;
+    background-size: cover;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.form-artist {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    margin-top: 45px;
+
+}
+    
+.form-btn {
+    margin-top: 25px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+}
+
+
+.search-bar {
+    background-color: rgba(250, 250, 250, .5);
+    height: 150px;
+}
+
+
