@@ -1,20 +1,10 @@
 <div class="container">
     
     {{#each tracks}}
-
-        <div>
-            {{this.name}}
-        </div>
-
-        {{!-- <div>
-            <figure>
-                <figcaption>Listen to the T-Rex:</figcaption>
-                <audio
-                    <source src="{{preview_url}}">
-                </audio>
-            </figure>
-        </div> --}}
-
+        <p>{{this.name}}</p>
+        <audio controls>
+        <source src={{this.preview_url}} type="audio/mpeg" />
+        </audio>
     {{/each}}
 
     

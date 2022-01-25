@@ -60,8 +60,7 @@ app.get('/albums/:id', (req, res, next) => {
 
 
  
-  app.get('/albums/tracks/:id', (req, res, next) => {
-    console.log('Hola', req.params.id);
+  app.get('/tracks/:id', (req, res, next) => {
     spotifyApi
     .getAlbumTracks(req.params.id, { limit: 5, offset: 1 })
     .then((albumsTracks) => {
