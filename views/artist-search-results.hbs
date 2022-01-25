@@ -1,6 +1,9 @@
 <div class="row row-cols-3 row-cols-md-3 g-4">
     {{#each artists }}
-        <div class="col mt-5 mb-5 text-center">
+        <div class="col mt-3 mb-3 text-center">
+
+<div class="bg-secondary pt-5 pb-5">
+
             <div>
             {{#if images}}
                 <img src=" {{images.[1].url}}" alt="{{name}}">
@@ -15,10 +18,8 @@
             <a href="/albums/{{id}}" class="btn btn-danger">View Albums</a>
         </div>
         </div>
-    {{/each}}
 </div>
 
-
-
-
+    {{/each}}
+</div>
 

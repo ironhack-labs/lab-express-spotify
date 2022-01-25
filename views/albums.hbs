@@ -1,18 +1,23 @@
-<div class="container">
-    {{#each albums}}
-        <div>
+<div class="row row-cols-3 row-cols-md-3 g-4">
+    {{#each albums }}
+        <div class="col mt-3 mb-3 text-center">
+
+            <div class="bg-secondary pt-5 pb-5">
+
+            <div>
             {{#if images}}
-                <img src=" {{images.[0].url}}" alt="{{name}}">
+                <img src=" {{images.[1].url}}" alt="{{name}}">
             {{/if}}
         </div>
 
         <div>
-            {{this.name}}
+            {{name}}
         </div>
 
         <div>
-            
-            <a href="/tracks/{{this.id}}"><button>View Tracks</button></a>
+            <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
         </div>
+        </div>
+            </div>
     {{/each}}
 </div>
