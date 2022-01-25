@@ -1,8 +1,9 @@
-<div class="container">
-    {{#each artists}}
-        <div>
+<div class="row row-cols-3 row-cols-md-3 g-4">
+    {{#each artists }}
+        <div class="col mt-5 mb-5 text-center">
+            <div>
             {{#if images}}
-                <img src=" {{images.[0].url}}" alt="{{name}}">
+                <img src=" {{images.[1].url}}" alt="{{name}}">
             {{/if}}
         </div>
 
@@ -11,7 +12,13 @@
         </div>
 
         <div>
-            <a href="/albums/{{id}}">View Albums</a>
+            <a href="/albums/{{id}}" class="btn btn-danger">View Albums</a>
+        </div>
         </div>
     {{/each}}
 </div>
+
+
+
+
+
