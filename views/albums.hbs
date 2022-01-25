@@ -1,5 +1,5 @@
-<div id="albums-search-div">
-    {{#each results}}
+<div id="artist-albums">
+    {{#each albums}}
         <div class="album">
             {{#with images.[0]}}
                 <img src="{{this.url}}" alt="">
@@ -9,4 +9,3 @@
         </div>
     {{/each}}
 </div>
-
