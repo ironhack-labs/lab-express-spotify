@@ -1,13 +1,7 @@
-{{!-- {{#each albumData}}
-<h1>{{this.name}}</h1>
-<img src=" {{images.[1].url}}" alt="{{name}}">
-<a href="/canciones/{{id}}">Escucha Las Canciones!</a>   
-{{/each}} --}}
-
-
 <div class="page">
 {{#each albumData}}
     <div class="card" style="width: 25rem; ">
+        
         <img src="{{images.[1].url}}" class="card-img-top" alt="{{name}}"> 
 
         <h5 class="card-title">{{this.name}}</h5>

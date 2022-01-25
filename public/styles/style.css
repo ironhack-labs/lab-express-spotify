@@ -45,7 +45,6 @@
     flex-direction: row;
     justify-content: space-around;
     flex-wrap: wrap;
-    
 }
 
 .card{
@@ -99,10 +98,10 @@
 
 
 audio::-webkit-media-controls-play-button {
-background-color: #38b4dd;
-border-radius: 50%;
+    background-color: #38b4dd;
+    border-radius: 50%;
 }
   
 audio::-webkit-media-controls-panel {
     background-color: #ecf3e1;
-  }
+}

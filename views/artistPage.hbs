@@ -1,16 +1,7 @@
- {{!-- <div id="artistsData">
-    {{#each artistsData}}
-        <div id="artistCard">
-            <h3>{{name}}</h3>
-            <img src=" {{images.[1].url}}" alt="{{name}}">
-            <a href="/albums/{{id}}">View Albums</a>
-        </div>
-    {{/each}}  
-</div>   --}}
-
 <div class="page">
 {{#each artistsData}}
     <div class="card" style="width: 25rem; ">
+        
         <img src="{{images.[1].url}}" class="card-img-top" alt="{{name}}"> 
 
         <h5 class="card-title">{{name}}</h5>
