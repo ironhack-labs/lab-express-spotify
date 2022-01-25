@@ -25,7 +25,6 @@ spotifyApi
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 
-
 // Our routes :
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 
@@ -41,7 +40,7 @@ app.get('/artist-search', (req, res,next) => {
   .searchArtists(xxx)
   .then(data => {
     // use console log to check what's inside the array of objects
-    console.log('The received data from the API: ', data.body.artists.items[0]);
+    //console.log('The received data from the API: ', data.body.artists.items[0]);
 
     // on the page artists display the search results
     res.render("artistPage",{artistsData : data.body.artists.items});
@@ -55,7 +54,7 @@ app.get('/albums/:pepeId', (req, res, next) => {
   .getArtistAlbums(req.params.pepeId)
   .then(data => {
     // use console log to check what's inside the array of objects
-    console.log('The received data from the API: ', data.body.items[0]);
+    console.log('The received data from the API: ', data.body.items);
 
     // on the page albums display the  results
     res.render("albumsPage", {albumData : data.body.items});
@@ -69,7 +68,7 @@ app.get('/canciones/:pacoId', (req, res, next) => {
   .getAlbumTracks(req.params.pacoId)
   .then(data => {
     // use console log to check what's inside the array of objects
-    console.log('The received data from the API: ', data.body.items);
+    //console.log('The received data from the API: ', data.body.items);
 
     // on the page canciones display the  results
     res.render("cancionesPage", {cancionesData : data.body.items});

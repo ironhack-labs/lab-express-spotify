@@ -1,9 +1,24 @@
+ {{!-- <div id="artistsData">
+    {{#each artistsData}}
+        <div id="artistCard">
+            <h3>{{name}}</h3>
+            <img src=" {{images.[1].url}}" alt="{{name}}">
+            <a href="/albums/{{id}}">View Albums</a>
+        </div>
+    {{/each}}  
+</div>   --}}
+
+<div class="page">
 {{#each artistsData}}
-    <h1>{{name}}</h1>
-    <img src=" {{images.[1].url}}" alt="{{name}}">
-    <a href="/albums/{{id}}">View Albums</a>
+    <div class="card" style="width: 25rem; ">
+        <img src="{{images.[1].url}}" class="card-img-top" alt="{{name}}"> 
 
-{{/each}}
+        <h5 class="card-title">{{name}}</h5>
 
+        <div class="card-footer">
+            <a href="/albums/{{id}}" class="btn btn-primary">View Albums</a>
+        </div>
 
-
+    </div>
+{{/each}} 
+</div> 

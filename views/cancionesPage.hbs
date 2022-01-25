@@ -1,7 +1,13 @@
+<div class="title">
+    <h1>Title</h1>
+    <h1 class="listen">Listen</h1>
+</div>
+
 {{#each cancionesData}}
-    <h1>{{name}}</h1>
-    <audio controls >
-        <source src="{{preview_url}} ">
-        
-    </audio>
+    <div class="canciones">
+        <h5>{{name}}</h5>
+        <audio controls >
+            <source src="{{preview_url}} ">
+        </audio>
+    </div>
 {{/each}}

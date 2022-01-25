@@ -1,5 +1,8 @@
 {{!-- This form direct its query to /artist-search (action="/artist-search", method="GET"). --}}
-<form action="/artist-search" method="GET">
-  <input type="text" id="name" name="artistName" ><br>
-  <input type="submit" value="Search for an artist">
-</form> 
+<div id="indexPage"  >
+    {{!-- <img src="images/spotify-background.jpeg" alt=""> --}}
+    <form action="/artist-search" method="GET">
+        <input type="text" id="inputName" name="artistName" ><br>
+        <input type="submit" id="buttonInputName"value="Search for an artist">
+    </form> 
+</div>

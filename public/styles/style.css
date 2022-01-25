@@ -1,0 +1,108 @@
+
+/* -------------------- INDEX PAGE -------------------- */
+#indexPage{
+    background-image: url("/images/spotify-background.jpeg");
+    height: 100vh;
+    background-size: cover;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#indexPage form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    background-color: rgb(240, 255, 255,0.3);
+    height: 30%;
+    width: 50%;
+}
+
+#inputName{
+    height: 20%;
+    width: 80%;
+    font-size:24px;
+    text-align: center;
+}
+
+#buttonInputName{
+    height: 20%;
+    width: 50%;
+
+    background-color: #ef6761;
+    color: white;
+
+    font-size:24px;
+}
+
+
+/* -------------------- ARTIST & ALBUM PAGE -------------------- */
+.page{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    
+}
+
+.card{
+    margin: 20px;
+    background-color: #4d4d4d;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.card img{
+    height: 350px;
+}
+
+
+.btn{
+    background-color: tomato;
+}
+
+
+/* -------------------- CANCIONES PAGE -------------------- */
+.title{
+    padding: 0px 60px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #4a4a4a;
+    color: rgb(207, 204, 204);
+}
+
+.listen {
+    margin-right: 100px;
+}
+.canciones{
+    padding: 0px 60px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    background-color: #ebe5e5;
+}
+
+.canciones h5{
+    margin: 20px 0;
+}
+
+
+
+audio::-webkit-media-controls-play-button {
+background-color: #38b4dd;
+border-radius: 50%;
+}
+  
+audio::-webkit-media-controls-panel {
+    background-color: #ecf3e1;
+  }
