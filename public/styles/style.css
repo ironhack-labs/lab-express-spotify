@@ -8,7 +8,7 @@ body {
 }
 
 p {
-    color: white;
+    color: rgb(14, 13, 13);
 }
 
 img {
@@ -77,17 +77,17 @@ form input {
 
 #albums-search-div {
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: stretch;
+    width: 300px;
+    height:350px ;
+    padding: 10px 10px;
+    margin: 15px;
 }
 
-#albums-search-div {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
 
 img {
     width: 50px;

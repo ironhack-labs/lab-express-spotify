@@ -1,11 +1,13 @@
 <div id="albums-search-div">
     {{#each results}}
-        <div class="album">
+        <div class="card text-center" style="width: 18rem;">
             {{#with images.[0]}}
-                <img src="{{this.url}}" alt="">
+                <img class="card-img-top" src="{{this.url}}" alt="Card image cap">
             {{/with}}
-            <p>{{this.name}}</p>
-            <a href="/albums/{{this.id}}">View Albums</a>
+            <div class="card-body">
+            <p class="card-title">{{this.name}}</p>
+            <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+            </div>
         </div>
     {{/each}}
 </div>
