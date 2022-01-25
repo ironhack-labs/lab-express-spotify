@@ -1,5 +1,5 @@
 <div class="container">
-    {{#each album }}
+    {{#each track }}
     <div class="">
         {{ this.name }}
 
@@ -7,7 +7,9 @@
         <img src={{ images.[0].url }}>
         {{/if}}
 
-        <a href="/tracks/{{this.id}}" class="button">View Tracks</a>
+        <audio controls src={{this.preview_url}}>    
+    </audio>
+        
     </div>
    {{/each}}
 </div>
