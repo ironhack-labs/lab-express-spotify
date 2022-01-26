@@ -1,13 +1,11 @@
-<div id="artist-albums">
+<div id="artist-albums-div">
     {{#each albums}}
-        <div class="album card text-center" style="width: 18rem;">
+        <div class="album">
             {{#with images.[0]}}
-                <img class="card-img-top" src="{{this.url}}" alt="Card image cap">
+                <img class="album-img" src="{{this.url}}" alt="">
             {{/with}}
-            <div class="card-body">
             <p class="card-title">{{this.name}}</p>
-            <a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a>
-            </div>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
         </div>
     {{/each}}
 </div>

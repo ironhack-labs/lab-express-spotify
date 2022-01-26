@@ -8,7 +8,7 @@ body {
 }
 
 p {
-    color: rgb(14, 13, 13);
+    color: white;
 }
 
 /* STYLING HOME */
@@ -25,7 +25,7 @@ p {
 #home-div {
     position: fixed;
     left: 50%;
-    top: 45%;
+    top: 42%;
     transform: translate(-50%, -10%);
 }
 
@@ -73,7 +73,7 @@ form input {
 /* STYLING ARTIST SEARCH */
 
 #albums-search-div {
-    margin: 70px 80px;
+    margin: 70px 150px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
 }
@@ -111,4 +111,56 @@ form input {
 .album a:hover {
     background-color: #25c05b;
     color: rgb(58, 54, 54);
+}
+
+/* STYLING ALBUMS PAGE */
+
+#artist-albums-div {
+    margin: 70px 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+/* STYLING TRACK PAGE */
+
+#tracks-header {
+    background-color: #1ed760;
+    margin: 0;
+}
+
+#tracks-header p {
+    margin-left: 54px;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+#listen-title {
+    margin-right: 364px;
+    font-size: 20px;
+    color: black;
+    font-weight: 700;
+    padding-top: 15px;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5px 0px;
+    padding: 5px 0px;
+    background-color: rgb(29, 27, 27);
+}
+
+.track audio {
+    width: 400px;
+    margin-right: 40px;
+}
+
+.track p {
+    margin-left: 54px;
+    color: white;
+    font-weight: 500;
+    padding-top: 15px;
 }
