@@ -1,0 +1,7 @@
+body {
+    margin: 0;
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-color: transparent;
+    background-repeat: no-repeat;
+}
