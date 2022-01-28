@@ -1,0 +1,18 @@
+<div class="container">
+  <h1>Artists</h1>
+  <div class="row">
+      {{#each artists}}
+    <div>
+        <div class='card' >
+            <img
+            class='card-img-top' style="width: 30%;"
+            src='{{this.images.0.url}}'
+            alt='{{this.name}}'
+            />
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+    </div>
+      {{/each}}
+  </div>
+</div>
