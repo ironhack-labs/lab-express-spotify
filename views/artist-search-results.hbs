@@ -1,0 +1,11 @@
+<div>ahooj</div>
+
+{{#each artists}} 
+<img
+  class='card-img-top resized-img'
+  src='{{this.images.0.url}}'
+  alt='Card image cap'
+/>
+<h5 class='card-title'>{{this.name}}</h5>
+<input type="button" value="View Albums">
+      {{/each}}
