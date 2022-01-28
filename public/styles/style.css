@@ -1,0 +1,84 @@
+body {
+    color: white;
+    background-color: black;
+    font-family: Verdana;
+    height: auto;
+}
+
+#home-form {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    justify-content: center;
+    height: 80%;
+    width: 100%;
+    position: absolute;
+    color: darkseagreen;
+}
+
+.artists-search-results {
+    width: 90%; /*920*/
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.artist-container {
+    width: 150px;
+    height: 250px;
+    border: 2px solid darkgray;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+}
+
+.artist-container p {
+    font-size: 1vw;
+    max-height: 20%;
+    text-align: center;
+}
+
+.artist-container img {
+    max-width: 90%;
+    max-height: 60%;
+}
+
+.artist-view-links {
+    border: 2px solid darkseagreen;
+    color: white;
+    text-decoration: none;
+    padding: 3px;
+    background-color: lightseagreen;
+    width: fit-content;
+    font-size: 9pt;
+    font-family: Tahoma;
+}
+
+.artist-view-links:hover {
+    border: 2px solid lightseagreen;
+    background-color: darkseagreen;
+    color: green;
+}
+
+.artist-view-links:active{
+    border: 2px solid lightseagreen;
+    background-color: darkseagreen;
+    color: green;
+}
+
+.tracks-container {
+    width: 320px;
+    height: 150px;
+    border: 2px solid darkgray;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: darkslategrey;
+}
+

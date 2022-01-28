@@ -1,0 +1,12 @@
+
+<div class="artists-search-results">
+    {{#each tracks}}
+        <div class="tracks-container">
+            <p>{{name}}</p> 
+            <audio controls>
+                Hear sample:
+                <source src="{{preview_url}}" type="audio/mpeg">
+            </audio>
+        </div>     
+    {{/each}}    
+</div>
