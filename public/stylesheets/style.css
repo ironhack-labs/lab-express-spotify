@@ -1,4 +1,17 @@
 .resized-img{
     display: block;
-    width:100px;
+    width:100%;
+}
+.tiles{
+    flex-wrap: wrap;
+    display:flex;
+    flex-direction: row;
+}
+.card{
+    padding:10px;
+    width: 33.33%;
+    display:flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border:0;
 }

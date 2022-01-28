@@ -1,5 +1,5 @@
 <div class="container tiles">
-  {{#each artists}}
+  {{#each albums}}
     <div class="card">
       <img
         class="card-img-top resized-img"
@@ -8,10 +8,7 @@
         onerror="this.src='https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5'"
       />
       <h5 class="card-title">{{this.name}}</h5>
-      <a href="/albums/{{this.id}}"><input
-          type="button"
-          value="View Albums"
-        /></a>
+      <a href="/tracks/{{this.id}}"><input type="button" value="View Tracks" /></a>
     </div>
   {{/each}}
 </div>
