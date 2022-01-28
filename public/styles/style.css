@@ -1,15 +1,22 @@
 body {
   font-family: Verdana, Geneva, Tahoma, sans-serif;
-  margin: 0;
 }
 
-.index-container {
+/* .index-container {
   background-image: url("/images/spotify-background.jpeg");
-  height: 100%;
-}
+  background-repeat: no-repeat;
+  background-size: auto;
+} */
 
+.index-container img {
+  z-index: -1;
+  position: absolute;
+  width: 100%;
+}
 .index-container form {
   background-color: rgba(255, 255, 255, 0.5);
+  position: relative;
+  top: 300px;
   margin: auto;
   width: 500px;
   height: 300px;
@@ -44,8 +51,9 @@ body {
 
 .tracks-title {
   background-color: rgb(11, 11, 36);
+  border: 1px solid rgb(11, 11, 36);
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start;
   padding: 20px;
   width: 100%;
 }
@@ -73,10 +81,15 @@ body {
   width: 100%;
 }
 
+.listen {
+  margin-left: 1200px;
+}
+
 h2 {
   color: white;
   font-weight: bold;
 }
+
 p {
   font-size: 1.5rem;
   margin: 20px 0 0 0;

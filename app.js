@@ -37,14 +37,9 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(artist)
     .then((artistData) => {
-      console.log(
-        "The received data from the API: ",
-        artistData.body.artists.items
-      );
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       let artistResults = artistData.body.artists.items;
 
-      console.log("artist image :" + artistResults[0].images[0]);
       res.render("artist-search-results", { artists: artistResults });
     })
     .catch((err) =>
@@ -58,8 +53,6 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getArtistAlbums(artist)
     .then((discography) => {
-      console.log(discography.body.items.length);
-
       res.render("albums", { disco: discography.body.items });
     })
     .catch((error) => console.log(error));
