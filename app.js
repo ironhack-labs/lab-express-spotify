@@ -69,9 +69,8 @@ app.get("/albums/:albumid/tracks", (req, res, next) => {
   console.log(albumId);
   spotifyApi.getAlbumTracks(albumId).then(
     function (data) {
-      console.log(data);
-      //console.log(receivedDataFromApi[0].images[0].url);
-      let receivedDataAlbumId = data.body;
+      let receivedDataAlbumId = data.body.items;
+      console.log(receivedDataAlbumId);
       res.render("albumid-search-results", { receivedDataAlbumId });
     },
     function (err) {
