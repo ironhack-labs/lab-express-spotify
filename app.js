@@ -7,8 +7,9 @@ const app = express();
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("view engine", "hbs");
-app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
+app.set("views", __dirname + "/views");
+
 hbs.registerPartials(__dirname + "/views/partials");
 
 // setting the spotify-api goes here:
@@ -55,7 +56,7 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi.getArtistAlbums(artistId).then(
     function (data) {
       let receivedDataArtistId = data.body.items;
-      res.render("artistId-search-results", { receivedDataArtistId });
+      res.render("album-search-results", { receivedDataArtistId });
     },
     function (err) {
       console.error(err);
@@ -70,8 +71,7 @@ app.get("/albums/:albumid/tracks", (req, res, next) => {
   spotifyApi.getAlbumTracks(albumId).then(
     function (data) {
       let receivedDataAlbumId = data.body.items;
-      console.log(receivedDataAlbumId);
-      res.render("albumid-search-results", { receivedDataAlbumId });
+      res.render("tracks-search-results", { receivedDataAlbumId });
     },
     function (err) {
       console.error(err);

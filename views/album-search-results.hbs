@@ -15,10 +15,10 @@
 
 <body>
     <div class="container">
-        <h1>Artists</h1>
+        <h1>Album</h1>
         <div class="row">
-            {{#each receivedDataFromApi}}
-            {{> artistCard this}}
+            {{#each receivedDataArtistId}}
+            {{> albumCard this}}
             {{/each}}
         </div>
     </div>
