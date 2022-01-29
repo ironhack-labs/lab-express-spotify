@@ -8,15 +8,15 @@ const SpotifyWebApi = require('spotify-web-api-node');
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
 
-// spotify-web-api-node package here:
 const spotifyApi = new SpotifyWebApi({
+  app.use(express.static(__dirname + '/public'));
+  // spotify-web-api-node package here:
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET
 });
- 
-  // Retrieve an access token
+
+// Retrieve an access token
   spotifyApi
     .clientCredentialsGrant()
     .then(data => {
@@ -68,5 +68,6 @@ app.get('/tracks/:id', (req,res,next) => {
       console.log(responseFromAPI.body);
     })
     .catch(err => console.log('Error while fetching albums: ' + err))
-});
+  });
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+// my text
