@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Spotify API</title>
+    <link rel="stylesheet" href="/public/styles/styles.css">
+</head>
+
+<div>
+    <div class="container-fluid d-flex justify-content-center align-items-center flex-column">
+
+        <form action="/artist-search" method="GET">
+            <div class="mb-3 row"></div>
+            <label for="artist" class="col-sm-2 col-form-label">
+                <div class="col-sm-10">
+                    <input id="artist" type="text" name="artist" class="form-control">
+                </div>
+
+            </label>
+            <button type="submit">Search for artist</button>
+    </div>
+    </form>
+</div>
+{{{ body }}}
+</div>
+
+</html>

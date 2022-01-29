@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Artists</title>
+    <link rel="stylesheet" href="/stylesheets/styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Search results</h1>
+        <div class="row">
+            {{#each receivedDataFromApi}}
+            {{> artistCard this}}
+            {{/each}}
+        </div>
+    </div>
+</body>
+
+</html>
