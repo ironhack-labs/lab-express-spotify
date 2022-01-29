@@ -1,0 +1,14 @@
+<div class="container">
+    {{#each items}}
+        <div id="albums">
+            {{#each this.images}}
+                {{#if @first}}
+                <img src="{{this.url}}" />
+                {{/if}}
+            {{/each}}
+            <div>{{this.name}}</div>
+            <div><a href="/tracks/{{this.id}}" id="viewTracksBtn" class="btn">View albums</a></div>
+        </div>
+    {{/each}}
+</div>
+
