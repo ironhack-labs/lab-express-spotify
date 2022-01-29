@@ -1,0 +1,56 @@
+body {
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+}
+
+.index-row {
+  background: rgba(255, 255, 255, 0.773);
+  margin: 25% !important;
+  padding: 5%;
+}
+
+.card img {
+  height: 80%;
+  object-fit: cover;
+}
+
+.card {
+  text-align: center;
+  padding: 0 !important;
+  background-color: grey !important;
+  margin: 5%;
+}
+
+.search-results {
+  background-color: white;
+}
+
+.list-group-item-dark {
+  background-color: gray !important;
+  font-size: 1.5em;
+  padding-right: 24% !important;
+  color: white !important;
+}
+.list-group-item {
+  display: -ms-flexbox !important;
+  display: -webkit-flex !important;
+  display: flex !important;
+  -webkit-flex-direction: row;
+  -ms-flex-direction: row;
+  flex-direction: row;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.list-group-item-secondary {
+  margin-bottom: 3px;
+}
+.list-group-item-secondary audio {
+  width: 30% !important;
+}

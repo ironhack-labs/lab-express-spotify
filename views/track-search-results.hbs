@@ -1,0 +1,14 @@
+<div class="container search-results">
+  <div class="row">
+    <ul class="list-group">
+      <li class="list-group-item list-group-item-dark">Tracklist<span
+        >Listen</span></li>
+      {{#each tracks}}
+        <li class="list-group-item list-group-item-secondary">
+          {{this.name}}
+          <audio controls><source src={{this.audioUrl}} /></audio></li>
+      {{/each}}
+    </ul>
+
+  </div>
+</div>
