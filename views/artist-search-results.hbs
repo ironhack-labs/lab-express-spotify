@@ -1,6 +1,19 @@
-{{#each artists}}
-    <img class="card-img-top resized-img" src="{{this.images.0.url}}" alt="{{this.name}}" />
-    <h4 class="card-title">{{this.name}}</h4>
-{{/each}}
+<div class="container">
+  <div class="row">
 
-<input type="button" value="View Albums" />
+    {{#each artists}}
+    <div class="col-md-4">
+      <div class="card">
+        <img class="card-img-top" src="{{this.images.0.url}}" alt="{{this.name}}"/>
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <div class="card-footer">
+            <a class="btn btn-primary" href="/albums/{{this.id}}">View Albums</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+
+  </div>
+</div>

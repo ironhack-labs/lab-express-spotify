@@ -1,0 +1,11 @@
+<div class="container">
+  <div class="row">
+
+    <ol class="list-group list-group-flush">
+    {{#each listOfTracks}}
+        <li class="list-group-item text-end"><audio controls><source src="{{this.preview_url}}"></audio> {{this.name}}</li>
+    {{/each}}
+    </ol>
+
+  </div>
+</div>
