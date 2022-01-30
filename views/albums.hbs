@@ -1,18 +1,26 @@
-<div class="container">
-  <h1>Albums</h1>
-  <div class="row">
-      {{#each albums}}
-    <div >
-        <div class='card' >
-            <img
-            class='card-img-top' style="width: 30%;"
-            src='{{this.images.0.url}}'
-            alt='{{this.name}}'
-            />
-            <p>{{this.name}}</p>
-            <button href="/">See Tracks</button>
-        </div>
+<div class="background">
+  <div class="container">
+    <h1>Albums</h1>
+    <div class="row align-items-center justify-content-center">
+        {{#each albums}}
+      <div class="col-sm-3">
+          <div class='card'>
+              <img
+              class='card-img-top' 
+              src='{{this.images.0.url}}'
+              alt='{{this.name}}'
+              />
+              <div class="card-body">
+                <p>{{this.name}}</p>
+              </div>
+              <div class="card-footer" style="margin-top: -4px;">
+                <small>
+                  <a href="/tracks/{{this.id}}">Preview Tracks</a>
+                </small>
+              </div>
+          </div>
+      </div>
+        {{/each}}
     </div>
-      {{/each}}
   </div>
 </div>

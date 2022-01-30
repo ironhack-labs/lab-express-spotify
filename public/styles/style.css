@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+
+
+body {
+    display:flex;
+    flex-direction: column wrap;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    background-image: url(/images/spotify-background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: 'Poppins', sans-serif !important;
+    font-size: 22px; 
+}
+
+
+
+.search-container {
+    background-color: rgba(255,255,255, 0.5);
+    height: 150px;
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 200px;
+}
+
+#form {
+    display:flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+}
+
+#form input {
+    width: 450px;
+    margin: 20px 60px 8px 60px;
+    height: 40px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid rgb(179, 179, 179);
+    text-align: center;
+    display:flex;
+    justify-content: center;
+}
+
+#form button {
+    border-style: none;
+    width: 250px;
+    height: 50px;
+    border-radius: 2px;
+    background-color: #fa6862;
+    padding: 8px 12px;
+    color: white;
+}
+
+@media only screen and (max-width: 1027px ) {
+    #form button {
+        background-color: #fa6862;
+    }
+    body {
+        background-size: 1200px;
+        height: auto;
+    }
+    .search-container {
+        margin-top: 250px;
+    }
+    #form input {
+        width: 90%;
+    }
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.6);
+}
+
+.container h1 {
+    color: #222222;
+    display: flex;
+    justify-content: center;
+    margin: 50px;
+    font-family: 'Shadows Into Light', cursive;
+    font-weight: 300;
+}
+
+.card img {
+    width: 100%;
+    object-fit: cover;
+    height: 250px;
+}
+
+.card {
+    margin: 20px;
+    height: 400px !important;
+}
+
+.card a {
+    text-decoration: none; 
+    text-align: center; 
+    color:rgb(34, 125, 243);
+}
+
+.background {
+    background-color: white;
+    width: 100%;
+    height: auto;
+}
+
+.album-background {
+    background-image: url({{albums.images.0.url}});
+}
