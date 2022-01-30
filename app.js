@@ -34,11 +34,13 @@ app.get('/', (req, res, next) => {
     .searchArtists(request.query.artists)
     .then(data => { 
      const apiResp = data.body.artists.items;
+     
 
      console.log('The received data from the API: data.body.artists.items ', data.body.artists.items);
      console.log(`Data from apiResp ${apiResp}`)
-
+    
      res.render('artist-search-results', { artists: apiResp });
+     //res.send(data.body.artists.items)
 
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));

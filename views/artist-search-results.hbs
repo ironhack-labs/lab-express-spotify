@@ -1,18 +1,13 @@
 
 
-<div>
-  <h1>Artists</h1>
-  <div class=>
-      {{#each artists}} 
-         <h5>
-        {{this.name}}
-        </h5>
-        <h5>
-        {{this.href}}
-        </h5>
-       <h5>{{this.uri}}</h5>
 
-         <img src="{{this.href}}" alt="{{this.name}}"/>
-      {{/each}}
-  </div>
-</div>
+  <h1>Artists</h1
+      <div>
+      {{#each artists}} 
+      <img src="{{images.[0].url}}" alt=" {{this.name}}"  {{this.href}}>
+      <p>{{this.name}}</p>
+      <p><a href="{{this.href}}">View Albums</a></p>
+       {{/each}}
+      </div>
+
+     
