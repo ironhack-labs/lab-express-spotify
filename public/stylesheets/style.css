@@ -5,3 +5,7 @@ body {
     background-color: transparent;
     background-repeat: no-repeat;
 }
+
+figure {
+    margin: 0;
+}
