@@ -1,13 +1,13 @@
-<div class="container">
+<div class="container grid" id="containerArtist">
     {{#each items}}
-    <div id="artist">
-        {{#each this.images}}
-            {{#if @first}}
-            <img src="{{ this.url}}"></img>
-            {{/if}}
-        {{/each}}
-        <div>{{this.name}}</div>
-        <div><a href="/albums/{{this.id}}" id="viewAlbumsBtn" class="btn">View albums</a></div>
-    </div>
+        <div id="artists" class="artists">
+            {{#each this.images}}
+                {{#if @first}}
+                <img src="{{this.url}}" class="image" />
+                {{/if}}
+            {{/each}}
+            <div>{{this.name}}</div>
+            <div><a href="/albums/{{this.id}}" id="viewAlbumsBtn" class="btn">View albums</a></div>
+        </div>
     {{/each}}
 </div>

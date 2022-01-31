@@ -1,9 +1,9 @@
-<div class="container">
+<div class="container grid" id="containerAlbum">
     {{#each items}}
-        <div id="albums">
+        <div id="albums" class="albums">
             {{#each this.images}}
                 {{#if @first}}
-                <img src="{{this.url}}" />
+                <img src="{{this.url}}" class="image" />
                 {{/if}}
             {{/each}}
             <div>{{this.name}}</div>
@@ -11,4 +11,3 @@
         </div>
     {{/each}}
 </div>
-
