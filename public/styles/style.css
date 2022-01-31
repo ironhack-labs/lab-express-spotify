@@ -1,6 +1,5 @@
-.card-img-top {
-  height: 200px;
-  width: 200px;
+img {
+  max-width: 200px;
 }
 
 .card {

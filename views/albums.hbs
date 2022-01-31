@@ -1,0 +1,31 @@
+<div class="container">
+  <div class="title" style="margin-left: 20px;">
+    <div>
+      <img class="card-img-top" src={{artist.images.0.url}} /></div>
+    <div class="top">
+      <h1>Artist: {{artist.name}}</h1>
+      <a href="javascript:history.back()" class="btn btn-primary">Return to
+        Search Results</a>
+    </div>
+  </div>
+  <div class="row text-center">
+    {{#each albums}}
+      <div class="col-md-4" style="padding: 20px">
+        <div class="card" style="width: 23rem;">
+          <div>
+            <img
+              class="card-img-top"
+              alt={{this.name}}
+              src={{this.images.0.url}}
+            /></div>
+          <div class="card-body">
+            <h5 class="card-title text">{{this.name}}</h5>
+            <p class="card-text">{{this.tagline}}</p>
+            <a href="/albumTracks/{{this.id}}" class="btn btn-primary">View
+              tracks</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

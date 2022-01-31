@@ -33,10 +33,14 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+//Search results
+
 app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.searchParam)
     .then((data) => {
+      console.log("The received data from the API: ", data.body.artists.items);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       data.body.artists.items.forEach((element) => {
         if (element.images.length === 0)
           element.images.push({
@@ -50,6 +54,63 @@ app.get("/artist-search", (req, res) => {
     })
     .catch((err) =>
       console.log("An error while searching for artists occurred: ", err)
+    );
+});
+
+// Albums
+
+app.get("/albums/:artistId", function (req, res, next) {
+  spotifyApi
+    .getArtist(req.params.artistId)
+    .then((data) => {
+      return data.body;
+    })
+    .then((artist) => {
+      spotifyApi
+        .getArtistAlbums(req.params.artistId)
+        .then((data) => {
+          if (artist.images.length === 0)
+            artist.images.push({
+              url: "https://community.spotify.com/t5/image/serverpage/image-id/25294i2836BD1C1A31BDF2?v=v2",
+            });
+          res.render("albums", {
+            albums: data.body.items,
+            artist: artist,
+          });
+        })
+        .catch((err) =>
+          console.log("The error while searching artists occurred: ", err)
+        );
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
+// Album tracks
+
+app.get("/albumSongs/:albumId", function (req, res, next) {
+  spotifyApi
+    .getAlbum(req.params.albumId)
+    .then((data) => {
+      console.log(data.body);
+      return data.body;
+    })
+    .then((album) => {
+      spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then((data) => {
+          res.render("album-tracks", {
+            songs: data.body.items,
+            album: album,
+          });
+        })
+        .catch((err) =>
+          console.log("The error while searching artists occurred: ", err)
+        );
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
     );
 });
 
