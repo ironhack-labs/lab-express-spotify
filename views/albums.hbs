@@ -1,0 +1,9 @@
+
+  {{#each albums}}
+    <div class="card">
+      <img class="card-img-top resized-img" src="{{this.images.0.url}}" alt="Card image cap" 
+      onerror="this.src='https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5'"/>
+      <h5 class="card-title">{{this.name}}</h5>
+      <a href="/tracks/{{this.id}}"><input type="button" value="View Tracks" /></a>
+    </div>
+  {{/each}}
