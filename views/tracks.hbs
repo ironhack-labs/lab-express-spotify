@@ -1,0 +1,21 @@
+<div class="container">
+    <h1>TRACKS</h1>
+    <hr>
+
+    <div class="row">
+
+        {{#each track.body.items}}
+
+        <div class="col-12 tracks">
+
+
+            <p>{{name}}</p>
+            <audio controls src="{{preview_url}}"></audio>
+
+        </div>
+
+        {{/each}}
+    </div>
+
+
+</div>
