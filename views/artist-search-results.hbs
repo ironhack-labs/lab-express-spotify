@@ -1,0 +1,21 @@
+<div>
+
+    <ul>
+
+        {{#each resume}}
+        <li>
+            {{name}}            
+        </li>
+        <li>
+            <img src="{{images.[0].url}}" alt="">
+        </li>
+            
+        
+        <hr>
+        <a href="/albums/{{id}}">View albums</a>
+        <hr>
+        {{/each}}
+            </ul>
+
+
+</div>
