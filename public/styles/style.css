@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.index {
+    margin: 0 auto;
+}
+
+.index form {
+    display: flex;
+    flex-direction: column;
+}
+
+.index form>label>input {
+    width: 20rem;
+}
+
+.index>form>button {
+    width: 20%;
+}
