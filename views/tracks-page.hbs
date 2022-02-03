@@ -1,0 +1,12 @@
+<main class='tracks'>
+
+  <ul class='list-group list-group-flush'>
+    {{#each items}}
+      <li class='list-group-item'>
+        {{name}}
+        <audio controls src='{{preview_url}}'> <code>audio</code> </audio>
+      </li>
+    {{/each}}
+
+  </ul>
+</main>
