@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>ARTISTS:</h1>
+    <hr>
+
+    {{#each info}}
+    <h2>{{name}}</h2>
+
+    {{!-- para acceder a una posición del array, utilizar dot notation --}}
+    <img src="{{images.0.url}}" alt="imagen">
+
+    {{!-- en este caso no es _id, porque en la API de Spoty se llama id --}}
+    {{!-- cuando es una BBDD de mongoDB, podemos llamarlo id o _id, es lo mismo --}}
+
+    <a href="/albums/{{id}}">View Albums</a>
+
+    {{/each}}
+</div>
