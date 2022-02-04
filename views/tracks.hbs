@@ -1,0 +1,12 @@
+<section id="track-list">
+    {{#each tracks}}
+        <div class="tracksResult">
+            <h2>{{name}}</h2>
+           <audio 
+                controls 
+                src="{{preview_url}}">
+                Your browser does not support this player.
+            </audio>   
+        </div>
+    {{/each}}
+</section>
