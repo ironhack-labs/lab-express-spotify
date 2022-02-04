@@ -1,4 +1,5 @@
 require('dotenv').config();
+const path = require('path');
 
 const express = require('express');
 const hbs = require('hbs');
@@ -56,14 +57,14 @@ app.get("/artist-search", async (req, res)=> {
             data.body.artists.items.forEach((item) => {
                 // console.log("item.id: ", item.id, typeof item.id);
                 if (item.images.length > 0) {
-                    selectedData.push({ name: item.name, image: item.images[0].url, href: `/albums/${item.id}`});
+                    selectedData.push({ name: item.name, image: item.images[0].url, href: `/albums/${item.id}`, buttonText: "View Albums"});
                 } else {
                     return;
                 }
             });
             // console.log("selectedData: ", selectedData);
             // res.send(data);
-            res.render("artist-search-results", {artists: selectedData});
+            res.render("artist-search-results", {inputArray: selectedData});
         } catch (err) {
             console.log("Something went wrong in /artist-search route, logging err in catch,: ", err);
         }
@@ -74,14 +75,47 @@ app.get("/artist-search", async (req, res)=> {
 
 app.get("/albums/:id", async (req, res)=>{
     const { id } = req.params;
+    const selectedData = [];
     console.log("Logging req.params: ", req.params);
     console.log("Logging id: ", id);
     try {
-        const albums = await spotifyApi.getArtistAlbums(id);
-        res.send(albums);
-    } catch {
-        console.log("Something went wrong getting albums,logging err in catch block: ", albums);
+        const data = await spotifyApi.getArtistAlbums(id);
+        data.body.items.forEach((item) => {
+            // console.log("item.id: ", item.id, typeof item.id);
+            if (item.images.length > 0) {
+                selectedData.push({ name: item.name, image: item.images[0].url, href: `/${item.name}/${item.id}`});
+            } else {
+                return;
+            }
+        });
+        // res.send({inputArray: selectedData})
+        // res.send(data)
+        res.render("albums.hbs", {inputArray: selectedData});
+    } catch(err) {
+        console.log("Something went wrong getting albums,logging err in catch block: ", err);
     }
 });
+
+// app.get("/:album/:track-id", async (req, res)=>{
+//     const { id } = req.params;
+//     const selectedData = [];
+//     console.log("Logging req.params: ", req.params);
+//     console.log("Logging id: ", id);
+//     try {
+//         const data = await spotifyApi.getArtistAlbums(id);
+//         data.body.items.forEach((item) => {
+//             // console.log("item.id: ", item.id, typeof item.id);
+//             if (item.images.length > 0) {
+//                 selectedData.push({ name: item.name, image: item.images[0].url, href: `/${item.name}/${item.id}`});
+//             } else {
+//                 return;
+//             }
+//         });
+//         res.send({inputArray: selectedData})
+//         // res.render("albums.hbs", {inputArray: selectedData});
+//     } catch(err) {
+//         console.log("Something went wrong getting albums,logging err in catch block: ", err);
+//     }
+// });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
