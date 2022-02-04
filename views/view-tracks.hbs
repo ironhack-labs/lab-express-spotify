@@ -1,8 +1,14 @@
+<div class="tracksHeader">
+    <p>Title</p>
+    <p>Listen</p>
+</div>
 {{#each results}}
-<h2>{{this.name}}</h2>
-{{#if this.preview_url}}
-<audio src="{{this.preview_url}}" controls></audio>
-{{else}}
-<p>Track Not Available</p>
-{{/if}}
+<div class="trackDiv">
+    <p>{{this.name}}</p>
+    {{#if this.preview_url}}
+    <audio class="musicController" src="{{this.preview_url}}" controls></audio>
+    {{else}}
+    <p>Track Not Available</p>
+    {{/if}}
+</div>
 {{/each}}

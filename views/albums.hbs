@@ -1,7 +1,13 @@
-{{#each results}}
-<div class="albumDiv">
-    <img src="{{this.images.[0].url}}" alt="album-img">
-    <p>{{this.name}}</p>
-    <a href="/viewtracks/{{this.id}}">View Tracks</a>
+<h1 class="resultsTitle">Albums for: {{results.[0].artists.[0].name}}</h1>
+<div class="container resultsDiv">
+    <div class="row">
+        {{#each results}}
+        
+        <div class="col-sm albumDiv">
+            <img src="{{this.images.[0].url}}" alt="album-img">
+            <p>{{this.name}}</p>
+            <a class="btn btn-primary" href="/viewtracks/{{this.id}}" role="button">View Tracks</a>
+        </div>
+        {{/each}}
+    </div>
 </div>
-{{/each}}

@@ -1,22 +1,105 @@
-.searchImages {
-    height: 300px;
-    width: 300px;
-    object-fit: cover;
-}
 
 .albumDiv {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px
 }
 
 .albumDiv p {
 width: 260px;
 text-align: center;
+margin-top: 10px;
+margin-bottom: 10px;
+font-weight: 900;
 }
 
 .albumDiv img {
     height: 300px;
     width: 300px
+}
+
+.resultsDiv {
+    margin-bottom: 50px;
+}
+
+.artistDiv {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: 10px;
+    margin-right: 10px
+}
+
+.artistDiv img {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.artistDiv p {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-weight: 900;
+}
+
+.searchDiv {
+    height: 100vh;
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.resultsTitle {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.searchText {
+    height: 38px;
+    padding: 6px 10px
+}
+
+.trackDiv {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 5px;
+    margin-left: 40px;
+    margin-right: 40px;
+    background-color: rgb(231, 231, 231);
+    height: 75px
+}
+
+.trackDiv p {
+    font-weight: 900;
+    font-size: 25px;
+    margin: 0 0 0 25px
+}
+
+.tracksHeader {
+    background-color: rgb(48, 48, 48);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 40px 0 40px;
+    height: 75px
+}
+
+.tracksHeader p {
+    margin: 0 130px 0 40px;
+    font-size: 25px;
+    color: rgb(163, 163, 163);
+}
+
+.musicController {
+    margin-right: 25px
 }

@@ -35,13 +35,11 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(req.query.toSearch)
     .then((data) => {
-      //will return empty array for no result
-      console.log(
-        "The received data from the API: ",
-        data.body.artists.items[0].images
-      );
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results", { results: data.body.artists.items });
+      res.render("artist-search-results", {
+        results: data.body.artists.items,
+        searchVal: req.query.toSearch,
+      });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -50,7 +48,7 @@ app.get("/artist-search", (req, res) => {
 
 app.get("/albums/:id", (req, res) => {
   spotifyApi.getArtistAlbums(req.params.id).then((results) => {
-    console.log(results.body);
+    // console.log(results.body.items);
     res.render("albums", { results: results.body.items });
   });
 });
@@ -58,7 +56,6 @@ app.get("/albums/:id", (req, res) => {
 app.get("/viewtracks/:id", (req, res) => {
   spotifyApi.getAlbumTracks(req.params.id).then((results) => {
     res.render("view-tracks", { results: results.body.items });
-    console.log(results.body.items);
   });
 });
 

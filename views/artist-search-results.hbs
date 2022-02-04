@@ -1,14 +1,20 @@
-{{#if results}}
-{{#each results}}
-<div>
-    {{#if this.images}}
-    <img class="searchImages"src="{{this.images.[0].url}}" alt="album-img">
-    {{else}}
-    <img src="https://freerangestock.com/thumbnail/119999/vinyl-record-vector-icon.jpg" alt="generic-album-img">
-    {{/if}}    
-    <a href="/albums/{{this.id}}">{{this.name}}</a>
+<h1 class="resultsTitle">Search results for: {{searchVal}}</h1>
+<div class="container">
+    <div class="row">
+        {{#if results}}
+        {{#each results}}
+        <div class="artistDiv col-sm">
+            {{#if this.images}}
+            <img src="{{this.images.[0].url}}" alt="album-img">
+            {{else}}
+            <img src="https://freerangestock.com/thumbnail/119999/vinyl-record-vector-icon.jpg" alt="generic-album-img">
+            {{/if}}
+            <p>{{this.name}}</p>
+           <a class="btn btn-primary" href="/albums/{{this.id}}" role="button">View Albums</a>
+        </div>
+        {{/each}}
+        {{else}}
+        <h1>We couldn't find any results for that search.</h1>
+        {{/if}}
+    </div>
 </div>
-{{/each}}
-{{else}}
-<h1>We couldn't find any results for that search.</h1>
-{{/if}}
