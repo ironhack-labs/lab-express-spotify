@@ -29,23 +29,38 @@ app.get("/", function(req, res) {
 });
 
 app.get("/artist-search", function(req, res) {
-
     spotifyApi
     .searchArtists(req.query.searchedArtist)
     .then(data => {  
-        
         const artistInfoArr = [];
+        // simplify with destructuring?
         data.body.artists.items.forEach(artist => {
             artistInfoArr.push({
+                artistId: artist.id,
                 artistName: artist.name,
                 imageSrc: (artist.images[0]) ? artist.images[0].url : ""
             });
         });
-
         res.render("artist-search-results.hbs", {artistsInfo: artistInfoArr});
     })
-    .catch(err => console.log("something went wrong: ", err));
+    .catch(err => console.log("No artists could be retrieved: ", err));
+})
 
+app.get("/albums/:artistName/:artistId", function(req, res) {
+    spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+        const albumArr = [];
+        // simplify with destructuring?
+        data.body.items.forEach(album => {
+            albumArr.push({
+                title: album.name,  
+                imgSrc: (album.images[0]) ? album.images[0].url : ""
+            });
+        });
+        res.render("albums", {albums: albumArr, artistName: req.params.artistName,});
+    })
+    .catch(err => console.log("Albums could not be fetched: ", err));
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
