@@ -3,9 +3,18 @@
   <h2>Search artist search-result</h2>
 
   {{#each artist}}
-    <h1>{{this.name}}</h1>
+    <h1>{{name}}</h1>
 
-    <img src="" alt="">
+    {{#if images}}
+      <img src="{{images.0.url}}" alt="artist-image" width="150px" />
+    {{else}}
+      <img src="https://via.placeholder.com/150x150" alt="generic image" />
+    {{/if}}
+
+    <a href="">
+      <button>View albums
+      </button>
+    </a>
 
   {{/each}}
 
