@@ -1,0 +1,8 @@
+body {
+    width: 100%;
+}
+
+.artist-search {
+    background-image:url("/public/images/spotify-background.jpeg");
+    text-align: center;
+}
