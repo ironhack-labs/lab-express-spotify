@@ -8,6 +8,8 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 const serverMethods = require('spotify-web-api-node/src/server-methods');
 
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -46,22 +48,40 @@ app.get("/home", (req, res)=> {
 
 app.get("/artist-search", async (req, res)=> {
     const { searchInput } = req.query;
-    // console.log("Logging searchInput: ", searchInput);
     let data = {};
     let selectedData = [];
+    if (searchInput) {
+        try {
+            data = await spotifyApi.searchArtists(searchInput);
+            data.body.artists.items.forEach((item) => {
+                // console.log("item.id: ", item.id, typeof item.id);
+                if (item.images.length > 0) {
+                    selectedData.push({ name: item.name, image: item.images[0].url, href: `/albums/${item.id}`});
+                } else {
+                    return;
+                }
+            });
+            // console.log("selectedData: ", selectedData);
+            // res.send(data);
+            res.render("artist-search-results", {artists: selectedData});
+        } catch (err) {
+            console.log("Something went wrong in /artist-search route, logging err in catch,: ", err);
+        }
+    } else {
+        res.send("No search query -go back and try again!");
+}
+});
+
+app.get("/albums/:id", async (req, res)=>{
+    const { id } = req.params;
+    console.log("Logging req.params: ", req.params);
+    console.log("Logging id: ", id);
     try {
-        data = await spotifyApi.searchArtists(searchInput);
-        console.log("RetrievedArtist: ", data);
-    } catch (err) {
-        console.log("Something went wrong in /artist-search route, logging err in catch,: ", err);
+        const albums = await spotifyApi.getArtistAlbums(id);
+        res.send(albums);
+    } catch {
+        console.log("Something went wrong getting albums,logging err in catch block: ", albums);
     }
-    data.body.artists.items.forEach((item) => {
-        selectedData.push({ name: item.name, image: item.images[0].url},);
-    });
-    console.log("selectedData: ", selectedData);
-    const inputToRender = {artists: selectedData};
-    // res.send(data);
-    res.render("artist-search-results", inputToRender);
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

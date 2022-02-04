@@ -71,11 +71,10 @@ button{
 .sub-containers {
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    width: 20%;
-    height: 40%;
+    justify-content: flex-start;
+    width: 24%;
     display: flex;
-    margin: 100px;
+    margin: 10px;
     background-color: rgb(116, 115, 115);
 }
 
@@ -94,7 +93,7 @@ a {
     margin: 0px auto;
 }
 
-button {
+.view-albums-button {
     border-radius: 10px;
 }
 
