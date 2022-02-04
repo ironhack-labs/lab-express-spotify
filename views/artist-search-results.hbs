@@ -1,0 +1,16 @@
+
+<h1>Artists</h1>
+<section class="container">
+  {{#each artist}}
+    <div class="card">
+
+      {{#if images.0.url}}
+        <img src="{{images.0.url}}" alt="">
+      {{else}}
+        <img src="/images/blank.jpeg" alt="no art found">
+      {{/if}}
+      <h2>{{name}}</h2>
+      <a href="/albums/{{id}}" class="button">view albums</a>
+    </div>
+  {{/each}}
+</section>
