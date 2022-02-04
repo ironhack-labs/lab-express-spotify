@@ -1,0 +1,8 @@
+{{#each results}}
+<h2>{{this.name}}</h2>
+{{#if this.preview_url}}
+<audio src="{{this.preview_url}}" controls></audio>
+{{else}}
+<p>Track Not Available</p>
+{{/if}}
+{{/each}}

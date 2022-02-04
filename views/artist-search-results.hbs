@@ -1,0 +1,14 @@
+{{#if results}}
+{{#each results}}
+<div>
+    {{#if this.images}}
+    <img class="searchImages"src="{{this.images.[0].url}}" alt="album-img">
+    {{else}}
+    <img src="https://freerangestock.com/thumbnail/119999/vinyl-record-vector-icon.jpg" alt="generic-album-img">
+    {{/if}}    
+    <a href="/albums/{{this.id}}">{{this.name}}</a>
+</div>
+{{/each}}
+{{else}}
+<h1>We couldn't find any results for that search.</h1>
+{{/if}}

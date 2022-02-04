@@ -1,0 +1,22 @@
+.searchImages {
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+.albumDiv {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 40px;
+}
+
+.albumDiv p {
+width: 260px;
+text-align: center;
+}
+
+.albumDiv img {
+    height: 300px;
+    width: 300px
+}
