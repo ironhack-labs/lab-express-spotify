@@ -9,13 +9,13 @@ const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 const serverMethods = require('spotify-web-api-node/src/server-methods');
 
-hbs.registerPartials(path.join(__dirname, 'views/partials'));
+hbs.registerPartials(path.join(process.cwd(), 'views/partials'));
 
 const app = express();
 
 app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set('views', process.cwd() + '/views');
+app.use(express.static(process.cwd() + '/public'));
 
 // setting the spotify-api goes here:
 
@@ -76,12 +76,9 @@ app.get("/artist-search", async (req, res)=> {
 app.get("/albums/:id", async (req, res)=>{
     const { id } = req.params;
     const selectedData = [];
-    console.log("Logging req.params: ", req.params);
-    console.log("Logging id: ", id);
     try {
         const data = await spotifyApi.getArtistAlbums(id);
         data.body.items.forEach((item) => {
-            // console.log("item.id: ", item.id, typeof item.id);
             if (item.images.length > 0) {
                 selectedData.push({ name: item.name, image: item.images[0].url, href: `/${item.name}/${item.id}`});
             } else {
@@ -90,7 +87,7 @@ app.get("/albums/:id", async (req, res)=>{
         });
         // res.send({inputArray: selectedData})
         // res.send(data)
-        res.render("albums.hbs", {inputArray: selectedData});
+        res.render("albums-overview", {inputArray: selectedData});
     } catch(err) {
         console.log("Something went wrong getting albums,logging err in catch block: ", err);
     }
