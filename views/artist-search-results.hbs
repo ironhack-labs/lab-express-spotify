@@ -1,21 +1,17 @@
-<section id="search-result">
+<h2>Artist search result</h2>
 
-  <h2>Search artist search-result</h2>
+{{#each artist}}
 
-  {{#each artist}}
-    <h1>{{name}}</h1>
+  <h4>{{name}}</h4>
+  {{#if images}}
+    <img src="{{images.0.url}}" alt="artist-image" width="150px" />
+  {{else}}
+    <img src="https://via.placeholder.com/150x150" alt="generic image" />
+  {{/if}}
+<br><br>
+  <a href="/albums/{{id}}">
+    <button>View albums
+    </button>
+  </a>
 
-    {{#if images}}
-      <img src="{{images.0.url}}" alt="artist-image" width="150px" />
-    {{else}}
-      <img src="https://via.placeholder.com/150x150" alt="generic image" />
-    {{/if}}
-
-    <a href="/albums/{{id}}">
-      <button>View albums
-      </button>
-    </a>
-
-  {{/each}}
-
-</section>
+{{/each}}

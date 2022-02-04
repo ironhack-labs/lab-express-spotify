@@ -1,0 +1,45 @@
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+footer {
+  background-color:black;
+  opacity: 0.6;
+  color: white;
+  padding: 5px;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
+
+#search {
+  background-color: white;
+  opacity: 0.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 25%;
+  width: 50%;
+  height: 20%;
+}
+
+#search button {
+  background-color: red;
+  color: white;
+  padding: 20px;
+  border: none;
+}
+
+#search input {
+  background-color: white;
+  opacity: 1.5;
+  color: black;
+  width: 400px;
+  padding: 10px;
+}

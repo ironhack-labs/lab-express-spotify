@@ -1,5 +1,6 @@
 <h2>All tracks of album</h2>
 
 {{#each tracks}}
+  <p>{{this.name}}</p>
   <audio controls="controls" src="{{preview_url}}" type="audio"></audio>
 {{/each}}
