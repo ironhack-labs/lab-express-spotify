@@ -1,0 +1,14 @@
+<div id="global-container-tracks">
+    <div id="header-container">
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </div>
+    {{#each inputArray}}
+    <div class="title-and-audio-row">
+        <h4>{{this.title}}</h4>
+        <audio controls>
+            <source src={{this.src}} type="audio/mp3">
+        </audio>
+    </div>
+    {{/each}}    
+</div>
