@@ -31,14 +31,17 @@ app.get("/artist-search", function(req, res) {
 
     spotifyApi
     .searchArtists(req.query.searchedArtist)
-    .then(data => {    
-        const firstArtist = data.body.artists.items[0];
-        const firstArtistInfo = {
-            artistName: firstArtist.name,
-            imageSrc: firstArtist.images[0].url
-        };
-        console.log(firstArtistInfo.imageSrc);
-        res.render("artist-search-results.hbs", {artistInfo: firstArtistInfo});
+    .then(data => {  
+        
+        const artistInfoArr = [];
+        data.body.artists.items.forEach(artist => {
+            artistInfoArr.push({
+                artistName: artist.name,
+                imageSrc: (artist.images[0]) ? artist.images[0].url : ""
+            });
+        });
+
+        res.render("artist-search-results.hbs", {artistsInfo: artistInfoArr});
     })
     .catch(err => console.log("something went wrong: ", err));
 

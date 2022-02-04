@@ -1,6 +1,12 @@
-<div>
-    <h1>{{artistInfo.artistName}}</h1>
-    <img src={{artistInfo.imageSrc}} alt="Band Img">
-    <br>
-    <button>View Albums</button>
+<div id="artist-overview">
+
+    {{#each artistsInfo}}
+        <div>
+            <h1>{{this.artistName}}</h1>
+            <img src={{this.imageSrc}} alt="Band Img">
+            <br>
+            <button>View Albums</button>
+        </div>
+    {{/each}}
+
 </div>
