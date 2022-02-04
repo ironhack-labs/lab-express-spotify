@@ -1,0 +1,12 @@
+body {
+  background: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#search-artist {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
