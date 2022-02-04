@@ -55,12 +55,22 @@ app.get("/albums/:artistName/:artistId", function(req, res) {
         data.body.items.forEach(album => {
             albumArr.push({
                 title: album.name,  
-                imgSrc: (album.images[0]) ? album.images[0].url : ""
+                imgSrc: (album.images[0]) ? album.images[0].url : "",
+                albumId: album.id
             });
         });
         res.render("albums", {albums: albumArr, artistName: req.params.artistName,});
     })
     .catch(err => console.log("Albums could not be fetched: ", err));
-})
+});
+
+app.get("/tracks/:albumName/:albumId", function(req, res) {
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+        res.render("tracks", {tracksArray: data.body.items});
+    })
+    .catch(err => console.log("Could not retrieve tracks: ", err));
+});
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
