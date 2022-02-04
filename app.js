@@ -59,8 +59,9 @@ app.get("/artist-search", async (req, res)=> {
         selectedData.push({ name: item.name, image: item.images[0].url},);
     });
     console.log("selectedData: ", selectedData);
-    res.send(selectedData);
-    // res.render("artist-search-results", data.body.artists);
+    const inputToRender = {artists: selectedData};
+    // res.send(data);
+    res.render("artist-search-results", inputToRender);
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

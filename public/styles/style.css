@@ -3,6 +3,8 @@
     /* outline: 1px solid red; */
 }
 
+/* LAYOUT / HOME*/
+
 #background-image {
     position: relative;
     background-image: url("./../images/spotify-background.jpeg");
@@ -55,3 +57,44 @@ button{
     border: none;
     padding: 10px 20px;
 }
+
+/* ARTISTS-SEARCH-RESULTS PAGE */
+
+#global-container-artists {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    align-items: center;
+    margin: 10px 5%;
+}
+
+.sub-containers {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 20%;
+    height: 40%;
+    display: flex;
+    margin: 100px;
+    background-color: rgb(116, 115, 115);
+}
+
+
+.artist-image {
+    height: 80%;
+}
+
+.artist-name {
+    text-align: center;
+    margin: 5px auto 0px auto;
+}
+
+a {
+    text-align: center;
+    margin: 0px auto;
+}
+
+button {
+    border-radius: 10px;
+}
+
