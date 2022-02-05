@@ -34,7 +34,6 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist.toUpperCase())
     .then((data) => {
-      //   console.log("artist here", data.body.artists);
       res.render("artist-search-results", { artists: data.body.artists });
     })
     .catch((err) => {
@@ -43,21 +42,13 @@ app.get("/artist-search", (req, res, next) => {
 });
 
 app.get("/albums/:id", (req, res, next) => {
-  console.log(req.params.id);
-
   spotifyApi.getArtistAlbums(req.params.id).then((data) => {
-    console.log(data.body.items);
-
     res.render("albums", { albums: data.body });
   });
 });
 
 app.get("/tracks/:id", (req, res, next) => {
-  console.log(req.params.id);
-
   spotifyApi.getAlbumTracks(req.params.id).then((data) => {
-    console.log(data.body.items);
-
     res.render("tracks", { tracks: data.body });
   });
 });
