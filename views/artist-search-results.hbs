@@ -1,0 +1,22 @@
+{{#each items}}
+<div>
+    <a href="{{external_urls.spotify}}">Listen on Spotify</a> <br>
+    followers: {{followers.total}} <br>
+    genres:<br>
+    <ul>
+        {{#each genres}}
+            <li>{{this}}</li>
+        {{/each}}
+    </ul>
+    <a href="{{href}}">{{href}}</a><br>
+    {{#each images}}
+        {{#if @first}}
+            {{#with this}}
+                <img src="{{url}}" alt="">
+            {{/with}}
+        {{/if}}
+    {{/each}}
+    <h1>{{name}}</h1>
+    Popularity: {{popularity}}
+</div>    
+{{/each}}
