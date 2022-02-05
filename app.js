@@ -45,11 +45,17 @@ app.get("/artist-search", (req, res, next) => {
 
 app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistId).then((data) => {
-    // console.log("data from DB", data.body.items);
-    res.render("albums",{album: data.body.items});
+    //console.log("data from DB", data.body.items);
+    res.render("albums", { album: data.body.items });
   });
 });
 
+app.get("/tracks/:albumId", (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.albumId).then((data) => {
+    console.log("data from DB", data.body.items);
+    res.render("tracks", { track: data.body.items });
+  });
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
