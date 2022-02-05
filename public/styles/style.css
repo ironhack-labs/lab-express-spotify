@@ -1,0 +1,9 @@
+body {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+}
+
+.home-input {
+    width: 200px;
+    text-align: center;
+}

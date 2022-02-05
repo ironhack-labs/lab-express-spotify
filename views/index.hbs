@@ -1,3 +1,11 @@
 <form action="/artist-search", method="GET">
-    <label for="artist-input">Artist name:</label>
+    <input class="home-input"
+        name="name"
+        value=""
+        type="text"
+        placeholder="Type the Artist Name here"
+    />
+    <p></p>
+    {{!-- here type="submit" tells html that this button when clicked submits the form! --}}
+    <button type="submit">Search for an Artist!</button>
 </form>
