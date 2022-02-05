@@ -1,6 +1,25 @@
 body {
+    margin: 0;
+}
+
+.home-container {
     background-image: url("/images/spotify-background.jpeg");
-    background-size: cover;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 800px;
+}
+
+.home-container .box {
+    background: white;
+    opacity: 0.4;
+    height: 20%;
+    width: 20%;
+}
+
+.home-container .search {
+    position: absolute;
 }
 
 .home-input {

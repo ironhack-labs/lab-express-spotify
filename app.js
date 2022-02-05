@@ -40,18 +40,31 @@ app.get('/', (req, res) => {
   });
 
 // /artist-search route
-spotifyApi
-  .searchArtists('/artist-search', (req, res, next) => {
-    res.render(req.query);
-  })
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
 
+// localhost:3000/artist-search?term=kooks
+app.get('/artist-search', (req, res) => {
+  let artistSearch = req.query.term; // "kooks"
+  console.log("Searching for " + artistSearch);
+  spotifyApi.searchArtists(artistSearch)
+    .then(data => {
+      console.log('The received data from the API: ', data.body.artists.items);
+      res.render("artist-search-results", {
+        doctitle: 'Artist Search', 
+        results: data.body.artists.items
+      })
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+});
 
-
+// albums route
+app.get('/albums/:artistId', (req, res) => {
+  let artistId = req.params.artistId;
+  spotifyApi.getArtistAlbums(artistId)
+    .then(data => {
+      console.log('Here is the ', data.body)
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
