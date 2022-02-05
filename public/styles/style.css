@@ -1,0 +1,99 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+.spotify-search {
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.search-form {
+  width: 500px;
+  padding: 50px;
+  background-color: #ffffffa6;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+}
+
+#search-input {
+  width: 410px;
+  height: 25px;
+  border: 1px solid #b3b0b0;
+  border-radius: 3px;
+  margin-bottom: 10px;
+}
+
+#search-button {
+  color: white;
+  background-color: #ff0000a3;
+  border: 1px solid #ff000000;
+  padding: 7px;
+  border-radius: 3px;
+}
+
+.search-results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.results-card {
+  text-align: center;
+  background-color: #484747;
+  color: white;
+  margin: 30px;
+  height: 360px;
+}
+
+.results-card img {
+  width: 300px;
+  height: 300px;
+}
+
+.results-card h1 {
+  margin: 5px;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.results-card a {
+  color: white;
+  text-decoration: none;
+  background-color: #f77373;
+  padding: 5px;
+  font-size: 14px;
+  border-radius: 6px;
+  margin: 10px;
+}
+
+.tracks-header {
+  background-color: #545454;
+  display: flex;
+  justify-content: space-between;
+  margin: 0 20px;
+}
+
+.tracks-header h1 {
+  margin: 25px;
+  color: white;
+}
+
+.tracks-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #8080802b;
+  margin: 5px 20px;
+  padding: 0 11px;
+}

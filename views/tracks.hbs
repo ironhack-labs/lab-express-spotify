@@ -1,7 +1,16 @@
-{{#each tracks.items}}
-  <h1>{{name}}</h1>
-  <audio controls>
-    <source src={{preview_url}} type="audio/ogg" />
-  </audio>
+<div class="tracks-header">
+  <h1>Title</h1>
+  <h1>Listen</h1>
+</div>
 
-{{/each}}
+<section>
+  {{#each tracks.items}}
+    <div class="tracks-items">
+      <h1>{{name}}</h1>
+      <audio controls>
+        <source src={{preview_url}} type="audio/ogg" />
+      </audio>
+    </div>
+
+  {{/each}}
+</section>

@@ -1,6 +1,10 @@
-{{#each albums.items}}
-  <h1>{{name}}</h1>
-  <img src={{images.1.url}} alt="artist image" />
-  <a href="/tracks/{{id}}">View tracks</a>
+<section class="search-results">
+  {{#each albums.items}}
+    <div class="results-card">
 
-{{/each}}
+      <img src={{images.1.url}} alt="artist image" />
+      <h1>{{name}}</h1>
+      <a href="/tracks/{{id}}">View tracks</a>
+    </div>
+  {{/each}}
+</section>
