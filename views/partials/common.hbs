@@ -1,0 +1,8 @@
+{{#each images}}
+    {{#if @first}}
+        {{#with this}}
+            <img src="{{url}}" alt="">
+        {{/with}}
+    {{/if}}
+{{/each}}
+<h1>{{name}}</h1>

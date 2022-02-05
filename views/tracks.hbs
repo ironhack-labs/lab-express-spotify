@@ -1,0 +1,16 @@
+<table>
+    <thead>
+        <th>NAME</th>
+        <th>LISTEN</th>
+    </thead>
+    <tbody>
+        {{#each items}}
+        {{#with this}}
+        <tr>
+            <td>{{name}}</td>
+            <td>{{duration_ms}}</td>
+        </tr>
+        {{/with}}
+        {{/each}}
+    </tbody>
+</table>

@@ -12,6 +12,9 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+//to register the partials directory
+hbs.registerPartials(__dirname + "/views/partials");
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -31,12 +34,34 @@ app.get("/artist-search", (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.artist)
         .then(data => {
-            console.log('The received data from the API: ', data.body, data.body.artists.items[0].images);
+            //console.log('The received data from the API: ', data.body, data.body.artists.items[0].images);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
             res.render("artist-search-results", { items: data.body.artists.items });
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
         
+});
+
+app.get("/:artist/albums/:id", (req, res, next) => {
+    spotifyApi
+        .getArtistAlbums(req.params.id)
+        .then(data => {
+            console.log('The received data from the API: ', data.body);
+            // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+            res.render("albums", { artist: req.params.artist ,items: data.body.items });
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
+});
+
+app.get("/tracks/:id", (req, res, next) => {
+    spotifyApi
+        .getAlbumTracks(req.params.id)
+        .then(data => {
+            console.log('The received data from the API: ', data.body);
+            // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+            res.render("tracks", { items: data.body.items });
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

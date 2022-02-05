@@ -1,0 +1,7 @@
+<div>
+    <h3>Albums for: {{artist}}</h3>
+    {{#each items}}
+        {{> common}}
+        <a href="/tracks/{{id}}">View Tracks</a>
+    {{/each}}
+</div>

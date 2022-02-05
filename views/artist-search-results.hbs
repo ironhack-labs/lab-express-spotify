@@ -9,14 +9,8 @@
         {{/each}}
     </ul>
     <a href="{{href}}">{{href}}</a><br>
-    {{#each images}}
-        {{#if @first}}
-            {{#with this}}
-                <img src="{{url}}" alt="">
-            {{/with}}
-        {{/if}}
-    {{/each}}
-    <h1>{{name}}</h1>
+    {{>common}}
     Popularity: {{popularity}}
+    <a href="/{{name}}/albums/{{id}}">View Albums</a>
 </div>    
 {{/each}}
