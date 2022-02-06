@@ -1,16 +1,17 @@
-<h1>Search results</h1>
+<h2>Search results</h2>
 
-<div>
-
+<div class="results">
     {{#each artist}}
-    <div>    
+    <div class="card">    
         {{#if images}}
-        <img src="{{images.0.url}}" alt="image-{{name}}" width="150px">
+        <img src="{{images.0.url}}" class="card-img-top" alt="image-{{name}}">
         {{else}}
-        <img src="https://via.placeholder.com/150x150" alt="no-image-available" />
-        {{/if}}        
-        <h3>{{name}}</h3>
-        <a href="/albums/{{id}}">View Albums</a>
+        <img src="/images/no_image_available.jpeg" alt="no-image-available" />
+        {{/if}}  
+        <h5>{{name}}</h5>
+        <a href="/{{name}}/albums/{{id}}">View Albums</a>
     </div>
     {{/each}}
 </div>
+    
+

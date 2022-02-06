@@ -1,12 +1,12 @@
-<h1>Home</h1>
 
-<form action="/artist-search" method="GET">
+<div id="home">
+    <h1>Spotifylter</h1>
+    <p>Find all the albums and tracks of your favourite artist.</p>
 
-    <label>
-        artistname 
-        <input type="string" name="artistName" placeholder="Type here"/>
-    </label>
-
-    <button type="submit">Search for an Artist</button>
-
-</form>       
+    <form action="/artist-search" method="GET">
+        <label>
+            <input id="search-bar" type="string" name="artistName" placeholder="Type here"/>
+        </label>
+        <button type="submit">Search for an artist</button>
+    </form>       
+</div>

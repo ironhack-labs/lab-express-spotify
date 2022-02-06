@@ -1,8 +1,8 @@
-<h1>Tracks of: {{artists}}</h1>
+<h2>Tracks of {{tracks.artist}}</h2>
 
-<div>
+<div class="results">
 
-    {{#each track}}
+    {{#each tracks.trackArr}}
     <div>         
         <h3>{{name}}</h3>
         <audio controls="controls" src="{{preview_url}}" type="audio/mpeg"></audio>

@@ -1,16 +1,16 @@
-<h1>Albums for: {{artistName}}</h1>
+<h2>Albums of {{albums.artist}}</h2>
 
-<div>
+<div class="results">
 
-    {{#each album}}
-    <div>    
+    {{#each albums.albumArr}}
+    <div class="card">    
         {{#if images}}
         <img src="{{images.0.url}}" alt="image-{{name}}" width="150px">
         {{else}}
         <img src="https://via.placeholder.com/150x150" alt="no-image-available" />
         {{/if}}        
-        <h3>{{name}}</h3>
-        <a href="/tracks/{{id}}">View tracks</a>
+        <h5>{{name}}</h5>
+        <a href="/{{name}}/tracks/{{id}}">View tracks</a>
     </div>
     {{/each}}
 </div>

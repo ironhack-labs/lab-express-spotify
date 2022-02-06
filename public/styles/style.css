@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans:wght@700&display=swap");
+
+body {
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: #2940ab;
+  color: #1bd760;
+  font-size: 16px;
+  font-family: "Noto Sans", sans-serif;
+  text-align: center;
+}
+
+#home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www-growth.scdn.co/static/home/bursts-tablet.svg");
+  background-size: 100% 125%;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 8rem;
+  letter-spacing: -5px;
+  margin-bottom: 25px;
+}
+
+h2 {
+  font-size: 4rem;
+  letter-spacing: -3px;
+  margin-bottom: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: column;
+}
+
+#search-bar {
+  color: #2940ab;
+  width: 220px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 0px;
+  font-weight: 600;
+  text-align: center;
+  margin: 15px;
+}
+
+button {
+  background-color: #1bd760;
+  color: #2940ab;
+  width: 220px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 10px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 200px;
+  height: 350px;
+  margin: 30px;
+  background-color: #2940ab;
+  border: solid 2px #1bd760;
+  border-radius: 50px;
+}
+
+img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50px 50px 0px 0px;
+}
+
+a {
+  background-color: #1bd760;
+  color: #2940ab;
+  width: 150px;
+  border: none;
+  border-radius: 50px;
+  padding: 15px 10px;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+  text-decoration: none;
+  font-weight: 600;
+}
