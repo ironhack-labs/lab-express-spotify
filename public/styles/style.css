@@ -1,5 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;500;700&display=swap');
+
+
 body {
   width: 100%;
+  font-family: 'Montserrat', sans-serif;
 }
 
 .artist-search {
@@ -29,4 +33,23 @@ body {
 .album-header {
     grid-area: span;
     overflow: auto;
+}
+
+.tracks-header {
+}
+
+table {
+    margin-left: 2em;
+    margin-right: 2em
+    ;
+}
+
+tr, td {
+    width: 100%;
+    border-bottom: 1px solid #ddd;
+}
+
+th {
+    font-size: 1.5em;
+    text-align: left;
 }

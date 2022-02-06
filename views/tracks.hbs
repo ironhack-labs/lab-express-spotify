@@ -1,0 +1,17 @@
+<div class="tracks-header">
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Listen</th>
+        </tr>
+        {{#each results}}
+        <tr>
+            <td>{{this.name}}</td>
+            {{#if this.preview_url}}
+            <td><audio src="{{this.preview_url}}" controls></audio></td>
+            {{else}}
+            <td>Track Not Available</td>
+            {{/if}}
+        </tr>
+        {{/each}}
+    </table>
