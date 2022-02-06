@@ -1,0 +1,41 @@
+<article class="artists">
+
+<section id="product-list">
+    {{#each albumData}}
+        <h1>{{this.title}}</h1>
+        {{> this}}
+    {{/each}}
+</section>
+
+{{!-- 
+    {{!-- Display Image --}}
+    {{#if imgSrc}}
+        <img src="{{imgSrc}}" alt="{{title}}" />
+    {{else}}
+        <img src="https://via.placeholder.com/700x400" alt="generic image" />
+    {{/if}}
+
+
+    {{!-- Display categories --}}
+    {{#if categories}}
+        <ul>
+            {{#each categories}}
+                <li>
+                    <a href="/{{this}}">
+                        {{this}} 
+                    </a>
+                </li>
+            {{/each}}
+        </ul>
+    {{/if}}
+
+    {{!-- Info from seller --}}
+    {{#if seller}}    
+        <div>
+            <h3>Seller details</h3>
+            {{seller.name}} <br />
+            {{seller.rating}}
+        </div>
+    {{/if}} --}}
+
+</article>
