@@ -1,9 +1,10 @@
-<h2>Tracks of {{tracks.artist}}</h2>
+
+<h2><a class="homebtn" href="/"><img src="/images/spotify-logo.png" alt="home"></a>Tracks of {{tracks.artist}}</h2>
 
 <div class="results">
 
     {{#each tracks.trackArr}}
-    <div>         
+    <div class="track">         
         <h3>{{name}}</h3>
         <audio controls="controls" src="{{preview_url}}" type="audio/mpeg"></audio>
     </div>

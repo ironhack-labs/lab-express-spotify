@@ -1,4 +1,4 @@
-<h2>Search results</h2>
+<h2><a class="homebtn" href="/"><img src="/images/spotify-logo.png" alt="home"></a>Search results</h2>
 
 <div class="results">
     {{#each artist}}
@@ -6,7 +6,7 @@
         {{#if images}}
         <img src="{{images.0.url}}" class="card-img-top" alt="image-{{name}}">
         {{else}}
-        <img src="/images/no_image_available.jpeg" alt="no-image-available" />
+        <img src="/images/spotify-logo.png" alt="no-image-available" />
         {{/if}}  
         <h5>{{name}}</h5>
         <a href="/{{name}}/albums/{{id}}">View Albums</a>

@@ -1,4 +1,4 @@
-<h2>Albums of {{albums.artist}}</h2>
+<h2><a class="homebtn" href="/"><img src="/images/spotify-logo.png" alt="home"></a>Albums of {{albums.artist}}</h2>
 
 <div class="results">
 
@@ -7,7 +7,7 @@
         {{#if images}}
         <img src="{{images.0.url}}" alt="image-{{name}}" width="150px">
         {{else}}
-        <img src="https://via.placeholder.com/150x150" alt="no-image-available" />
+        <img src="/images/spotify-logo.png" alt="no-image-available" />
         {{/if}}        
         <h5>{{name}}</h5>
         <a href="/{{name}}/tracks/{{id}}">View tracks</a>
