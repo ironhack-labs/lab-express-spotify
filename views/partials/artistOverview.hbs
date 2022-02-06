@@ -1,6 +1,10 @@
-<div>
-  <h1>{{artistName}}</h1>
-  <img src={{imageSrc}} alt="{{artistName}} Image" />
-  <br />
-  <a href="/albums/{{artistName}}/{{artistId}}">View Albums</a>
+<div class="col">
+  <div class="card w-75 bg-secondary">
+    <img src={{imageSrc}} alt="{{artistName}} Image" />
+    <div class="card-body text-center text-white">
+      <h5 class="m-1">{{artistName}}</h5>
+      <br />
+      <a class="btn btn-danger" href="/albums/{{artistName}}/{{artistId}}">View Albums</a>
+    </div>
+  </div>
 </div>

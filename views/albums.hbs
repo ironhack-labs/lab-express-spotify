@@ -1,6 +1,15 @@
 <div>
-    <h1>Albums for: {{artistName}}</h1>
-    {{#each albums}}
-        {{> albumOverview this}}
-    {{/each}}
+    <h1 class="text-center m-3">Albums for: {{artistName}}</h1>
+    <div id="artist-overview" class="album py-5">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+                {{#each albums}}
+                {{> albumOverview this}}
+                {{/each}}
+            </div>
+        </div>
+    </div>
 </div>
+
+
+
