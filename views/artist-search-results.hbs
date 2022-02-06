@@ -1,9 +1,25 @@
-<h1>Site test </h1>
-
-display name, image, and button 
+<h1>Result Search </h1>
 
 <ul>
-            <li><a href="/">Home</a></li>
+  <li><a href="/">Home</a></li>
 </ul>
+<div>
 
-<a href="/albums/someArtistIdGoesHere">View Albums</a>
+  {{#each artist}}
+    <div>
+
+      {{#if images}}
+        <img src="{{images.0.url}}" alt="image-{{name}}" width="250px" />
+      {{else}}
+        <img
+          src="https://via.placeholder.com/250x250"
+          alt="no_image_availible"
+        />
+      {{/if}}
+    </div>
+    <h2>{{name}}</h2>
+    {{genres}}
+    <a href="/albums/someArtistIdGoesHere">View Albums</a>
+
+  {{/each}}
+</div>
