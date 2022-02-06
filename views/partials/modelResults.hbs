@@ -1,0 +1,15 @@
+<section id="search-list">
+  {{#each data}}
+    <div class="artists-found">
+      <img src="{{images[0]}}" />
+      <!-- find correct path for image-->
+      <h4>{{name}}</h4>
+      <!-- find correct path for artist name-->
+      <a href="/albums/{{}}">View Albums</a>
+      <!-- find correct path for albums -->
+    </div>
+  {{else}}
+    <p>Oops! No artists found with that name!</p>
+  {{/each}}
+
+</section>

@@ -4,9 +4,36 @@ body {
   background-size: cover;
 }
 
+form {
+  margin: 0;
+}
+
 #search-artist {
   position: absolute;
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+  padding: 4% 15%;
+  background-color: rgba(250, 235, 215, 0.522);
+  border-radius: 0.5rem;
+}
+
+button {
+  background-color: red;
+  color: white;
+  padding: 5%;
+  margin: auto;
+  margin-top: 0.8rem;
+  margin-bottom: 0;
+  border: none;
+  border-radius: 0.3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-results {
+  color: white;
+  text-align: center;
+  padding: 0.7rem;
 }

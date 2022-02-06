@@ -1,9 +1,6 @@
-<h4>Your Search Results:</h4>
-<section id="search-list">
-    {{#each productsArr}}
-        {{> productSummary this }}
-      {{else}}
-      <p>Oops! No products match your criteria!</p>
+<h2 class="artist-results">Your Search Results:</h2>
+<section id="artists-list">
+    {{#each data}}
+        {{> modelResults this}}
     {{/each}}
-    
 </section>
