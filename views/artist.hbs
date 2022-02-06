@@ -1,4 +1,4 @@
-<div class="artist-search-results">
+<div class="artist">
     {{#if artistResults}}
     {{#each artistResults}}
     <div>
@@ -8,7 +8,7 @@
         <img src="/images/no-album-cover.jpg">
         {{/if}}
         <p>{{this.name}}</p>
-        <a class="btn btn-primary" href="/albums/{{id}}" role="button">View Albums</a>
+        <a class="buttons" href="/albums/{{id}}" role="button">View Albums</a>
     </div>
     {{/each}}
     {{else}}
