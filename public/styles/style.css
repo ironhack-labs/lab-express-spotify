@@ -1,0 +1,65 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;800;900&display=swap');
+
+
+body {
+    font-family: Poppins;
+    font-size: 20px;
+background-color: rgb(206, 206, 206);
+}
+
+ul {
+    font-size: 1rem;
+    font-family: Poppins;
+}
+
+button { font-family: Poppins;
+    font-size: .9rem;
+    font-weight: 600;
+background-color: rgb(11, 95, 31);
+color: rgb(255, 255, 255);
+border: 0;
+padding: 4px;
+width: 130px;
+}
+
+input {
+    font-family: Poppins;
+    font-weight: 300;
+    font-size: 1rem;
+    width: 300px;;
+}
+
+.artist-search-results, .albums {
+
+margin: 20px;
+display: flex;
+flex-direction: column;
+}
+
+.artist-search-results > img {
+    width: 200px;
+    margin: 50px;
+}
+
+.albums > img {
+    width: 200px;
+    margin: 50px;
+}
+
+.tracks{
+    text-align: justify;
+
+}
+
+.homepage{
+    margin: 20px;
+    display: flex;
+
+}
+
+.label{
+color: rgb(9, 97, 9);
+margin-right: 10px;
+font-size: 1.4rem ;
+
+}
