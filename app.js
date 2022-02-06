@@ -38,13 +38,13 @@ app.get('/',  (req, res) => {
     .catch(err => console.log('The error while searching artists occurred: ', err));
   });
 
- 
-  app.get('/albums/:artistId', (req, res, next) => {
-    spotifyApi.getArtistAlbums()
-  .then(data => {
-    res.render('albums:artistId', {albumList:data.body})
-    console.log('Artist albums', data.body);
-  });
-  });
+
+  app.get('/albums/:id', (request,response,next) => {
+    spotifyApi
+    .getArtistAlbums(request.params.id)
+    .then(data => {
+      response.render('albums-results', {album: data.body.items})
+    })
+  })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
