@@ -1,0 +1,19 @@
+<div>
+    <div class="tracks-header">
+        <div class="tracks-title">
+            <h2>Title</h2> 
+        </div>
+        <div class="tracks-listen">
+            <h2>Listen</h2>
+        </div>
+    </div>
+    
+    {{#each results}}
+        <div class="tracks-container">
+            {{this.name}}
+            <audio controls src="{{this.preview_url}}">
+                 Your browser does not support the <code>audio</code> element.
+            </audio>
+        </div>
+    {{/each}}
+</div>

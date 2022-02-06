@@ -2,6 +2,46 @@ body {
     margin: 0;
 }
 
+
+.album-container {
+    justify-content: center;
+    padding-left: 50px;
+    padding-top: 50px;
+    height: 220px;
+}
+
+.album-image {
+    width: 220px;
+    padding-bottom: 0;
+    margin-bottom: 0;
+    height: 80%;
+}
+
+.album-info p {
+    margin: 0;
+    height: 20%;
+}
+
+.album-info {
+    background-color: #595260;
+    padding-top: 0;
+    margin-top: 0%;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+}
+
+.album-parent {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.artist-search {
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
 .home-container {
     background-image: url("/images/spotify-background.jpeg");
     background-size: 100% 100%;
@@ -26,3 +66,29 @@ body {
     width: 200px;
     text-align: center;
 }
+
+.tracks-container {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 200px;
+    padding-left: 200px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    align-items: center;
+    margin-top: 5px;
+    background-color: #EFEFEF;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
+.tracks-header {
+    display: flex;
+    background-color: #595260;
+    justify-content: space-between;
+    padding-right: 320px;
+    padding-left: 260px;
+    color: #B2B1B9;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+
