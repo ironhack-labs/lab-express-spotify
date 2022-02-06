@@ -1,0 +1,99 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: black;
+    font-size: 16px;
+}
+
+.box {
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: 100%;
+}
+
+form {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50vw;
+    text-align: center;
+    padding: 4em;
+}
+
+input {
+    display: block;
+    width: 25vw;
+    height: 7vh;
+    margin: 0 auto;
+    /* text-align: center; */
+}
+
+button {
+    background-color: rgb(216, 89, 89);
+    color: white;
+    padding: 1.2em;
+    margin: 1.2em;
+}
+
+.artist-search-results {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5em;
+    margin: 2em
+}
+
+.artist-search-results img {
+    width: 300px;
+}
+
+.artist-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* .album-name {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+
+.album-page {
+    background-color: white;
+}
+
+.track-page {
+    padding: 2em;
+    width: 100vw;
+}
+
+table {
+    width: 80vw;
+    background-color: rgb(236, 235, 235);
+    padding: 2em;
+}
+
+tr {
+    height: 3em;
+    /* padding: 2em */
+}
+
+table,
+td {
+    border: 1.5px solid whitesmoke;
+    border-collapse: collapse;
+}
+
+.table-head {
+    text-align: center;
+    background-color: grey;
+    font-size: 22px;
+}

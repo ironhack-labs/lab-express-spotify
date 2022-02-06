@@ -1,0 +1,11 @@
+{{!-- Step 2 | Display results for artist search --}}
+{{!-- Iteration 4 | View Albums --}}
+<div class='artist-search-results'>
+    {{#each artists}}
+    <div class='artist-result'>
+        <img src="{{this.images.0.url}}" alt="Artist Search Image">
+        {{this.name}}
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+    {{/each}}
+</div>

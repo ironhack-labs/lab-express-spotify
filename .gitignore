@@ -1,6 +1,7 @@
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
+# The .env is referred to in the .gitignore file so you're safe!
 .env
 .DS_Store
 

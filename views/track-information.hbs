@@ -1,0 +1,18 @@
+{{!-- Iteration 5 | View Tracks --}}
+
+{{!-- A track object comes with a preview_url, which is the source for a 30-second preview of a particular song. You can plug this into an HTML audio tag, and it will play the preview. --}}
+
+<div class='track-page'>
+    <table>
+        <tr class='table-head'>
+            <th>Title</th>
+            <th>Listen</th>
+        </tr>
+         {{#each albumsTrack}}
+        <tr>
+            <td>{{this.name}}</td>
+            <td> <audio src="{{this.preview_url}}" controls></audio></td>
+        </tr>
+         {{/each}}
+    </table>
+</div>
