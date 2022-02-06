@@ -6,8 +6,13 @@ body {
 .album-container {
     justify-content: center;
     padding-left: 50px;
-    padding-top: 50px;
+    padding-top: 30px;
     height: 220px;
+}
+
+.albums-header{
+    margin-left: 450px;
+    padding-bottom: 5px;
 }
 
 .album-image {
@@ -20,6 +25,7 @@ body {
 .album-info p {
     margin: 0;
     height: 20%;
+    padding-bottom: 5px;
 }
 
 .album-info {
@@ -29,6 +35,14 @@ body {
     color: white;
     text-align: center;
     text-decoration: none;
+}
+
+.album-info button {
+    background-color: #FF6464;
+    color: white;
+    margin-bottom: 8px;
+    border: none;
+    border-radius: 5px;
 }
 
 .album-parent {
@@ -53,9 +67,15 @@ body {
 
 .home-container .box {
     background: white;
-    opacity: 0.4;
+    opacity: 0.5;
     height: 20%;
-    width: 20%;
+    width: 40%;
+}
+
+.home-container input {
+    width: 300px;
+    text-align: start;
+    padding: 5px;
 }
 
 .home-container .search {
@@ -65,6 +85,14 @@ body {
 .home-input {
     width: 200px;
     text-align: center;
+}
+
+.index-button {
+    background-color: #FF6464;
+    border: none;
+    color: white;
+    margin-left: 85px;
+    padding: 5px;
 }
 
 .tracks-container {

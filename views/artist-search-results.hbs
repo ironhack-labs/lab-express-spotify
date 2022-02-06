@@ -1,7 +1,7 @@
 <div class="artist-search">
    {{#each results}}
         <div class="album-container">
-            <img class="album-image" src="{{this.images.[0].url}}"/>
+            <img class="album-image" src="{{this.images.[0].url}}" onerror="this.src='images/not-found.png';"/>
             <div class="album-info">
                 <p>{{this.name}}</p>
                 <form method="get" action="/albums/{{this.id}}">
