@@ -1,5 +1,16 @@
+<div>
 
-
-<button class="Albums">
+    {{#each artist}}
+    <div>    
+        {{#if images}}
+        <img src="{{images.0.url}}" alt="image-artist" width="150px">
+        {{else}}
+        <img src="https://via.placeholder.com/150x150" alt="no-image-available" />
+        {{/if}}        
+        <h3>{{name}}</h3>
+        <button class="Albums">
             <a href="/albums/{{id}}">View albums</a>
         </button>
+    </div>
+    {{/each}}
+</div> 
