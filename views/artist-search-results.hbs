@@ -1,9 +1,17 @@
 <div class="artist-search-results">
+    {{#if artistResults}}
     {{#each artistResults}}
     <div>
-    <img src="{{images}}">
-    <p><a href="{{href}}">{{name}}</a></p>
-    <button>Albums</button>
+        {{#if this.images}}
+        <img src="{{this.images.[0].url}}">
+        {{else}}
+        <img src="/images/no-album-cover.jpg">
+        {{/if}}
+        <p>{{this.name}}</p>
+        <a class="btn btn-primary" href="/albums/{{id}}" role="button">View Albums</a>
     </div>
     {{/each}}
+    {{else}}
+    <h1>We couldn't find any results for that search.</h1>
+    {{/if}}
 </div>

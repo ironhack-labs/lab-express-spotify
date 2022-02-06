@@ -1,0 +1,16 @@
+<div class="albums">
+    <div class="album-header">
+        <h1>Albums for {{results.[0].artists.[0].name}}</h1>
+    </div>
+    {{#each results}}
+    <div class="album-content">
+        {{#if this.images}}
+        <img src="{{this.images.[0].url}}">
+        {{else}}
+        <img src="/images/no-album-cover.jpg">
+        {{/if}}
+        <p>{{this.name}}</p>
+        <a class="btn btn-primary" href="/tracks/{{this.id}}" role="button">View Tracks</a>
+    </div>
+    {{/each}}
+</div>

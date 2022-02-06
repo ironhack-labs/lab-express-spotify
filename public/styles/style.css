@@ -1,8 +1,32 @@
 body {
-    width: 100%;
+  width: 100%;
 }
 
 .artist-search {
-    background-image:url("/public/images/spotify-background.jpeg");
-    text-align: center;
+  height: 100vh;
+  background-image: url("/images/spotify-background.jpg");
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-search-results, .albums {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+}
+
+.artist-search-results img, .albums img {
+  max-height: 300px;
+  max-width: 300px;
+  object-fit: cover;
+}
+
+.album-header {
+    grid-area: span;
+    overflow: auto;
 }
