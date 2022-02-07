@@ -1,7 +1,7 @@
 require('dotenv').config();
 
 const express = require('express');
-const {res} = require('express/lib/response');
+const res = require('express/lib/response');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -67,7 +67,7 @@ app.get("/:artist/albums/:artistId", (req, res, next) => {
   });
   
 
-app.get('/albums/:artistsId',(req,res,)=>{
+app.get('/albums/:artistsId',(req,res, next)=>{
     spotifyApi
     .getArtistsAlbum(req.params.artistId)
     .then(data=>{
