@@ -55,9 +55,11 @@ app.get('/albums/:artistId', (req, res, next) => {
             albumsArray: data.body,
             artistName: data.body
         }
-        console.log(data)
+        // feel like res.render needs to go here but wen i do the site crashes.
+        // can't get this get.app part to console.log so i cannot find the parts i need wy won't it console.log.
     }) 
-    res.render("albums",{ albums: data.body });
+    console.log(data)
+    res.render("albums",{ albums: data.body }); // here i can get the site to appear but he cannot read the data.
   });
 
 
