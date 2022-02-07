@@ -1,0 +1,11 @@
+<section class='container'>
+{{#each artist}}
+<div class="box-container">
+<p><strong>{{name}}</strong></p>
+<img class="display-img" src={{images.0.url}} alt="picture of artist">
+<div>
+<a class='btn' href="/albums/{{id}}">Show Albums</a>
+</div>
+</div>
+{{/each}}
+</section>

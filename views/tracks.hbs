@@ -1,0 +1,24 @@
+<div id="table">
+<div id="header">
+    <li>Title</li>
+    <li>Listen</li>
+</div>
+<div class="container">
+{{#each trackArr}}
+{{!-- <p><strong>{{name}}</strong></p>
+<img src={{images.0.url}} alt="">
+<div>
+<a href="/albums/{{id}}">Show Albums</a>
+</div> --}}
+<figure>
+    <figcaption>Listen to <strong>{{name}}</strong>:</figcaption>
+    <audio
+        controls
+        src={{preview_url}}>
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</figure>
+{{/each}}
+</div>
+</div>

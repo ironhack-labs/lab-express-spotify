@@ -1,0 +1,39 @@
+li {
+  display: inline;
+  color: white;
+  font-size: 1.5rem;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#table {
+  width: 55%;
+  margin: 0 auto;
+  box-sizing: border-box;
+  border: 1px solid black;
+}
+
+#header {
+  background-color: rgba(0, 0, 0, 0.562);
+  height: 50px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+figure {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: space-around;
+}
