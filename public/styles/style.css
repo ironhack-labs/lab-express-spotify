@@ -1,0 +1,8 @@
+* {
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.home {
+    height: 100vh;
+    background-image: url("/images/spotify-background.jpeg")
+}
