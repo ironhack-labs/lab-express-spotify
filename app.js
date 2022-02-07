@@ -38,7 +38,7 @@ app.get("/artist-search", function(req, res) {
             artistInfoArr.push({
                 artistId: artist.id,
                 artistName: artist.name,
-                imageSrc: (artist.images[0]) ? artist.images[0].url : ""
+                imageSrc: (artist.images[0]) ? artist.images[0].url : "https://via.placeholder.com/500x500"
             });
         });
         res.render("artist-search-results.hbs", {artistsInfo: artistInfoArr});
@@ -55,7 +55,7 @@ app.get("/albums/:artistName/:artistId", function(req, res) {
         data.body.items.forEach(album => {
             albumArr.push({
                 title: album.name,  
-                imgSrc: (album.images[0]) ? album.images[0].url : "",
+                imgSrc: (album.images[0]) ? album.images[0].url : "https://via.placeholder.com/500x500",
                 albumId: album.id
             });
         });
