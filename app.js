@@ -51,14 +51,29 @@ app.get('/albums/:artistId', (req, res) => {
     .getArtistAlbums(artistId)
     .then((data) => {
       let albums = data.body.items;
+     console.log(albums);
       res.render("albums", {albums})
-      console.log(albums)
     })
     .catch((err) => console.log("Something went wrong", err)
     );
     
 });
 
+
+app.get('/tracks/:albumId', (req, res) =>{
+  const albumId = req.params.albumId;
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      let tracks = data.body.items
+      
+      res.render("tracks", {tracks})
+    })
+
+    .catch((err) => console.log('There was an error getting the tracks', err)
+    );
+    
+});
 
 // console.log(artistInput)
 
