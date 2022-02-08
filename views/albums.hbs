@@ -1,5 +1,9 @@
-{{#each}}
-<h1>{{name}}</h1>
-<h2>{{images}}</h2>
+<h1>These are all of the band albums</h1>
+
+{{#each albums}}
+<h2>{{name}}</h2>
+<img src="{{images.0.url}}">
+<a href="/tracks/"></a>
+
 
 {{/each}}
