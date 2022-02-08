@@ -1,0 +1,92 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(26, 24, 31);
+    color: rgb(247, 240, 230);
+    font-family:-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+
+h1 {
+    text-align: center;
+}
+
+.item-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    justify-content: space-evenly;
+}
+
+.item {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border-radius: 5px;
+    background-color:rgb(150, 185, 231);
+}
+
+.item:hover > a, .item:hover > h3, .item:hover > .overlay {
+    visibility: visible;
+}
+
+.item > img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 0;
+}
+
+.item > a {
+    text-align: center;
+    font-weight: bold;
+    padding: 8px;
+    background-color: rgb(150, 69, 69);
+    border-radius: 5px;
+    text-decoration: none;
+    color: black;
+    z-index: 2;
+    visibility: hidden;
+}
+
+.item > h3 {
+    color: black;
+    text-align: center;
+    vertical-align: middle;
+    padding: 0 10px;
+    visibility: hidden;
+    z-index: 2;
+}
+
+.overlay {
+    visibility: hidden;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.7);
+    z-index: 1;
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.track > audio {
+    /* border: solid 2px red; */
+    /* background-color: white; */
+    border-radius: 3px;
+}

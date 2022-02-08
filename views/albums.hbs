@@ -1,0 +1,10 @@
+<div class="item-container">
+    {{#each albums}}
+        <div id="album-{{id}}" class="item album">
+            <img src="{{images.0.url}}" alt="">
+            <div class="overlay"></div>
+            <h3>{{name}}</h3>
+            <a href="/tracks/{{id}}">View Tracks</a>
+        </div> 
+    {{/each}}
+</div>
