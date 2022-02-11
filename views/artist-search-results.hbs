@@ -1,0 +1,16 @@
+<h1>Results</h1>
+{{#each artists}}
+  <h3>{{name}}</h3>
+  {{#if images}}
+    <img src='{{images.2.url}}' height='160' alt='album cover' />
+  {{else}}
+    <img
+      src='https://millennialdiyer.com/wp1/wp-content/uploads/2018/11/Tips-Tricks-for-Assigning-Album-Cover-Art-to-your-Music-Library-Default-Image.jpg'
+      alt='no cover picture'
+      height='160'
+    />
+  {{/if}}
+  <br />
+  <a href='{{external_urls.spotify}}' class='btn'>Check out on Spotify</a>
+  <hr />
+{{/each}}
