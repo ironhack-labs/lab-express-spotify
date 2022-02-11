@@ -43,6 +43,27 @@ app.get('/artist-search', (req, res) => {
     .catch((err) => console.error(err));
 });
 
+app.get('/albums/:artistId', (req, res) => {
+  const id = req.params.artistId;
+  spotifyApi
+    .getArtistAlbums(id)
+    .then((response) => {
+      const albums = response.body.items;
+      // res.send(response.body.items);
+      res.render('albums', { albums });
+    })
+    .catch((err) => console.error(err));
+});
+
+app.get('/tracks/:trackId', (req, res) => {
+  const id = req.params.trackId;
+  spotifyApi.getAlbumTracks(id).then((response) => {
+    const tracks = response.body.items;
+    res.send(tracks);
+    // res.render('tracks', { tracks });
+  });
+});
+
 app.listen(3000, () =>
   console.log('My Spotify project running at http://localhost:3000 🎧 🥁 🎸 🔊')
 );
