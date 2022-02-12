@@ -1,0 +1,10 @@
+{{#each allAudios}}
+  <div class="audio-card">
+    <div>
+      {{name}}
+    </div>
+    <audio controls>
+      <source src="{{preview_url}}" type="audio/mpeg" />
+    </audio>
+  </div>
+{{/each}}
