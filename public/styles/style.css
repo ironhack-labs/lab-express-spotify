@@ -1,0 +1,255 @@
+
+/* Global Styles */
+
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Raleway';
+    font-size: 10px;
+    background-color: black;
+}
+
+
+/* Font Styling*/
+
+h1 {
+    font-weight: 700;
+    color: white;
+    font-size: 4em;
+    margin-bottom: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+
+}
+
+h3 {
+
+    font-size: 1.8em;
+}
+
+
+/* Home Page Styling */
+
+.bg-img {
+    height: 100vh;
+    width: 100vw;
+    background-image: url('https://images.unsplash.com/photo-1603815878781-536e057a3e7c?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2940&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.flex-center-row {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 20vh;
+    width: 50vw;
+    margin-bottom: 20px;
+    margin-left: 20px;
+}
+
+
+.outline-btn {
+    background-color: transparent;
+    border: 2px solid white;
+    color: white;
+    padding: 15px 30px;
+    border-radius: 10px;
+    margin:20px;
+    font-weight: 700;
+    font-size: 1.5em;
+}
+
+.outline-btn:hover {
+    border: 2px solid #ad24e4;
+    background-color: #ad24e4;
+    color: white;
+}
+
+input[type="text" i] {
+
+height: 45px;
+width: 400px;
+border: 2px solid white;
+background-color: transparent;
+color: white;
+border-radius: 10px;
+padding-left: 10px;
+padding-right: 10px;
+font-size: 1.5em;
+font-weight: 700;
+
+}
+
+
+ input:focus-visible {
+    outline: none;
+}
+
+
+/* Result Cards */
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    height: 100vh;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    
+}
+
+.box {
+    width: 25vw;
+    border-radius: 10px;
+    margin: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: solid 2px white;
+    overflow: hidden;
+
+}
+
+.card {
+    height: 50vh;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+}
+
+.info-box {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px 15px;
+    box-sizing: border-box;
+    background-color:#731663;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    color: white;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+}
+
+.overlay {
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.61);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateY(-100%);
+
+
+}
+
+.card-btn {
+    color: white;
+    font-size: 1.6em;
+    text-decoration: none;
+    background-color: transparent;
+    border: solid 2px white;
+    border-radius: 10px;
+    padding: 10px 20px;
+    font-weight: 700;
+    text-align: center;
+} 
+
+.card-btn:hover {
+background-color: rgb(32, 180, 190);
+border: solid 2px rgb(32, 180, 190);
+transition: all ease 0.3s;
+
+}
+
+.overlay {
+    visibility: hidden;
+}
+
+.card:hover .overlay {
+    visibility: visible;
+    animation: fade 0.5s;
+}
+
+@keyframes fade {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+ /* Track Page Styles */
+
+
+
+ .track-container {
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     width: 100vw;
+     margin-top: 50px;
+     margin-bottom: 50px;
+ }
+
+ .header-bar {
+     background-color: transparent;
+     color: white;
+     display: flex;
+     justify-content: flex-start;
+     align-items: center;
+     width: 80vw;
+ }
+
+ .header-bar h1 {
+     margin-left: 10px;
+     margin-right: 10px;
+ }
+
+ .title {
+     width: 72%
+ }
+
+ .listen {
+     width: 28%;
+ }
+
+.track-row {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 80vw;
+    height: 7vw;
+    color: white;
+    border: solid 2px white;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+
+}

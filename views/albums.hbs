@@ -1,0 +1,15 @@
+<div class="container">
+    {{#each album}}
+    <div class="box">
+        <div class="card">
+            <div class="card-img" style="background-image:url({{this.images.0.url}}); background-size:cover; background-position: center;"></div>
+            <div class="overlay">
+                <a class="card-btn" href="/album/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+            <div class="info-box">
+                <h2>{{this.name}}</h2>
+            </div>
+    </div>
+    {{/each}}
+</div>
