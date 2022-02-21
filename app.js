@@ -53,12 +53,12 @@ app.get("/:artist/albums/:artistId", (req, res, next) => {
 
 // View tracks of specific album
 app.get("/:album/tracks/:albumId", (req, res, next) => {
-  spotifyApi.getAlbumTracks(req.params.albumId).then((data) => {
+  spotifyApi.getAlbum(req.params.albumId).then((data) => {
     const tracks = {
-      trackArr: data.body.items,
-      artist: data.body.items[0].artists[0].name,
-    };
-    res.render("tracks", { tracks });
+      trackArr: data.body.tracks.items,
+      albumName: data.body.name,
+    }
+    res.render("tracks", {tracks: tracks});
   });
 });
 
