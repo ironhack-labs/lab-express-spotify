@@ -1,0 +1,12 @@
+<div id="album-tracks">
+    <div class="track" id="tracks-header">
+            <p>Song</p>
+            <p id="listen-title">Listen</p>
+    </div>
+    {{#each tracks}}
+        <div class="track">
+            <p>{{this.name}}</p>
+            <audio controls src="{{this.preview_url}}"></audio>
+        </div>
+    {{/each}}
+</div>

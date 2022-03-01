@@ -1,0 +1,11 @@
+<div id="albums-search-div">
+    {{#each results}}
+        <div class="album">
+            {{#with images.[0]}}
+                <img src="{{this.url}}" class="album-img" alt="">
+            {{/with}}
+            <p>{{this.name}}</p>
+            <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+    {{/each}}
+</div>
