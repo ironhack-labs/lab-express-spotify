@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+#main-img {
+  max-width: 100%;
+}
+#search-label {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-size: 1em;
+}
+.header {
+  background: url(/images/spotify-background.jpeg) 0 0 no-repeat;
+  background-size: cover;
+  height: 650px;
+  padding-top: 50px;
+  position: relative;
+  justify-content: center;
+}
+#form {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+#albums {
+  justify-content: center;
+}
+#album-img {
+  max-width: 50%;
+}
