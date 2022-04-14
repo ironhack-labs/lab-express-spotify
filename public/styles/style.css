@@ -1,0 +1,19 @@
+.home {
+    background-image: url("../images/background.jpeg");
+    background-color: #cccccc;
+    margin: auto;
+}
+
+form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    left: 35%;
+}
+
+input {
+    margin-left: 20px;
+    margin-right: 20px;
+}
