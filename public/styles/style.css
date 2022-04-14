@@ -1,0 +1,57 @@
+.home {
+    height: 100vh;
+    background: url("../images/dualipa.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    background-color: rgba(255, 255, 255, 0.626);
+    height: 300px;
+    width: 50%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+
+    border-radius: 20px;
+
+}
+
+.button-search {
+    background-color: rgba(160, 70, 233, 0.948);
+    border: 1px solid white;
+    border-radius: 5px;
+    width: 200px;
+    padding: 10px 0;
+    margin-top: 20px;
+    font-weight: bold;
+    color: white
+}
+
+.card img {
+    object-fit: cover;
+    height: 300px;
+}
+
+.card {
+    align-items: center;
+}
+
+.albums-title {
+    margin: 30px 0;
+    color: white;
+    text-transform: capitalize;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-align: center;
+}
+
+.albums {
+    background-color: rgba(84, 20, 123, 0.36);
+}
