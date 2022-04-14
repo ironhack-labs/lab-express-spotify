@@ -1,0 +1,44 @@
+/* body {
+    background-color: black;
+} */
+
+figure {
+    margin: 0;
+}
+
+.bg {
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 1000px;
+}
+
+.formBg {
+    /* margin-top: 500px; */
+    padding-top: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    /* background-color: white; */
+}
+
+.formOuter {
+    background-color: rgba(255, 255, 255, 0.417);
+    padding: 50px 100px;
+
+    /* opacity: .3; */
+}
+
+.formOuter input {
+    margin: 4px;
+}
+
+.searchInput {
+    width: 400px;
+    height: 36px;
+}
+
+.card {
+    margin: 20px 0px;
+}

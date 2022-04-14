@@ -1,0 +1,45 @@
+<table class="table">
+    <thead class="thead-dark">
+        <tr>
+
+            <th scope="col">Title</th>
+
+            <th scope="col">Listen</th>
+
+        </tr>
+    </thead>
+    <tbody>
+        {{#each tracks}}
+        <tr>
+
+            <td>{{name}}</td>
+            <td>
+                <figure>
+                    {{!-- <figcaption>{{name}}</figcaption> --}}
+                    <audio controls src="{{preview_url}}">
+                        Your browser does not support the
+                        <code>audio</code> element.
+                    </audio>
+                </figure>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+
+
+
+{{#each tracks}}
+
+<h3></h3>
+<figure>
+    <figcaption>{{name}}</figcaption>
+    <audio controls src="{{preview_url}}">
+        Your browser does not support the
+        <code>audio</code> element.
+    </audio>
+</figure>
+
+
+
+{{/each}}
