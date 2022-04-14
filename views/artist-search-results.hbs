@@ -1,0 +1,31 @@
+
+<ul>
+    {{#each results}}
+        <div class="card" style="width: 18rem;">
+            <img src="{{images.0.url}}" class="card-img-top" alt="...">
+            <div class="card-body">
+        <h4>{{name}}</h4>
+               
+
+        <form action='/artist-search' method='GET'>
+ 
+
+            <div class="d-grid gap-2 col-6 mx-auto">
+
+                 <button class="btn btn-primary" type="button">
+
+                    <a href="/albums/someArtistIdGoesHere">View Albums</a>
+
+                </button>
+
+            </div>
+
+
+        </form>
+
+            </div>
+        </div>
+    {{/each}}
+</ul>
+
+
