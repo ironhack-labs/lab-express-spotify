@@ -1,0 +1,26 @@
+.input-artist {
+    width: 250px
+}
+.index-artist {
+    display: flex;
+    justify-content: center;
+    margin-top: 400px;
+}
+
+.fullscreen{
+    background-image: url(/images/spotify-background.jpeg);
+    background-size:cover;
+    width: 100%;
+    
+}
+
+.name-art {
+    background-color: red;
+    margin-left: 50px;
+
+}
+
+
+.ideal{
+    margin-top: 50px;
+}

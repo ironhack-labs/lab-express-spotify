@@ -1,0 +1,18 @@
+
+<body class="ideal">
+<div class="container">
+    <div class="row">
+      {{#each itemData}}
+        <div class="col-4">
+            <div class="card" style="width: 18rem;">
+         <img src="{{images.[0].url}}" class="card-img-top">
+        <div class="card-body">
+        <h5 class="card-title">{{name}}</h5>
+        <a class="btn btn-primary" href="/albums/{{id}}" role="button">View Albums</a>
+    </div>
+    </div>
+</div>
+{{/each}}
+</div>
+</div>
+</body>

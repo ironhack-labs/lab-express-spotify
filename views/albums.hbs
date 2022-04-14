@@ -1,0 +1,26 @@
+{{!-- {{#each albumItem}}
+<h1>{{name}}</h1>
+<img src="{{images.[0].url}}" alt="imagen album">
+
+<a class="btn btn-primary" href="/tracks/{{id}}" role="button">View Tracks</a>
+
+{{/each}} --}}
+
+
+
+<div class="container">
+<div class="row">
+{{#each albumItem}}
+<div class="col-4">
+<div class="card" style="width: 18rem;">
+  <img src="{{images.[0].url}}" class="card-img-top">
+  <div class="card-body">
+    <h5 class="card-title">{{name}}</h5>
+    <a class="btn btn-primary" href="/tracks/{{id}}" role="button">View Tracks</a>
+
+  </div>
+</div>
+</div>
+{{/each}}
+</div>
+</div>
