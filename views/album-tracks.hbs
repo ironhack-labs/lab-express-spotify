@@ -1,0 +1,15 @@
+<div class="row trackRow">
+    {{#each albumTracks}}
+    <div class="col-3 trackCards">
+
+        <figure>
+            <figcaption class="albumSongs">{{name}}</figcaption>
+            <audio controls src={{preview_url}}>
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+
+    </div>
+    {{/each}}
+</div>

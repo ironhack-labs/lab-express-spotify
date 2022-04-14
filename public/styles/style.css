@@ -1,0 +1,97 @@
+footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 4px;
+    font-size: .7em;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
+
+.navbar {
+    background-color: black
+}
+
+
+.navbar-brand {
+    margin: auto;
+    color: black;
+
+}
+
+a:hover,
+:active,
+:visited {
+    text-decoration: none;
+    color: white
+}
+
+body {
+    background-image: url("../images/10806063.jpg");
+    background-size: cover;
+    background-color: black
+}
+
+.searchForm {
+    margin-top: 300px;
+}
+
+.searchInput,
+.searchBtn {
+    width: 40%;
+    height: 50px;
+    text-align: center;
+    margin-bottom: 30px;
+    background-color: rgb(184, 0, 119);
+    color: rgb(22, 9, 9);
+    font-weight: bolder;
+}
+
+::placeholder {
+    font-weight: normal;
+    text-align: center;
+    color: rgb(12, 8, 15)
+}
+
+
+
+
+
+.artistCards,
+.albumsCards,
+.trackCards {
+    margin: 20px 0;
+
+
+}
+
+.artistRow,
+.albumsRow {
+    align-items: stretch;
+    margin-top: 50px;
+}
+
+.trackRow {
+    align-items: flex-end;
+}
+
+.card {
+    background-color: rgb(43, 32, 44);
+    color: bisque;
+}
+
+.btn {
+    background-color: bisque;
+    border-color: bisque;
+    color: rgb(43, 32, 44);
+}
+
+.albumSongs {
+    background-color: rgb(43, 32, 44);
+    color: bisque;
+    border-radius: 100px;
+    text-align: center;
+    padding: 12px;
+
+}
