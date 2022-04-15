@@ -1,0 +1,24 @@
+.background{
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: 500px;
+    background-repeat: no-repeat;
+    height: 500px;
+}
+
+.nombre{
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+}
+
+.div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+   height: 200px;
+}
+
+.photos {
+    text-align: center;
+  
+}
+
