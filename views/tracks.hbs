@@ -1,0 +1,14 @@
+{{#each albumTracks}}
+<section id="preview">
+<div>
+    {{name}}
+</div>
+
+<div>
+<audio id="audio"controls>
+        <source src="{{preview_url}}">
+    </audio>
+</div> 
+
+</section>
+{{/each}}

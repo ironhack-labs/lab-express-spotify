@@ -1,0 +1,14 @@
+
+<section id="artistlist">
+    {{#each artistList}}
+    <article id="artist">
+        <div>
+            <img id="artistImage" src="{{images.[0].url}}" alt="images of artist">   
+        </div>
+        <div class="name">
+            {{name}}
+        </div>
+        <a id="albums" href="/albums/{{id}}">View Albums</a>
+    </article>
+    {{/each}}
+</section>

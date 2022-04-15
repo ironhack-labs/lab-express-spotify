@@ -1,0 +1,141 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+    
+#background {
+    background-image: url("/images/background.jpeg");
+    width: 100vw;
+    height: 100vh;
+    margin: auto;
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(242, 242, 242, 0.5);
+    height: 160px;
+    width: 600px;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    background-color: red;
+    color: white;
+    border: none;
+    width: 180px;
+    height: 40px;
+    margin-top: 30px;
+}
+
+input {
+    font-family: 'Poppins', sans-serif;
+    background-color: white;
+    width: 400px;
+    height: 40px;
+    border: lightgray 1px solid;
+    border-radius: 5px;
+    text-align: center;
+}
+
+#artist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: blueviolet;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#artistImage {
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+}
+
+#artistlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+#albums{
+    background-color: deeppink;
+    color: white;
+    width: 130px;
+    height: 36px;
+    text-align: center;
+    padding-top: 12px;
+    border: none;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+.name {
+    font-size: 2em;
+    color: springgreen;
+    font-weight: bold;
+    padding-top: 15px;
+    text-align: center;    
+}
+
+#coverimage {
+    width: 300px;
+    height: 300px;
+    border-radius: 10px;
+}
+
+#albumlist{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+#eachalbum{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: deeppink;
+    width: 400px;
+    height: 500px;
+    margin: 20px;
+    border-radius: 10px;
+}
+
+#tracks{
+    background-color: blue;
+    color: white;
+    width: 130px;
+    height: 36px;
+    text-align: center;
+    padding-top: 12px;
+    border: none;
+    text-decoration: none;
+    margin-top: 12px;
+}
+
+#preview{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 40px;
+}
+
+#audio{
+    margin: 15px;
+}
