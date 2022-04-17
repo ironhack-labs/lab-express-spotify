@@ -30,7 +30,6 @@ app.get('/', (req, res, next) => {
 //After search submission, call api and return results
 
 app.get('/artist-search', (req, res, next) => {
-    console.log(req.query.artistSearch)                                              //<- REMOVE LATER
     spotifyApi
     .searchArtists(req.query.artistSearch)
     .then(artistSearchResults => {
@@ -42,7 +41,6 @@ app.get('/artist-search', (req, res, next) => {
             }
             return properties;
           })
-        // console.log(artistResultsArray);                                           // <-- REMOVE LATER
         res.render('artist-search-results', { artistResultsArray});                                                
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -63,8 +61,7 @@ app.get('/albums/:artistId', (req, res, next) => {
               "albumImage": element.images[0]
             }
             return properties;
-          })
-        console.log(albumResultsArray);                                       
+          })                                   
         res.render('albums', { albumResultsArray });                                                
     })
     .catch(err => console.log('The error while searching albums: ', err));                                                         
@@ -77,7 +74,6 @@ app.get('/tracks/:albumId', (req, res, next) => {
     spotifyApi
     .getAlbumTracks(albumId)
     .then(trackSearchResults => {
-        console.log(trackSearchResults.body.items)
         let trackResultsArray = trackSearchResults.body.items.map(element => {
             let properties = {
               "trackName": element.name,
@@ -85,7 +81,6 @@ app.get('/tracks/:albumId', (req, res, next) => {
             }
             return properties;
           })
-        console.log(trackResultsArray);  
         res.render('tracks', { trackResultsArray });                                             
                                                      
     })
