@@ -37,9 +37,27 @@ app.get('/artist-search', (req, res) => {
     .then((data) => {
       // console.log('The received data from the API: ', data.body.artists);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      const passing = data.body.artists.items;
-      console.log(passing);
-      res.render('artist-search-results', { passing });
+      const artist = data.body.artists.items;
+
+      // console.log(artist);
+      res.render('artist-search-results', { artist });
+    })
+    .catch((err) =>
+      console.log('The error while searching artists occurred: ', err)
+    );
+});
+
+app.get('/albums/:artistId', (req, res, next) => {
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then((data) => {
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      // console.log(data.body);
+
+      const album = data.body.items[0];
+      const images = data.body.items[0].images[0];
+      console.log(images);
+      res.render('albums', { album, images });
     })
     .catch((err) =>
       console.log('The error while searching artists occurred: ', err)
@@ -49,3 +67,15 @@ app.get('/artist-search', (req, res) => {
 app.listen(3000, () =>
   console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊')
 );
+
+// // router.get('/books/:bookId', (req, res, next) => {
+//   const { bookId } = req.params;
+
+//   Book.findById(bookId)
+//     .then((theBook) => res.render('books/book-details.hbs', { book: theBook }))
+//     .catch((error) => {
+//       console.log('Error while retrieving book details: ', error);
+
+//       // Call the error-middleware to display the error page to the user
+//       next(error);
+//     });

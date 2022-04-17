@@ -1,20 +1,10 @@
-{{! since we passed allTheBooksFromDB as `books`,
-we can iterate over it here with #each}}
-{{!-- 
-{{#each books}}
-  <div>
-    <h3>{{title}}</h3>
-    <p>By: {{author}}</p>
-    {{! additional book property }}
-    <a href='/books/{{_id}}'>See details</a>
-    {{! link that points to the details page }}
-  </div>
-{{/each}} --}}
-
 <div>
-  {{#each passing}}
+  {{#each artist}}
     <div>
+
+      {{!-- <img src='{{images}}' alt='' /> --}}
       <h2>{{name}}</h2>
+      <a href='/albums/{{id}}'>View Albums</a>
 
     </div>
 
