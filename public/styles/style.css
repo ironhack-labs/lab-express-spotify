@@ -1,0 +1,146 @@
+body {
+    margin: 0;
+    
+    width: 100vw;
+    height: 100vh;
+    background-position: 70% 97%;
+    background-repeat: no-repeat;
+    color: white;
+    font-family: Arial;
+}
+
+.search-container {
+    background-image: linear-gradient(rgb(239, 56, 39), rgb(179, 50, 214), rgb(131, 59, 209));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.search-container input {
+    height: 40px;
+    width: 300px;
+    border: none;
+    border-radius: 5px;
+    margin: 0 10px;
+    font-size: 16px;
+    color: rgb(131, 59, 209);
+}
+
+.search-container button {
+    height: 43px;
+    width: 180px;
+    background-color:rgb(224, 203, 84);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(131, 59, 209);
+}
+
+.search-container button:hover {
+    background-color:rgb(177, 162, 73);
+    cursor: pointer;
+}
+
+.artists-container {
+    padding: 80px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: linear-gradient(rgb(239, 56, 39), rgb(179, 50, 214), rgb(131, 59, 209));
+    min-height: 100vh;
+}
+
+.artists-container-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px 40px;
+    background-color:rgb(175, 142, 185);
+    padding: 60px;
+    font-size: 16px;
+    color: rgb(224, 203, 84);
+}
+
+.artist-image {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
+    background-color: rgb(177, 162, 73)
+}
+
+.artists-container-album img {
+    width: 300px;
+
+}
+
+.artists-container-album a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+    height: 43px;
+    width: 180px;
+    background-color:rgb(224, 203, 84);
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    color: rgb(131, 59, 209);
+}
+
+.albums-container {
+    padding: 80px 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    background-image: linear-gradient(rgb(239, 56, 39), rgb(179, 50, 214), rgb(131, 59, 209));
+    min-height: 100vh;
+}
+
+.albums-container-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 40px 40px;
+    background-color:rgb(175, 142, 185);
+    padding: 60px;
+    font-size: 16px;
+    color: rgb(224, 203, 84);
+}
+
+.albums-container-album img {
+    width: 300px;
+}
+
+.album-image {
+    width: 300px;
+    height: 300px;
+    margin: 20px 0;
+    background-color: rgb(177, 162, 73)
+}
+
+.tracks-container {
+    padding: 80px 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-image: linear-gradient(rgb(239, 56, 39), rgb(179, 50, 214), rgb(131, 59, 209));
+    min-height: 100vh;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color:rgb(175, 142, 185);
+    margin: 30px 0;
+}
+
+.track p {
+    padding: 6px 0;
+}
