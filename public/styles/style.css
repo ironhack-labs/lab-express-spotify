@@ -1,3 +1,8 @@
+h5 {
+    font-size: 18px;
+}
+
+
 #home-body {
     background-image: url(/images/spotify-background.jpeg);
     background-size: cover;
@@ -22,7 +27,7 @@
 
 #search-form input {
     width: 300px;
-    height: 25px;
+    height: 30px;
     border: none;
     border-radius: 5px;
 }
@@ -32,11 +37,45 @@
     text-decoration: none;
     border: none;
     color: white;
-    width: 150px;
+    width: 175px;
     margin: 10px 20px 10px 20px;
     padding: 10px;
 }
 
-#albums {
-    background-color: black;
+.card img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.card-body {
+    background-color: rgba(0, 0, 0, 0.748);
+    color: white;
+    text-align: center;
+}
+
+.card-body a {
+    text-decoration: none;
+    color: white;
+    border-radius: 10px;
+    background-color: red;
+    padding: 5px 5px 5px 5px;
+}
+
+#track-page-header {
+    display: flex;
+    justify-content:space-between;
+    background-color: rgba(21, 20, 20, 0.678);
+    padding: 30px;
+    color: rgb(172, 172, 172);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#tracks {
+    display: flex;
+    justify-content:space-between;
+    background-color: rgba(181, 181, 181, 0.794);
+    align-items: center;
+    margin: 0px 10px 5px 10px;
+    padding: 0px 50px 0px 50px;
 }

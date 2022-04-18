@@ -8,7 +8,8 @@ const app = express();
 
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + '/public/'));
+hbs.registerPartials(__dirname + "/views/partials");
 
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -24,14 +25,14 @@ spotifyApi
 // Render search form on root directory
 
 app.get('/', (req, res, next) => {
-    res.render ('home');  
+    res.render ('home');                                                                                    // <-- render with a view engine. 
 });
 
 //After search submission, call api and return results
 
 app.get('/artist-search', (req, res, next) => {
     spotifyApi
-    .searchArtists(req.query.artistSearch)
+    .searchArtists(req.query.artistSearch) 
     .then(artistSearchResults => {
         let artistResultsArray = artistSearchResults.body.artists.items.map(element => {
             let properties = {
@@ -40,8 +41,8 @@ app.get('/artist-search', (req, res, next) => {
               "artistImage": element.images[0]
             }
             return properties;
-          })
-        res.render('artist-search-results', { artistResultsArray});                                                
+        })
+        res.render('artist-search-results', { artistResultsArray});                                       // <- handlebars expects an object, you could also assign a key at this point - which we've done on "movie lab"                                               
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 });
@@ -49,12 +50,11 @@ app.get('/artist-search', (req, res, next) => {
 //After choosing "VIEW ALBUMS" -> CALL API with artistID, send results to 
 
 app.get('/albums/:artistId', (req, res, next) => {
-    const { artistId } = req.params
-    console.log(artistId)
+    const { artistId } = req.params                                                                       //<-- Not sure why I did this... could have just called .getArtistAlbums with req.params.artistId
     spotifyApi
     .getArtistAlbums(artistId)
     .then(albumSearchResults => {
-        let albumResultsArray = albumSearchResults.body.items.map(element => {
+        let albumResultsArray = albumSearchResults.body.items.map(element => {                            // <-- didn't need to declare properties could have just - return -> the key pairs...
             let properties = {
               "albumName": element.name,
               "albumId": element.id,

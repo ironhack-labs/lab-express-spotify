@@ -1,12 +1,9 @@
 
-<div id="albums">
-  {{#each albumResultsArray}}
-  <div>
-    <img src={{albumImage.url}} alt="Album Images">
-    <h3>{{albumName}}</h3>
-    <a href="/tracks/{{albumId}}">View Tracks</a>
+<div class="container">
+  <div class="row">
+    {{#each albumResultsArray}}
+      {{> albumCard this}}
+    {{/each}}
   </div>
-{{/each}}
 </div>
-
 
