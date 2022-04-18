@@ -43,17 +43,22 @@ body {
     padding-top: 15%;
 }
 
+
 .card-body:hover {
+    /* background-color: 	#1DB954; */
+    border-radius: 20px;
+    transform: skew(5deg, 5deg);    
+}
+/* 
+.card-body-top:hover {
     background-color: 	#1DB954;
     border-radius: 30px;
+    transform: skew(5deg, 5deg);    
 }
-
-.card-title:hover{
-    background-color: red;
-    transform: skew(9deg,0deg);
-    font-style: oblique;
-    border-radius: 50px;
-}
+*/
+.card-body:hover > * {
+    transform: skew(-5deg, -5deg);    
+} 
 
 #card-over {
     margin-top: 9.25rem!important;
@@ -80,3 +85,60 @@ body {
     text-decoration: underline;
     color: black;
 }
+
+.card-group > div {
+    max-width: 23rem;
+}
+
+/* NEW THING */
+
+.card-body::before {  
+  transform: scaleX(0);
+  transform-origin: bottom right;
+}
+
+.card-body:hover::before {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.card-body::before {
+  content: " ";
+  display: block;
+  border-radius: 5px;
+  position: absolute;
+  top: 0; right: 0; bottom: 0; left: 0;
+  inset: 0 0 0 0;
+  /* background: hsl(200 100% 80%); */
+  background: hsl(141, 73%, 42%);
+  z-index: -1;
+  transition: transform .7s ease;
+}
+
+h1::before {  
+    transform: scaleX(0);
+    transform-origin: top left;
+  }
+  
+  h1:hover::before {
+    transform: scaleX(1);
+    transform-origin: top right;
+  }
+  
+  h1::before {
+    content: " ";
+    display: block;
+    border-radius: 3px;    
+    position: absolute;
+    top: 0; right: 0; bottom: 0; left: 0;
+    inset: 0 0 0 0;
+    background: hsl(141, 73%, 42%);
+    z-index: -1;
+    transition: transform .7s ease;
+  }
+  
+  h1 {
+    position: relative;
+    font-size: 5rem;
+  }
+  

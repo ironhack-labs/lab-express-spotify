@@ -1,9 +1,11 @@
+
 <a href="/" class="back">Search Again</a>
 <div class="container pb-5">
+    <h1 onclick="history.back()">Track List</h1>
     <h1>{{tracks.name}}</h1>
     <h3>{{ lastQuery }}</h3>
     <div class="row">
-        <ul class="list-group">
+        <ul class="list-group col-12">
 
         {{#each tracks}}
             {{> tracklist_results}} 
