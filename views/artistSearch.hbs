@@ -1,0 +1,11 @@
+<a href="/" class="back">Search Again</a>
+<div class="container pb-5">
+    <h1>Artist Search</h1>
+    <div class="row">
+        <div class="card-deck">
+            {{#each artists.items}}
+                {{> artist_search_results}} 
+            {{/each}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,18 @@
+<div class="col-lg-4 col-md-6 col-sm-8 mb-2">
+    <div class="card text-center border-0">
+        <div class="card-header bg-dark text-white" id="artist-card">
+            {{name}}
+        </div>    
+        {{#if images}}
+        <img class="card-img-top" src="{{images.0.url}}" alt="{{name}} Album Art">
+        {{else}}
+        <span class="placeholder">
+            <img src="/images/spotify-default.svg" alt="No image found for {{name}}">
+        </span>
+        {{/if}}
+        <div class="card-body">
+                <a href="/albums/{{id}}" class="btn btn-outline-dark">View Albums</a>
+                <span class="badge badge-light"></span>
+        </div>
+    </div>
+</div>

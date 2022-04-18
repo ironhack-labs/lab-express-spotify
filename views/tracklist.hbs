@@ -1,0 +1,13 @@
+<a href="/" class="back">Search Again</a>
+<div class="container pb-5">
+    <h1>{{tracks.name}}</h1>
+    <h3>{{ lastQuery }}</h3>
+    <div class="row">
+        <ul class="list-group">
+
+        {{#each tracks}}
+            {{> tracklist_results}} 
+        {{/each}}
+        </ul>        
+    </div>
+</div>
