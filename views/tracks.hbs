@@ -1,13 +1,15 @@
-<div>
+<div id="track-page-header">
     <h1>Title</h1>
     <h1>Listen</h1>
 </div>
 
 {{#each trackResultsArray}}
-  <div>
+  <div id="tracks">
     <h3>{{trackName}}</h3>
-    <audio src={{trackPreview}}>audio</audio>
-
+    <audio controls>
+    <source src={{trackPreview}} type="audio/ogg">
+    <source src={{trackPreview}} type="audio/mpeg">
+    </audio>
   </div>
 {{/each}}
 

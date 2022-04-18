@@ -81,15 +81,11 @@ app.get('/tracks/:albumId', (req, res, next) => {
             }
             return properties;
           })
+        console.log(trackResultsArray);
         res.render('tracks', { trackResultsArray });                                             
                                                      
     })
     .catch(err => console.log('The error while searching album tracks: ', err));                                                         
 });
-
-
-
-
-
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
