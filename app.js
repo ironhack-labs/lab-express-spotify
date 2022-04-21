@@ -26,20 +26,21 @@ spotifyApi
     console.log('Something went wrong when retrieving an access token', error)
   );
 
+//  use render with a view engine, if we do send we can send strings or json or if we want to send a file we do sendFile()
 // Our routes go here:
 app.get('/', (req, res) => {
   res.render('index.hbs');
 });
 
 app.get('/artist-search', (req, res) => {
+  //  we can do set a variable and store the query inside too
   spotifyApi
-    .searchArtists(req.query.artistName)
+    .searchArtists(req.query.artistName, { limit: 5 })
     .then((data) => {
       // console.log('The received data from the API: ', data.body.artists);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       const artist = data.body.artists.items;
-
-      // console.log(artist);
+      console.log(artist);
       res.render('artist-search-results', { artist });
     })
     .catch((err) =>
@@ -49,15 +50,36 @@ app.get('/artist-search', (req, res) => {
 
 app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi
-    .getArtistAlbums(req.params.artistId)
+    .getArtistAlbums(req.params.artistId, { limit: 6 })
     .then((data) => {
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       // console.log(data.body);
 
-      const album = data.body.items[0];
-      const images = data.body.items[0].images[0];
-      console.log(images);
-      res.render('albums', { album, images });
+      // console.log(data.body.items);
+      // console.log(data.body);
+      // console.log(images);
+      res.render('albums', { albums: data.body.items });
+      // res.render('albums', { album, images, idOfAlbum });
+    })
+    .catch((err) =>
+      console.log('The error while searching artists occurred: ', err)
+    );
+});
+
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then((data) => {
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      // console.log(data.body);
+
+      // const track = data.body.items;
+      // console.log(track);
+      // res.render('tracks', track);
+
+      // const track = data.body.items;
+      // console.log(track);
+      res.render('tracks', { track: data.body.items });
     })
     .catch((err) =>
       console.log('The error while searching artists occurred: ', err)
