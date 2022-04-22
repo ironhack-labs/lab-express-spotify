@@ -1,0 +1,24 @@
+html {
+    background-color: rgb(21, 87, 124);
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#search-form {
+    width: 50vw;
+    background-color: white;
+    opacity: 0.5;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    margin: 300px;
+}
+
+#searchBtn {
+    background-color: rgb(202, 74, 74);
+    display: flex;
+    justify-content: center;
+    align-self: center;
+    margin: 10px;
+}
