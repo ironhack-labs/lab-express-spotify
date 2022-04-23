@@ -16,11 +16,12 @@ form {
 
 div {
     display: flex;
-    justify-content: center; 
+    justify-items: center; 
     align-content: space-around;
 }
 
 .info {
-    align-self: center;
+    display: flex;
+    flex-wrap: wrap;
   
 }
