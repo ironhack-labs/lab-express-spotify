@@ -4,7 +4,73 @@ body {
     background-image: url("../images/spotify-background.jpeg");
     background-position: center;
     background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
     height: 100vh;
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+}
+
+input {
+    width: 30vw;
+    height: 50px;
+    margin-top: 25px;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+}
+
+button {
+    width: 30vh;
+    height: 35px;
+    border-radius: 25px;
+    border: none;
+    margin-bottom: 25px;
+    background-color: #1bd760;
+    color: white;
+    font-size: 1.2rem;
+    font-weight: 400;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: rgba(107, 107, 107, 0.644);
+    color: white;
+    width: 100vw;
+    height: 50px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: #1bd760;
+  }
+
+#search-area {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    padding: 10px;
+    width: 60vw;
+    background-color: #b8b8b866;
+}
+
+#search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-link {
+    background-color: #1bd760;
+    color: white;
+    text-decoration: none;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 15px 0 15px 0;
 }
 
 .search-results {
@@ -18,7 +84,6 @@ body {
     flex-direction: column;
     justify-items: center;
     align-items: center;
-    background-color: white;
     text-align: center;
     width: 40vh;
     margin: 20px;
@@ -31,11 +96,32 @@ body {
 
 .data h2 {
     font-size: 1.5rem;
-    padding-bottom: 25px;
-    padding-top: 25px;
+    padding-bottom: 15px;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    color: white;
+    background-color: rgb(98, 98, 98);
+    width: 100%;
 }
 
-.button {
-    width: 20vh;
-    margin-bottom: 25px;
+.track-list {
+    display: flex;
+    justify-items: center;
+    flex-direction: column;
+    width: 100%;
+}
+
+.track-name {
+    width: 100%;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+.track-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.784);
+    margin: 5px 0px 5px 0px;
+    border: 2px solid gray;
 }

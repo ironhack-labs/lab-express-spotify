@@ -1,8 +1,11 @@
-<section class="search-results">
-    <ul>
+<header>
+    <h1>Title</h1><h1>Track Sample</h1>
+</header>
+<section class="track-list">
     {{#each tracksArr}}
-    <li><h3>{{this.name}}</h3></li>
-    <audio src="{{this.preview_url}}"></audio>
+    <div class="track-item">
+        <h3 class="track-name">{{this.name}}</h3>
+        <audio controls="controls" src="{{this.preview_url}}" class="track-preview"></audio>
+    </div>
     {{/each}}
-    </ul>
 </section>
