@@ -1,0 +1,9 @@
+<section id="search-results">
+    {{#each artistsArr}}
+    <div class="artist-data">
+        <img src="{{this.images.[0].url}}" alt="artist-image">
+        <h2>{{this.name}}</h2>
+        <button>View Albums</button>
+    </div>
+    {{/each}}
+</section>
