@@ -1,0 +1,8 @@
+<section class="search-results">
+    <ul>
+    {{#each tracksArr}}
+    <li><h3>{{this.name}}</h3></li>
+    <audio src="{{this.preview_url}}"></audio>
+    {{/each}}
+    </ul>
+</section>

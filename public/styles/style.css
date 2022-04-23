@@ -7,13 +7,13 @@ body {
     height: 100vh;
 }
 
-#search-results {
+.search-results {
     display: flex;
     flex-wrap: wrap;
 }
 
 
-.artist-data {
+.data {
     display: flex;
     flex-direction: column;
     justify-items: center;
@@ -24,18 +24,18 @@ body {
     margin: 20px;
 }
 
-.artist-data img {
+.data img {
     max-width: 40vh;
     max-height: 40vh;
 }
 
-.artist-data h2 {
+.data h2 {
     font-size: 1.5rem;
     padding-bottom: 25px;
     padding-top: 25px;
 }
 
-.artist-data button {
+.button {
     width: 20vh;
     margin-bottom: 25px;
 }
