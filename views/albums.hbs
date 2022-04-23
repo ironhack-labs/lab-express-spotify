@@ -4,9 +4,9 @@
     <div class="albumBox">
       <h1>{{this.name}}</h1>
       <img src="{{this.images.1.url}}" alt="{{this.name}}" />
-      {{!-- <form method="GET" action="/albums/{{this.id}}"> --}}
+      <form method="GET" action="/tracks/{{this.id}}">
         <button type="submit">View Tracks</button>
-      {{!-- </form> --}}
+      </form>
     </div>
   {{/each}}
 </section>
