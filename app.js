@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const { response } = require('express');
 const express = require('express');
 const hbs = require('hbs');
 
@@ -36,10 +37,10 @@ app.get("/", (req, res, next) => {
 
 app.get("/artist-search-results", (req, res, next) => {
     spotifyApi
-    .searchArtists(req.query.artistName)
+    .searchArtists(`${req.query.artist}`)
     .then(data => {
-        console.log('The received data from the API: ', data.body);
-        res.render("artist-search-results.hbs", data.body)
+        console.log('The received data from the API: ', data.body.artists.items);
+        res.render("artist-search-results", {artistsArray: data.body.artists.items})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 
@@ -49,8 +50,8 @@ app.get("/albums/:artistId", (req, res, next) => {
     spotifyApi
         .getArtistAlbums(req.params.artistId)
         .then(data => {
-            console.log('The received data from the API: ', data.body);
-            res.render("albums.hbs", {albums: data.body})
+            console.log('The received data from the API: ', data.body.items);
+            res.render("albums.hbs", {albumsArray: data.body.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 
@@ -63,8 +64,8 @@ app.get("/tracks/:albumId", (req, res, next) => {
                 offset: 1
             })
         .then((data) => {
-                console.log(data.body);
-                req.render("tracks")
+                console.log(data.body.items);
+                req.render("tracks", {tracksArray: data.body.items})
             })
         .catch(err => console.log('Something went wrong!', err));
 })

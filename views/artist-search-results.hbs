@@ -3,17 +3,23 @@
 
 <div>
 
-{{#if imageFile}}
-<img src="#" alt="artist image"/>
+{{#each artistsArray}}
+<div class="info">
+
+{{#if this.images.[0].url}}
+<img src="{{this.images.[0].url}}" alt="artist image"/>
 {{else}}
-<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcodepen.io%2Fjustasam%2Fpen%2FEEeQeM&psig=AOvVaw1Of0Kxc_-WZVz8dJoCZ0B9&ust=1650811947639000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOD_7u-3qvcCFQAAAAAdAAAAABAD" alt="artist image placeholder"/>
+<img src="https://www.wmhbradio.org/wp-content/uploads/2016/07/music-placeholder.png" alt="artist image placeholder"/>
 {{/if}}
 
-<h1>{{name}}</h1>
+<h3>{{this.name}}</h3>
 
 <button type="button">
-    <a href="/albums/:artistId">View Albums</a>
+    <a href="/albums/{{this.id}}">View Albums</a>
 </button>
+
+</div>
+{{/each}}
 
 </div>
 

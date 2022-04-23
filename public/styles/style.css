@@ -13,3 +13,14 @@ form {
     margin: 250px;
     text-align: center;
 }
+
+div {
+    display: flex;
+    justify-content: center; 
+    align-content: space-around;
+}
+
+.info {
+    align-self: center;
+  
+}
