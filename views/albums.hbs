@@ -1,0 +1,18 @@
+<body>
+
+ <div>  
+
+{{#if imageFile}}
+<img src="#" alt="album cover"/>
+{{else}}
+<img src="https://www.google.com/url?sa=i&url=https%3A%2F%2Fcodepen.io%2Fjustasam%2Fpen%2FEEeQeM&psig=AOvVaw1Of0Kxc_-WZVz8dJoCZ0B9&ust=1650811947639000&source=images&cd=vfe&ved=0CAwQjRxqFwoTCOD_7u-3qvcCFQAAAAAdAAAAABAD" alt="album cover placeholder"/>
+{{/if}}
+
+
+<h4>{{album}}</h4>
+<button type="button">
+    <a href="/tracks/:albumId">View Tracks</a>
+</button>
+
+</div>
+</body>
