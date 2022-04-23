@@ -1,0 +1,12 @@
+<h1>Albums:</h1>
+<section class="albums">
+  {{#each albums}}
+    <div class="albumBox">
+      <h1>{{this.name}}</h1>
+      <img src="{{this.images.1.url}}" alt="{{this.name}}" />
+      {{!-- <form method="GET" action="/albums/{{this.id}}"> --}}
+        <button type="submit">View Tracks</button>
+      {{!-- </form> --}}
+    </div>
+  {{/each}}
+</section>
