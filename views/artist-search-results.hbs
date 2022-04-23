@@ -1,0 +1,17 @@
+<h1>Artist Search</h1>
+
+{{#each artists}}
+    <section class="product">
+        <h2>{{name}}</h2>
+
+
+        {{#if images }}
+            <img src="{{images.[0].url}}" alt="images of artists">
+        {{/if}}
+      
+        <div>
+            <button><a href="#">View Albums</a></button>
+        </div>
+    </section>
+{{/each}}
+
