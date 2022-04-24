@@ -1,5 +1,5 @@
 require('dotenv').config();
-
+const SpotifyWebApi = require('spotify-web-api-node');
 const express = require('express');
 const hbs = require('hbs');
 
@@ -12,7 +12,56 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
-
+const spotifyApi = new SpotifyWebApi({
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET
+  });
+  
+  // Retrieve an access token
+  spotifyApi
+    .clientCredentialsGrant()
+    .then(data => spotifyApi.setAccessToken(data.body['access_token']))
+    .catch(error => console.log('Something went wrong when retrieving an access token', error));
 // Our routes go here:
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+
+app.get('/', (req, res, next) => {
+    res.render('home')
+});
+
+app.get('/home', (req, res, next) => {
+    res.render('home')
+});
+
+app.get('/artist-search', (req, res, next) => {
+    spotifyApi
+        .searchArtists(req.query.artist)
+        .then(data => {
+            // console.log("data from spotify API", data.body.artists.items)
+            res.render("artist-search-results", { albums: data.body.artists.items })
+        })
+        .catch(err => console.log('getting artists failed:', err));
+});
+
+app.get('/albums/:artistId', (req, res, next) => {
+    spotifyApi
+        .getArtistAlbums(req.params.artistId)
+        .then(data => {
+            res.render('albums', { albums: data.body.items })
+        })
+        .catch(err => console.log("getting albums failed: ", err))
+});
+
+app.get("/tracks/:albumId", (req, res, next) => {
+    spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then(data => {
+            // console.log('data from spotify API/AlbumId: ', data.body.items);
+            res.render("tracks", { tracks: data.body.items })
+        })
+        .catch(err => console.log('getting tracks failed: ', err));
+})
+
+
+app.listen(3009, () => console.log('My Spotify project running on port 3009 🎧 🥁 🎸 🔊'));
