@@ -1,9 +1,13 @@
 <h3>Search Results</h3>
 
-<div>
+<div class="group-row">
     {{#each artist}}
-    <section class="container">
-        <img src="{{this.images}}" alt="{{this.name}} image">
+    <section class="container">   
+         {{#if this.images.0.url}}     
+        <img src="{{this.images.0.url}}" alt="{{this.name}} image">
+        {{else}}
+        <img src="/images/placeholder.png" alt="{{this.name}} placeholder image" />
+        {{/if}}
         <h5>{{this.name}}</h5>
         <a href="/artist-albums/{{this.id}}">View Albums</a>
     </section>

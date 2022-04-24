@@ -10,15 +10,37 @@ position: relative;
 
 #search-form {
     position: absolute;
-    top: 25%;
-    left: 25%;
+    top: 35%;
+    left: 35%;
     margin: 0;
     padding: 3%;
     padding-right: 15%;
-    background-color: rgba(255, 166, 0, 0.226);
+    background-image: linear-gradient(to right, rgba(255,0,0,0), rgb(255, 153, 0));
 }
 
 button {
-    background-color: rgba(204, 152, 10, 0.589);
+    background-image: linear-gradient(to bottom right, red, yellow);
     margin: 2%;
+}
+
+img {
+    width: 10vw;
+}
+header {
+    background-image: linear-gradient(to bottom right, red, yellow);
+    text-align: center;
+}
+
+.group-row {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    margin: 5px;
+
 }
