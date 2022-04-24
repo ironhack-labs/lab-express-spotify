@@ -42,9 +42,8 @@ app.get('/artist-search', (req, res, next) => {
 })
 
 
-app.get('/albums/:artistId', (req, res, next) => {
-  // console.log(req.params);
-  spotifyApi.getArtistAlbums(req.params.artistId)
+app.get('/albums/:albumId', (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.albumId)
     .then(data => {
       const itemsAlbum = data.body.items;
       // console.log(itemsAlbum);
@@ -55,8 +54,16 @@ app.get('/albums/:artistId', (req, res, next) => {
 })
 
 
+app.get('/albums/:albumId/tracks/:trackId', (req, res, next) => {
+  spotifyApi.getAlbumTracks(req.params.trackId)
+    .then(data => {
+      const itemsTrack = data.body.items;
+      // console.log(itemsTrack);
+      res.render('tracks', { itemsTrack })
+    })
+    .catch(err => console.log('The error while searching tracks occurred: ', err));
+})
 
-// console.log('data.body.items[0].artists[0].name ', data.body.items[0].artists[0].name)
 
 // Our routes go here:
 

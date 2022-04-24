@@ -1,0 +1,29 @@
+<div class="container">
+
+  <div class="row bg-dark mt-5 mb-5 p-2 fs-3 text text-white">
+    <div class="col">
+      Title
+    </div>
+    <div class="col">
+      Listen
+    </div>
+  </div>
+
+
+  {{#each itemsTrack}}
+  <figure class="row">
+    <div class="col">
+      <figcaption>Listen to the {{name}}:</figcaption>
+    </div>
+
+    <div class="col">
+      <audio controls src="{{preview_url}}">
+        Your browser does not support the
+        <code>audio</code> element.
+      </audio>
+    </div>
+
+  </figure>
+  {{/each}}
+
+</div>
