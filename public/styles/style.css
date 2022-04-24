@@ -1,0 +1,100 @@
+html{
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+.Home{
+    background-image: url("../images//spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 753px;
+}
+.divFomr{
+    width: 100%;
+    display: flex;
+    justify-content: center;   
+    height: 597px;
+    align-items: center;
+}
+
+.divFomr form{
+    display: flex;
+    flex-direction: column;
+    padding: 50px 110px;
+    background-color: rgb(255, 255, 255,.5);
+    justify-content: center;
+    border: 1px solid black;
+}
+.divFomr input{
+    height: 25px;
+    width: 380px;
+    border-radius: 5px;
+    border: none;
+}
+.divFomr button{
+    margin-top: 10px;
+    height: 30px;
+    text-align: center;
+    justify-content: center;
+    width: 160px;
+    background-color: rgb(195, 80, 80);
+    border: none;
+    color: white;
+}
+.divButton{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.artists{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+.divArtist{
+    display: column;
+    width: 20%;
+    margin: 40px;
+
+}
+.divArtist img{
+    width: 100%;
+    display: flex;
+}
+.divTextos {
+    display: flex;
+    width: 100%;
+    background-color: rgb(58, 58, 58);
+    margin: 0;
+    padding: 10px 0;
+    flex-direction: column;
+}
+.divTextos p{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    color: white;
+    margin: 0;
+}
+
+.divTextos div{
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+.divTextos a{
+    display: flex;
+    justify-content: center;
+    width: 100px;
+    background-color: rgb(224, 82, 82);
+    text-decoration: none;
+    color: white;
+    border-radius: 5px;
+    padding: 1px;
+
+}
+

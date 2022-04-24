@@ -1,0 +1,16 @@
+<table class="table" >
+    <thead style="background-color: rgb(48, 47, 47); color: white; height:70px">
+        <tr >
+            <th><h4>Title</h4></th>
+            <th><h4>Listen</h4></th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each songs}}
+        <tr style="background-color: rgb(229, 225, 220); margin-top:10px">
+            <td><p>{{name}}</p></td>
+            <td><audio src={{preview_url}}></audio></td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>

@@ -1,0 +1,13 @@
+<div style="display: flex; flex-wrap:wrap ;justify-content:space-between; width:80%; margin:0 10% " >
+    {{#each albums}}
+        <div style="display:flex; width:25%; flex-direction:column; margin: 40px;">
+            <img style="display: flex; width:100%;"  src={{images.0.url}}>
+            <div style="  padding:10px 0; background-color: rgb(58, 58, 58); display:flex; flex-direction:column;text-align:center">
+                <p style="color:white; margin: 0 " >{{name}}</p>
+                <div>
+                    <a style="font-size: 18px; padding:1px; background-color: rgb(224, 82, 82); text-decoration:none; color:white ;border-radius:5px" href="/albums/tracks/{{id}}" >View Tracks</a>
+                </div>             
+            </div>
+        </div>
+    {{/each}}       
+</div>
