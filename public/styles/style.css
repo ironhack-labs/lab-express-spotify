@@ -92,3 +92,10 @@ nav a {
     border-radius: 5px;
 
 }
+
+.audio-preview{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
