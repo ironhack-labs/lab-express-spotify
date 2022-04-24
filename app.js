@@ -31,51 +31,64 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
+// ruta al home
+
 app.get("/", (req,res,next)=>{
     
         res.render("index")
     })
-    
 
+    
+// ruta al buscar un artista
 
 app.get("/artist-search", (req,res,next)=>{
 
     // conseguir info de la ruta
 
-     console.log(req.query.artist)
+console.log(req.query.artist)
 
 
-
-    
     spotifyApi.searchArtists(req.query.search)
-  .then(function(data) {
-    console.log('Search artists by "Love"', data.body.artists.items);
+    .then(function(data) {
+        console.log('Search for artist', data.body.artists.items);
 
-    const artist = {artist: data.body.artists}
-    
+        const artist = {artist: data.body.artists}
 
-    res.render("artist-search-results", artist)
-  }, function(err) {
-    console.error(err);
-  });
+        res.render("artist-search-results", artist)
+    })
+    .catch(error => console.log("error searching artist:", error))
 })
 
+
+// ruta ir al album
 app.get("/albums/:artistId", (req,res,next)=>{
 
     console.log(req.params.artistId)
 
-    spotifyApi.getArtistAlbums(req.params.artistId, {limit: 5})
+    spotifyApi.getArtistAlbums(req.params.artistId, {limit: 10})
     .then(data => {
-        console.log('The received data from the API: ', data.body.items);
+        console.log('Data artists from the API: ', data.body.items);
 
         const albums = {albums: data.body}
 
-        res.render("albums", {data})
+        res.render("albums", albums)
     })
-    .catch(error=>{
-        console.log("Que es?",error)
-        res.send("Error: 500")
+    .catch(error => console.log("Error serching album",error))
+})
+
+// ruta ir a los tracks
+
+app.get("/albums/tracks/:id",(req,res)=>{
+    spotifyApi.getAlbumTracks(req.params.id,{ limit : 5})
+    .then(data=>{
+    console.log("Data tracks from API", data.body.items)
+
+    const tracks = {songs:data.body.items}
+
+    res.render("tracks",tracks)
     })
+    .catch(error => console.log("Error showing tracks",error))
+    
 })
 
 

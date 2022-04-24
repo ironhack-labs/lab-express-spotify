@@ -1,15 +1,15 @@
 
 <div>
     
-    
-   {{#each artist.items}}
-   <p>
-       {{name}}
-   </p>
+   {{#each albums.items}}
+
+   <p>{{name}}</p>
+   
+   <img src="{{images.0.url}}" alt="album-cover">
+
    <a href="/albums/tracks/{{id}}"><button>View Tracks</button></a>
 
     {{/each}}
-    
 
 </div>
 

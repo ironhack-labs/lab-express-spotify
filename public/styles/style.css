@@ -1,0 +1,7 @@
+.background-home {
+    background-image: url("../images//spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    width: 100vw;
+}
