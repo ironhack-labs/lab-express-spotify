@@ -1,0 +1,24 @@
+#search-container {
+background-image: url('/images/spotify-background.jpeg');
+background-position: 0,0;
+background-size: cover;
+height: 640px;
+background-repeat: no-repeat;
+background-color: blue;
+position: relative;
+}
+
+#search-form {
+    position: absolute;
+    top: 25%;
+    left: 25%;
+    margin: 0;
+    padding: 3%;
+    padding-right: 15%;
+    background-color: rgba(255, 166, 0, 0.226);
+}
+
+button {
+    background-color: rgba(204, 152, 10, 0.589);
+    margin: 2%;
+}
