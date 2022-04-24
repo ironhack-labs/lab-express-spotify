@@ -64,6 +64,29 @@ audio::-webkit-media-controls-panel {
     align-items: center;
 }
 
+#pagination {
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+}
+
+#current-page {
+    font-size: 1.5rem;
+    color: white;
+    margin: 0 25px 0 25px;
+    padding-top: 15px;
+}
+
+#previous-page, #next-page {
+    font-size: 1.5rem;
+    color: white;
+    background-color: #1bd760;
+    text-decoration: none;
+    border-radius: 25px;
+    padding: 15px;
+    margin-bottom: 50px;
+}
+
 .search-link {
     background-color: #1bd760;
     color: white;

@@ -10,4 +10,10 @@
         <a class="search-link" href="/albums/{{this.id}}">View Albums</a>
     </div>
     {{/each}}
+    <br>
 </section>
+<div id="pagination">
+    <a id="previous-page" href="/artist-search-results?artist={{this.artistName}}&page={{this.previousPage}}">Previous Page</a>
+    <span id="current-page">Page {{this.page}}</span>
+    <a id="next-page" href="/artist-search-results?artist={{this.artistName}}&page={{this.nextPage}}">Next Page</a>
+</div>
