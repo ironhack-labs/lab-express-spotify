@@ -53,9 +53,9 @@ app.get('/albums/:id', (req, res) => {
 
 app.get("/tracks/:id", (req, res) => {
     spotifyApi.getAlbumTracks(req.params.id)
-        .then((data)=>{
-            res.render('tracks', {tracks: data.body.items })
-            console.log('Track info',data.body)
+        .then((data) => {
+            res.render('tracks', { tracks: data.body.items })
+            console.log('Track info', data.body)
         })
         .catch(err => console.log('Something went getting the tracks!', err));
 })
