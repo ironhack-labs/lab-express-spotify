@@ -2,11 +2,12 @@ require("dotenv").config();
 
 const express = require("express");
 const hbs = require("hbs");
+require("dotenv").config();
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
 const app = express();
-
+    
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
@@ -16,6 +17,8 @@ const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
 });
+console.log(spotifyApi)
+
 
 // Retrieve an access token
 spotifyApi
@@ -31,18 +34,19 @@ app.get('/', (req, res) => {
 
 
 app.get('/artist-search', (req, res) => {
-    const { artist } = req.query.artist;
+    const { artist } = req.query;
+    console.log()
     spotifyApi
         .searchArtists(artist)
         .then(data => {
             console.log('The received data from the API: ', data.body);
-            res.render('artist-search-results', { artist: data.body.artist.items });
+            res.render('artist-search-results', { artist: data.body.artists.items });
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 app.get('/albums/:artistId', (req, res) => {
-    const { artistId } = req.params.artistId;
+    const { artistId } = req.params;
     spotifyApi
         .getArtistAlbums(artistId)
         .then(data => {
@@ -52,7 +56,7 @@ app.get('/albums/:artistId', (req, res) => {
 })
 
 app.get('/tracks/:albumsId', (req, res) => {
-    const { albumId } = req.params.albumsId
+    const { albumId } = req.params
     spotifyApi
         .getAlbumTracks(albumId, { limit: 5, offset: 1 })
         .then((data) => {
