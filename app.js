@@ -30,17 +30,31 @@ app.get("/", (req, res, next) => {
   });
 
 
-  app.get("/artist-search", (req, res, next) => {
+  app.get("/:artistName", (req, res, next) => {
+
+    console.log(req.query.artistName);   //name of the artist in terminal
+    console.log(req.params.artistName);  //"artist-search" in terminal
+
     spotifyApi
-    .searchArtists(req.query.artistId)
+    .searchArtists(req.query.artistName)
     .then(artistDetails => {
-      console.log('The received data from the API: ', artistDetails.body);
-      res.render("artist-search", {artist: artistDetails});// ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      console.log('The received data from the API: ', artistDetails.body.artists.items);
+      console.log(artistDetails.body.artists.items.id);
+      res.render("artist-search-results", {selArtist : artistDetails});
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 
+ app.get('/albums/:artistId', (req, res, next) => {
+  spotifyApi
+  .getArtistAlbums(req.query.artistId)
+  .then(function(artistAlbums) {
+      console.log('Artist albums', artistAlbums.body);
+      res.render("albums", {allAlbums: artistAlbums});
+    })
+    .catch(err => console.log('The error while searching albums occurred: ', err));
+})
 
 
 

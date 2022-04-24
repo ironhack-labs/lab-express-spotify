@@ -1,5 +1,17 @@
-
-
-<a href="/albums/:artistId" target="_blank">
+       {{#each selArtist}}
+    <section class="selArtist">
+        <img src="{{this.body.artists.items.images}}" alt="album-image">
+        <h2>{{this.body.artists.items.name}} </h2>
+         <a href = "/albums/{{this.body.artists.items.id}}" target="_blank">
     <button>View Albums</button>
-</a>
+</a>   
+{{/each }}
+  </section>
+    
+
+
+
+
+    
+
+
