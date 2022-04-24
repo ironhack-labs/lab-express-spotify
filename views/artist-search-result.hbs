@@ -1,0 +1,23 @@
+<div class="container artists">
+  <div class="row row-cols-3">
+    <div class="col">
+      <div class="card" style="width: 18rem;">
+
+        {{#each artist}}
+          <img
+            src="{{this.images.0.url}}"
+            alt="No Picture found."
+            class="card-img-top"
+          />
+          <div class="card-body">
+            <h5>{{this.name}}</h5>
+            <a href="/albums/{{this.id}}" class="btn btn-success">View Albums</a>
+
+          </div>
+
+        {{/each}}
+
+      </div>
+    </div>
+  </div>
+</div>
