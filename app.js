@@ -36,7 +36,7 @@ app.get('/artist-search', (req, res, next) => {
 
 
   spotifyApi
-    .searchArtists(searchArtist, { limit: 20, offset: page * 20 })
+    .searchArtists(searchArtist, { limit: 20, offset: ( page-1) * 20 })
     .then(data => {
 
       let nextPage;
@@ -44,7 +44,9 @@ app.get('/artist-search', (req, res, next) => {
       const totalArtist = parseInt(data.body.artists.total)
 
       if (page > 1) previousPage = page - 1
+      else previousPage = page
       if (page < Math.floor(totalArtist / 20)) nextPage = page + 1;
+      else nextPage=page
 
       // console.log(data.body.artists.total, page);
       res.render("artist-search-results", { artists: data.body.artists.items, searchArtist, page, nextPage, previousPage })
