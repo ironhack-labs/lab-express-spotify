@@ -24,7 +24,7 @@ button {
 }
 
 img {
-    width: 10vw;
+    width: 15vw;
 }
 header {
     background-image: linear-gradient(to bottom right, red, yellow);
@@ -43,4 +43,11 @@ header {
     flex-wrap: wrap;
     margin: 5px;
 
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    padding-bottom: 35px;
+    padding-left: 35vw;
 }

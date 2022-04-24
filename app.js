@@ -49,7 +49,6 @@ app.get("/artist-search", (req, res) => {
     });
 });
 
-const nextPage = async (req, res) => {};
 
 // When a 'View Albums' link is clicked search for all albums from the artist and display
 app.get("/artist-albums/:artistId", (req, res) => {
