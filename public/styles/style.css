@@ -1,0 +1,94 @@
+body {
+    background: black;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: white;
+}
+
+a {
+    color: rgb(186, 184, 184);
+}
+
+nav {
+    background-color: rgb(138, 3, 3);
+    padding: 1px;
+    border-radius: 5px;
+}
+
+nav a {
+    color: aliceblue;
+    text-decoration: none;
+    padding-bottom: 10px;
+}
+
+.background-home {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    height: 800px;
+    width: auto;
+    object-fit: contain;
+    background-position: center;
+    margin-top: 0px;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.search-button{
+    margin: 1em;
+}
+
+.box {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    padding: 30px;
+    margin: 10em;
+    background-color: aliceblue;
+    border-radius: 5%;
+}
+
+.container  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 40px calc((100% - (255px * 3)) / 2);
+}
+
+.container-item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    text-align: justify;
+    height: 100px;
+    flex: 0 0 215px;
+    padding-bottom: 10em;
+    margin: 1em 20px;
+    border:rgb(245, 245, 245);
+    border-radius: 15%;
+
+}
+
+.container-item img {
+    max-height: 200px;
+    width: auto;
+    object-fit: contain;
+    border-radius: 10px;
+}
+
+.button {
+    background-color: rgb(138, 3, 3);
+    padding: 5px;
+    margin: 3px;
+    border-radius: 5px;
+
+}
