@@ -42,14 +42,10 @@ app.get('/artist-search', (req, res) => {
 })
 
 app.get('/albums/:id', (req, res) => {
-    // const { artistId } = req.params
-    // console.log("Artist id is", artistId);
     spotifyApi
         .getArtistAlbums(req.params.id)
         .then((data) => {
-            const albumData = data.body.items
-            console.log(albumData);
-            res.render('albums', { albums: albumData })
+            res.render('albums', { albums: data.body.items })
             console.log(data.body);
         })
         .catch((err) => console.error("Error to get album from API", err));
@@ -58,7 +54,6 @@ app.get('/albums/:id', (req, res) => {
 app.get("/tracks/:id", (req, res) => {
     spotifyApi.getAlbumTracks(req.params.id)
         .then((data)=>{
-            const albumTracks = data.body.items
             res.render('tracks', {tracks: data.body.items })
             console.log('Track info',data.body)
         })
