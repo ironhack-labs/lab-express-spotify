@@ -1,0 +1,33 @@
+<div class="container text-center mt-5 mb-5">
+  <h1>Albums of: {{itemsAlbum.[0].artists.[0].name}} </h1>
+</div>
+
+
+<div class="container">
+
+  <div class="row text-center d-flex justify-content-between align-items-stretch">
+
+    {{#each itemsAlbum}}
+    <div class="card col-md-4" style="width: 18rem">
+      {{#if images.[0].url}}
+      <img class="card-img-top img-thumbnail" src="{{images.[0].url}}" alt="artist's album">
+      {{else}}
+      <img class="card-img-top img-thumbnail" src="../images/spotify-background.jpeg" alt="spotify">
+
+      {{/if}}
+
+      <div class="card-body">
+
+        <h5 class="card-title">{{name}}</h5>
+
+        <a href="/tracks/{{id}}" class="btn btn-primary">View tracks</a>
+
+      </div>
+
+    </div>
+
+    {{/each}}
+
+  </div>
+
+</div>

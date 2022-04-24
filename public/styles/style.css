@@ -1,0 +1,50 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins');
+
+.home-container {
+  height: 100vh;
+  background: url("../images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.form {
+  background-color: rgba(255, 255, 255, 0.5);
+  /* row->column */
+  flex-direction: column;
+  width: 50vw;
+  padding: 50px;
+  border-radius: 20px;
+}
+
+.searchBtn,
+.inputBtn {
+  display: flex;
+  justify-content: center;
+  margin: 0 auto;
+  padding: 10px;
+  font-size: 20px;
+  font-family: 'Poppins';
+
+}
+
+.inputBtn {
+  width: 60vh;
+  background-color: white;
+  color: black;
+  margin-bottom: 10px;
+  border: 1px solid white;
+  border-radius: 5px;
+}
+
+.searchBtn {
+  background-color: brown;
+  border: 1px solid brown;
+  border-radius: 5px;
+  color: white;
+  width: 40vh;
+}
