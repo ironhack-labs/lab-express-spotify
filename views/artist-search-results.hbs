@@ -1,6 +1,6 @@
 <div class="container">
 
-{{#each artists}}
+{{#each artistsArr}}
 
 
             <h2>{{this.name}}</h2>
@@ -9,7 +9,7 @@
                 <img src={{this.images.[0].url}}>
             </div>
 
-            <a class="card-btn" href="/albums/{{this.id}}"> View Albums</a>
+            <a class="albums" href="/albums/{{this.id}}"> View Albums</a>
 {{/each}}
 
 </div>
