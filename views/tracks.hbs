@@ -1,8 +1,9 @@
 <h1>Tracks:</h1>
-<section class="tracks">
+<hr>
+<section class="container-tracks">
   {{#each tracks}}
-    <div class="trackBox">
-      <h1>{{this.track_number}}. {{this.name}}</h1>
+    <div class="box-tracks">
+      <h2>{{this.track_number}}. {{this.name}}</h2>
       <audio controls src="{{this.preview_url}}">
         <a href="{{this.preview_url}}">play</a>
       </audio>

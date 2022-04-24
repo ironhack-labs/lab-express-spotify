@@ -1,8 +1,9 @@
 <h1>Results:</h1>
-<section class="results">
+<hr>
+<section class="container">
   {{#each results}}
-    <div class="resultBox">
-      <h1>{{this.name}}</h1>
+    <div class="box">
+      <h2>{{this.name}}</h2>
       <img src="{{this.images.1.url}}" alt="{{this.name}}" />
       <form method="GET" action="/albums/{{this.id}}">
         <button type="submit">View Albums</button>

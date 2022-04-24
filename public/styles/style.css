@@ -1,0 +1,107 @@
+*{
+    margin: 0;
+    padding: 0;
+    border: 0;
+}
+
+html{
+    font-size: 10px;
+    color: #fff;
+}
+
+hr{
+    border-bottom: 1px solid white;
+    width: 50%;
+    margin:auto;
+}
+
+body{
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+h1{
+    font-size: 4rem;
+    text-align: center;
+    padding: 60px 0 10px 0;
+}
+
+h2{
+    font-size: 2.5rem;
+    text-align: center;
+    padding: 10px
+}
+
+.search-section {
+    height: 100vh;
+    display: flex;
+}
+
+.search-form{
+    margin: auto;
+}
+
+.search-form input, button{
+    height: 60px;
+    font-size: 1.8rem;
+    font-weight: 600;
+    padding: 0 20px;
+}
+
+.search-form input {
+    width: 370px;
+    color: #4b00ff;
+}
+
+button{
+    background-color: #4b00ff;
+    width: 100px;
+    color: #fff;
+    cursor: pointer;
+    outline: 0;
+}
+
+.button-spotify {
+    display: inline-block;
+    background-color: #000000;
+    background-image: url(https://www.buzzsprout.com/images/badges/listen-on-embed.svg);
+    background-repeat: no-repeat;
+    border: 1px solid #000000;
+    border-radius: 5px;
+    margin: 0 5px 5px 0;
+    text-indent: -9000px;
+    background-position: 10px -53px;
+    height: 40px;
+    width: 106px;
+}
+
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content:space-evenly;
+    margin: auto;
+    
+}
+
+.box{
+    width: 300px;
+    margin: 20px;
+    text-align: center;
+}
+
+.box img {
+    max-width: 300px;
+}
+
+.container-tracks{
+    display: flex;
+    flex-direction: column;
+}
+
+.box-tracks h2, audio, .button-spotify {
+    display: block;
+    margin: 10px auto;
+}
