@@ -1,0 +1,101 @@
+body{
+  background-color: black;
+  box-sizing: border-box;
+}
+
+
+
+.home-page{
+  position: relative;
+ background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover; 
+  height: 930px;
+
+}
+.form-container{
+  position: absolute;
+}
+
+
+.form{
+ 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    margin-top:  40vh;
+    margin-left: 40vh;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 60px 200px;
+    
+}
+
+.search-input{
+  padding: 0 15px;
+  width: 400px;
+  height: 40px;
+  border: 0;
+  border-radius: 3px;
+
+}
+.search-btn{
+  margin-top: 10px;
+}
+
+.card {
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 15px;
+  
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.card-body h5{
+  font-size: 1em;
+  text-align: center;
+  color: white;
+}
+
+.album-title{
+  font-size: 3em;
+  color: white;
+  text-align: center;
+  margin: 40px 0;
+ 
+}
+hr{
+  color: white;
+  margin-bottom: 40px;
+}
+.card a .btn{
+  align-self: center;
+}
+
+.table-track-name{
+  vertical-align: middle;
+  font-size: 1.2em;
+}
+
+
+.pagination {
+  display: flex;
+  justify-content: center;
+}
+.pagination a {
+  background-color: gray;
+  border: none;
+  color: black;
+}
+
+.pagination a:hover{
+  color: black;
+}
