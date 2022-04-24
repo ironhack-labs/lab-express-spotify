@@ -1,9 +1,13 @@
-<div class="container">
-        {{#each tracks}}
-            <div class="">
-                {{this.name}}
-                {{!-- <a href="href="/tracks/{{this.id}}" class="button">View albums</a> --}}
-            </div>
-        {{/each}}
+<div>
+    {{#each tracks}}
+    <div>
+        <figure class="audio-preview">
+            <figcaption>{{this.name}}</figcaption>
+            <audio controls src="{{preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+            </audio>
+        </figure>
+    </div>
+    {{/each}}
 </div>
-
