@@ -4,11 +4,20 @@
 
 {{#each albums}}
     <section>
-
+            {{#if images.[0].url}}
             <img src="{{images.[0].url}}" alt="images of albums">
-           
+            {{/if}}
+        
+        
         <div>
-            <button><a href="#">View Tracks</a></button>
+            {{#if this.id}}
+            <button><a href="/albumTracks/{{this.id}}">View Tracks</a></button>
+            {{/if}}
         </div>
+           
+       
     </section>
 {{/each}}
+
+
+    

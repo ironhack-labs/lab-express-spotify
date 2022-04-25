@@ -1,0 +1,14 @@
+
+
+
+
+
+{{#each tracksArr}}
+    <section>       
+        {{#if this.preview_url}}
+        <audio controls = "controls" src= "{{this.preview_url}}" ></audio>
+        {{else}}
+            <p>Any tracks to listen, sorry !!!</p>
+        {{/if}}
+    </section>
+{{/each}}
