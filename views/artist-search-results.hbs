@@ -1,0 +1,19 @@
+{{!-- display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). --}}
+
+<section class="artist">
+
+    <h1>Name: {{name}}</h1>
+
+    {{#each images}}
+    <section class="image">
+        {{#if images}}
+                <img src="{{url}}" alt="{{name}}" />
+        {{else}}
+                <img src="https://via.placeholder.com/600x400" alt="{{name}}" />
+        {{/if}}
+    </section> 
+   {{/each }}
+
+    <button><a href="/albums/{{id}}">View Albums</a></button>
+
+ </section>

@@ -1,0 +1,23 @@
+{{!-- show the name and the cover of each album and add a button/link to see the tracks (next iteration). --}}
+
+<h1>List of albums:</h1>
+   
+   {{#each albums}}
+    <section class="album">
+        
+        <h2>Name: {{name}}</h2>
+        
+        {{!-- {{#each images}}
+        <section class="image">
+        {{#if images}}
+                <img src="{{this.url}}" alt="{{this.name}}" />
+        {{else}}
+                <img src="https://via.placeholder.com/600x400" alt="{{this.name}}" />
+        {{/if}}
+        </section>
+        {{/each }} --}}
+        
+       <button><a href="/tracks/{{this.id}}">View tracks</a></button>
+    
+    </section> 
+   {{/each }}

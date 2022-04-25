@@ -1,0 +1,13 @@
+{{!-- a page with a list of all of the tracks on a particular album. --}}
+
+ {{#each tracks}}
+
+    <section class="track">
+        <h2>{{this.name}}</h2>
+        {{#if images}}
+                <img src="/images/{{this.images}}" alt="{{this.name}}" />
+                {{else}}
+                <img src="https://via.placeholder.com/600x400" alt="{{this.name}}" />
+                {{/if}}
+        
+    </section>
