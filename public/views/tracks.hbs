@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <table class="table table-hover">
+        <tr class="table-dark title">
+          <td class="table-dark"><h2>Title</h2></td>
+          <td class="table-dark"><h2>Listen</h2></td>
+        </tr>
+        {{#each tracks}}
+          <tr class="table-light">
+            <td class="table-light table-track-name">{{this.name}}</td>
+            <td class="table-light">
+              <audio controls>
+                <source src={{this.preview_url}} type="audio/ogg" />
+              </audio>
+            </td>
+          </tr>
+        {{/each}}
+
+      </table>
+    </div>
+  </div>
+</div>

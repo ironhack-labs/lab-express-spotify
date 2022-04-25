@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="row">
+    {{#each artists}}
+      <div class="col-lg-3 col-md-6 col-sm-12">
+        <div class="card" style="width: 18rem;">
+          {{#if this.images.0.url}}
+            <img
+              src={{this.images.0.url}}
+              alt={{this.name}}
+              class="card-img-top"
+            />
+          {{else}}
+            <img src="/images/placeholder.png" class="card-img-top" />
+          {{/if}}
+          <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <a href="/albums/{{this.id}}" class="btn btn btn-danger">view Album</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
+
+<nav aria-label="Page navigation example">
+  <ul class="pagination">
+
+    <li class="page-item">
+      <a class="page-link" href="?artist={{this.searchArtist}}&page={{this.previousPage}}" aria-label="Previous">
+        <span aria-hidden="true">&laquo;</span>
+      </a>
+    </li>
+
+    <li class="page-item"><a class="page-link" href="">{{this.page}}</a></li>
+    
+    <li class="page-item">
+      <a class="page-link" href="?artist={{this.searchArtist}}&page={{this.nextPage}}" aria-label="Next">
+        <span aria-hidden="true">&raquo;</span>
+      </a>
+    </li>
+
+  </ul>
+</nav>
