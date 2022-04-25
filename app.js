@@ -42,7 +42,7 @@ app.get("/artist-search", (req,res,next)=>{
 
     // conseguir info de la ruta
 
-     console.log(req.query.artist)
+    console.log(req.query.artist)
 
 
 
@@ -71,6 +71,23 @@ app.get("/albums/:artistId", (req,res,next)=>{
         const albums = {albums: data.body}
 
         res.render("albums", {data})
+    })
+    .catch(error=>{
+        console.log("Que es?",error)
+        res.send("Error: 500")
+    })
+})
+app.get("/albums/tracks/:artistId", (req,res,next)=>{
+
+    console.log(req.params.artistId)
+
+    spotifyApi.getPlaylist(req.params.artistId, {limit: 10})
+    .then(data => {
+        console.log('The received data from the API: ', data.body.items);
+
+        const albums = {playlist: data.body}
+
+        res.render("playlist", {data})
     })
     .catch(error=>{
         console.log("Que es?",error)

@@ -1,12 +1,12 @@
 <div>
     
     
-    {{#each artist.items}}
+    {{#each playlist}}
     <p>
         {{name}}
     </p>
     <a href="/albums/tracks/{{id}}"><button>View Tracks</button></a>
-
+    <audio controls src="{{id}}"></audio>
     {{/each}}
     
 
