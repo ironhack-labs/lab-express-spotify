@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    {{#each artists}}
+      <div class="col-md-4">
+        <div id="artist-img" class="text-center">
+          {{#if this.images.0.url}}
+            <img src={{this.images.0.url}} alt="" class="img-fluid" />
+          {{/if}}
+        </div>
+        <div id="artist-box" class="p-3 mb-2 bg-secondary text-white text-center">
+          <h5>{{this.name}}</h2>
+          <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

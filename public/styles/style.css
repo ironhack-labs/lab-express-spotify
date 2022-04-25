@@ -1,0 +1,23 @@
+#home{
+    height: 700px; 
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: cover;
+}
+
+#box-form{
+    width: 700px;
+    height: 250px;
+    background-color: rgba(255, 255, 255, 0.466);
+}
+
+#box-form input{
+    width: 400PX;
+}
+
+#box-form button{
+    width: 200PX;
+    color: white;
+    background-color: rgb(243, 63, 9);
+    margin-top: 10px;
+}
+
