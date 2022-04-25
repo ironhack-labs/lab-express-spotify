@@ -31,7 +31,7 @@ const spotifyApi = new SpotifyWebApi({
     spotifyApi
   .searchArtists(req.query.artist)
   .then((data) => {
-    console.log(data.body.artists);
+    //console.log(data.body.artists);
     console.log('The received data from the API: ', data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     res.render("artist-search-results", data)

@@ -1,3 +1,15 @@
-<h2>{{this.name}}</h2>
+{{!-- <h2>{{this.name}}</h2>
+<h2>{{data.body.artists.name}}</h2>
 <img src="{{artist.img}}" alt="image">
-<button><a href="/albums/someArtistIdGoesHere">View Albums</a></button>
+<button><a href="/albums/someArtistIdGoesHere">View Albums</a></button> --}}
+
+
+<div>
+    {{#each artist}}
+    <section class="container">
+        <img src="{{this.images}}" alt="{{this.name}} image">
+        <h2>{{this.name}}</h2>
+        <a href="/artist-albums/{{this.id}}">View Albums</a>
+    </section>
+    {{/each}}
+</div>
