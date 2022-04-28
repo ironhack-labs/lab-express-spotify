@@ -1,0 +1,12 @@
+html{
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+.Home{
+    background-image: url("../images//spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 900px;
+}
