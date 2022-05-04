@@ -1,0 +1,13 @@
+{{! image, name, button (or link) }}
+
+{{! Iterate over artists array  }}
+
+{{#each artists}}
+  <div class="card" style="width: 18rem;">
+    <img src="{{this.images.0.url}}" class="card-img-top" alt="..." />
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+      <a href="/albums/{{this.id}}" class="btn btn-primary">View album</a>
+    </div>
+  </div>
+{{/each}}
