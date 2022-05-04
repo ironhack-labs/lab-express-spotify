@@ -1,0 +1,15 @@
+<h1>Artist's List</h1>
+<div class="row">
+{{#each dataArtists}}
+    <div class="card col-3" style="width: 18rem;">
+        <img src="{{this.images.[1].url}}" class="card-img-top" alt="...">
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>
+            <p class="card-text">Genres : {{this.genres}}</p>
+            <a href="/albums/{{this.id}}" class="btn btn-primary">View Albums</a>
+        </div>
+    </div>   
+{{/each}}
+</div>
+
+

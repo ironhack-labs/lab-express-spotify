@@ -1,0 +1,16 @@
+<h1>Artist's Album Track List</h1>
+<div class="row">
+{{#each dataAlbumTracks}}
+    <div class="card col-3" style="width: 18rem;">
+        <audio
+            controls
+            src="{{this.preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+        <div class="card-body">
+            <h5 class="card-title">{{this.name}}</h5>           
+        </div>
+    </div>   
+{{/each}}
+</div>
