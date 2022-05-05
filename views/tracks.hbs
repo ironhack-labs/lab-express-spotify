@@ -1,0 +1,20 @@
+<div>
+    <table>
+        <tr>
+            <th>Title</th>
+            <th>Listen</th>
+        </tr>
+        {{#each tracks}}
+        <tr>
+            <th>{{this.name}}</th>
+            <th>
+                 <audio controls src="{{this.preview_url}}">
+        Your browser does not support the
+        <code>audio</code>
+        element.
+      </audio>   
+            </th>
+        </tr>
+        {{/each}}
+    </table>
+</div>
