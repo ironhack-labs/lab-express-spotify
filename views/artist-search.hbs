@@ -1,0 +1,11 @@
+<div>
+{{#each artistsData}}
+<img src="{{this.images.[0].url}}" height = 300>
+<p>{{this.name}}</p> 
+<a href="/albums/{{this.id}}">view Albums</a> 
+
+{{/each}}
+<br>
+</div>
+
+<!--missing CSS and class=card-grid maybe -->
