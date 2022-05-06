@@ -1,0 +1,18 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+img {
+  width: 200px;
+}
+
+.artists {
+}
+
+.albums {
+}
+
+.tracks {
+}
