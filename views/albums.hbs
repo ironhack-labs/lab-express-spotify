@@ -1,0 +1,14 @@
+<section class="artist-albums">
+  {{#each artistResult}}
+    <h1>Albums for {{artistResult.name}}</h1>
+  {{/each}}
+  {{#each albumResult}}
+    <div class="result-albums">
+      <img class="album-image" src="{{images.0.url}}" alt="albumimage" />
+      <div class="view-artist-albums">
+        <h4>{{name}}</h4>
+        <a href="/tracks/{{id}}"><button type="submit">View tracks</button></a>
+      </div>
+    </div>
+  {{/each}}
+</section>

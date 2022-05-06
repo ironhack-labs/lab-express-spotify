@@ -1,0 +1,8 @@
+<div class="album-tracks-preview">
+  {{#each tracksResult}}
+    <h3>{{name}}</h3>
+    <audio controls>
+      <source src="{{preview_url}}" type="audio/ogg" />
+    </audio>
+  {{/each}}
+</div>
