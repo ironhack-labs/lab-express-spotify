@@ -1,7 +1,9 @@
+<head>
+  <link rel="stylesheet" href="styles/albums.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
 <section class="artist-albums">
-  {{#each artistResult}}
-    <h1>Albums for {{artistResult.name}}</h1>
-  {{/each}}
   {{#each albumResult}}
     <div class="result-albums">
       <img class="album-image" src="{{images.0.url}}" alt="albumimage" />

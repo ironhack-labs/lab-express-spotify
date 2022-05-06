@@ -74,7 +74,7 @@ app.get("/tracks/:trackId", (req, res, next) => {
       console.log("tracks accessed with success!");
 
       const tracksResult = tracks.body.items;
-      res.render("viewTracks", { tracksResult });
+      res.render("viewTracks", { tracksResult } );
       console.log(tracksResult);
     })
     .catch((err) =>

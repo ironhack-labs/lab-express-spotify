@@ -1,0 +1,10 @@
+.album-tracks-preview {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+}
+
+body {
+  background-color: red;
+}

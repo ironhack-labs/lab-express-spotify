@@ -1,0 +1,29 @@
+main {
+  background-color: rgb(29, 185, 84);
+}
+
+.artist-results {
+  background-color: rgba(255, 255, 255, 0.509);
+  background-size: contain;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 5%;
+}
+
+.result-artist {
+  margin: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#view-albums-button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(29, 185, 84);
+  border: none;
+  width: 9vw;
+  height: 4vh;
+}
