@@ -2,6 +2,7 @@ require("dotenv").config();
 
 const express = require("express");
 const hbs = require("hbs");
+const async = require("hbs/lib/async");
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
@@ -32,17 +33,29 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/artist-search", (req, res) => {
-  spotifyApi
-    .searchArtists(req.query)
-    .then((data) => {
-      console.log("The received data from the API: ", data.body);
-      res.render("/artist-search-results", data.body);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-    })
-    .catch((err) =>
-      console.log("The error while searching artists occurred: ", err)
-    );
+app.get("/artist-search", async (req, res) => {
+  try {
+    const ids = req.query.q;
+    // console.log(req.query);
+    const data = await spotifyApi.searchArtists(ids);
+    //  console.log(data);
+    const artistSearched = data.body;
+    //  console.log(artistSearched);
+    res.render("artist-search-results", { artistSearched });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.get("/albums/:artistId", async (req, res) => {
+  try {
+    const id = req.params.artistId;
+    const data = await getArtistAlbums(id);
+    const albums = data.body.items;
+    res.render("albums", { albums });
+  } catch (error) {
+    console.log(error);
+  }
 });
 
 app.listen(3000, () =>
