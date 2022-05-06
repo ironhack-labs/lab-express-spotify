@@ -35,12 +35,9 @@ app.get("/", (req, res) => {
 
 app.get("/artist-search", async (req, res) => {
   try {
-    const ids = req.query.q;
-    // console.log(req.query);
-    const data = await spotifyApi.searchArtists(ids);
-    //  console.log(data);
-    const artistSearched = data.body;
-    //  console.log(artistSearched);
+    const artistId = req.query.artistId;
+    const data = await spotifyApi.searchArtists(artistId);
+    const artistSearched = data.body.artists.items;
     res.render("artist-search-results", { artistSearched });
   } catch (error) {
     console.log(error);
@@ -49,10 +46,21 @@ app.get("/artist-search", async (req, res) => {
 
 app.get("/albums/:artistId", async (req, res) => {
   try {
-    const id = req.params.artistId;
+    const id = req.params;
     const data = await getArtistAlbums(id);
     const albums = data.body.items;
     res.render("albums", { albums });
+  } catch (error) {
+    console.log(error);
+  }
+});
+
+app.get("/tracks/:tracksId", async (req, res) => {
+  try {
+    const id = req.params.tracksId;
+    const data = await getAlbumTracks(id);
+    const tracks = data.body.items;
+    res.render("tracks", { tracks });
   } catch (error) {
     console.log(error);
   }
