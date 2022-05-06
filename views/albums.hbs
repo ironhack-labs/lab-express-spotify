@@ -1,1 +1,12 @@
-<h1>hello</h1>
+<h1>Albums for: {{this.artists}}</h1>
+<div class="card-grid">
+    {{#each albums}}
+        <div class="card">
+            <img src="{{this.images.0.url}}" class="card-image" alt="{{this.name}} image">
+            <div class="card-text-and-button">
+                <h3>{{this.name}}</h3>
+                <a class="view-tracks-button" href="/tracks/{{this.id}}">View Tracks</a>
+            </div>    
+        </div>
+    {{/each}}
+</div>

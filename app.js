@@ -37,7 +37,7 @@ app.get('/artist-search', async (req, res) => {
     const data = await spotifyApi.searchArtists(req.query.artist);
     const artistsData = data.body.artists.items;
 
-    res.render('artist-search', {artistsData})
+    res.render('artist-search-results', {artistsData})
 
   }
     catch (err) {
@@ -46,12 +46,12 @@ app.get('/artist-search', async (req, res) => {
   
 })
 
-app.get('/albums/:id', (res, req)=> {
+app.get('/albums/:id', async (res, req)=> {
   try{
-    const data = await spotifyApi.getArtistAlbums(request.params.id);
-    console.log(data)
-
-  res.render('albums')
+    const {id} = req.params
+    const data = await spotifyApi.getArtistAlbums(id);
+    const albums = data.body.items;
+  res.render('albums', {albums})
   }
   catch (err) {
     console.error(err)
