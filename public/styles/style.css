@@ -1,0 +1,44 @@
+body {
+  margin: 0;
+}
+.full-window {
+  background: url("/images/spotify-background.jpeg") no-repeat center center
+    fixed;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.search-form {
+  display: flex;
+  justify-content: center;
+  padding: 5em 10em;
+  background-color: rgb(255, 255, 255, 0.2);
+}
+.search-form form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5em;
+}
+.search-form form input {
+  width: 30vw;
+  border-radius: 3px;
+  border: none;
+  height: 2em;
+  padding-left: 1em;
+}
+.search-form form button {
+  color: white;
+  background-color: #f44336;
+  border: none;
+  padding: 0.4em 0.9em;
+}
+.album-results {
+  display: flex;
+}
+.card {
+  width: 25vw;
+}

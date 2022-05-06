@@ -1,0 +1,13 @@
+<div class="row album-results">
+  {{#each items}}
+    <div class="card rounded-0 m-2 border-0 col-3 bg-dark">
+      <img class="card-img-top" src="{{images.0.url}}" alt="Card image cap" />
+      <div
+        class="card-body d-flex flex-column justify-content-center align-items-center"
+      >
+        <h5 class="card-title text-white">{{name}}</h5>
+        <a href="/albums/{{id}}" class="btn btn-danger p-1">View Albums</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
