@@ -1,10 +1,15 @@
-<div class="">
+<div class="artistDiv">
 
   {{#each artists}}
-    <img class="" src="{{images.0.url}}" alt="" />
-    <h2>{{name}}</h2>
 
-    <a href="/albums/{{id}}">View Albuns</a>
+    <section class="artistSection" >
+
+      <img class="" src="{{images.0.url}}" alt="" />
+      <h2>{{name}}</h2>
+
+      <a href="/albums/{{id}}">View Albuns</a>
+
+    </section>
 
   {{/each}}
 
