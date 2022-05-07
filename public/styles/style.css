@@ -1,3 +1,4 @@
+html,
 body {
   margin: 0;
 }
@@ -39,6 +40,14 @@ body {
 .album-results {
   display: flex;
 }
-.card {
-  width: 25vw;
+header img {
+  width: 10vw;
+  height: auto;
+}
+.tracks-header {
+  color: lightgrey;
+  background-color: #4a4a4a;
+}
+.tracks-list {
+  background-color: #f1f3f4;
 }

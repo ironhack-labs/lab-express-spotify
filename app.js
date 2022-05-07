@@ -3,14 +3,16 @@ require("dotenv").config();
 const express = require("express");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
+const path = require("path");
 
 // require spotify-web-api-node package here:
 
 const app = express();
 
 app.set("view engine", "hbs");
-app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/public"));
+app.set("views", path.join(__dirname, "/views"));
+hbs.registerPartials(path.join(__dirname, "/views/partials"));
+app.use(express.static(path.join(__dirname, "/public")));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -37,7 +39,9 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(search)
     .then((data) => {
-      res.render("artist-search-results", data.body.artists);
+      data.body.artists.searchQuery = search;
+      const { artists } = data.body;
+      res.render("artist-search-results", artists);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -50,7 +54,8 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(artistId)
     .then((data) => {
-      res.render("albums", data.body);
+      data.body.artistsName = data.body.items[0].artists[0].name;
+      res.render("artist-search-results", data.body);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -63,8 +68,8 @@ app.get("/tracks/:albumId", (req, res) => {
   spotifyApi
     .getAlbumTracks(albumId)
     .then((data) => {
-      console.log(data.body.items);
-      res.render("tracks", { tracks: data.body.items });
+      const { items } = data.body;
+      res.render("tracks", { items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

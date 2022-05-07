@@ -1,11 +1,13 @@
-<div>
-  <div><h2>Title</h2><h2>Listen</h2></div>
-  {{#each tracks}}
-    <div>
-      <h5>{{name}}</h5>
+{{> header}}
+<div class="container">
+  <div class="tracks-header py-4 px-4 mt-5 mb-1 d-flex justify-content-between align-items-center"><h4>Title</h4><h4 class="px-5 mx-5">Listen</h4></div>
+  {{#each items}}
+    <div class="tracks-list mb-1 d-flex justify-content-between align-items-center">
+      <h5 class="px-4">{{name}}</h5>
       <audio controls>
         <source src="{{preview_url}}" type="audio/wav" />
       </audio>
     </div>
   {{/each}}
 </div>
+{{> footer}}

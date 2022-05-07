@@ -1,13 +1,36 @@
-<div class="row album-results">
+{{> header}}
+<div class="container">
+<div class="row album-results d-flex justify-content-center">
+    {{#if searchQuery}}
+    <h2 class="mt-5">You searched for: {{searchQuery}}</h2>
+    {{/if}}
+        {{#if artistsName}}
+    <h2 class="mt-5">Albums for: {{artistsName}}</h2>
+    {{/if}}
+            {{#if items}}
   {{#each items}}
-    <div class="card rounded-0 m-2 border-0 col-3 bg-dark">
+    <div class="card rounded-0 m-5 border-0 col-3 bg-dark p-0">
+        <a href="/albums/{{id}}">
+        {{#if images.0.url}}
       <img class="card-img-top" src="{{images.0.url}}" alt="Card image cap" />
-      <div
-        class="card-body d-flex flex-column justify-content-center align-items-center"
-      >
-        <h5 class="card-title text-white">{{name}}</h5>
-        <a href="/albums/{{id}}" class="btn btn-danger p-1">View Albums</a>
+{{else}}
+<img class="card-img-top" src="https://community.spotify.com/t5/image/serverpage/image-id/55829iC2AD64ADB887E2A5/image-size/large?v=v2&px=999" alt="Card image cap" />
+{{/if}}
+      </a>
+      <div class="card-body d-flex flex-column justify-content-between">
+        <h5 class="card-title text-white align-self-center"> <a href="/albums/{{id}}" class="text-white text-decoration-none">{{name}}</a></h5>
+               {{#if album_type}}
+      <a href="/tracks/{{id}}" class="btn btn-success p-1">View Tracks</a>
+{{else}}
+ <a href="/albums/{{id}}" class="btn btn-success p-1">View Albums</a>
+{{/if}}
+       
       </div>
     </div>
   {{/each}}
+  {{else}}
+  <p>No results found, better luck next time :D!</p>
+  {{/if}}
 </div>
+</div>
+{{> footer}}
