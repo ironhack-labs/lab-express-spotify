@@ -1,0 +1,109 @@
+body {
+  margin: 0;
+  background-color: #eee;
+  min-height: 100vh;
+  font-family: Arial;
+}
+
+.container {
+  background-image: url("/images/spotify-background.jpeg");
+  height: 800px;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+input {
+  width: 300px;
+  height: 40px;
+  border-radius: 30px;
+}
+
+button {
+  display: flex;
+  margin: 10px 0 0 55px;
+  border: none;
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 1%,
+    rgba(179, 29, 43, 1) 100%,
+    rgba(9, 162, 75, 1) 100%
+  );
+  padding: 15px;
+  color: #fff;
+  font-size: 1.1rem;
+}
+
+.artists {
+  display: inline-block;
+  position: relative;
+  width: 200px;
+  min-width: 400px;
+  height: 400px;
+  border-radius: 30px;
+  overflow: hidden;
+  box-shadow: 5px 5px 20px rgb(0, 0, 0);
+  margin: 50px;
+  font-size: 1.1rem;
+}
+
+.artists-name {
+  background: rgb(2, 0, 36);
+  background: linear-gradient(
+    90deg,
+    rgba(2, 0, 36, 1) 0%,
+    rgba(59, 144, 112, 1) 7%,
+    rgba(1, 1, 17, 0.8354692218684349) 18%
+  );
+  position: absolute;
+  top: 75%;
+  left: -5px;
+  height: 65%;
+  width: 108%;
+}
+
+.artists-name1 {
+  position: absolute;
+  color: #fff;
+  left: 30px;
+  bottom: 10%;
+}
+
+.artists-btn {
+  position: absolute;
+  color: #fff;
+  right: 10px;
+  bottom: 2%;
+  padding: 20px 30px;
+  border-radius: 28px;
+  border: 1px solid #18ab29;
+  color: #ffffff;
+  font-size: 17px;
+  padding: 10px 20px;
+}
+
+.artists-btn a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.audio-container {
+  display: inline-block;
+  position: relative;
+  min-width: 380px;
+  height: 150px;
+  border-radius: 30px;
+  box-shadow: 5px 5px 20px rgb(0, 0, 0);
+  margin: 50px;
+  font-size: 1.1rem;
+}
+
+.audio1 {
+  color: #000;
+}
+
+audio {
+  border-style: groove;
+}

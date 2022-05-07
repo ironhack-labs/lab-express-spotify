@@ -1,0 +1,13 @@
+{{#each findTracks}}
+  <div class="audio-container">
+
+    <div class="artists-name1">
+      <p class="audio1">{{this.name}}</p>
+      <audio controls src="{{this.preview_url}}">
+        Your browser does not support the
+        <code>audio</code>
+        element.
+      </audio>
+    </div>
+  </div>
+{{/each}}
