@@ -1,0 +1,22 @@
+<div class="container">
+  <div class="container-pos-track">
+    <div class="track-container">
+      {{#each findTracks}}
+        <div class="track">
+          <div class="track-name">
+            <h3>- {{this.name}}</h3>
+          </div>
+
+          <div class="preview-song">
+            <audio controls src="{{this.preview_url}}">
+              Your browser does not support the
+              <code>audio</code>
+              element.
+            </audio>
+
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</div>
