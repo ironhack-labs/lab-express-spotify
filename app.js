@@ -1,18 +1,33 @@
-require('dotenv').config();
+// ℹ️ Gets access to environment variables/settings
+// https://www.npmjs.com/package/dotenv
+require("dotenv/config");
 
-const express = require('express');
-const hbs = require('hbs');
+// Handles http requests (express is node js framework)
+// https://www.npmjs.com/package/express
+const express = require("express");
 
-// require spotify-web-api-node package here:
+// Handles the handlebars
+// https://www.npmjs.com/package/hbs
+const hbs = require("hbs");
 
 const app = express();
 
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+// ℹ️ This function is getting exported from the config folder. It runs most pieces of middleware
+// const laFunction = require("./config");
+// laFunction(app);
+require("./config")(app);
 
-// setting the spotify-api goes here:
+// default value for title local
+const capitalized = require("./utils/capitalized");
+const projectName = "ironlaunchertest";
 
-// Our routes go here:
+app.locals.appTitle = `${capitalized(projectName)} created with IronLauncher`;
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+// 👇 Start handling routes here
+const index = require("./routes/index.routes");
+app.use("/", index);
+
+// ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
+require("./error-handling")(app);
+
+module.exports = app;

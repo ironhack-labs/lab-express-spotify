@@ -1,0 +1,18 @@
+<div class="container">
+      <button class="backBtn" onclick="window.location = '/'">INDEX</button>
+    <div class="artists-container">
+        {{#each albums}}
+        <div class="artist">
+            {{#if this.images.[0].url}}
+            <img src="{{this.images.[0].url}}" alt="" srcset="">
+            {{else}}
+            <img src="/images/nopecat.jpg" alt="" srcset="">
+
+            {{/if}}
+            <h3>{{this.name}}</h3>
+            <a href="/album-tracks/{{this.id}}" class="albumBtn">View Tracks</a>
+        </div>
+        {{/each}}
+
+    </div>
+</div>

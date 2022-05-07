@@ -1,0 +1,165 @@
+body {
+    padding: 50px;
+    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    background: url("/images/mega.jpg");
+    background-position: center-100px center;
+    background-repeat: no-repeat;
+    background-attachment: fixed; 
+    background-size: cover; 
+  }
+  
+.container{
+    position: relative;
+    height: 100%;
+    width: 100%;
+    
+}
+
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.form-container form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    height: 100%;
+}
+.form-container form {
+    width: 40%;
+    padding: 50px 50px;
+    height: 40%;
+    border-radius: 25px;
+    background-color:  rgba(255, 255, 255, 0.49);
+}
+.form-container form input{
+    width: 80%;
+    height: 40px;
+    opacity: 0.5;
+    font-size: 22px;
+    color: black;
+
+}
+.form-container form button{
+    margin-top: 20px;
+    padding: 15px 15px;
+    color: black;
+    background-color: white;
+    border-radius: 15px;
+}
+.form-container form button:hover{
+    transform: scale(0.9);
+}
+
+.artists-container{
+    padding-top: 120px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    gap: 100px;
+    padding-bottom: 100px;
+}
+.artist{
+    width: 25%;
+    background-color: rgba(255, 255, 255, 0.49);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+
+}
+.artist img{
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+}
+.albumBtn{
+    padding: 15px 15px;
+    background-color: rgb(165, 49, 3);
+    border-radius: 15px;
+    text-decoration: none;
+    margin-bottom: 15px;
+}
+.albumBtn:visited, .albumBtn:link, .albumBtn:active{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+}
+
+.track-container{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.49);
+    margin-top: 100px;
+    margin-bottom: 100px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.container-pos-track{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+}
+.track{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    column-gap: 20px;
+    padding-bottom: 20px;
+}
+.track-name{
+    width: 400px;
+}
+
+.spotify-url a:visited, .spotify-url a:link, .spotify-url a:active{
+    text-decoration: none;
+    color:	#191414;
+    padding: 10px 20px;
+    background-color: #1DB954;
+    border-radius: 15px;
+}
+
+.preview-song{
+    color: black;
+}
+
+.backBtn{
+    display: absolute;
+    top:0;
+    left: 0;
+    margin: 0 auto;
+    padding: 20px 20px;
+    border-radius: 15px;
+}

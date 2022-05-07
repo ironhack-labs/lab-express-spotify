@@ -1,0 +1,25 @@
+<div class="container">
+  <div class="container-pos-track">
+    <div class="track-container">
+      {{#each tracks}}
+        <div class="track">
+          <div class="track-name">
+            <h3>-  {{this.name}}</h3>
+          </div>
+          <div class="spotify-url">
+            <a href="{{this.external_urls.spotify}}">Hear in spotify</a>
+          </div>
+          <div class="preview-song">
+            {{#if this.preview_url}}
+            <audio controls src="{{this.preview_url}}">Your browser does not support the
+            <code>audio</code> element.</audio>
+            {{else}}
+            <h5>PREVIEW NOT AVAILABLE</h5>
+            {{/if}}
+          </div>
+        </div>
+      {{/each}}
+      <button class="backBtn" onclick="window.location = document.referrer">GO BACK</button>
+    </div>
+  </div>
+</div>
