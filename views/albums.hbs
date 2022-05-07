@@ -1,15 +1,18 @@
 <head>
-  <link rel="stylesheet" href="styles/albums.css" />
-  <link rel="stylesheet" href="styles/style.css" />
+  <link rel="stylesheet" href="/styles/albums.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
 </head>
 
 <section class="artist-albums">
   {{#each albumResult}}
     <div class="result-albums">
-      <img class="album-image" src="{{images.0.url}}" alt="albumimage" />
+      <img class="album-image" src="{{images.1.url}}" alt="albumimage" />
       <div class="view-artist-albums">
         <h4>{{name}}</h4>
-        <a href="/tracks/{{id}}"><button type="submit">View tracks</button></a>
+        <a href="/tracks/{{id}}"><button
+            id="view-tracks-button"
+            type="submit"
+          >View tracks</button></a>
       </div>
     </div>
   {{/each}}

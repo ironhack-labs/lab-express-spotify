@@ -1,10 +1,49 @@
-.album-tracks-preview {
+body {
+  padding: 3rem;
+  background-color: rgb(29, 185, 84);
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
 }
 
-body {
-  background-color: red;
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-tracks-preview {
+  background-color: rgba(255, 255, 255, 0.509);
+  width: 50vw;
+  height: 130vh;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.table {
+  color: white;
+}
+
+.head-row th {
+  font-size: 1.5rem;
+  font-weight: 600;
+  background-color: rgb(29, 185, 84);
+}
+
+.row-of-preview {
+  background-color: rgba(29, 185, 84, 0.349);
+}
+
+/* .head-row {
+  margin-bottom: 3rem;
+} */
+
+/* .name-column {
+  margin-right: 3rem;
+} */
+
+#preview {
+  width: 20vw;
 }

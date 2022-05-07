@@ -1,10 +1,13 @@
-main {
+body {
+  padding: 3rem;
   background-color: rgb(29, 185, 84);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .artist-results {
-  background-color: rgba(255, 255, 255, 0.509);
-  background-size: contain;
+  font-family: "Montserrat", sans-serif;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -13,6 +16,9 @@ main {
 }
 
 .result-artist {
+  background-color: rgba(255, 255, 255, 0.509);
+  height: 50vh;
+  width: 30vw;
   margin: 2rem;
   display: flex;
   flex-direction: column;
@@ -21,6 +27,7 @@ main {
 }
 
 #view-albums-button {
+  font-family: "Montserrat", sans-serif;
   color: rgb(255, 255, 255);
   background-color: rgb(29, 185, 84);
   border: none;

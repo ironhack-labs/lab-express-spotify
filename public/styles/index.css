@@ -1,4 +1,6 @@
 main {
+  height: 100vh;
+  width: 100vw;
   background-image: url("/images/spotify-background.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -14,6 +16,7 @@ main {
 }
 
 #input {
+  font-family: "Montserrat", sans-serif;
   border: rgba(128, 128, 128, 0.426);
   margin-bottom: 1rem;
   width: 30vw;
@@ -21,6 +24,7 @@ main {
 }
 
 #search-button {
+  font-family: "Montserrat", sans-serif;
   color: white;
   background-color: rgb(29, 185, 84);
   border: none;
