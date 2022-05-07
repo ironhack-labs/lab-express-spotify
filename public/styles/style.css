@@ -65,7 +65,7 @@ body {
 }
 
 .artists-container{
-    padding-top: 120px;
+    padding-top: 80px;
     width: 100%;
     display: flex;
     flex-direction: row;
@@ -154,12 +154,16 @@ body {
 .preview-song{
     color: black;
 }
-
+.btnContainer{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: center;
+    justify-items: center;
+    justify-content: center;
+    margin-top: 50px;
+}
 .backBtn{
-    display: absolute;
-    top:0;
-    left: 0;
-    margin: 0 auto;
     padding: 20px 20px;
     border-radius: 15px;
 }
