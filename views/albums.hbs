@@ -1,11 +1,16 @@
-<div class=''>
+<div class="albumDiv">
 
-    {{#each albums}}
-      <img class='' src='{{images.[0].url}}' alt='' />
-      <h2>{{name}}</h2>
-      
-<a href="/tracks/{{id}}">View Tracks</a>
+  {{#each albums}}
 
-    {{/each}}
+    <section class="albumSection">
 
-  </div>
+      <img class="" src="{{images.0.url}}" alt="" />
+      <h3>{{name}}</h3>
+
+      <a href="/tracks/{{id}}">View Tracks</a>
+
+    </section>
+
+  {{/each}}
+
+</div>

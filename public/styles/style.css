@@ -58,11 +58,12 @@
   color: white;
   background-color: #696969;
   margin: 20px 60px;
+  padding: 5px;
   width: 250px;
   display: flex;
   flex-direction: column;
-
   align-items: center;
+  text-align: center;
 }
 .artistSection img {
   width: 250px;
@@ -82,4 +83,85 @@
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.albumDiv {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 80px;
+}
+
+.albumSection {
+  font-size: 15px;
+  font-family: Arial, Helvetica, sans-serif;
+  color: white;
+  background-color: #696969;
+  margin: 20px 60px;
+  padding: 5px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.albumSection img {
+  width: 250px;
+  height: 280px;
+}
+
+.albumSection a {
+  font-size: 13px;
+  border-radius: 5px;
+  width: 100px;
+  height: 20px;
+  margin-bottom: 15px;
+  color: white;
+  text-decoration: none;
+  background-color: #ff6347;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav {
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+  font-size: 30px;
+  margin: 5px;
+  color: white;
+  background-color: #696969;
+}
+nav ul {
+  padding: 0, 20px;
+  margin: 25px;
+  margin-right: 250px;
+  display: flex;
+  flex-direction: row;
+  list-style-type: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.trackDiv {
+  margin: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+.trackSection {
+  padding: 10px;
+  margin: 2px;
+  background-color: #f9f9f9;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.trackSection audio {
+  width: 450px;
+  background-color: #f1f1f1;
 }
