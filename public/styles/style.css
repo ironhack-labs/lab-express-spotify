@@ -1,4 +1,128 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+main {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.form-container {
+  height: 25vh;
+  width: 40vw;
+  background-color: rgba(246, 246, 246, 0.5);
+  display: flex;
+  align-items: center;
+  border-radius: 4px;
+  justify-content: center;
+}
+
+.form-container > form {
+  display: flex;
+  flex-direction: column;
+  width: 30vw;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.1rem;
+}
+
+.artist {
+  width: 25vw;
+  background-color: white;
+  box-shadow: none;
+  padding: 1em 0.5em;
+  -webkit-appearance: none;
+  border: none;
+  outline: none;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+
+.btn-search {
+  max-width: 15vw;
+  padding: 0.9em 1em;
+  color: whitesmoke;
+  background-color: #d44e4e;
+  border: none;
+  margin-top: 2rem;
+  border-radius: 4px;
+}
+
+.row {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 40px;
+  min-height: 100vh;
+  padding: 4rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  margin-top: 1rem;
+  justify-content: space-between;
+  width: 300px;
+  height: 450px;
+  background-color: rgb(88, 88, 88);
+}
+
+.card > h3 {
+  text-align: center;
+  font-size: 16px;
+}
+.card > div {
+  text-align: center;
+  padding: 1rem 0;
+}
+.card .btn {
+  background-color: #d44e4e;
+  padding: 0.9em 2em;
+  text-decoration: none;
+  color: #fefefe;
+  text-align: center;
+  border-radius: 4px;
+  display: inline-block;
+}
+
+.card > img {
+  max-width: 300px;
+  object-fit: scale-down;
+}
+
+.header {
+  background-color: darkgray;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+}
+
+.header > span {
+  display: block;
+  padding: 2rem;
+  font-size: 2rem;
+}
 .track {
   display: flex;
   justify-content: space-between;
+  margin-bottom: 2px;
+  background-color: rgb(250, 250, 250);
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.track > span {
+  font-weight: bold;
+  font-size: 0.9rem;
+}
+.tracks-container  {
+  min-height: 100vh;
+  padding: 3rem;
 }

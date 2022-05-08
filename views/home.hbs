@@ -1,4 +1,14 @@
-<form action="/artist-search" method="GET">
-  <input type="text" placeholder="The Beatles" name="search" />
-  <button type="submit">Search for an artist</button>
-</form>
+<main>
+  <div class="form-container">
+    <form action="/artist-search" method="GET">
+      <input
+        class="artist"
+        type="text"
+        placeholder="Artist to search"
+        name="search"
+        required
+      />
+      <button class="btn-search" type="submit">Search for an artist</button>
+    </form>
+  </div>
+</main>
