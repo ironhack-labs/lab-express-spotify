@@ -1,8 +1,14 @@
-{{#each result}}
-  <div class="tracks">
-    <h4>{{name}}</h4>
-    <audio controls>
-      <source src="{{preview_url}}" />
-    </audio>
+<div class="allTracks">
+  <div class="tracksHeader">
+    <h1>Title</h1>
+    <h1>Listen</h1>
   </div>
-{{/each}}
+  {{#each result}}
+    <div class="tracks">
+      <h4>{{name}}</h4>
+      <audio controls>
+        <source src="{{preview_url}}" />
+      </audio>
+    </div>
+  {{/each}}
+</div>

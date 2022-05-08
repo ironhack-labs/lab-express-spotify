@@ -1,7 +1,11 @@
+<div class="allArtists">
 {{#each result}}
   <div class="artists">
     <img src="{{images.0.url}}" alt="{{name}}" />
+    <div class="artistsText">
     <h1>{{name}}</h1>
     <a href="/albums/{{id}}">View Albums</a>
   </div>
+  </div>
 {{/each}}
+</div>

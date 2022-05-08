@@ -1,7 +1,14 @@
-{{#each result}}
-  <div class="albums">
-    <img src="{{images.0.url}}" alt="{{name}}" />
-    <h1>{{name}}</h1>
-    <a href="/tracks/{{id}}">View Tracks</a>
-  </div>
-{{/each}}
+<div class="albumsTitle">
+  <h1>Albums for: {{result.0.artists.0.name}}</h1>
+</div>
+<div class="allAlbums">
+  {{#each result}}
+    <div class="albums">
+      <img src="{{images.0.url}}" alt="{{name}}" />
+      <div class="albumsText">
+        <h1>{{name}}</h1>
+        <a href="/tracks/{{id}}">View Tracks</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
