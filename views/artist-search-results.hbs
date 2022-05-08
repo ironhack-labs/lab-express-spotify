@@ -1,5 +1,17 @@
-<div>{{#each beersFromApi}}
-    <h1> {{this.body.name}}</h1>
+  <div class="artists">
+      
+  </div>{{#each findArtists}}
 
-  {{/each}}
-</div>
+
+    <img src="{{this.images.0.url}}" alt="" />
+    <div class="artists-name"></div>
+    <div class="artists-name1">
+      <p>{{this.name}}</p>
+    </div>
+    <div class="artists-btn">
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+
+
+{{/each}}
+  </div>

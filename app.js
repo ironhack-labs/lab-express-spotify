@@ -30,17 +30,19 @@ app.get("/", (req, res, next) => {
 });
 
 app.get("/artist-search", (req, res, next) => {
-  const { artistsearch: artist } = req.query;
+  const artist = req.query.name;
 
   console.log(artist);
 
   spotifyApi
     .searchArtists(artist)
     .then((data) => {
-      console.log("The received data from the API: ", data.body);
+      const results = data.body.artists.items;
+
+      console.log("The received data from the API: ", results);
 
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results", data);
+      res.render("artist-search-results", { results });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
