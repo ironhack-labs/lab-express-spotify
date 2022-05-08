@@ -1,0 +1,12 @@
+h1 {
+    display: flex;
+    align-items: center;
+    margin-top: 32px;
+}
+
+.albums {
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: row;
+}
