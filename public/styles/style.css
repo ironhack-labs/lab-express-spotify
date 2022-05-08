@@ -1,0 +1,20 @@
+#home-page {
+  background: url(/images/spotify-background.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+}
+
+#home-page > div {
+  height: 100%;
+  align-items: center;
+}
+
+#home-page form {
+    width: 100;
+}
+
+html,
+body {
+  height: 100%;
+}
