@@ -1,0 +1,21 @@
+<div class="albumBg">
+  <div>
+    <h2>Albums for: {{album.0.artists.0.name}}</h2>
+  </div>
+  <div class="totalAlbums">
+    {{#each album}}
+      <div class="eachAlbum">
+        <div class="imgDiv">
+          <img src="{{images.0.url}}" alt="track image" id="trackImg" />
+        </div>
+        <div class="trackInfo">
+          <div class="trackName"><p><b>{{name}}</b></p>
+          </div>
+
+          <a href="/tracks/{{id}}" id="trackBtn"><b>View Tracks</b></a>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+</div>

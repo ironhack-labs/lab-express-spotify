@@ -1,0 +1,21 @@
+<div class="tracksBg">
+  <div class="navTracks">
+    <h2><b>Title</b></h2>
+    <h2><b>Listen</b></h2>
+  </div>
+
+  <div class="totalTracks">
+    {{#each tracks}}
+      <div class="eachTrack">
+        <p><b>{{name}}</b></p>
+        <audio controls>
+          <source src="{{preview_url}}" />
+
+        </audio>
+
+      </div>
+    {{/each}}
+
+  </div>
+
+</div>

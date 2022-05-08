@@ -1,0 +1,19 @@
+<div class="artistBg">
+
+  <div class="totalArtists">
+
+    {{#each artist}}
+      <div class="eachArtist">
+        <div class="imgDiv">
+          <img src="{{images.0.url}}" alt="album image" id="albumImg" />
+        </div>
+        <div class="albumInfo">
+          <p id="albumName"><b>{{name}}</b></p>
+          <a href="/albums/{{id}}" id="albumBtn"><b>View Album</b></a>
+        </div>
+      </div>
+    {{/each}}
+
+  </div>
+
+</div>
