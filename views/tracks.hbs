@@ -1,8 +1,34 @@
- {{#each track}}
+{{!-- {{#each track}}
     <div>
-        <h1>{{name}}</h1>
+        <h3>{{name}}</h3>
     </div>
     <audio controls>
         <source src="{{preview_url}}"/>
     </audio>
-  {{/each}}
+  {{/each}} --}}
+
+<div class="table-responsive">
+  <table class="table table table-hover">
+    <thead class="text-col">
+      <tr class="table-header">
+
+        <th scope="col" class="align-middle"><h2 class="data-align"><b>Music Title</b></h2></th>
+        <th scope="col" class="align-middle"><h2><b>Listen preview</b></h2></th>
+
+      </tr>
+    </thead>
+    <tbody>
+      {{#each track}}
+        <tr>
+
+          <td class="align-middle"><h5 class="data-align">{{name}}</h5></td>
+          <td class="align-middle">
+            <audio controls>
+              <source src="{{preview_url}}" />
+            </audio></td>
+
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

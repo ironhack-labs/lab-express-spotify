@@ -52,7 +52,9 @@ app.get("/artist-search", (req, res, next) => {
 app.get("/albums/:artistId", (req, res, next) => {
   const { artistId } = req.params;
 
-  spotifyApi.getArtistAlbums(artistId).then(
+  spotifyApi
+  .getArtistAlbums(artistId)
+  .then(
     function (data) {
       console.log("Artist albums", data.body);
       res.render("albums", { album: data.body.items });
@@ -65,7 +67,8 @@ app.get("/albums/:artistId", (req, res, next) => {
 
 app.get("/tracks/:albumId", (req, res, next) => {
   const { albumId } = req.params; //params usamos qd ha mais a frente
-  spotifyApi.getAlbumTracks(albumId).then(
+  spotifyApi.getAlbumTracks(albumId)
+  .then(
     function (data) {
       console.log(data.body.items); // testar na consola p ver onde estamos// abrir passo a passo para testar e encontrar o caminho no back end
       res.render("tracks", { track: data.body.items }); // o que pomos para verem no front end

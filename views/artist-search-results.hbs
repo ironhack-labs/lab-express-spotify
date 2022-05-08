@@ -1,10 +1,16 @@
+<div class="cards-row">
+    {{#each artist}}
+    <div class="card border-0" style="width: 18rem;">
 
-
-  {{#each artist}}
-    <div>
-        <h1>{{name}}</h1>
-      <img  src={{images.[0].url}} />
-
+        <img src={{images.[0].url}} class="card-img-top card-size" alt="...">
+        <div class="card-body text-secondary bg-light ">
+            <h5 class="card-title text-center text-card">{{name}}</h5>
+            <div class="d-grid">
+                <a href="/albums/{{id}}" target="_blank" class="btn btn-outline-danger text-center">View albuns</a>
+            </div>
+        </div>
     </div>
-    <button type='submit'><a href="/albums/{{id}}" target="_blank"> View albuns</a></button>
-  {{/each}}
+
+    {{/each}}
+
+</div>
