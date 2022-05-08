@@ -1,0 +1,25 @@
+<nav>
+{{!--   <ul>
+    <li><a class="nav-text" href="/">Here you can search and be happy with your favourite music </a></li>
+    <img class="spotify-logo-nav" src="/images/spotify-logo.jpg">
+  </ul> --}}
+</nav>
+<h1 class="nav-p">Listen without limits</h1>
+<p class="nav-p">Play millions of songs ad-free, on-demand, and offline.</p>
+<div class="artists-div">
+  {{#each artists}}
+    <div class="div-div">
+      {{#if this.images.0.url}}
+      <img class="artists-search-img" src="{{this.images.0.url}}" />
+      <h1 class="artist-name">{{this.name}}</h1>
+      {{else}}
+      <img class="artists-search-img" src="/images/background-noimg1.jpg" />
+      <h1 class="artist-name">{{this.name}}</h1>
+      {{/if}}
+      <a class="artist-tag" href="/artist-albuns/{{id}}">View Albums</a>
+    </div>
+  {{/each}}
+</div>
+<footer>
+  <a class="footer-a" href="">Why go Premium?</a>
+</footer>

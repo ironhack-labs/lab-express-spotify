@@ -1,0 +1,30 @@
+<nav>
+  {{!   <ul>
+    <li><a class="nav-text" href="/">Here you can search and be happy with your favourite music </a></li>
+    <img class="spotify-logo-nav" src="/images/spotify-logo.jpg">
+  </ul> }}
+</nav>
+<h1 class="nav-p">Albums:</h1>
+<div class="artists-div">
+  {{#each artists}}
+    <div class="div-div">
+      {{#if this.images.0.url}}
+        <img class="artists-search-img" src="{{this.images.0.url}}" />
+        <h1 class="artist-name">{{this.name}}</h1>
+      {{else}}
+        <img class="artists-search-img" src="/images/background-noimg1.jpg" />
+        <h1 class="artist-name">{{this.name}}</h1>
+      {{/if}}
+      <a class="artist-tag" href="/tracks/{{id}}">Tracks HERE</a>
+    </div>
+  {{/each}}
+</div>
+<footer>
+  <a class="footer-a" href="">Why go Premium?</a>
+</footer>
+
+{{!-- {{#each artists}}
+  <p>{{this.name}}</p>
+  <img src="{{this.images.0.url}}" />
+  <a href="/tracks/{{id}}">View tracks</a>
+{{/each}} --}}

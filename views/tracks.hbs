@@ -1,0 +1,42 @@
+<nav>
+  {{!   <ul>
+    <li><a class="nav-text" href="/">Here you can search and be happy with your favourite music </a></li>
+    <img class="spotify-logo-nav" src="/images/spotify-logo.jpg">
+  </ul> }}
+</nav>
+<h1 class="nav-p">Artist tracks</h1>
+{{#each artists}}
+  {{!-- <p>{{this.total_tracks}}</p> --}}
+  <table>
+    <tr>
+      <th><h6>{{this.name}}</h6></th>
+      <th><audio controls src="{{this.preview_url}}">
+        </audio></th>
+    </tr>
+  </table>
+  {{!--  <h6>{{this.name}}</h6>
+  <audio controls src="{{this.preview_url}}">
+  </audio> --}}
+  {{!-- <img src="{{images.0.url}}"
+  <a href="/tracks/{{id}}">View Track</a> --}}
+{{/each}}
+<footer>
+  <a class="footer-a" href="">Why go Premium?</a>
+</footer>
+{{! <table>
+  <tr>
+    <th>Company</th>
+    <th>Contact</th>
+    <th>Country</th>
+  </tr>
+  <tr>
+    <td>Alfreds Futterkiste</td>
+    <td>Maria Anders</td>
+    <td>Germany</td>
+  </tr>
+  <tr>
+    <td>Centro comercial Moctezuma</td>
+    <td>Francisco Chang</td>
+    <td>Mexico</td>
+  </tr>
+</table> }}
