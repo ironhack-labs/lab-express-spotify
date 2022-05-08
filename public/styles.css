@@ -1,0 +1,127 @@
+body{
+    font-family:Verdana, Geneva, Tahoma, sans-serif
+}
+
+.landing{
+    background-image: url('/images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100%;
+    height: 800px;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+#artist-search{
+    padding: 15px; 
+    width: 200px;
+}
+
+.button-home{
+
+    background-color: rgb(201, 72, 72);
+    padding: 15px;
+    color: antiquewhite;
+    border-color:  rgb(201, 72, 72) ;
+    font-size: 15px;
+
+}
+
+.search-results {
+    display: flex;
+    flex-direction: row;
+    background-color:  #00b172;
+    flex-wrap: wrap;
+
+    
+}
+
+ .search-results article{
+
+    display: flex; 
+    flex-direction: column;  
+    justify-content: center;
+   align-items: center;
+    color: antiquewhite;
+     
+}
+    
+.search-results h2{
+    font-size: 20px;
+    color: antiquewhite;
+}
+ 
+
+
+.artist-photo{
+    width: 200px;
+    height: 200px;
+    margin: 10px;
+    
+} 
+
+.button-artist{
+    background-color: rgb(201, 72, 72);
+    color: antiquewhite;
+    border-color:  rgb(201, 72, 72) ;
+    font-size: 15px;
+    width: 150px;
+    height: 30px;
+    margin: 10px;
+    
+}
+
+.button-artist a{
+color:white;
+text-decoration: none;
+
+}
+
+.albums-results{
+  
+    
+}
+   
+
+.albums-results h2{
+    font-size: 20px;
+    color: antiquewhite;
+}   
+
+
+ 
+.albums-style {
+    display: flex; 
+    flex-direction: column;  
+    justify-content: center;
+   align-items: center;
+    color: antiquewhite;
+     
+ 
+
+}
+
+.tracks{
+    background-color: #00b172;
+    color: antiquewhite; 
+    display: flex;
+    flex-direction: row;
+    background-color:  #00b172;
+    flex-wrap: wrap;
+
+    
+}
+
+.tracks article{
+    margin: 30px; 
+}
+
+.tracks article h2{
+  align-items: center;
+  font-size: 20px;
+}
+

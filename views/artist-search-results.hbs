@@ -1,8 +1,11 @@
-    <div>
+    <div class="search-results">
+       
     {{#each findArtists}}
-   <p> {{this.name}}</p>
-    <a href='/albums/{{this.id}}' > View Albums </a>
-    <img src="{{this.images.0.url}}" alt='imageSpotify'>
+     <article class="artists-style">
+   <h2> {{this.name}}</h2>
+    <img class='artist-photo' src="{{this.images.0.url}}" alt='imageSpotify'>
+    <button class="button-artist"> <a href='/albums/{{this.id}}'> View Albums </a></button>
+        </article>
      {{/each}} 
     </div>
   
