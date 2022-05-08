@@ -1,0 +1,9 @@
+
+   <div>
+    {{#each findAlbums}}
+   <p> {{this.name}}</p>
+    <img src="{{this.images.0.url}}" alt='imageSpotify'>
+    <button><a href="/tracks/{{this.id}}" class="btn btn-primary">View Tracks</a></button>
+  </div>
+     {{/each}} 
+</div>
