@@ -1,0 +1,14 @@
+{{!-- <h1>Albums for: {{this.name}}</h1> --}}
+
+{{#each findAlbums}}
+
+<div class="card col-3">
+  <img  src="{{this.images.0.url}}" class="" alt="{{this.name}}">
+  <div class="album-body">
+    <h1 class="album-title">{{this.name}}</h1>
+    <button><a href="/tracks/{{this.id}}" class="">Tracks</a></button>
+  </div>
+</div>  
+
+
+{{/each}} 
