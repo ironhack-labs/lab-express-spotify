@@ -1,0 +1,11 @@
+{{#each artistData}}
+<div class="card col-3">
+    <img src="{{this.images.url}}" class="artist-img" alt="{{this.name}}">
+    <div class="container">
+        <div class="content">
+            <h1 class="artist-title">{{this.name}}</h1>
+            <button><a href="/albums/{{this.id}}" class=""></a></button>
+        </div>
+    </div>
+</div>
+{{/each}}
