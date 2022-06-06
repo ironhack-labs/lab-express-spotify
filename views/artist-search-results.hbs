@@ -1,0 +1,15 @@
+<title>Searching for {{artist.0.name}}</title>
+
+<div class="3-columns"></div>
+<div class="singleArtists">
+    {{#each artist}}
+    <div class="image">
+        <a href="/albums/{{id}}">
+        <img class="artistImg" src="{{images.0.url}}" alt=""></a>
+    </div>
+    <div class="info">
+        <p class="artistName">{{name}}</p>
+        <a href="/albums/{{id}}" class="viewAlbumsBtn">View Albums</a>   
+    </div>
+    {{/each}}
+</div>

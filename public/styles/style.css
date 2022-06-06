@@ -1,0 +1,13 @@
+body { 
+    background: url(/images/spotify-background.jpeg) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+  }
+
+
+.image img {
+    width: 320px;
+    height: 320px;
+}
