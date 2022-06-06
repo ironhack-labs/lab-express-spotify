@@ -2,6 +2,7 @@ require('dotenv').config();
 
 
 const express = require('express');
+const res = require('express/lib/response');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -24,25 +25,30 @@ spotifyApi
 
 // Our routes go here:
 app.get('/', (req, res, next) => {
-  console.log('testeando el req query ->', req.query)
-
   res.render('home')
 })
 
-
-
-
-
-
-
-app.get('/',(req,res, next)=>{
-  console.log(req.query)
-  res.send('hola')
+app.get('/artist-search', (req, res, next) => {
+  spotifyApi
+  .searchArtists(req.query.artist)
+  .then(data => {
+    res.render('artist-search-results', data.body.artists)
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
 
+app.get('/albums/:id',(req,res,next) =>{
+  spotifyApi.getArtistAlbums(req.params.id)
+  .then( data => {
+      console.log('Artist albums', data.body);
+      res.render('albums',data.body)
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
 
+// spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
 
 
 
