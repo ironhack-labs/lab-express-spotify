@@ -1,13 +1,54 @@
-body { 
+* {
+    margin: 0;
+    padding: 0;
+    }
+
+/* home */
+.homeBg {
     background: url(/images/spotify-background.jpeg) no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
     background-size: cover;
-  }
+}
 
+.center {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.center div {
+    background-color: #ffffff96;
+    width: 600px;
+    height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-.image img {
-    width: 320px;
-    height: 320px;
+.searchArtistBtn {
+    background-color: #FA6863;
+    color: white;
+    border: none ;
+    padding: 5px;
+
+    display: block;
+    margin: 0 auto;
+}
+
+/* artist search & albums STRUCTURE */
+.columns-3 {
+	background: #aaa;
+	display: flex;
+	flex-wrap: wrap;
+    margin: 0% 10%;
+}
+
+.singleArtists {
+    flex-grow: 1;
+	width: 33%;
+	height: 100px;
+}
+
+.viewAlbums {
+    background-color: #EF6866;
 }

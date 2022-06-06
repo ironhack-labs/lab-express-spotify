@@ -1,17 +1,20 @@
 <title>{{album.0.name}}...</title>
 
-<div class="3-columns">
-<div class="singleArtists">
-    {{#each album}}
-    <div class="artistImg">
-         {{!-- <a href="/tracks/{{id}}"> --}}
-        <img src="{{images.0.url}}" alt="">
-        {{!-- </a> --}}
+<div class="columns-3">
+    <div class="singleArtists"></div>
+        {{#each album}}
+
+            <div class="artistImg">
+                <a href="/tracks/{{id}}">
+                <img src="{{images.0.url}}" alt="">
+                </a>
+            </div>
+            <div class="artistInf">
+                <p class="artistName">{{name}}</p>
+                <a href="/tracks/{{id}}" class="viewAlbumsBtn">View Tracks</a>   
+            </div>
+    
+        {{/each}}
     </div>
-    <div class="artistInf">
-        <p class="artistName">{{name}}</p>
-        <a href="/tracks/{{id}}" class="viewAlbumsBtn">View Tracks</a>   
-    </div>
-    {{/each}}
-</div>
+
 </div>
