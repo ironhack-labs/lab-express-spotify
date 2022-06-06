@@ -1,11 +1,9 @@
 require('dotenv').config();
 
-
 const express = require('express');
 const res = require('express/lib/response');
 const hbs = require('hbs');
 const SpotifyWebApi = require('spotify-web-api-node');
-
 const app = express();
 
 app.set('view engine', 'hbs');
@@ -20,36 +18,31 @@ const spotifyApi = new SpotifyWebApi({
 // Retrieve an access token
 spotifyApi
   .clientCredentialsGrant()
-  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-  .catch(error => console.log('Something went wrong when retrieving an access token', error));
+  .then( data => spotifyApi.setAccessToken(data.body['access_token']))
+  .catch( error => console.log('Something went wrong when retrieving an access token', error));
 
-// Our routes go here:
-app.get('/', (req, res, next) => {
-  res.render('home')
-})
+// Routes
+app.get('/', (req, res, next) => { res.render('home') });
 
 app.get('/artist-search', (req, res, next) => {
   spotifyApi
   .searchArtists(req.query.artist)
-  .then(data => {
-    res.render('artist-search-results', data.body.artists)
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
-})
+    .then( data => {res.render('artist-search-results', data.body.artists)})
+    .catch( err => console.log('searching artist error -> ', err));
+});
 
+app.get('/albums/:artistId',(req, res, next) =>{
+  spotifyApi
+  .getArtistAlbums(req.params.artistId)
+    .then( data => {res.render('albums', data.body)})
+    .catch( err => console.log('searching albums error ->', err));
+});
 
-app.get('/albums/:id',(req,res,next) =>{
-  spotifyApi.getArtistAlbums(req.params.id)
-  .then( data => {
-      console.log('Artist albums', data.body);
-      res.render('albums',data.body)
-    })
-    .catch(err => console.log('The error while searching artists occurred: ', err));
-})
-
-
-// spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
-
-
+app.get('/tracks/:albumId/', (req, res, next) => {
+  spotifyApi
+  .getAlbumTracks(req.params.albumId)
+    .then( data => { res.render('tracks', data.body)})
+    .catch( err => console.log('searching track error ->', err))
+});
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

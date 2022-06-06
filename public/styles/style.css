@@ -1,0 +1,64 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+/* Home */
+#background{
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.searchBar{
+  height: 100%;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar > form {
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 50%;
+  height: 20%;
+  margin-bottom: 5px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.searchBar > form > input{
+  height: 25px;
+  width: 70%;
+}
+
+.searchBar > form > button{
+  border: none;
+  margin-top: 10px;
+  background-color: rgb(234, 88, 69);
+  color: aliceblue;
+  width: 150px;
+  height: 30px;
+}
+
+/* Search Results */
+
+.searchResults > img{
+  width: 250px;
+}
+
+
+/* Albums */
+
+#test{
+  border: 2px solid crimson;
+}
+
+/* Tracks */
+
+#artistTracks{
+  border: 1px solid red;
+}

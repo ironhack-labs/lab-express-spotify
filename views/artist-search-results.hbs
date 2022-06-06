@@ -1,11 +1,9 @@
 
-
-<div id="search-albums">
-
+<div id="searchResults" >
   {{#each items}}
-  <img src="{{images.0.url}}" alt="">
-     <h1> {{name}} </h1>
-     <a href="/albums/{{id}}"><button type="submit">View Albums</button></a>
+    <img src="{{images.0.url}}" alt="">
+    <h1> {{name}} </h1>
+    <a href="/albums/{{id}}">View Albums</a>
   {{/each}}
-
 </div>
+
