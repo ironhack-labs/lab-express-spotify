@@ -1,28 +1,30 @@
+<div class="m-5">
+
+  <nav
+    class="navbar bg-dark text-white bg-light d-flex justify-content-between"
+  >
+    <span class="navbar-brand mb-0 h1">Title</span>
+    <span class="navbar-brand mb-0 h1">Listen</span>
+  </nav>
+
+  <div class="mt-5">
+
+    {{#each songs}}
+
+      <div class="d-flex justify-content-between">
+
+        <div>
+          <p>{{name}}</p>
+        </div>
 <div>
-    
+        <audio controls src="{{preview_url}}">
+          Your browser does not support the
+          <code>audio</code>
+          element.
+        </audio>
+</div>
+      </div>
 
-  {{#each songs}}
-   
-
-
-    <div>
-    <p>{{name}}</p>
-
-
-    <audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-
-
-    </div>
-
-
-
-
-
-
-  {{/each}}
-</div> 
+    {{/each}}
+  </div>
+</div>

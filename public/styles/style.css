@@ -1,0 +1,34 @@
+
+
+body {
+
+    /* background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;  */ 
+    /* si coloco esta seccion, afecta los resultados que se ven en artist-search-result */
+
+display: flex;
+align-items: center;
+justify-content: center;
+}
+
+
+
+.searchBar {
+    width: 500px;
+    height:50px;
+    align-content: center;
+}
+
+body > form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    width: 700px;
+    height:200px;
+    background: rgba(255, 255, 255, 0.4);
+    
+}
+

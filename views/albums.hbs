@@ -1,24 +1,24 @@
-<div>
-    
+<h2>Albums for {{band}} </h2>
 
-  {{#each dataBodyItems}}
-   
+<div class="album py-5 bg-light">
+  <div class="container">
 
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex justify-content-center">
 
-    <div>
-    <h3>Album: {{name}}</h3>
+      {{#each dataBodyItems}}
+        <div class="card text-center m-5" style="width: 18rem;">
+          
+          <img class="card-img-top" src={{images.0.url}} alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/tracks/{{id}}" class="btn btn-danger">View tracks</a>
+          </div>
 
-  <img src={{images.0.url}} alt="foto">
-
-  <div><a href="/tracks/{{id}}">View tracks</a></div>
+        </div>
+      {{/each}}
 
     </div>
+  </div>
+</div>
 
-
-
-
-
-
-  {{/each}}
-</div> 
 

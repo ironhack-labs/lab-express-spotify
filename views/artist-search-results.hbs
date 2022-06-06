@@ -1,28 +1,22 @@
-<div>
-    
-
-  {{#each dataBodyArtistsItems}}
-   
 
 
-    <div>
-    <h3>Album: {{name}}</h3>
+<div class="album py-5 bg-light">
+  <div class="container">
 
-  <img src={{images.1.url}} alt="Album photo">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3 d-flex justify-content-center">
 
+      {{#each dataBodyArtistsItems}}
+        <div class="card text-center m-5" style="width: 18rem;">
+          
+          <img class="card-img-top" src={{images.1.url}} alt="Card image cap" />
+          <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/albums/{{id}}" class="btn btn-danger">View Albums</a>
+          </div>
 
-<div><a href="/albums/{{id}}">View Albums</a></div>
-
+        </div>
+      {{/each}}
 
     </div>
-
-
-
-
-
-
-  {{/each}}
-</div> 
-
-<p>hola mundo</p>
-
+  </div>
+</div>
