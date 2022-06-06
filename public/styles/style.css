@@ -31,13 +31,14 @@
 }
 
 .searchBar > form > input{
-  height: 25px;
+  border: none;
+  height: 30px;
   width: 70%;
 }
 
 .searchBar > form > button{
   border: none;
-  margin-top: 10px;
+  margin-top: 15px;
   background-color: rgb(234, 88, 69);
   color: aliceblue;
   width: 150px;
@@ -52,17 +53,19 @@
 }
 
 #each-Artist{
-  margin: 20px;
+  margin: 30px;
   width: 20%;
   height: 20%;
 }
 
-#each-Artist > img{
+img{
   width: 250px;
+  height: 250px;
 }
 
 #info-Artist{
   background-color: rgb(63, 63, 63);
+  width: 250px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -88,10 +91,13 @@
 }
 
 /* Albums */
-#test > img{
-  width: 250px;
+#test {
+  border: 1px solid red;
 }
 
+#test {
+  background-color: black;
+}
 
 /* Tracks */
 #artistTracks{
