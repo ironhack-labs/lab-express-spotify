@@ -45,20 +45,18 @@
 }
 
 /* Search Results */
-
-.searchResults > img{
+#searchResults > img{
   width: 250px;
 }
 
 
 /* Albums */
-
-#test{
-  border: 2px solid crimson;
+#test > img{
+  width: 250px;
 }
 
-/* Tracks */
 
+/* Tracks */
 #artistTracks{
   border: 1px solid red;
 }
