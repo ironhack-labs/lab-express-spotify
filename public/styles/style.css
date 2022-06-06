@@ -1,0 +1,17 @@
+.home {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#artist-search {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#artist-search img{
+    height: 100px;
+    width: 100px;
+}
