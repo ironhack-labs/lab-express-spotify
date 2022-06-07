@@ -1,8 +1,10 @@
 <div id="albums">
-    <h1>Albums</h1>
     {{#each items}}
-    <img src="{{images.0.url}}" alt="image1">
-    <h1>{{name}}</h1>
-    <a href="/tracks/{{id}}"><input type="button" value="View Tracks"></a>
+    <div id="box-albumsInfo">
+    <img src="{{images.0.url}}" alt="image1" id="albumImg">
+    <h1 id="albumName">{{name}}</h1>
+    <a href="/tracks/{{id}}"><input type="button" value="View Tracks" id="viewTracks"></a>
+    </div>
     {{/each}}
 </div>
+

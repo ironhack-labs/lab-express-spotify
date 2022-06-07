@@ -2,16 +2,123 @@
     background-image: url('/images/spotify-background.jpeg');
     background-size: cover;
     background-repeat: no-repeat;
-}
-
-#artist-search {
+    height: 570px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
 
-#artist-search img{
-    height: 100px;
-    width: 100px;
+#searchArtist {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 700px;
+    background-color: white;
+    opacity: 0.5;
 }
+
+#bar {
+    width: 300px;
+    height: 25px;
+}
+
+#search {
+    color: white;
+    background-color: red;
+    height: 30px;
+    font-size: large;
+    border-style: none;
+    padding: 0px 10px;
+    margin-top: 10px;
+}
+
+#artist-search {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1000px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+#artist-search::-webkit-scrollbar {
+    width: 12px;
+}
+#artist-search::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3); 
+    border-radius: 10px;
+}
+#artist-search::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.5);
+}
+
+#artist-search img{
+    height: 300px;
+    width: 300px;
+    padding: 0px 0px;
+}
+
+.formatAlbums {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    margin: 10px 0px;
+}
+
+#nameArtist {
+    width: 300px;
+    color: white;
+    background-color: black;
+    margin: 0px;
+    text-align: center;
+}
+
+#viewAlbums {
+    width: 300px;
+    color: white;
+    background-color: black;
+    border-style: none;
+    height: 20px;
+}
+
+#viewAlbums:hover {
+    width: 300px;
+    color: red;
+    background-color: black;
+    border-style: none;
+    height: 20px;
+}
+
+
+#albums {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 1000px;
+    flex-wrap: wrap;
+    overflow: auto;
+}
+
+#albumImg {
+    width: 300px;
+    height: 300px;
+}
+
+#box-albumsInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+    height: 400px;
+    margin: 10px 0px;
+} 

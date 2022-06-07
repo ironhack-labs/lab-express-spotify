@@ -32,6 +32,7 @@ app.get('/',(req,res,next)=>{
 })
 
 app.get('/artist-search',(req,res,next)=>{
+    /* albumsClass(); */
     const {search} = req.query
     spotifyApi
   .searchArtists(search)
@@ -45,6 +46,7 @@ app.get('/artist-search',(req,res,next)=>{
 
 app.get('/albums/:artistId', (req, res, next) => {
     // .getArtistAlbums() code goes here
+    
 
     spotifyApi.getArtistAlbums(req.params.artistId)
     .then(data => {
@@ -59,13 +61,18 @@ app.get('/albums/:artistId', (req, res, next) => {
   app.get('/tracks/:albumId', (req, res, next) => {
     // .getArtistAlbums() code goes here
 
-    spotifyApi.searchTracks(req.params.albumId)
+    spotifyApi.getAlbumTracks(req.params.albumId)
     .then(data => {
         /* console.log('Artist albums'); */
-        console.log('Data',data.body.items)
+        console.log('Data',data.body)
         res.render('tracks',data.body);
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
   });
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+  /* function albumsClass () {
+        const body = document.getElementsByClassName('home');
+        body.className = 'albums';
+  } */
+
+app.listen(3001, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

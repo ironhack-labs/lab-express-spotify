@@ -1,7 +1,9 @@
 <div id="artist-search">
     {{#each items}}
+    <div class="formatAlbums">
     <img src="{{images.0.url}}" alt="image1">
-    <h1>{{name}}</h1>
-    <a href="/albums/{{id}}" name="albums"><input type="button" value="View Albums"></a>
+    <h1 id="nameArtist">{{name}}</h1>
+    <a href="/albums/{{id}}" name="albums"><input type="button" value="View Albums" id="viewAlbums"></a>
+    </div>
     {{/each}}
 </div>
