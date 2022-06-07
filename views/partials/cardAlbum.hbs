@@ -1,0 +1,13 @@
+{{#each items}}
+  <div id="each" >
+    <img src="{{images.0.url}}" alt="" height="250" width="250" >
+    <div id="info" >
+      <p> {{name}} </p>
+        {{#if total_tracks}}
+          <a href="/tracks/{{id}}">View Tracks</a>
+        {{else}}
+          <a href="/albums/{{id}}">View Albums</a>
+        {{/if}}
+    </div>
+  </div>
+{{/each}}

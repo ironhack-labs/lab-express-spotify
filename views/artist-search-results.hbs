@@ -1,17 +1,3 @@
-
-  <div id="searchResults" >
-
-    {{#each items}}
-      <div id="each-Artist">
-
-        <img src="{{images.0.url}}" alt="">
-
-        <div id="info-Artist">
-          <p> {{name}} </p>
-          <a href="/albums/{{id}}">View Albums</a>
-        </div>
-
-      </div>
-    {{/each}}
-
-  </div>
+<div id="searchResults" >
+  {{>cardAlbum this}}
+</div>

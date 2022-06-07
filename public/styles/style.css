@@ -45,25 +45,19 @@
   height: 30px;
 }
 
-/* Search Results */
 #searchResults{
   display: flex;
   flex-wrap: wrap;
   align-items: center;
 }
 
-#each-Artist{
+#each{
   margin: 30px;
   width: 20%;
   height: 20%;
 }
 
-img{
-  width: 250px;
-  height: 250px;
-}
-
-#info-Artist{
+#info {
   background-color: rgb(63, 63, 63);
   width: 250px;
   display: flex;
@@ -71,14 +65,14 @@ img{
   align-items: center;
 }
 
-#info-Artist > p {
+#info > p {
   color: white;
   font-family: Arial, Helvetica, sans-serif;
   font-size: large;
   margin-top: 5px;
 }
 
-#info-Artist > a {
+#info > a {
   text-decoration: none;
   text-align: center;
   width: 50%;
@@ -88,18 +82,4 @@ img{
   font-family: Arial, Helvetica, sans-serif;
   background-color: rgb(234, 88, 69);
   border-radius: 5px;
-}
-
-/* Albums */
-#test {
-  border: 1px solid red;
-}
-
-#test {
-  background-color: black;
-}
-
-/* Tracks */
-#artistTracks{
-  border: 1px solid black;
 }
