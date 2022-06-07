@@ -1,8 +1,10 @@
-<div>
+<div id="track" >
   {{#each items}}
-    <li>{{name}}</li>
-    <audio controls>
-      <source src="{{preview_url}}">
-    </audio>
+    <div id="each-track">
+      <p> {{name}} </p>
+      <audio controls>
+        <source src="{{preview_url}}">
+      </audio>
+    </div>
   {{/each}}
 </div>
