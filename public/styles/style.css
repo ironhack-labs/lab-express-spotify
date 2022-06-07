@@ -1,12 +1,19 @@
 
+.img-back{
+
+
+     background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+align-items: center;
+justify-content: center;
+}
 
 body {
 
-    /* background-image: url("/images/spotify-background.jpeg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    height: 100vh;  */ 
-    /* si coloco esta seccion, afecta los resultados que se ven en artist-search-result */
 
 display: flex;
 align-items: center;
@@ -21,7 +28,7 @@ justify-content: center;
     align-content: center;
 }
 
-body > form{
+.img-back > form{
     display: flex;
     align-items: center;
     justify-content: center;
