@@ -1,15 +1,28 @@
 
-<head>
 <title>Tracks</title>
-<link rel="stylesheet" href="styles/style.css">
-</head>
+<table class="uk-table uk-table-hover uk-table-divider uk-table-striped">
+  <thead>
+    <tr>
+      <th class="uk-heading-medium uk-secondary uk-text-bold uk-text-warning">Title</th>
+      <th class="uk-heading-medium uk-secondary uk-text-bold uk-text-warning">Listen</th>
 
-<div class="center">
-Title
-{{#each tracks}}
-    <li>{{name}}</li>
-    <audio controls>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tracks}}
+      <tr>
+        <td>{{name}}</td>
+        <td>
+          {{#if preview_url}}
+            <audio controls>
     <source src="{{preview_url}}">
 </audio>
-{{/each}}
-</div>
+          {{else}}
+            No Hay preview
+          {{/if}}
+        </td>
+      </tr>
+    {{/each}}
+
+  </tbody>
+</table>

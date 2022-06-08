@@ -1,6 +1,6 @@
 <title>Searching for {{artist.0.name}}</title>
-
-<div class="3-columns"></div>
+{{!-- 
+<div class="columns-3"></div>
 <div class="singleArtists">
     {{#each artist}}
     <div class="image">
@@ -12,4 +12,24 @@
         <a href="/albums/{{id}}" class="viewAlbumsBtn">View Albums</a>   
     </div>
     {{/each}}
+</div> --}}
+
+<h2 class="uk-heading-medium uk-secondary uk-text-bold uk-text-warning">Albums for {{artist.0.name}} </h2>
+<div class="uk-child-width-1-3 uk-margin-medium-top uk-grid-match uk-grid">
+  {{#each artist}}
+   <div>
+  <div class="uk-card uk-card-default">
+    <div class="uk-card-media-top">
+      <img src={{images.0.url}} alt="{{name}}" width="100%" height="250" />
+    </div>
+    <div class="uk-card-body uk-card-hover uk-card-secondary">
+      <h3 class="uk-card-title">{{name}}</h3>
+        <a
+          href="/albums/{{id}}"
+          class="uk-button uk-button-danger"
+        >View Albums test</a>
+    </div>
+  </div>
+</div>
+  {{/each}}
 </div>
