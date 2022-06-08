@@ -1,26 +1,37 @@
 <div class="tracks_container">
 
- <h1>tracks</h1>
-{{#each tracks}}
+    <h1>tracks</h1>
 
-<li> {{name}} </li>
-<audio controls  src=" {{preview_url}} " ></audio>
 
-{{/each}}
+    <table class="table table-dark table-striped">
+        <thead>
+            <tr>
+                <th scope="col">Song</th>
+                <th scope="col">Play</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tracks}}
+            <tr>
+                <td>{{name}}</td>
+                <td>
+                    {{#if preview_url}}
+                    <audio controls src=" {{preview_url}} ">
+                        Tu navegador no tolera esta etiqueta
+                        <code>audio</code>.
+                    </audio>
+                    {{else}}
+                    No se puede mostrar cación
+                    {{/if}}
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+
 
 
 
 </div>
-
-<div class="tracks_container">
-  <div class="row align-items-start">
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-    <div class="col">
-      One of three columns
-    </div>
-  </div>
