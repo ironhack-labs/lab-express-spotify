@@ -1,1 +1,12 @@
-<button>View Albums </button>
+<h2>Album for: {{search}}</h2>
+
+<div class="uk-child-width-1-3 uk-margin-medium-top uk-grid-match " uk-grid>
+    {{#each albums}}
+    {{> cardAlbum this}}
+   
+    {{/each}}
+
+
+
+
+</div>
