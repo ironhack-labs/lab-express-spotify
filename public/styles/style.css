@@ -1,3 +1,13 @@
+*{
+    box-sizing: border-box;
+    margin:0;
+    padding:0;
+}
+
+a{
+    color: white;
+}
+
 .img-back{
     background-image: url(/images/spotify-background.jpeg);
     background-size: cover;
@@ -27,7 +37,7 @@
 
 
 div.contenedor{
-    background-color: rgb(11, 0, 24);
+    background-color: rgb(1, 0, 28);
     width:100%;
     height: 100%;
     display: flex;
@@ -37,12 +47,45 @@ div.contenedor{
 
 }
 
+.albumsContainer{
+    width: 100%;
+    height:100% ;
+    background: #000;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+div.tracks_container{
+display: flex;
+flex-direction: column;
+}
+
+
+
+
 div.card{
-    margin: 20px;
+    margin: 15px;
     text-align: center;
+    height: 550px;
+}
+
+.card-body{
+    height: 150px;
 }
 
 .artistImg{
     width: 100%;
-    height: 100%;
+    height: 90%;
+}
+
+
+
+
+.album_container{
+    border: 3px solid blue;
+}
+
+div.artistData{
+    border: 2px solid red;
 }

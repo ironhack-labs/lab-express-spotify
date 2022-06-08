@@ -1,0 +1,23 @@
+
+  
+
+<div class="card" style="width: 18rem;">
+    <img class="artistImg" src="{{images.0.url}}" alt="">
+  <div class="card-body">
+    
+    <h5 class="card-title">{{name}}</h5>
+
+    {{#if total_tracks}}
+          <button type="button" class="btn btn-primary"><a href="/tracks/{{id}}">View Tracks</a></button>
+        {{else}}
+          <button type="button" class="btn btn-primary"><a href="/tracks/{{id}}">View Albums</a></button>
+        {{/if}}
+
+  </div>
+</div>
+    
+   
+
+    {{/each}}
+
+

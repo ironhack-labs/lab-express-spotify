@@ -12,6 +12,8 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+hbs.registerPartials(__dirname + "/views/partials")
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -32,32 +34,47 @@ app.get("/", (req,res,next)=>{
 })
 
 app.get("/artist-search", (req,res,next)=>{
-    console.log(req.query, "Si llegamos ")
+    
     const {search} = req.query //TODO vamos solo por los datos 
     spotifyApi
   .searchArtists(search) //TODO me trae solo el dato del artista
   .then((data) => {
+    
     res.render("artist-search-result",{albums:data.body.artists.items})
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
-app.get('/albums/:artistId', (req, res, next) => {
-    // .getArtistAlbums() code goes here
-    
-    spotifyApi.getArtistAlbums(req.params.artistId)
-  .then(function(data) {
-    console.log('Artist albums', data.body);
-    res.render("albums",{albums:data.body.items})
-  }, function(err) {
-    console.error(err);
-  });
+app.get("/albums/:id", (req, res, next) => {
+  const { id } = req.params;
+  console.log("ENTRANDO A ID",id);
+  spotifyApi.getArtistAlbums(id)
+  .then( (data) => {
+     
+      res.render("albums", { artist: data.body.items});
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+});
 
-  });
+app.get("/tracks/:albumId", (req, res, next) => {
+  const { albumId } = req.params;
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      res.render("tracks", { tracks: data.body.items });
+    })
+    .catch((error) => {
+      console.log("error", error);
+      res.send("error no se ha encontrado la info ");
+    });
+});
 
   
 
 
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(3008, () => console.log('My Spotify project running on port 300 🎧 🥁 🎸 🔊'));

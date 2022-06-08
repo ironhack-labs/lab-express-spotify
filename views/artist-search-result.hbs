@@ -1,20 +1,16 @@
 <div class="contenedor" >
-    {{#each albums}}
-
-<div class="card" style="width: 18rem;">
-    <img class="artistImg" src="{{images.0.url}}" alt="">
+  {{#each albums}}
+  <div class="card" style="width: 18rem;">
+  <img class="artistImg" src="{{images.0.url}}" class="card-img-top" alt="...">
   <div class="card-body">
-    
     <h5 class="card-title">{{name}}</h5>
-    
-    <a href="/albums/{{id}}" class="btn btn-warning">View Albums</a>
+    <p class="card-text">  </p>
+    <button type="button" class="btn btn-primary"><a href="/albums/{{id}}">View Albums</a></button>
   </div>
 </div>
-    
-   
-
-    {{/each}}
-
+  {{/each}}
 </div>
+
+
 
  
