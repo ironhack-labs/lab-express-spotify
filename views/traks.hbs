@@ -1,0 +1,22 @@
+<div>
+<ul>
+<li>
+<h1>Title</h1>
+</li>
+<li>
+<h1>Listen</h1>
+</li>
+</ul>
+</div>
+<div>
+{{#each traks}}
+<ul>
+<li>
+{{name}}
+<audio controls>
+<source src='{{preview_url}}'>
+</audio>
+</li>
+</ul>
+{{/each}}
+</div>

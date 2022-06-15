@@ -1,0 +1,12 @@
+<div>
+    {{#each albums}}
+    <div>
+        <h3>{{name}}</h3>
+        <p>{{popularity}}</p>
+        <p>{{uri}}</p>
+        <a href="/albums/{{id}}" name="albums">
+        <button>view albums</button>
+        </a>
+    </div>
+    {{/each}}
+</div>

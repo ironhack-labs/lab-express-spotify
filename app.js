@@ -31,23 +31,42 @@ app.get('/artist-search',(req,res,next)=>{
     const {search} = req.query
     spotifyApi
     .searchArtists(search)
-    .then((data)=>{
-        //console.log('El resivo de API', data.body.artists.items)
+    .then(data=>{
+        //console.log('El resivo de API', data.body.artists.items) muestra array
         res.render('artist-search-results',{albums:data.body.artists.items})
     })
     .catch((err)=>{
         console.log('Ha salido un error',err)
     })
 })
-app.get('/albums/:id',(req,res,next)=>{
-    const {id}=req.params;
-    console.log('Si se tiene el: ', id);
-    spotifyApi.getArtistAlbums(id)
-    .then(function(data) {
-    console.log('Artist albums', data.body.items)
-    res.render('albums',)   
-    }), function(err) {
-    console.error(err);
-    }; 
-})
+
+app.get("/albums/:id", (req, res, next) => {
+  const { id } = req.params;
+  spotifyApi.getArtistAlbums(id)
+    .then(data =>{
+      //console.log(data.body); Accedo al array completo
+      //console.log("Artist albums", data.body.items);// Accedo a los objetos del array
+      res.render("albums", { albums: data.body.items });
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+});
+
+app.get('/traks/:albumId',(req,res,next)=>{
+  const { albumId } = req.params;
+  console.log('Que es el albumId',albumId)
+  spotifyApi
+  .getAlbumTracks(albumId)
+  .then(data =>{
+    console.log('que es el data.body.items: ',{traks:data.body.items})
+    res.render('traks',{traks:data.body.items})
+  })
+  .catch(err =>{
+    console.log('Something went wrong!', err)
+  })
+
+});
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
