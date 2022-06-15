@@ -1,20 +1,19 @@
+    <title>searching for {{artist.0.name}}...</title>
 <div class="uk-card uk-card-default uk-width-1-2@m">
-    <title>{{album.0.name}}...</title>
-    <div class="uk-card-header">
-        <div class="uk-grid-small uk-flex-middle" uk-grid>
-            <div class="uk-width-auto">
-                <img class="uk-border-circle" width="100" height="100" src={{images.0.url}} alt="{{name}}">
-            </div>
-            <div class="uk-width-expand">
-                <h3 class="uk-card-title uk-margin-remove-bottom">{{name}}</h3>
-                <p class="uk-text-meta uk-margin-remove-top"><time datetime="2016-04-01T19:00">April 01, 2016</time></p>
-            </div>
+        <div class="uk-card-media-top" uk-grid>
+                <img  width="100%" height="auto" src={{images.0.url}} alt="{{name}}">
         </div>
-    </div>
-    <div class="uk-card-body">
-        <button type="submit"><a href="/tracks/{{_id}}">View tracks</a></button>
-    </div>
-    <div class="uk-card-footer">
-        <a href="#" class="uk-button uk-button-text">Read more</a>
+    <div class="uk-card-body uk-card-hover uk-card-secondary">
+        <h3 class="uk-card-title">{{name}}</h3>
+      {{#if album_type}}
+        <a
+          href="/tracks/{{id}}"
+          class="uk-button uk-button-danger"
+        >ViewTracks</a>
+      {{else}}
+        <a href="/albums/{{id}}/{{name}}"
+          class="uk-button uk-button-danger"
+        >View Artists</a>
+      {{/if}}
     </div>
 </div>

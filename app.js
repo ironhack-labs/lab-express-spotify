@@ -34,16 +34,36 @@ app.get('/', (req, res, next) => res.render('home'));
 app.get('/artist-search', (req, res, next) => {
  //destructuring 
     const { artist } = req.query;
-    
+    req.nameArtist = artist;
     spotifyApi
     .searchArtists(artist)
     .then(data => {
         console.log("The received data from the API: ", data.body.artists.items);
-        res.render('artist-search-results', { artist: data.body.artists.items });
+        res.render('artist-search-results', { artist: data.body.artists.items, artist });
     } )
     .catch(error => console.log('Something went wrong while were searching the artist', error));
 });
+app.get('/albums/:artistId', (req, res, next) => {
+    const { artistId, name } = req.params;
+    spotifyApi
+    .getArtistAlbums(artistId)
+    .then(data => {
+        console.log("The received data from the API: ", data.body.items);
+        res.render('albums', { albums: data.body.items,  name });
+    } )
+    .catch(error => console.log('Some Error ocurred while were searching the ALBUM', error));
+})
 
+app.get('/tracks/:albumId', (req, res, next) => {
+    const { albumId } = req.params
+    
+    spotifyApi
+    .getAlbumTracks(albumId)
+    .then(data => {
+        res.render('tracks', { tracks: data.body.items });
+    } )
+    .catch(error => console.log('Something went wrong while getting the tracks', error));
+});
 
 
 
