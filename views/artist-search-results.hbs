@@ -1,14 +1,12 @@
-
-<h1>
-    {{#each artistList}}
-    <h5>
-        {{name}}
-        <img class="artist-photo" src="{{images.0.url}}">
-        
-       <a href="/albums">View Albums</a> 
-
-    </h5>
+<main
+  class='container text-center d-flex flex-column alto justify-content-center  mt-2'
+>
+  <div class='row'>
+    
+    {{#each artists}}
+        {{> artistpartial}}
     {{/each}}
-</h1> 
 
 
+  </div>
+</main>
