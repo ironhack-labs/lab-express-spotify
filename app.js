@@ -59,13 +59,13 @@ app.get("/album/:artistId", (req, res, next) => {
   });
 
 app.get("/album/:albumId/tracks", (req, res, next) => {
-  console.log('parameters: ', req.params)
+  //console.log('parameters: ', req.params)
   spotifyApi.getAlbumTracks(req.params.albumId)
   .then(function (data) {
-      console.log(data.body)
+      //console.log(data.body)
       //console.log(req.params.artistId);
-      //console.log("Artist albums", data.body);
-      res.render("tracks", { tracks: data.body.items});
+      console.log("Artist albums", data.body);
+      res.render("tracks", { tracksList: data.body.items});
   })
   .catch(err => console.log('The error while searching tracks occurred: ', err)); 
 });  
