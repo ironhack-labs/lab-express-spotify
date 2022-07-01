@@ -47,26 +47,39 @@ app.get("/artist-search", (req, res) => {
 
 
 
-app.get("/album-search", (req, res) => {
+app.get("/albums/:artistId", (req, res) => {
 let artistId;
   // How to get artist id???
-  spotifyApi.getArtistAlbums(artistId).then(
-    function(albums) {
-      console.log('Artist albums', albums.body);
-    })
+  console.log(req.params.artistId)
+
+  spotifyApi.getArtistAlbums((req.params.artistId))
+  .then(function(data) {
+    console.log('Artist albums', data.body.items);
+    res.render('albums.hbs', {"albumArray" : data.body.items});
+  })
     .catch(error => {
       console.log('Error retrieving albums: ', error);
       res.send('error retrieving albums');
   }
-);
-
-
-
+)
 })
 
 
+// Get tracks in an album
+app.get("/albums/tracks/:albumId", (req, res) => {
+  let albumId;
 
-
+  console.log(req.params.albumId)
+spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(function(data) {
+    console.log('Album tracks', data.body.items);
+    res.render('tracks.hbs', {"trackArray" : data.body.items});
+  })
+  .catch(error => {
+    console.log('Error retrieving tracks: ', error);
+    res.send('error retrieving tracks')
+  })
+})
 
 
 
