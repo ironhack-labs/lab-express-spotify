@@ -1,0 +1,19 @@
+<h1>Artist Search Results</h1>
+<main>
+{{#each artistArray}}
+
+<div>
+<h2>{{this.name}}</h2>
+<div>
+    <img src="{{this.images.0.url}}" alt="" height="200px"/>
+</div>
+
+   <button class ="viewAlbums" onclick="window.location.href='https://w3docs.com';">
+      View Albums
+    </button>
+
+</div>
+
+{{/each}}
+
+</main>
