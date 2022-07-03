@@ -1,0 +1,37 @@
+body{
+    margin: 0;
+    
+}
+.home-page{
+    position: relative;
+    background-image: url("/images/spotify-background.jpeg");
+    height: 800px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 60px 200px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+input{
+    width: 300px;
+    height: 32px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 0;
+    padding: 0 15px;
+}
+
+button{
+    width: 160px;
+    height: 30px;
+    background-color: red;
+    color:aliceblue;
+    border: 0;
+}

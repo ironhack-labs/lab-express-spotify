@@ -1,0 +1,14 @@
+{{#each findTrack}}
+<h3>{{this.name}}</h3>
+
+{{#if preview_url}}
+
+      <p>Audio Preview</p>
+
+      <audio src='{{this.preview_url}}' controls></audio>
+      </div>
+    {{/if}}
+
+
+
+{{/each}}
