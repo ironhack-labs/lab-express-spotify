@@ -1,6 +1,6 @@
 body{
     margin: 0;
-    
+    background-color: #FF5403;
 }
 .home-page{
     position: relative;
@@ -16,7 +16,7 @@ body{
     flex-direction: column;
     justify-content: center;
     align-items: center; 
-    padding: 60px 200px;
+    padding: 60px 165px;
     background-color: rgba(255, 255, 255, 0.2);
 }
 input{
@@ -34,4 +34,15 @@ button{
     background-color: red;
     color:aliceblue;
     border: 0;
+}
+
+/* .album{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+} */
+.element{
+    width: 200px;
+    height: 200px;
 }

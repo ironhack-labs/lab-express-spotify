@@ -1,0 +1,17 @@
+{{#each findArtists}}
+
+<div>
+    <h1>{{this.name}}</h1>
+    <a href="/albums/{{this.id}}">View Albums</a>
+</div>
+
+
+<div class ='artistImages'>
+    {{#if images}}
+    <img class ="element" src="{{this.images.0.url}}" alt="">
+    {{else}}
+    <img class ="element" src="images/placeholder.png" alt="">
+    {{/if}}
+</div>
+
+{{/each}}
