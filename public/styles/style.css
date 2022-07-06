@@ -1,7 +1,118 @@
 .hamsterPic {
-    border-radius: 50%;
+  border-radius: 50%;
 }
 
 body {
-    background-color: orange;
+    background-color: black;
+    color:#d9ff00;
+    font-family: 'Cute Font', cursive;
+
+}
+
+#mainPage {
+  text-align: center;
+  align-items: center;
+  position:relative;
+  z-index: 10;
+}
+
+#mainPage img {
+  margin: 15px;
+  width:65%;
+  height:auto;
+}
+
+#artistInput {
+width: 800PX;
+height:25px;
+margin-bottom: 10px;
+background-color: rgba(255, 255, 255, 0.508);
+
+
+
+}
+
+button {
+    background-color:  rgba(140, 135, 140, 0.5);
+    color:white;
+    height: 35px;
+    width: 150px;
+    font-size: 20px;
+
+
+}
+
+h1 {
+  font-family: 'Staatliches', cursive;
+  font-size: 70px;
+  padding:5px;
+  width: 700px;
+  height: 100px;
+  margin: auto;
+  text-justify: center;
+  color: #ff009d29;
+  text-shadow: 0 0 5px #d9ff00, 0 0 10px #d9ff00,
+           0 0 20px #d9ff00, 0 0 30px #d9ff00,
+           0 0 40px #d9ff00;
+}
+
+#overlay {
+z-index:12;
+position:fixed;
+top:650Px;
+left: 550PX;
+}
+
+
+
+.results {
+    display: inline-block; 
+    margin:10px;
+    font-family: 'Staatliches', cursive;
+text-align: center;
+}
+
+.results img {
+  width:auto;
+  height: 150px;
+}
+
+.results a {
+  color:#d9ff00;
+  font-family: 'Staatliches', cursive;
+
+}
+
+
+.viewAlbums {
+  background-color: black;
+  color:white;
+}
+
+.viewTracks {
+  background-color: black;
+  color:white;
+}
+
+.results2 {
+  display: inline-block; 
+  margin:10px;
+  font-family: 'Staatliches', cursive;
+text-align: center;
+}
+
+.results2 img {
+width:auto;
+height: 150px;
+}
+
+.results2 a {
+color:#d9ff00;
+font-family: 'Staatliches', cursive;
+background-color: rgba(0, 0, 0, 0);
+}
+
+.titles {
+  width:150px;
+  height:auto;
 }

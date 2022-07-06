@@ -1,23 +1,24 @@
-<h1>Artist Search Results</h1>
-<main>
+<h1 class="pageTitle">Artist Search Results</h1>
+
+
+
 {{#each artistArray}}
+  <div class= "results"> 
+
+      <div class= "titles"> <h2>{{this.name}}</h2></div>
+
+
+
+    <div><img src="{{this.images.0.url}}" alt="" height="100px"/></div>
+
 
 <div>
-<h2>{{this.name}}</h2>
-<div>
-    <img src="{{this.images.0.url}}" alt="" height="200px"/>
-</div>
-
-{{!-- how to make artist Id update? --}}
-
    <button class ="viewAlbums"> 
     <a href ='albums/{{this.id}}'>
       View Albums
       </a>
     </button>
-
 </div>
-
+</div>
 {{/each}}
 
-</main>

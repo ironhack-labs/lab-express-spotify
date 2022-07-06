@@ -83,6 +83,6 @@ spotifyApi.getAlbumTracks(req.params.albumId)
 
 
 
-app.listen(3000, () =>
-  console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
+app.listen(4000, () =>
+  console.log("My Spotify project running on port 4000 🎧 🥁 🎸 🔊")
 );
