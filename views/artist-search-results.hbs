@@ -1,0 +1,15 @@
+
+{{#each items}}
+<section>
+    <p>Name: {{this.name}}</p>
+    {{#each images}}
+    <img src={{this}} alt=""/>
+    {{/each}}
+    <button>
+        <a href={{this.href}}>Link</a>
+    </button>
+    <button>
+        <a href=/albums/{{this.id}}>View Albums</a>
+    </button>
+</section>
+{{/each}}

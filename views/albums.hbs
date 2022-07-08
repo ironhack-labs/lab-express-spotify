@@ -1,0 +1,11 @@
+{{#each items}}
+    <section>
+        <p>Name of the album: {{this.name}} </p>
+        {{#each images}}
+            <img src={{this}}/>
+        {{/each}}
+        <button>
+            <a href=/albums/artistId/{{this.id}}>See tracks</a>
+        </button>
+    </section>
+{{/each}}
