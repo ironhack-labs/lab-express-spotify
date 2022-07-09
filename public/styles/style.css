@@ -1,13 +1,17 @@
 body {
     background-image: url('../images/spotify-background.jpeg');
     background-size: cover;
+    background-repeat: no-repeat;
+    /* background-color: red; */
 }
 
 #search form {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin: 50vw 0 50vw 0;
+    margin: 50vw 10vw 50vw 10vw;
+    padding: 2vw 0 2vw 0;
+    background-color: rgba(255, 255, 255, 0.4);
 }
 
 #search form input {
@@ -28,3 +32,8 @@ body {
     border-radius: 10vw;
 
 }
+
+#results-artist {
+    background-image: none;
+}
+
