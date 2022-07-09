@@ -36,10 +36,8 @@ app.get("/artist-search/", (req, res) => {
 });
 
 app.get('/albums/:artistId', (req, res) => {
-  //spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
   spotifyApi.getArtistAlbums(req.params.artistId)
   .then((data) => {
-    //console.log('Artist albums', data.body.items);
     res.render("albums",{"albumArr" : data.body.items});
   })
   .catch((err => console.error('Error while getting artists albums:',err)))
