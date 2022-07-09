@@ -19,7 +19,7 @@ spotifyApi // Retrieve an access token
   .clientCredentialsGrant()
   .then(data => spotifyApi.setAccessToken(data.body['access_token']))
   .catch(error => console.log('Something went wrong when retrieving an access token', error));
-  
+
 
 // Routes:
 
@@ -36,14 +36,22 @@ app.get("/artist-search/", (req, res) => {
 });
 
 app.get('/albums/:artistId', (req, res) => {
-  spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
-  //spotifyApi.getArtistAlbums(req.params.artistId)
+  //spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
+  spotifyApi.getArtistAlbums(req.params.artistId)
   .then((data) => {
-    console.log('Artist albums', data.body.items);
+    //console.log('Artist albums', data.body.items);
     res.render("albums",{"albumArr" : data.body.items});
   })
   .catch((err => console.error('Error while getting artists albums:',err)))
 });
 
+app.get("/tracks/:albumTracksId", (req, res) => {
+  spotifyApi.getAlbumTracks(req.params.albumTracksId)
+  .then((data) => {
+    console.log('tracks', data.body.items);
+    res.render("tracks",{"trackArr" : data.body.items});
+  })
+  .catch((err => console.error('Error while getting tracks:',err)))
+});
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
