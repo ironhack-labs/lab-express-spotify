@@ -1,0 +1,20 @@
+i am albums.hbs<br>
+{"albumArr" : data.body.artists.items}
+from 
+app.get('/albums/:artistId', (req, res) => {
+  // .getArtistAlbums()
+  spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
+<br><br><br><br>
+
+
+{{#each albumArr}}
+<div class="searchResults">
+    <img src="{{this.images.0.url}}" alt="image of{{this.name}}"/>
+    <br>
+    {{this.name}}
+    <br>
+    {{!-- <button> 
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </button> --}}
+</div>
+{{/each}}
