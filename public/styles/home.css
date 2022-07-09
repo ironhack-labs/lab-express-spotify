@@ -1,0 +1,39 @@
+body {
+	background-image: url("/images/spotify-background.jpeg");
+	background-position: bottom;
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.overlay {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	background-color: rgba(66, 10, 10, 0.332);
+}
+
+form {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	gap: 1rem;
+	background-color: rgba(255, 255, 255, 0.438);
+	padding: 6rem 10rem;
+}
+
+#artist {
+	padding: 0.3rem 7rem;
+}
+
+#submit-btn {
+	align-self: center;
+	padding: 0.5rem 1rem;
+	font-size: 1.1rem;
+	color: white;
+	background-color: rgb(243, 67, 67);
+	border: none;
+}

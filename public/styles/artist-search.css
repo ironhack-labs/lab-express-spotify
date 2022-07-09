@@ -1,0 +1,39 @@
+body {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	justify-items: center;
+	padding: 2rem 0;
+}
+
+img {
+	width: 100%;
+}
+
+.box {
+	height: 20rem;
+	width: 20rem;
+	margin-bottom: 10rem;
+}
+
+.container {
+	background-color: grey;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding: 0.5rem;
+}
+
+p {
+	font-size: 1.2rem;
+	color: white;
+	font-weight: bold;
+	margin-bottom: 0.3rem;
+}
+
+a {
+	background-color: rgb(243, 67, 67);
+	color: white;
+	padding: 0.5rem;
+	border-radius: 10px;
+}

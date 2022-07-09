@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/styles/tracks.css" />
+
+<div class="container helper">
+	<p>Title</p>
+	<p>Listen</p>
+</div>
+
+{{#each albumArr}}
+	<div class="container">
+		<p>{{this.name}}</p>
+		{{#if this.preview_url}}
+			<audio src="{{this.preview_url}}" controls></audio>
+		{{/if}}
+	</div>
+{{/each}}

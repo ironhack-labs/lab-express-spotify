@@ -1,0 +1,24 @@
+body {
+	padding: 2rem 7rem;
+	display: flex;
+	flex-direction: column;
+	gap: 0.5rem;
+}
+
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background: #f1f3f4;
+	padding: 0.5rem 1rem;
+	font-size: 1.2rem;
+	font-weight: bold;
+}
+
+.helper {
+	color: grey;
+	background-color: rgb(70, 70, 70);
+	padding: 2rem;
+	font-size: 2rem;
+	font-weight: bold;
+}

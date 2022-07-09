@@ -1,0 +1,11 @@
+<link rel="stylesheet" href="/styles/artist-search.css" />
+
+{{#each albumArr}}
+	<div class="box">
+		<img src="{{this.images.0.url}}" alt="" />
+		<div class="container">
+			<p>{{this.name}}</p>
+			<a href="/album/{{id}}/tracks">View Tracks</a>
+		</div>
+	</div>
+{{/each}}
