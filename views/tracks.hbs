@@ -1,8 +1,10 @@
-{{#each tracks}}
-
-    <p>{{this.name}}</p>
-    <audio controls> 
-        <source src="{{this.preview_url}}"" type="audio/mpeg">
-    </audio>
-
-{{/each}}
+<section id="tracks">
+    {{#each tracks}}
+        <div id="track">
+            <h1 class="title-track">{{this.name}}</h1>
+            <audio controls class="control-audio"> 
+                <source src="{{this.preview_url}}"" type="audio/mpeg">
+            </audio>
+        </div>
+    {{/each}}
+</section>
