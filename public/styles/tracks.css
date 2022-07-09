@@ -1,0 +1,21 @@
+body {
+    background-color: rgb(241, 229, 229);
+    margin: 0;
+}
+
+#tracks-page {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+thead {
+    background-color: rgb(69, 66, 66);
+    color: white;
+    height: 4rem;
+}
+
+td {
+    height: 4rem;
+}

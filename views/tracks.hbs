@@ -1,0 +1,33 @@
+<link rel="stylesheet" href="/styles/tracks.css">
+
+<section id="tracks-page">
+
+    <table>
+        <thead>
+            <th>Title</th>
+            <th>Listen</th>
+        </thead>
+        <tbody>
+            {{#each tracksArr}}
+            <tr>
+                <td>
+                    <p>{{this.name}}</p>
+                </td>
+                <td>
+                    <audio controls>
+                        <source src="{{this.preview_url}}" type="">
+                        Your browser does not support the audio tag.
+                    </audio>
+                </td>
+            </tr>
+            {{/each}}
+        </tbody>
+    </table>
+
+
+
+
+
+
+
+</section>

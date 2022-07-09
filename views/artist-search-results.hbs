@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/styles/artists.css">
+
+<section id="artists-page">
+    {{#each artistsArr}}
+    <div>
+
+        {{#each this.images}}
+        {{#ifEquals this.width 640}}
+        <img src="{{this.url}}">
+        {{/ifEquals}}
+        {{/each}}
+
+        <p>{{this.name}}</p>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+    {{/each}}
+</section>

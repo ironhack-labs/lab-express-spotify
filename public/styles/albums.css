@@ -1,0 +1,42 @@
+body {
+    background-color: rgb(237, 232, 232);
+    margin: 0;
+}
+
+#albums-page {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem;
+    background-color: rgb(69, 66, 66);
+    width: 15rem;
+    height: 21rem;
+    border-radius: 0.3rem;
+}
+
+img {
+    width: 15rem;
+    height: 15rem;
+}
+
+p {
+    color: white;
+    text-align: center;
+}
+
+a {
+    padding: 0.5rem 1rem;
+    background-color: rgb(212, 66, 66);
+    color: white;
+    border: none;
+    border-radius: 0.2rem;
+    text-decoration: none;
+    margin-bottom: 1rem;
+}

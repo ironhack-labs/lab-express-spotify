@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/styles/albums.css">
+
+<section id="albums-page">
+    {{#each albumsArr}}
+    <div>
+        {{#each this.images}}
+        {{#ifEquals this.width 640}}
+        <img src="{{this.url}}">
+        {{/ifEquals}}
+        {{/each}}
+
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+
+    {{/each}}
+</section>
