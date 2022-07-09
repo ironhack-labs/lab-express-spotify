@@ -39,8 +39,8 @@ app.get('/albums/:artistId', (req, res) => {
     spotifyApi.getArtistAlbums(req.params.artistId) 
     .then(
         function(data) {
-          console.log('Artist albums', data.body.items);
-          res.render('albums', data.body)
+          console.log('Artist albums', data.body);
+          res.render('albums', data.body);
         },
         function(err) {
           console.error(err);
@@ -48,14 +48,18 @@ app.get('/albums/:artistId', (req, res) => {
       );
 })
 
-// app.get('/albums/artistId/:albumId'), (req,res) => {
-//     console.log()
-//     spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', { limit : 5, offset : 1 })
-//   .then(function(data) {
-//     console.log(data.body);
-//   }, function(err) {
-//     console.log('Something went wrong!', err);
-//   });
-// }
+app.get('/track-information/:albumId', (req,res) => {
+    spotifyApi.getAlbumTracks('req.params.albumId', { limit : 5, offset : 1 })
+  .then(
+    function(data) {
+    console.log(data.body);
+    res.render('track-information', data.body);
+  }, 
+  function(err) {
+    console.log('Something went wrong!', err);
+  }
+  );
+});
 
 app.listen(3002, () => console.log('My Spotify project running on port 3002 🎧 🥁 🎸 🔊'));
+ 
