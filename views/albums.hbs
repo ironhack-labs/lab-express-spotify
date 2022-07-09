@@ -1,0 +1,21 @@
+{{#if body.items}}
+<div class="list-page">
+    <div class="list-element">
+        {{#each body.items}}
+
+        <div class="element">
+            <img src='{{this.images.0.url}}' />
+            <p>{{this.name}}</p>
+            <a href='/tracks/{{this.id}}'>View Tracks</a>
+        </div>
+
+        {{/each}}
+    </div>
+
+    <div class="pagination">
+        <a href="/albums/{{body.artistId}}?offset={{body.previousOffset}}">❮</a>
+        <a href="#">{{body.pageNumber}}</a>
+        <a href="/albums/{{body.artistId}}?offset={{body.nextOffset}}">❯</a>
+    </div>
+</div>
+{{/if}}

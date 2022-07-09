@@ -1,0 +1,219 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.search-container {
+    background-image: url('../images/spotify-background.jpeg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+.search-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 30%;
+    height: 30%;
+    min-width: 300px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.search-box h1 {
+   color: white;
+   text-align: center;
+   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+   font-size: 4vh;
+   text-shadow: 3px 3px rgb(207, 86, 82);
+}
+
+.search-form {
+    width: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-bar {
+    background-color: white;
+    border-color: white;
+    border-radius: 5%;
+    width: 100%;
+    padding: 2%;
+}
+
+.search-button {
+    background-color: rgb(246, 104, 99);
+    border-radius: 5%;
+    border-color: rgb(246, 104, 99);
+    color: white;
+    width: 50%;
+    padding: 2%;
+}
+
+.list-page {
+    background-color: black;
+    position: absolute;
+    height: 100vh;
+    width: 100vw;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.list-element {
+    color: white;
+    margin-top: 2vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 1vw
+}
+
+.element {
+    background-color: grey;
+    border-style: solid;
+    border-width: 1px;
+    border-color: white;
+    width: 15vw;
+    height: 40vh;
+}
+
+.element img {
+    width: 15vw;
+    height: 15vw;
+    object-fit: cover;
+}
+
+.element p {
+    text-align: center;
+}
+
+.element a {
+    background-color: rgb(246, 104, 99);
+    border-radius: 5%;
+    border-color: rgb(246, 104, 99);
+    color: white;
+    width: 40%;
+    padding: 2%;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.pagination {
+    display: inline-block;
+    background-color: rgb(187, 187, 187);
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin-top: 5vh;
+}
+
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+    transition: background-color .3s;
+    border: 1px solid #ddd;
+}
+
+.pagination a.active {
+    background-color: #4CAF50;
+    color: white;
+    border: 1px solid #4CAF50;
+}
+
+.pagination a:hover:not(.active) {
+    background-color: #ddd;
+}
+
+#tracks-wrapper {
+    display: block;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 1%;
+}
+
+#tracks {
+    font-family: Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    width: 100%;
+    outline: 1px solid darkslategray;
+    table-layout: fixed;
+}
+
+.title-two {
+    text-align: center;    
+}
+
+#tracks td,
+#tracks th {
+    border: 1px solid #ddd;
+    padding-left: 10px;
+    padding-top: 0;
+    padding-bottom: 0;
+    border: none;  
+}
+
+#tracks tr:first-child {
+    border: 2px solid rgb(105, 105, 105);
+}
+
+#tracks tr {
+    border: 2px solid white;
+}
+
+#tracks tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+#tracks tr:hover {
+    background-color: #ddd;
+}
+
+#tracks th {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-align: left;
+    background-color: dimgray;
+    color: white;   
+}
+
+#tracks audio {
+    float:right;
+    padding-right: 8%;
+}
+
+#tracks tr:nth-child(even) audio::-webkit-media-controls-play-button,
+#tracks tr:nth-child(even) audio::-webkit-media-controls-panel {
+    background-color: #f2f2f2;
+    color: #f2f2f2;
+}
+
+#tracks tr:hover audio::-webkit-media-controls-play-button,
+#tracks tr:hover audio::-webkit-media-controls-panel {
+    background-color: #ddd;
+    color: #ddd;
+}
+
+audio::-webkit-media-controls-play-button,
+audio::-webkit-media-controls-panel {
+    background-color: white;
+    color: white;
+}
