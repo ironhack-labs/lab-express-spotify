@@ -1,0 +1,27 @@
+
+#search{
+    text-align: center;
+}
+
+.artist-image{
+    max-width: 8em;
+}
+
+#artist{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 30%;
+    background-color: beige;
+}
+
+.view-album-btn{
+    margin: 1em;
+    border: 2px solid rgb(28, 28, 71);
+    border-radius: 8%;
+}
+
+.view-album-btn a{
+    color: rgb(32, 32, 97);
+    text-decoration: none;
+}

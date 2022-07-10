@@ -1,0 +1,9 @@
+
+
+  {{#each albums.body.items}}
+  <div id="album-div">
+    <img class="artist-image" src="{{this.images.0.url}}">
+ <h2 class="album-name">{{this.name}}</h2>  
+ <button>View Tracks</button>
+ </div>
+ {{/each}}
