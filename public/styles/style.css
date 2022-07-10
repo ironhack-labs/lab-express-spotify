@@ -101,3 +101,27 @@ img {
   text-align: center;
   color: var(--color-white);
 }
+
+table {
+  width: 90%;
+  margin: 5%;
+  padding-bottom: 5%;
+}
+
+thead {
+  background-color: var(--color-darkGray);
+}
+
+td {
+  padding: 0.3rem 0;
+  text-align: center;
+}
+
+thead td {
+  width: 50%;
+  color: var(--color-lightGray);
+}
+
+tbody td {
+  background-color: var(--color-lightGray);
+}
