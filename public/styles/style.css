@@ -1,0 +1,61 @@
+:root {
+  --color-red: #fb6862;
+  --color-lightGray: #cccccc;
+  --color-white: #ffffff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  font-size: 1rem;
+  border-radius: 5px;
+}
+
+body {
+  height: 100vh;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  background-image: url('/images/spotify-background.jpeg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position-y: 50%;
+}
+
+#home-container {
+  display: flex;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+#search-box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60%;
+  row-gap: 0.5rem;
+  padding: 3% 7%;
+  background-color: rgb(255, 255, 255, 0.5);
+}
+
+#search-box > input {
+  width: 60%;
+  padding: 0.5rem 0.8rem;
+  border: 1px solid var(--color-lightGray);
+}
+
+input[type='text']:focus {
+  outline-color: var(--color-red);
+}
+
+button {
+  background-color: var(--color-red);
+  border: 1px solid var(--color-red);
+  padding: 0.5rem 0.8rem;
+  color: var(--color-white);
+}
+
+button:hover {
+  background-color: var(--color-white);
+  color: var(--color-red);
+  cursor: pointer;
+}
