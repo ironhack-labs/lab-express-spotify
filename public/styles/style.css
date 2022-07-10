@@ -1,0 +1,8 @@
+h1, .search-result, .albums {
+    text-align: center;
+}
+
+img {
+    width: 300px;
+    height: auto;
+}

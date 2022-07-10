@@ -1,0 +1,8 @@
+    <h1>Search Results</h1>
+    {{#each items}}
+    <div class="search-result">
+        <p>{{name}}</p>
+        <img src="{{images.0.url}}" alt="">
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
