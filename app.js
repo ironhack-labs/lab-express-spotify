@@ -42,4 +42,13 @@ app.get('/artist-search', (req, res) => {
     .catch((err) => console.log('An error ocurred:', err))
 })
 
+app.get('/albums/:artistId', (req, res) => {
+  spotifyApi.getArtistAlbums(req.params.artistId).then((resp) => {
+    const albumsInfo = resp.body.items.map((album) => {
+      return { id: album.id, name: album.name, imageUrl: album.images.length > 0 ? album.images[1].url : '/images/no_image.png' }
+    })
+    res.render('albums', { albums: albumsInfo })
+  })
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))

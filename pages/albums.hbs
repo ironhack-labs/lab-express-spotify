@@ -1,10 +1,10 @@
 <div class='grid-container'>
-  {{#each artists}}
+  {{#each albums}}
     <div class='elements-wrapper'>
       <img src={{this.imageUrl}} alt={{this.name}} />
       <div class='details'>
         <p>{{this.name}}</p>
-        <a class='button' href='/albums/{{this.id}}'>View Albums</a>
+        <a class='button' href='/tracks/{{this.id}}'>View Tracks</a>
       </div>
     </div>
   {{/each}}
