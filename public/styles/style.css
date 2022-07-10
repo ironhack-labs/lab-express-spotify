@@ -2,6 +2,7 @@
   --color-red: #fb6862;
   --color-lightGray: #cccccc;
   --color-white: #ffffff;
+  --color-darkGray: #4d4d4d;
 }
 
 * {
@@ -15,7 +16,7 @@ body {
   height: 100vh;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   background-image: url('/images/spotify-background.jpeg');
-  background-repeat: no-repeat;
+  background-repeat: repeat-y;
   background-size: cover;
   background-position-y: 50%;
 }
@@ -58,4 +59,35 @@ button:hover {
   background-color: var(--color-white);
   color: var(--color-red);
   cursor: pointer;
+}
+
+#artists-wrapper {
+  display: grid;
+  justify-items: center;
+  align-items: center;
+  margin: 2% 10%;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  row-gap: 1%;
+}
+
+img {
+  max-width: 300px;
+  min-width: 80px;
+  max-height: 300px;
+  min-height: 80px;
+  border-radius: 5px 5px 0 0;
+}
+
+.details {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  row-gap: 0.5rem;
+  padding: 0.5rem 0;
+  background-color: var(--color-darkGray);
+  border-radius: 0 0 5px 5px;
+}
+
+.details > p {
+  color: var(--color-white);
 }

@@ -29,4 +29,17 @@ app.get('/', (req, res) => {
   res.render('home')
 })
 
+app.get('/artist-search', (req, res) => {
+  if (req.query.artists === '') return res.redirect('/')
+  spotifyApi
+    .searchArtists(req.query.artists)
+    .then((data) => {
+      const artistInfo = data.body.artists.items.map((artist) => {
+        return { id: artist.id, name: artist.name, imageUrl: artist.images.length > 0 ? artist.images[1].url : '/images/no_image.png' }
+      })
+      res.render('artist-search', { artists: artistInfo })
+    })
+    .catch((err) => console.log('An error ocurred:', err))
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'))
