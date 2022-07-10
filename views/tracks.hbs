@@ -1,0 +1,16 @@
+<section id="banner">
+    <span id="title">Title</span>
+    <span id="listen">Listen</span>
+</section>
+
+<section id="tracks">
+    <ul>
+        {{#each tracks}}
+        <li>
+            <span id="name">{{this.name}}</span>
+            <audio id="preview" controls src="{{this.preview_url}}">Your browser does not support the
+            <code>audio</code> element.</audio>
+        </li>
+        {{/each}}
+    </ul>
+</section>
