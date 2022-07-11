@@ -1,0 +1,16 @@
+<section id="artist-details">
+
+    {{#each everyArtist}}
+    <h1>{{this.name}}</h1>
+
+    {{#if images}}
+        {{#each images}}
+        <img src="{{images.url}}" alt="">
+        {{/each}}
+    {{/if}}
+
+{{!--     <p>{{this.id}}</p> --}}
+    <a href="/albums/{{this.id}}">View Albums</a>
+
+    {{/each}}
+</section>
