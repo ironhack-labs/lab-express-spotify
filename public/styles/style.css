@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.resultbox-wrapper {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+}
+
+.resultbox {
+    width: 20vw;
+    margin: 1rem;
+    background-color: rgb(57, 122, 125);
+}
+
+.resultbox > img {
+    width: 100%;
+}
+
+.resultbox > a {
+    width: 100%;
+}

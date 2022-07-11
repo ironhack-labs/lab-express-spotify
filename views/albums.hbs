@@ -1,0 +1,14 @@
+ALBUMS
+<div class="resultbox-wrapper">
+  {{#if albums}}
+    {{#each albums}}
+      <div class="resultbox">
+        <img src="{{this.img.url}}" alt="" />
+        <p>{{this.name}}</p>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+      </div>
+    {{/each}}
+  {{else}}
+    <p>No albums found</p>
+  {{/if}}
+</div>

@@ -1,0 +1,15 @@
+<p>Artist Search</p>
+<div class="resultbox-wrapper">
+  {{#if items}}
+    {{#each items}}
+      <div class="resultbox">
+        <img src="{{this.img.url}}" alt="" />
+        <p>{{this.name}}</p>
+        <a href="/albums/{{this.id}}">View Albums</a>
+      </div>
+    {{/each}}
+  {{else}}
+    <h3>No artist found.</h3>
+  {{/if}}
+</div>
+
