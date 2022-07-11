@@ -1,0 +1,16 @@
+<h1>Here are the albums!</h1>
+
+{{#each info}}
+  <ul>
+    <li>
+      <a href="/">{{this.name}}</a>
+      <button type="submit">
+        <a href="/albums/{{this.id}}">View Albums</a>
+      </button>
+    </li>
+  </ul>
+{{/each}}
+
+<button type="submit">
+  <a href="/">Back to Home</a>
+</button>
