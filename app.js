@@ -50,12 +50,18 @@ app.get("/artist-search", (req, res) => {
 
 app.get("/albums/:artistId", (req, res, next) => {
   // .getArtistAlbums() code goes here
-  const artistId = info.id;
-  console.log(artistId);
+  const id = req.params.artistId;
+  console.log(id);
   spotifyApi
-    .getArtistAlbums("43ZHCT0cAZBISjO8DG9PnE")
+    .getArtistAlbums(id)
     .then((data) => {
-      console.log("Artist albums", data.body);
+      console.log(
+        "...........................aaaaaaaaaaaaaaaaa..............."
+      );
+      //   console.log("Artist albums", data.body);
+      console.log(data.body);
+      let albums = data.body.items;
+      return res.render("albums", { albums });
     })
     .catch((err) => {
       console.error(err);
