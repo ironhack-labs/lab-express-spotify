@@ -1,0 +1,21 @@
+body {
+    margin: 0;
+    background-color: bisque;
+}
+.home-page {
+    position: relative;
+    background-image: url("/images/spotify-background.jpeg");
+    height: 800px;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.button{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; 
+    padding: 60px 165px;
+    background-color: rgba(255, 255, 255, 0.2);
+}
