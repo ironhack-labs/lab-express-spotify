@@ -1,0 +1,20 @@
+    <h1>Artists</h1>
+
+        <div class="order">
+             {{#each artists as |artist|}}
+            <div class="card">
+               
+                <div>
+                    <img src={{this.images.[0].url}} class="imagesize" alt="imagen">
+                </div>
+                <div>
+                    <h1>{{this.name}}</h1>
+                </div>
+                <div>
+                    <button>View Album</button>
+                </div>
+               
+            </div>
+               {{/each}}
+        </div>
+    
