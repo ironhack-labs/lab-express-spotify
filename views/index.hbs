@@ -1,4 +1,20 @@
-<form action="/artist-search" method="GET">
-    <input id="name" type="text" name="name">
-    <button type="submit">Search for an artist</button>
-</form>
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/styles/style.css">
+        <title>Spotify</title>
+    </head>
+    <body>
+        <div class="index-bg">
+            <div class="search-box">
+                <form action="/artist-search" method="GET" class="form">
+                    <input id="name" type="text" name="name" class="search-input">
+                    <button type="submit" class="search-button">Search for an artist</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

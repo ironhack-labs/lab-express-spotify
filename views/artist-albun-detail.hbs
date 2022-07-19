@@ -10,15 +10,11 @@
     <body>
         <h2 class="title">SEARCH RESULTS</h2>
         <div class="cards">
-            {{#each artist}}
+            {{#each albuns}}
                 <div class="card">
                     <h3>{{this.name}}</h3>
-                    {{#if this.images.[0].url}}
-                        <img src="{{this.images.[0].url}}" alt="image of {{this.name}}" height="200px" width="auto">
-                        {{else}}
-                        <img src="/images/import_placeholder.png" alt="placeholder image" height="200px" width="auto">
-                    {{/if}}
-                    <a href="/albums/{{this.id}}">View Albums</a>
+                    <img src="{{this.images.[0].url}}" alt="image of albun: {{this.name}}" height="200px" width="auto">
+                    <a href="/tracks/{{this.id}}">View Tracks</a>
                 </div>
             {{/each}}
         </div>
