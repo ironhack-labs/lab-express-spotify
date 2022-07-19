@@ -1,0 +1,123 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Poppins:wght@100;200;500&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    font-size: 16px;
+}
+
+/* HOME */
+
+#background {
+    height: 100vh;
+    background-image: url("../images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: bottom;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#background form {
+    width: 600px;
+    height: 150px;
+    background-color: rgba(255, 255, 255, 0.575);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+#background form input {
+    width: 300px;
+    border: 1px solid rgba(172, 172, 172, 0.801);
+    border-radius: 4px;    
+}
+
+#background form button {
+    width: 190px;
+    background-color: #1DB954;
+    color: white;
+    border: 1px solid #1DB954;
+    border-radius: 4px;
+}
+
+/* ARTIST SEARCH RESULTS & ALBUMS*/
+.main-container {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    width: 100vw;
+    height: 100vh;
+    margin-top: 50px;
+}
+
+.info-container {
+    width: 300px;
+    height: 380px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-bottom: 50px;
+}
+
+.info-container img {
+    height: 300px;
+}
+
+.text-container {
+    height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-direction: column;
+    background-color: #191414;
+    color: white;
+    margin-top: 0;
+}
+
+.text-container a {
+    text-decoration: none;
+    color: white;
+    width: 150px;
+    text-align: center;
+    background-color: #1DB954;
+    border: 1px solid #1DB954;
+    border-radius: 4px;
+}
+
+/* TRACKS */
+
+#title-bar {
+    background-color: #1DB954;
+    color: white;
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+}
+
+#title-bar > h2 {
+    width: 300px;
+    padding-top: 15px;
+    font-size: 1.5rem;
+    padding-left: 5px;
+}
+
+#tracks-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-top: 25px;
+}
+
+#tracks-container h3 {
+    width: 300px;
+}
