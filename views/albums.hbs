@@ -1,0 +1,17 @@
+<div class="content">
+    <a href="/">Go back to search</a>
+    <h2>Albums</h2>
+<div class="results">
+    {{#each albums}}
+        <div class="card outer-card" style="max-width: 15rem;">
+        <div class="card-body inner-card">
+            <img class ="img" src={{images.0.url}} alt="album-photo">
+            <h4 class="card-title">{{name}}</h4>
+            <a href="/tracks/{{id}}"><button class="btn">View Tracks</button></a>
+        </div>
+
+        </div>
+    {{/each}}
+    
+</div>
+</div>

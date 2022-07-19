@@ -1,0 +1,79 @@
+*{
+    margin: 0;
+}
+body{
+    margin: 0;
+}
+h2{
+    color: black;
+}
+input{
+    min-width: 20em;
+}
+.search-page{
+    width: 100vw;
+    height: 100vh;
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-form{
+    background-color: rgba(255, 255, 255, 0.537);
+    padding: 4em 5em;
+    display: flex;
+    flex-direction: column;
+    border-radius: 0.5em;
+}
+img{
+    max-width: 10rem;
+}
+.content{
+    margin: 0;
+
+    text-align: center;
+    color: white;
+}
+.results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+}
+.outer-card{
+    margin: 1em 2em;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.inner-card{
+    margin-top: 2em;
+    background-color: rgba(19, 18, 18, 0.962);
+}
+.bar{
+    display:flex;
+    justify-content: space-between;
+    background-color: rgb(54, 54, 54);
+    color: white;
+    padding: 0 5em;
+}
+.btn{
+    background-color: orangered;
+    padding: 0.5em;
+    margin: 0.8em auto 1em;
+    font-weight: 600;
+    color: white;
+}
+.songs{
+    display: flex;
+    justify-content: space-between;
+    padding: 0 5em;
+    background-color: rgb(232, 231, 231);
+    margin: 0 auto 0.5em;
+}
+audio{
+    background-color: none;
+}

@@ -1,0 +1,17 @@
+<div class="tracks-results">
+<div class="bar">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</div>
+    {{#each tracks}}
+        <div class="card songs" style="min-width: 18rem;">
+        <div class="card-body">
+            <h3 class="card-title">{{name}}</h3>
+        </div>
+        {{#if preview_url}}
+        <audio src={{preview_url}} controls></audio>
+        {{/if}}
+        </div>
+    {{/each}}
+    
+</div>
