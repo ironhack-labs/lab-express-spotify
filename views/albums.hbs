@@ -4,16 +4,17 @@
 </h2>
 
 <div class="row row-cols-3 g-4">
+
+    {{#each albums}}
     <div class="col">
-        <div class="card">
-            {{#each albums}}
-            <div class="card-body"></div>
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
                 <img src="{{this.images.[0].url}}" class="card-img-top" style="width:15 ;">
                 <h5 class="card-title">{{this.name}}</h5>
                 <h5 class="card-title">{{this.cover}}</h5>
                 <a href="/tracks/{{this.id}}" class="btn btn-primary">See the tracks</a>
             </div>
-            {{/each}}
         </div>
     </div>
+    {{/each}}
 </div>
