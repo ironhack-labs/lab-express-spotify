@@ -1,5 +1,6 @@
 require('dotenv').config();
 
+const { query } = require('express');
 const express = require('express');
 const hbs = require('hbs');
 
@@ -27,14 +28,21 @@ app.get('/home', (req, res, next) => {
     res.render('index')
 })
 
-
 app.get('/artist-search', (req, res, next) => {
-spotifyApi
-    .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
+  const { name } = req.query
+  
+  console.log(req.query)
+  
+  spotifyApi
+    .searchArtists(req.query)
     .then(data => {
       console.log('The received data from the API: ', data.body);
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render('artist-search-results', { name })
     })
-.catch(err => console.log('The error while searching artists occurred: ', err));
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+  
+
