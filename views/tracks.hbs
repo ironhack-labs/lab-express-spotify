@@ -1,0 +1,14 @@
+<ul class="list-group list-group-horizontal" >
+    <li class="list-group-item">Title</li>
+    <li class="list-group-item">Track</li>
+</ul>
+{{#each tracks as |track|}}
+<ul class="list-group list-group-horizontal">
+    <li class="list-group-item">{{track.name}}</li>
+    <li class="list-group-item">
+        <audio controls="" name="media">
+            <track kind="captions" srclang="en" src="{{track.preview_url}}"/>
+        </audio>
+    </li>
+</ul>
+{{/each}}

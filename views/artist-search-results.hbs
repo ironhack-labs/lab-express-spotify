@@ -1,9 +1,15 @@
-<div class="card" style="width: 18rem;">
-  {{#each artists as |artist|}}
-  <img src="{{artist.images.[0].url}}" class="card-img-top" alt="{{artist.name}}'s imagen">
-  <div class="card-body">
-    <h5 class="card-title">{{artist.name}}</h5>
-    <a href="/albums/{{artist.id}}" class="btn btn-primary">View albums</a>
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-4">
+      {{#each artists as |artist|}}
+      <div class="card" style="width: 18rem;">
+        <img src="{{artist.images.[0].url}}" class="card-img-top" alt="{{artist.name}}'s imagen">
+        <div class="card-body">
+          <h5 class="card-title">{{artist.name}}</h5>
+          <a href="/albums/{{artist.id}}" class="btn btn-primary">View albums</a>
+        </div>
+      </div>
+      {{/each}}
+    </div>
   </div>
-  {{/each}}
-</div>
+  </div>
