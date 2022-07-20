@@ -1,0 +1,14 @@
+{{#each tracks as |track|}}
+<ul>
+    <li>
+      <p>{{track.name}}</p>
+      {{!-- <audio controls="" name="media">
+          <track kind="captions" srclang="en" src="{{track.preview_url}}"/>
+      </audio> --}}
+      <audio controls>
+        <source src="{{track.preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+    </li>
+</ul>
+{{/each}} 

@@ -37,11 +37,39 @@ app.get('/artist-search', (req, res, next) => {
   spotifyApi
   .searchArtists( name )
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items[0].images);
+    console.log('The received data from the API: ', data.body.artists.items[0].images[0].url);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-    res.render('artist-search-results', { artists: data.body.artists })
+    res.render('artist-search-results', { artists: data.body.artists.items })
   })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
+  .catch((err) =>
+      console.log(err)
+    );
+})
+
+app.get('/albums/:id', (req, res, next) => {
+  const { id } = req.params
+
+  spotifyApi
+    .getArtistAlbums(id)
+    .then((data) => {
+      res.render('albums', { albums: data.body.items });
+    })
+    .catch((err) =>
+      console.log(err)
+    );
+})
+
+app.get('/view-tracks/:albumId', (req, res, next) => {
+  const { albumId } = req.params
+
+  spotifyApi
+  .getAlbumTracks(albumId)
+  .then(data=>{
+      res.render("view-tracks",{tracks: data.body.items})
+  })
+  .catch((err) =>
+      console.log(err)
+    );
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
