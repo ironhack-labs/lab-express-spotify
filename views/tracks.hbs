@@ -1,14 +1,15 @@
 <ul class="list-group list-group-horizontal" >
-    <li class="list-group-item">Title</li>
-    <li class="list-group-item">Track</li>
+    <li class="list-group-item two-col titles"><h2>Title</h2></li>
+    <li class="list-group-item titles title-2"><h2>Track</h2></li>
 </ul>
 {{#each tracks as |track|}}
 <ul class="list-group list-group-horizontal">
-    <li class="list-group-item">{{track.name}}</li>
+    <li class="list-group-item two-col">{{track.name}}</li>
     <li class="list-group-item">
         <audio controls="" name="media">
-            <track kind="captions" srclang="en" src="{{track.preview_url}}"/>
+            <source type="audio/mpeg" src="{{track.preview_url}}"/>
         </audio>
     </li>
 </ul>
 {{/each}}
+<a class="btn btn-danger two-col" href="/">Home</a>

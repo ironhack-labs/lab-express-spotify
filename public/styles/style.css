@@ -5,6 +5,7 @@ body > section{
     background-image: url("/images/spotify-background.jpeg");
     background-repeat: no-repeat;
     background-position: center;
+    z-index: -1;
 }
 .all{
     padding-top: 200px;
@@ -17,3 +18,13 @@ body > section{
     justify-content: center;
     align-items: center;
 }
+.two-col{
+    width: 550px;
+}
+.titles{
+    background-color: rgb(102, 180, 229);
+}
+.title-2{
+    width: 330px;
+}
+
