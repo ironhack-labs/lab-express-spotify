@@ -1,0 +1,20 @@
+<div class="col-12 mb-5">
+    <div class="h-100 p-5 text-bg-dark text-center">
+        <h1>Album Tracks</h1>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row gx-2 gy-1">
+        {{#each tracks as |track|}}
+            <div class="col-9 p-5 d-flex align-items-center py-3 bg-secondary bg-opacity-25">
+                <span><span class="fw-bold">{{track.track_number}}.</span> {{track.name}}</span>
+            </div>
+            <div class="col-3 p-5 d-flex align-items-center py-3 bg-secondary bg-opacity-25">
+                <audio controls>
+                    <source src={{track.preview_url}} type="media/mpeg">
+                </audio>
+            </div>
+        {{/each}}
+    </div>
+</div>
