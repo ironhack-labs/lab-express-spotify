@@ -48,22 +48,28 @@ app.get("/artist-search", (req, res) => {
 app.get("/artist/:name", (req, res) => {
   const artistName = req.params.name;
   const artistId = req.query.id;
-  spotifyApi.getArtistAlbums(`${artistId}`).then(
-    function (data) {
-      console.log("Artist albums", data.body);
-      res.render("artist", { artistName, albums: data.body.items });
-    },
-    function (err) {
-      console.error(err);
-    }
-  );
+  spotifyApi
+    .getArtistAlbums(`${artistId}`, {
+      //   album_type: "album",
+      //   include_groups: "album",
+      //   available_markets: "DE",
+    })
+    .then(
+      function (data) {
+        console.log("Artist albums", data.body);
+        res.render("artist", { artistName, albums: data.body.items });
+      },
+      function (err) {
+        console.error(err);
+      }
+    );
 });
 
 app.get("/album/:id", (req, res) => {
   const id = req.params.id;
   spotifyApi.getAlbum(id).then(
     function (data) {
-      console.log("Album information", data.body.tracks);
+      //   console.log("Album information", data.body.tracks);
       const albumInfo = data.body;
       const { artists, name, images, label, tracks } = albumInfo;
       res.render("album", {
