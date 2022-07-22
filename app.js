@@ -36,8 +36,13 @@ app.get("/artist-search", (req, res) => {
     .searchArtists(req.query.artistName)
     .then((data) => {
       console.log("The received data from the API: ", data.body);
+      // the following console displays an artist object, just to show that we can use its keys id, images[0] (just to get the first one) and name to pass the info to the next page
+      console.log(
+        "The first object in the items array: ",
+        data.body.artists.items[0]
+      );
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results");
+      res.render("artist-search-results"); // pass data to the hbs file
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
