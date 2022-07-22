@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row justify-content-around">
+    <div class="col-md-12 mt-3 mb-1">
+      <div class="card text-light bg-dark">
+        <div class="card-header">Album tracks</div>
+        {{#each tracks as |track|}}
+          <div class="card-body">
+            <h5 class="card-title my-3">{{track.name}}</h5>
+            <audio controls>
+              <source src={{track.preview_url}} type="audio/mpeg" />
+            </audio>
+          </div>
+        {{/each}}
+      </div>
+    </div>
+  </div>
+</div>

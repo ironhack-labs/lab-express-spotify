@@ -1,16 +1,16 @@
 <div class="container">
   <div class="row justify-content-around">
-    {{#each artists as |artist|}}
-      <div class="col-md-4">
+    {{#each albums as |album|}}
+      <div class="col-md-4 mt-3 mb-1">
         <div class="card text-light bg-dark">
           <img
-            src="{{artist.images.0.url}}"
+            src="{{album.images.0.url}}"
             class="card-img-top"
             alt="Artist Image"
           />
           <div class="card-body">
-            <h5 class="card-title my-3">{{artist.name}}</h5>
-            <a href="/albums/{{artist.id}}" class="btn btn-danger">View albums</a>
+            <h5 class="card-title my-3">{{album.name}}</h5>
+            <a href="/tracks/{{album.id}}" class="btn btn-danger">View Tracks</a>
           </div>
         </div>
       </div>

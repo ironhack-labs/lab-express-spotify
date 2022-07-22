@@ -1,0 +1,13 @@
+.home-bg {
+  background-size: cover;
+  background-image: url("../images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 750px;
+  z-index: -1;
+}
+
+.card {
+  opacity: 0.8;
+  top: 250px;
+}
