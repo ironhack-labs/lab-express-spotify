@@ -1,6 +1,6 @@
 <main>
 <h1>{{name}}</h1>
-<h3>{{#each artists}}<a href="/artist/{{name}}?id={{id}}">{{name}}</a>{{/each}}</h3>
+<h3>{{#each artists}}<a href="/artist/{{name}}?id={{id}}">{{name}}</a>{{#unless @last}} &#8226; {{/unless}}{{/each}}</h3>
 <img src="{{image.url}}" alt="">
 <ol>
 {{#each tracks}}
