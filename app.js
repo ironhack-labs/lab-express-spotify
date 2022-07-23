@@ -36,8 +36,7 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(query)
     .then((data) => {
-      let artists = data.body.artists.items;
-      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      const artists = data.body.artists.items;
       res.render("artist-search-results", { artists });
     })
     .catch((err) =>
@@ -87,5 +86,5 @@ app.get("/album/:id", (req, res) => {
 });
 
 app.listen(4000, () =>
-  console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
+  console.log("My Spotify project running on port 4000 🎧 🥁 🎸 🔊")
 );

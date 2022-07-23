@@ -4,12 +4,14 @@
 <img src="{{image.url}}" alt="">
 <ol>
 {{#each tracks}}
-    <li>{{name}} <audio
+    <li class="track">{{name}}
+        <p>
+    <audio
         controls
         src="{{preview_url}}">
             Your browser does not support the
             <code>audio</code> element.
-    </audio></li>
+    </audio></p></li>
 {{/each}}
 </ol>
 </main>

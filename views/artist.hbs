@@ -1,9 +1,9 @@
-<main>
+<main id="artist">
 <h1>{{artistName}}</h1>
 {{#each albums}}
-<article>
-        <img src="{{images.0.url}}" alt="">
-    <a href="/album/{{id}}">{{name}}</a>
-</article>
+<a href="/album/{{id}}">
+    <img src="{{images.0.url}}" alt="">
+    {{name}}
+</a>
 {{/each}}
 </main>

@@ -1,4 +1,105 @@
+* {
+    margin:0;
+    padding:0;
+}
+
+html {
+    font-size: var(--type-m);
+    font-family: sans-serif;
+    background-color: coral;
+}
+
+:root {
+    --black: #000000;
+    --white: #FFFFFF;
+    --accent: coral;
+    --type-s: 1rem;
+    --type-m: 2rem;
+    --type-l: 3rem;
+}
+
+main#home form input[type="text"] {
+    border:none;
+    padding:1rem;
+    border-radius: var(--type-s);
+    text-align: center;
+    font-size: var(--type-m);
+    background-color: rgba(255,255,255,.23);
+    backdrop-filter: blur(.25rem);
+    margin-bottom:1rem;
+}
+::placeholder {
+    color: var(--black);
+}
 button {
-    font-size:3rem;
-    background-color:red;
+    padding:1rem;
+    background-color:var(--accent);
+    color:var(--white);
+    max-width: fit-content;
+    border-radius: 1rem;
+    border:none;
+    font-size: var(--type-s);
+}
+button:hover {
+    cursor:pointer
+}
+
+nav {
+    z-index: 2;
+}
+
+a {
+    color: var(--black);
+    text-decoration:none;
+}
+
+h1 {
+    font-weight: 100;
+    font-size: var(--type-l);
+}
+h3 {
+    font-size: var(--type-m);
+    font-weight: 400;
+}
+
+ol {
+    list-style-position: inside;
+}
+
+main#home {
+    z-index: -1;
+    width:100vw;
+    height:100vh;
+    position: fixed;
+    top:0;
+    left:0;
+    background: url('../images/spotify-background.jpeg');
+    background-color: var(--accent);
+    background-size: cover;
+    background-position: center center;
+    background-blend-mode:screen;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+main#home form {
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main#search-results, main#artist {
+  display: inline-grid;
+
+  grid-template-columns: repeat(3, 1fr);
+  width:100%;
+}
+#search-results img, main#artist img {
+    width:100%
+}
+
+.track {
+    padding-bottom:.25rem
 }
