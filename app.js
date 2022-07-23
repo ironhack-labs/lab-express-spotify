@@ -55,7 +55,7 @@ app.get("/artist/:name", (req, res) => {
     })
     .then(
       function (data) {
-        console.log("Artist albums", data.body);
+        // console.log("Artist albums", data.body);
         res.render("artist", { artistName, albums: data.body.items });
       },
       function (err) {
