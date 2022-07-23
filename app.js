@@ -41,8 +41,10 @@ app.get("/artist-search", (req, res) => {
         "The first object in the items array: ",
         data.body.artists.items[0]
       );
+      const artists = data.body.artists.items;
+      // console.log("Img URL: ", data.body.artists.items[0].images[0].url);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results"); // pass data to the hbs file
+      res.render("artist-search-results", { artists }); // pass data to the hbs file
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

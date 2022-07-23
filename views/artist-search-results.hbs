@@ -1,4 +1,13 @@
 {{!-- for each (body.data.items), to display all artists whos name contains the query string --}}
-<h2>{{name}}</h2> {{!-- each receives a name of the data.body --}}
-<img src="" alt=""> {{!-- get a cover of that artist and diaply it --}}
-<a href="/albums/:id">View Albums</a> {{!-- get the artist-id and use it as param to link to another page which displays all albums of that specific artist --}}
+<section id="results-container">
+{{#each artists}}
+<div class="grid-item">
+    <h2>{{name}}</h2> {{!-- each receives a name of the data.body --}}
+    {{#if images}}
+    <img src="{{images.0.url}}" alt=""> {{!-- get a cover of that artist and diaply it --}}
+    {{/if}}
+    <a href="/albums/:{{id}}">View Albums</a> {{!-- get the artist-id and use it as param to link to another page which displays all albums of that specific artist --}}
+</div>
+{{/each}}
+
+</section>
