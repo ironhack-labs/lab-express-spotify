@@ -1,6 +1,6 @@
-#test {
-  display: flex;
-  justify-content: center;
+* {
+  margin: 0;
+  padding: 0;
 }
 
 .background-homepage {
@@ -16,12 +16,63 @@
   align-items: center;
 }
 
-.artist-result-container {
+.background-form {
+  background-color: rgba(225, 225, 225, 0.8);
+  width: 700px;
+  height: 300px;
   display: flex;
   justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 250px;
 }
 
-.artist-info {
+.form-details {
   display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-field {
+  width: 280;
+  height: 35px;
+  display: flex;
+  border: none;
+  border-radius: 5px;
+}
+::placeholder {
+  text-align: center;
+}
+
+.search-button {
+  position: relative;
+  top: 20px;
+  background-color: rgba(254, 105, 105, 255);
+  width: 200px;
+  height: 40px;
+  color: white;
+  border: none;
+  border-radius: 20px;
+}
+
+.artist-wrapper {
+}
+
+.show-artist-info {
+  display: flex;
+  flex-wrap: wrap;
   justify-content: space-around;
+}
+
+.artist-card {
+}
+
+.album-link {
+  display: flex;
+}
+
+.artist-image {
+  width: 200px;
+  height: 100px;
 }

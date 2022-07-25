@@ -1,18 +1,17 @@
-<p id="test">Hello from the artist search page</p>
-
-<div class="artist-info-container">
-  <div class="show-artist-info">
-    {{#each artists as |artist|}}
-      <div class="show-artist-info-container">
-        <img
-          src="{{artist.images.0.url}}"
-          class="artist-image"
-          alt="artist-image"
-        />
-        <div class="card-info">
+<div>
+  <div class="artist-wrapper">
+    <div class="show-artist-info">
+      {{#each artists as |artist|}}
+        <div class="artist-card">
           <h4 class="artist-title">{{artist.name}}</h4>
+          <img
+            src="{{artist.images.0.url}}"
+            class="artist-image"
+            alt="artist-image"
+          />
+          <a href="/albums/{{artist.id}}" class="album-link">View Albums</a>
         </div>
-      </div>
-    {{/each}}
+      {{/each}}
+    </div>
   </div>
 </div>
