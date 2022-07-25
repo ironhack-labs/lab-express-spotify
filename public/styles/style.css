@@ -37,7 +37,7 @@ button {
     font-weight: bold;
 }
 
-#results-container {
+.grid-container {
     margin-top: 100px;
     display: grid;
     grid-template-columns: repeat(4, 1fr);
@@ -55,4 +55,9 @@ button {
     width: 250px;
     height: 250px; 
     /* height compresses the picture --> need to find other solution */
+}
+
+.track-row {
+    display: flex;
+    flex-direction: row;
 }
