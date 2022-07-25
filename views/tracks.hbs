@@ -1,0 +1,16 @@
+<h1>Tracks for {{tracksArtistName}} selected album</h1>
+
+<ul>
+{{#each tracks}}
+<li>
+    {{!-- <audio src="{{preview_url}}"></audio> --}}
+{{name}}
+    <audio
+        controls
+        src="{{preview_url}}">
+            Your browser does not support the
+            <code>audio</code> element.
+    </audio>
+</li>
+{{/each}}
+</ul>

@@ -1,0 +1,26 @@
+<h1>Artists search results</h1>
+ {{!-- {{artists}} --}}
+{{!-- {{spotifyResponse}}  --}}
+<ul>
+{{!-- {{artists}} --}}
+{{#each artists}}
+<li>
+    
+    {{name}}
+    <img src="{{images.1.url}}" alt="">
+    <a href="/albums/{{id}}"><button>View Albums</button></a>
+    {{!-- {{external_urls.spotify}} --}}
+    
+</li>
+{{/each}}
+
+</ul>
+    
+
+
+
+    
+    {{!-- {{images}} or one image? = {{images[0]}} --}}
+    
+    <a href="""></a>{{!--pending link --}}
+
