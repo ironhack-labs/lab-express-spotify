@@ -1,13 +1,11 @@
-{{!-- for each (body.data.items), to display all artists whos name contains the query string --}}
-<section class="grid-container">
+<section class="flex-container">
 {{#each artists}}
-<div class="grid-item">
-    <h2>{{name}}</h2> {{!-- each receives a name of the data.body --}}
+<div class="flex-item">
+    <h3>{{name}}</h3>
     {{#if images}}
-    <img src="{{images.0.url}}" alt=""> {{!-- get a cover of that artist and diaply it --}}
+    <img src="{{images.0.url}}">
     {{/if}}
-    <a href="/albums/{{id}}">View Albums</a> {{!-- get the artist-id and use it as param to link to another page which displays all albums of that specific artist --}}
+    <a href="/albums/{{id}}">View Albums</a>
 </div>
 {{/each}}
-
 </section>

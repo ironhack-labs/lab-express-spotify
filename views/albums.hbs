@@ -1,9 +1,11 @@
 <h2>Albums for: {{artistName}}</h2>
-<section class="grid-container">
+<section class="flex-container">
 {{#each albums}}
-<div class="grid-item">
-    <img src="{{images.1.url}}">
+<div class="flex-item">
     <h3>{{name}}</h3>
+    {{#if images}}
+    <img src="{{images.1.url}}" alt="album cover {{name}}">
+    {{/if}}
     <a href="/tracks/{{id}}">View Tracks</a>
 </div>
 {{/each}}
