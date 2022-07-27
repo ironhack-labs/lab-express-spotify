@@ -1,5 +1,6 @@
 <div>
   <div class="artist-wrapper">
+    <h2 class="search-title">Your Search Results:</h2>
     <div class="show-artist-info">
       {{#each artists as |artist|}}
         <div class="artist-card">
@@ -9,7 +10,7 @@
             class="artist-image"
             alt="artist-image"
           />
-          <a href="/albums/{{artist.id}}" class="album-link">View Albums</a>
+          <a href="/albums/{{artist.id}}" class="artist-album-link">View Albums</a>
         </div>
       {{/each}}
     </div>

@@ -1,17 +1,18 @@
+
 <div class="view-track-header">
-  <h3>Title:</h3>
-  <h3>Listen</h3>
+  <h3 class="view-title">Title:</h3>
+  <h3>Listen:</h3>
 </div>
 
 <div class="track-container">
 <div class="track-list-container">
     {{#each tracks as |track|}}
-    <ul class="track-list">
-        <li class="track">{{track.name}}</li>
-    </ul>
-   <audio controls>
-    <source src="{{track.preview_url}}" type="media/mpeg"/>
+      <div class="track-list">
+        <div class="track">{{track.name}}</div>
+   <audio controls class="preview-controls">
+    <source src={{track.preview_url}}  type="audio/mpeg" />
    </audio>
+    </div>
 </div>
 {{/each}}
 </div>
