@@ -1,0 +1,9 @@
+<h1>Albums results for "{{altitle}}"</h1>
+
+{{#each albums}}
+    {{name}}
+     {{#if images.length}}
+       <p><img src="{{images.[1].url}}"><b></p>
+       <a href="/albums/{{id}}?title={{name}}" type="submit">View Songs</a><b>
+    {{/if}}
+{{/each}}
