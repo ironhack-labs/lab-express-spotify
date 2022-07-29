@@ -66,8 +66,19 @@ app.get('/albums/:artistId', (req, res, next) => {
         );
 });
 
-// Port
+// app.get('/tracks/:id', (req, res, next) => {
+//     const { id } = req.params;
+//     spotifyApi
+//         .getAlbumTracks(id)
+//         .then(data => {
+//             const tracks = data.body.items;
+//             res.render('tracks', { tracks })
+//         })
+//         .catch(err => console.log(err));
+// });
 
+
+// Port
 app.listen(3000, () =>
     console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
