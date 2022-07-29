@@ -1,0 +1,117 @@
+* {
+background: rgba(0, 128, 0, 0.01);
+padding: 0%;
+margin: 0%;
+}
+
+
+/* Home */
+.search-container {
+    background-image: url('../images/spotify-background.jpeg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    position: absolute;
+}
+
+.search-box {
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 50%;
+    height: 30%;
+    min-width: 300px;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.namediv{
+    align-items: center;
+}
+
+.search-form {
+    width: 50%;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.search-bar {
+    background-color: white;
+    border-color: white;
+    border-radius: 5%;
+    width: 50%;
+    padding: 2%;
+}
+
+.search-button {
+    background-color: rgb(246, 104, 99);
+    border-radius: 5%;
+    border-color: rgb(246, 104, 99);
+    color: white;
+    width: 25%;
+    height: 25%;
+}
+
+/* Artist & Album Search */
+h1{
+    margin: auto;
+    width: 60%;
+    padding: 10px;
+    text-align: center;
+    padding: 0%;
+    border: 3px solid rgb(246, 104, 99);
+}
+
+.artistsearchtitle {
+    color: white;
+}
+
+.list-element {
+    color: white;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 1vw;
+}
+
+.element {
+    align-items: center;
+    border-width: 1px;
+    width: 15vw;
+    height: 40vh;
+}
+
+.element img {
+    width: 25vw;
+    height: 25vw;
+}
+
+.element p {
+    text-align: center;
+}
+
+.element a {
+    background-color: rgb(246, 104, 99);
+    border-radius: 5%;
+    border-color: rgb(246, 104, 99);
+    color: white;
+    width: 163%;
+    padding: 2%;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+

@@ -65,6 +65,7 @@ app.get('/albums/:artistId', (req, res, next) => {
             console.log("The error while searching artists occurred: ", err)
         );
 });
+
 // Port
 
 app.listen(3000, () =>

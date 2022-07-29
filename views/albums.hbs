@@ -1,9 +1,9 @@
-<h1>Albums results for "{{altitle}}"</h1>
-
+<h1>Search results: Albums</h1>
+<div class="list-element">
+<div class="element">
 {{#each albums}}
-    {{name}}
      {{#if images.length}}
        <p><img src="{{images.[1].url}}"><b></p>
-       <a href="/albums/{{id}}?title={{name}}" type="submit">View Songs</a><b>
+       <a href="/albums/{{id}}?title={{name}}" type="submit">View Songs: <b>{{name}}</b> </a>
     {{/if}}
 {{/each}}
