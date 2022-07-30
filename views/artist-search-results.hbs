@@ -1,26 +1,18 @@
 <h1>Artists search results</h1>
- {{!-- {{artists}} --}}
-{{!-- {{spotifyResponse}}  --}}
-<ul>
-{{!-- {{artists}} --}}
+
+
+
+<div class="main-artist">
 {{#each artists}}
-<li>
-    
+<div class="main-artist-block">
+    <div class="main-artist-image">
+    <img src="{{images.1.url}}" alt="/images/vinyl-g7a4111d1d_1280.png">
+    </div>
+    <div class="main-artist-descr">
     {{name}}
-    <img src="{{images.1.url}}" alt="">
     <a href="/albums/{{id}}"><button>View Albums</button></a>
-    {{!-- {{external_urls.spotify}} --}}
-    
-</li>
+    </div>
+</div>
 {{/each}}
-
-</ul>
-    
-
-
-
-    
-    {{!-- {{images}} or one image? = {{images[0]}} --}}
-    
-    <a href="""></a>{{!--pending link --}}
+</div>
 

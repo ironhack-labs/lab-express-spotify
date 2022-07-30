@@ -88,7 +88,7 @@ app.get("/tracks/:albumId", (req, res) => {
   console.log("req params: ", req.params);
   // console.log("req query: ", req.query);
 
-  spotifyApi.getAlbumTracks(req.params.albumId, { limit: 10, offset: 0 }).then(
+  spotifyApi.getAlbumTracks(req.params.albumId, { limit: 15, offset: 0 }).then(
     (data) => {
       console.log("tracks informsss : ", data.body);
       // console.log("artists array : ", data.body.items[0].artists);
