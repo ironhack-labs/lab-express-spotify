@@ -1,8 +1,11 @@
+<h2>Tracks of the album <span>"{{albumName}}"</span></h2>
 <section class="track-list">
 {{#each tracks}}
 <div class="track-row">
     <div>
         <figcaption>{{name}}:</figcaption>
+    </div>
+    <div id="audio-snippet">
         <audio controls src="{{preview_url}}"></audio>
     </div>
 </div>

@@ -1,11 +1,15 @@
+    <h2>Your search result for <span>"{{searchedFor}}"</span></h2>
 <section class="flex-container">
-{{#each artists}}
-<div class="flex-item">
-    <h3>{{name}}</h3>
-    {{#if images}}
-    <img src="{{images.0.url}}">
-    {{/if}}
-    <a href="/albums/{{id}}">View Albums</a>
-</div>
-{{/each}}
+
+    {{!-- <div class="flex-container"> --}}
+        {{#each artists}}
+        <div class="flex-item">
+            <h3>{{name}}</h3>
+             {{#if images}}
+            <img src="{{images.0.url}}" alt="{{name}}">
+             {{/if}}
+             <a href="/albums/{{id}}">View Albums</a>
+        </div>
+        {{/each}}
+    {{!-- </div> --}}
 </section>

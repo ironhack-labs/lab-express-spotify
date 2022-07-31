@@ -44,7 +44,10 @@ app.get("/artist-search", (req, res) => {
       // // console.log(data.body.artists.items[0].id);
       const artists = data.body.artists.items;
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      res.render("artist-search-results", { artists }); // pass data to the hbs file
+      res.render("artist-search-results", {
+        artists,
+        searchedFor: req.query.artistName,
+      }); // pass data to the hbs file
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -70,16 +73,18 @@ app.get("/albums/:artistId", (req, res) => {
     });
 });
 
-app.get("/tracks/:albumId", (req, res) => {
+app.get("/tracks/:albumName/:albumId", (req, res) => {
   spotifyApi
     .getAlbumTracks(req.params.albumId, { limit: 15, offset: 0 })
     .then((data) => {
       // console.log("The tracks: ", data.body);
-      const tracks = data.body.items;
-      res.render("tracks", { tracks });
+      res.render("tracks", {
+        tracks: data.body.items,
+        albumName: req.params.albumName,
+      });
     })
     .catch((err) => {
-      console.log("Something wen wrong");
+      console.log("Something went wrong");
     });
 });
 

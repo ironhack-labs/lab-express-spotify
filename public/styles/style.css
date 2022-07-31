@@ -1,3 +1,6 @@
+/* ********************************* */
+/* FONTS */
+/* ********************************* */
 @font-face {
     font-family: AmaticSC;
     src: url(../fonts/Amatic_SC/AmaticSC-Regular.ttf);
@@ -13,6 +16,9 @@
     src: url(../fonts/Monoton/Monoton-Regular.ttf);
 }
 
+/* ********************************* */
+/* STYLING BASIC LAYOUT */
+/* ********************************* */
 * {
     margin: 0;
 }
@@ -29,9 +35,28 @@ body {
     background-repeat: no-repeat;
     background-attachment: fixed;
     display: flex;
-    justify-content: center;
+    flex-direction: column;
     align-items: center;
     /* padding: 100px; */
+}
+
+header {
+    align-self: flex-end;
+    margin: 10px;
+    padding: 10px;
+    background-color: aqua;
+    position: fixed;
+    font-family: Bebas_Neue, sans-serif;
+    letter-spacing: 2px;
+}
+
+header a {
+    text-decoration: none;
+}
+
+section {
+    margin-top: 100px;
+    max-width: 1300px;
 }
 
 /* ********************************* */
@@ -40,6 +65,8 @@ body {
 form {
     height: 200px;
     width: 500px;
+    /* margin-top: 75%; */
+    margin: auto;
     background-color: rgba(255, 255, 255, 0.7);
     display: flex;
     flex-direction: column;
@@ -68,11 +95,21 @@ button {
 /* ********************************* */
 /* STYLING ARTIST/ALBUM PAGE */
 /* ********************************* */
-.flex-container {
-    margin-top: 100px;
-    width: 1300px;
-    display: flex;
+h2 {
     align-self: flex-start;
+    font-family: Bebas_Neue, sans-serif;
+    letter-spacing: 2px;
+    background-color: aqua;
+    position: fixed;
+    margin: 10px;
+    padding: 10px;
+}
+
+.flex-container {
+    /* margin-top: 100px;
+    width: 1300px; */
+    display: flex;
+    align-self: center;
     justify-content: center;
     flex-wrap: wrap;
     /* display: grid;
@@ -81,14 +118,19 @@ button {
 }
 
 .flex-item {
-    border: solid 1px #d45543;
+    border: solid 1px rgb(212, 85, 67);
     background-color: rgba(255, 255, 255, 0.8);
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: space-between;
     padding: 5px;
     margin: 5px;
     width: 300px;
+}
+
+.flex-item:hover {
+    background-color: rgba(212, 85, 67, 0.8);
 }
 
 .flex-item h3 {
@@ -115,18 +157,35 @@ button {
     padding: 5px;
 }
 
+.flex-item a:hover {
+    background-color: #fff;
+    border: #d45543;
+    color: #d45543;
+}
+
 /* ********************************* */
 /* STYLING TRACKS PAGE */
 /* ********************************* */
-.track-list {
-    margin: auto;
-}
+/* .track-list {
+    margin-top: 100px;
+} */
 
 .track-row {
     display: flex;
+    justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    background-color: rgba(212, 85, 67, 0.8);
+    border:#fff solid 2px;
+    margin: 5px;
+    padding: 10px;
+    font-family: bebas_neue, sans-serif;
+    color: #fff;
+    font-size: 20px;
 }
 
-.track-row > div {
-    align-items: center;
+#audio-snippet {
+    display: flex;
+    align-content: center;
+    margin-left: 10px;
 }

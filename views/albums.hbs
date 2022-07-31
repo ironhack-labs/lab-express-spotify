@@ -1,4 +1,4 @@
-<h2>Albums for: {{artistName}}</h2>
+<h2>Albums of <span>"{{artistName}}"</span></h2>
 <section class="flex-container">
 {{#each albums}}
 <div class="flex-item">
@@ -6,7 +6,7 @@
     {{#if images}}
     <img src="{{images.1.url}}" alt="album cover {{name}}">
     {{/if}}
-    <a href="/tracks/{{id}}">View Tracks</a>
+    <a href="/tracks/{{name}}/{{id}}">View Tracks</a>
 </div>
 {{/each}}
 </section>
