@@ -1,18 +1,21 @@
+<body class="artists-body">
+    
 <h1>Artists search results</h1>
 
 
 
 <div class="main-artist">
 {{#each artists}}
-<div class="main-artist-block">
-    <div class="main-artist-image">
-    <img src="{{images.1.url}}" alt="/images/vinyl-g7a4111d1d_1280.png">
+    <div class="main-artist-block">
+        <div class="main-artist-image">
+            <a href="/albums/{{id}}"><img src="{{images.1.url}}" alt=""></a>
+        </div>
+        <div class="main-artist-descr">
+         <a href="/albums/{{id}}">{{name}}</a>
+         <a href="/albums/{{id}}"><button>View Albums</button></a>
+        </div>
     </div>
-    <div class="main-artist-descr">
-    {{name}}
-    <a href="/albums/{{id}}"><button>View Albums</button></a>
-    </div>
-</div>
 {{/each}}
 </div>
 
+</body>

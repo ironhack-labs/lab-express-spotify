@@ -1,9 +1,23 @@
 
 
-/* h1{
-    text-decoration: underline;
-    color:blue;
-} */
+h1{
+    font-family: 'Darker Grotesque', sans-serif;
+    text-align: center;
+    font-size: 4rem;
+    font-weight: bolder;
+    color: rgb( 32, 107, 164)
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+
 
 .home-body {
     position: relative;
@@ -13,12 +27,26 @@
     
 }
 
+
+
 .home-body button {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     padding: .5em;
+    background-color: red;
+    color: #FFF;
+    height: 2.2rem;
+    width: 192px;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+button {
+    background-color:  rgb(187, 217, 238);;
+    width: 100px;
+    height: 1.5rem;
 }
 
 .home-body input {
@@ -30,6 +58,7 @@
 }
 
 
+
 .home-body h1 {
     position: absolute;
     top: 35%;
@@ -38,29 +67,146 @@
     padding: .5em;
 }
 
+.artists-body{
+    position: relative;
+    background-image: url("/images/imani-bahati-ut67iFuoD2o-unsplash.jpg");
+    background-size: 100%;
+    height: 100vh;
+    /* background: .4; */
+    
+}
+
 .main-artist {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    
+    margin-top: 100px;
+    color: rgb( 32, 107, 164);
 }
 
 .main-artist-block {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    align-items: center;
+    width: 50%;
 }
 
 .main-artist img {
-    width: 250px;
-    height: 250px;
+    width: 320px;
+    height: 320px;
+    box-shadow: rgba(32, 107, 164, 0.5) 0px 25px 50px -12px;
 }
 
 .main-artist-descr {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
+    padding: 10px 0 50px;
+}
+
+.albums-body{
+    position: relative;
+    background-image: url("/images/imani-bahati-ut67iFuoD2o-unsplash.jpg");
+    background-size: 100%;
+    height: 100vh;
+    /* background: .4; */
+ 
+}
+
+.main-albums{
+    color: rgb( 32, 107, 164);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 100px 300px;
+    padding: 0 150px;
+}
+
+.album-block{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+
+.main-albums img {
+    width: 320px;
+    height: 320px;   
+    /* box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px; */
+    box-shadow: rgba(32, 107, 164, 0.5) 0px 25px 50px -12px;
+}
+
+.album-descr {
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0 50px;
+}
+
+.main-track {
+    
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 35%;
+}
+
+.tracks-body{
+    position: relative;
+    background-image: url("/images/imani-bahati-ut67iFuoD2o-unsplash.jpg");
+    background-size: 100%;
+    height: 100vh; 
+}
+
+.track{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 20px 20px;
+}
+.track-name{
+    color: rgb( 32, 107, 164);
+    font-family: 'Darker Grotesque', sans-serif;
+    font-weight: 800;
+    font-size: 1.5rem;
+    justify-self: center;
+    align-self: flex-start;
+    padding-bottom: 10px;
+}
+
+audio::-webkit-media-controls-panel {
+    background-color: rgb(187, 217, 238);
+}
+
+audio::-webkit-media-controls-play-button {
+    background-color:rgba(32, 107, 164, 0.5);
+    border-radius: 50%;
+}
+
+audio::-webkit-media-controls-mute-button {
+    background-color:rgba(32, 107, 164, 0.5);
+    border-radius: 50%;
+}
+
+.player {
+    display: flex;
+    flex-direction: row;
+    justify-self: center;
+    align-self: flex-start;
 }

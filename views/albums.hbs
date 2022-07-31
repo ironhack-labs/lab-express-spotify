@@ -1,11 +1,21 @@
+<body class="albums-body">
+    
+
 <h1>Albums for {{albumArtistName}}</h1>
 
-<ul>
+<div class="main-albums">
 {{#each albums}}
-<li>
-    {{name}}
-    <img src="{{images.1.url}}" alt="">
-    <a href="/tracks/{{id}}"><button>View Tracks</button></a>
-</li>
+    <div class="albums-block">
+        <div class="albums-image">
+         <a href="/tracks/{{id}}"><img src="{{images.1.url}}" alt=""></a>
+        </div>
+        <div class="album-descr">
+            <a href="/tracks/{{id}}">{{name}}</a>
+            <a href="/tracks/{{id}}"><button>View Tracks</button></a>
+        </div>
+        
+    </div>
 {{/each}}
-</ul>
+</div>
+
+</body>

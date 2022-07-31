@@ -1,16 +1,23 @@
+<body class="tracks-body">
 <h1>Tracks for {{tracksArtistName}} selected album</h1>
 
 <ul>
 {{#each tracks}}
-<li>
-    {{!-- <audio src="{{preview_url}}"></audio> --}}
-{{name}}
-    <audio
-        controls
-        src="{{preview_url}}">
-            Your browser does not support the
-            <code>audio</code> element.
-    </audio>
-</li>
+<div class="main-track">
+    <li>
+    <div class="track">
+        <div class="track-name">
+     {{name}}
+        </div>
+     <audio class="player"
+         controls
+         src="{{preview_url}}">
+             Your browser does not support the
+             <code>audio</code> element.
+     </audio>
+    </div>    
+    </li>
+</div>
 {{/each}}
 </ul>
+</body>
