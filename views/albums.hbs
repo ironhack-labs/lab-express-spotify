@@ -7,13 +7,12 @@
 {{#each albums}}
     <div class="albums-block">
         <div class="albums-image">
-         <a href="/tracks/{{id}}"><img src="{{images.1.url}}" alt=""></a>
+            <a href="/tracks/{{id}}"><img src="{{images.1.url}}" alt="album cover {{name}}" onerror=this.src="/public/images/vinyl-g7a4111d1d_1280.png"></a>
         </div>
         <div class="album-descr">
-            <a href="/tracks/{{id}}">{{name}}</a>
+            <a class="album-name" href="/tracks/{{id}}">{{name}}</a>
             <a href="/tracks/{{id}}"><button>View Tracks</button></a>
-        </div>
-        
+        </div>        
     </div>
 {{/each}}
 </div>

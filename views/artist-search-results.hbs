@@ -3,16 +3,15 @@
 <h1>Artists search results</h1>
 
 
-
 <div class="main-artist">
 {{#each artists}}
     <div class="main-artist-block">
         <div class="main-artist-image">
-            <a href="/albums/{{id}}"><img src="{{images.1.url}}" alt=""></a>
+            <a href="/albums/{{id}}"><img src="{{images.1.url}}" alt="artist {{name}}" onerror=this.src="/images/vinyl-record-5958903__340.webp"></a>
         </div>
         <div class="main-artist-descr">
-         <a href="/albums/{{id}}">{{name}}</a>
-         <a href="/albums/{{id}}"><button>View Albums</button></a>
+            <a href="/albums/{{id}}">{{name}}</a>
+            <a href="/albums/{{id}}"><button>View Albums</button></a>
         </div>
     </div>
 {{/each}}
