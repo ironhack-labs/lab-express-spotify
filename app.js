@@ -78,6 +78,7 @@ app.get("/album/:id", (req, res) => {
         image: images[0],
         tracks: tracks.items,
       });
+      console.log(tracks);
     },
     function (err) {
       console.error(err);

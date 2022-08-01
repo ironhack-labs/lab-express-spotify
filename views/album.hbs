@@ -1,17 +1,18 @@
 <main>
-<h1>{{name}}</h1>
-<h3>{{#each artists}}<a href="/artist/{{name}}?id={{id}}">{{name}}</a>{{#unless @last}} &#8226; {{/unless}}{{/each}}</h3>
-<img src="{{image.url}}" alt="">
-<ol>
-{{#each tracks}}
-    <li class="track">{{name}}
+  <h1>{{name}}</h1>
+  <h3>{{#each artists}}<a
+        href="/artist/{{name}}?id={{id}}"
+      >{{name}}</a>{{#unless @last}} &#8226; {{/unless}}{{/each}}</h3>
+  <img src="{{image.url}}" alt="" />
+  <ol>
+    {{#each tracks}}
+      <li class="track">{{name}}
         <p>
-    <audio
-        controls
-        src="{{preview_url}}">
+          <audio controls src="{{preview_url}}">
             Your browser does not support the
-            <code>audio</code> element.
-    </audio></p></li>
-{{/each}}
-</ol>
+            <code>audio</code>
+            element.
+          </audio></p></li>
+    {{/each}}
+  </ol>
 </main>
