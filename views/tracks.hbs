@@ -7,7 +7,7 @@
     <title>Document</title>
 </head>
 <body>
-    
+{{!--     
    {{#each tracks}}
    <h1>{{this.name}}</h1>
         <audio 
@@ -16,7 +16,16 @@
             Your browser does not support the
             <code>audio</code> element.
     </audio>
-   {{/each}}
+   {{/each}} --}}
+
+       
+{{#each tracks}}
+<div class="card mx-auto shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+    <p class="card-text grid text-center">{{this.name}}</p>
+  <audio controls src="{{this.preview_url}}" class="card-img-top" alt="...">
+  </div>
+</div>
+{{/each}}
 
 </body>
 </html>

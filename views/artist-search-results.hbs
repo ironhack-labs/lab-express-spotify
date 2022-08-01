@@ -8,21 +8,15 @@
 </head>
 <body>
     
-
-<div>
 {{#each artist}}
-
-<div class="album-div">
-<p>{{this.name}}</p>
-
-
-<a href="/albums/{{id}}">View Albums</a>
-
-<img src="{{this.images.1.url}}" alt="">
+<div class="card mx-auto shadow p-3 mb-5 bg-body rounded" style="width: 18rem;">
+  <img src="{{this.images.1.url}}" class="card-img-top" alt="...">
+  <div class="card-body grid text-center">
+    <p class="card-text">{{this.name}}</p>
+    <a href="/albums/{{id}}" class="btn btn-primary">View albums</a>
+  </div>
 </div>
 {{/each}}
-
-</div>
 
 
 </body>

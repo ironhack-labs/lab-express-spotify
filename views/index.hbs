@@ -4,19 +4,42 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
     <title>Home page</title>
+
 </head>
 <body>
-
+{{!-- 
+    <div class="search-bar">
 
     <form action="/artist-search" method="get">
  
         <label for="artist">Artist</label>
         <input type="text" name="artist">
+        
+        <button type="submit" class="btn btn-light">Search for the artist</button>
 
-        <button type="submit">Search the Artist</button>
+    </form> --}}
 
-    </form>
-    
+    <div class="container">
+
+                    <div class="row height d-flex justify-content-center align-items-center">
+
+                      <div class="col-md-8">
+
+                        <div class="search">
+                          <i class="fa fa-search"></i>
+                            <form action="/artist-search" method="get">
+                          <input type="text" class="form-control" placeholder="Search for your favorite artist" name="artist">
+                          <button class="btn btn-primary">Search</button>
+                          </form>
+                        </div>
+                        
+                      </div>
+                      
+                    </div>
+                </div>
+
+    </div>
 </body>
 </html>
