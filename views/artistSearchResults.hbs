@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist</title>
+      <link rel="stylesheet" href="/styles/artistSearchResults.css" />
+</head>
+<body>
+    
+    <section class="artist-results">
+  {{#each artistResult}}
+    <div class="result-artist">
+      <img class="artist-image" src="{{images.1.url}}" alt="artistimage" />
+      <div class="view-artist-albums">
+        <h1>{{name}}</h1>
+        <a href="/albums/{{id}}">
+        <button id="view-albums-button" type="submit">View albums</button></a>
+      </div>
+    </div>
+  {{/each}}
+</section>
+</body>
+</html>

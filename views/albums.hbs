@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <head>
+  <link rel="stylesheet" href="/styles/albums.css" />
+</head>
+</head>
+<body>
+    
+    <section class="artist-albums">
+  {{#each albumResult}}
+    <div class="result-albums">
+      <img class="album-image" src="{{images.1.url}}" alt="albumimage" />
+      <div class="view-artist-albums">
+        <h1>{{name}}</h1>
+        <a href="/tracks/{{id}}"><button
+            id="view-tracks-button"
+            type="submit"
+          >View tracks</button></a>
+      </div>
+    </div>
+  {{/each}}
+</section>
+</body>
+</html>
+
