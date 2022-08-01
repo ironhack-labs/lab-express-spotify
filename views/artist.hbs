@@ -1,0 +1,20 @@
+<head>
+  <link rel="stylesheet" href="styles/artists.css" />
+  <link rel="stylesheet" href="styles/style.css" />
+</head>
+
+<section class="artist-results">
+  {{#each artistResult}}
+    <div class="result-artist">
+      <img class="artist-image" src="{{images.1.url}}" alt="artistimage" />
+      <div class="view-artist-albums">
+        <h4>{{name}}</h4>
+        <a href="/albums/{{id}}"><button
+            id="view-albums-button"
+            type="submit"
+          >View albums</button></a>
+      </div>
+    </div>
+  {{/each}}
+
+</section>

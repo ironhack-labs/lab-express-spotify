@@ -1,0 +1,32 @@
+body {
+    padding: 3rem;
+    background-color: blue
+  }
+  
+  .artist-albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 5%;
+  }
+  
+  .result-albums {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 50vh;
+    width: 30vw;
+    margin: 2rem;
+    background-color: rgba(255, 255, 255, 0.509);
+  }
+  
+  #view-tracks-button {
+    font-family: "Montserrat", sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(29, 185, 84);
+    border: none;
+    width: 9vw;
+    height: 4vh;
+  }

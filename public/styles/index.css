@@ -1,0 +1,33 @@
+main {
+    height: 100vh;
+    width: 100vw;
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  
+  .form {
+    background-color: rgba(255, 255, 255, 0.509);
+    padding: 5rem 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+  }
+  
+  #input {
+    font-family: "Montserrat", sans-serif;
+    border: rgba(128, 128, 128, 0.426);
+    margin-bottom: 1rem;
+    width: 30vw;
+    height: 5vh;
+  }
+  
+  #search-button {
+    font-family: "Montserrat", sans-serif;
+    color: white;
+    background-color: rgb(29, 185, 84);
+    border: none;
+    width: 9vw;
+    height: 4vh;
+  }

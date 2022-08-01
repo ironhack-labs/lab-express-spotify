@@ -1,0 +1,27 @@
+body {
+  padding: 3rem;
+  background-color: blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+}
+
+.album-tracks-preview {
+  background-color: purple;
+  width: 50vw;
+  height: 130vh;
+  margin: 2rem;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.table {
+  color: white;
+}

@@ -1,0 +1,23 @@
+<head>
+  <link rel="stylesheet" href="/styles/tracks.css" />
+  <link rel="stylesheet" href="/styles/style.css" />
+
+</head>
+
+<div class="album-tracks-preview">
+  <table class="table">
+    <tr class="head-row">
+      <th>Title</th>
+      <th>Listen</th>
+    </tr>
+    {{#each tracksResult}}
+      <tr class="row-of-preview">
+        <td class="name-column">{{name}}</td>
+        <td>
+          <audio id="preview" controls>
+            <source src="{{preview_url}}" type="audio/ogg" />
+          </audio></td>
+      </tr>
+    {{/each}}
+  </table>
+</div>
