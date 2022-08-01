@@ -1,0 +1,15 @@
+{{!-- This is the artist albums search result page  --}}
+{{#each artists}}
+    <div>
+        <div>
+            {{!-- Because there are multiple images we just get the first one --}}
+            <img src={{this.images.0.url}} alt="">
+        </div>
+        <div>
+            {{!-- Getting the name of the album --}}
+            <h3>{{this.name}}</h3>
+            {{!-- Here we are just including a link to the album based on the id of the album, with the id you are constructing the URL --}}
+            <a href="/albums/{{this.id}}" >View Albums</a>
+        </div>
+    </div>
+{{/each}}

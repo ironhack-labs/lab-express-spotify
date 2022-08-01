@@ -1,0 +1,6 @@
+{{#each tracks}}
+  {{! Searching for the song nme }}
+  <h3>{{this.name}}</h3>
+  {{! Displaying the song audio }}
+  <audio controls src={{this.preview_url}}></audio>
+{{/each}}
