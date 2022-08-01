@@ -1,0 +1,17 @@
+<section>
+
+
+
+  <h1>Title</h1>
+  <h1>Listen</h1>
+  {{#each tracks}}
+  <img src="{{this.images.0.url}}" alt="">
+  <h1>{{this.name}}</h1>
+  <audio controls src="{{this.preview_url}}">
+    Your browser does not support the
+    <code>audio</code> element.
+  </audio>
+  {{/each}}
+
+
+</section>
