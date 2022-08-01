@@ -1,0 +1,28 @@
+
+.homepage {
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+  }
+  
+  .search-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  #main-message {
+    display: flex;
+    justify-content: center;
+  }
+
+  .artist-result-container {
+    display: flex;
+    justify-content: center;
+  }
+  
+  .artist-info {
+    display: flex;
+    justify-content: space-around;
+  }
