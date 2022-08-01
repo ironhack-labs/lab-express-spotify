@@ -76,6 +76,8 @@ app.get("/albums/:artistID", (req, res) => {
       res.render("albums", {
         albumArtistName: data.body.items[0].artists[0].name,
         albums: data.body.items,
+        next: data.body.next,
+        previous: data.body.previous,
       });
     },
     function (err) {
