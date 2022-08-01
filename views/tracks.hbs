@@ -1,6 +1,18 @@
+ <div class="track">
+ <table>
+      <tr class="tableheader">
+        <th>Tittle</th>
+        <th>Audio</th>
+      </tr>
 {{#each tracks}}
   {{! Searching for the song nme }}
-  <h3>{{this.name}}</h3>
-  {{! Displaying the song audio }}
-  <audio controls src={{this.preview_url}}></audio>
+  <div >
+    <tr>
+        <td>{{this.name}}</td>
+         {{! Displaying the song audio }}
+        <td><audio controls src={{this.preview_url}}></audio><td>
+    </tr>
+</div>
 {{/each}}
+</table>
+</div>

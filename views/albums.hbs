@@ -1,11 +1,9 @@
 {{! This page is created to see all the songs of a particular album}}
 {{#each albums}}
-  <div>
+  <div class="album">
     {{! Redering the image of the album }}
     <div>
       <img src={{this.images.0.url}} alt="" />
-    </div>
-    <div>
       <h3>{{this.name}}</h3>
       <a href="/tracks/{{this.id}}">View Tracks</a>
     </div>

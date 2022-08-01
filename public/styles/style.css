@@ -1,0 +1,121 @@
+/* General Adjustments */
+
+img {
+  object-fit: cover;
+  width: 150px;
+  padding: 10px;
+  height: 150px;
+  object-position: 100% 0;
+}
+
+h3 {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  font-size: 14px;
+  font-weight: 500;
+  color: white;
+  margin-bottom: 25px;
+  word-wrap: break-word;
+  margin-left: 10px;
+  max-width: 150px;
+}
+
+a {
+  padding: 8px;
+  text-decoration: none;
+  color: white;
+  background-color: rgb(225, 99, 99);
+  font-size: 13px;
+}
+
+/* Search Page Styling */
+
+.searchpage {
+  position: relative;
+  background-image: url("/images/spotify-background.jpeg");
+  width: 100%;
+  height: 100%;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  text-align: center;
+  vertical-align: middle;
+  justify-content: center;
+}
+
+.formstyle {
+  background: rgba(223, 217, 216, 0.7);
+  padding: 40px 150px 40px 150px;
+  flex-direction: row;
+  border-radius: 4px;
+}
+
+.formtext {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.searchinput {
+  padding: 5px 100px 2px 2px;
+  margin: 8px;
+  opacity: 100%;
+  border-radius: 2px;
+  border-color: lightgray;
+  border-width: 0.05cm;
+}
+
+.searchsubmit {
+  background-color: rgb(225, 99, 99);
+  padding: 5px;
+  color: white;
+  font-size: small;
+  border-width: 0;
+  border-color: none;
+}
+
+/*  Artists Search Results*/
+
+.artist {
+  display: inline-block;
+  margin: 20px;
+  padding-bottom: 32px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(41, 171, 215);
+  border-radius: 4px;
+}
+
+/*  Album Search Results*/
+.album {
+  display: inline-block;
+  margin: 20px;
+  padding-bottom: 32px;
+  text-align: center;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgb(41, 171, 215);
+  border-radius: 4px;
+}
+
+/* Track Search Results */
+/* Styled into a table */
+
+.track {
+  color: black;
+  font-size: 16px;
+  margin-left: 24px;
+  margin-right: 24px;
+  /* For the word limit, so it doesnt break it in lines */
+}
+
+.tableheader {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+  background-color: rgb(41, 171, 215);
+  color: white;
+  text-align: left;
+  font-size: 24px;
+}

@@ -1,7 +1,15 @@
-<div>
-    <img class = '' src="/public/images/spotify-background.jpeg" alt ="spotify background">
+<div class="searchpage">
+  <div class="formstyle">
+    <form action="/artist-search">
+      <div class="formtext">
+        <input
+          class="searchinput"
+          type="text"
+          name="artist"
+          placeholder="Search for an Artist"
+        />
+        <button class="searchsubmit" type="submit">Search for an Artist</button>
+      </div>
+    </form>
+  </div>
 </div>
-<form action="/artist-search">
-    <input type="text" name="artist" placeholder="Search for an Artist">
-    <button type="submit">Search for an Artist</button>
-</form>
