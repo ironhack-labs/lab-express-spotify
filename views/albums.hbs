@@ -1,0 +1,19 @@
+<div class="albums-wrapper">
+  <h2 class="album-title-page">Albums:</h2>
+  <div class="albums-card-container">
+    {{#each albums as |album|}}
+      <div class="album-card">
+        <h4 class="album-name-title">{{album.name}}</h4>
+
+        <img
+          src="{{album.images.0.url}}"
+          class="album-card-img"
+          alt="album-img"
+        />
+        <h4 class="album-card-title">{{album.name}}</h4>
+        <a href="/view-tracks/{{album.id}}" class="view-track-link">View
+          Tracklist</a>
+      </div>
+    {{/each}}
+  </div>
+</div> 

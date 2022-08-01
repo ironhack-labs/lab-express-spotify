@@ -3,13 +3,31 @@
 <div class="artist-info-container">
   <div class="show-artist-info">
     {{#each artists as |artist|}}
-      <div class="show-artist-info-container">
+      <div class="artist-info-container">
         <img
           src="{{artist.images.0.url}}"
           class="artist-image"
           alt="artist-image"
         />
         <div class="card-info">
+        <div>
+          <div class="artist-wrapper">
+    <h2 class="search-title">Your Search Results:</h2>
+    <div class="show-artist-info">
+      {{#each artists as |artist|}}
+        <div class="artist-card">
+           <h4 class="artist-title">{{artist.name}}</h4>
+          <img
+            src="{{artist.images.0.url}}"
+            class="artist-image"
+            alt="artist-image"
+          />
+           <a href="/albums/{{artist.id}}" class="artist-album-link">View Albums</a>
+        </div>
+      {{/each}}
+  
+        </div>
+
           <h4 class="artist-title">{{artist.name}}</h4>
         </div>
       </div>

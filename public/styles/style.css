@@ -1,28 +1,118 @@
-
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Roboto", sans-serif;
+}
 .homepage {
-    background-image: url("../images/spotify-background.jpeg");
-    background-size: cover;
-    width: 100%;
-    height: 100vh;
-  }
-  
-  .search-info {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  width: 100%;
+  height: 100vh;
+}
+.search-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.background-form {
+  background-color: rgba(225, 225, 225, 0.8);
+  width: 700px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 250px;
+}
+.form-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.input-field {
+  width: 280;
+  height: 35px;
+  display: flex;
+  border: none;
+  border-radius: 5px;
+  color: black;
+}
+.placeholder {
+  text-align: center;
+  border-radius: 20px;
+}
 
-  #main-message {
-    display: flex;
-    justify-content: center;
-  }
+.artist-wrapper,
+.albums-wrapper {
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  width: 100%; 
+  height: 100vh;
+}
 
-  .artist-result-container {
-    display: flex;
-    justify-content: center;
-  }
-  
-  .artist-info {
-    display: flex;
-    justify-content: space-around;
-  }
+.search-title,
+.album-title-page {
+  color: white;
+  display: flex;
+  justify-content: center;
+  padding-top: 20px;
+}
+
+.show-artist-info,
+.albums-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin: 0 auto;
+  width: 1500px;
+}
+
+.artist-card,
+.album-card {
+  padding-top: 20px;
+}
+
+.artist-album-link,
+.view-track-link {
+  display: flex;
+  padding-top: 10px;
+  background-color: rgba(254, 105, 105, 255);
+  text-decoration: none;
+}
+
+.artist-album-link:hover,
+.view-track-link:hover {
+  background-color: rgba(77, 77, 77, 255);
+  transition: 0.5s;
+}
+
+.artist-image,
+.album-card-img {
+  width: 200px;
+  height: 180px;
+}
+
+.view-track-header {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 20px;
+  padding-bottom: 35px;
+  background-color: rgba(74, 74, 74, 255);
+  color: white;
+}
+
+.track-list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 450px;
+  padding-right: 250px;
+  padding-bottom: 5px;
+  background-color: rgba(246, 246, 246, 255);
+  border: 1px solid #000000;
+}
+
+.preview-controls {
+  height: 30px;
+}
