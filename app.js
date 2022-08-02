@@ -28,7 +28,7 @@ spotifyApi
 
 // Our routes go here:
 app.get("/", (req, res) => {
-  res.render("home-page");
+  res.render("home-page", { header: false });
 });
 
 app.get("/artist-search", (req, res) => {
@@ -47,6 +47,7 @@ app.get("/artist-search", (req, res) => {
       res.render("artist-search-results", {
         artists,
         searchedFor: req.query.artistName,
+        header: true,
       }); // pass data to the hbs file
     })
     .catch((err) =>
@@ -66,6 +67,7 @@ app.get("/albums/:artistId", (req, res) => {
       res.render("albums", {
         albums,
         artistName,
+        header: true,
       });
     })
     .catch((err) => {
@@ -78,9 +80,12 @@ app.get("/tracks/:albumName/:albumId", (req, res) => {
     .getAlbumTracks(req.params.albumId, { limit: 15, offset: 0 })
     .then((data) => {
       // console.log("The tracks: ", data.body);
+      // console.log("ArtistName? ", data.body.items[0].artists[0].name);
       res.render("tracks", {
         tracks: data.body.items,
+        artistName: data.body.items[0].artists[0].name,
         albumName: req.params.albumName,
+        header: true,
       });
     })
     .catch((err) => {
