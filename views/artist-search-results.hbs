@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artist Result</title>
+</head>
+<body>
+
+ <h1>This is the result of your search</h1>
+
+
+  {{#each artistObj}}   
+
+    
+     <h3> {{this.name}}</h3>
+     <button><a href="/albums/{{this.id}}" id="button">View Albums</a></button>
+     <img src="{{this.images.0.url}}" />
+
+ {{/each}}
+   
+
+</body>
+</html>
