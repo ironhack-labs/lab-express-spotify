@@ -2,28 +2,4 @@ body {
     padding: 3rem;
     background-color: rgb(170, 169, 169)
   }
-  .artist-results {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    gap: 5%;
-  }
-  .result-artist {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 50vh;
-    width: 30vw;
-    margin: 2rem;
-    background-color: rgba(26, 25, 25, 0.749);
-  }
-  #view-albums-button {
-    font-family: "Montserrat", sans-serif;
-    color: rgb(39, 12, 12);
-    background-color: rgb(252, 165, 3);
-    border: none;
-    width: 9vw;
-    height: 4vh;
-  }
+  
