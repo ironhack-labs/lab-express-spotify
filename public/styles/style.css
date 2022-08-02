@@ -1,3 +1,8 @@
+html, body {
+    margin:0;
+    height:100%;
+  }
+
 .artist-search {
     display: flex;
     flex-direction: column;
@@ -20,6 +25,14 @@
 }
 
 .background {
-    background-image: url("https://unsplash.com/s/photos/concert-crowd");
-    background-color: black;
+    background-image: url("/images/spotify-background.jpeg");
+    /* background-color: black; */
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box;
+    /* background-repeat: no-repeat; */
+}
+
+.card-img-top {
+    padding: 15px;
 }
