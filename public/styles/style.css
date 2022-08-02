@@ -1,0 +1,51 @@
+body {
+	display: flex;
+	justify-content: center;
+	background-image: url("https://thumbs.gfycat.com/ImmaterialQuestionableHoatzin-size_restricted.gif");
+	background-repeat: repeat;
+	background-size: 300px;
+}
+
+.image {
+	background-image: url("https://d2z8nyy70yf33i.cloudfront.net/wp-content/uploads/2-34.gif");
+	background-repeat: no-repeat;
+	background-size: cover;
+	width: 1000px;
+	height: 600px;
+	border-radius: 10px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	margin-top: 50px;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+.album {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.tracks {
+	display: flex;
+	flex-direction: column;
+}
+
+.form {
+	display: flex;
+	align-items: center;
+	margin-top: 50px;
+	color: white;
+}
+
+button {
+	padding: 10px;
+	color: white;
+	background-color: rgba(21, 206, 67, 0.932);
+	border: none;
+	border-radius: 5px;
+}
