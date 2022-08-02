@@ -1,5 +1,25 @@
-#artist-search {
+.artist-search {
     display: flex;
     flex-direction: column;
-    width: 30vw;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30vh;
+}
+
+.artist-search input {
+    width: 20vw;
+}
+
+.artist-search label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    font-size: 1.1em;
+}
+
+.background {
+    background-image: url("https://unsplash.com/s/photos/concert-crowd");
+    background-color: black;
 }

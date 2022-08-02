@@ -8,9 +8,11 @@
 </head>
 <body>
     {{#each albums}}
-    <img src="{{this.images.1.url}}" alt="image">
-    <h1>{{this.name}}</h1>
-    <a href="/tracks/{{this.id}}">View Tracks</a>
+    <div class="album-card">
+        <img src="{{this.images.1.url}}" alt="image">
+        <h1>{{this.name}}</h1>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
     {{/each}}
 </body>
 </html>
