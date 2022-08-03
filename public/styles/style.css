@@ -4,7 +4,6 @@ padding: 0%;
 margin: 0%;
 }
 
-
 /* Home */
 .container {
     background-image: url('../images/spotify-background.jpeg');
@@ -66,7 +65,7 @@ h1{
     width: 60%;
     padding: 10px;
     text-align: center;
-    padding: 0%;
+    padding: 2%;
     border: 3px solid rgb(246, 104, 99);
 }
 
@@ -75,6 +74,7 @@ h1{
 }
 
 .list-results {
+    margin: 2%;
     color: white;
     display: flex;
     flex-wrap: wrap;

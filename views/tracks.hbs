@@ -1,1 +1,7 @@
 <h1>Tracks</h1>
+<div class="list-results">
+<div class="results">
+{{#each tracks}}
+  <h1>{{name}} </h1>
+  <audio controls src="{{preview_url}}"></audio>
+{{/each}}

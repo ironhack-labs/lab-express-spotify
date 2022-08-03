@@ -66,17 +66,15 @@ app.get('/albums/:artistId', (req, res, next) => {
         );
 });
 
-// app.get('/tracks/:id', (req, res, next) => {
-//     const { id } = req.params;
-//     spotifyApi
-//         .getAlbumTracks(id)
-//         .then(data => {
-//             const tracks = data.body.items;
-//             res.render('tracks', { tracks })
-//         })
-//         .catch(err => console.log(err));
-// });
 
+app.get("/tracks/:albumId", (req, res) => {
+    spotifyApi.getAlbumTracks(req.params.albumId).then((data) => {
+      console.log("data:", data.body.items);
+      const artistName = data.body.items[0].artists[0].name;
+  
+      res.render("tracks", { tracks: data.body.items, artistName });
+    });
+  });
 
 // Port
 app.listen(3000, () =>
