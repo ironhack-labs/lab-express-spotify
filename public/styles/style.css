@@ -114,4 +114,43 @@ h1{
 
 
 
+/* Tracks Page */
 
+.list-results-tracks {
+    margin: 2%;
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    row-gap: 1vw;
+    text-align: center;
+    font-size: 12px;
+}
+
+.results-tracks {
+    align-items: center;
+    border-width: 1px;
+    width: 15vw;
+    height: 40vh;
+}
+
+.results-tracks img {
+    width: 50vw;
+    height: 50vw;
+}
+
+.results-tracks p {
+    text-align: center;
+}
+
+.results-tracks a {
+    border-radius: 5%;
+    color: black;
+    width: 163%;
+    padding: 2%;
+    text-decoration: none;
+    text-align: center;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
