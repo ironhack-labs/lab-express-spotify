@@ -7,16 +7,13 @@
     
 </head>
 <body>
- <section>
+ <div>
     {{#each artists}}
     <img src="{{this.images.0.url}}" alt="">
     <p>{{this.name}}</p>
-    <a href="/albums/{{id}}">View Albums</a>
+    <a href="/views/albums.hbs">View Albums</a>
     {{/each}}
 
-  </section>
-    
-    
-    </form>
+  </div>
 </body>
 </html>
