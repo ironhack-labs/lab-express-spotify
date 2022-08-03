@@ -1,0 +1,14 @@
+<div class="nav-container">
+  <nav>
+    <p>Title</p>
+    <p id="listen">Listen</p>
+  </nav>
+</div>
+<ul class="ul-container">
+  {{#each trackResults}}
+    <li id="each-track">
+      {{name}}
+      <audio controls><source src="{{preview_url}}" type=""></audio>
+    </li>
+  {{/each}}
+</ul>

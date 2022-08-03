@@ -1,0 +1,175 @@
+/*************** RESET CSS ***************/
+*,
+::before,
+::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/*************** GLOBAL STYLES ***************/
+body{
+    height: 100vh;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    text-align: center;
+}
+
+/*************** HOME PAGE ***************/
+.home-page-background-img{
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    background-size: cover;
+    margin: 0;
+    height: 100%;
+}
+
+.form-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255,255,255, 0.3);
+    padding: 5%;
+    width: 30%;
+}
+
+.form{
+    display: flex;
+    flex-direction: column;
+}
+
+#search-artist-btn{
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+    height: 30px;
+    color: white;
+    background-color: rgba(255, 99, 71, 1);
+    border-color: rgba(255, 99, 71, 1);
+}
+
+#input-artist{
+    height: 30px;
+}
+
+/*************** ARTISTS SEARCH RESULTS PAGE ***************/
+
+#artists-img{
+    height: 250px;
+    width: 250px;
+}
+
+.artist-results{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    margin: 15px;
+}
+
+.each-artist{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.container{
+    background-color: gray;
+    width: 250px;
+    color: white;
+    height: 60px;
+}
+
+#view-albums-btn{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 99, 71, 1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+/*************** ALBUMS PAGE ***************/
+
+.album-results{
+    list-style-type: none;
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 15px;
+    margin: 15px;
+}
+.each-album{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#album-img{
+    height: 220px;
+    width: 210px;
+}
+
+#div-container{
+    background-color: gray;
+    width: 210px;
+    color: white;
+    height: 60px;
+}
+
+#view-tracks-btn{
+    text-decoration: none;
+    color: white;
+    background-color: rgba(255, 99, 71, 1);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+p{
+    margin-bottom: 10px;
+    margin-top: 0;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+/*************** TRACKS PAGE ***************/
+
+.nav-container{
+    background-color: gray;
+    max-width: 1000px;
+    border-radius: 5px;
+}
+
+nav{
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem;
+    color: beige;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.ul-container{
+    max-width: 1000px;
+}
+
+#each-track{
+    background-color:rgba(236, 236, 236, 1);
+    margin: 5px;
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 650;
+    color:rgba(0, 0, 0, 0.8);
+    border-radius: 5px;
+}
+
+#listen{
+    margin-right: 10%;
+}
