@@ -1,0 +1,13 @@
+<div>
+    {{#each trackAPI}}
+    <figure>
+        <figcaption>{{this.name}}</figcaption>
+        <audio
+            controls
+            src="{{this.preview_url}}">
+                Your browser does not support the
+                <code>audio</code> element.
+        </audio>
+    </figure>
+    {{/each}}
+</div>

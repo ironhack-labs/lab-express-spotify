@@ -1,0 +1,11 @@
+<div id='artist'>
+    {{#each albumAPI}}
+    <div id="art">
+    <img src="{{this.images.0.url}}"/>
+    <div>
+        <p>{{this.name}}</p>
+    <a href="/preview/{{this.id}}">View Tracks</a>
+    </div>
+    </div>
+    {{/each}}
+</div>

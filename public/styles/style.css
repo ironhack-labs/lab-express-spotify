@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    background: url('../images/spotify-background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+#index {
+    margin-top: 30%;
+}
+
+#form {
+    height:15em;
+    width: 40em;
+    background-color:hsla(0, 0%, 100%, 0.3);;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#form input {
+    width: 30em;
+    height: 2.5em;
+    margin-bottom: 10px;
+}
+
+#form button {
+    width: 13em;
+    height: 3em;
+    background-color: rgb(160, 0, 0);
+    border: none;
+    color: white;
+    font-weight: bold;
+}
+
+#artist {
+    padding-top: 5%;
+    width: 80%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+}
+
+#art img {
+    width: 80%;
+    height:90%;
+}
+
+#art {
+    margin: 10%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+#art p {
+    font-size: 20px;
+}
+
+#art div {
+    text-align: center;
+    width: 80%;
+    background-color: rgb(62, 62, 62);
+    color: white;
+    padding-bottom: 10px;
+}
+
+#art a {
+    margin-left: 30%;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:130px;
+    height:40px;
+    text-decoration: none;
+    color: white;
+    background-color: rgb(160, 0, 0);
+    border: 1px solid black;
+}
