@@ -1,0 +1,32 @@
+body{
+    margin: 20px;
+}
+
+.form{
+    display: flex;
+    margin-top: 2rem;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-list {
+    display: flex;
+    justify-content: left;
+    align-content: space-around;
+    flex-wrap: wrap;
+}
+
+.artist-list>.card {
+    margin-left: 1rem;
+    margin-bottom: 1rem;
+    margin-top: 1rem;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
+.artist-title>h1 {
+    color: #2081c3;
+    padding-left: 2rem;
+    margin-left: 2rem;
+    margin-top: 2rem;
+}
