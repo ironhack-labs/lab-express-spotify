@@ -1,9 +1,13 @@
-<h1>PRUEBA SI FUNCIONA</h1>
-
-<div class="card">
-  <img src="" alt="artist-photo" style="width:100%">
-  <div class="container">
-    <h4><b>{{ name }}</b></h4> 
-    <button>View Albums</button>
+<div class="card-columns">
+  {{#each artists as |artist|}}
+  <div class="card">
+    <img class="card-img-top" src="{{this.images.[0].url}}" alt="Card image cap">
+    <div class="card-body">
+      <h5 class="card-title">{{this.name}}</h5>
+       <a href="/albums/{{this.id}}" class="btn btn-primary">
+        <button>View Albums</button>
+      </a>
+    </div>
   </div>
+  {{/each}}
 </div>
