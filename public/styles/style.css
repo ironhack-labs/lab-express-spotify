@@ -1,0 +1,34 @@
+.home {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    padding: 0 200px;
+}
+
+.home h1 {
+    margin-bottom: 100px;
+}
+
+.artist {
+    margin: 10px;
+    border: 1px solid blue;
+    border-radius: 20px;
+}
+
+.artist img {
+    width: 60%;
+}
+
+.artist a {
+    padding: 5px 20px;
+    border-radius: 10px;
+    background-color: blue;
+    margin: 20px;
+    color: white;
+    text-decoration: none;
+}
