@@ -1,0 +1,11 @@
+<h1>Albums</h1>
+<div class="conatiner">
+    <div class="row">
+        {{#each infoAlbums}}
+        {{!-- <h1>{{name}}</h1>
+        <img src="{{image.url}}" alt="">
+        <a href="/tracks/{{id}}">View tracks </a><br> --}}
+        {{> albumPartial this}}
+        {{/each}}
+    </div>
+</div>

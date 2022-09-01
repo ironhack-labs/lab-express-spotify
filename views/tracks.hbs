@@ -1,0 +1,7 @@
+<h1>Album tracks!</h1>
+{{#each trackInfo}}
+<h2>{{name}}</h2>
+<audio controls src="{{preview_url}}">
+    Your browser does not support the <code>audio</code> element.
+</audio>
+{{/each}}
