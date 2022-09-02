@@ -1,12 +1,17 @@
+<div class="artists-container">
 
 
 {{#each albumsArray}}
-    <div class="link-holder">
+    <div class="artist-holder">
         <img src="{{this.images.1.url}}" alt="">
+        <div class="name-holder">
         <p>{{this.name}}</p>
         <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
     </div>
 {{/each}}
+
+</div>
 
 
 

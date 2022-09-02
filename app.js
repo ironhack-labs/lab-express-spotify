@@ -40,7 +40,7 @@ app.get('/artist-search', (req,res) => {
     const searchedArtist = req.query.artist
     // access the request query - "?artist", and the key is "artist" as set in the button's name parameter in index.hbs 
     spotifyApi
-    .searchArtists(searchedArtist)
+    .searchArtists(searchedArtist, {limit:9})
     .then(data => {
         // res.json(data) // RESPONDS WITH THE OBJECT JSONIFIED SO YOU CAN EXPLORE IT EASILY
         const albumsArray = data.body.artists.items;

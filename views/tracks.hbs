@@ -1,11 +1,13 @@
 <div class="tracks-header">
-    <p>Track name</p>
-    <p>Listen:</p>
+    <p>TRACK NAME</p>
+    <p>LISTEN:</p>
 </div>
+<div class="tracks-container">
+
 {{#each tracksArr}}
     <div class="tracks-holder">
-        <p>{{this.track_number}}</p>
-        <p>{{this.name}}</p>
+        <p>{{this.track_number}}.{{this.name}}</p>
         <audio src="{{this.preview_url}}" controls></audio>
     </div>
 {{/each}}
+</div>

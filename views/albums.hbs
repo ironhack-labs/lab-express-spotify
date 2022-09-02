@@ -1,16 +1,19 @@
-<div class="album-container">
+<div class="artists-container">
 
 {{#each listOfAlbums}}
-    <div class="album-card">
+    <div class="artist-holder">
 
         <img src="{{this.images.1.url}}" alt="{{this.name}} cover">
+        <div class="name-holder">
+
         <p>{{this.name}}</p>
         <a href="/{{this.id}}/tracks">View Tracks</a>
 
+        </div>
     </div>
 {{/each}}
-
 </div>
+
 
 
 

@@ -102,3 +102,76 @@ body {
     font-weight: bold;
     font-family: inherit;
 }
+
+.artists-container {
+    margin:20px;
+    padding:10px;
+    display:flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.artist-holder {
+    gap: 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.artist-holder img {
+    max-width: 300px;
+    max-height: 300px;
+
+}
+
+.name-holder {
+    background-color: rgb(204 200 200 / 92%);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap:5px;
+    padding-top: 5px;
+}
+.name-holder a {
+    text-align: center;
+    text-decoration: none;
+    color: #efefefd1;
+    padding: 5px 0;
+    background-color: #000000ab;
+    width: 100%;
+}
+
+.tracks-header {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #393939;
+    color: #b2b2b2;
+    height: 3em;
+    font-size: 2em;
+    font-weight: bold;
+}
+
+.tracks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+    padding: 5px 0;
+}
+
+
+.tracks-holder {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: darkgray;
+    padding: 10px 20px;
+    width: 90%;
+    border-radius: 15px;
+}
