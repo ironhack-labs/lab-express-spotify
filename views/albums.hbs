@@ -1,0 +1,33 @@
+<div class="album-container">
+
+{{#each listOfAlbums}}
+    <div class="album-card">
+
+        <img src="{{this.images.1.url}}" alt="{{this.name}} cover">
+        <p>{{this.name}}</p>
+        <a href="/{{this.id}}/tracks">View Tracks</a>
+
+    </div>
+{{/each}}
+
+</div>
+
+
+
+{{!-- ALBUM OBJECT LOOKS LIKE THAT --}}
+    {{!-- {
+      album_group: 'album',
+      album_type: 'album',
+      artists: [Array],
+      available_markets: [Array],
+      external_urls: [Object],
+      href: 'https://api.spotify.com/v1/albums/6emgUTDksZyhhWmtjM9FCs',
+      id: '6emgUTDksZyhhWmtjM9FCs',
+      images: [Array],
+      name: 'Get Back (Rooftop Performance)',
+      release_date: '2022-01-28',
+      release_date_precision: 'day',
+      total_tracks: 10,
+      type: 'album',
+      uri: 'spotify:album:6emgUTDksZyhhWmtjM9FCs'
+    }, --}}

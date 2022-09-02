@@ -42,19 +42,71 @@ app.get('/artist-search', (req,res) => {
     spotifyApi
     .searchArtists(searchedArtist)
     .then(data => {
-        // res.json(data) RESPONDS WITH THE OBJECT JSONIFIED SO YOU CAN EXPLORE IT EASILY
+        // res.json(data) // RESPONDS WITH THE OBJECT JSONIFIED SO YOU CAN EXPLORE IT EASILY
         const albumsArray = data.body.artists.items;
         res.render('artist-search-results', {
             doctitle: `Search results for ${searchedArtist}`,
             albumsArray
         })
-        console.log('The received data from the API: ', data.body.artists.items[0].images);
     })
     .catch(err => {
         console.log('Error while searching for artists occured:' + err)
     })
-
 })
+
+// route for showing albums of a selected artistId
+app.get('/albums/:artistID', (req,res) => {
+    const clickedArtist = req.params.artistID
+    spotifyApi.getArtistAlbums(clickedArtist,{limit:9})
+    .then(data => {
+        const listOfAlbums = data.body.items
+        res.render('albums', {
+            doctitle: "Albums",
+            listOfAlbums
+        })
+    })
+    .catch(err => {
+        console.log('Error fetching albums:' + err)
+    })
+})
+
+// route for showing tracks of an album
+// http://localhost:3001/6emgUTDksZyhhWmtjM9FCs/tracks
+
+app.get('/:albumID/tracks', (req,res) => {
+    const clickedAlbum = req.params.albumID;
+    spotifyApi
+    .getAlbum(clickedAlbum)
+    .then(data => {
+        //console.log(data.body.tracks.items)
+        const tracksIDS = data.body.tracks.items.map(trackObj => trackObj.id)
+        return tracksIDS
+    })
+    .then(tracksIds => {
+        console.log(tracksIds)
+        return spotifyApi.getTracks(tracksIds)
+    })
+    .then(tracks => {
+        const tracksArr = tracks.body.tracks;
+        res.render('tracks', {
+            doctitle : 'Tracks',
+            tracksArr
+        })
+    })
+    // .then(tracks => {
+    //     return tracksPreviewURLs = tracks.body.tracks.map(trackObj => trackObj.preview_url)
+    // })
+    // .then(preview_url => {
+    //     res.send(preview_url)
+    // })
+    // .then(tracks => {
+    //     return spotifyApi.getTracks(tracks)
+    // })
+    // .then(returnedTracks => {
+    //     console.log(returnedTracks)
+    // })
+})
+
 
 
 

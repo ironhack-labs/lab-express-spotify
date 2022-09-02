@@ -1,15 +1,17 @@
+
+
 {{#each albumsArray}}
     <div class="link-holder">
         <img src="{{this.images.1.url}}" alt="">
         <p>{{this.name}}</p>
-        <a href="/albums">View Albums</a>
+        <a href="/albums/{{this.id}}">View Albums</a>
     </div>
 {{/each}}
 
 
 
+    {{!-- each object in the array looks like this :) --}}
   {{!--
-    each object in the array looks like this :)
     {
     external_urls: {
       spotify: 'https://open.spotify.com/artist/6kQtaqjxUVrOi5Z8hMmgUm'
