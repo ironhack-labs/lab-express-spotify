@@ -1,0 +1,26 @@
+{{#each albumsArray}}
+    <div class="link-holder">
+        <img src="{{this.images.1.url}}" alt="">
+        <p>{{this.name}}</p>
+        <a href="/albums">View Albums</a>
+    </div>
+{{/each}}
+
+
+
+  {{!--
+    each object in the array looks like this :)
+    {
+    external_urls: {
+      spotify: 'https://open.spotify.com/artist/6kQtaqjxUVrOi5Z8hMmgUm'
+    },
+    followers: { href: null, total: 4776 },
+    genres: [ 'video game music' ],
+    href: 'https://api.spotify.com/v1/artists/6kQtaqjxUVrOi5Z8hMmgUm',
+    id: '6kQtaqjxUVrOi5Z8hMmgUm',
+    images: [ [Object], [Object], [Object] ],
+    name: 'Elitsa Alexandrova',
+    popularity: 35,
+    type: 'artist',
+    uri: 'spotify:artist:6kQtaqjxUVrOi5Z8hMmgUm'
+  } --}}
