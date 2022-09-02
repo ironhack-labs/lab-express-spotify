@@ -1,0 +1,166 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;    
+}
+
+.home {
+    background-image: url('/images/spotify-background.jpeg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home form {
+    background-color: rgba(255, 255, 255, 0.507);
+    width: 600px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+
+input {
+    border: none;
+    border-radius: 0;
+    box-sizing: border-box;
+    height: 40px;
+    width: 450px;
+    padding-left: 30px;
+    margin-bottom: 20px; 
+    background-color: rgba(255, 255, 255, 0.418);      
+}
+
+input:focus {
+    outline: none;
+    background-color: white;
+}
+
+.btn  {
+    color: white;
+    background-color: #fa6863;
+    height: 30px;
+    width: 200px;
+    border: none;
+    box-sizing: border-box;
+    box-shadow: 3px 3px 3px gray;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+    filter: drop-shadow(2px 3px 3px #333);
+}
+
+.btn:active {
+    transform: scale(0.98);    
+    box-shadow: 3px 2px 22px 1px rgba(0, 0, 0, 0.24);    
+}
+
+
+
+a {
+    text-decoration: none;
+    text-align: center;
+    padding-top: 5px;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    
+}
+.cover {
+    height: 450px;
+    width: 450px;
+    padding: 30px;
+      
+
+}
+.cover img {
+    height: 450px;
+    width: 450px;
+    object-fit: cover;
+    position: absolute;  
+       
+} 
+
+.title-line {
+    
+    position: relative;
+    float: left;       
+    top: 325px;
+    background-color: #414141c0;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-items: center;
+    width: 450px;
+    height: 125px;   
+}
+
+.tracks {
+    
+    display: flex;
+    flex-direction: column;
+    align-items: center;  
+
+}
+
+.table-title {
+    width: 80vw; 
+    background-color: rgb(146, 146, 146);
+    padding-left: 30px;    
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    color: white;
+}
+
+.table-title h3 {
+    padding-right: 150px;
+}
+
+.track-line {
+    width: 80vw; 
+    background-color: #f1f3f4;
+    padding-left: 30px;    
+    margin: 5px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+
+.track-line h3 {
+    font-size: 14px;
+}
+
+audio {
+        
+    width: 40vw;
+    max-width: 400px;
+    height: 30px;
+    padding-right: 30px;   
+}
+
+
+
+audio:hover {
+    transform: scale(1.02);
+    filter: drop-shadow(2px 3px 3px #333);
+}
+
+
+
