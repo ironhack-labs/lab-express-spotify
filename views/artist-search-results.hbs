@@ -1,0 +1,11 @@
+<section class='artists'>
+	{{#each artistsSearch}}
+		<div class='artist'>
+			<div class="artistImg">
+				<img src={{images.0.url}} alt='' />
+			</div>
+			<h3>{{name}}</h3>
+			<a href='/albums/{{id}}'>View Albums</a>
+		</div>
+	{{/each}}
+</section>

@@ -1,0 +1,17 @@
+<section class='tracks'>
+	<h2>{{album.artist}} - {{album.album}}</h2>
+	<table cellspacing="0" cellpadding="0">
+		<tr class="header">
+			<th class="track">Title</th>
+			<th class="audio">Listen</th>
+		</tr>
+		{{#each tracks}}
+			<tr class="row">
+				<td class="rowTrack">{{name}}</td>
+				<td><audio controls>
+						<source src='{{preview_url}}' />
+					</audio></td>
+			</tr>
+		{{/each}}
+	</table>
+</section>
