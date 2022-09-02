@@ -1,7 +1,7 @@
 # Dependency directory
 # https://docs.npmjs.com/cli/shrinkwrap#caveats
 node_modules
-.env
-.DS_Store
 
+.DS_Store
+.env
 package-lock.json
