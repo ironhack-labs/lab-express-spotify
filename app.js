@@ -57,7 +57,7 @@ app.get('/artist-search', (req,res) => {
 // route for showing albums of a selected artistId
 app.get('/albums/:artistID', (req,res) => {
     const clickedArtist = req.params.artistID
-    spotifyApi.getArtistAlbums(clickedArtist,{limit:9})
+    spotifyApi.getArtistAlbums(clickedArtist,{limit:20})
     .then(data => {
         const listOfAlbums = data.body.items
         res.render('albums', {
@@ -78,7 +78,6 @@ app.get('/:albumID/tracks', (req,res) => {
     spotifyApi
     .getAlbum(clickedAlbum)
     .then(data => {
-        //console.log(data.body.tracks.items)
         const tracksIDS = data.body.tracks.items.map(trackObj => trackObj.id)
         return tracksIDS
     })
@@ -93,18 +92,7 @@ app.get('/:albumID/tracks', (req,res) => {
             tracksArr
         })
     })
-    // .then(tracks => {
-    //     return tracksPreviewURLs = tracks.body.tracks.map(trackObj => trackObj.preview_url)
-    // })
-    // .then(preview_url => {
-    //     res.send(preview_url)
-    // })
-    // .then(tracks => {
-    //     return spotifyApi.getTracks(tracks)
-    // })
-    // .then(returnedTracks => {
-    //     console.log(returnedTracks)
-    // })
+
 })
 
 
