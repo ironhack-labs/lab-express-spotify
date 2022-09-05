@@ -1,0 +1,20 @@
+{{#each albumDetails}}
+
+<div class="cover"> 
+
+<div> 
+    {{!-- wieso hier .0. ? wieso funktioniert nicht einfach .name? --}}
+     <h1> Albums for: {{artists.0.name}}</h1> 
+     
+</div>
+
+<div>
+    <img src= "{{images.1.url}}">
+    <h2>{{name}}</h2>
+   <a class = "buttonTracks" href="/tracks/{{id}}"> View Tracks</a>
+</div>
+
+
+</div>
+
+{{/each}}

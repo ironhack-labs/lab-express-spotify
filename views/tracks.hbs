@@ -1,0 +1,12 @@
+<div>
+    {{#each trackDetail}}
+    {{!-- wieso funktioniert nicht album.name --}}
+    <h1> Tracks of {{artists.0.name}} / {{album.name}}</h1> 
+
+     <h2>{{name}}</h2>
+        <audio controls src= '{{"preview_url"}}'> Play Audio</audio>
+
+    {{/each}}
+
+</div>
+
