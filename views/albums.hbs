@@ -1,0 +1,18 @@
+<div class="artistAlbumContainer">
+
+{{#each albums}}
+
+<div lass="innerDiv">
+    
+<img src="{{images.[0].url}}">
+
+<div class="artistAlbumName">
+<h3>{{name}}</h3> 
+
+<a class="viewAlbumBtn" href="/tracks/{{id}}">View Tracks</a>
+
+</div>
+</div>
+
+{{/each}}
+</div>

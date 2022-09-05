@@ -1,0 +1,130 @@
+/* Style for home page */
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto:100,300,700');
+
+
+.home {
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: contain;
+    width: 100vw;
+    height: 100vh;
+}
+
+.searchButton {
+    
+    color: white;
+    background-color: rgb(176, 34, 34);
+    border: none;
+    border-radius: 5px;
+    padding: 10px
+
+}
+
+.searchText {
+    border: rgb(191, 188, 188) solid 1.5px;
+    padding: 10px 40px 10px 40px;
+    border-radius: 3px;
+    text-align: center;
+}
+
+form {
+    background-color: rgb(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 30vh;
+    width: 40vw
+
+}
+
+
+/* Style for Artists+Albums */
+img {
+    width: 300px;
+    height: 300px;
+    object-fit:fill;
+    border-radius: 5px 5px 0px 0px;
+}
+
+.artistAlbumName {
+    color: white;
+    background-color: rgb(90, 89, 89);
+    width: 295px;
+    border-radius: 0px 0px 5px 5px;
+    padding: 5px 0px 0px 5px;
+    text-align: center;
+    font-family: roboto;
+    height:fit-content;
+    
+
+
+}
+
+.artistAlbumContainer {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 350px);
+    grid-auto-rows: minmax(400px, auto);
+    grid-gap: 40px;
+}
+
+.innerDiv {
+    display: flex;
+    flex-direction: column;
+}
+
+.viewAlbumBtn {
+    text-decoration: none;
+    background-color: rgb(176, 34, 34);
+    color: white;
+    border-radius: 10px;
+    padding: 10px 20px 10px 20px;
+    border: none;
+    text-align: center;
+    font-family: roboto;
+}
+
+.tracksHeaders {
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    width: 45vw;
+    background-color: rgb(90, 89, 89);
+    font-family: roboto;
+    border-radius: 5px 5px 0px 0px;
+    border: black solid 1px;
+
+}
+
+.tracksContainer {
+    display: flex;
+    flex-direction: column;
+    font-family: roboto;
+}
+
+.indTrack {
+    display: flex;
+    width: 45vw;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(177, 176, 176);
+    border:rgb(90, 89, 89) solid 1px;
+
+}
+
+.trackName {
+    text-align: center;
+    padding: 0px 0px 0px 20px
+}
+.noPrev {
+    font-family: roboto;
+}
+
+audio {
+    border-radius: 5px 0px 0px 5px;
+}
+
+audio:hover {transform: scale(1.1);filter: drop-shadow(2px 3px 3px #333);}

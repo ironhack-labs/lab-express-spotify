@@ -1,0 +1,31 @@
+<div class="tracksHeaders">
+
+<h2>Track</h2>
+<h2>Listen</h2>
+
+</div>
+
+<div class="tracksContainer">
+
+{{#each tracks}}
+<div class="indTrack">
+
+<h5 class="trackName">{{name}}</h5>
+
+{{#if preview_url}} 
+<audio controls>
+
+  <source src="{{preview_url}}">
+  
+</audio>
+
+{{else}}
+<h5 class="noPrev">No preview available</h5>
+
+{{/if}} 
+
+
+</div>
+
+{{/each}}
+</div>
