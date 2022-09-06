@@ -1,0 +1,74 @@
+*{
+    margin: 0;
+    padding: 0;
+
+}
+
+.indexBody{
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+}
+
+.indexForm{
+    background-color: rgb(255,255,255,.5);
+    width: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+.indexFields{
+    border: none;
+    padding: 10px;
+    margin: 10px 0;
+}
+.indexForm button{
+    background-color: red;
+    color: white;
+}
+
+.indexForm input{
+    width: 350px;
+}
+
+.cardContainer{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.cardImg{
+    object-fit: cover;
+    height: 300px;
+}
+
+.tracksHeader{
+    background-color: grey;
+    color: white;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tracksContainer{
+    display: flex;
+    flex-direction: column;
+}
+
+.tracks{
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(230, 225, 225, .5);
+}
+
+.tracks audio{
+    margin-right: 150px;
+}
+
+.tracks p{
+    margin-left: 40px;
+}
