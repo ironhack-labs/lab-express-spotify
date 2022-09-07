@@ -1,0 +1,12 @@
+<h1>Lista de artistas: {{busqueda}}</h1>
+{{#each items}}
+  <div>
+   {{#each images}}
+   {{#if @last}}
+    <img src="{{url}}">
+    {{/if}}
+   {{/each}}
+  <p>{{name}}</p>
+  <a href="/albums/{{id}}">View Albums</a>
+ </div>
+{{/each}}
