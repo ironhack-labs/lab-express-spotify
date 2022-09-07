@@ -1,0 +1,17 @@
+<div class="d-flex flex-column align-items-center">
+  <div class="d-flex justify-content-between w-75 p-5 pt-4 pb-3 bg-secondary text-light">
+    <h2 class="ps-5 ms-5">Title</h2>
+    <h2 class="pe-5 me-5">Preview</h2>
+  </div>
+  {{#each albumTracks}}
+    <div class="w-75 d-flex justify-content-between align-items-center m-1 bg-light p-5 pt-3 pb-3 ">
+      {{#if preview_url}}
+        <span>{{name}}</span>
+        <audio controls src="{{preview_url}}"></audio>
+      {{else}}
+        <span>{{name}} (Preview ❌)</span>
+        <audio controls src="{{preview_url}}"></audio>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>

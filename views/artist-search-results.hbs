@@ -1,0 +1,12 @@
+<h1 class="text-center m-4 pt-4">Artist Search: {{artistSearch}}</h1>
+<div class="cards-container d-flex justify-content-center flex-wrap">
+  {{#each artistsList}}
+    <div class="card w-25 m-2">
+      <img src="{{images.[1].url}}" class="card-img-top h-75" alt="{{name}}">
+      <div class="card-body bg-secondary text-light d-flex flex-column justify-content-center align-items-center p-1">
+        <h5 class="card-title">{{name}}</h5>
+        <a href="/albums/{{id}}" class="btn btn-danger">View Albums</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

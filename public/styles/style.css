@@ -1,0 +1,12 @@
+#home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url('/images/spotify-background.jpeg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.card img {
+  object-fit: cover;
+}
