@@ -1,0 +1,19 @@
+
+{{!-- 
+Handlebars syntax is DOT notation
+NOT BRACKET notation
+ --}}
+
+{{#each artistArray}}
+
+{{!-- Artist Display Name --}}
+<h3>{{this.name}}</h3>
+
+{{!-- Artist Image --}}
+<img src="{{this.images.0.url}}" alt="">
+
+{{!-- 'View Albums' button --}}
+<button><a href="/albums/{{this.id}}">View Albums</a></button>
+
+{{/each}}
+
