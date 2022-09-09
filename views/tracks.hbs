@@ -1,0 +1,34 @@
+<style>
+    audio{
+        height: 20px;
+    }
+    span{
+        font-family: Roboto Mono;
+        font-size: 16px;
+    }
+    body{
+        margin: 30px;
+    }
+    h1{
+        font-family: Bebas Neue;
+        font-size: 50px;
+    }
+    #track{
+        display: flex;
+        justify-content: space-between;
+        margin: 10px 0;
+        width: 80%;
+    }
+</style>
+
+
+<h1>Album Tracks</h1>
+
+{{#each songs }}
+    <div id="track">
+        <span>{{this.name}}</span>
+        <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mp3">
+        </audio> 
+    </div>
+{{/each}}

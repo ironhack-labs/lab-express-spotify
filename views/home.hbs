@@ -1,0 +1,48 @@
+<style>
+    body{
+        background-color: #bfd6bf;
+    }
+    h1{
+        font-family: Bebas Neue;
+        font-size: 50px;
+        text-align: center;
+    }
+    form{
+        text-align: center;
+        background-color: #83a182;
+        width: 60%;
+        height: 50px;
+        margin: 100px 20%;
+    }
+    input{
+        width: 70%;
+        height: 30px;
+        border: 0px;
+        margin: 10px 0;
+        padding-left: 20px;
+        font-family: Roboto Mono;
+    }
+    input:focus{
+        outline: none;
+    }
+    button{
+        background-color: #83a182;
+        width: 60px;
+        height: 30px;
+        border: none;
+        font-family: Roboto Mono;
+        font-size: 15px;
+        font-weight: 800;
+        padding: 0;
+        margin-left: 20px;
+    }
+
+</style>
+
+
+<h1>Spotify Search</h1>
+
+<form action="/artist-search" method="GET">
+    <input type="text" name="artistName">
+    <button type="submit">Search</button>
+</form>

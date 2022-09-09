@@ -1,0 +1,52 @@
+<style>
+    body{
+        margin: 40px;
+    }
+    h1{
+        font-family: Bebas Neue;
+        font-size: 50px;
+        text-align: center;
+    }
+    p{
+        font-family: Roboto Mono;
+        text-align: center;
+    }
+    img{
+        width: 200px;
+        margin: 0 50px;
+    }
+    #item{
+        {{!-- border: 1px black solid; --}}
+        width: 300px;
+        height: 300px;
+        margin-bottom: 30px;
+    }
+    a{
+        text-decoration: none;
+        background-color: #d4d4d4;
+        color: black;
+        padding: 5px;
+    }
+    a:hover{
+         background-color: #e0e0e0;
+    }
+    #grid{
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+</style>
+
+
+<h1>Albums</h1>
+
+<div id="grid">
+   {{#each albums }}
+    <div id="item">
+        <img src="{{this.images.[0].url}}">
+        <p>{{this.name}}</p>
+        <p><a href="/tracks/{{this.id}}">View Tracks</a> </p>
+    </div>
+    {{/each}} 
+</div>
