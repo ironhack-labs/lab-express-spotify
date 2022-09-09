@@ -1,0 +1,121 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300&family=Oxygen:wght@300&display=swap");
+
+* {
+  font-family: "Oxygen", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+/* --------------------------------------------  INDEX PAGE */
+nav {
+  width: 100%;
+  height: 40px;
+  text-align: center;
+  padding-top: 20px;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  background-color: white;
+}
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+/* --------------------------------------------  INDEX PAGE */
+.indexContainer {
+  background-image: url("/images/background.jpg");
+  background-size: cover;
+}
+form {
+  width: 800px;
+  height: 100vh;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form > input,
+form > button {
+  height: 50px;
+}
+form > input {
+  width: 80%;
+  padding-left: 20px;
+}
+form > button {
+  width: 40%;
+  margin-top: 30px;
+}
+/* --------------------------------------------  ARTIST SEARCH RESULTS PAGE / ALBUMS */
+.artistSearchResultsContainer,
+.albumsContainer {
+  width: 80%;
+  height: 100vh;
+  margin: 40px auto 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.artistSearchResultCard,
+.albumsCard {
+  width: 400px;
+  height: 400px;
+  text-align: center;
+  background-color: lightgray;
+  margin: 30px 0;
+  border-radius: 10%;
+  box-shadow: rgba(17, 17, 26, 0.1) 0px 1px 0px,
+    rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 48px;
+}
+.artistSearchResultCard img,
+.albumsCard img {
+  margin-top: 40px;
+  margin-bottom: 20px;
+  width: 200px;
+  height: 200px;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px,
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px,
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.artistSearchResultCard h3,
+.albumsCard h3 {
+  margin-bottom: 30px;
+}
+.artistSearchResultCard a,
+.albumsCard a {
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid rgba(233, 57, 57, 0);
+  padding: 10px 15px;
+  border-radius: 10% / 25%;
+  background-color: rgb(233, 57, 57);
+}
+.artistSearchResultCard a:hover,
+.albumsCard a:hover {
+  background-color: rgba(233, 57, 57, 0.8);
+}
+/* --------------------------------------------  TRACKS RESULTS PAGE */
+.tracksContainer {
+  width: 80%;
+  height: 100vh;
+  margin: 100px auto 50px auto;
+  display: flex;
+  flex-direction: column;
+}
+.trackCard {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 10px;
+}
+.trackCard:nth-of-type(odd) {
+  background-color: lightgray;
+}
+.trackCard h3 {
+  width: 500px;
+}
+.trackCard audio {
+  align-self: center;
+}
