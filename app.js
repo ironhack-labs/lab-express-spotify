@@ -71,14 +71,12 @@ app.get('/albums/:artistId', (req, res, next) => {
 })
 
 // Album tracks
-app.get('/albums/:albumId', (req, res, next) => {
-    spotifyApi.getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ', {
-            limit: 5,
-            offset: 1
-        })
+app.get('/tracks/:albumId', (req, res, next) => {
+    spotifyApi.getAlbumTracks(req.params.albumId)
         .then(function (data) {
-            console.log(data.body);
-            res.render('')
+            console.log('Album Tracks',data.body.items);
+             let tracksArray = data.body.items
+             res.render('track-information', {tracksArray})
 
         }, function (err) {
             console.log('Something went wrong!', err);

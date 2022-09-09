@@ -1,0 +1,17 @@
+
+{{#each tracksArray}}
+
+{{!-- track title --}}
+<h2>{{this.name}}</h2>
+
+{{!-- Cover Art --}}
+
+
+{{!-- track preview --}}
+<audio src="{{this.preview_url}}"></audio>
+
+{{!-- Spotify link --}}
+<a href="{{this.external_urls.spotify}}">Play on Spotify</a>
+
+{{/each}}
+
