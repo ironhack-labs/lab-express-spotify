@@ -1,0 +1,9 @@
+<a href="http://localhost:3000">Back to search</a>
+
+<h1>Albums:</h1>
+
+{{#each albums}}
+    <p>{{this.name}}</p>
+    <img src="{{this.images.0.url}}" alt="Image of {{this.name}}">
+    <a href=>View Tracks</a>
+{{/each}}
