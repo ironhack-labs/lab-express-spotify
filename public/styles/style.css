@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 /* https://css-tricks.com/perfect-full-page-background-image/ */
@@ -10,6 +11,22 @@ html {
   -moz-background-size: cover;
   -o-background-size: cover;
   background-size: cover;
+}
+
+a {
+  color: #fff;
+  background-color: rgba(30, 215, 96, 1);
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 3px;
+}
+
+a:hover {
+  background-color: rgba(30, 215, 96, 0.7);
+}
+
+a:active {
+  background-color: rgba(30, 215, 96, 0.4);
 }
 
 .body-wrap {
