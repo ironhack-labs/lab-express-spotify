@@ -1,0 +1,15 @@
+{{#each artistArray}}
+
+  <h2>{{this.name}}</h2>
+
+  {{! Not all artists have pictures... fix later }}
+  <img src='{{this.images.0.url}}' alt='Picture of {{this.name}}' />
+
+  <button>Button</button>
+
+{{/each}}
+
+{{! This is pretty weird... Handlebars doc says I should write the img src like 
+"this.images.[1].url" and that this "this.images.1.url" is wrong
+But prettier is not having it and it works the wrong way...
+}}

@@ -1,0 +1,28 @@
+{
+  "external_urls": { "spotify": "https://open.spotify.com/artist/6tbjWDEIzxoDsBA1FuhfPW" },
+  "followers": { "href": null, "total": 6306552 },
+  "genres": ["dance pop", "pop"],
+  "href": "https://api.spotify.com/v1/artists/6tbjWDEIzxoDsBA1FuhfPW",
+  "id": "6tbjWDEIzxoDsBA1FuhfPW",
+  "images": [
+    {
+      "height": 640,
+      "url": "https://i.scdn.co/image/ab6761610000e5eb034a19a2d576c696b5be94a5",
+      "width": 640
+    },
+    {
+      "height": 320,
+      "url": "https://i.scdn.co/image/ab67616100005174034a19a2d576c696b5be94a5",
+      "width": 320
+    },
+    {
+      "height": 160,
+      "url": "https://i.scdn.co/image/ab6761610000f178034a19a2d576c696b5be94a5",
+      "width": 160
+    }
+  ],
+  "name": "Madonna",
+  "popularity": 77,
+  "type": "artist",
+  "uri": "spotify:artist:6tbjWDEIzxoDsBA1FuhfPW"
+}
