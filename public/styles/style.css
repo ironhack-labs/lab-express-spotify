@@ -3,5 +3,20 @@ body {
   overflow-x: hidden;
   width: 100%vw;
   /* background-image: "/public/images/spotify-background.jpeg"; */
-  background-color: red;
+  background-color: lightcoral;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#searchWrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#search-wrapper div {
+  width: 300;
 }
