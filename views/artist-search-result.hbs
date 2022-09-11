@@ -1,13 +1,25 @@
-{{#each arrayOfArtists}}
+{{#if arrayOfArtists}}
+  <h1 class='search-result-heading'>Search results for "{{searchQuery}}":</h1>
+{{/if}}
+{{#unless arrayOfArtists}}
+  <h1 class='search-result-heading'>We´re sorry, we have nothing for: "{{searchQuery}}"</h1>
+{{/unless}}
+<div class='artist-page-wrap'>
 
-  <h2>{{this.name}}</h2>
+  {{#each arrayOfArtists}}
+    <div class='artist-image-wrap'>
+      {{#if this.images.1.url}}
+        <img class='artist-image' src='{{this.images.1.url}}' alt='Picture of {{this.name}}' />
+      {{/if}}
+      {{#unless this.images.1.url}}
+        <img class='artist-image' src='https://dummyimage.com/300x300/333333/1ed75f.jpg&text=No+picture+here...' alt='No picture for this Artist' />
+      {{/unless}}
+      <h2>{{this.name}}</h2>
+      <a href='/albums/{{this.id}}'>View Albums</a>
+    </div>
 
-  {{! Not all artists have pictures... fix later }}
-  <img src='{{this.images.1.url}}' alt='Picture of {{this.name}}' />
-
-  <a href='/albums/{{this.id}}'>View Albums</a>
-
-{{/each}}
+  {{/each}}
+</div>
 
 {{! This is pretty weird... Handlebars doc says I should write the img src like 
 "this.images.[1].url" and that this "this.images.1.url" is wrong

@@ -1,15 +1,23 @@
-{{#each dataBodyArray}}
+{{#if artistName}}
+  <h1 id='ArtistHeading'>Listen to<span> {{artistName}} </span>on:</h1>
+{{/if}}
+{{#unless artistName}}
+  <h1>Something went wrong here with artistName...</h1>
+  {{! Happens sometimes }}
+{{/unless}}
 
-  <h2>{{this.name}}</h2>
+<h2>{{this.name}}</h2>
+<div class='artist-page-wrap'>
 
-  {{! Not all artists have pictures... fix later }}
-  <img src='{{this.images.1.url}}' alt='Picture of {{this.name}}' />
+  {{#each albumDataBodyArray}}
 
-  <a href='##########'>View Tracks</a>
+    <div class='artist-image-wrap'>
 
-{{/each}}
+      <img src='{{this.images.1.url}}' alt='Picture of {{this.name}}' />
+      <h2>{{this.name}}</h2>
 
-{{! This is pretty weird... Handlebars doc says I should write the img src like 
-"this.images.[1].url" and that this "this.images.1.url" is wrong
-But prettier is not having it and it works the wrong way...
-}}
+      <a href='/tracks/{{this.id}}'>View Tracks</a>
+    </div>
+
+  {{/each}}
+</div>
