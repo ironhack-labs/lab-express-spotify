@@ -1,0 +1,15 @@
+<nav>
+  <ul>
+    <li>Title</li>
+    <li>Listen</li>
+  </ul>
+</nav>
+<div>
+  {{#each data}}
+    <div>
+      {{this.name}}
+      <audio controls src="{{this.preview_url}}">This track did not load.</audio>
+    </div>
+
+  {{/each}}
+</div>

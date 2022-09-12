@@ -57,4 +57,17 @@ app.get("/albums", async (req, res) => {
   }
 });
 
+app.get("/tracks", async (req, res) => {
+  try {
+    const data = await spotifyApi.getAlbumTracks(req.query.id);
+    console.dir(data, { depth: null });
+    res.render("albumtracks", {
+      docTitle: "Tracks",
+      data: data.body.items,
+    });
+  } catch (error) {
+    console.log("The error while searching albums occurred: ", error);
+  }
+});
+
 app.listen(3000, () => console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊"));
