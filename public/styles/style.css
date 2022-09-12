@@ -18,5 +18,6 @@ body {
 }
 
 #search-wrapper div {
-  width: 300;
+  width: 500;
+  margin-top: 30px;
 }

@@ -50,7 +50,7 @@ app.get("/albums", async (req, res) => {
     console.dir(data, { depth: null });
     res.render("searchResults", {
       docTitle: "Albums",
-      data: data.body,
+      data: data.body.items,
     });
   } catch (error) {
     console.log("The error while searching albums occurred: ", error);
