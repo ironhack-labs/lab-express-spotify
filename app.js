@@ -45,7 +45,24 @@ app.get('/artist-search', (req,res) => {
 app.get('/albums/:artistId', (req,res,next) => {
     console.log('hello')
     spotifyApi.getArtistAlbums(req.params.artistId)
-    .then(data => console.log('Data recieved', data.body))
+    .then(albums => { console.log('Data recieved', albums.body.items)
+    res.render('albums.hbs', {
+      albumArray: albums.body.items
+    })
+  })
+  .catch(err => console.log('Error while searching for albums:', err))
 })
+
+app.get('/tracks/:albumId', (req,res,next) => {
+  spotifyApi.getAlbumTracks(req.params.albumId)
+  .then(tracks => { console.log('Data recieved', tracks.body.items)
+  res.render('tracks.hbs', {
+    trackArray: tracks.body.items
+  })
+})
+.catch(err => console.log('Error occured while searching for tracks:', err))
+})
+
+
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
