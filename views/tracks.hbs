@@ -1,0 +1,16 @@
+<div class="container">
+  <div class="row">
+    {{#each tracks}}
+      <div class="tracksCard">
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}" />
+        {{!-- <h3><a href="{{this.id}}"> {{this.name}}</a></h3> --}}
+        {{!-- <h5>{{this.tagline}}</h5>
+        <p>{{this.description}}</p> --}}
+        <p> {{this.name}}</p>
+        <audio controls="" name="media">
+          <source src="{{this.preview_url}}" type="audio/mp3"/>
+        </audio>
+      </div>
+    {{/each}}
+  </div>
+</div>

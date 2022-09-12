@@ -1,0 +1,193 @@
+
+body {
+    margin: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+.navbar {
+    background: #2081c3;
+    width: 100%;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+    padding: 10px;
+}
+
+a:link,
+a:visited {
+    margin: 5px;
+    text-decoration: none;
+    color: #f7f9f9;
+}
+
+a:hover,
+a:active {
+    text-decoration: underline;
+    text-decoration-color: #f7f9f9;
+}
+
+.main-content {
+    padding-bottom: 2.5rem;
+    /* Footer height */
+    text-align: center;
+}
+
+p {
+    margin: 0;
+}
+
+.aBtn:link,
+.aBtn:visited {
+    background-color: #2081c3;
+    color: #f7f9f9;
+    padding: 14px 25px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+}
+
+.aBtn:hover,
+.aBtn:active {
+    background-color: #64b1e4;
+}
+
+.page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+.footer {
+    background: #0a2c42;
+    justify-content: left;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 2.5rem;
+    /* Footer height */
+    color: #f7f9f9;
+}
+
+.artistsCard {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    min-height: 350px;
+    min-width: 250px;
+    max-width: 310px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #2B2B2B;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.artistsCard img {
+    height: 200px;
+    margin: 10px;
+}
+
+.artistsCard p,
+.artistsCard h3,
+.artistsCard h5 {
+    margin: 10px;
+    text-align: left;
+}
+
+.artistsCard a:link,
+.artistsCard a:visited {
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.artistsCard a:hover,
+.artistsCard a:active {
+    text-decoration: underline;
+    text-decoration-color: #f7f9f9;
+}
+
+.albumsCard {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    min-height: 350px;
+    min-width: 250px;
+    max-width: 310px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #2B2B2B;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.albumsCard img {
+    height: 200px;
+    margin: 10px;
+}
+
+.albumsCard p,
+.albumsCard h3,
+.albumsCard h5 {
+    margin: 10px;
+    text-align: left;
+}
+
+.albumsCard a:link,
+.albumsCard a:visited {
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.albumsCard a:hover,
+.albumsCard a:active {
+    text-decoration: underline;
+    text-decoration-color: #f7f9f9;
+}
+
+.tracksCard {
+    position: relative;
+    display: inline-block;
+    overflow: hidden;
+    margin: 10px;
+    min-height: 350px;
+    min-width: 250px;
+    max-width: 310px;
+    width: 100%;
+    background-color: #ffffff;
+    color: #2B2B2B;
+    text-align: center;
+    font-size: 16px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.15);
+}
+
+.tracksCard img {
+    height: 200px;
+    margin: 10px;
+}
+
+.tracksCard p,
+.tracksCard h3,
+.tracksCard h5 {
+    margin: 10px;
+    text-align: left;
+}
+
+.tracksCard a:link,
+.tracksCard a:visited {
+    margin: 0px;
+    text-decoration: none;
+    color: black;
+}
+
+.tracksCard a:hover,
+.tracksCard a:active {
+    text-decoration: underline;
+    text-decoration-color: #f7f9f9;
+}

@@ -1,0 +1,14 @@
+
+<div class="container">
+  <div class="row">
+    {{#each albums}}
+      <div class="albumsCard">
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}" />
+        <h3><a href="/tracks/{{this.id}}"> {{this.name}}</a></h3>
+        <a class="aBtn" href='/tracks/{{this.id}}'>View Tracks</a>
+        {{!-- <h5>{{this.tagline}}</h5>
+        <p>{{this.description}}</p> --}}
+      </div>
+    {{/each}}
+  </div>
+</div>
