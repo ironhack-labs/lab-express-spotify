@@ -1,5 +1,6 @@
+{{!-- <h1>Albums for:{{albums.artists.name}}</h1> --}}
 <div class="album-container">
-  {{#each data}}
+  {{#each items}}
     <div class="inner-album">
       {{#if images}}
         <img src="{{this.images.0.url}}" alt="{{this.name}}" />
@@ -7,7 +8,7 @@
       <div class="album-name">
         <h4>{{this.name}}</h4>
       </div>
-      <a class="btn" href="/albums/{{this.id}}">View Albums</a>
+      <a class="btn" href="/tracks/{{this.id}}">View Tracks</a>
     </div>
   {{/each}}
 </div>

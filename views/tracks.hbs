@@ -1,0 +1,17 @@
+<div id="track-container">
+  <div class="track-header">
+    <h2>Track</h2>
+    <h2>Listen</h2>
+  </div>
+  {{! <div class="track-container"> }}
+  {{#each items}}
+    <div class="inner-track">
+      <h4>{{this.name}}</h4>
+      <audio controls src="{{this.preview_url}}">
+        Your browser does not support the
+        <code>audio</code>
+        element.
+      </audio>
+    </div>
+  {{/each}}
+</div>

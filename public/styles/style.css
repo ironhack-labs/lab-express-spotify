@@ -1,0 +1,119 @@
+* {
+  font-family: Helvetica;
+}
+
+body {
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  color: white;
+  background-color: #fa6863;
+  border: none;
+  padding: 10px;
+  margin: 20px;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.btn:hover {
+  background-color: red;
+}
+
+.search-input {
+  width: 60%;
+  padding: 10px 5px;
+  border: lightgray solid 1px;
+  border-radius: 3px;
+}
+
+form {
+  width: 60vw;
+  height: 20vw;
+  background-color: rgb(255, 255, 255, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+img {
+  width: 100%;
+}
+
+.album-container {
+  margin: 5vh auto;
+  width: 90%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: flex-end;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 50px 50px;
+  text-align: center;
+  color: white;
+}
+
+.inner-album {
+  width: 25vw;
+  background-color: #333;
+  display: flex;
+  flex-direction: column;
+}
+
+.album-name {
+  padding: 20px 20px 0 20px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#track-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.track-header {
+  width: 80%;
+  padding: 10px 40px;
+  color: white;
+  background-color: #333;
+  display: flex;
+  justify-content: space-around;
+  /* padding: 20px; */
+}
+
+.inner-track {
+  width: 80%;
+  background-color: #f1f3f4;
+  margin-top: 5px;
+  padding: 5px 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  align-content: center;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: #fa6863;
+  border-radius: 50%;
+}
