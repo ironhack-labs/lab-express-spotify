@@ -1,12 +1,13 @@
 <nav>
   <ul>
-    <li>Title</li>
-    <li>Listen</li>
+    <li id="track-title">Title</li>
+    <li id="track-listen">Listen</li>
   </ul>
 </nav>
+
 <div>
   {{#each data}}
-    <div>
+    <div id="audio-tracks">
       {{this.name}}
       <audio controls src="{{this.preview_url}}">This track did not load.</audio>
     </div>

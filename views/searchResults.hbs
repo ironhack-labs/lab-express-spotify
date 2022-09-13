@@ -1,17 +1,15 @@
-<div id="results-wrapper">
-  <div id="search">
+<div id="search">
 
-    <p>Albums & Singles by:</p>
-    <h3> {{data.0.artists.0.name}} </h3>
+  <p>Albums & Singles by:</p>
+  <h3> {{data.0.artists.0.name}} </h3>
 
-    {{#each data}}
+  {{#each data}}
 
-      <div>
+    <div>
 
-        <img src="{{this.images.2.url}}" alt="" />
-        {{this.name}}
-        <a href="/tracks?id={{this.id}}">View Tracks</a>
-      </div>
-    {{/each}}
-  </div>
+      <img src="{{this.images.2.url}}" alt="" />
+      {{this.name}}
+      <a href="/tracks?id={{this.id}}">View Tracks</a>
+    </div>
+  {{/each}}
 </div>
