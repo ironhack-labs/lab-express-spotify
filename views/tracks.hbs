@@ -3,10 +3,10 @@
 <h1>Tracks:</h1>
 
 <ol>
-    {{#each tracks}}
+  {{#each tracks}}
     <li>{{this.name}}</li>
     <audio controls>
-        <source src ="{{this.preview_url}}" />
+      <source src="{{this.preview_url}}" />
     </audio>
-{{/each}}
+  {{/each}}
 </ol>
