@@ -34,11 +34,11 @@ app.get('/', (request, response, next) => {
  // step 2 | display results for artist search
 app.get('/artist-search', (request, response , next) =>{
     // response.send( request.query);
-    const artist = request.query.artistName;
+    // const artist = request.query.artistName;
     // destructured:
-    // const {artistName} =request.query;
+    const {artistName} =request.query;
     spotifyApi
-    .searchArtists(artist)
+    .searchArtists(artistName)
     .then( (data) => {
         console.log('data received from API:', data.body.artists.items[0]);
         response.render('artist-search-results', {artists: data.body.artists.items});
