@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu+Condensed&display=swap');
+
+html {
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/live-concert.webp');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Ubuntu Condensed', sans-serif;
+}
+
+
+.container {
+    margin-top: 200px;
+    width: 600px;
+    height: 200px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    background-color: rgba(229, 229, 229, 0.7);
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+}
+
+.form {
+    position: absolute;
+    left: 17%;
+    top: 40%;
+}
+
+#input-field {
+    width: 380px;
+    padding: 8px;
+    background-color: #fff;
+    border-width: 1px;
+    border-radius: 5px;
+    outline: none;
+
+}
+
+#btn {
+    margin: 20px auto 0 auto;
+    display: block;
+    padding: 10px 25px;
+    background-color: crimson;
+    border: none;
+    border-radius: 5px;
+    color: #fff;
+    transition: 0.9s;
+}
+
+#btn:hover {
+
+    background-color: #951717;
+}
+
+img {
+    border-radius: 5px;
+    display: inline;
+}
+
+ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    color: crimson;
+    margin: 3px;
+
+}
+
+ul li a {
+    padding: 3px 7px;
+    border-radius: 5px;
+    color: crimson;
+    text-decoration: none;
+    transition: 0.9s;
+}
+
+ul li a:hover {
+
+    background-color: #000;
+    color: #fff;
+}
