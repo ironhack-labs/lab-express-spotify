@@ -12,13 +12,22 @@
         <img class='artist-image' src='{{this.images.1.url}}' alt='Picture of {{this.name}}' />
       {{/if}}
       {{#unless this.images.1.url}}
-        <img class='artist-image' src='https://dummyimage.com/300x300/333333/1ed75f.jpg&text=No+picture+here...' alt='No picture for this Artist' />
+        <img
+          class='artist-image'
+          src='https://dummyimage.com/600x600/333333/1ed75f.jpg&text={{this.name}}'
+          alt='Here is no picture of {{this.name}}'
+        />
       {{/unless}}
       <h2>{{this.name}}</h2>
       <a href='/albums/{{this.id}}'>View Albums</a>
     </div>
-
   {{/each}}
+
+  {{! This is not working yet... }}
+  {{!-- <form action='/next-results/{{searchQuery}}/10' , method='GET'>
+    <button id='index-btn' type='submit'>Show more Results</button>
+  </form> --}}
+
 </div>
 
 {{! This is pretty weird... Handlebars doc says I should write the img src like 

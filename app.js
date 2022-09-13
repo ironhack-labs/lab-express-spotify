@@ -37,17 +37,24 @@ app.get('/', (req, res) => {
 
 // artist-search
 app.get('/artist-search', (req, res) => {
-  console.log(req.query.artist);
-  spotifyApi.searchArtists(req.query.artist).then(
-    (data) => {
-      const arrayOfArtists = data.body.artists.items;
-      const searchQuery = req.query.artist;
-      res.render('artist-search-result', { arrayOfArtists, searchQuery });
-    },
-    function (err) {
-      console.error(err);
-    }
-  );
+  let offset = 0;
+  // console.log(req.query.artist);
+  spotifyApi
+    .searchArtists(req.query.artist, {
+      limit: 10,
+      offset: offset,
+    })
+    .then(
+      (data) => {
+        const arrayOfArtists = data.body.artists.items;
+        const searchQuery = req.query.artist;
+        // res.send(data.body.artists.next);
+        res.render('artist-search-result', { arrayOfArtists, searchQuery });
+      },
+      function (err) {
+        console.error(err);
+      }
+    );
 });
 
 // albums
@@ -55,11 +62,9 @@ app.get('/albums/:artistId', (req, res, next) => {
   // I also want to get the artists name. If it´s for example only a
   // feature artist, that name is not necessary included in the album, so...
   let artistName;
-  console.log(req.params);
   spotifyApi.getArtist(req.params.artistId).then(
     function (data) {
       artistName = data.body.name;
-      console.log(artistName);
     },
     function (err) {
       console.error(err);
@@ -69,6 +74,7 @@ app.get('/albums/:artistId', (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistId).then(
     (data) => {
       const albumDataBodyArray = data.body.items;
+      // res.send(data.body.items);
       res.render('albums', { albumDataBodyArray, artistName });
     },
     function (err) {
@@ -85,6 +91,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
       console.log(data.body);
       const trackArray = data.body.tracks.items;
       const nameOfAlbum = data.body.name;
+      // res.send(data.body);
       res.render('tracks', { trackArray, nameOfAlbum });
     })
     .catch(function (error) {
