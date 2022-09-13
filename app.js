@@ -48,13 +48,27 @@ app.get("/albums/:artistId", (req, res, next) => {
         // This was were I thought there was something wrong with the Api, but after we spoke I found there were two 
         // getArtistAlbums" in the documentation and the other one works fine
         
-        spotifyApi.getArtistAlbums(req.params.artistId)
-          .then(function(data) {
-            console.log('Artist albums', data.body.items);
-            res.render("albums", {albums: data.body.items});
-          }, function(err) {
-            console.error(err);
-          });    
+        .getArtistAlbums(req.params.artistId)
+        .then(function(data) {
+          //console.log('Artist albums', data.body.items);
+          res.render("albums", {albums: data.body.items});
+        }, function(err) {
+          console.error(err);
+        });    
+})
+
+app.get("/tracks/:albumId", (req, res, next) => {
+  console.log("Ping")
+  console.log(req.params.albumId)
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(function(data) {
+      console.log(data.body);
+      console.log(data.body.items[0].preview_url)
+      res.render("tracks", {tracks: data.body.items});
+    }, function(err) {
+      console.log('Something went wrong!', err);
+    });
 })
 
 

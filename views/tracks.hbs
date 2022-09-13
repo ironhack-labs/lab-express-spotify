@@ -1,0 +1,12 @@
+<a href="http://localhost:3000">Back to search</a>
+
+<h1>Tracks:</h1>
+
+<ol>
+    {{#each tracks}}
+    <li>{{this.name}}</li>
+    <audio controls>
+        <source src ="{{this.preview_url}}" />
+    </audio>
+{{/each}}
+</ol>

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    overflow-x: hidden;    
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.block {
+    width: 25vw;
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+}
