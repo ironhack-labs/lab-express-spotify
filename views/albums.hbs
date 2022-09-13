@@ -1,0 +1,32 @@
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h1 style="position: relative;bottom: -20px;left: 30px;"><h1>Albums</h1>
+    </a>
+    </div>
+</nav>
+
+
+
+{{#each items}}
+   <div class="container text-center">
+     <div class="card" style="width: 18rem;">
+        <div class="row align-items-start">
+            <div class="col">
+                {{#each images}}
+                    {{#if @last}}
+                        <img src="{{this.url}}">
+                    {{/if}}
+                {{/each}}
+                    <p class="text-center">{{name}}</p>
+                <a href="/tracks/{{id}}" class="btn btn-danger">View Tracks</a>
+            </div>
+        </div>
+    </div>
+</div>
+{{/each}}
+
+
+
+     
+    

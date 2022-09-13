@@ -1,3 +1,29 @@
-<div>
+
+<nav class="navbar navbar-dark bg-dark">
+  <div class="container-fluid">
+    <a class="navbar-brand"><h1 style="position: relative;bottom: -20px;left: 30px;">Listas de artistas: {{busqueda}}</h1>
+    <h2 style="position: relative;left: 1525%;top: -35px;">Listen</h2>
+    </a>
+    </div>
+</nav>
+
+
+
+{{#each items}}
+    <div class="row">
+    {{#each images}}
+        {{#if @last}}
+    <div class="card" style="width: 18rem;">
     
-</div>
+    <img src="{{this.url}}">
+        {{/if}}
+        {{/each}}
+            <div class="card-body">
+            <h5 class="card-title"><p class="text-center">{{name}}</p></h5>
+            <a href="/albums/{{id}}" class="btn btn-primary" style="position: relative;left: 67px;">View Albums</a>
+            </div>
+        </div>
+    </div>
+    
+{{/each}}
+
