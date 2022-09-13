@@ -32,9 +32,6 @@ app.get("/", (req, res) => {
 app.get("/artist-search", async (req, res) => {
   try {
     const data = await spotifyApi.searchArtists(req.query.name);
-
-    // console.dir(data, { depth: null });
-
     res.render("search", {
       docTitle: "Artist Results",
       data: data.body.artists.items,

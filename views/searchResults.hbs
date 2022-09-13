@@ -2,13 +2,12 @@
 
   <p>Albums & Singles by:</p>
   <h3> {{data.0.artists.0.name}} </h3>
-
   {{#each data}}
-
-    <div>
-
+    <div id="album-result">
       <img src="{{this.images.2.url}}" alt="" />
+      <br />
       {{this.name}}
+      <br />
       <a href="/tracks?id={{this.id}}">View Tracks</a>
     </div>
   {{/each}}

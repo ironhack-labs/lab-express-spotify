@@ -1,10 +1,11 @@
-
 <div id="search-wrapper">
   <div id="search">
     {{#each data}}
-      <div>
+      <div id="artist-div">
         <img src="{{this.images.2.url}}" alt="" />
+        <br />
         {{this.name}}
+        <br />
         <a href="/albums?id={{this.id}}">View Albums</a>
       </div>
     {{/each}}

@@ -1,3 +1,7 @@
+body {
+  background-color: grey;
+}
+
 main {
   margin: 0;
   overflow-x: hidden;
@@ -16,6 +20,48 @@ main {
   height: 100vh;
 }
 
+#search-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#artist-div {
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 25px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
+#artist-div img {
+  width: 20vw;
+  height: auto;
+}
+
+#album-result {
+  background-color: bisque;
+  padding: 10px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+
 nav {
   background-color: beige;
   display: flex;
@@ -23,16 +69,15 @@ nav {
 }
 
 ul {
-  text-decoration: underline;
   margin: 5;
   width: 70%;
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
 }
 
 #track-title {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
 }
 
 #track-listen {
@@ -45,4 +90,6 @@ ul {
   width: 80%;
   display: flex;
   justify-content: space-between;
+  border: 1px;
+  border-style: dashed;
 }
