@@ -1,0 +1,31 @@
+
+<div id="tracks-main">
+
+    <div id="tracks">
+
+        {{#each tracks}}
+
+     
+
+            <h2>{{this.name}}</h2>
+
+
+            {{#if this.preview_url}}
+
+            <audio src="{{this.preview_url}}" controls></audio>
+
+            {{/if}}
+
+            {{#unless this.preview_url}}
+
+            <p>NO PREVIEW</p>
+
+            {{/unless}}
+
+
+
+        {{/each}}
+
+    </div>
+
+</div>

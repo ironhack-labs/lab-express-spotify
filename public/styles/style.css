@@ -1,0 +1,92 @@
+body {
+    background-color: black;
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 200px 500px;
+}
+
+form input {
+    width: 500px;
+    height: 20px;
+}
+
+form button {
+    width: 300px;
+    margin-top: 10px;
+    padding: 10px 50px;
+    color: white;
+    background-color: red;
+    border: none;
+}
+
+form button:hover {
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+
+#artist-main, #album-main {
+    display: flex;
+    justify-content: center;
+    width: 500px;
+    margin: auto;
+}
+
+#artist-card, #album-card {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.individual-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 30px 0;
+    padding-bottom: 5px;
+    background-color: grey;
+    max-width: 200px;
+}
+
+button {
+    background-color: red;
+    border: none;
+    border-radius: 15px;
+    padding: 10px 20px;
+}
+
+button a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    
+}
+
+button a:hover {
+    text-decoration: underline;
+}
+
+
+
+#album-title {
+    text-align: center;
+}
+
+#tracks-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+
+
