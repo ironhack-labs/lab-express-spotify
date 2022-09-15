@@ -1,0 +1,20 @@
+
+<div class ="animals__container">
+  <img src="{{photo.url.[2]}}" alt="">
+ 
+{{#each artists}}  <!--WHICH IS artists.items. -->
+  <h3>{{this.images.[0].url.[1]}}</h3>
+  <div><a href="{{this.href}}">Link to more</a> </div>
+  <img src="{{this.images.[1].url}}" alt="">
+  
+
+{{/each }}
+
+    </div>
+
+
+</div>
+
+
+
+
