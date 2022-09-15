@@ -1,0 +1,71 @@
+html, body {
+    margin: 0;
+    
+}
+
+.main-content {
+    display: flex;
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.home-bkg {
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: bottom;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 100vh;
+}
+.search-form {
+    background-color: rgba(255, 255, 255, 0.675);
+    padding: 60px 30px;
+    width: 40%;
+    position: absolute;
+    /* border: solid black 5px; */
+    top: 35%;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.result-box {
+    background-color: #3B2B25;
+    width: 28%;
+    color: white;
+    margin: 30px;
+    padding-bottom: 30px;
+    text-align: center;
+}
+
+.result-box > img {
+    object-fit: cover;
+    width: 100%
+}
+
+.btn {
+    background-color: rgb(230, 44, 44);
+    font-weight: 600;
+    font-size: 16px;
+    color: white;
+    padding: 12px 15px;
+    margin-top: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    border: none;
+}
+
+.trackrow {
+    width: 100%;
+    
+}
+.audio-box {
+    width: 90%;
+    background-color: #f1f3f4;
+    margin: 25px 25px;
+}

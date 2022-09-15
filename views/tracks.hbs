@@ -1,0 +1,12 @@
+<div class="trackrow">
+    {{#if tracks}}
+        {{#each tracks}}
+        <p>{{this.preview_url}}</p>
+            <h1>{{this.artists.[0].name}}</h1>
+            <audio controls class="audio-box">
+                <source src="{{this.preview_url}}" type="audio/mp3">
+            </audio>
+            <p>{{this.track_number}}</p>
+        {{/each}}
+    {{/if}}
+</div>

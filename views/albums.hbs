@@ -1,0 +1,9 @@
+{{#if albums}}
+    {{#each albums}}
+        <div class="result-box">
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}" />
+        <h2>{{this.name}}</h2>
+        <a class="btn" href="/albums/{{../artistId}}/{{this.id}}/">View Tracks</a>
+        </div>
+    {{/each}}
+{{/if}}
