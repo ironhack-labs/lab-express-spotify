@@ -1,0 +1,11 @@
+{{#each items}}
+    <div>
+            {{#each images}}
+                {{#if @last}}
+                    <img src="{{url}}"/>
+                {{/if}}
+            {{/each}}
+            <p>{{name}}</p>
+            <a href="/tracks/{{id}}">View Tracks</a>
+        </div>
+{{/each}}
