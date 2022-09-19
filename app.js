@@ -36,67 +36,49 @@ app.get('/', (req, res) => {
 });
 
 // artist-search
-app.get('/artist-search', (req, res) => {
-  let offset = 0;
-  // console.log(req.query.artist);
-  spotifyApi
-    .searchArtists(req.query.artist, {
-      limit: 10,
-      offset: offset,
-    })
-    .then(
-      (data) => {
-        const arrayOfArtists = data.body.artists.items;
-        const searchQuery = req.query.artist;
-        // res.send(data.body.artists.next);
-        res.render('artist-search-result', { arrayOfArtists, searchQuery });
-      },
-      function (err) {
-        console.error(err);
-      }
-    );
+app.get('/artist-search', async (req, res) => {
+  const artistSearchData = await spotifyApi.searchArtists(req.query.artist);
+  try {
+    const arrayOfArtists = artistSearchData.body.artists.items;
+    const searchQuery = req.query.artist;
+
+    res.render('artist-search-result', { arrayOfArtists, searchQuery });
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 // albums
-app.get('/albums/:artistId', (req, res, next) => {
-  // I also want to get the artists name. If it´s for example only a
-  // feature artist, that name is not necessary included in the album, so...
-  let artistName;
-  spotifyApi.getArtist(req.params.artistId).then(
-    function (data) {
-      artistName = data.body.name;
-    },
-    function (err) {
-      console.error(err);
-    }
-  );
+app.get('/albums/:artistId', async (req, res, next) => {
+  try {
+    const {
+      body: { name: artistName },
+    } = await spotifyApi.getArtist(req.params.artistId); //.catch((err) => console.error(err));
 
-  spotifyApi.getArtistAlbums(req.params.artistId).then(
-    (data) => {
-      const albumDataBodyArray = data.body.items;
-      // res.send(data.body.items);
-      res.render('albums', { albumDataBodyArray, artistName });
-    },
-    function (err) {
-      console.error(err);
-    }
-  );
+    const {
+      body: { items: albumDataBodyArray },
+    } = await spotifyApi.getArtistAlbums(req.params.artistId); //.catch((err) => console.error(err));
+
+    res.render('albums', { albumDataBodyArray, artistName });
+  } catch (err) {
+    console.error(err);
+  }
 });
 
 // tracks
-app.get('/tracks/:albumId', (req, res, next) => {
-  spotifyApi
-    .getAlbum(req.params.albumId)
-    .then(function (data) {
-      console.log(data.body);
-      const trackArray = data.body.tracks.items;
-      const nameOfAlbum = data.body.name;
-      // res.send(data.body);
-      res.render('tracks', { trackArray, nameOfAlbum });
-    })
-    .catch(function (error) {
-      console.error(error);
-    });
+app.get('/tracks/:albumId', async (req, res, next) => {
+  try {
+    const {
+      body: {
+        name: nameOfAlbum,
+        tracks: { items: trackArray },
+      },
+    } = await spotifyApi.getAlbum(req.params.albumId);
+
+    res.render('tracks', { trackArray, nameOfAlbum });
+  } catch (error) {
+    console.error(error);
+  }
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
