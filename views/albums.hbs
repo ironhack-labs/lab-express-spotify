@@ -1,5 +1,32 @@
+<style>
+    .albumFlex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .albumPanel{
+        display: flex;
+        flex-direction:column;
+        text-align: center;
+        width: 25%;
+        margin: 5%;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 2% 5% 2% 5%
+    }
+    .viewTracks{
+        font-size: 2em;
+    }
+    .tracksLink{
+        text-decoration: none;
+        color: black
+    }
+</style>
+<div class="albumFlex">
 {{#each albumArray}}
+<section class="albumPanel">
 <img src="{{this.images.0.url}}">
 <h1>{{this.name}}</h1>
-<button><a href="/tracks/{{this.id}}">View Tracks</a></button>
+<button class="viewTracks"><a class="tracksLink"href="/tracks/{{this.id}}">View Tracks</a></button>
+</section>
 {{/each}}
+</div>

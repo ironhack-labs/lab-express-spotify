@@ -1,6 +1,19 @@
+<style>
+.trackList{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 1% 3%;
+    padding: 0 2%;
+    border: 1px solid black;
+    border-radius: 12px
+}
+</style>
 {{#each trackArray}}
+<section class="trackList">
 <h1>{{this.name}}</h1>
 <audio controls>
     <source src="{{this.preview_url}}">
-</audio>>
+</audio>
+</section>
 {{/each}}

@@ -1,6 +1,36 @@
+<style>
+    .flex{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    #artistPanel{
+        display: flex;
+        flex-direction:column;
+        text-align: center;
+        width: 25%;
+        margin: 5%;
+        border: 1px solid black;
+        border-radius: 12px;
+        padding: 0px 5% 2% 5%
+    }
+    .artistImage{
+        width: 100%
+    }
+    .viewAlbums{
+        font-size: 2em;
+    }
+    .albumLink{
+        text-decoration: none;
+        color: black
+    }
+</style>
+<div class="flex">
 {{#each myArtistArray}}
+<section id="artistPanel">
 <h1>{{this.name}}</h1>
-<img src="{{this.images.0.url}}">
-<button><a href="/albums/{{this.id}}">View all Albums</a></button>
+<img class="artistImage"src="{{this.images.0.url}}">
+<br>
+<button class="viewAlbums"><a class ="albumLink"href="/albums/{{this.id}}">View all Albums</a></button>
+</section>
 {{/each}}
-
+</div>
