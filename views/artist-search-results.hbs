@@ -1,3 +1,7 @@
-<img src="" alt="">
-<h3>Artist</h3>
+<h1>Search Result</h1>
+
+{{#each artists}}
+<h3>{{this.name}}</h3>
+<img src="{{this.images.0.url}}" alt="">
 <button>View Albums</button>
+{{/each}}
