@@ -1,0 +1,15 @@
+<h1>Albums</h1>
+
+{{#each albums}}
+    <div>
+        <h3>{{name}}</h3>
+        {{#if images.1.url}}
+            <img src={{images.1.url}} alt="">
+        {{/if}}
+        
+        <form action="/tracks/{{id}}">
+            <input type="submit" value="View Tracks" method="GET"/>
+        </form>
+    </div>
+
+{{/each}}

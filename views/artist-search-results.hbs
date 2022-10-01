@@ -1,7 +1,16 @@
 <h1>Search Result</h1>
 
 {{#each artists}}
-<h3>{{this.name}}</h3>
-<img src="{{this.images.0.url}}" alt="">
-<button>View Albums</button>
+    <div>
+        <h3>{{name}}</h3>
+        {{#if images.1.url}}
+            <img src={{images.1.url}} alt="">
+        {{/if}}
+            
+
+        <form action="/albums/{{id}}">
+            <input type="submit" value="View Albums" method="GET"/>
+        </form>
+    </div>
+    
 {{/each}}

@@ -26,25 +26,62 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 app.get("/", (req, res, next) => {
-    console.log("this is the homepage");
     res.render("index");
 })
 
 app.get('/artist-search', (req, res) => {
-    const {artist} = req.query;
+  
+  const artist = req.query.artist;
+  // same as
+  // const {artist} = req.query;
+
 
    spotifyApi
   .searchArtists(artist)
   .then(data => {
-    console.log('The received data from the API: ', data.body.artists.items);
+    
     res.render("artist-search-results", {artists: data.body.artists.items});
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 
-
-
 })
+
+app.get('/albums/:artistId', (req, res, next) => {
+
+  const albums = req.params.artistId;
+;
+  
+
+  spotifyApi.getArtistAlbums(albums)
+  .then(data => {
+      res.render('albums', {albums: data.body.items} )
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+
+});
+
+
+app.get('/tracks/:albumId', (req, res, next) => {
+
+  const tracks = req.params.albumId;
+
+  
+
+  spotifyApi.getAlbumTracks(tracks)
+  .then(data => {
+
+      res.render('tracks', {tracks: data.body.items} )
+    },
+    function(err) {
+      console.error(err);
+    }
+  );
+
+});
 
 
 

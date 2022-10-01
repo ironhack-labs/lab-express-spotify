@@ -1,0 +1,12 @@
+<h1>Tracks</h1>
+
+{{#each tracks}}
+    <div>
+        <h3>{{name}}</h3>
+        {{#if images.1.url}}
+            <img src={{images.1.url}} alt="">
+        {{/if}}
+
+    </div>
+
+{{/each}}
