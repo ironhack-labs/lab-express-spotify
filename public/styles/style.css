@@ -1,0 +1,67 @@
+#board {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    height: 95vh;
+}
+
+form {
+    display: flex;
+    width: 30%;
+    padding: 2%;
+    margin: 35vh 0;
+    background-color: rgba(255, 255, 255, 0.564);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+input {
+    width: 70%;
+    margin: 2%;
+    border-radius: 5px;
+    border: 1px solid orange;
+    padding: 5px;
+}
+button, a {
+    margin: 2%;
+    padding: 1% 3%;
+    background-color: rgb(223, 80, 80);
+    color: white;
+    border-color: rgb(249, 188, 89);
+    border-radius: 5px;
+    text-decoration: none;
+}
+#artists {
+    display: flex;
+    flex-wrap: wrap;
+}
+img {
+    width: 20vw;
+}
+section {
+    display: flex;
+    flex-direction: column;
+    margin: 1vh 1vw;
+    background-color: rgb(219, 227, 120);
+    justify-content: space-between;
+    align-items: center;
+}
+#tracks {
+    flex-direction: row;
+    padding: 0 10vw;
+}
+#navigation {
+    
+    padding: 1vh 0;
+    background-color:rgb(223, 80, 80);
+    
+}
+#navigation a {
+    padding: 0;
+    margin: 0 10vw;
+    color: white;
+    font-size: 1.2em;
+}

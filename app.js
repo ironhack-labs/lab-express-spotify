@@ -29,56 +29,36 @@ app.get('/', (req, res, next) => {
 })
 
 app.get('/artist-search', (req, res, next) => {
-    //console.log(req.query.artist)
     spotifyApi
         .searchArtists(req.query.artist)
         .then(data => {
             const info = data.body.artists.items;
-            
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('artist-search-results', {arrOfArtists: info})
-            //return info;
+            res.render('artist-search-results', { arrOfArtists: info })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
-
-    //console.log(req.query);
-
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
-    //console.log(req.query.artist)
-    //const idOfArtist = req.params.artistId;
-    //res.send(req.params.artistId);
     spotifyApi
         .getArtistAlbums(req.params.artistId)
         .then(data => {
             const albums = data.body.items;
-            //console.log(albums[0].images);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('albums', {arrOfAlbums: albums})
+            res.render('albums', { arrOfAlbums: albums })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
-
-    //console.log(req.query);
-
 })
 
 app.get('/tracks/:albumId', (req, res, next) => {
-    //console.log(req.query.artist)
-    //const idOfArtist = req.params.artistId;
-    //res.send(req.params.artistId);
     spotifyApi
         .getAlbumTracks(req.params.albumId)
         .then(data => {
             const tracks = data.body.items;
-            console.log(data.body.items);
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('tracks', {arrOfTracks: tracks})
+            res.render('tracks', { arrOfTracks: tracks })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
-
-    //console.log(req.query);
-
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
