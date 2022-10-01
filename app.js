@@ -3,7 +3,7 @@ require('dotenv').config();
 const { query } = require('express');
 const express = require('express');
 const hbs = require('hbs');
-
+const path = require('path');
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
@@ -11,7 +11,10 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
-
+hbs.registerPartials(path.join(__dirname, 'views/partials'));
+hbs.registerHelper('ifEquals', function(arg1, arg2, options) {
+    return (arg1 == arg2) ? options.fn(this) : options.inverse(this);
+});
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -45,7 +48,7 @@ app.get('/albums/:artistId', (req, res, next) => {
         .then(data => {
             const albums = data.body.items;
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('albums', { arrOfAlbums: albums })
+            res.render('albums', { arrOfAlbums: albums})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })

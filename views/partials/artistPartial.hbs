@@ -1,0 +1,14 @@
+<section>
+    <h3>{{name}}</h3>
+    {{#if images.0.url}}
+    <img src={{images.0.url}} />
+    {{else}}
+    <img src="/images/avatar.png" />
+    {{/if}}
+    {{#ifEquals type 'artist'}}
+        <a href="/albums/{{id}}">View albums</a> 
+    {{/ifEquals}}
+    {{#ifEquals type 'album'}}
+        <a href="/tracks/{{id}}">View tracks</a> 
+    {{/ifEquals}}
+</section>

@@ -3,14 +3,6 @@
 </div>
 <div id="artists">
     {{#each arrOfAlbums}}
-    <section>
-        <h3>{{name}}</h3>
-        {{#if images.0.url}}
-        <img src={{images.0.url}} />
-        {{else}}
-        <img src="/images/avatar.png" />
-        {{/if}}
-        <a href="/tracks/{{id}}">View tracks</a>
-    </section>
+    {{>artistPartial}}
     {{/each}}
 </div>
