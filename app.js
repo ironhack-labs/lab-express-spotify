@@ -36,7 +36,7 @@ app.get("/artist-search", (req, res) => {
     .searchArtists(req.query.artist)
     .then((data) => {
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      console.log(data.body.artists.items[1].id);
+      //console.log(data.body.artists.items[1].id);
       //this creates an object which stores the list of items from the API we've narrowed down to as a value of the property 'artists'
       const artistsFromApi = {artists: data.body.artists.items};
       res.render("artist-search-result", artistsFromApi);
@@ -55,7 +55,17 @@ app.get("/albums/:artistID", (req, res, next) => {
     .catch((err) => console.log(err));
 });
 
-
+app.get("/albums/tracks/:trackId", (req, res, next) => {
+  spotifyApi
+  .getAlbumTracks(req.params.trackId)
+  .then((data)=> {
+  //console.log(data.body.items[1].id))
+  const foundTracks = {tracks: data.body.items}
+  //console.log(foundTracks)
+  res.render('tracks', foundTracks)
+  })
+  .catch((err) => console.log(err))
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
