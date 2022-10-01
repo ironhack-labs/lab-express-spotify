@@ -21,7 +21,6 @@ const spotifyApi = new SpotifyWebApi({
 spotifyApi
   .clientCredentialsGrant()
   .then((data) => {
-    console.log("data>>>", data);
     spotifyApi.setAccessToken(data.body["access_token"]);
   })
   .catch((error) =>
