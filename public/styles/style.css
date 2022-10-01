@@ -1,0 +1,20 @@
+#artistButton, #albumButton{
+    text-transform: uppercase;
+    color: white;
+    background: linear-gradient(#9E2424, #CF7272 );
+    padding: 5px;
+    margin: 5px;
+    margin-top: 10px;
+}
+
+#artistImage, #albumImage{
+    margin: 10px;
+    width: 20%;
+}
+
+#artistTitle, #albumTitle{
+    text-align: center;
+    font-size: larger;
+}
+
+
