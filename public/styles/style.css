@@ -1,14 +1,27 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
+
+body{
+    background-color: black;
+    color: white;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+
 #artistButton, #albumButton{
     text-transform: uppercase;
-    color: white;
-    background: linear-gradient(#9E2424, #CF7272 );
+    color: black;
+    background: linear-gradient(#1DB954, #7ab58f);
     padding: 5px;
-    margin: 5px;
+    margin: auto;
     margin-top: 10px;
+    border-radius: 20px;
+    width: 100px;
+    text-align: center;
 }
 
 #artistImage, #albumImage{
-    margin: 10px;
+    margin: auto;
     width: 20%;
 }
 
@@ -17,4 +30,70 @@
     font-size: larger;
 }
 
+#spotifyLogo{
+    width: 400px;
+    margin: auto;
+    padding: 20px 0px 80px 0;
+}
 
+#saskia{
+    margin-left: -15em;
+    font-style: italic;
+}
+
+#totalDiv{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#artistPage{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#artistDetails{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    width: 400px;
+    margin: auto;
+    text-align: center;
+}
+
+.searchField{
+    width: 20rem;
+    height: 30px;
+    border-radius: 30px;
+    text-align: center;
+}
+
+.searchButton{
+    width:10rem;
+    height: 30px;
+    margin-top: 10px;
+    border-radius: 30px;
+
+}
+
+#trackDiv{
+    display: flex;
+    flex-direction: row;
+    margin: 20px auto;
+}
+
+#trackPage{
+    display: flex;
+    flex-direction: column;
+}
+
+#audio{
+    margin: 0px 20px 0px 20px;
+}
+
+#trackName{
+    font-style: italic;
+    font-size: larger;
+}
