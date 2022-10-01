@@ -1,0 +1,28 @@
+body {
+  background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #cccccc;
+}
+
+input {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+button {
+  color: white;
+  background-color: rgb(231, 107, 107);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.form1 {
+  background-color: rgb(241, 220, 206);
+  width: 50%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  text-align: center;
+  top: 50%;
+  position: relative;
+}

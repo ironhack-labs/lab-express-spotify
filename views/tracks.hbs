@@ -1,0 +1,16 @@
+<table>
+  <tr class="tracks-header">
+    <th><h2>Title</h2></th>
+    <th><h2>Listen</h2></th>
+  </tr>
+  {{#each tracks}}
+    <tr>
+      <td>{{this.name}}</td>
+      <td>
+        <audio controls>
+          <source src="{{this.preview_url}}" />
+        </audio>
+      </td>
+    </tr>
+  {{/each}}
+</table>

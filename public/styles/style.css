@@ -1,0 +1,60 @@
+input {
+  margin: 2rem 0;
+  font-size: 1.5rem;
+}
+
+button {
+  color: white;
+  background-color: rgb(231, 107, 107);
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+ul {
+  list-style-type: none;
+}
+
+table {
+  margin: 2rem auto;
+  font-weight: bold;
+}
+
+.form1 {
+  background-color: rgb(241, 220, 206);
+  width: 50%;
+  padding: 1rem 0;
+  margin: 1rem auto;
+  text-align: center;
+  top: 50%;
+  position: relative;
+}
+
+.list {
+  display: flex;
+  flex-direction: row;
+  align-content: flex-start;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: 75%;
+}
+
+.list img {
+  width: 350px;
+}
+
+.list a {
+  text-decoration: none;
+  color: white;
+  background-color: rgb(231, 107, 107);
+  padding: 5px 30px;
+}
+
+.list div {
+  margin: 1rem 1rem;
+  text-align: center;
+}
+
+.tracks-header {
+  color: lightgray;
+  background-color: grey;
+}
