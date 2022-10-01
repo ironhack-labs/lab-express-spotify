@@ -8,12 +8,11 @@ const bodyParser = require("body-parser");
 const app = express();
 
 app.use(express.static(__dirname + "/public"));
-app.use(bodyParser.urlencoded({ extended: true })); //config body parser
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.set("views", __dirname + "/views");
 app.set("view engine", "hbs");
 
-// setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
@@ -28,8 +27,6 @@ spotifyApi
   .catch((error) =>
     console.log("Something went wrong when retrieving an access token", error)
   );
-
-// Our routes go here:
 
 app.get("/", (req, res, next) => {
   const data = {
@@ -57,7 +54,6 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(artistId)
     .then((response) => {
-      console.log("response>>>", response.body.items);
       const data = {
         albums: response.body.items,
       };
@@ -74,7 +70,6 @@ app.get("/tracks/:albumId", (req, res) => {
       const data = {
         tracks: response.body.items,
       };
-      console.log("data>>>", data);
       res.render("tracks", data);
     })
     .catch((err) => console.log("Some error in search", err));
