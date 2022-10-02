@@ -68,6 +68,17 @@ form button {
 }
 
 .artist-image {
-  width: 80%;
+  width: 50%;
   height: auto;
+}
+
+.artist-search-result-details button {
+  color: rgb(255, 255, 255);
+  background-color: rgb(250, 104, 98);
+  border: none;
+}
+
+.artist-search-result-details button a {
+  color: rgb(255, 255, 255);
+  text-decoration: none;
 }

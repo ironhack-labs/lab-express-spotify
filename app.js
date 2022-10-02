@@ -40,7 +40,7 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(titleOfTheArtist)
     .then((data) => {
-      console.log("The received data from the API: ", data.body);
+      //console.log("The received data from the API: ", data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       const { artists: result } = data.body;
       console.log(data.body.artists);
@@ -49,6 +49,21 @@ app.get("/artist-search", (req, res, next) => {
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
+});
+
+// Our routes go albums.hbs:
+app.get("/albums/:artistId", (req, res, next) => {
+  const idOfArtist = req.params.artistId;
+  spotifyApi.getArtistAlbums(idOfArtist).then(
+    function (data) {
+      console.log("Artist albums", data.body.items);
+      const { items: albums } = data.body;
+      res.render("albums", albums);
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
 });
 
 app.listen(3000, () =>

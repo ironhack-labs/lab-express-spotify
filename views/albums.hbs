@@ -1,0 +1,22 @@
+<div class="artist-search-results">
+    {{#each this}}
+    <div class="artist-search-result-container">
+        <div class="artist-search-result-image">
+            {{#if images.0.url}}
+            <img class="artist-image" src="{{images.0.url}}" alt="" />
+            {{else}}
+            <p>No image available</p>
+            {{/if}}
+
+        </div>
+        <div class="artist-search-result-details">
+            <h3>{{name}}</h3>
+            <button>
+                <a href="/albums/{{id}}">View Albums</a>
+            </button>
+        </div>
+    </div>
+
+    {{/each}}
+
+</div>
