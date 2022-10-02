@@ -1,0 +1,23 @@
+{{> navbar }}
+<div class="track-heading">
+  <h2>Title</h2>
+  <h2>Listen</h2>
+</div>
+
+{{#each this}}
+  <div class="track-container">
+    <div class="track-name">
+      {{name}}
+    </div>
+
+    {{#if preview_url}}
+    <div class="track-driver">
+      <audio controls src="{{preview_url}}">
+        <a href=" {{uri}} ">Download audio</a>
+      </audio>
+    </div>
+    {{else}}
+    <p>No track available</p>
+    {{/if}}
+  </div>
+{{/each}}

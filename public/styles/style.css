@@ -2,6 +2,18 @@ body {
   margin: 0%;
 }
 
+.nav-bar {
+  background-color: rgba(94, 94, 94, 0.4);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0.5% 20%;
+}
+
+.nav-bar a {
+  text-decoration: none;
+}
+
 .home {
   display: flex;
   justify-content: center;
@@ -37,7 +49,7 @@ form button {
   margin: 5px;
 }
 
-.artist-search-results {
+.search-results {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -45,7 +57,7 @@ form button {
   flex-wrap: wrap;
 }
 
-.artist-search-result-container {
+.search-result-container {
   background-color: rgb(77, 77, 77);
   display: flex;
   justify-content: center;
@@ -56,29 +68,48 @@ form button {
   height: 50vh;
 }
 
-.artist-search-result-image {
+.search-result-image-container {
   display: flex;
   justify-content: center;
 }
 
-.artist-search-result-details {
+.search-result-image {
+  width: 50%;
+  height: auto;
+}
+
+.search-result-details {
   display: flex;
   justify-content: center;
   flex-direction: column;
 }
 
-.artist-image {
-  width: 50%;
-  height: auto;
-}
-
-.artist-search-result-details button {
+.search-result-details button {
   color: rgb(255, 255, 255);
   background-color: rgb(250, 104, 98);
   border: none;
 }
 
-.artist-search-result-details button a {
+.search-result-details button a {
   color: rgb(255, 255, 255);
   text-decoration: none;
+}
+
+.track-heading {
+  color: rgb(180, 181, 180);
+  background-color: rgb(74, 74, 74);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 0 10%;
+}
+
+.track-container {
+  color: rgb(74, 74, 74);
+  background-color: rgb(157, 157, 157);
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  padding: 1% 5%;
+  margin-bottom: 0.5%;
 }

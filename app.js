@@ -12,6 +12,8 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
+hbs.registerPartials(__dirname + "/views/partials"); // config partials
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -40,11 +42,10 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(titleOfTheArtist)
     .then((data) => {
-      //console.log("The received data from the API: ", data.body);
+      console.log("The received data from the API: ", data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      const { artists: result } = data.body;
-      console.log(data.body.artists);
-      res.render("artist-search-results", result);
+      const { items: artistDetails } = data.body.artists;
+      res.render("artist-search-results", artistDetails);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -56,12 +57,28 @@ app.get("/albums/:artistId", (req, res, next) => {
   const idOfArtist = req.params.artistId;
   spotifyApi.getArtistAlbums(idOfArtist).then(
     function (data) {
-      console.log("Artist albums", data.body.items);
-      const { items: albums } = data.body;
-      res.render("albums", albums);
+      console.log("Artist albums", data.body);
+      const { items: albumDetails } = data.body;
+      res.render("albums", albumDetails);
     },
     function (err) {
       console.error(err);
+    }
+  );
+});
+
+// Our routes go tracks.hbs:
+app.get("/tracks/:tracksId", (req, res, next) => {
+  const idOfTracks = req.params.tracksId;
+
+  spotifyApi.getAlbumTracks(idOfTracks).then(
+    function (data) {
+      console.log("Tracks", data.body);
+      const { items: trackDetails } = data.body;
+      res.render("tracks", trackDetails);
+    },
+    function (err) {
+      console.log("Something went wrong!", err);
     }
   );
 });

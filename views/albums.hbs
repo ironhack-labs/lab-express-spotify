@@ -1,18 +1,19 @@
-<div class="artist-search-results">
+{{> navbar }}
+<div class="search-results">
     {{#each this}}
-    <div class="artist-search-result-container">
-        <div class="artist-search-result-image">
+    <div class="search-result-container">
+        <div class="search-result-image-container">
             {{#if images.0.url}}
-            <img class="artist-image" src="{{images.0.url}}" alt="" />
+            <img class="search-result-image" src="{{images.0.url}}" alt="" />
             {{else}}
             <p>No image available</p>
             {{/if}}
 
         </div>
-        <div class="artist-search-result-details">
+        <div class="search-result-details">
             <h3>{{name}}</h3>
             <button>
-                <a href="/albums/{{id}}">View Albums</a>
+                <a href="/tracks/{{id}}">View Tracks</a>
             </button>
         </div>
     </div>
