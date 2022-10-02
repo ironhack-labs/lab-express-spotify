@@ -1,0 +1,16 @@
+
+
+<section>
+    {{#if name}}
+    <h3>{{name}}</h3>
+    {{else}}
+    <h3>Sorry, no results for this search.</h3>
+    {{/if}}
+    {{!-- {{#each images}} --}}
+    <img src="{{images.0.url}}" />
+    {{!-- {{/each}} --}}
+   
+ <a href="/albums/{{id}}">View Albums</a> 
+</section>
+
+    

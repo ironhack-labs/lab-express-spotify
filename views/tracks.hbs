@@ -1,0 +1,11 @@
+<ul>
+{{#each trackArr}}
+<h1>{{this.name}}</h1>
+{{#if preview_url}}
+    <audio controls
+        src="{{preview_url}}">
+    </audio>
+{{/if}}
+{{/each}}
+</ul>
+
