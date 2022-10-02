@@ -1,0 +1,13 @@
+<h1> Albums</h1>
+
+{{#each albums}}
+   <section>
+        <h3>{{name}}</h3>
+        {{images}}
+
+        <form action = "/tracks/{{id}}" method = "GET">
+
+  <button type="submit"> View tracks </button>
+  </form>
+  </section>
+  {{/each}}
