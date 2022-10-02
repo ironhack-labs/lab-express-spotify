@@ -1,0 +1,17 @@
+<div class="album-title title">
+  <button><a href="/">Home page</a></button>
+  <h1>Albums for: <em>{{artistName}}</em></h1>
+</div>
+<div class="search-result-page">
+  {{#each itemsArr}}
+    {{#if images}}
+      <div class="album-wrapper">
+        <img src={{images.1.url}} />
+        <div class="album-title">
+          <h5>{{name}}</h5>
+          <button><a href="/tracks/{{id}}">View tracks</a></button>
+        </div>
+      </div>
+    {{/if}}
+  {{/each}}
+</div>

@@ -1,0 +1,14 @@
+  <div class="album-title title">
+    <button><a href="/">Home page</a></button>
+  <h1>Tracks for: <em>{{artistName}}</em> selected album</h1>
+  </div>
+  <div class="tracks-result-page">
+    {{#each itemsArr}}
+    <div class="track-wrapper">
+        <h3>{{track_number}}. {{name}}</h3>
+        {{#if preview_url}}
+            <audio src={{preview_url}} controls></audio>
+        {{/if}}
+    </div>
+    {{/each}}
+  </div>

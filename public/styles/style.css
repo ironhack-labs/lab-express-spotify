@@ -1,0 +1,93 @@
+
+h1 {
+    display: inline;
+    line-height: 2em;
+}
+em {
+    color: crimson;
+    text-transform: capitalize;
+}
+button {
+    padding:10px;
+    color: antiquewhite;
+    background-color: crimson;
+    border-radius: 8px;
+}
+.home-page {
+    background-image: url("/images/spotify-background.jpeg");
+    background-position: inherit;
+    background-size: contain;
+    background-attachment: fixed;
+    background-color: rgb(126, 45, 31);
+    text-align: center;
+}
+.search-form {
+    padding: 30px 80px;
+    background-color: rgb(250, 250, 250, 0.6);
+    margin: 300px auto ;
+    display: inline-block;
+}
+.search-form input {
+    padding: 10px 80px;
+    display: block;
+    margin-bottom: 10px;
+}
+.search-result-page {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: stretch;
+    background-color: darkgrey;
+}
+.album-wrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+	align-items: stretch;
+    text-align: center;
+}
+.album-wrapper img {
+    width: 200px;
+    height: 200px;
+    display: block;
+    margin: 0 auto;
+ }
+ .album-title {
+    background-color: rgb(37, 37, 37);
+    color:antiquewhite;
+    padding-bottom: 10px;
+ }
+ .album-title a {
+    color:antiquewhite;
+    text-decoration: none;
+ }
+ .tracks-result-page {
+    background-color: darkgrey;
+    margin: 20px;
+    padding: 20px;
+ }
+ .track-wrapper {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	align-items: stretch;
+	align-content: space-between;
+    padding: 5px;
+    margin: 20px;
+    border: 2px solid crimson;
+    border-radius: 10px;
+    background-color: rgb(37, 37, 37);
+    color:antiquewhite;
+ }
+.title {
+    position: relative;
+    text-align: center;
+}
+.title button {
+    position: absolute;
+    right: 20px;
+    top:18px
+}
