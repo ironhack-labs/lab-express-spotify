@@ -1,5 +1,6 @@
 <div id="navigation">
     <a href="/">Home</a>
+    <h2>{{albumsPageTitle}}</h2>
 </div>
 <div id="artists">
 {{#each arrOfArt}}
@@ -14,7 +15,7 @@
     <img src="/images/avatar.png" />
     {{/if}}
     {{#ifEquals type 'artist'}}
-    <a href="/albums/{{id}}">View albums</a>
+    <a href="/albums/{{name}}/{{id}}">View albums</a>
     {{/ifEquals}}
     {{#ifEquals type 'album'}}
     <a href="/tracks/{{id}}">View tracks</a>
