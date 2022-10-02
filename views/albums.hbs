@@ -1,0 +1,9 @@
+<div id="artist-page"></div>
+{{#each albums}}
+<div class="artist-img-name"></div>
+<img class="artist-img" src={{this.images.0.url}} />
+<h3 class="artist-title">{{this.name}}</h3>
+<a class="v-albums" href="/tracks/{{this.id}}?album={{this.name}}&artist={{artist}}" method = "GET">View Tracks</a>
+</div>
+{{/each}}
+</div>

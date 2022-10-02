@@ -1,0 +1,75 @@
+html {
+    height: 100vh;
+}
+
+body {
+    background-color: rgb(167, 162, 159);
+    font-size: 16px;
+    font-family:'Arial Narrow Bold', sans-serif ;
+}
+
+#home{
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    height: 100vh;
+    background-repeat: no-repeat;
+    
+    
+}
+
+form {
+display: flex;
+flex-direction: column;
+justify-content: center;
+align-items: center;
+padding-top: 50vh;
+}
+
+form > button {
+    min-width: 180px;
+    padding: 5px 0 5px 0;
+    margin: 5px;
+}
+form > input {
+    min-width: 180px;
+    padding: 5px 0 5px 0;
+    margin: 5px;
+}
+
+
+
+
+/* artists & albums*/
+
+.artist-img-name {
+    margin: 10px;
+    margin-bottom: 10px;
+}
+
+.artist-img {
+    width: 300px;
+    height: 300px;
+    margin-top: 20px;
+
+}
+
+#artist-page {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+.artist-title {
+    color: rgb(0, 5, 0);
+
+}
+.v-albums {
+color: rgb(220, 232, 220);
+text-decoration: none;
+background-color: rgb(189, 40, 40);
+padding: 10px;
+border-radius: 5px;
+}
+
+
+
+
