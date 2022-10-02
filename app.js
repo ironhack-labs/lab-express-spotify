@@ -40,7 +40,17 @@ app.get('/artist-search-results', (req, res) => {
         console.log(data.body.artists)
         res.render('artist-search-results', {artists: data.body.artists.items})
     })
-    .catch(error => console.log('some error in search: ', error))
+    .catch(error => console.log('some error in the search: ', error))
+})
+
+app.get('/albums/:artistId', (req, res) => {
+    spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+        console.log(data.body.albums)
+        res.render('albums', {albums: data.body.items})
+    })
+    .catch(error => console.log('some error in the search: ', error))
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
