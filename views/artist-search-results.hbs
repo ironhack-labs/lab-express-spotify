@@ -1,16 +1,16 @@
+<link rel="stylesheet" href="/styles/style.css" />
 
-
-<section>
+<div id="artist">
     {{#if name}}
-    <h3>{{name}}</h3>
+    <h1>{{name}}</h3>
     {{else}}
-    <h3>Sorry, no results for this search.</h3>
+    <h1>Sorry, no results for this search.</h3>
     {{/if}}
     {{!-- {{#each images}} --}}
     <img src="{{images.0.url}}" />
     {{!-- {{/each}} --}}
    
- <a href="/albums/{{id}}">View Albums</a> 
-</section>
+ <a id="view-albums" href="/albums/{{id}}">View Albums</a> 
+</div>
 
     
