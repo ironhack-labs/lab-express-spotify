@@ -1,12 +1,16 @@
 body {
+  margin: 0%;
+}
+
+.home {
   display: flex;
   justify-content: center;
   align-items: center;
   background-image: url("../images/spotify-background.jpeg");
   background-position: center; /* Center the image */
   background-size: 100%;
-  padding: 2% 10%;
   text-align: center;
+  height: 100%;
 }
 
 form {
@@ -31,4 +35,39 @@ form button {
   border: none;
   padding: 5px;
   margin: 5px;
+}
+
+.artist-search-results {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.artist-search-result-container {
+  background-color: rgb(77, 77, 77);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 25%;
+  margin: 1%;
+  height: 50vh;
+}
+
+.artist-search-result-image {
+  display: flex;
+  justify-content: center;
+}
+
+.artist-search-result-details {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.artist-image {
+  width: 80%;
+  height: auto;
 }

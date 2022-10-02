@@ -27,11 +27,28 @@ spotifyApi
   );
 
 // Our routes go here:
-// Our routes go home:
+// Our routes go home.hbs:
 app.get("/", (req, res, next) => {
   console.log("this is the homepage");
   // res.send("hello world");
   res.render("home");
+});
+
+// Our routes go artist-search-results.hbs:
+app.get("/artist-search", (req, res, next) => {
+  const titleOfTheArtist = req.query.artist;
+  spotifyApi
+    .searchArtists(titleOfTheArtist)
+    .then((data) => {
+      console.log("The received data from the API: ", data.body);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      const { artists: result } = data.body;
+      console.log(data.body.artists);
+      res.render("artist-search-results", result);
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
 });
 
 app.listen(3000, () =>
