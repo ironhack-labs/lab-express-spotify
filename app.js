@@ -50,7 +50,7 @@ app.get('/albums/:name/:artistId', (req, res, next) => {
             const albums = data.body.items;
             const header = req.params.name;
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('albums', { arrOfArt: albums, albumsPageTitle: header})
+            res.render('albums', { arrOfArt: albums, albumsPageTitle: `Albums for: ${header}`})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
