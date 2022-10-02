@@ -32,8 +32,6 @@ app.get('/', (req, res) => {
 })
 
 app.get('/artist-search-results', (req, res) => {
-    const artist = req.query.artist
-
     spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
@@ -47,8 +45,18 @@ app.get('/albums/:artistId', (req, res) => {
     spotifyApi
     .getArtistAlbums(req.params.artistId)
     .then(data => {
-        console.log(data.body.albums)
+        console.log(data.body.items)
         res.render('albums', {albums: data.body.items})
+    })
+    .catch(error => console.log('some error in the search: ', error))
+})
+
+app.get('/tracks/:albumId', (req, res) => {
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+        console.log(data.body.items)
+        res.render('tracks', {tracks: data.body.items})
     })
     .catch(error => console.log('some error in the search: ', error))
 })
