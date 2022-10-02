@@ -31,12 +31,15 @@ app.get('/', (req, res) => {
     res.render('home')
 })
 
-app.get('/artist-search', (req, res) => {
+app.get('/artist-search-results', (req, res) => {
     const artist = req.query.artist
 
     spotifyApi
-    .searchArtists(artist)
-    .then(data => console.log(data.body.artists))
+    .searchArtists(req.query.artist)
+    .then(data => {
+        console.log(data.body.artists)
+        res.render('artist-search-results', {artists: data.body.artists.items})
+    })
     .catch(error => console.log('some error in search: ', error))
 })
 
