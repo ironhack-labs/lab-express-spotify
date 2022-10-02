@@ -37,7 +37,7 @@ app.get('/artist-search', (req, res, next) => {
         .then(data => {
             const info = data.body.artists.items;
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('artist-search-results', { arrOfArtists: info })
+            res.render('artist-search-results', { arrOfArt: info })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -48,7 +48,7 @@ app.get('/albums/:artistId', (req, res, next) => {
         .then(data => {
             const albums = data.body.items;
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('albums', { arrOfAlbums: albums})
+            res.render('albums', { arrOfArt: albums})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })
@@ -59,7 +59,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
         .then(data => {
             const tracks = data.body.items;
             // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            res.render('tracks', { arrOfTracks: tracks })
+            res.render('tracks', { arrOfArt: tracks })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 })

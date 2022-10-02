@@ -52,9 +52,9 @@ section {
 #tracks {
     flex-direction: row;
     padding: 0 10vw;
+    width: 100%;
 }
 #navigation {
-    
     padding: 1vh 0;
     background-color:rgb(223, 80, 80);
     
