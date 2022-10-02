@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(208, 247, 234);
+    color: rgb(24, 50, 41);
+}
+
+form {
+    display: flex;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+img {
+    max-width: 30%;
+}
+
+.button {
+    background-color: rgb(99, 98, 98);
+    padding: 0.6em;
+    border-radius: 20px;
+}
+
+a {
+    text-decoration: none;
+    color: lightgray;
+}
+
+.tracks {
+    display: block;
+    padding: 0.5em;
+}

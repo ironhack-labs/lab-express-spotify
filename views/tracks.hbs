@@ -1,10 +1,10 @@
 {{#each tracks}}
-    <p>{{name}}</p>
+    <div class="tracks">{{track_number}}. {{name}}<br />
     {{#if preview_url}} 
-    <p><audio controls>
-        <source src="{{preview_url}}">
+    <audio controls>
+        <source src="{{preview_url}}" />
         </audio>
-    </p>
+    </div>
     {{/if}}
 
 {{/each}}
