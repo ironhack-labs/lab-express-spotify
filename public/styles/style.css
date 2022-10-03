@@ -1,0 +1,90 @@
+body{
+    padding: 0;
+    margin: 0;
+}
+form{
+    position: absolute;
+    background-color: rgba(255, 255, 255, 0.5);
+    top:50vh;
+    width: 30vw;
+    height: 10vh;
+    padding: 3vw;
+    text-align: center;
+}
+form input{
+    width:24vw;
+    height: 4vh;
+    border-radius: 20px solid none;
+}
+form button{
+    color: white;
+    background-color: orangered;
+    border: none;
+    height: 4vh;
+    font-weight: bold;
+}
+
+.result-div{  
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    border: 3px solid black;
+    margin: 1rem;
+    background-color: dimgray;
+    padding-bottom: 2vh;
+    max-width: 17vw; 
+}
+.result-div img{
+    width: 17vw;
+    height:32vh;  
+}
+
+.result-div p{
+    color:white;
+    font-weight: bolder;
+    font-size: large;
+}
+.result-div a{
+    color: white;
+    background-color: orangered;
+    text-decoration: none;
+    border: none;
+    height: 4vh;
+    font-weight: bold;
+    border-radius: 6px;
+    padding:6px 6px 0px 6px;
+}
+.div-body{
+    background-color:rgba(211, 211, 211, 0.3);
+    display:flex;
+    justify-content: space-between;
+    margin:0.3rem 0rem;
+    padding:0.5rem;
+
+}
+.div-body p{
+    font-size: 1.2rem;
+    padding: 0rem 1rem;
+}
+#home-bg{
+    width:100%;
+    height: 100%;
+}
+#container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+
+}
+#header{
+    background-color: rgb(75, 75, 75);
+    display: flex;
+    justify-content: space-between;
+}
+#header p{
+    font-size: 1.6rem;
+    font-weight: bolder;
+    padding: 0.5rem 1rem;
+    padding-right: 7rem;
+    color:white
+}
