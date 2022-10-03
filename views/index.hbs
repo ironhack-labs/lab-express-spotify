@@ -1,0 +1,8 @@
+<form action='/artists' method='get'>
+  {{! This input will define a req.query.search }}
+  {{! `req.query` because it's a GET form }}
+  {{! `.search` because of `name="search"` }}
+  <input type='text' placeholder='The Beatles, U2, ...' name='search' />
+  <br />
+  <button type='submit'>Search for an artist</button>
+</form>

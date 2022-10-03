@@ -1,0 +1,9 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.list > .card {
+  margin: 10px;
+  width: 150px;
+}
