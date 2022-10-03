@@ -39,11 +39,10 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(artist)
     .then((response) => {
-      const artists = response.body.artists;
       const data = {
         artists: response.body.artists.items,
       };
-      res.render("artist-search-results", artists);
+      res.render("artist-search-results", data);
     })
     .catch((err) => console.log("Some error in search", err));
 });

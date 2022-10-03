@@ -1,7 +1,7 @@
 <div class="list">
-  {{#each items}}
+  {{#each artists}}
     <div>
-      <p><img src="{{this.images.1.url}}" alt="The Beatles" /></p>
+      <p><img src="{{this.images.1.url}}" alt="{{this.name}}" /></p>
       <p>{{this.name}}</p>
       <a href="/albums/{{this.id}}">View Albums</a>
     </div>
