@@ -1,0 +1,11 @@
+{{#each seachArr}}
+    <div class="results">
+        <h3>{{name}}</h3>
+
+        {{#if images}}
+            <img src={{images.1.url}} alt="">
+        {{/if}}
+        <a href="/albums/{{id}}">View Albums</a>
+
+    </div>
+{{/each}}
