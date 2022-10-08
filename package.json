@@ -12,5 +12,10 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.0.3",
+    "express": "^4.18.1",
+    "spotify-web-api-node": "^5.0.2"
   }
 }
