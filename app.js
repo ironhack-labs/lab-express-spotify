@@ -44,7 +44,7 @@ app.get("/albums/:artistId", (req, res) => {
     .getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE')
     .then((data) => {
       console.log("The received data from the API: ", data.body)
-      res.json(data.body.items)
+      res.json(data.body.items.map((item) => item.name))
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
