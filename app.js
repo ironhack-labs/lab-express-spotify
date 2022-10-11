@@ -47,7 +47,19 @@ app.get("/albums/:artistId", (req, res) => {
       res.json(data.body.items.map((item) => item.name))
     })
     .catch((err) =>
-      console.log("The error while searching artists occurred: ", err)
+      console.log("The error while searching album occurred: ", err)
+    );
+});
+
+app.get("/album-tracks/:albumId", (req, res) => {
+  spotifyApi
+    .getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ')
+    .then((data) => {
+      console.log("The received data from the API: ", data.body)
+      res.json(data.body.items.map((item) => item.name).sort())
+    })
+    .catch((err) =>
+      console.log("The error while searching album tracks occurred: ", err)
     );
 });
 
