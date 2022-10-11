@@ -45,9 +45,15 @@ app.get('/albums/:artistId', (req, res) => {
     .catch((err) => console.error('The error while get albums occurred: ', err))
 });
 
-
-
-
+app.get('/albums-tracks/:albumId', (req, res) => {
+    spotifyApi
+    .getAlbumTracks('41MnTivkwTO3UUJ8DrqEJJ')
+    .then((data) => {
+        console.log('The received data from the API: ', data.body)
+        res.json(data.body.items.map((item) => item.name).sort())
+    })
+    .catch((err) => console.error('The error while get albums tracks occurred: ', err))
+})
 
 const PORT = process.env.PORT
 app.listen(PORT, () => console.log('My Spotify project running on port 5000 🎧 🥁 🎸 🔊'));
