@@ -1,11 +1,12 @@
 <div>
     <p>artistas</p>
     {{#each details}}
-    <li>{{name}}</li>
+    <li>{{name}}
         {{#each this.images}}
             {{!-- <img src="{{this.url}}" alt="" width="200px"> --}}
         {{/each}}
-    <a href="/albums/{{this.id}}">View Albums</a>
+        <p>{{this.id}}</p>
+    <a href="/albums/{{this.id}}">View Albums</a></li>
     {{/each}}
 
 </div>

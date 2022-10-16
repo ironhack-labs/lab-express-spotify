@@ -40,12 +40,13 @@ app.get('/artist-search',(req,res,next) => {
 })
 
 app.get('/albums/:artistId',(req,res,next) => {
-    let {id} = req.params
-    spotifyApi.getArtistAlbums(id)
+    let {artistId} = req.params
+
+    spotifyApi.getArtistAlbums(artistId)
     .then((response) => {
-        console.log(response);
+        console.log(response.body.items);
         res.render('albums.hbs',{
-            eachArtist: response
+            eachAlbum: response.body
         })
     })
     .catch((err) => {
