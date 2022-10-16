@@ -29,7 +29,6 @@ app.get('/', (req,res,next) =>{
 app.get('/artist-search',(req,res,next) => {
     spotifyApi.searchArtists('artist')
     .then((response) => {
-        // console.log(response.body.artists);
         res.render('artist-search-results', {
             details: response.body.artists.items,
         })
@@ -47,6 +46,20 @@ app.get('/albums/:artistId',(req,res,next) => {
         console.log(response.body.items);
         res.render('albums.hbs',{
             eachAlbum: response.body
+        })
+    })
+    .catch((err) => {
+        console.log(err);
+    })
+})
+
+app.get('/tracks/:artistId', (req,res,next) => {
+    let {artistId} = req.params
+
+    spotifyApi.getAlbumTracks(artistId, {limit:5,offset:1})
+    .then((response) => {
+        res.render('audio.hbs', {
+            eachAudio: response.body.items
         })
     })
     .catch((err) => {
