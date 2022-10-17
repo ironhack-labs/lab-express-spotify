@@ -1,0 +1,16 @@
+<div>
+    <h3>Artista </h3>
+        {{#each data.items}}
+        <h3>{{name}}</h3>
+         {{#with images}}
+
+        <img src="{{this}}"/>
+
+        {{/with}}
+        <a href="/albums/{{id}}">View Albums</a>
+
+    {{/each}}
+    
+
+
+</div>
