@@ -1,0 +1,13 @@
+.homepage{
+    background-image: url("/images/spotify-background.jpeg");
+    width: 100vw;
+    height: 100vh;
+    background-size: cover;
+}
+
+.bottone{
+    display: flex;
+    background-color: red;
+    color: white;
+    padding: 10px;
+}
