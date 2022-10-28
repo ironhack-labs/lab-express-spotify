@@ -1,0 +1,9 @@
+body{
+    display: flex;
+    text-align: center;
+    background-color: azure;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
