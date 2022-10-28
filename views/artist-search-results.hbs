@@ -1,11 +1,16 @@
 <h2>Artists</h2>
 <ul>
+    <div class="artistdiv">
     {{#each artists}} 
+    
+        
+        <img src="{{this.images.0.url}}" alt="image" class="artistimg">
+        <div class="artistname">
         <h2>{{this.name}}</h2>
-        <img src="{{this.images.0.url}}" alt="image">
-        <a href="/albums/{{this.id}}">View Albums</a>
+        <button class="btnartist"> <a href="/albums/{{this.id}}">View Albums</a> </button>
+        </div>
         {{/each}}
-
+</div>
 
    
 </ul>
