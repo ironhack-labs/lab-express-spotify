@@ -1,0 +1,41 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.home-image img {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+}
+
+#home {
+    position: relative;
+}
+
+.container {
+    position: absolute;
+    margin: 200px;
+    margin-left: 400px;
+    max-width: 300px;
+    padding: 30px 60px;
+    background-color: rgba(255, 255, 255, 0.593);
+    align-items: center;
+}
+
+.home-form {
+    background-color: white;
+    position: relative;
+    align-items: center;
+}
+
+#artist-search {}
+
+.home-form__btn {
+    background-color: rgb(211, 87, 87);
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    margin-top: 10px;
+    cursor: pointer;
+}
