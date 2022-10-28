@@ -1,0 +1,14 @@
+.begin img
+{
+
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    width: 50vw;
+    height: 50vh;
+   
+}
+
+body {
+    background-color: grey;
+}
