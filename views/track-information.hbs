@@ -1,0 +1,22 @@
+<div class="tracksheader">
+    <h1>Title</h1>
+    <h1>Listen</h1>
+</div>
+{{#each track}}
+<div class="player">
+    <div>
+    <p>{{name}}</p>
+    </div>
+<ul class="liststyle">
+<div class="player2">
+    <li>
+    <figure>
+        <audio controls preload="auto" class="player2">
+            <source src="{{this.track}}" type="audio/mpeg"
+        </audio>
+    </figure>
+    </li>
+</div>
+</ul>
+</div>
+{{/each}}

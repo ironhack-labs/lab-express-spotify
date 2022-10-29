@@ -1,0 +1,16 @@
+<div class="albunsfor">
+    <h1>Albuns for: {{this.artist.name}}</h1>
+</div>
+<div class="albunsdisplay">
+{{#each album}}
+<div class="infoalbums">
+<img src="{{images.0.url}}" alt="">
+<div class="background-tracks">
+<p>{{name}}</p>
+<button class="tracksbutton">
+    <a href="/track-information/{{this.id}}" class="color-link">View Tracks</a>
+</button>
+</div>
+</div>
+{{/each}}
+</div>

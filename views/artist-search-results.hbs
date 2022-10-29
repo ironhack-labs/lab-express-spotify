@@ -1,0 +1,13 @@
+<div class="searchdisplay">
+{{#each results}}
+<div class="infoalbums">
+<img src="{{images.0.url}}" alt="album picture">
+<div class="background-tracks">
+<p>{{name}}</p>
+<button class="albumsbutton">
+    <a href="/albums/{{this.id}}" class="color-link">View Albums</a>
+</button>
+</div>
+</div>
+{{/each}}
+</div>
