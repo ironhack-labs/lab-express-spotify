@@ -67,7 +67,8 @@ app.get('/track-information/:tracksId', (req, res, next) => {
         .getAlbumTracks(req.params.tracksId)
         .then(data => {
             res.render('track-information', { tracks:data.body.items });
-            console.log('The received data from the API: ', data.body.artists.items);
+            console.log(data.body.items)
+            console.log('The received data from the API: ', data.body.items);
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });

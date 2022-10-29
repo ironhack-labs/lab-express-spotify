@@ -1,5 +1,11 @@
-{{#each result}}
-<h1>{{this.name}}</h1>
-<img class="artist-img" src="{{this.images.0.url}}" alt="artist img">
-<button><a href="/albums/{{id}}">View Albuns</a></button>
-{{/each}}
+<div class="artists-grid">
+    {{#each result}}
+    <div class="artist-search">
+        <img class="artist-img" src="{{this.images.0.url}}" alt="artist img">
+        <h1>{{this.name}}</h1>
+        <button class="view-button">
+            <a href="/albums/{{id}}">View Albuns</a>
+        </button>
+    </div>
+    {{/each}}
+</div>
