@@ -23,8 +23,6 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-// setting the spotify-api goes here:
-
 // Our routes go here:
 
 app.get("/", (req, res, next) =>{
@@ -37,7 +35,6 @@ app.get("/artist-search", (req, res, next) => {
   .then(data => {
     //console.log('The received data from the API: ', data.body.artists.items[0].images[0].url);
     let allArtists = data.body.artists.items
-    // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
     res.render("artists-search-results", {allArtists})
 
   })
@@ -56,11 +53,10 @@ app.get("/albums/:id", (req, res, next) =>{
 
 })
 
-
 app.get("/tracks/:id", (req, res, next) =>{
-    spotifyApi.getAlbumTracks(req.params.id, { offset : 1 })
+    spotifyApi.getAlbumTracks(req.params.id)
   .then(function(data) {
-    console.log(data.body);
+    //console.log(data.body);
     let allTracks = data.body.items
     res.render("tracks", {allTracks})
   }, function(err) {

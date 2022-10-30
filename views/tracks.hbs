@@ -1,6 +1,15 @@
-{{#each allTracks}}
-<span>{{track_number}}</span>
-<span>{{this.name}}</span>
-<audio src="{{this.preview_url}}" controls></audio>
-<hr>
-{{/each}}
+<div class="box flex-center flex-column">
+    <div class="tracks-header">
+        <p>Title</p>
+        <p id="listen-margin">Listen</p>
+    </div>
+    {{#each allTracks}}
+    <div class="music-box">
+        <div>
+            <span>{{track_number}} -</span>
+            <span>{{this.name}}</span>
+        </div>
+        <audio src="{{this.preview_url}}" controls></audio>
+    </div>
+    {{/each}}
+</div>

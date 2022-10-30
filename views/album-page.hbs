@@ -1,6 +1,13 @@
-{{#each allAlbums}}
-  <img src="{{this.images.0.url}}" alt="">
-  <p>{{this.name}}</p>
-  <a href="/tracks/{{this.id}}">View tracks</a>
+<div class="flex-center box">
+  {{#each allAlbums}}
+    <div class="flex-center flex-column container">
+      <img src="{{this.images.0.url}}" alt="">
+      <div class="flex-center flex-column names-div">
+        <p class="names">{{this.name}}</p>
+        <a href="/tracks/{{this.id}}" class="btn">View tracks</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
 
-{{/each}}
+

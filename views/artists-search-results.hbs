@@ -1,5 +1,11 @@
-{{#each allArtists}}
-<img src="{{this.images.0.url}}" alt="">
-<p>{{this.name}}</p>
-<a href="/albums/{{this.id}}">link here</a>
-{{/each}}
+<div class="flex-center box">
+    {{#each allArtists}}
+        <div class="flex-center flex-column container">
+            <img src="{{this.images.0.url}}" alt="">
+            <div class="flex-center flex-column names-div">
+              <p class="names">{{this.name}}</p>
+              <a href="/albums/{{this.id}}" class="btn">View Albums</a>
+           </div>
+        </div>
+    {{/each}}
+</div>

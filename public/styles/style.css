@@ -1,0 +1,125 @@
+*{
+    font-size: 10px;
+    margin: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body{
+    background-color: rgb(204, 204, 204);
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.flex-column{
+    display: flex;
+    flex-direction: column;
+}
+
+.home{
+    background-image: url("/images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.home-form{
+    background-color: rgba(255, 255, 255, 0.45);
+    border-radius: 10px; 
+    padding: 6vh 8vw;
+    width: 50vw;
+}
+
+.home-input{
+    width: 70%;
+    height: 3vh;
+    margin-bottom: 1vh;
+    font-size: 1.5rem;
+}
+
+.btn{
+    border: none;
+    padding: 1vh;
+    background-color: rgba(255, 34, 34, 0.9);
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+
+.box{
+    width: 100vw;
+}
+
+.container{
+    margin: 5vh;
+    width: 40vw;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.names-div{
+    width: 100%;
+    background-color: rgb(0, 0, 0);
+}
+
+.names{
+    margin: 1vh;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+a{
+    text-decoration: none;
+    margin: 1vh;
+}
+
+img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.music-box{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(255, 255, 255, 0.4);
+    /* border: 1px solid black; */
+    padding: 1vh;
+    margin-bottom: 1vh;
+    border-radius: 5px;
+}
+
+.tracks-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    width: 70%;
+    background-color: grey;
+    padding: 1vh;
+    border-radius: 5px;
+    /* border: 1px solid black; */
+}
+
+.tracks-header > p{
+    font-size: 2rem;
+    color: white;
+    margin: 2vh;
+}
+
+span{
+    font-size: 1.7rem;
+}
+
+#listen-margin{
+    margin-right: 10vw;
+}
