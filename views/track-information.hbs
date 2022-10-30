@@ -3,8 +3,14 @@
     <h2>Listen</h2>
 </div>
 {{#each tracks}}
-<audio controls>
-    <source src="{{this.href}}" type="audio/mpeg">
-</audio>
-<p>{{this.name}}</p>
+<figure>
+    <figcaption>{{this.name}}</figcaption>
+    <audio
+        controls
+        src="{{this.preview_url}}">
+            <a href="{{this.preview_url}}">
+                Download audio
+            </a>
+    </audio>
+</figure>
 {{/each}}

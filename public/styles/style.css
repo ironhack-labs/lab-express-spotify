@@ -2,12 +2,18 @@ html {
     height: 100%;
     margin: 0;
     padding: 0;
-
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body{
+    
+    margin: 0;
+    padding: 0;
+    
+}
+
 h1 {
-    font-size: 28px;
+    font-size: 18px;
     color: white;
 }
 
@@ -25,10 +31,10 @@ h2 {
 }
 
 form {
-    background: rgba(255, 255, 255, 0.609);
+    background: rgba(255, 255, 255, 0.278);
     width: 60%;
-    height: 300px;
-    margin: 300px auto;
+    height: 200px;
+    margin: 10% auto;
     align-items: center;
     display: flex;
     flex-direction: column;
@@ -49,23 +55,24 @@ form {
     height: 40px;
     width: 20%;
     margin-top: 20px;
-    font-size: 20px;
+    font-size: 15px;
+    cursor: pointer;
+
 }
 
 .view-button {
     background-color: rgb(186, 79, 60);
     border-radius: 5px;
-    border: 2px solid 5px black;
-    font-size: 22px;
+    border: 2px;
     cursor: pointer;
-    padding: 10px 20px;
+    padding: 8px 10px;
     margin-bottom: 10px;
     
 }
 
 .view-button a{
     text-decoration: none;
-    font-size: 20px;
+    font-size: 16px;
     color:white;
 }
 
@@ -82,7 +89,7 @@ form {
     justify-content: center;
     flex-direction: column;
     align-items: center;
-    background-color: rgb(59, 58, 58);
+    background-color: rgba(112, 111, 111, 0.646);
 }
 
 .artist-img {
@@ -102,7 +109,22 @@ form {
     background-color: rgb(59, 58, 58);
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    padding-right: 200px;
+    padding-left: 50px;
 
+
+}
+
+figure {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(204, 200, 200, 0.181);
+    margin: 0px;
+    margin-bottom: 5px;
+    padding-right: 50px;
+    padding-left: 50px;
 }
