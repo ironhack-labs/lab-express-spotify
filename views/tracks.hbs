@@ -1,9 +1,11 @@
-<h2>Tracks</h2>
+<h2 class="titleh2">Tracks</h2>
 <ul>
-    {{#each tracks}} 
+    
+    {{#each tracks}} <div class="tracksdiv">
         <h2>{{this.name}}</h2>
         <audio controls src="{{this.preview_url}}"></audio>
+        </div>
         {{/each}}
-
+    
    
 </ul>
