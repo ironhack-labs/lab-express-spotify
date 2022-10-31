@@ -1,0 +1,8 @@
+body, html {
+    height: 100%;
+  }
+
+.home-container{
+    background-image: url('/images/spotify-background.jpeg');
+    height: 380px;
+}
