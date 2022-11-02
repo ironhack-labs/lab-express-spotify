@@ -1,0 +1,8 @@
+{{#each items}}
+<div class="tracks">
+<p>{{this.name}}</p>
+<audio controls>
+    <source src="{{this.preview_url}}" type="audio/mp3">
+</audio>
+</div>
+{{/each}}
