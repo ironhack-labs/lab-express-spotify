@@ -1,0 +1,29 @@
+<table id="tracks-container">
+    <thead>
+        <tr>
+            <td>Title</td>
+            <td>Listen</td>
+            <td></td>
+        </tr>
+    </thead>
+    <tbody>
+    
+        {{#each trackArray}}
+        <tr>
+            <td>
+                <h5>{{this.name}}</h4>
+            </td>
+            <td>
+                <a href="{{this.external_urls.spotify}}"><button>View tracks</button></a>
+            </td>
+            {{#if preview_url}}
+            <td>
+                <audio src="{{this.preview_url}}" controls></audio>"
+            </td>
+            {{/if}}
+        </tr>
+    {{/each}}
+
+    </tbody>
+    
+</table>  

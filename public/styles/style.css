@@ -40,7 +40,7 @@ h4{
     text-align: center;
     color: white;
     font-weight: bold;
-    font-size: 0.9rem;
+    font-size: 1.25rem;
 }
 
 button{
@@ -60,4 +60,57 @@ button{
     align-items: center;
     background-color: gray;
     width: 100%;
+}
+
+.album-card{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: end;
+    width:350px;
+    height:400px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-bottom: 25px;
+    border: 1px black solid;
+}
+
+#albums-container{
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 50px;
+}
+
+
+.track-card{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
+    background-position: center;
+    align-items: center;
+    justify-content: end;
+    width:350px;
+    height:400px;
+    margin-right: 35px;
+    margin-left: 35px;
+    margin-bottom: 25px;
+    border: 1px black solid;
+}
+
+#tracks-container{
+    margin: 0 auto;
+    margin-top: 50px;
+    padding-left: 50px;
+    padding-top: 35px;
+    padding-bottom  : 35px;
+    width:950px;
+    border: 1px green solid;
+}
+
+h5{
+    text-align: left;
+    font-size: 1.2rem;
+    background-color: lightgray;
 }

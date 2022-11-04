@@ -4,8 +4,8 @@
     {{#each searchResults}}
         <div style="background-image:url({{this.images.[1].url}});background-repeat:no-repeat;" class="artist-card">
             <div class="gray-background">
-                <h4>Artist Name: {{this.name}}</h4>
-                <button>View Albums</button>
+                <h4>{{this.name}}</h4>
+                <a href='/albums/{{this.id}}'><button>View Albums</button></a>
             </div>
         </div>
     {{/each}}
