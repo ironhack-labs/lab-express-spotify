@@ -1,0 +1,13 @@
+<h1>Hellow Results page</h1>
+
+<div id="main-artists-container">
+    {{#each searchResults}}
+        <div style="background-image:url({{this.images.[1].url}});background-repeat:no-repeat;" class="artist-card">
+            <div class="gray-background">
+                <h4>Artist Name: {{this.name}}</h4>
+                <button>View Albums</button>
+            </div>
+        </div>
+    {{/each}}
+
+</div>
