@@ -4,8 +4,6 @@ const express = require('express');
 const hbs = require('hbs');
 const bodyParser = require('body-parser')
 
-
-
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 const app = express();
@@ -36,7 +34,6 @@ app.get('/', (req,res)=>{
 })
 let searchTerm;
 let searchResults;
-let imageToUse;
 
 app.get('/artist-search', (req,res)=>{
     searchTerm = req.query
@@ -48,11 +45,7 @@ app.get('/artist-search', (req,res)=>{
     
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
-  .then (()=>res.render('artist-search-results', {searchResults, imageToUse}))
-  //.then ((data)=> {
-  //  console.log(data)
-  //  res.render('artist-search-results', data)
-  //})
+  .then (()=>res.render('artist-search-results', {searchResults}))
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
@@ -70,13 +63,14 @@ app.get('/albums/:id', (req,res)=>{
 })
 
 let albumID;
+let trackArray;
 
 app.get('/tracks/:id', (req,res)=>{
     albumID = req.params.id
     spotifyApi.getAlbumTracks(albumID)
     .then((data)=>{
         trackArray = data.body.items
-        console.log(trackArray[1])
+        console.log(trackArray[1].artists.external_urls)
         res.render('track-information', {trackArray})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));

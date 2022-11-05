@@ -9,8 +9,10 @@
     display:flex;
     margin: 0 auto;
     flex-direction: row;
+    justify-content: center;
     flex-wrap: wrap;
-    width:90%;
+    width:85%;
+    margin-top: 35px;
 }
 
 .artist-card{
@@ -78,7 +80,10 @@ button{
 }
 
 #albums-container{
+    margin: 0 auto;
     display: flex;
+    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
     margin-top: 50px;
 }
@@ -103,6 +108,7 @@ button{
     margin: 0 auto;
     margin-top: 50px;
     padding-left: 50px;
+    padding-right: 50px;
     padding-top: 35px;
     padding-bottom  : 35px;
     width:950px;
@@ -113,4 +119,177 @@ h5{
     text-align: left;
     font-size: 1.2rem;
     background-color: lightgray;
+}
+
+.homelink{
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    background-color: green;
+    color:white;
+    text-decoration: none;
+    border-radius: 25px;
+    border:2px gold solid;
+    font-weight: bold;
+}
+
+.homelink:hover{
+    background-color: lightgreen;
+    color:black;
+    border:2px black solid;
+}
+
+nav{
+    margin-top: 25px;
+    margin-bottom: 35px;
+    padding-top: 15px;
+    position: fixed;
+    margin-left: 10px;
+    margin-right: 25px;
+}
+
+.artist-search{
+    cursor: pointer;
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    background-color: lightgreen;
+    border:2px gold solid;
+    outline: 1px green solid;
+    font-weight: bold;
+    font-size: 18px;
+
+}
+
+.artist-search:hover{
+    background-color: gold;
+    border: 2px green solid;
+}
+
+#input-field{
+    padding-top: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    width:450px;
+    font-size: 16px;
+    border-radius: 10px;
+    border:1px black solid;
+}
+
+#h2-artists{
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#h2-albums{
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+#h2-tracks{
+    padding-top: 20px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 10px;
+}
+
+
+form{
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(200,200,200,0.5);
+    border-bottom:2px black solid;
+    border-left:2px black solid;
+    border-right:2px black solid;
+    width:60%;
+    height: 200px;
+}
+
+#background-image{
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position: bottom;
+    width: 100%;
+    height:1000px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.limit{
+    padding-left: 15px;
+    padding-right:15px;
+    width:150px;
+}
+
+.bigger-font{
+    font-size: 22px;
+}
+
+
+
+.audio{
+    padding-right: 25px;
+    width: 250px;
+}
+
+.background-color{
+    padding-left: 15px;
+    background-color: lightgray;
+}
+
+a:hover{
+    cursor: pointer;
+}
+
+.title{
+    padding-left: 15px;
+}
+
+button:hover{
+    cursor: pointer;
+}
+
+#h2-index{
+    font-size: 25px;
+    text-align: center;
+    padding-top: 15px;
+    background-color: rgba(200,200,200,0.5);
+    width: 60%;
+    border-top:2px black solid;
+    border-left:2px black solid;
+    border-right:2px black solid;
+}
+
+button{
+    margin-top: 5px;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    border-radius: 25px;
+    background-color: lightgreen;
+    border:2px gold solid;
+    outline: 1px green solid;
+    font-weight: bold;
+    font-size: 15px;
+    margin-top: 15px;
+}
+
+button:hover{
+    background-color: gold;
+    border: 2px green solid;
 }

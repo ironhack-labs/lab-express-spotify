@@ -1,8 +1,11 @@
+<h2 id="h2-albums">Choose an Album to display Its Tracks</h2>
 <div id="albums-container">
     {{#each albumArray}}
     <div style="background-image:url({{this.images.[1].url}});background-repeat:no-repeat;" class="album-card">  
+        <div class="gray-background">
     <h4>{{this.name}}</h4>
-    <a href="/tracks/{{this.id}}"View tracks</a>
+    <a href="/tracks/{{this.id}}"><button>View tracks</button></a>
+    </div>
     </div>
     {{/each}}
 </div>  

@@ -1,24 +1,28 @@
+<h2 id="h2-tracks">Listen to a track preview or Visit its Spotify page</h2>
+
 <table id="tracks-container">
     <thead>
         <tr>
-            <td>Title</td>
-            <td>Listen</td>
+            <td class="bigger-font title">Title</td>
+            <td class="bigger-font" style="padding-left: 15px;">Listen</td>
+            {{#if preview_url}}
             <td></td>
+            {{/if}}
         </tr>
     </thead>
     <tbody>
     
         {{#each trackArray}}
         <tr>
-            <td>
+            <td class="background-color">
                 <h5>{{this.name}}</h4>
             </td>
-            <td>
-                <a href="{{this.external_urls.spotify}}"><button>View tracks</button></a>
+            <td class="limit">
+                <a href="{{this.external_urls.spotify}}"><button>Open on Spotify</button></a>
             </td>
             {{#if preview_url}}
-            <td>
-                <audio src="{{this.preview_url}}" controls></audio>"
+            <td class="audio">
+                <audio src="{{this.preview_url}}" controls></audio>
             </td>
             {{/if}}
         </tr>
