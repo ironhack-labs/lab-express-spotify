@@ -70,7 +70,6 @@ app.get('/tracks/:id', (req,res)=>{
     spotifyApi.getAlbumTracks(albumID)
     .then((data)=>{
         trackArray = data.body.items
-        console.log(trackArray[1].artists.external_urls)
         res.render('track-information', {trackArray})
     })
     .catch(err => console.log('The error while searching artists occurred: ', err));
