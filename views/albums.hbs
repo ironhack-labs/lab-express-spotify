@@ -1,8 +1,8 @@
 <div id="albums-container">
     {{#each albumArray}}
     <div style="background-image:url({{this.images.[1].url}});background-repeat:no-repeat;" class="album-card">  
-    <h4>Albums Name:: {{this.name}}</h4>
-    <a href="/tracks/{{this.id}}"<button>View tracks</button></a>
+    <h4>{{this.name}}</h4>
+    <a href="/tracks/{{this.id}}"View tracks</a>
     </div>
     {{/each}}
 </div>  
