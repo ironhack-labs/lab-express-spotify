@@ -2,8 +2,7 @@
   <h1>Search Results</h1>
   {{#each artist}}
     <div><img src="{{images.0.url}}" alt="" width="200" /></div>
-
     <div class="artistName">{{this.name}}</div>
-    <a href="">View Album</a>
+    <a href="/albums/{{this.id}}">View Album</a>
   {{/each}}
 </div>
