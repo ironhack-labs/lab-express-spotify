@@ -13,6 +13,9 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
+//Registering the partials
+hbs.registerPartials(__dirname + "/views/partials");
+
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
@@ -27,7 +30,12 @@ spotifyApi
 // Our routes go here:
 
 app.get("/", (req, res) => {
-  res.render("home");
+  spotifyApi
+    .getAvailableGenreSeeds()
+    .then((data) => {
+      res.render("home", { genres: data.body.genres });
+    })
+    .catch((err) => console.log("The error while listing genres: ", err));
 });
 
 app.get("/artist-search", (req, res) => {
@@ -51,7 +59,6 @@ app.get("/albums/:artistId", (req, res) => {
   spotifyApi
     .getArtistAlbums(artistId)
     .then((data) => {
-      console.log(data.body.items.id);
       res.render("albums", { albums: data.body.items });
     })
     .catch((err) =>

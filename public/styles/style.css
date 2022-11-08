@@ -1,0 +1,123 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;700&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+  color: white;
+}
+
+body {
+  background-color: black;
+}
+
+.main-container {
+  background-image: radial-gradient(
+      circle,
+      rgba(63, 94, 251, 0.3) 0%,
+      rgba(252, 70, 107, 0.5) 100%
+    ),
+    url("/images/cutombg.jpg");
+  height: 400px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container input {
+  height: 40px;
+  border-radius: 32px;
+  width: 320px;
+  border-style: none;
+  padding-left: 16px;
+  color: black;
+}
+.search-container input::placeholder {
+  font-size: 14px;
+}
+.search-container button {
+  height: 40px;
+  border-radius: 32px;
+  background-color: rgb(30, 215, 96);
+  width: 120px;
+  border-style: none;
+  color: white;
+  font-size: 14px;
+}
+
+.search {
+  width: 700px;
+
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+.search h1 {
+  font-weight: 200;
+  font-size: 24px;
+  margin-bottom: 32px;
+}
+
+.row {
+  display: flex;
+}
+.column {
+  display: flex;
+  flex-direction: column;
+}
+.genres,
+.albums {
+  margin-top: 32px;
+  display: flex;
+  width: 960px;
+  flex-wrap: wrap;
+}
+.track,
+.genre {
+  border: 1px solid white;
+  font-size: 14px;
+  padding: 8px 8px 8px 8px;
+  border-radius: 32px;
+  margin: 8px 8px 8px 8px;
+  max-width: 600px;
+  min-width: 160px;
+  text-align: center;
+}
+.section-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.album {
+  margin: 8px;
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+.album img {
+  display: block;
+  border-radius: 16px;
+  width: 200px;
+  height: 200px;
+}
+
+.album a {
+  margin-top: 16px;
+  height: 24px;
+  border-radius: 32px;
+  background-color: rgb(30, 215, 96);
+  width: 100%;
+  color: white;
+  font-size: 12px;
+  text-align: center;
+  padding-top: 4px;
+  text-decoration: none;
+}
