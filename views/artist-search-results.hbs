@@ -1,0 +1,8 @@
+<h1>test artist search</h1>
+
+
+{{#each artist}}
+<p>{{name}}</p>
+<img src="{{images.[1].url}}" alt="">
+<a class="btn btn-primary" href="/albums/{{id}}" role="button">View albums</a>
+{{/each}}
