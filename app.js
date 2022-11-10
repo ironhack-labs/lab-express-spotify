@@ -32,7 +32,7 @@ const spotifyApi = new SpotifyWebApi({
 //To homepage
 app.get("/", (req, res, next) => res.render("index"));
 
-//To artist search
+//To artist page
 app.get("/artist-search", (req, res) => {
   const { artistName } = req.query;
 
@@ -46,13 +46,27 @@ app.get("/artist-search", (req, res) => {
     );
 });
 
- //To albums search
+ //To albums page
 app.get('/albums/:id', (req, res) => {
   const { id } = req.params;
   spotifyApi
   .getArtistAlbums(id)
   .then((data) => {
     res.render("albums",  data.body );
+  })
+  .catch((err) =>
+    console.log("The error while searching artists occurred: ", err)
+  );
+});
+
+//To track page
+
+app.get('/tracks/:id', (req, res) => {
+  const { id } = req.params;
+  spotifyApi
+  .getAlbumTracks(id)
+  .then((data) => {
+    res.render("tracks",  data.body );
     console.log(data.body)
   })
   .catch((err) =>
