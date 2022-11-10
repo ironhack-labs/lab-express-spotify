@@ -46,13 +46,13 @@ app.get("/artist-search", (req, res) => {
 
 app.get("/albums/:id", (req, res) => {
 	const { id } = req.params;
-	console.log(`El ID es este ${id}`);
-	//console.log(req.params);
+	// console.log(`El ID es este ${id}`);
+	// console.log(req.params);
 
 	spotifyApi
 		.getArtistAlbums(id)
 		.then((albums) => {
-			//console.log("The received albums from this artist: ", albums.body);
+			// console.log("The received albums from this artist: ", albums.body);
 			res.render("albums", { album: albums.body.items });
 		})
 		.catch((err) => console.log("The error while searching artists occurred: ", err));
@@ -60,7 +60,7 @@ app.get("/albums/:id", (req, res) => {
 
 app.get("/albums/tracks/:id", (req, res) => {
 	const { id } = req.params;
-	//console.log(`El ID es este ${id}`);
+	// console.log(`El ID es este ${id}`);
 
 	spotifyApi
 		.getAlbumTracks(id)
