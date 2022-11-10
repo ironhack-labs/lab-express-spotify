@@ -64,7 +64,7 @@ app.get('/tracks/:albumId', (req, res, next) => {
         .getAlbumTracks(albumsId)
         .then(albumsDb => {
             console.log(albumsDb)
-            res.render('tracks', { albums: albumsId.body.items })
+            res.render('tracks', { tracks: albumsDb.body.items })
         })
         .catch(err => console.log(err))
 
