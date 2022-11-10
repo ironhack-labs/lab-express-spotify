@@ -61,7 +61,7 @@ form {
 .artist-card {
 	padding: 10px;
 	max-width: 200px;
-	min-height: 310px;
+	min-height: 350px;
 	align-self: flex-start;
 	background-color: rgb(67, 67, 67);
 	color: white;
