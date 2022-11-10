@@ -1,0 +1,44 @@
+#artist-search{
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-items: center;
+ margin-top: 50vh
+}
+
+#artist-list{
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+}
+
+#albums-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#track-list{
+    padding-left: 100px
+}
+
+#index{
+    background-image: url("../images/spotify-background.jpeg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#artists{
+    background-color: bisque;
+}
+
+#albums{
+    background-color: bisque;
+}
+
+#tracks{
+    background-color: lightseagreen;
+}
