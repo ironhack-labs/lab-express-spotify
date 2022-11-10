@@ -1,0 +1,117 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    margin-top: 40px;
+    margin-bottom: 40px;
+}
+
+.index-container {
+    background: url('/images/spotify-background.jpeg') no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.button-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100%;
+
+}
+
+.search-artist-form {
+    padding: 100px;
+    background-color: rgba(255, 255, 255, 0.3);
+    display: grid;
+}
+
+.search-artist-form button {
+    background-color: #ef6866;
+    color: white;
+    border: 0;
+    padding: 5px;
+}
+
+.col-4 {
+    margin-bottom: 20px;
+}
+
+.track-title-container {
+    margin-bottom: 20px;
+}
+
+.tracks-colum-title {
+    padding: 20px;
+    background-color: #4a4a4a;
+    color: #c3c3c1;
+    margin-bottom: 20px;
+}
+
+.tracks-colum-listen {
+    text-align: right;
+    padding: 20px;
+    background-color: #4a4a4a;
+    color: #c3c3c1;
+    margin-bottom: 20px;
+}
+
+.tracks-colum-listen h3 {
+    padding-right: 100px;
+}
+
+.tracks-colum {
+    text-align: right;
+}
+
+.artist-search-container {
+    background: url(../images/spotify-background.jpeg) center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: 100vh;
+}
+
+.artist-image-container {
+    height: 280px;
+    overflow: hidden;
+}
+
+.artist-text-container {
+    background-color: #4d4d4d;
+    padding: 10px;
+    text-align: center;
+    color: white;
+    height: 100px;
+}
+
+.artist-text-container h5 {
+    font-size: 18px;
+}
+
+.artist-text-container a {
+    color: white;
+    text-decoration: none;
+    padding: 5px;
+    background-color: #ef6866;
+    border-radius: 6px;
+}
+
+.artist-text-container a:active,
+.artist-text-container a:hover {
+    color: white;
+    text-decoration: none;
+}
+
+.artist-image {
+    width: 100%;
+}
+
+.albums-title {
+    text-align: center;
+    margin-bottom: 20px;
+}

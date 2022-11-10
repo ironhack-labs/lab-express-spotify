@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="tracks-colum-title col-6">
+            <h3>Title</h3>
+        </div>
+        <div class="tracks-colum-listen col-6">
+            <h3>Listen</h3>
+        </div>
+        {{#each items}}
+        <div class="col-6">
+            <p>{{name}}</p>
+        </div>
+        <figure class="tracks-colum col-6">
+            <audio controls src="{{preview_url}}">
+                <a href="{{preview_url}}">
+                    Download audio
+                </a>
+            </audio>
+        </figure>
+        {{/each}}
+    </div>
+</div>
