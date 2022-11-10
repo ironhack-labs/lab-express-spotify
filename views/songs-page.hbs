@@ -1,0 +1,24 @@
+<div class="container mt-5">
+    <hr>
+    <div class="row">
+        <h1>Tracks</h1>
+        <br>
+        {{#each tracks}}
+        <div class="col-md-4 mb-3 ">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title mt-2">{{name}} </h5>
+                    <p class="card-title mt-2"><audio controls src="{{preview_url}} "></audio></p>
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        {{/each}}
+
+
+        <a href="/" class="btn btn-primary">Inicio</a>
+    </div>

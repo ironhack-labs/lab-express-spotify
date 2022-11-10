@@ -1,0 +1,22 @@
+<div class="container mt-5">
+    <hr>
+    <div class="row">
+        <h1>Search Results</h1>
+        <br>
+        {{#each groups}}
+        <div class="col-md-4 mb-3 ">
+            <div class="card">
+                <img src={{images.0.url}} class="card-img-top mt-5">
+                <div class="card-body">
+                    <h5 class="card-title mt-2">{{name}} </h5>
+                    <a href="/album-page/{{id}}" class="btn btn-primary">View Albums</a>
+                </div>
+            </div>
+        </div>
+
+
+        {{/each}}
+
+
+        <a href="/" class="btn btn-primary">Inicio</a>
+    </div>
