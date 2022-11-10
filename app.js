@@ -65,7 +65,7 @@ app.get("/albums/tracks/:id", (req, res) => {
 	spotifyApi
 		.getAlbumTracks(id)
 		.then((tracks) => {
-			console.log("The received albums from this artist: ", tracks.body);
+			// console.log("The received albums from this artist: ", tracks.body);
 			res.render("tracks", { track: tracks.body.items });
 		})
 		.catch((err) => console.log("The error while searching artists occurred: ", err));
