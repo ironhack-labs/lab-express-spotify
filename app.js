@@ -58,10 +58,10 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 app.get('/tracks/:albumId', (req, res, next) => {
 
-    const { albumsId } = req.params
+    const { albumId } = req.params
     spotifyApi
 
-        .getAlbumTracks(albumsId)
+        .getAlbumTracks(albumId)
         .then(albumsDb => {
             console.log(albumsDb)
             res.render('tracks', { tracks: albumsDb.body.items })
