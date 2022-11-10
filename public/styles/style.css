@@ -1,0 +1,15 @@
+body {
+    background-image: url("../images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-size: cover;
+
+}
+
+.texto {
+    margin: 300px;
+    text-align: center;
+}
+
+.title {
+    color: white
+}

@@ -1,0 +1,17 @@
+<div class="container d-flex justify-content-center align-items mt-5 mb-5">
+    <h1 class="title">Escucha su música</h1>
+</div>
+
+<div class="container">
+    <div class="row">
+        {{#each albums}}
+        <div class="col-md-4 mb-3">
+            <div class="card card-body">
+                <img src="{{images.0.url}}" class="card-img-top" alt="{{artistId}}">
+                <h5 class="card-title">{{name}}</h5>
+                <a href="/albums/:artistId" class="btn btn-primary">Listen Songs</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
