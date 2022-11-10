@@ -1,10 +1,7 @@
-<div class="section-container">
   {{#each artist}}
   
       <h1>{{this.name}}</h1>
       <img src='{{images.0.url}}' alt='artist' />
       <br>
-      <br>
-      <button type="button" href="/albums/{{this.id}}"> View Album</button>
-      
+      <button type="button" onclick="location.href='/albums/{{this.id}}'"> View Album</button>
   {{/each}}
