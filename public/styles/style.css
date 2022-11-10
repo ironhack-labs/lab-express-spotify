@@ -1,0 +1,117 @@
+body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-family: sans-serif;
+}
+
+img {
+	width: 200px;
+}
+
+.index {
+	height: 100%;
+	width: 100%;
+	background-image: url("https://media.istockphoto.com/id/1189205501/es/foto/portonando-a-la-multitud-de-personas-no-reconocidas-en-un-concierto-de-m%C3%BAsica-rock-multitud-de.jpg?s=170667a&w=0&k=20&c=YNmDMf6BmT_xhgNFzkE_KlCGqMpDzJmrDxDk88_xw1Y=");
+	background-size: cover;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+form {
+	padding: 50px;
+	background-color: rgba(255, 255, 255, 0.532);
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.input-text {
+	min-width: 300px;
+	border: none;
+	padding: 10px;
+	border-radius: 4px;
+	border: 1px solid rgb(177, 177, 177);
+}
+
+.input-btn {
+	width: max-content;
+	background-color: rgb(255, 111, 111);
+	color: white;
+	border: none;
+	padding: 10px 20px;
+	border-radius: 4px;
+	margin-inline: auto;
+}
+
+.artists,
+.albums {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-wrap: wrap;
+	gap: 20px;
+	padding: 40px 20px;
+	text-align: center;
+}
+
+.album-card,
+.artist-card {
+	padding: 10px;
+	max-width: 200px;
+	min-height: 310px;
+	align-self: flex-start;
+	background-color: rgb(67, 67, 67);
+	color: white;
+	border-radius: 4px;
+}
+
+.albums img,
+.artists img {
+	object-fit: cover;
+	width: 200px;
+	height: 200px;
+}
+
+.albums a,
+.artists a {
+	align-self: flex-end;
+	background-color: rgb(255, 111, 111);
+	color: white;
+	text-decoration: none;
+	padding: 10px 10px;
+	border-radius: 4px;
+	display: block;
+	margin-top: 10px;
+	width: max-content;
+	margin-inline: auto;
+}
+
+h2 {
+	position: relative;
+	top: 0;
+	margin-inline: auto;
+	text-align: center;
+	margin-top: 30px;
+}
+
+.tracks {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	padding: 30px;
+}
+
+.track {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgb(224, 224, 224);
+	padding: 10px 20px;
+}
+
+audio::-webkit-media-controls-panel {
+	background-color: rgb(224, 224, 224);
+}
