@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.background {
+    background: url('/images/spotify-background.jpeg'), no-repeat;
+    background-size: cover;
+}
+
+.contain {
+    display: flex;
+    height: 100vh;
+    width: 100vw;
+    align-items: center;
+    justify-content: center;
+}
+
+div a {
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+}
+
+.artist-name {
+    color: blueviolet;
+    text-align: center;
+}
+
+.albums-name {
+    color: green;
+    font-weight: bold;
+}
