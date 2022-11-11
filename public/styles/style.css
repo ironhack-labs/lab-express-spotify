@@ -81,3 +81,15 @@
     background-color: rgb(221, 145, 5);
     padding: 40px;
 }
+
+
+/* .tracklist {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+} */
+
+.trackBody {
+    background-color: rgb(221, 145, 5);
+}
