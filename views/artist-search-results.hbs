@@ -1,0 +1,11 @@
+  <body id="artists-page">
+  <div id="artists-list">
+    {{#each artist}}
+    <div>
+        <img src="{{this.images.0.url}}" height="450px"  width="450px" alt="albumImg" />
+           <div id="artist-name">{{this.name}}</div>
+        <a id="view-button" href="/albums/{{this.id}}">View Album</a>
+    </div>
+    {{/each}}
+  </div>
+</body>
