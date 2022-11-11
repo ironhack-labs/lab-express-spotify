@@ -1,0 +1,83 @@
+.spotifyimg {
+    background-image: url(/public/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: rgb(139, 78, 42);
+}
+
+.enterArtist {
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+}
+
+.enterArtistBox {
+    width: 300px;
+    padding: 5px;
+    border-radius: 2px;
+    border-color: lightgrey;
+}
+
+.searchButton {
+    display: flex;
+    justify-content: center;
+    padding-top: 10px;
+    padding-bottom: 40px;
+}
+
+.searchButtonColor {
+    background-color: red;
+    color: white;
+    border-color: red;
+    padding: 5px;
+    border-radius: 2px;
+}
+
+.whitebackground {
+    background-color: white;
+    margin-left: 740px;
+    margin-right: 740px;
+    width: auto;
+    padding: 10px;
+    margin-top: 400px;
+}
+
+.artistsTab {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+.albumBar {
+    background-color: rgb(63, 63, 63);
+    margin: auto;
+}
+
+.artistname {
+    color: white;
+    margin: auto;
+    padding: 7px;
+    text-align: center;
+}
+
+.viewAlbumLink {
+    background-color: red;
+    text-decoration: none;
+    color: white;
+    padding: 5px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    margin-left: 80px;
+    margin-right: 80px;
+    text-align: center;
+}
+
+.artistimg {
+    width: 300px;
+}
+
+.pageColor {
+    background-color: rgb(221, 145, 5);
+    padding: 40px;
+}

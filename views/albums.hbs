@@ -1,9 +1,11 @@
-<div>
+<body class="pageColor">
+    <div class="artistsTab">
      {{#each albums}}
-    <div>
-        <img src="{{images.0.url}}" height="100px" alt="albumImg" />
-        <div>{{name}}</div>
-        <a href="/tracks/{{this.id}}">View Tracks</a>
+    <div class="albumBar">
+        <img class="artistimg" src="{{images.0.url}}"  alt="albumImg" />
+        <div class="artistname" >{{name}}</div>
+        <a class="viewAlbumLink" href="/tracks/{{this.id}}">View Tracks</a>
     </div>
      {{/each}}
 </div>
+</body>
