@@ -1,0 +1,14 @@
+
+    {{#each artists}}
+    <div class="artist">
+
+  
+    {{#if images.0.url}}
+    <img class="image-artist" src="{{images.0.url}}" alt="">
+    {{else}}
+    <img class="image-artist" src="https://www.macmillandictionary.com/external/slideshow/full/emoji_thumbs-down_full.jpg" alt="cool picture goes here">
+    {{/if}}
+    <h3>{{name}}</h3>
+    <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
