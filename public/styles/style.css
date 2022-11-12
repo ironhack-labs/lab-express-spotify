@@ -1,0 +1,141 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+html {
+  height: 100vh;
+
+  --btn-red: rgb(250, 104, 99);
+  --btn-red-hover: rgba(250, 104, 99, 0.699);
+}
+
+body {
+  background: url("../images/spotify-background.jpeg") no-repeat center center
+    fixed;
+  background-size: cover;
+  color: #000;
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+main {
+  width: 80vw;
+  margin: auto;
+}
+
+.center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-wrap: wrap;
+}
+
+.search-area {
+  background-color: rgba(255, 255, 255, 0.438);
+  width: 320px;
+  height: 150px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-top: 25%;
+}
+
+.search-area input {
+  appearance: none;
+  outline: none;
+  display: block;
+  margin: auto;
+  width: 10rem;
+  height: 1.2rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+}
+
+.search-area input:focus {
+  border: 2px solid var(--btn-red);
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.search-area button {
+  appearance: none;
+  margin-top: 1rem;
+  border: none;
+  border-radius: 5px;
+  padding: 0.4rem 1.4rem;
+  background-color: var(--btn-red);
+  color: #fff;
+  transition: background-color 0.15s;
+  font-weight: 600;
+}
+
+.search-area button:hover,
+.card-btn:hover {
+  background-color: var(--btn-red-hover);
+}
+
+.card {
+  flex: 1 0 25%;
+  text-align: center;
+  align-items: center;
+  background-color: #fff;
+  margin: 0.5rem;
+  border-radius: 5px;
+  width: 100%;
+  min-width: 250px;
+  max-width: 300px;
+}
+
+.card-image img {
+  width: 100%;
+  border-radius: 5px 5px 0 0;
+  object-fit: fill;
+}
+
+.card-bottom {
+  width: 95%;
+  margin: auto;
+  padding: 0.2rem;
+}
+
+.card-bottom h3 {
+  font-size: 1.1rem;
+}
+
+.card-bottom ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  width: 98%;
+  padding: 0;
+  margin: 0;
+}
+
+.card-bottom li {
+  background-color: rgba(166, 191, 216, 0.856);
+  font-size: 0.8rem;
+  border-radius: 5px;
+  margin: 0.2rem;
+  padding: 0.2rem;
+}
+
+.card-genres {
+  margin: 1rem auto;
+}
+
+.card-btn-container {
+}
+
+.card-btn {
+  display: inline-block;
+  width: 100%;
+  padding: 1.2rem 0;
+  text-decoration: none;
+  border-radius: 0 0 5px 5px;
+  background-color: var(--btn-red);
+  transition: background-color 0.15s;
+  color: #fff;
+}
