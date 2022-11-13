@@ -1,0 +1,22 @@
+<div>
+{{#if artists}}
+
+{{#each artists}}
+<div> 
+    <img src="{{images.[0].url}}">
+
+    <div>
+
+    <h3>{{name}}</h3> 
+
+    <a href="/albums/{{id}}">View Albums</a>
+
+    </div>
+</div>  
+{{/each}}
+
+{{else}}
+<h5>No Music for you man</h5>
+{{/if}}
+
+</div>
