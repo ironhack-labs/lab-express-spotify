@@ -32,7 +32,6 @@ app.use(express.static(__dirname + '/public'));
 
 // Our routes go here:
 app.get('/', (req, res) => {
-    console.log('working')
     res.render('index')
 });
 
@@ -42,7 +41,7 @@ app.get('/artist-search', (req, res) => {
         .searchArtists(search)
         .then(data => {
             console.log('The received data from the API: ', data.body.artists.items);
-            res.render("artist-search-results", {search: data.body.artists.items})
+            res.render("artist-search-results", { search: data.body.artists.items })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
@@ -50,24 +49,33 @@ app.get('/artist-search', (req, res) => {
 app.get('/albums/:artistId', (req, res, next) => {
     let albumId = req.params.artistId
     spotifyApi
-    .getArtistAlbums(albumId) 
-    .then(
-      function(data) {
-        console.log('Album information', data.body.items);
-        res.render('albums', {albumId: data.body.items})
-      },
-      function(err) {
-        console.error(err);
-      }
-    );
+        .getArtistAlbums(albumId)
+        .then(data => {
+            console.log('Album information', data.body.items);
+            res.render('albums', { albumId: data.body.items })
+        },
+            function (err) {
+                console.error(err);
+            }
+        );
 }, function (err) {
     console.error(err);
 });
 
-
-
-
-
+app.get('/albums/:tracksId', (req, res, next) => {
+    let tracks = req.params.tracksId //{limit: 5, offset: 1})
+    console.log(data.body);
+    spotifyApi
+        .getAlbumTracks(tracks)
+        .then((data) => {
+            console.log("working")
+            res.render('tracks', { tracksId: data.body.items })
+        }, function (err) {
+            console.log('Something went wrong!', err);
+        })
+}, function (err) {
+    console.error(err);
+});
 
 
 
