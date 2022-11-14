@@ -27,6 +27,8 @@ spotifyApi
     console.log("Error retrieving Spotify access token", error)
   );
 
+let found;
+
 app.get("/", (req, res) => {
   res.render("index");
 });
@@ -38,9 +40,11 @@ app.get("/artist-search", (req, res) => {
     .searchArtists(artist)
     .then((data) => {
       const artists = data.body.artists.items;
+      found = artist;
 
       res.render("artist-search-results", {
         artists,
+        query: found,
       });
     })
     .catch((error) => console.error("Error by searching artist", error));
@@ -56,6 +60,7 @@ app.get("/albums/:artistId", (req, res) => {
 
       res.render("albums", {
         albums,
+        query: found,
       });
     })
     .catch((error) =>
@@ -71,10 +76,9 @@ app.get("/album/:albumId", (req, res) => {
     .then((data) => {
       const tracks = data.body.items;
 
-      console.log(JSON.stringify(data, null, 2));
-
       res.render("tracks", {
         tracks,
+        query: found,
       });
     })
     .catch((error) =>

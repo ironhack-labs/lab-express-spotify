@@ -1,12 +1,16 @@
 <div class="center">
   <div class="tracks-container">
-    <div class="tracklist">
+    <div class="tracklist-background tracklist-constraints">
     {{#tracks}}
       <div class="track">
-        {{track_number}}
-        -
-        {{name}}
-        <audio controls src="{{preview_url}}"></audio>
+        <span class="track-number">{{track_number}}</span>
+        
+        <span class="track-name">{{name}}</span>
+        {{#if preview_url}}
+          <audio controls src="{{preview_url}}"></audio>
+        {{else}}
+          <span class="no-preview">😿</span>
+        {{/if}}
       </div>
     {{/tracks}}
   </div>

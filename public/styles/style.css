@@ -6,6 +6,7 @@ html {
   --btn-red: rgb(250, 104, 99);
   --btn-red-hover: rgba(250, 104, 99, 0.699);
   --transparent-bluegray: rgba(255, 255, 255, 0.438);
+  :rgba(68, 68, 68, 0.158) ;
 }
 
 body {
@@ -28,33 +29,87 @@ ul {
   list-style: none;
 }
 
+nav ul li {
+  display: inline;
+  padding: 0;
+}
+
+nav li a:hover {
+  color: var(--btn-red);
+}
+
+.query {
+  align-items: center;
+  justify-content: baseline;
+}
+
+.logo {
+  color: #1DB954;
+  font-weight: 600;
+  font-size: 1.2rem;
+}
+
+.header-container {
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: linear-gradient(#100c0b, #14120d);
+  text-align: center;
+
+  color: #fff;
+}
+
+.back-btn {
+  margin-top: 100px;
+}
+
+.header-nav a {
+  color: #fff;
+  font-weight: 400;
+  text-decoration: none;
+}
+
+.header-text {
+  font-size: 2rem;
+  color: #ffeb40;
+}
+
 .center {
   display: flex;
   justify-content: center;
   align-items: center;
   text-align: center;
   flex-wrap: wrap;
+  margin-top: 9vh;
 }
 
 .search-area {
-  background-color: var(--transparent-bluegray);
-  width: 320px;
-  height: 150px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
-  margin-top: 25%;
+  margin-top: 18%;
+  background-color: var(--transparent-bluegray);
+  border-radius: 5px;
+  min-width: 320px;
+  width: 600px;
+  height: 200px;
 }
 
 .search-area input {
   appearance: none;
   outline: none;
   display: block;
-  margin: auto;
-  width: 10rem;
-  height: 1.5rem;
+  margin: 2rem auto;
+  font-size: 1.8rem;
+  text-align: center;
+  width: 420px;
+  height: 2.4rem;
   border: 1px solid #fff;
   border-radius: 5px;
   transition: padding-left, padding-right 0.15s;
@@ -68,14 +123,15 @@ ul {
 
 .search-area button {
   appearance: none;
-  margin-top: 1rem;
   border: none;
   border-radius: 5px;
-  padding: 0.4rem 1.4rem;
+  padding: 0.6rem 1.4rem;
   background-color: var(--btn-red);
+  font-size: 1.1rem;
+  letter-spacing: 1.5;
   color: #fff;
   transition: background-color 0.15s;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .search-area button:hover,
@@ -93,6 +149,7 @@ ul {
   width: 100%;
   min-width: 250px;
   max-width: 300px;
+  box-shadow: 1px 3px 0 0 var(--transparent-box-shadow);
 }
 
 .card-image img {
@@ -147,15 +204,18 @@ ul {
 }
 
 .tracks-container {
-  /* width: 100%; */
   margin: 2rem auto;
 }
 
-.tracklist {
+.tracklist-background {
   background-color: var(--transparent-bluegray);
   border-radius: 5px;
+  padding: 0.2rem;
+}
+
+.tracklist-constraints {
   padding: 0.5rem 0.2rem;
-  width: 600px;
+  width: 700px;
 }
 
 .track {
@@ -167,8 +227,7 @@ ul {
   background-color: #fff;
   border: none;
   border-radius: 5px;
-  box-shadow: 0 2px 5px 0;
-  /* color: rgb(209, 209, 209); */
+  box-shadow: 0 2px 5px 0 var(--transparent-box-shadow);
   transition: border-radius ease-in 0.2s, scale ease-in 0.2s;
 }
 
@@ -178,13 +237,24 @@ ul {
   scale: 1.01;
 }
 
-.track .track-number {
-  font-size: 2rem;
+.track-number {
+  font-size: 0.85rem;
+  font-weight: 500;
+  display: inline-block;
+  border-right: 2px solid rgba(32, 32, 32, 0.63);
+  border-radius: 5px 0 0 5px;
+  padding: 0.6rem;
 }
 
-audio {
-  appearance: none;
+.track-name {
+  padding: 0.6rem;
+  width: 75%;
+}
+
+.no-preview {
   display: inline-block;
+  padding: 0.6rem 2rem;
+  color: var(--btn-red);
 }
 
 audio::-webkit-media-controls-panel {
@@ -193,14 +263,12 @@ audio::-webkit-media-controls-panel {
 
 audio::-webkit-media-controls-play-button {
   background-color: var(--btn-red);
-  color: #fff;
   border-radius: 5px;
   scale: 1.1;
   transition: scale ease-in-out 0.2s, border-radius ease-in 0.1s;
 }
 
 audio::-webkit-media-controls-play-button:hover {
-  scale: 1.2;
   border-radius: 50%;
 }
 
