@@ -1,0 +1,10 @@
+{{! <h3>album</h3>
+    <img>
+    <h1>hello</h1> }}
+{{#each search}}
+    {{this.name}}
+    <img src="{{this.images.1.url}}" alt="">
+    {{!-- {{this.images}} --}}
+    <a href="/albums/{{this.id}}">View Albums</a>
+    {{!-- {{image}} --}}
+{{/each}}
