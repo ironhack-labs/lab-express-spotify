@@ -1,12 +1,12 @@
 <div class="row">
   <div class="col-sm-12 d-flex flex-wrap justify-content-center">
     {{#each artist }}
-        <div class="card col-sm-3 text-center" style="margin:20px">
+        <div class="card col-sm-3 text-center p-0 m-4 bg-dark">
             <div class="body">
                 <img class="card-img-top" src="{{this.images.0.url}}" alt="{{this.name}}">
-                <div class="bg-dark p-4">
+                <div class="p-4">
                     <h5 class="card-title text-white">{{ this.name }}</h5>
-                    <a href="/albums/{{this.id}}" class="btn btn-danger">View Albums</a>
+                    <a href="/albums/{{this.id}}" class="btn btn-danger btn-sm">View Albums</a>
                 </div>
             </div>
         </div>

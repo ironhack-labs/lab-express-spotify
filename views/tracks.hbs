@@ -1,16 +1,16 @@
 <div class="container mt-5">
-    <div class="row">
-    <div class="col-sm-12 d-flex justify-content-between bg-dark">
-        <h3 class="text-white p-3">Title</h3>
-        <h3 class="text-white p-3">Listen</h3>
+  <div class="row">
+    <div id="tracks-header" class="col-sm-12 d-flex justify-content-between bg-dark">
+        <h3 class="text-secondary p-3">Title</h3>
+        <h3 class="text-secondary p-3 text-center">Listen</h3>
     </div>
-    </div>
+  </div>
 
-    <div class="row">
-    <div class="col-sm-12 bg-light">
+  <div class="row">
+    <div id="tracks-wrapper" class="col-sm-12 bg-light p-0">
         {{#each tracks }}
-            <div class="p-4 d-flex justify-content-between">
-                <a href="/{{ this.external_urls.spotify }}" class="">{{ this.name }}</a>
+            <div class="d-flex justify-content-between align-items-center pt-2 pb-2 pl-4 mt-1 mb-1">
+                <a href="/{{ this.external_urls.spotify }}" class="text-dark">{{ this.name }}</a>
                 
                 <audio controls src="{{this.preview_url}}">
                     <a href="{{this.preview_url}}">Download audio</a>
@@ -19,5 +19,5 @@
             </div>
         {{/each}}
     </div>
-    </div>
+  </div>
 </div>
