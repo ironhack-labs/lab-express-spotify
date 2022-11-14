@@ -1,0 +1,16 @@
+<div class="resultsBoard">
+    {{#if artists}}
+    <h2>Results:</h2>
+        {{#each artists}}
+            <div class=" Card">
+                <img src="{{this.images.[0].url}}">
+            </div>
+            <div class="artistDeets">
+                <h3>{{name}}</h3> <br>
+                <a href="/albums/{{this.id}}">View Albums</a>
+            </div>
+        {{/each}}
+    {{else}}
+        <h2>Sorry, we could not find any artists by that name</h2>
+    {{/if}}
+</div>
