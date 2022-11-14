@@ -5,6 +5,7 @@ html {
 
   --btn-red: rgb(250, 104, 99);
   --btn-red-hover: rgba(250, 104, 99, 0.699);
+  --transparent-bluegray: rgba(255, 255, 255, 0.438);
 }
 
 body {
@@ -17,8 +18,14 @@ body {
 }
 
 main {
-  width: 80vw;
+  width: 95vw;
   margin: auto;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
 
 .center {
@@ -30,7 +37,7 @@ main {
 }
 
 .search-area {
-  background-color: rgba(255, 255, 255, 0.438);
+  background-color: var(--transparent-bluegray);
   width: 320px;
   height: 150px;
   display: flex;
@@ -47,9 +54,10 @@ main {
   display: block;
   margin: auto;
   width: 10rem;
-  height: 1.2rem;
+  height: 1.5rem;
   border: 1px solid #fff;
   border-radius: 5px;
+  transition: padding-left, padding-right 0.15s;
 }
 
 .search-area input:focus {
@@ -110,8 +118,6 @@ main {
   align-items: center;
   list-style: none;
   width: 98%;
-  padding: 0;
-  margin: 0;
 }
 
 .card-bottom li {
@@ -138,4 +144,68 @@ main {
   background-color: var(--btn-red);
   transition: background-color 0.15s;
   color: #fff;
+}
+
+.tracks-container {
+  /* width: 100%; */
+  margin: 2rem auto;
+}
+
+.tracklist {
+  background-color: var(--transparent-bluegray);
+  border-radius: 5px;
+  padding: 0.5rem 0.2rem;
+  width: 600px;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem 1rem;
+  margin: 0.5rem;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px 0;
+  /* color: rgb(209, 209, 209); */
+  transition: border-radius ease-in 0.2s, scale ease-in 0.2s;
+}
+
+.track:hover,
+.track:focus {
+  border-radius: 20px;
+  scale: 1.01;
+}
+
+.track .track-number {
+  font-size: 2rem;
+}
+
+audio {
+  appearance: none;
+  display: inline-block;
+}
+
+audio::-webkit-media-controls-panel {
+  background-color: #fff;
+}
+
+audio::-webkit-media-controls-play-button {
+  background-color: var(--btn-red);
+  color: #fff;
+  border-radius: 5px;
+  scale: 1.1;
+  transition: scale ease-in-out 0.2s, border-radius ease-in 0.1s;
+}
+
+audio::-webkit-media-controls-play-button:hover {
+  scale: 1.2;
+  border-radius: 50%;
+}
+
+audio::-webkit-media-controls-current-time-display,
+audio::-webkit-media-controls-time-remaining-display,
+audio::-webkit-media-controls-toggle-closed-captions-button {
+  display: none;
 }

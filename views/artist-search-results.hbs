@@ -1,31 +1,9 @@
 <div class="center">
-  {{#items}}
-    <div class="card">
-      <div class="card-image">
-        {{#if images}}
-          <img src="{{images.1.url}}" alt="{{name}}" />
-        {{else}}
-          <img
-            src="https://image-placeholder.com/images/actual-size/300x250.png"
-            alt="{{name}} placeholder"
-          />
-        {{/if}}
-      </div>
-      <div class="card-bottom">
-        <div class="card-title">
-          <h3>{{name}}</h3>
-        </div>
-        <div class="card-genres">
-          <ul>
-            {{#genres as |genre|}}
-              <li>{{genre}}</li>
-            {{/genres}}
-          </ul>
-        </div>
-      </div>
-      <div class="card-btn-container">
-        <a href="/albums/{{id}}" class="card-btn">Albums</a>
-      </div>
-    </div>
-  {{/items}}
+  {{#if artists}}
+    {{#artists}}
+      {{> card }}
+    {{/artists}}
+  {{else}}
+    <div class="not-found">No Artists Found</div>
+  {{/if}}
 </div>

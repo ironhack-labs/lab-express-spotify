@@ -1,0 +1,14 @@
+<div class="center">
+  <div class="tracks-container">
+    <div class="tracklist">
+    {{#tracks}}
+      <div class="track">
+        {{track_number}}
+        -
+        {{name}}
+        <audio controls src="{{preview_url}}"></audio>
+      </div>
+    {{/tracks}}
+  </div>
+  </div>
+</div>

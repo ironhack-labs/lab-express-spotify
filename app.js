@@ -13,6 +13,8 @@ app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+hbs.registerPartials(__dirname + "/views/partials");
+
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.SPOTIFY_CLIENT_ID,
   clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
@@ -35,13 +37,49 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(artist)
     .then((data) => {
-      const items = data.body.artists.items;
+      const artists = data.body.artists.items;
 
-      console.log(JSON.stringify(items, null, 2));
-
-      res.render("artist-search-results", { items });
+      res.render("artist-search-results", {
+        artists,
+      });
     })
-    .catch((error) => console.log("Error by searching artist", error));
+    .catch((error) => console.error("Error by searching artist", error));
+});
+
+app.get("/albums/:artistId", (req, res) => {
+  const artistId = req.params.artistId;
+
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then((data) => {
+      const albums = data.body.items;
+
+      res.render("albums", {
+        albums,
+      });
+    })
+    .catch((error) =>
+      console.error("Error by retrieving artists albums", error)
+    );
+});
+
+app.get("/album/:albumId", (req, res) => {
+  const albumId = req.params.albumId;
+
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      const tracks = data.body.items;
+
+      console.log(JSON.stringify(data, null, 2));
+
+      res.render("tracks", {
+        tracks,
+      });
+    })
+    .catch((error) =>
+      console.error("Error by retrieving albums tracks", error)
+    );
 });
 
 app.listen(3000, () =>
