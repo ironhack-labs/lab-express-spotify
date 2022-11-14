@@ -7,3 +7,16 @@
   -ms-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%);
 }
+
+.tracklist {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.tracklist-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+}

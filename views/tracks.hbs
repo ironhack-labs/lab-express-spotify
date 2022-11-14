@@ -1,0 +1,8 @@
+<main class="tracklist center">
+  {{#each tracks}}
+  <section class="tracklist-item">
+  <p>{{this.name}}</p>
+  <audio controls src="{{this.preview_url}}"></audio>
+  </section>
+  {{/each}}
+</main>
