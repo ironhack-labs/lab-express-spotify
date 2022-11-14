@@ -1,0 +1,21 @@
+<div id="albumTitleTrack">
+    <tr class="tableHeader">
+        <th><h3> {{album.name}} </h3></th>
+    </tr>
+    <tr class="tableHeader">
+        <th><h4>#</h4></th>
+        <th><h4>Tracks</h4></th>
+        <th><h4>Listen</h4></th>
+    </tr class="trackContent">
+    {{#each}}
+    <tr>
+        <td>{{track_number}}</td>
+        <td>{{name}}</td>
+        {{#if preview_url}}
+            <td><audio controls src="{{preview_url}}"></audio></td>
+            {{else}}
+            <td>"No Preview"</td>
+        {{/if}}
+    </tr>
+    {{/each}}
+</div>

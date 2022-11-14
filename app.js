@@ -56,6 +56,16 @@ const spotifyApi = new SpotifyWebApi({
       });
 
     
-    
+      app.get('/tracks/:albumId', (req, res, next) => {
+        const albumTracks = req.params.albumId;
+        spotifyApi
+        .getAlbumTracks(albumTracks)
+        .then((data) => {
+        //   console.log('The received data from the API: ', data.body.items);
+        res.render("tracks", {tracks: data.body.items});
+        })
+        .catch(err => console.log('The error while searching artists occurred: ', err));res.render('artist-search.hbs');
+      });
+
     
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
