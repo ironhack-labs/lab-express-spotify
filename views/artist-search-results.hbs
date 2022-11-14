@@ -1,0 +1,7 @@
+<ul class="artist_list">
+  {{#each artist}}
+    <li>{{name}}</li>
+    <li><img src="{{images.1.url}}"></li>
+    <form action="/albums/:artistId" method="GET"></form><li><button><a href="/albums/{{id}}">View Albums</a></button></li></form>
+  {{/each}}
+</ul>

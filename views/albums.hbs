@@ -1,0 +1,8 @@
+<ul class="albums_list">
+  {{#each albums}}
+    <li>{{name}}</li>
+    <li><img src="{{images.1.url}}"></li>
+    <form action="/tracks/:albumsId" method="GET"></form><li><button><a href="/tracks/{{this.id}}">View tracks</a></button></li></form>
+  {{/each}}
+</ul>
+
