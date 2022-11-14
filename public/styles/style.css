@@ -1,32 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
 img {
     width: 340px;
     height: auto;
 }
 body {
-    margin-right: 0;
-    margin-left: 0;
+   margin: 0px;
+   padding: 0px;
+   font-family: 'Alfa Slab One', cursive;
 }
 #cover {
-    
     background-image: url("../images/spotify-background.jpeg");
-    background-size: cover;
     width: 100vw;
-    height: 100vh;
+    height: 100vw;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
 }
 #search { 
+    letter-spacing: 3px;
+    color: rgb(0, 74, 25);
+    text-shadow: 3px 3px rgb(255, 255, 255);
+    font-size: 2em;
+    letter-spacing: 6px;
+    height: 100%;
+    width: 100%;
     display: flex;
-    /* justify-content: center; */
     flex-direction: column;
+    position: fixed;
     align-items: center;
+    justify-content: center;   
 }
 #all-tracks {
+    margin-left: 5%;
+    margin-right: 5%;
     column-count: 2;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
     margin-top: 3%; 
 }
-
 .music-parts {
     display: flex;
     flex-direction: row;
@@ -35,6 +47,8 @@ body {
     margin-bottom: 1%;
 }
 .all-founded {
+    margin-left: 5%;
+    margin-right: 5%;
     display: flex;
     flex-wrap: wrap;
     gap: 4rem;
