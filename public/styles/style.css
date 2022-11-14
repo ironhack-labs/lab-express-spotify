@@ -1,0 +1,29 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    background: url("/images/spotify-background.jpeg");
+    background-size: cover;
+}
+
+.form-container {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+}
+
+.main-form{
+    justify-content: center;
+    align-items: center;;
+    width: 80%;
+    height: 30%;
+    background-color: #FFFFFF5C;
+
+}
+
+.main-form form button{
+    width: 60%;
+}
+.main-form form input {
+    width: 300px;
+}

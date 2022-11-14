@@ -1,0 +1,15 @@
+<div class="row">
+  <div class="col-sm-12 d-flex flex-wrap justify-content-center">
+    {{#each albums }}
+        <div class="card col-sm-3 text-center" style="margin:20px">
+            <div class="body">
+                <img class="card-img-top" src="{{this.images.0.url}}" alt="{{this.name}}">
+                <div class="bg-dark p-4">
+                    <h5 class="card-title text-white">{{ this.name }}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-danger">View Tracks</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+  </div>
+</div>
