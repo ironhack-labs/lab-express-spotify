@@ -1,0 +1,35 @@
+<style>
+    body{
+        background-image: url('/images/spotify-background.jpeg');
+        background-size: cover;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    form {
+        background-color: rgba(255, 255, 255, 0.5);
+        display: flex;
+        width: 600px;
+        height: 200px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #artistName {
+        width: 400px;
+    }
+</style>
+
+<div id="bg">
+    <form action="/artist-search", method="GET">
+        <div>
+            <input id="artistName" class="mt-3 p-2 border-0 rounded-2" type="text" name="artistName" placeholder="The Beatles">
+        </div>
+        <div>
+            <button class="m-3 p-2 bg-danger text-white border-0 rounded-2" type="submit">Search for an Artist</button>
+        </div>
+    </form>
+</div>

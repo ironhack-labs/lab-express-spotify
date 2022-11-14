@@ -1,0 +1,10 @@
+<nav class="navbar navbar-expand-lg bg-secondary text-white p-3">
+    <h4 class="col-md-8 ps-5">Title</h4>
+    <h4 class="col-md-4 ps-3">Listen</h4>
+</nav>
+
+<div class="mt-4 container d-flex flex-column">
+    {{#each tracks}}
+        {{> trackCard this}}
+    {{/each}}
+</div>

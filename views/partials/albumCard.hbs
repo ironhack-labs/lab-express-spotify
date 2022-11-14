@@ -1,0 +1,10 @@
+
+    <div class="card col-3 m-2">
+        <img class="card-img-top" src="{{this.images.[0].url}}" alt="artist image" />
+        <div class="card-body bg-secondary d-flex flex-column align-items-center">
+            <h5 class="card-title text-white">{{this.name}}</h5>
+            <form action="/tracks/{{this.id}}" method="GET">
+                <button class="p-1 bg-danger text-white border-0 rounded-2" type="submit">View Tracks</button>
+            </form>
+        </div>
+    </div>
