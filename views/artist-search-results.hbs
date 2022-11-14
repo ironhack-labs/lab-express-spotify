@@ -1,0 +1,9 @@
+<div class="column-fluid">
+    {{#each artists}}
+        <div class="col-md-4">
+            <img class="col-md-4" src="{{this.images.0.url}}" alt="">
+            {{this.name}}
+            <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+    {{/each}}
+</div>
