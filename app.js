@@ -37,12 +37,12 @@ app.get("/artist-search", (req, res) => {
     .then((data) => {
       console.log("The received data from the API: ", data.body);
       // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      const searchArtist = spotifyApi.data;
+      res.send("artist-search-artist", { searchArtist: searchArtist });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
-
-  res.send("Artist Se");
 });
 
 app.listen(3000, () =>
