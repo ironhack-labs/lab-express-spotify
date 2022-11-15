@@ -36,9 +36,8 @@ app.get('/', (req, res) => {
 });
 
 app.get('/artist-search', (req, res) => {
-    let search = req.query.artist
     spotifyApi
-        .searchArtists(search)
+        .searchArtists(req.query.artist)
         .then(data => {
             console.log('The received data from the API: ', data.body.artists.items);
             res.render("artist-search-results", { search: data.body.artists.items })
@@ -47,9 +46,8 @@ app.get('/artist-search', (req, res) => {
 });
 
 app.get('/albums/:artistId', (req, res, next) => {
-    let albumId = req.params.artistId
     spotifyApi
-        .getArtistAlbums(albumId)
+        .getArtistAlbums(req.params.artistId)
         .then(data => {
             console.log('Album information', data.body.items);
             res.render('albums', { albumId: data.body.items })
@@ -62,21 +60,24 @@ app.get('/albums/:artistId', (req, res, next) => {
     console.error(err);
 });
 
-app.get('/albums/:tracksId', (req, res, next) => {
-    let tracks = req.params.tracksId //{limit: 5, offset: 1})
-    console.log(data.body);
+app.get('/tracks/:tracksId/', (req, res, next) => {
+    // console.log("working", req.params)
+    //{limit: 5, offset: 1})
+    // console.log(data.body);
+    console.log("working")
     spotifyApi
-        .getAlbumTracks(tracks)
+        .getAlbumTracks(req.params.tracksId)
         .then((data) => {
-            console.log("working")
-            res.render('tracks', { tracksId: data.body.items })
+            console.log('Tracks information', data.body.items);
+            res.render('tracks', { tracks: data.body.items })
         }, function (err) {
             console.log('Something went wrong!', err);
         })
 }, function (err) {
     console.error(err);
 });
-
+{/* <tracks />
+<:tracksId>req.params.trackId</:tracksId> */}
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

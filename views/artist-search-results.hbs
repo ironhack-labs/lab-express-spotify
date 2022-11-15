@@ -3,8 +3,11 @@
     <h1>hello</h1> }}
 {{#each search}}
     {{this.name}}
-    <img src="{{this.images.1.url}}" alt="">
+    {{!-- {{#if}} --}}
+    <img src="{{this.images.1.url}}" alt="{{this.name}}">
     {{!-- {{this.images}} --}}
+    {{!-- {{else}}
+    <img> --}}
     <a href="/albums/{{this.id}}">View Albums</a>
     {{!-- {{image}} --}}
 {{/each}}
