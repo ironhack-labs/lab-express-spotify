@@ -1,13 +1,12 @@
-{{! <h3>album</h3>
-    <img>
-    <h1>hello</h1> }}
 {{#each search}}
     {{this.name}}
-    {{!-- {{#if}} --}}
-    <img src="{{this.images.1.url}}" alt="{{this.name}}">
-    {{!-- {{this.images}} --}}
-    {{!-- {{else}}
-    <img> --}}
+    {{#if images}}
+        <img src="{{this.images.1.url}}" alt="{{this.name}}" />
+    {{else}}
+        <img
+            src="https://www.instagram.com/p/CZE5-xtIlGw/"
+            alt="Image Frances"
+        />
+    {{/if}}
     <a href="/albums/{{this.id}}">View Albums</a>
-    {{!-- {{image}} --}}
 {{/each}}
