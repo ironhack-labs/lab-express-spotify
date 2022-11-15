@@ -1,0 +1,10 @@
+<section>
+    <ul class="collection">
+        {{#each result}}
+        <li class="collection-item ">
+            <p class="title">song: {{name}} <br /> track: {{track_number}}</p>
+            <audio controls src="{{preview_url}}"><a href="{{preview_url}}">Download audio</a></audio>
+        </li>
+        {{/each}}
+    </ul>
+</section>

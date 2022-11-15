@@ -1,0 +1,76 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    height: 100vh;
+}
+
+nav {
+    background-color: #2bbbad;
+}
+
+.nav-wrapper {
+    padding: 2px;
+}
+
+.index {
+    background-image: url('../images/spotify-background.jpeg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.input-field > label {
+    color: #42ff4a;
+}
+
+.btn {
+    background-color: #42ff4a;
+}
+
+input {
+    color: #2bbbad;
+}
+
+.card {
+    width: 300px;
+}
+
+.artists {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.search-results {
+    background: linear-gradient(
+        90deg,
+        rgba(9, 121, 22, 1) 18%,
+        rgba(0, 255, 29, 1) 100%
+    );
+    padding: 2%;
+}
+
+.collection-item {
+    display: flex;
+    justify-content: space-between;
+}

@@ -1,0 +1,20 @@
+<section class="search-results">
+    <div class="artists">
+        {{#each result}}
+        <div class="row">
+            <div class="col s12 m7">
+                <div class="card">
+                    <div class="card-image">
+                        <img src="{{images.0.url}}">
+                        <span class="card-title">{{name}}</span>
+                    </div>
+                    <div class="card-action">
+                        <a href="/albums/{{../artistId}}/tracks/{{id}}">View Tracks</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+
+</section>
