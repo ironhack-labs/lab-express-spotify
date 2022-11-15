@@ -65,10 +65,10 @@ app.get('/albums/:artistId', (req, res, next) => {
     console.log(err))
 });
 
-app.get('/tracks/:albumId', (req, res, next)=>{
+app.get('/tracks/:tracksId', (req, res, next)=>{
   console.log(req.params.albumId);
   spotifyApi
-  .getAlbumTracks(req.params.albumId, { limit : 10, offset : 1 })
+  .getAlbumTracks(req.params.tracksId, { limit : 10, offset : 1 })
   .then((data) => {
       console.log('Album tracks', data.body);
       res.render("tracks", {tracks: data.body.items })
