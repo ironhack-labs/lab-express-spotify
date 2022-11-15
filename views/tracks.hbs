@@ -1,0 +1,23 @@
+
+{{!-- {{#each tracks}}
+<p>You are listening: {{this.name}}</p>
+<audio controls src="{{this.preview_url}}"></audio>
+{{/each}} --}}
+
+
+<ul>
+    {{#each tracks}}
+        <li>
+            <h4>{{this.name}}</h4>
+            <br>
+            {{#if this.preview_url}}
+                <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+                </audio>
+            {{else}}
+                <p><b>No preview available! Sorry!</b></p>
+            {{/if}}
+        </li>
+    {{/each}}
+</ul>

@@ -1,0 +1,16 @@
+/* .container{
+    display: flex;
+    flex-direction: row;
+    align-content: space-between;
+    /* gap: 20px;
+    flex-wrap: wrap; */
+/* } */
+
+.hero-image {
+    background-image: url(".hero-image"); /* The image used */
+    height: 500px; /* You must set a specified height */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Do not repeat the image */
+    background-size: cover; /* Resize the background image to cover the entire container */
+  } */
+
