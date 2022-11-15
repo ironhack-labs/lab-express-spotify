@@ -1,9 +1,17 @@
-<div>
+<ul>
     {{#each tracks}}
-    <h2>{{name}}</h2>
+    <li>
+    <h4>
+        {{name}}
+    </h4>
+    <br>
+    {{#if preview_url}}
     <audio controls>
         <source src="{{preview_url}}">
     </audio>
-
+    {{else}}
+        <p><b>No Preview available Sorry!</b></p>
+    {{/if}}
+    </li>
     {{/each}}
-</div>
+</ul>

@@ -1,13 +1,12 @@
-<div>
-    {{!-- <h1>
-        Good!
-    </h1> --}}
+<ul>
     {{#each albums}}
+    <li> {{name}}
     <img src="{{images.[0].url}}" alt="{{name}}">
     <h1>
         {{name}}
     </h1>
+    <br>
     <a href="/tracks/{{id}}">Views Tracks</a>
+    </li>
     {{/each}}
-
-</div>
+</ul>
