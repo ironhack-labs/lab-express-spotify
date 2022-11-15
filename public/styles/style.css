@@ -1,0 +1,21 @@
+#homepage {
+    background-image:url('/images/spotify-background.jpeg');
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+#form {
+    background-color: rgba(255, 255, 255, .6);
+    padding: 5%;
+    margin: 0 30vw;
+    align-items: center;
+}
+
+.artist-name-div {
+    background-color: #4d4d4d;
+}
+
+.artist-name-div > button {
+    background-color: #ef6867;
+}

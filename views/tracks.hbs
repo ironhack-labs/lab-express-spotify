@@ -1,0 +1,24 @@
+<div class="container">
+    <div class="row">
+        <div class="col">Title</div>
+        <div class="col">Listen</div>
+        <div class="w-100"></div>
+    </div>
+    {{#each tracks}}
+        <div class="row">
+            <div class="col">{{name}}</div>
+            <div class="col">
+                {{#if preview_url}}
+                    <audio controls src="{{preview_url}}">
+                        <a href="{{preview_url}}">
+                        Download audio
+                        </a>
+                    </audio>
+                {{else}}
+                    <p>Sorry, no preview available at this time.</p>
+                {{/if}}
+            </div>
+            <div class="w-100"></div>
+        </div>
+    {{/each}}
+</div>
