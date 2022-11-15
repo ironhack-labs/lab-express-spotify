@@ -1,0 +1,57 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* HOME */
+body {
+  width: 100vw;
+  height: 100vh;
+}
+.home-container {
+  width: 100%;
+  height: 100%;
+  background: url('../images/spotify-background.jpeg') center/cover no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 65%;
+  height: 35%;
+  background: linear-gradient(
+    rgba(255, 255, 255, 0.5),
+    rgba(255, 255, 255, 0.5)
+  );
+}
+.home-search-container form {
+  /* border: 2px solid red; */
+  width: 75%;
+  height: 40%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+.home-search-container form input {
+  width: 100%;
+  height: 35%;
+  border: none;
+  padding-left: 10px;
+  border-radius: 3px;
+}
+
+.home-search-container form button {
+  width: 55%;
+  height: 40%;
+  background: #fa6862;
+  font-size: 18px;
+  color: #fff;
+  border: none;
+}
+
+/* ARTISTS */
