@@ -2,14 +2,16 @@
     {{#if albums}}
     <h3>Albums of {{artist}}</h3>
         {{#each albums}} 
+            
             <div class="albumBox">
                 <div>
-                    <img src="{{images.[0].url}}" class="albumCover">
+                    <a href='/tracks/'{{id}}> <img src="{{this.images.2.url}}" class="albumPic"> </a>
                </div>
                 <div>
-                    {{name}}
+                    <a href='/tracks/{{id}}'>{{this.name}}</a>
                 </div>
             </div>
+            
         {{/each}}
     {{else}}
     <h3>This Artist has no albums</h3>
