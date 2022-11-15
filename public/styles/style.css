@@ -4,3 +4,7 @@ body {
   background-attachment: fixed;
   background-size: cover;
 }
+
+.artistSearch form {
+  background-color: aqua;
+}

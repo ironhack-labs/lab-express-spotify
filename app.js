@@ -31,8 +31,18 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/about", (req, res) => {
-  res.send("About Page");
+app.get("/artist-search", (req, res) => {
+  spotifyApi
+    .searchArtists("")
+    .then((data) => {
+      console.log("The received data from the API: ", data.body);
+      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+
+  res.send("Artist Se");
 });
 
 app.listen(3000, () =>

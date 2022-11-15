@@ -1,10 +1,7 @@
-{{! <form>
-  <input type="text" id="artist" name="artist" /><br />
-  <label for="artist">Search for an Artist</label><br />
-</form> }}
-
-<form action="/artist-search", method="GET"">
-  <input type="text" id="artist" name="artist" value="The Beatles" /><br />
-  <label for="artist"></label><br />
-  <input type="submit" value="Search for an Artist" />
-</form>
+<section class="artistSearch">
+  <form action="/artist-search" , method="GET">
+    <input type="text" id="artist" name="artist" value="The Beatles" /><br />
+    <label for="artist"></label><br />
+    <input type="submit" value="Search for an Artist" />
+  </form>
+</section>
