@@ -1,0 +1,19 @@
+
+body {
+  background: url("../images/spotify-background.jpeg") no-repeat center center
+    fixed;
+  background-size: cover;
+  margin: 0;
+  font-size: 30px;
+}
+
+.container-fluid {
+
+background: white;
+color: black;
+padding: 30px;
+text-align: center;
+font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+font-size: 25px;
+
+}
