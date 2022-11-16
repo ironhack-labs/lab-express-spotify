@@ -1,0 +1,9 @@
+<h1 class="title">Albums for: <span>{{artistName}}</span></h1>
+
+<div class="container text-center">
+    <div class="row">
+        {{#each albumArray}}
+        {{>Albumcard this}}
+        {{/each}}
+    </div>
+</div>

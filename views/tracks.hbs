@@ -1,0 +1,14 @@
+<section id="musicSample">
+    <div>
+        <h1>Track</h1>
+        {{#each trackArray}}
+        <p class="music-track">{{this.name}}</p>
+        {{/each}}
+    </div>
+    <div class="track">
+        <h1>Listen</h1>
+        {{#each trackArray}}
+        <audio controls src="{{this.preview_url}}" volume></audio>
+        {{/each}}
+    </div>
+</section>

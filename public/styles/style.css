@@ -1,0 +1,122 @@
+body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+}
+
+#searchArtist {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: contain;
+
+}
+
+.white-box {
+    padding: 45px 120px;
+    background-color: white;
+    opacity: 80%;
+    margin: auto;
+    left: 50%;
+    top: 50%;
+}
+
+.search-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-form input {
+    width: 200px;
+    text-align: center
+}
+
+.search-form button {
+    margin-top: 5px;
+    width: 100px;
+    font-size: 10px;
+    height: 30px;
+    border-radius: 0px;
+    background-color: red;
+    color: white;
+    border-style: none;
+
+}
+
+
+
+h1 {
+
+    color: black;
+
+}
+
+h5 {
+    color: black;
+}
+
+
+/* players */
+.card {
+    margin: 30px;
+}
+
+.card img {
+    height: 300px;
+}
+
+.card-body {
+    background-color: rgba(110, 105, 105, 0.324);
+    margin-bottom: 5px;
+}
+
+.button {
+    text-decoration: none;
+    width: 115px;
+    height: 40px;
+    background: #4E9CAF;
+    padding: 10px;
+    text-align: center;
+    border-radius: 5px;
+    color: white;
+    font-weight: bold;
+    line-height: 25px;
+    margin-top: 20px;
+}
+
+.title {
+    text-align: center;
+    font-family: 'Cinzel', serif;
+    font-weight: 200;
+}
+
+#musicSample {
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 100px;
+}
+
+.track {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+span {
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    color: #1a9d06;
+}
+
+audio {
+    width: 200px;
+    height: 25px;
+}
+
+.music-track {
+    margin-bottom: 0px;
+    margin-top: 20px;
+}
