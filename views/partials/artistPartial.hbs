@@ -1,0 +1,11 @@
+<div class="music-card">
+    {{#if images}}
+        <img src="{{images.[0].url}}" alt="alt-{{name}}">
+    {{else}}
+        <img src="../images/music-placeholder.svg" alt="{{name}}">
+    {{/if}}
+    <div class="tag">
+        <p>{{name}}</p>
+        <a class="btn" href="/albums/{{id}}">View Albums</a>
+    </div>
+</div>

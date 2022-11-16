@@ -1,0 +1,114 @@
+/*
+Green: #1DB954
+Black: #191414
+*/
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20pt;
+    background: url("../images/spotify-background.jpeg") no-repeat fixed;
+    background-position: 0;
+    background-size: 100vw auto;
+    color: white;
+}
+a {
+    text-decoration: none;
+    color: #191414;
+}
+
+main {
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: auto;
+    text-align: center;
+}
+
+.artist-search-content {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.artist-search-form {
+    background-color: rgba(25, 20, 20, 0.5);
+    border-radius: 20px;
+    padding: 10px 20px;
+    width: 30vw;
+    height: 20vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.artist-search-form input, .btn {
+    font-size: large;
+}
+
+.btn {
+    background-color: #1DB954;
+    border-style: none;
+    border-radius: 5px;
+    padding: 0.5em;
+}
+
+.artist-results-content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.music-card {
+    position: relative;
+    background-color: #191414;
+    width: 23vw;
+    height: 29vw;
+    margin: 0.5vw;
+    text-align: center;
+}
+
+.music-card img {
+    width: 100%;
+    height: 23vw;
+    object-fit: cover;
+}
+
+.tag {
+    width: 100%;
+    position: absolute;
+    margin-top: 0.1em;
+}
+
+.tag p {
+    margin-bottom: 0.25em;
+}
+
+.track-list {
+    width: 60%;
+    margin: 0 auto;
+    background-image: linear-gradient(#191414, rgba(29, 185, 84, 0.5));
+}
+
+.track {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.25em 2em;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.05), rgba(255, 255, 255, 0.05));
+}
+
+.header {
+    background-image: none;
+    background-color: #191414;
+    padding: 0.5em 4em;
+    margin: 0;
+}
