@@ -1,5 +1,7 @@
-{{#each album}}
+    <link href="/public/styles/layouts-style.css"/>
+    <link rel="stylesheet" href="/styles/layouts-style.css">
+    {{#each album}}
 {{name}}
-<img src="{{images.0.url}}">
+<img src="{{images.0.url}}" class="img-thumbnail">
 <a href="/tracks/{{this.id}}">View tracks</a>
 {{/each}}
