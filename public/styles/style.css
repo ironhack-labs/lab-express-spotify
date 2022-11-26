@@ -1,0 +1,73 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+/* index-------------------------------------------------- */
+.container{
+    display: flex;
+    background-color: teal;
+    width: 100vw;
+    height: 100vh;
+    align-items: center;
+    justify-content: center;
+}
+.container-search{
+    display: flex;
+    background-color: #9c27b080;
+    width: 40vw;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+}
+.search-form{
+    display: flex;
+    flex-direction: column;
+    height: 10vh;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.btn-search{
+    width: 10vw;
+}
+
+/* artist-search-results----------------- */
+
+.image-artist{
+    width: 10vw;
+    height: 20vh;
+}
+.container-artist-results{
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+    flex-direction: row;
+    justify-content: center;
+    align-content: flex-start;
+    flex-wrap: wrap;
+}
+.view-albums-link{
+    text-decoration: none;
+    color: white;
+    font-size: 14px;
+}
+
+/* album------------ */
+
+.container-albums-results{
+    display: flex;
+    width: 90vw;
+    height: 90vh;
+}
+.albums-list{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-direction: column;
+    align-content: center;
+}
+.each-album{
+    display: flex;
+    flex-direction: column;
+}
