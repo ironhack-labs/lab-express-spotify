@@ -1,0 +1,19 @@
+<div class="columns-3 content-center">
+
+    <ul>
+    {{#each artists}}
+    <l1> {{this.name}}
+        <br>
+        {{#if this.images}}
+            <img class="w-full aspect-square" src="{{this.images.0.url}}" alt="{{this.name}}">
+            {{else}}
+            <img src="" alt="{{this.name}}" style="width: 160px">
+        {{/if}}
+        </br>
+        <a href="/albums/{{this.id}}">View all albums</a>
+        </l1>
+    {{/each}}
+    </ul>
+
+</div>
+
