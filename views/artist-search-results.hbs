@@ -1,0 +1,19 @@
+<div class="columns-3 ...">
+<ul>
+    {{#each artists}}
+    <li class="my-32 mb-32"> {{this.name}}
+
+        <br>
+        {{#if this.images}}
+        <img class="w-ful aspect-square mb-8" src="{{this.images.0.url}}" alt="{{this.name}}">
+        {{else}}
+        <img class="w-ful aspect-square" src= "/images/spotify-background.jpeg" alt="{{this.name}}" style="width:160">
+        {{/if}}
+        </br>
+        
+        <a class="bg-sky-400 background-color: rgb(56 189 248) px-8 py-4" href="/albums/{{this.id}}">View all albums</a>
+
+    </li>
+    {{/each}}
+</ul>
+</div>
