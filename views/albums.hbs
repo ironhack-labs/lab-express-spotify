@@ -1,0 +1,13 @@
+<div class="flex justify-evenly">
+<ul>
+    {{#each albums}}
+    <li>
+        {{this.name}}
+        <br>
+        <img class="w-full aspect-square" src="{{this.images.0.url}}" alt="{{this.name}}">
+        <br>
+        <a href="/tracks/{{this.id}}">View tracks</a>
+    </li>
+    {{/each}}
+</ul>
+</div>

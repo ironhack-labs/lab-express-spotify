@@ -1,0 +1,18 @@
+<div class="columns-2">
+
+    <ul>
+    {{#each artists}}
+    <li>{{this.name}}
+        <br>
+        {{#if this.images}}
+        <img class="w-full aspect-square" src=" {{this.images.0.url}} " alt=" {{this.name}} ">
+        {{else}}
+        <img class="w-full aspect-square" src="https://www.pngitem.com/pimgs/m/150-1503945_transparent-user-png-default-user-image-png-png.png " alt=" {{this.name}}" style="width: 300px">
+        {{/if}}
+        </br>
+        <a href="/albums/{{this.id}}">View all albums</a>
+        <br>
+    </li>
+    {{/each}}
+</ul>
+</div>
