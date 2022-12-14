@@ -1,0 +1,9 @@
+<h1>Results for: "{{search}}"</h1>
+{{#if artists}}
+  {{#each artists}}
+  <div>
+    <h3>{{this.name}}</h3> 
+    <img src="{{this.images}}" alt="">
+    <button><a href="/albums/{{this.id}}">View albums</a> </button> 
+  </div>
+  {{/each}}
