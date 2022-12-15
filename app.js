@@ -1,5 +1,5 @@
 require("dotenv").config();
-console.log('small change')
+console.log('second small change')
 const express = require("express");
 const hbs = require("hbs");
 
