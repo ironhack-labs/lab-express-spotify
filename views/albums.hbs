@@ -4,9 +4,9 @@
         <b>{{this.name}}</b>
         <p>
             {{#if this.images}}
-            <img src="{{this.images.0.url}}" alt="{{this.name}}" class="album-img">
+                <img src="{{this.images.0.url}}" alt="{{this.name}}" class="album-img">
             {{else}}
-            <img src="/images/no-image.svg" alt="{{this.name}}" class="artist-img">
+                <img src="/images/no-image.svg" alt="{{this.name}}" class="artist-img">
             {{/if}}
         </p>
         <p><a href="/tracks/{{this.id}}">View Tracks</a></p>
