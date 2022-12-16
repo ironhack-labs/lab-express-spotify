@@ -1,0 +1,19 @@
+
+
+{{#each artists}}
+<section>
+    {{#if this.images}}
+    <img src="{{this.images.0.url}}" />
+    {{else}}
+    <h3>Sorry, there are no pictures.</h3>
+    {{/if}}
+    <h4>{{this.name}}</h4>
+
+
+    <button type="submit"><a href="/albums/{{this.id}}">View Albums</a></button>
+</section>
+{{/each}}
+
+
+
+ 

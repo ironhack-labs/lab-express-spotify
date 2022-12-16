@@ -1,0 +1,10 @@
+{{#each data}}
+  <h5>{{this.name}}</h5>
+  {{#if this.preview_url}}
+  <audio controls>
+    <source src="{{this.preview_url}}" type="audio/mpeg">
+  </audio>
+  {{else}}
+  <h6>No previews is available</h6>
+  {{/if}}
+{{/each}}
