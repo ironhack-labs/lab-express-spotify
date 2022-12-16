@@ -26,13 +26,18 @@ spotifyApi
 
 // Our routes go here:
 
-app.get('/', (req, res, next) => {
-	spotifyApi.searchArtists('madonna')
+app.get('/artist-search', (req, res, next) => {
+    let artist = req.query.artist;
+    
+    console.log(artist);
+
+	spotifyApi.searchArtists(artist)
 		.then((data) => {
-			console.log(data.body.artists.items[0])
-			res.send('check console')
+            console.log('The received data from the API: ', data.body);
+			res.render('artist-search-results', data)
 		})
-		.catch(err => console.log(err) )
+		.catch(err => console.log('The error while searching artists occurred: ', err));
+    res.render("home");
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
