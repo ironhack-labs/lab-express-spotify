@@ -4,7 +4,7 @@
 
 
 
-{{#each artists}}
+{{#each items}}
     <section class="artist-summary">
         <h2>{{this.name}}</h2>
        <br>
@@ -12,7 +12,7 @@
       <img src="{{this.images.0.url}}" alt="">
       
     
-     <button type="submit">View Albums</button>
+     <button type="submit"> <a href ="/albums/{{this.id}}"> View Albums</a> </button>
         </section>
     {{/each}}
 

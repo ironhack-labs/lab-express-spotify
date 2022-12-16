@@ -36,19 +36,13 @@ app.get("/", (req, res, next) => {
 
 // Search route creation
 app.get("/artist-search",(req,res,next) =>{
-    console.log(req.query);
+   
     let artistName = req.query.artistName;
     spotifyApi
     .searchArtists(artistName)
     .then(data => {
      // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
 let artists = data.body.artists;
-artists.items.forEach(element => {
-   console.log(element.images);
-});
-
-
-
 
 res.render("artist-search-results", artists)
     })
@@ -58,7 +52,61 @@ res.render("artist-search-results", artists)
     })
     
 
+//GENERIC ROUTE FOR ALBUM DISPLAY
 
+app.get("/albums/:artistId",(req,res,next) =>{
+   
+    const idOfArtist = req.params.artistId;
+     
+  spotifyApi.getArtistAlbums(idOfArtist)
+    .then((dataFromDB) => {
+       const albumsOfArtist = dataFromDB.body; 
+console.log(albumsOfArtist);
+
+        if(dataFromDB === null){
+            res.send("Sorry,page does not exist");
+        }
+        else{
+            res.render("albums", albumsOfArtist);
+        }
+     
+    })
+    .catch((error) => {
+      console.log("error...", error);
+    });
+    
+    
+    })
+   
+    
+
+//GENERIC ROUTE FOR TRACK DISPLAY
+
+app.get("/tracks/:trackId",(req,res,next) =>{
+   
+    const idOfTrack = req.params.trackId;
+     
+    spotifyApi.getAlbumTracks(idOfTrack, { limit : 5, offset : 1 })
+    .then((dataFromDB) => {
+       const tracks = dataFromDB.body; 
+console.log(tracks);
+
+        if(dataFromDB === null){
+            res.send("Sorry,page does not exist");
+        }
+        else{
+            res.render("tracks", tracks);
+        }
+     
+    })
+    .catch((error) => {
+      console.log("error...", error);
+    });
+    
+    
+    })
+   
+    
 
 
 

@@ -1,0 +1,18 @@
+
+
+<h3>albums page </h3>
+
+{{#each items}}
+    <section class="album-summary">
+        <h2>{{this.name}}</h2>
+       <br>
+
+      <img src="{{this.images.0.url}}" alt="">
+      
+    
+     <button type="submit"> <a href ="/tracks/{{this.id}}"> View Tracks</a> </button>
+        </section>
+    {{/each}}
+
+
+<button>View Tracks</button>
