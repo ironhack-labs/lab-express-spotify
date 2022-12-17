@@ -77,3 +77,26 @@ button {
 .card h3 {
     color: #ddd;
 }
+
+h1 {
+    text-align: center;
+    margin-top: 30px;
+}
+
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    padding: 0 150px;
+    background: #555;
+    color: #ddd;
+}
+
+.track {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 50px;
+}

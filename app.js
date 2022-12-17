@@ -29,15 +29,35 @@ app.get("/", (req, res) => {
 app.get("/artist-search", async (req, res) => {
   const data = await spotifyApi.searchArtists(req.query.artist);
   const dataToRender = [];
-  for (artist of data.body.artists.items) {
-    dataToRender.push({
+  for (artist of data.body.artists.items) dataToRender.push({
       name: artist.name,
       imageURL: artist.images.length === 0 ? '' : artist.images[0].url,
-      linkURL: artist.external_urls.spotify,
-    });
-  }
+      id: artist.id,
+  })
   res.render("artist-search-results", { dataToRender });
 });
+
+app.get("/albums/:artistId", async (req, res) => {
+    const data = await spotifyApi.getArtistAlbums(req.params.artistId)
+    const dataToRender = [];
+    for (album of data.body.items) dataToRender.push({
+        name: album.name,
+        id: album.id,
+        imageURL: album.images.length === 0 ? '' : album.images[0].url,
+    })
+    
+    res.render('albums', {data: dataToRender, artist: data.body.items[0].artists[0].name})
+})
+
+app.get('/tracks/:tracksId', async (req, res) => {
+    const data = await spotifyApi.getAlbumTracks(req.params.tracksId)
+    const dataToRender = [];
+    for (track of data.body.items) dataToRender.push({
+        name: track.name,
+        previewURL: track.preview_url,
+    })
+    res.render('tracks', {dataToRender})
+})
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")

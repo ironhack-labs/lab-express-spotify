@@ -1,10 +1,11 @@
+<h1>Albums for: {{artist}}</h1>
 <div class="container">
-    {{#each dataToRender}}
+    {{#each data}}
     <div class="card">
         <img src="{{imageURL}}" alt="image of {{name}}">
         <h3>{{name}}</h3>
         <button>
-            <a href="/albums/{{id}}">View Albums</a>
+            <a href="/tracks/{{id}}">View Tracks</a>
         </button>
     </div>
     {{/each}}
