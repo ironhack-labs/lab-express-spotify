@@ -28,7 +28,7 @@ app.use(express.static(__dirname + "/public"));
 // Our routes go here:
 
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("home");
 });
 
 app.listen(3000, () =>
