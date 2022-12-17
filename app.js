@@ -22,9 +22,22 @@ spotifyApi
     console.log("Something went wrong when retrieving an access token", error)
   );
 
-app.get('/', (req, res)=> {
-    res.render('home')
-})
+app.get("/", (req, res) => {
+  res.render("home");
+});
+
+app.get("/artist-search", async (req, res) => {
+  const data = await spotifyApi.searchArtists(req.query.artist);
+  const dataToRender = [];
+  for (artist of data.body.artists.items) {
+    dataToRender.push({
+      name: artist.name,
+      imageURL: artist.images.length === 0 ? '' : artist.images[0].url,
+      linkURL: artist.external_urls.spotify,
+    });
+  }
+  res.render("artist-search-results", { dataToRender });
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")

@@ -1,0 +1,11 @@
+<div class="container">
+    {{#each dataToRender}}
+    <div class="card">
+        <img src="{{imageURL}}" alt="image of {{name}}">
+        <h3>{{name}}</h3>
+        <button>
+            <a href="{{linkURL}}">See more</a>
+        </button>
+    </div>
+    {{/each}}
+</div>
