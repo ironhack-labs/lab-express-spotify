@@ -1,0 +1,19 @@
+<nav class="nav-bar">
+        <a href="/">Home</a>
+</nav>
+
+
+<div class="results" id="artist-results"> 
+    
+    {{#each results}}
+    <div class="artist-search-results" id="artist-search-result">
+        {{#if images.0.url}}
+        <img src="{{images.0.url}}" class="artist-img">
+        {{else}}
+        <p class="img-not-available">No image available.</p>
+        {{/if}}
+        <p class="name" id="artist-name">{{name}}</p>
+        <a href="/albums/{{id}}" id="album-search-button">View Albums</a>
+    </div>
+    {{/each}}
+</div>
