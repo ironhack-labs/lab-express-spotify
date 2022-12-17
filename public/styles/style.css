@@ -1,0 +1,37 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 99vh;
+
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: 50% 70%;
+}
+
+.home__searchForm {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  height: 15rem;
+  width: 30rem;
+
+  background-color: #eee;
+}
+
+.home__searchForm__input {
+}

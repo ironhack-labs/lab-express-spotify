@@ -28,16 +28,7 @@ app.use(express.static(__dirname + "/public"));
 // Our routes go here:
 
 app.get("/", (req, res) => {
-  spotifyApi
-    .searchArtists("madonna")
-    .then((data) => {
-      console.log(data.body.artists.items);
-    })
-    .catch((err) => {
-      console.log("An error occured: ", err);
-    });
-
-  res.send("Home route running...");
+  res.render("index");
 });
 
 app.listen(3000, () =>
