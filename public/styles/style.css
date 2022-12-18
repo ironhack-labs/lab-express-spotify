@@ -8,12 +8,52 @@ html {
   font-size: 62.5%;
 }
 
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+/* layout.hbs */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: inherit;
+  height: 5rem;
+}
+
+.header__title {
+  margin-right: auto;
+
+  font-size: 3rem;
+}
+
+.header__homeLink {
+  margin-right: auto;
+  margin-left: 2rem;
+
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+
+.footer {
+  display: flex;
+  align-items: center;
+  height: 4rem;
+  margin-left: 1rem;
+
+  font-size: 1.5rem;
+}
+
+/* home.hbs */
+
 .home {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 99vw;
-  height: 99vh;
+  height: 100vh;
 
   background-image: url("../images/spotify-background.jpeg");
   background-size: cover;
@@ -31,7 +71,4 @@ html {
   width: 30rem;
 
   background-color: #eee;
-}
-
-.home__searchForm__input {
 }
