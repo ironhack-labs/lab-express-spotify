@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Open+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Michroma&family=Open+Sans&family=Poppins&display=swap');
 * {
     margin: 0;
     padding: 0;
@@ -7,13 +7,171 @@
     font-size: 100%;
     vertical-align: baseline;
     background: transparent;
+    box-sizing: border-box;
 }
 
 html, body {
-    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: row;
+    margin: 0;
 }
 
-.artist-img>img {
-    width: 100px;
-    height: 100px;
+.col-1 {
+    background: #091433;
+    min-width: 15vw;
+    flex: 1;
+}
+.col-2 {
+    display: flex;
+    flex-direction: column;
+    flex: 6;
+}
+.content {
+    display: flex;
+    flex-direction: row;
+    flex: content;
+    background-image: url("/images/concert_bg.jpg");
+    min-width: 85vw;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    text-align: center;
+}
+
+.content > article {
+    flex: 4;
+    min-height: 70vh;
+}
+header {
+    background: #486279;
+    height: 15vh;
+}
+footer {
+    background: #486279;
+    height: 10vh;
+}
+header, footer, article, nav {
+    padding: 1em;
+}
+
+header>h1 {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 4rem;
+    line-height: 7rem;
+    letter-spacing: 0.2rem;
+    font-weight: bolder;
+    color: #fff;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+.card {
+    background-color: #ccc;
+    flex: 0 0 250px;
+    margin: 10px;
+    border: 4px solid #486279;
+    border-radius: 10px;
+    box-shadow: 2px 2px 6px 0px #0000004d;
+} 
+.card img {
+    max-width: 100%;
+    border-radius: 10px;
+    box-shadow: 0 0 10px #486279;
+}
+.card .text {
+    padding: 0 20px 20px;
+}
+.card .text > button {
+    margin: 30px 0 0 0;
+}
+a.view-button {
+    text-decoration: none;
+    text-align: center;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    border: 2px solid #2196F3;
+    color: #1e90ff;
+    padding: 10px;
+}
+  
+a.view-button:hover {
+    background-color: #2196F3;
+    border: 2px solid #2196F3;
+    color: #fff;
+}
+  
+.search-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-between;
+    position: absolute;
+    width: 30vw;
+    height: 20vh;
+    top: 45vh;
+    left: 45vw;
+    background-color: #486279;
+    border-radius: 10px;
+}
+
+.text input {
+    color: #fff;
+    display: block;
+    width: 15vw;
+    height: 5vh;
+    background-color: #0a1a29;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 0 0 10px 0;
+}
+
+.search-box button {
+    display: block;
+    text-align: center;
+    width: 15vw;
+    height: 5vh;
+    background-color: #fff;
+    border-radius: 10px;
+    border-color: #2196F3;
+    color: #1e90ff;
+}
+  
+button:hover {
+    background: #2196F3;
+    color: #fff;
+}
+
+.col-1 a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+    background-color: #fff;
+    border-radius: 10px;
+    color: #1e90ff;
+    padding: 10px 0;
+}
+  
+.col-1 a:hover {
+    background: #2196F3;
+    color: #fff;
+}
+
+footer a {
+    font-size: 0.9rem;
+    text-decoration: none;
+    color: #fff;
+    padding: 10px 0;
+}
+  
+footer a:hover {
+    color: #1e90ff;
 }

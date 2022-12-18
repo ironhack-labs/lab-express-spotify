@@ -1,15 +1,15 @@
-<ul>
+<main class="cards">
     {{#each artists}}
-    <li>
-        <b>{{this.name}}</b>
-        <p>
-            {{#if this.images}}
-                <img src="{{this.images.0.url}}" alt="{{this.name}}" class="artist-img">
-            {{else}}
-                <img src="/images/no-image.svg" alt="{{this.name}}" class="artist-img">
-            {{/if}}
-        </p>
-        <a href="/albums/{{this.id}}">View all albums</a>
-    </li>
+    <article class="card">
+        {{#if this.images}}
+            <img src="{{this.images.0.url}}" alt="{{this.name}}">
+        {{else}}
+            <img src="/images/no-image.svg" alt="{{this.name}}">
+        {{/if}}
+        <div class="text">
+            {{this.name}}
+            <button><a href="/albums/{{this.id}}" class="view-button">View all albums</a></button>
+        </div>
+    </article>
     {{/each}}
-</ul>
+</main>

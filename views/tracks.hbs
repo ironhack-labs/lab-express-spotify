@@ -1,14 +1,16 @@
-<ul>
+<main class="cards">
     {{#each tracks}}
-    <li>
-        <b>{{this.name}}</b>
-        {{#if this.preview_url}}
-        <span id="track">
-            <audio controls>
-                <source src="{{this.preview_url}}" type="audio/mpeg" />
-            </audio>
-        </span>
-        {{/if}}
-    </li>
+    <article class="card">
+        <div class="text">
+            <b>{{this.name}}</b>
+            {{#if this.preview_url}}
+            <span id="track">
+                <audio controls>
+                    <source src="{{this.preview_url}}" type="audio/mpeg" />
+                </audio>
+            </span>
+            {{/if}}
+        </div>
+    </article>
     {{/each}}
-</ul>
+</main>
