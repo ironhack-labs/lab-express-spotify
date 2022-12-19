@@ -6,6 +6,14 @@ html {
 h1{
 text-align: center;
 }
+h2{
+    text-align: center;
+    font-style: oblique;
+    font-size: 64px;
+  background: -webkit-linear-gradient(rgb(70, 66, 66), rgb(236, 232, 232));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 .hero-image {
     display: flex;
     flex-direction: column;

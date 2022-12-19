@@ -3,7 +3,11 @@
   {{#each items}}
     <div class="summary">
       <div class="img-container">
+        {{#if this.images.0.url}}
         <img src="{{this.images.0.url}}" alt="image for album" />
+        {{else}}
+                <h2>Sorry, no image Available</h2>
+                {{/if}}
       </div>
 
       <div class="artist-container">

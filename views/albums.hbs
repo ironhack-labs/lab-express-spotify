@@ -3,8 +3,11 @@
   {{#each items}}
     <div class="summary">
       <div class="img-container">
-
+{{#if this.images.0.url}}
         <img src="{{this.images.0.url}}" alt="image for track" />
+         {{else}}
+                <h3>no image</h3>
+                {{/if}}
       </div>
       <div class="artist-container">
         <h4>{{this.name}}</h4>
