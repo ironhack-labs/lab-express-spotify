@@ -20,6 +20,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  flex-shrink: 0;
   width: inherit;
   height: 5rem;
 }
@@ -41,6 +42,7 @@ body {
 .footer {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
   height: 4rem;
   margin-left: 1rem;
 
@@ -72,3 +74,43 @@ body {
 
   background-color: #eee;
 }
+
+/* artist-search-results.hbs */
+
+.artistSearchResultsTitle {
+  margin: 2rem auto;
+}
+
+.cardContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-top: 2rem;
+  width: 100vw;
+}
+
+.cardContainer__card {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.cardContainer__card__info {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  width: 100%;
+  padding: 2rem 0;
+}
+
+.cardContainer__card__img {
+  width: 30rem;
+  height: 30rem;
+}
+
+/* albums.hbs */
