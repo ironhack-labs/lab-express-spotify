@@ -35,11 +35,11 @@ app.get("/", (req, res) => {
 
 app.get("/artist-search", async (req, res) => {
   try {
-    const artistsSearchResponse = await spotifyApi.searchArtists(
+    const searchArtistsResponse = await spotifyApi.searchArtists(
       req.query.name
     );
 
-    const artistsData = artistsSearchResponse.body.artists.items;
+    const artistsData = searchArtistsResponse.body.artists.items;
 
     const path = "/albums/";
 
@@ -57,19 +57,17 @@ app.get("/artist-search", async (req, res) => {
 
 app.get("/albums/:artistId", async (req, res) => {
   try {
-    const artistSearchResponse = await spotifyApi.getArtist(
-      req.params.artistId
-    );
+    const getArtistResponse = await spotifyApi.getArtist(req.params.artistId);
 
-    const { name: artistName, id: artistId } = artistSearchResponse.body;
+    const { name: artistName, id: artistId } = getArtistResponse.body;
 
-    const albumsSearchResponse = await spotifyApi.getArtistAlbums(artistId);
+    const albumsGetResponse = await spotifyApi.getArtistAlbums(artistId);
 
     const path = "/tracks/";
 
     const text = "tracks";
 
-    const albumsData = albumsSearchResponse.body.items;
+    const albumsData = albumsGetResponse.body.items;
 
     res.render("albums", {
       albumsData,
@@ -79,6 +77,16 @@ app.get("/albums/:artistId", async (req, res) => {
   } catch (err) {
     console.log("Something went wrong while getting artist albums: ", err);
   }
+});
+
+app.get("/tracks/:albumId", async (req, res) => {
+  const getAlbumTracksResponse = await spotifyApi.getAlbumTracks(
+    req.params.albumId
+  );
+
+  const tracksData = getAlbumTracksResponse.body.items;
+
+  res.render("tracks", { tracksData });
 });
 
 app.listen(3000, () =>

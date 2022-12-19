@@ -75,7 +75,7 @@ body {
   background-color: #eee;
 }
 
-/* utils */
+/* artist-search-results/albums.hbs */
 
 .subHeader {
   margin: 2rem auto;
@@ -90,6 +90,8 @@ body {
   margin-top: 2rem;
   width: 100vw;
 }
+
+/* card.hbs */
 
 .cardContainer__card {
   display: flex;
@@ -111,4 +113,37 @@ body {
 .cardContainer__card__img {
   width: 30rem;
   height: 30rem;
+}
+
+/* tracks.hbs */
+
+.tracksHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 10rem;
+  margin-bottom: 2rem;
+}
+
+.tracks {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
+.tracks__details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100vw;
+}
+
+.tracks__details__title {
+  padding-left: 5rem;
+}
+
+.tracks__details__player {
+  padding-right: 2rem;
 }
