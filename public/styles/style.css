@@ -1,0 +1,43 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.search-result {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 1rem 3rem;
+}
+
+.album-container {
+    display: flex;
+    flex-direction: column;
+    width: 20rem;
+    height: 28rem;
+    margin: 1rem 2rem;
+    background-color: gray;
+}
+
+.album-container img {
+    width: 100%;
+    margin: 0 auto;
+}
+
+.album-container h1 {
+    font-size: 20px;
+    text-align: center;
+    color: white;
+}
+
+.album-container a {
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    background-color: red;
+    width: 60%;
+    margin: 0 auto 1px;
+    border-radius: 8px;
+    position: relative;
+    
+}
