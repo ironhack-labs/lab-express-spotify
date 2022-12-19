@@ -31,24 +31,28 @@ body {
 .header {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
   flex-shrink: 0;
   width: inherit;
   height: 5rem;
+  padding: 4rem 0;
 
   background-color: var(--bg-color);
 }
 
 .header__title {
-  margin-right: auto;
+  margin: 0 auto;
 
   font-size: 4rem;
   color: var(--primary-color);
 }
 
 .header__homeLink {
-  margin-right: auto;
-  margin-left: 2rem;
+  position: absolute;
+  left: 2rem;
+
+  /* margin-right: auto;
+  margin-left: 2rem; */
 
   text-decoration: none;
   font-size: 2rem;
