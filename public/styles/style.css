@@ -1,6 +1,40 @@
-#home-image {
+.home-image {
     background-image: url(/images/spotify-background.jpeg);
     background-size: cover;
-    width: 100vw;
-    height: 100vh;
+    height: auto;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+}
+
+form {
+    margin-top: 200px;
+    background-color: rgba(250, 249, 249, 0.4);
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
+}
+
+button {
+    background-color: rgb(177, 32, 56);
+    padding: 10px 20px;
+    border-style: none;
+    margin-top: 10px;
+}
+
+.artistImg {
+    background-size: cover;
+    width: auto;
+    height: 40vh;
+}
+
+.viewAlbBtn {
+    width: auto;
+    height: 10vh;
+}
+
+.viewTracksBtn {
+    background-size: cover;
+    width: auto;
+    height: 10vh;
 }

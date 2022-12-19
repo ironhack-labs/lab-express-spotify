@@ -38,12 +38,32 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(artistName)
     .then((data) => {
-      console.log(data.body);
-      res.render("artist-search-results", data);
+      const artist = data.body.artists.items;
+      res.render("artist-search-results", {artist})
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
+});
+
+app.get("/albums/:artistId", (req, res, next) => {
+  const albumsArr = req.params.artistId;
+  spotifyApi
+  .getArtistAlbums(albumsArr)
+  .then((data) => {
+    const albums = data.body.items
+    res.render("albums", {albums});
+  });
+});
+
+app.get("/albums/tracks/:artistId", (req, res, next) => {
+  const tracksArr = req.params.tracks;
+  spotifyApi
+  .getAlbumTracks(tracksArr)
+  .then((data) => {
+    const tracks = data.body.items
+    res.render("tracks", {tracks});
+  });
 });
 
 app.listen(3000, () =>
