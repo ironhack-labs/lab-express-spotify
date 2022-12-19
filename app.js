@@ -42,11 +42,37 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(artist)
     .then((data) => {
-      const artist = data.body.artists.items[0];
-      const name = artist.name;
-      const image = artist.images[0].url;
-      const id = artist.id;
-      res.render("artist-search-results", { image, name, id });
+      /*const artistsArr = data.body.artists;
+      const arrayOfArtists = [];
+      for (let i = 0; i < artistsArr.length; i++) {
+        arrayOfArtists.push({
+          name: artistsArr.items[i].name,
+          image: artistsArr.items[i].images[0].url,
+          id: artistsArr.items[i].id,
+        });
+      }*/
+
+      const artistsArr = data.body.artists.items;
+      const arrayOfArtists = [];
+      for (let i = 0; i < artistsArr.length; i++) {
+        if (artistsArr[i].images.length > 0) {
+          arrayOfArtists.push({
+            name: artistsArr[i].name,
+            image: artistsArr[i].images[0].url,
+            id: artistsArr[i].id,
+          });
+        } else {
+          arrayOfArtists.push({
+            name: artistsArr[i].name,
+            id: artistsArr[i].id,
+          });
+        }
+      }
+      //const name = artist.name;
+      //const image = artistsArr[2].images[0].url;
+      //const id = artistsArr.id;
+      //res.send(arrayOfArtists);
+      res.render("artist-search-results", { arrayOfArtists });
     })
     .catch((err) => console.log(err));
 });

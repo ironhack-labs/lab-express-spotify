@@ -8,9 +8,14 @@
     <link rel="stylesheet" href="css/search.css">
 </head>
 <body>
-    <h1>{{name}}</h1>
-    <img src="{{image}}" alt="">
-    <a href="/albums/{{id}}">View Albums</a>
+    {{#each arrayOfArtists}}
+        <div class="artists">
+            <h1>{{this.name}}</h1>
+            <img src="{{this.image}}" alt="">
+            <a href="/albums/{{this.id}}">View Albums</a>
+        </div>
+    {{/each}}
+    
 </body>
 </html>
 
