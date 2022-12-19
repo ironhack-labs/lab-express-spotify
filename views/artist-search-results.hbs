@@ -1,18 +1,6 @@
 <h2 class="subHeader">Results found for your search '{{query}}':</h2>
 <div class="cardContainer">
   {{#each artistsData}}
-    <div class="cardContainer__card">
-      <img
-        class="cardContainer__card__img"
-        src="{{images.0.url}}"
-        alt="Artist image"
-      />
-      <div class="cardContainer__card__info">
-        <h3>
-          {{name}}
-        </h3>
-        <a href="/albums/{{id}}">View albums</a>
-      </div>
-    </div>
+    {{> card this btnConfig=../btnConfig}}
   {{/each}}
 </div>

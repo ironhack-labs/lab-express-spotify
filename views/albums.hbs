@@ -1,18 +1,6 @@
 <h2 class="subHeader">Viewing albums for: '{{artistName}}'</h2>
 <div class="cardContainer">
   {{#each albumsData}}
-    <div class="cardContainer__card">
-      <img
-        class="cardContainer__card__img"
-        src="{{images.0.url}}"
-        alt="Album cover"
-      />
-      <div class="cardContainer__card__info">
-        <h3>
-          {{name}}
-        </h3>
-        <a href="{{../path}}{{id}}">View {{../btnText}}</a>
-      </div>
-    </div>
+    {{> card this btnConfig=../btnConfig}}
   {{/each}}
 </div>

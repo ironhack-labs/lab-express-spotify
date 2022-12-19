@@ -25,6 +25,8 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
+hbs.registerPartials(__dirname + "/views/partials/");
+
 // Our routes go here:
 
 app.get("/", (req, res) => {
@@ -39,9 +41,14 @@ app.get("/artist-search", async (req, res) => {
 
     const artistsData = artistsSearchResponse.body.artists.items;
 
+    const path = "/albums/";
+
+    const text = "albums";
+
     res.render("artist-search-results", {
       artistsData,
       query: req.query.name,
+      btnConfig: { path, text },
     });
   } catch (err) {
     console.log("Something went wrong while searching for artists: ", err);
@@ -60,15 +67,14 @@ app.get("/albums/:artistId", async (req, res) => {
 
     const path = "/tracks/";
 
-    const btnText = "tracks";
+    const text = "tracks";
 
     const albumsData = albumsSearchResponse.body.items;
 
     res.render("albums", {
       albumsData,
       artistName,
-      path,
-      btnText,
+      btnConfig: { path, text },
     });
   } catch (err) {
     console.log("Something went wrong while getting artist albums: ", err);
