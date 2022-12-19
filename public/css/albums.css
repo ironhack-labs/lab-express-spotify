@@ -1,0 +1,36 @@
+body{
+    background-color: #00B172;
+}
+
+h1{
+    text-align: center;
+}
+.album{
+    background-color: #FFF5EE;
+    border: 1px solid #000;
+    display: flex;
+    flex-direction: column;
+    font-size: 2vw;
+    margin: 1vw;
+    padding: 0 0.3vw;
+    align-items: center;
+    width: 30%;
+}
+
+.album h5{
+    text-align: center;
+}
+
+#albums a {
+    color: #00B172;
+    text-decoration: none;
+}
+
+img{
+    width: 250px;
+}
+
+#albums{
+    display: flex;
+    flex-wrap: wrap;
+}

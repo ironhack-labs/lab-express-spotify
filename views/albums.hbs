@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" href="/css/albums.css">
+</head>
+<body>
+    <h1>ALBUMS</h1>
+    <div id="albums">
+        {{#each albumDetailsArr}}
+        <div class="album">
+            <h5>{{this.albumName}}</h5>
+            <img src="{{this.albumImage}}" alt="">
+            <a href="/albums/{{this.albumID}}/tracks">View Tracks</a>
+        </div>
+        {{/each}}
+    </div>
+</body>
+</html>
+
+
