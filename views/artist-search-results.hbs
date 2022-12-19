@@ -1,5 +1,6 @@
 <h1>List of Artists:</h1>
 <div class="container">
+  {{#if items}}
   {{#each items}}
     <div class="summary">
       <div class="img-container">
@@ -18,4 +19,7 @@
       </div>
     </div>
   {{/each}}
+  {{else}}
+  <h1>Sorry, No artistes Found.Try Again!</h1>
+  {{/if}}
 </div>
