@@ -1,13 +1,18 @@
-<ul>
-    {{#each artists}}
-    <li>{{this.name}}
-        <br />
-        {{#if this.images}}
-            <img src="{{this.images.0.url}}" >
+<nav class="nav-bar">
+        <a href="/">Home</a>
+        <a href="javascript:history.back()">Go Back</a>
+</nav>
+
+<div class="artists-page">
+  {{#each artists}}
+    <div class="artists-grid">
+      {{#if images.0.url}}
+        <img src="{{images.0.url}}" class="artists-img">
         {{else}}
-            <img src="" alt="{{this.name}}">
-        {{/if}}
-        <a href="/albums/{{this.id}}">View albums</a>
-    </li>
-    {{/each}}
-</ul>
+        <p class="artists-img">Image not available</p>
+      {{/if}}
+      <h2 class="word-wrap">{{name}}</h2>
+      <a href='/albums/{{id}}'>View Albums ➟</a>
+    </div>
+  {{/each}}
+</div>

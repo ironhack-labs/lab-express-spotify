@@ -1,0 +1,15 @@
+<nav class="nav-bar">
+        <a href="/">Home</a>
+        <a href="javascript:history.back()">Go Back</a>
+</nav>
+
+<div class="tracks-page">
+        {{#each tracks}}
+        <div class="tracks-grid">
+            <audio controls>
+                <source src="{{preview_url}}" type="audio/mpeg">
+            </audio>
+            <p class="word-wrap">{{name}}</p>
+        </div>
+        {{/each}}
+</div>
