@@ -1,0 +1,107 @@
+* {
+    padding: 0;
+    margin:0;
+}
+body {
+    background-color: rgb(30, 215, 96);
+}
+h2 {
+    text-align: center;
+    padding-top: 30px;
+    font-size: 40px;
+}
+h3 {
+    font-size: 24px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+h4 {
+    padding: 20px 10px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(33, 45, 40);
+    padding: 0;
+    height: 80px;
+    width: 100%;
+ 
+}
+input {
+    width: 300px;
+    height: 30px;
+    font-size: 20px;
+    margin: 0 150px;
+    margin-top: 150px;
+}
+a {
+    text-decoration: none;
+    color: rgb(30, 215, 96);;
+} 
+img {
+    width: 200px;
+    padding-bottom: 40px;
+}
+.artists-albums-section {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 20px;
+}
+
+.artists-albums-div {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 240px;
+    margin: 10px;
+    padding: 50px;
+
+}
+.artists-albums-button {
+    width: 150px;
+    height: 45px;
+    margin: 0 200px;
+    font-size: 15px;
+    border-radius: 5px;
+    background-color: rgb(16, 16, 16);
+    margin-top: 50px;
+}
+#nav-home {
+    color: rgb(235, 226, 226);
+    font-size: 64px;
+    text-decoration: none;
+}
+#search-section {
+    border: solid;
+    width: 600px;
+    height: 400px;
+    margin: 150px 25%;
+    border-radius: 10px;
+    background-color: rgb(33, 45, 40);
+}
+#tracks-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px;
+}
+#search-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+}
+#search-button {
+    width: 200px;
+    height: 60px;
+    margin: 0 200px;
+    font-size: 20px;
+    border-radius: 5px;
+    color: rgb(16, 16, 16);
+    background-color: rgb(30, 215, 96);
+    margin-top: 50px;
+
+}
+
+
