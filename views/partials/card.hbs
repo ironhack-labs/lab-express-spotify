@@ -1,9 +1,18 @@
 <div class="cardContainer__card">
-  <img
-    class="cardContainer__card__img"
-    src="{{this.images.0.url}}"
-    alt="Album cover"
-  />
+  {{#if this.images}}
+    <img
+      class="cardContainer__card__img"
+      src="{{this.images.0.url}}"
+      alt="Artist image"
+    />
+  {{else}}
+    <img
+      class="cardContainer__card__img"
+      src="/images/spotify-default-profile-pic.jpg"
+      alt="Default artist image"
+    />
+
+  {{/if}}
   <div class="cardContainer__card__info">
     <h3>
       {{this.name}}

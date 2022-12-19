@@ -45,6 +45,8 @@ app.get("/artist-search", async (req, res) => {
 
     const text = "albums";
 
+    console.log("The returned artists data is: ", artistsData);
+
     res.render("artist-search-results", {
       artistsData,
       query: req.query.name,
