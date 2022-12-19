@@ -1,0 +1,9 @@
+<section class="song-list">
+{{#each songsArray}}
+<div class ="song">
+    <h4>{{this.name}}</h4>
+    <audio src="{{this.preview_url}}" controls></audio>
+    <hr>
+</div>
+{{/each}}
+</section>

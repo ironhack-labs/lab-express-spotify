@@ -1,0 +1,14 @@
+
+<section class="list-albums">
+    {{#each artistSearched}}
+        <div class="album">
+    
+            <img src="{{this.images.[1].url}}" alt="artist-img">
+            <form class= "form-albums" action="/albums/{{this.id}}" method="GET">
+                <h3>{{this.name}}</h3>
+                <button class="btns albums-btn" >Albums</button>
+            </form>
+        </div>
+    {{/each}}
+            
+</section>

@@ -1,0 +1,141 @@
+.body-home{
+    
+    background-image: radial-gradient(circle, #d58f30, #c57d2f, #b56b2d, #a35b2b, #904b28, #7f3e28, #6d3326, #5b2923, #462020, #31181a, #1d0f12, #000000);
+    
+    
+    background-color: #2b0d0f ;
+    
+}
+
+/* *{
+    border: 1px solid blue;
+}  */
+
+
+/**********************/
+/******** home ********/
+/**********************/
+
+.home-div{
+    
+    border-radius: 10px;
+    position:absolute;
+    width: 20rem;
+    height: 10rem;
+    top:50%;
+    left:50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.61);
+
+   
+    
+}
+.home-form{
+   
+    width:90%;
+    
+    margin: 0px auto;
+    display:flex;
+    flex-direction: column;
+    justify-content:space-evenly;
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    
+    
+    
+}
+.home-form input{
+    border:none;
+    border-radius: 5px;
+    height: 2rem;
+    margin:0;
+    
+}
+.search-button{
+    margin:1rem auto 0rem;
+}
+.btns{
+    
+    font-weight: 600;
+    width:max-content;
+    
+    border-radius: 5px;
+    background-color: rgb(255, 67, 67);
+    color:white;
+    height: 2rem;
+    border:none;
+    cursor: pointer;
+    
+}
+/**********************/
+/**** artist-search****/
+/**********************/
+.home-btn{
+    display:block;
+    text-decoration: none;
+    padding: 0.5rem 2rem 0;
+    /* transform: translate(0,50%); */
+    margin: 1rem auto;
+    
+    
+}
+.list-albums{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+.album img{
+    /* min-width: 20vw;
+    max-width: 20vw;
+    max-height: 20vw;
+    min-height: 20vw; */
+    width:20vw;
+    height: 20vw;
+    
+}
+.album{
+    box-shadow:  0px 1px 18px 9px rgb(0 0 0 / 61%);
+    margin:1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+.form-albums{
+    width: 100%;
+    text-align: center;
+    color:white;
+    background-color: rgba(255, 255, 255, 0.253);
+    
+}
+.form-albums h3{
+    
+    margin:0;
+    padding:0.5rem;
+}
+.albums-btn{
+    margin-bottom:0.5rem;
+}
+
+/**********************/
+/********songs********/
+/**********************/
+
+.song-list{
+    background-color: rgba(255, 255, 255, 0.39);
+    width:40%;
+    margin:auto;
+    border-radius: 5px;
+    margin-bottom: 2rem;
+}
+.song h4{
+    padding-top: 1rem;
+   margin:0.2rem 5%;
+}
+.song audio{
+    margin:0 5%;
+    width: 90%;
+}

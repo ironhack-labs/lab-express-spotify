@@ -1,0 +1,12 @@
+<section class="list-albums">
+{{#each albumsArray}}
+<div class="album">
+    <img src="{{this.images.[1].url}}" alt="{{this.name}}">
+    <form class= "form-albums" action="/songs/{{this.id}}">
+        <h3>{{this.name}}</h3>
+        <button class="btns albums-btn">View songs</button>
+
+    </form>
+</div>
+{{/each}}
+</section>
