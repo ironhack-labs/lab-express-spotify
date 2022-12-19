@@ -75,9 +75,9 @@ body {
   background-color: #eee;
 }
 
-/* artist-search-results.hbs */
+/* utils */
 
-.artistSearchResultsTitle {
+.subHeader {
   margin: 2rem auto;
 }
 
@@ -112,5 +112,3 @@ body {
   width: 30rem;
   height: 30rem;
 }
-
-/* albums.hbs */

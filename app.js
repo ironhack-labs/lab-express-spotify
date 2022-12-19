@@ -31,25 +31,48 @@ app.get("/", (req, res) => {
   res.render("home");
 });
 
-app.get("/artist-search", (req, res) => {
-  spotifyApi
-    .searchArtists(req.query.name)
-    .then((result) => {
-      console.log(
-        "Received search results: ",
-        result.body.artists.items[0].images
-      );
-
-      const artistsData = result.body.artists.items;
-
-      res.render("artist-search-results", {
-        artistsData,
-        query: req.query.name,
-      });
-    })
-    .catch((err) =>
-      console.log("An error occured while searching for artists: ", err)
+app.get("/artist-search", async (req, res) => {
+  try {
+    const artistsSearchResponse = await spotifyApi.searchArtists(
+      req.query.name
     );
+
+    const artistsData = artistsSearchResponse.body.artists.items;
+
+    res.render("artist-search-results", {
+      artistsData,
+      query: req.query.name,
+    });
+  } catch (err) {
+    console.log("Something went wrong while searching for artists: ", err);
+  }
+});
+
+app.get("/albums/:artistId", async (req, res) => {
+  try {
+    const artistSearchResponse = await spotifyApi.getArtist(
+      req.params.artistId
+    );
+
+    const { name: artistName, id: artistId } = artistSearchResponse.body;
+
+    const albumsSearchResponse = await spotifyApi.getArtistAlbums(artistId);
+
+    const path = "/tracks/";
+
+    const btnText = "tracks";
+
+    const albumsData = albumsSearchResponse.body.items;
+
+    res.render("albums", {
+      albumsData,
+      artistName,
+      path,
+      btnText,
+    });
+  } catch (err) {
+    console.log("Something went wrong while getting artist albums: ", err);
+  }
 });
 
 app.listen(3000, () =>
