@@ -1,3 +1,13 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa&display=swap");
+
+:root {
+  --primary-color: #1db954;
+  --secondary-color: #ffff;
+  --bg-color: #191414;
+
+  --primary-font: "Comfortaa", cursive;
+}
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -12,6 +22,8 @@ body {
   display: flex;
   flex-direction: column;
   height: 100vh;
+
+  font-family: var(--primary-font);
 }
 
 /* layout.hbs */
@@ -23,12 +35,15 @@ body {
   flex-shrink: 0;
   width: inherit;
   height: 5rem;
+
+  background-color: var(--bg-color);
 }
 
 .header__title {
   margin-right: auto;
 
-  font-size: 3rem;
+  font-size: 4rem;
+  color: var(--primary-color);
 }
 
 .header__homeLink {
@@ -36,7 +51,13 @@ body {
   margin-left: 2rem;
 
   text-decoration: none;
-  font-size: 1.5rem;
+  font-size: 2rem;
+  color: var(--secondary-color);
+  transition: color 0.5s ease-in-out;
+}
+
+.header__homeLink:hover {
+  color: var(--primary-color);
 }
 
 .footer {
@@ -44,9 +65,11 @@ body {
   align-items: center;
   flex-shrink: 0;
   height: 4rem;
-  margin-left: 1rem;
+  padding-left: 1rem;
 
   font-size: 1.5rem;
+  color: var(--primary-color);
+  background-color: var(--bg-color);
 }
 
 /* home.hbs */
@@ -72,13 +95,35 @@ body {
   height: 15rem;
   width: 30rem;
 
-  background-color: #eee;
+  background-color: rgba(100, 100, 100, 0.6);
+}
+
+.home__searchForm__input {
+  height: 2.5rem;
+  width: 25rem;
+}
+
+.home__searchForm__btn {
+  padding: 1rem 0.5rem;
+  width: 20rem;
+
+  font-family: var(--primary-font);
+  background-color: var(--bg-color);
+  color: var(--secondary-color);
+  transition: color 0.5s ease-in-out;
+  cursor: pointer;
+}
+
+.home__searchForm__btn:hover {
+  color: var(--primary-color);
 }
 
 /* artist-search-results/albums.hbs */
 
 .subHeader {
-  margin: 2rem auto;
+  margin: 3rem auto;
+
+  font-size: 2rem;
 }
 
 .cardContainer {
@@ -87,8 +132,6 @@ body {
   align-items: center;
   flex-wrap: wrap;
   gap: 2rem;
-  margin-top: 2rem;
-  width: 100vw;
 }
 
 /* card.hbs */
