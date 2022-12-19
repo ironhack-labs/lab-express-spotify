@@ -1,9 +1,9 @@
 {{#each searchResults}}
-  <section>
-
-    <h3>{{this.name}}</h3>
-    <img src="{{this.images.[0]}}" />
-    <a href="/album-tracks/{{this.id}}">View Tracks</a>
-
+  <section class="result-container">
+    <div class="result-box">
+      <img src="{{images.1.url}}" />
+      <h3>{{this.name}}</h3>
+      <a href="/album-tracks/{{this.id}}">View this Album</a>
+    </div>
   </section>
 {{/each}}

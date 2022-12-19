@@ -1,10 +1,17 @@
-{{#each searchResults}}
-  <section>
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Listen</th>
+  </tr>
 
-    <h3>{{this.name}}</h3>
-    <audio controls>
-        <source src="{{this.preview_url}}">
-    </audio>
+    {{#each searchResults}}
+    <tr></tr>
+      <td>{{this.name}}</td>
+      <td><audio controls>
+        <source src="{{this.preview_url}}" />
+      </audio>
+    </td>
+    </tr>
+    {{/each}}
 
-  </section>
-{{/each}}
+</table>
