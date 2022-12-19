@@ -1,18 +1,17 @@
+<h1>Albums page: </h1>
+<div class="container">
+  {{#each items}}
+    <div class="summary">
+      <div class="img-container">
 
-
-<h3>albums page </h3>
-
-{{#each items}}
-    <section class="album-summary">
-        <h2>{{this.name}}</h2>
-       <br>
-
-      <img src="{{this.images.0.url}}" alt="">
-      
-    
-     <button type="submit"> <a href ="/tracks/{{this.id}}"> View Tracks</a> </button>
-        </section>
-    {{/each}}
-
-
-<button>View Tracks</button>
+        <img src="{{this.images.0.url}}" alt="image for track" />
+      </div>
+      <div class="artist-container">
+        <h4>{{this.name}}</h4>
+        <button id="view-albums" type="submit">
+          <a href="/tracks/{{this.id}}"> View Tracks</a>
+        </button>
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -1,23 +1,18 @@
-<h3>this is the tracks page</h3>
-
-
+<div class="navbar">
+  <div>Title</div>
+  <div class="listen">Listen</div>
+</div>
+<div class ="track-box">
 {{#each items}}
-    <section class="tracks-summary">
-        <h2>{{this.name}}</h2>
-       <br>
+ 
+    <div class="track-summary">
+<h3>{{this.name}}</h3>
 
-    <figure>
-    <figcaption>Listen to the audio:</figcaption>
-    <audio
-        controls
-        src="{{this.preview_url}}">
-            <a href="{{this.preview_url}}">
-                Download audio
-            </a>
+    <audio controls src="{{this.preview_url}}">
+      <a href="{{this.preview_url}}">
+        Download audio
+      </a>
     </audio>
-</figure>
-
-    
-    
-        </section>
-    {{/each}}
+    </div>
+  {{/each}}
+  </div>

@@ -1,18 +1,17 @@
 <h1>List of Artists:</h1>
+<div class="container">
+  {{#each items}}
+    <div class="summary">
+      <div class="img-container">
+        <img src="{{this.images.0.url}}" alt="image for album" />
+      </div>
 
-
-
-
-
-{{#each items}}
-    <section class="artist-summary">
-        <h2>{{this.name}}</h2>
-       <br>
-
-      <img src="{{this.images.0.url}}" alt="">
-      
-    
-     <button type="submit"> <a href ="/albums/{{this.id}}"> View Albums</a> </button>
-        </section>
-    {{/each}}
-
+      <div class="artist-container">
+        <h4>{{this.name}}</h4>
+        <button id="view-albums" type="submit">
+          <a href="/albums/{{this.id}}"> View Albums</a>
+        </button>
+      </div>
+    </div>
+  {{/each}}
+</div>
