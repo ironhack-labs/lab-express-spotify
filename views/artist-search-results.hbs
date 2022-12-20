@@ -10,6 +10,7 @@
 </head>
 <body>
     {{>nav}}
+    <div id="artists">
     {{#each arrayOfArtists}}
         <div class="artists">
             <h1>{{this.name}}</h1>
@@ -17,7 +18,7 @@
             <a href="/albums/{{this.id}}">View Albums</a>
         </div>
     {{/each}}
-    
+</div>
 </body>
 </html>
 

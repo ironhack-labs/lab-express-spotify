@@ -30,6 +30,10 @@ a:hover{
     text-align: center;
 }
 
+#artists{
+    margin-top:8vw;
+}
+
 #navbar a{
  margin-top: 0;
 }

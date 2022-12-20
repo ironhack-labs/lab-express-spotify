@@ -11,6 +11,7 @@ h1{
 .album{
     background-color: #FFF5EE;
     border: 1px solid #000;
+    border-radius: 5%;
     display: flex;
     flex-direction: column;
     font-size: 2vw;
@@ -36,4 +37,10 @@ img{
 #albums{
     display: flex;
     flex-wrap: wrap;
+    margin-top: 4vw;
+}
+
+#navbar {
+    position: relative;
+    top: -0.2vw;
 }
