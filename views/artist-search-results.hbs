@@ -1,0 +1,18 @@
+{{#if result}}
+  {{#each result}}
+    <section class="artist-search">
+        <!-- image of the artist-->
+        <img src="{{artistImage}}"
+
+        <!-- name of the artist-->
+        <h1>{{artistName}}</h1>
+
+        <!-- button to get to the collection of albums by the artist-->
+        <form action="/album-view" method="GET">
+            <a href="/albums/{{artistId}}">View Albums</a>
+    </form>
+    </section>   
+  {{/each}}
+{{else}}
+  <h3>Sorry, we didn't find the artist.</h3>
+{{/if}}

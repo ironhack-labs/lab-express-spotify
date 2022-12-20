@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1p:wght@100;400&family=Pacifico&family=Rubik+Vinyl&display=swap');
+
+body {
+    background-color: black;
+    background-image: url("../images/concert-spotify.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: relative;
+}
+
+.search{
+    position: absolute;
+    margin: 20% 40%;
+    background-color: rgba(252, 166, 116, 0.75); /* 50% transparent */
+    padding: 50px 100px;
+    font-family: 'M PLUS 1p', sans-serif;
+}
+
+.artist-search {
+    height: 30vh;
+    width: 15vw;
+}
