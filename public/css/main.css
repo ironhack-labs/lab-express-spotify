@@ -7,11 +7,11 @@ White: #FFF
 */
 
 /*----------type selectors----------*/
-body,
-html {
+
+body{
     font-family: 'Roboto';
     height: 100%;
-    margin-top: 0;
+    margin: 0;
     padding: 0;
     width: 100%;
 }
@@ -155,7 +155,7 @@ header {
 
 #search{
     background-color:#00B172;
-    padding: 2vw;
+    padding: 6vw 2vw;
     text-align: center;
 }
 

@@ -11,7 +11,7 @@ body{
 .track{
     display:flex;
     flex-direction: column;
-    font-size: 1.5vw;
+    font-size: 0.95vw;
     align-items: center;
     width: 30%;
 }

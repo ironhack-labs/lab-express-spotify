@@ -8,6 +8,11 @@ body{
     width: 100vw;
 }
 
+hr{
+    border-top-color:#000;
+    width: 50%;
+}
+
 img{
     align-self:center;
     width: 20%;
@@ -24,9 +29,9 @@ a:hover{
 }
 
 .artists{
-    border: 1px solid #000;
     display:flex;
     flex-direction: column;
+    margin: 4vw 0;
     text-align: center;
 }
 
