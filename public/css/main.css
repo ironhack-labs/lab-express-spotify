@@ -121,19 +121,6 @@ header {
     width: 11%;
 }
 
-/*navbar*/
-.nav-links {
-    display: flex;
-    list-style-type: none;
-}
-
-.nav-link {
-    margin: 0 2vw;
-}
-
-.spotify-logo {
-    width: 15%;
-}
 
 /*title section*/
 
@@ -166,13 +153,6 @@ header {
     font-size:3vw;
 }
 
-#navbar {
-    background-color: #FFF;
-    display: flex;
-    padding: 1vw;
-    position: fixed;
-    z-index: 1;
-}
 #search{
     background-color:#00B172;
     padding: 2vw;

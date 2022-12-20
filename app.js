@@ -3,14 +3,14 @@ require("dotenv").config();
 const express = require("express");
 const hbs = require("hbs");
 const bodyParser = require("body-parser");
-const axios = require("axios");
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
-app.set("view engine", "hbs");
+hbs.registerPartials(__dirname + "/views/partials");
 app.set("views", __dirname + "/views");
+app.set("view engine", "hbs");
 app.use(express.static(__dirname + "/public"));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -33,7 +33,7 @@ spotifyApi
 // Our routes go here:
 app.get("/", (req, res, next) => {
   console.log("homepage request");
-  res.render("main");
+  res.render("homepage");
 });
 
 app.get("/artist-search", (req, res, next) => {

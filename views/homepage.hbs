@@ -2,25 +2,17 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <title>Spotify Clone</title>
-    <link rel="stylesheet" href="./styles/style.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/navbar.css">
 </head>
 
 <body>
-    <nav id="navbar">
-        <div>
-            <img class="spotify-logo" src="./images/spotify-logo.png" alt="spotify logo">
-        </div>
-        <ul class="nav-links">
-            <li class="nav-link">Premium</li>
-            <li class="nav-link">Discover</li>
-            <li class="nav-link">Help</li>
-            <li class="nav-link">Download</li>
-        </ul>
-    </nav>
+    {{>nav}}
+    {{{body}}}
     <header>
         <div class="title">
             <h1 class="title-heading">Music for everyone.</h1>
@@ -28,7 +20,7 @@
                 wherever you are.</aside>
         </div>
     </header>
-    <form id="search" action="/" method="post">
+    <form id="search" action="/artist-search" method="GET">
         <input id="input" type="text" name="artist" placeholder="artist">
         <button id="button" type="submit">Search</button>
     </form>
@@ -74,8 +66,6 @@
                 <img class="app-image" src="./images/spotify-app.jpg" alt="spotify app image">
             </div>
         </container>
-
-    </section>
 </body>
 
 </html>
