@@ -184,31 +184,46 @@ body {
 
 /* tracks.hbs */
 
-.tracksHeader {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0 10rem;
-  margin-bottom: 2rem;
-}
-
 .tracks {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   gap: 2rem;
+  padding-bottom: 2rem;
+
+  background-color: #ddd;
+}
+
+.tracks__headers {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2rem;
+  width: 90vw;
+
+  font-size: 1.5rem;
+}
+
+.tracks__headers__title {
+  margin-left: 5rem;
+}
+
+.tracks__headers__listen {
+  margin-right: 12rem;
 }
 
 .tracks__details {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 100vw;
+  width: 90vw;
 }
 
 .tracks__details__title {
   padding-left: 5rem;
+
+  font-size: 1.5rem;
 }
 
 .tracks__details__player {
