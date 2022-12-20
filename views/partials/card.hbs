@@ -14,9 +14,12 @@
 
   {{/if}}
   <div class="cardContainer__card__info">
-    <h3>
+    <h3 class="cardContainer__card__info__title">
       {{this.name}}
     </h3>
-    <a href="{{btnConfig.path}}{{id}}">View {{btnConfig.text}}</a>
+    <a
+      class="cardContainer__card__info__button"
+      href="{{btnConfig.path}}{{id}}"
+    >View {{btnConfig.text}}</a>
   </div>
 </div>

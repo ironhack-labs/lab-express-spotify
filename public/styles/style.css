@@ -145,6 +145,8 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+
+  /* border: 0.1rem solid #000; */
 }
 
 .cardContainer__card__info {
@@ -152,14 +154,32 @@ body {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  flex-wrap: wrap;
   gap: 1rem;
-  width: 100%;
+  width: 30rem;
   padding: 2rem 0;
+
+  background-color: #ddd;
 }
 
 .cardContainer__card__img {
   width: 30rem;
   height: 30rem;
+}
+
+.cardContainer__card__info__title {
+  font-size: 2rem;
+}
+
+.cardContainer__card__info__button {
+  padding: 0.5rem;
+
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  border: 0.1rem solid var(--primary-color);
+  border-radius: 0.7rem;
+  font-size: 1.5rem;
+  text-decoration: none;
 }
 
 /* tracks.hbs */
