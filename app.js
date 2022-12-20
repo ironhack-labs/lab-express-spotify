@@ -42,16 +42,6 @@ app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(artist)
     .then((data) => {
-      /*const artistsArr = data.body.artists;
-      const arrayOfArtists = [];
-      for (let i = 0; i < artistsArr.length; i++) {
-        arrayOfArtists.push({
-          name: artistsArr.items[i].name,
-          image: artistsArr.items[i].images[0].url,
-          id: artistsArr.items[i].id,
-        });
-      }*/
-
       const artistsArr = data.body.artists.items;
       const arrayOfArtists = [];
       for (let i = 0; i < artistsArr.length; i++) {
@@ -68,10 +58,6 @@ app.get("/artist-search", (req, res, next) => {
           });
         }
       }
-      //const name = artist.name;
-      //const image = artistsArr[2].images[0].url;
-      //const id = artistsArr.id;
-      //res.send(arrayOfArtists);
       res.render("artist-search-results", { arrayOfArtists });
     })
     .catch((err) => console.log(err));
@@ -79,7 +65,6 @@ app.get("/artist-search", (req, res, next) => {
 
 app.get("/albums/:artistID", (req, res, next) => {
   spotifyApi.getArtistAlbums(req.params.artistID).then((data) => {
-    //const albumsArr = data.body.items[0].images;
     const albumsArr = data.body.items;
     const albumDetailsArr = [];
     for (let i = 0; i < albumsArr.length; i++) {
@@ -89,7 +74,6 @@ app.get("/albums/:artistID", (req, res, next) => {
         albumID: albumsArr[i].id,
       });
     }
-    //res.send(albumsArr[0].id);
     res.render("albums", { albumDetailsArr });
   });
 });
@@ -104,7 +88,6 @@ app.get("/albums/:albumID/tracks", (req, res, next) => {
         previewurl: tracksArr[i].preview_url,
       });
     }
-    //res.send(tracksArr[1]);
     res.render("tracks", { arrayOfTracks });
   });
 });
