@@ -1,0 +1,12 @@
+<div class="track">
+    <h1>Preview list</h1>
+    <section class="preview-list">
+        {{#each albumArr}}
+        <h2>{{name}}</h2>
+        <br>
+        <audio controls>
+            <source src="{{preview_url}}" type="audio/mp3">
+        </audio>
+        {{/each}}  
+    </section>      
+</div>

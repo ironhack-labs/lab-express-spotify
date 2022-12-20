@@ -1,14 +1,11 @@
-
-    {{#each albumArr}}
-        <section class="album-container">
-            {{#if images.0.url}}
-                <img src="{{images.0.url}}">
-            {{else}}
-                <img src="/images/blank.jpg">
-            {{/if}} 
-                <h1>{{name}}</h1>
-
-                 <a href="/albums/{{id}}">View Tracks</a>
-             
-        </section>        
-    {{/each}}    
+{{#each albumArr}}
+    <section class="album-container">
+        {{#if images.0.url}}
+            <img src="{{images.0.url}}">
+        {{else}}
+            <img src="/images/blank.jpg">
+        {{/if}} 
+            <h1>{{name}}</h1>
+            <a href="/track/{{id}}">View Tracks</a>     
+    </section>        
+{{/each}}    
