@@ -1,18 +1,13 @@
-{{#if result}}
-  {{#each result}}
-    <section class="artist-search">
-        <!-- image of the artist-->
-        <img src="{{artistImage}}"
+<ul>
+  {{#each albums}}
+    <li>
+      {{this.name}}
+      <br />
+      <img src="{{this.images.2.url}}" alt="{{this.name}}" />
+      <br />
 
-        <!-- name of the artist-->
-        <h1>{{artistName}}</h1>
-
-        <!-- button to get to the collection of albums by the artist-->
-        <form action="/album-view" method="GET">
-            <a href="/albums/{{artistId}}">View Albums</a>
-    </form>
-    </section>   
+      {{! to see the tracks we need to provide the ID in the URL so it gets picked up by req.params in the route}}
+      <a href="/tracks/{{this.id}}">View tracks</a>
+    </li>
   {{/each}}
-{{else}}
-  <h3>Sorry, we didn't find the artist.</h3>
-{{/if}}
+</ul>

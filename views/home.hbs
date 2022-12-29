@@ -1,11 +1,13 @@
-<section class="search">
-  <h3>Search Artists</h3>
-  <form action="/artist-search" method="GET">
-    <label>
-      Artist:
-      <input type="text" />
-    </label>
+<form action="/artist-search" method="GET">
+  <label>
+    Artist:
+    <input
+      type="text"
+      name="artistName"
+      id=""
+      placeholder="Type an artist's name here ..."
+    />
+  </label>
 
-    <button type="submit">Search for an Artist</button>
-  </form>
-</section>
+  <button type="submit">Search for an Artist</button>
+</form>
