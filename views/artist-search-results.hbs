@@ -4,7 +4,7 @@
 {{#each artists}}
     <h3 class='artist-name'>{{this.name}}</h3>
     <img src='{{this.images.0.url}}' alt='artist-album-cover' class="artist-album-cover" height="320px" width="320px" />
-    <a href="/view-albums">View Albums</a>
+    <button><a href="/albums/{{this.id}}">View Albums</a></button>
 {{/each}}
 
 </div>
