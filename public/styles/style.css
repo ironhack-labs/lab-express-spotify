@@ -1,0 +1,63 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+nav, ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+    color: white;
+    list-style-type: none;
+    font-size: 150%;
+}
+
+a:link {
+    color: white;
+    text-decoration: none;
+}
+
+a:visited {
+    color: white;
+    text-decoration: none;
+}
+
+a:hover {
+    color: red;
+    text-decoration: none;
+}
+  
+a:active {
+    color: white;
+    text-decoration: none;
+}
+
+.index-body {
+    background: url("/images/spotify-background.jpeg") no-repeat center center fixed;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+}
+    
+.search-box {    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    height: 500px;
+}
+
+input, select, textarea {
+    font-size: 200%;
+}
+
+.artist-search-button {
+    padding: 10px 37px;
+    background-color: red;
+    color: white;
+    border: red;
+}
+
+.search-bar {
+    border: 50%;
+}
