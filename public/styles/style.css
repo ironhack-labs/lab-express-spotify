@@ -12,9 +12,10 @@ nav, ul {
     font-size: 150%;
 }
 
-.view-album-button {
+.view-album-button, .view-tracks-button {
     background-color: #373CEA ;
     font-size: 100%;
+    margin-bottom: 10px;
 }
 
 a:link {
@@ -68,30 +69,44 @@ input, select, textarea {
     border: 50%;
 }
 
-.artist-search-results {
+.artist-search-results, .see-albums {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: center;
 }
 
-.each-artist-album {
+.each-artist-album, .each-track {
     display: flex;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
     margin: 50px;
+    border: solid;
+    background-color: #1DB954;
 }
 
-.artist-album-cover {
+.artist-album-cover, .artist-album-cover-2 {
     margin: 20px;
 }
 
-.see-albums {
+.heading {
+    display: flex;
+    justify-content: space-between;
+    margin: 40px;
+}
+
+.see-tracks {
     display: flex;
     flex-direction: column;
-    align-items: center;
-    margin: 50px;
 }
 
-.each-track {
-    margin: 20px;
+.see-each-track {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px;
+    padding: 10px;
+    background-color: #EDEDED;
 }
+
+

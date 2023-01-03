@@ -3,8 +3,8 @@
 {{#each albums}}
 <div class="each-track">
     <h3 class="album-name">{{this.name}}</h3>
-    <img src="{{this.images.0.url}}" alt="album-cover" height="320px" width="320px" />
-    <button><a href="/tracks/{{this.id}}">View Tracks</a></button>
+    <img src="{{this.images.0.url}}" class="artist-album-cover-2"alt="album-cover" height="320px" width="320px" />
+    <button class="view-tracks-button"><a href="/tracks/{{this.id}}">View Tracks</a></button>
 </div>
 {{/each}}
     
