@@ -1,0 +1,140 @@
+* {
+    margin: 0;
+    background-color: #191414;
+    color: #fff;
+  }
+
+  #home {
+    display: block;
+    margin: 0 auto;
+    width: 20%;
+    height: 20%;
+    padding-bottom: 5%;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  input[type="text"] {
+    background-color: #282828;
+    border: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    width: 80%;
+    padding: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #1db954;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+    width: 20%;
+  }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #121212;
+    color: white;
+  }
+  
+  .artist {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  
+  .artist img {
+    width: 15%;
+    height: 15%;
+    border-radius: 50%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+  
+  .artist h2 {
+    font-size: 20px;
+    margin: 0;
+  }
+  
+  button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 20px;
+    height: 50px;
+  }
+  
+  ul {
+    list-style: none;
+    display: flex;
+  }
+  
+  li {
+    margin: 0 10px;
+  }
+  
+  a {
+    color: white;
+    text-decoration: none;
+  }
+
+  .album {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    padding: 20px;
+  }
+  
+  .album img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+  
+  .album h2 {
+    font-size: 24px;
+  }
+  
+  .album button {
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .album button a {
+    color: #fff;
+    text-decoration: none;
+  }
+
+  a {
+    text-decoration: none;
+  }
+
+  audio {
+    width: 50%;
+    padding: 20px;
+  }
+  
+  
+  

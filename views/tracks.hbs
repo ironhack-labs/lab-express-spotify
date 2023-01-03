@@ -4,14 +4,18 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css">
+<title> Spotify Lab </title>
 </head>
 <body>
-
-   
-
-
     
+  {{#each tracks}}
+    <div class="track">
+      <h2>{{ name }}</h2>
+      <audio src="{{ preview_url }}" controls></audio>
+    </div>
+  {{/each}}
+
     
 </body>
 </html>
