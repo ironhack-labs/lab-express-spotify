@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+    
+{{#each albums}}
+  <div class="album">
+    <h2>{{ name }}</h2>
+    <img src="{{ images.0.url }}" alt="{{ name }}">
+    <button><a href="/tracks/{{id}}">View Tracks</a></button>
+  </div>
+{{/each}}
+    </div>
+</body>
+</html>

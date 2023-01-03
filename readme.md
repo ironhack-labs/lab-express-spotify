@@ -73,7 +73,7 @@ In the next few steps, you'll create all of the files that you need. So far, you
 3. Inside of the `app.js` file, require `spotify-web-api-node`.
 
 ```js
-const SpotifyWebApi = require('spotify-web-api-node');
+const SpotifyWebApi = require("spotify-web-api-node");
 ```
 
 4. Inside of the `app.js` file, you'll find the place where you should paste the following code:
@@ -81,14 +81,16 @@ const SpotifyWebApi = require('spotify-web-api-node');
 ```javascript
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
+  clientSecret: process.env.CLIENT_SECRET,
 });
 
 // Retrieve an access token
 spotifyApi
   .clientCredentialsGrant()
-  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-  .catch(error => console.log('Something went wrong when retrieving an access token', error));
+  .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
+  .catch((error) =>
+    console.log("Something went wrong when retrieving an access token", error)
+  );
 ```
 
 5. See this above?
@@ -96,7 +98,7 @@ spotifyApi
 ```js
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
-  clientSecret: process.env.CLIENT_SECRET
+  clientSecret: process.env.CLIENT_SECRET,
 });
 ```
 
@@ -135,9 +137,9 @@ lab-express-spotify
 As we can see, in your _app.js_ we have required all the packages we need for now:
 
 ```javascript
-const express = require('express');
-const hbs = require('hbs');
-const SpotifyWebApi = require('spotify-web-api-node');
+const express = require("express");
+const hbs = require("hbs");
+const SpotifyWebApi = require("spotify-web-api-node");
 ```
 
 We are good to go. Let's open the [spotify-web-api-node](https://www.npmjs.com/package/spotify-web-api-node) documentation and start our journey!
@@ -165,11 +167,13 @@ The method we will use from the npm package is: `spotifyApi.searchArtists()`. In
 ```javascript
 spotifyApi
   .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
+  .then((data) => {
+    console.log("The received data from the API: ", data.body);
     // ----> 'HERE WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
   })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
+  .catch((err) =>
+    console.log("The error while searching artists occurred: ", err)
+  );
 ```
 
 In order to display the found artists' information, create `artist-search-results.hbs` file inside `views` folder and display name, image, and button (or link) to show the albums for a particular artist on a new view (for now just create the button/link and we will take care of the rest in the next step). Again, styling is not your priority, so let's move to the next step.
@@ -193,7 +197,7 @@ So let's create a new page - `albums.hbs` where all the results will be displaye
 Your route should look like the following:
 
 ```javascript
-app.get('/albums/:artistId', (req, res, next) => {
+app.get("/albums/:artistId", (req, res, next) => {
   // .getArtistAlbums() code goes here
 });
 ```
