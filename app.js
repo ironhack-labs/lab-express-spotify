@@ -35,7 +35,9 @@ app.get('/artist-search-results', (req, res, next) => {
     spotifyApi
         .searchArtists(req.query.artist)
         .then((data) => {
-            res.render('artist-search-results', { artists: data.body.artists.items });
+            res.render('artist-search-results', {
+                artists: data.body.artists.items
+            });
             console.log(data.body.artists);
         })
         .catch(err => console.log(err))
