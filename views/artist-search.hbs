@@ -1,0 +1,24 @@
+<div id="artistGrid">
+{{#each items}}
+<div class="artistCard">
+{{#if images}}
+{{#each images}}
+{{#if @first}}
+<img class="artistImg" src="{{this.url}}" alt="the-image"> <br>
+{{/if}}
+{{/each}}
+{{/if}}
+<div class="artistWrapper">
+<p class="artistName">{{this.name}}</p> <br>
+<a class="artistLink" href="/albums/{{this.id}}">View Albums</a><br>
+</div>
+</div>
+{{/each}}
+</div>
+
+
+
+
+
+
+

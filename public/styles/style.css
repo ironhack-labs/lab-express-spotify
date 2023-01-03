@@ -1,0 +1,137 @@
+
+/*Home*/
+#hero {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 40px 0 0 60px;
+}
+#heroDiv {
+  width: 50%;
+}
+#heroImg {
+  width: 50%;
+  object-fit: cover;
+  padding-left: 100px;
+}
+#girlHeadphones{
+    width: 300px;
+    height: 300px;
+   border-radius: 50%;
+   box-shadow: 40px -40px rgba(46, 139, 87, 0.8);
+}
+#heroH1{
+    font-size: 5em;
+    margin-bottom: 40px;
+}
+#heroText{
+    margin-bottom: 40px;
+    line-height: 1.5;
+}
+#searchForm {
+  background-color: rgba(46, 139, 87, 0.7);
+  padding: 40px;
+  border-radius: 10px;
+  display: flex;
+}
+
+#searchBar {
+    padding: 15px;
+    background-color: rgba(255, 255,255, 0.7);
+    border-style: none;
+    border-radius: 10px;
+    width: 50%;
+    color: rgba(0, 0, 0, 0.5);
+}
+#searchButton{
+    padding: 15px;
+    border-radius: 10px;
+    margin-left: 30px;
+    border-style: none;
+    text-transform: uppercase;
+    color: rgba(255, 255,255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+#searchButton:hover{
+    background-color:  rgba(255, 255,255, 0.7);
+    color: rgba(0, 0, 0, 0.7);
+}
+
+#spotify-logo{
+    width: 30px;
+}
+#logoDiv{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+#navBar{
+    padding: 0 60px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    max-width: 100%;
+    justify-content: space-between;
+}
+.navLink{
+    text-decoration: none;
+    color: black;
+    padding: 10px 15px;
+    font-size: 1.2em;
+}
+.navLink:hover{
+    color: rgba(255, 255,255, 0.7);
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+}
+#nav{
+    justify-self: flex-end;
+}
+
+/*artist-search*/
+
+#artistGrid{
+    padding: 40px 60px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 400px 400px 400px 400px;
+    row-gap: 40px;
+}
+
+.artistCard{
+display: flex;
+flex-direction: column;
+width: 250px;
+background-color: rgba(46, 139, 87, 0.7);
+border-radius: 10px;
+overflow: hidden;
+}
+.artistImg{
+    width: 100%;
+    object-fit: fill;
+    height: 60%;
+}
+.artistName{
+margin: 0;
+font-size: 1.2em;
+line-height: 1.2em;
+}
+.artistLink{
+text-decoration: none;
+color: black;
+margin: 0;
+color: rgba(255, 255,255, 0.7);
+background-color: #000000b3;
+text-transform: uppercase;
+padding:15px;
+border-radius: 10px;
+border-style: none;
+width: 50%;
+font-size: 0.75em;
+}
+
+.artistWrapper{
+    padding: 0px 20px 40px 20px;
+}
