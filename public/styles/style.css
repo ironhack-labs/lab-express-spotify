@@ -12,6 +12,11 @@ nav, ul {
     font-size: 150%;
 }
 
+.view-album-button {
+    background-color: #373CEA ;
+    font-size: 100%;
+}
+
 a:link {
     color: white;
     text-decoration: none;
@@ -31,6 +36,7 @@ a:active {
     color: white;
     text-decoration: none;
 }
+
 
 .index-body {
     background: url("/images/spotify-background.jpeg") no-repeat center center fixed;
@@ -60,4 +66,32 @@ input, select, textarea {
 
 .search-bar {
     border: 50%;
+}
+
+.artist-search-results {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+}
+
+.each-artist-album {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.artist-album-cover {
+    margin: 20px;
+}
+
+.see-albums {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 50px;
+}
+
+.each-track {
+    margin: 20px;
 }

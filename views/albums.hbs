@@ -1,9 +1,11 @@
 <div class="see-albums">
 
 {{#each albums}}
+<div class="each-track">
     <h3 class="album-name">{{this.name}}</h3>
     <img src="{{this.images.0.url}}" alt="album-cover" height="320px" width="320px" />
     <button><a href="/tracks/{{this.id}}">View Tracks</a></button>
+</div>
 {{/each}}
     
 </div>

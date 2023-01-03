@@ -2,9 +2,11 @@
 <div class="artist-search-results">
 
 {{#each artists}}
+<div class="each-artist-album">
     <h3 class='artist-name'>{{this.name}}</h3>
     <img src='{{this.images.0.url}}' alt='artist-album-cover' class="artist-album-cover" height="320px" width="320px" />
-    <button><a href="/albums/{{this.id}}">View Albums</a></button>
+    <button class="view-album-button"><a href="/albums/{{this.id}}">View Albums</a></button>
+</div>
 {{/each}}
 
 </div>
