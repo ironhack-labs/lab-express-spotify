@@ -40,16 +40,18 @@ app.get("/artist-search", (req, res, next) => {
       console.log(data.body.artists.items);
       res.render("artist-search-results", { artists: data.body.artists.items });
     })
-    .catch((err) => console.log("this is an error =>  ", err));
+    .catch((err) => console.log("this is an error in artists=>  ", err));
 });
 
 //Albums
 app.get("/albums/:artistId", (req, res,next) => {
-  spotifyApi.getArtistAlbums(req.params.artistId)
+  //console.log(req.params)
+   spotifyApi.getArtistAlbums(req.params.artistId)
       .then((data) => {
+        console.log(data.body.items)
       res.render("albums", { albums: data.body.items });
          })
-    .catch((err) => console.log("this is an error =>  ", err));
+    .catch((err) => console.log("this is an error in albums=>  ", err));
 });
 
 //Tracks
@@ -58,7 +60,7 @@ app.get("/tracks/:tracksId", (req, res,next) => {
      .then((data) => {
       res.render("tracks", { tracks: data.body.items });
     })
-    .catch((err) => console.log("this is an error =>  ", err));
+    .catch((err) => console.log("this is an error in tracks =>  ", err));
 });
 
 app.listen(4000, () =>
