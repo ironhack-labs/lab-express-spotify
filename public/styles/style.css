@@ -1,0 +1,206 @@
+*, ::after, ::before{
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Comfortaa', cursive;
+}
+
+.search-page{
+    background: linear-gradient(to bottom, #2EC4F9, #3900EB);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 80vw;
+    height: 80vh;
+    background: rgba(0, 0, 0, 0.2)
+}
+
+h1{
+    margin-bottom: 18%;
+    color: white;
+    font-size: 60px;
+    font-family: 'Montserrat Subrayada', sans-serif;
+}
+
+
+
+
+.search-bar{
+    background: rgba(255, 255, 255, 0.2);
+    border: transparent;
+    border-radius: 60px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    width: 30vw;
+    height: 8vh;
+    color: rgba(255, 255, 255, 0.7);
+    font-family: 'Comfortaa', cursive;
+    font-size: 25px;
+}
+
+.search-bar::placeholder{
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.search-form button{
+    border-radius: 100%;
+    margin-left: -100px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: transparent;
+    width: 4vw;
+    height: 7vh;
+    color: #3900EB;
+}
+
+/*Results*/
+.nav-bar{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    position: fixed;
+    width: 100vw;
+    height: 80px;
+    padding-top: 10px;
+    padding-left: 50px;
+    padding-bottom: 10px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.nav-bar a{
+    font-weight: bold;
+    font-size: 25px;
+    color: white;
+    text-decoration: none;
+    padding-right: 50px;
+}
+
+.results{
+    padding-top: 10vh;
+    background: linear-gradient(to bottom, #2EC4F9, #3900EB);
+}
+
+#artist-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height:100%;
+}
+
+#album-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#track-results{
+    min-height: 100vh;
+    padding-top: 150px;
+    padding-bottom: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 30%;
+}
+
+
+.artist-search-results{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    margin: 30px;
+    border-radius: 60px;
+    width: 300px;
+    height: 400px;
+}
+
+#artist-search-result{
+    background: rgba(255, 255, 255, 0.6);
+}
+
+#album-search-result{
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.artist-img{
+    border-radius: 100%;
+    width: 250px;
+    height: 250px;
+    margin-bottom: 15px;
+}
+
+.name{
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+#artist-name{
+    font-size: 23px;
+    color: black;
+}
+
+#album-name{
+    font-size: 20px;
+    color: white;
+}
+
+.artist-search-results a{
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 60px;
+    width: 150px;
+    height: 35px;
+    font-weight: bold;
+    font-size: 17px;
+}
+
+#album-search-button{
+    color: rgba(255, 255, 255, 0.9);
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.img-not-available{
+    color: rgba(0, 0, 0, 0.6);
+    font-size: 18px;
+    margin-top: 220px;
+    margin-bottom: 20px;
+}
+
+#track-search-button{
+    background: rgba(255, 255, 255, 0.8);
+    color: black;
+}
+
+.track{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    width: 50%;
+    background: linear-gradient(to right, rgba(255, 255, 255, 0.5), white);
+    border-radius: 60px;
+    padding-left: 30px;
+    margin-bottom: 10px;
+}
+
+.track-name{
+    font-weight: bold;
+    font-size: 18px;
+    color: rgba(0, 0, 0, 0.8);
+}

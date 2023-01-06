@@ -1,0 +1,14 @@
+<nav class="nav-bar">
+    <a href="/">Home</a>
+    <a href="javascript:history.back()">Go Back</a>
+</nav>
+
+<div class="results" id="album-results">
+    {{#each albums}}
+    <div class="artist-search-results" id="album-search-result">
+        <img src="{{images.0.url}}" class="artist-img">
+        <p class="name" id="album-name">{{name}}</p>
+        <a href="/tracks/{{id}}" id="track-search-button">View Tracks</a>
+    </div>
+    {{/each}}
+</div>
