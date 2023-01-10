@@ -1,0 +1,184 @@
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-image: url('../images/spotify-background.jpeg');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.artist-search {
+  height: 300px;
+  width: 800px;
+  background-color: rgba(188, 170, 170, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.artist-search input {
+  width: 500px;
+  border: none;
+  height: 50px;
+}
+
+.artist-search button {
+  display: block;
+  background-color: rgb(186, 14, 14);
+  color: #fff;
+  font-size: 14px;
+  font-weight: bold;
+  border: 0;
+  height: 50px;
+  padding: 0 30px;
+}
+
+.artist-search form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+.search-results,
+.track-list {
+  position: relative;
+  background-color: rgba(188, 170, 170, 0.6);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 500px;
+  width: 990px;
+  padding: 0 30px;
+}
+.search-results > a,
+.track-list > a {
+  position: absolute;
+  left: 20px;
+  top: 30px;
+}
+.search-results > a > button,
+.track-list > a > button {
+  height: 30px;
+  width: 100px;
+}
+.search-results h1,
+.track-list h1 {
+  padding: 30px 0;
+  border-bottom: solid 1px #000;
+  width: 100%;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.search-results-items {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+  color: #fff;
+  padding-bottom: 100px;
+}
+
+.search-results-items > div {
+  width: 200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  background-color: rgb(58, 54, 54);
+
+  padding-bottom: 10px;
+}
+
+.search-results a {
+  text-decoration: none;
+  color: #000;
+}
+
+.search-results img {
+  width: 200px;
+  height: 200px;
+}
+
+.item-info-name {
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.item-info button {
+  padding: 10px;
+  width: 150px;
+}
+
+.track-list-table {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 500px;
+  gap: 20px;
+}
+.track-table-header,
+.track-table-items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  /* flex: 1; */
+}
+.track-table-header {
+    border-bottom: 1px solid #000;
+    padding-bottom: 20px;
+}
+.track-table-header > div {
+    padding: 0 80px;
+}
+.track-table-items > div {
+  flex: 1;
+}
+
+.track-table-items > div:nth-child(2) {
+  align-self: center;
+  justify-self: center;
+  /* background-color: green; */
+  text-align: right;
+}
+
+.track-table-items audio {
+  border-radius: 0;
+  background-color: rgba(188, 170, 170, 1);
+  height: 30px;
+  width: 250px;
+}
+
+.track-table-items audio::-webkit-media-controls-panel {
+  /* background-color: red; */
+  border-radius: 0;
+  border: 0;
+  background-color: rgba(188, 170, 170, 1);
+  outline: none;
+  /* background-color: rgb(255, 255, 255); */
+  /* opacity: 1; */
+}
+
+audio:focus {
+  outline: none;
+}

@@ -1,0 +1,24 @@
+<section class='track-list'>
+  <h1>Track List</h1>
+  <a href='#' onclick='window.history.go(-1)'><button>Go Back</button></a>
+  <div class='track-list-table'>
+    <div class='track-table-header'>
+      <div><h2>Title</h2></div>
+      <div><h2>Listen</h2></div>
+    </div>
+    {{#each tracks}}
+      <div class='track-table-items'>
+        <div>
+          {{this.name}}
+        </div>
+        <div>
+          <audio controls id='my-audio-{{this.id}}'>
+
+            <source src='{{this.preview_url}}' />
+            Your browser does not support the audio element.
+          </audio>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>

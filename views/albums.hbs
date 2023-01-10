@@ -1,0 +1,19 @@
+<section class='search-results'>
+  <h1>Albums</h1>
+  <a href='#' onclick='window.history.go(-1)'><button>Go Back</button></a>
+  <div class='search-results-items'>
+    {{#each albums}}
+      <div class='item-info'>
+        <div class='item-info-img'>
+          <img src='{{this.images.0.url}}' alt='{{this.name}}' />
+        </div>
+        <div class='item-info-name'>
+          {{this.name}}
+        </div>
+        <div class='item-info-button'>
+          <a href='/track/{{this.id}}'><button>View Tracks</button></a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</section>
