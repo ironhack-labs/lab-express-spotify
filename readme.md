@@ -478,7 +478,7 @@ Happy Coding! :heart:
   After the package is installed, you can use it by importing it at the top of your file. Remember to import it at the top, before other packages:
 
   ```bash
-  require('dotenv').config(
+  require("dotenv").config();
   ```
 
   Also, you should check that there is a `.env` file in the root directory of your project.
