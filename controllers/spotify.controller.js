@@ -17,8 +17,17 @@ module.exports.albums = (req, res) => {
   spotifyApi
     .getArtistAlbums(req.params.id)
     .then((data) => {
-      // console.log(data.body.items)
       res.render("pages/albums", { albums: data.body.items });
+    })
+    .catch((err) => console.log("The error while searching artists occurred: ", err));
+};
+
+module.exports.tracks = (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.tracks)
+    .then((data) => {
+      // console.log(data.body.items)
+      res.render("pages/tracks", { tracks: data.body.items });
     })
     .catch((err) => console.log("The error while searching artists occurred: ", err));
 };
