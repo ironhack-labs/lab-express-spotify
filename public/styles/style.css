@@ -1,0 +1,165 @@
+/* Globals */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+/* body {
+  
+} */
+
+/* NavBar */
+
+.container nav {
+  position: fixed;
+  background-color: black;
+  width: 100%;
+  padding: 1rem;
+  z-index: 10;
+}
+
+.container nav a {
+  text-decoration: none;
+  color: aliceblue;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Home */
+
+.home {
+  background-image: url('/images/spotify-background.webp');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.home .shadow {
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.171);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home .shadow form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  row-gap: 2rem;
+  background-color: rgba(255, 255, 255, 0.527);
+  border-radius: 5px;
+  padding: 4rem;
+}
+
+.home .shadow form input {
+  border: none;
+  font-size: 1.5rem;
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  width: 500px;
+}
+
+.home .shadow form input:focus {
+  outline-color: #1db954;
+}
+
+.home .shadow form button {
+  background-color: #1db954;
+  border: none;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: aliceblue;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  transition: .2s ease-in;
+}
+
+.home .shadow form button:hover {
+  scale: 1.1;
+}
+
+/* Cards */
+
+.cards-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  max-width: 1280px;
+  padding: 6rem 0;
+  margin: 0 auto;
+  row-gap: 2rem;
+}
+
+.card {
+  width: 320px;
+  height: 460px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  color: aliceblue;
+  background-color: rgb(29, 29, 29);
+  text-align: center;
+}
+
+.card h1 {
+  font-size: 1.5rem;
+}
+
+.card a {
+  background-color: #1db954;
+  border-radius: 5px;
+  font-size: 1.5rem;
+  color: aliceblue;
+  padding: 0.7rem 1.5rem;
+  transition: .2s ease-in;
+  margin-bottom: 1rem;
+  text-decoration: none;
+}
+
+.card a:hover {
+  scale: 1.1;
+}
+
+/* Tracks */
+
+.tracks-container {
+  max-width: 1280px;
+  padding: 6rem 0;
+  margin: 0 auto;
+}
+
+.track {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  background-color: rgb(29, 29, 29);
+  padding: 1rem;
+  border-radius: 5px;
+}
+
+.track h1 {
+  font-size: 1.5rem;
+  color: aliceblue;
+}
+
+/* Footer */
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  background-color: black;
+  padding: 0.3rem;
+}
+
+footer p {
+  color: aliceblue;
+  font-size: 1.2rem;
+  text-align: center;
+}

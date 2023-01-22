@@ -1,6 +1,10 @@
-{{#each tracks as |track|}}
+<div class="tracks-container">
+  {{#each tracks as |track|}}
 
-  <h1>{{track.name}}</h1>
-  <audio controls src="{{track.preview_url}}"></audio>
+    <div class="track">
+      <h1>{{track.name}}</h1>
+      <audio controls src="{{track.preview_url}}"></audio>
+    </div>
 
-{{/each}}
+  {{/each}}
+</div>
