@@ -1,0 +1,13 @@
+Fonts used in this design:
+
+Font: Syne
+Author: Bonjour Monde,Lucas Descroix
+Url: https://fonts.google.com/specimen/Syne
+
+Font: Roboto
+Author: Christian Robertson
+Url: https://fonts.google.com/specimen/Roboto
+
+Font: Josefin Sans
+Author: Santiago Orozco
+Url: https://fonts.google.com/specimen/Josefin+Sans
