@@ -1,9 +1,9 @@
-<ul>
+<div class="tracks-list">
     {{#each tracks as |track|}}
-        <li>{{track.name}}</li>
-        <audio 
-            controls
-            src="{{track.preview_url}}">
-        </audio>
+            <h1 class="track-name">{{track.name}}</h1>
+            <audio  class="audio-control"
+                controls
+                src="{{track.preview_url}}">
+            </audio>
     {{/each}}
-</ul>
+</div>
