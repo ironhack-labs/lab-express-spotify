@@ -39,3 +39,47 @@
     background-color: #453b3b;
     color: white;
   }
+  .artists {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  
+  .artists img {
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  .click {
+    display: inline-block;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    color:white;
+    background-color: #cc3d1d;
+    border-radius: 6px;
+    outline: none;
+  }
+
+  .albums {
+    display: flex;
+    align-items: center;
+    margin-bottom: 30px;
+    margin-left: 20px;
+  }
+  
+  .albums img {
+    width: 30%;
+    height: 30%;
+    border-radius: 10%;
+    margin-right: 20px;
+    margin-left: 20px;
+  }
+
+  audio {
+    padding: 20px;
+  }
