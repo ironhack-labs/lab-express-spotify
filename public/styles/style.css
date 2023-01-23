@@ -8,7 +8,7 @@ body {
     height: 70px;
     overflow: hidden;
     position: fixed;
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(30, 215, 96);
     top: 0;
     width: 100%;
     display: flex;
@@ -17,9 +17,8 @@ body {
 }
 
 .navbar a {
-    float: left;
     display: block;
-    color: #eeeeee;
+    color: #000000;
     text-align: center;
     text-decoration: none;
     font-size: 20px;
@@ -27,6 +26,33 @@ body {
     padding-left: 40px;
 }
 
+#artist-navbar {
+    width: 200px;
+    height: 40px;
+    border-radius: 30px;
+    border: none;
+    box-shadow: -3px -3px 64px -8px rgba(31,115,74,0.72);
+    -webkit-box-shadow: -3px -3px 64px -8px rgba(31,115,74,0.72);
+    -moz-box-shadow: -3px -3px 64px -8px rgba(31,115,74,0.72);
+}
+
+#search-btn-nav{
+    color: rgb(142, 142, 142);
+    border-radius: 100px;
+    border: none;
+    background-color: black;
+    width: 30px;
+    height: 30px;
+    align-items: center;
+}
+
+#search-btn-nav:hover {
+    background-color: rgb(247, 247, 247);
+}
+
+.form-nav {
+    margin-right: 50px;
+}
 
 .home {
     height: 100vh;
@@ -42,11 +68,12 @@ body {
 
 .home h1 {
     color: rgb(0, 0, 0);
-    
+    padding-top: 30px;
+    padding-bottom: 30px;
 }
 
 .search-container {
-    border-radius: 15px;
+    border-radius: 30px;
     height: 250px;
     width: 600px;
     background-color: rgba(255, 255, 255, 0.32);
@@ -59,7 +86,7 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 20px;
+    gap: 50px;
     width: 100%;
 }
 
