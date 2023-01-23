@@ -1,5 +1,6 @@
 <ul>
     {{#each albums as |album|}}
+    <img src="{{ images.0.url }}" alt="{{ album.name }}">
         <li>
             <a href="/tracks/{{album.id}}">
                 {{album.name}}

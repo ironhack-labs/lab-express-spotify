@@ -1,3 +1,4 @@
+// setting the spotify-api goes here:
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 

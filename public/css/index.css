@@ -1,0 +1,41 @@
+.home-image {
+    display: block;
+    margin: 0 auto;
+    width: 50%;
+    height: 50%;
+    padding-bottom: 5%;
+  }
+
+  form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 60px;
+    margin: 0 auto;
+    max-width: 500px;
+  }
+
+  input[type="text"] {
+    background-color: #282828;
+    border: none;
+    color: #b3b3b3;
+    font-size: 14px;
+    width: 80%;
+    padding: 10px;
+  }
+  
+  button[type="submit"] {
+    background-color: #b92d1d;
+    border: none;
+    color: #ffffff;
+    font-size: 14px;
+    padding: 10px;
+    width: 40%;
+  }
+
+  body {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    background-color: #453b3b;
+    color: white;
+  }
