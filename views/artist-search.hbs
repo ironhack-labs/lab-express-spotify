@@ -1,10 +1,33 @@
-<ul>
+<div class="row row-cols-1 row-cols-md-3 g-4">
     {{#each artists as | artist | }}
-    <a href="/albums/someArtistIdGoesHere">View Albums</a>
-    <li>{{artist.name}}</li>
-    <li>
-        <img src="{{artist.images.[2].url}}" alt="image">
-    </li>
-    </a>
-    {{/each}}
-</ul>
+  <div class="col w-5">
+    <div class="card h-40">
+      <img src="{{artist.images.[0].url}}" class="card-img-top" alt="images" style="width: 100%; height: 350px;">
+      <div class="card-body text-center">
+        <h5 class="card-title text-center">{{artist.name}}</h5>
+        <a href="/albums/someArtistIdGoesHere" class="btn btn-danger">View Albums</a>
+      </div>
+    </div>
+  </div>
+       {{/each}}
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

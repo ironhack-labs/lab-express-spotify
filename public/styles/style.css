@@ -1,3 +1,14 @@
+body {
+    background-color: rgb(69, 162, 69);
+}
+
+.card {
+    background-color: rgb(84, 82, 82);
+}
+
+.card-title {
+    color: white;
+}
 
 .back {
     width: 1098px;
