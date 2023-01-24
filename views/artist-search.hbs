@@ -1,5 +1,10 @@
 <ul>
     {{#each artists as | artist | }}
+    <a href="/albums/someArtistIdGoesHere">View Albums</a>
     <li>{{artist.name}}</li>
+    <li>
+        <img src="{{artist.images.[2].url}}" alt="image">
+    </li>
+    </a>
     {{/each}}
 </ul>

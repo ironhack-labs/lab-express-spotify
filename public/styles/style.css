@@ -1,4 +1,31 @@
 
-.image {
-    background-image: url('../images/spotify-background.jpeg');
+.back {
+    width: 1098px;
+    height: 554px;
+    position: absolute;
+    z-index: -1;
+}
+
+.container {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: space-between;
+}
+
+.container>form {
+    width: 200px;
+    height: 50px;
+    display: flex;
+    flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-start;
+	align-items: center;
+	align-content: space-between;
+    position: absolute;
+    top: 200px;
+    left: 400px;
 }
