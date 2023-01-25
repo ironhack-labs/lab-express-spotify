@@ -1,0 +1,47 @@
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+     {{#each tracks as | track | }}
+    <tr>
+      <td>{{track.name}}</td>
+      <td><audio
+        controls
+        src="{{track.preview_url}}">
+            <a href="{{track.preview_url}}">
+                Download audio
+            </a>
+    </audio>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
+
+
+
+
+
+
+
+
+
+
+
+
+{{!-- 
+<div class="row row-cols-1 row-cols-md-3 g-4">
+    {{#each tracks as | track | }}
+  <div class="col w-5">
+    <div class="card h-40">
+      <div class="card-body text-center">
+        <h5 class="card-title text-center">{{track.name}}</h5>
+        <audio controls src="{{track.preview_url}}"></audio>
+      </div>
+    </div>
+  </div>
+       {{/each}}
+</div> --}}

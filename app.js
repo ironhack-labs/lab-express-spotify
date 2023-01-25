@@ -52,5 +52,14 @@ app.get('/albums/:id', (req, res) => {
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
+app.get('/tracks/:tracksId', (req, res) => {
+    spotifyApi
+    .getAlbumTracks(req.params.tracksId)
+    .then(data => {
+        res.render('tracks', { tracks: data.body.items})
+    })
+    .catch(err => console.log('The error while searching artists occurred: ', err));
+})
+
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
