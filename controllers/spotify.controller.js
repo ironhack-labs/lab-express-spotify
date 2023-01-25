@@ -28,9 +28,9 @@ module.exports.albums = (req, res) => {
 
 module.exports.tracks = (req, res) => {
   spotifyApi
-    .getAlbumTracks(req.params.albumId)
+    .getAlbumTracks(req.params.tracksId)
     .then((data) => {
-      res.render("tracks", { albums: data.body.items });
+      res.render("tracks", { tracks: data.body.items });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

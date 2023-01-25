@@ -1,0 +1,18 @@
+body {
+  background-color: #81b71a;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-image: url("/images/spotify-background.jpeg");
+}
+
+.artist-search {
+  position: absolute;
+  top: 200px;
+  left: 500px;
+  display: flex;
+  flex-direction: column;
+}
