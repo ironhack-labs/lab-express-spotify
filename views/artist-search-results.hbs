@@ -1,0 +1,13 @@
+<body class="body-albums-artists">
+  <ul class="albums-artists">
+    {{#each artists as |artist|}}
+    <div class="album-artist">
+      <img class="artist-album-img" src="{{artist.images.[1].url}}" alt="artist-img">
+      <div class="bottom-image">
+        <p><b>{{artist.name}}</b></p>
+        <a href="/albums/{{artist.id}}" class="btn btn-danger">View Albums</a>
+        </div>
+      </div>
+    {{/each}}
+  </ul>
+</body>

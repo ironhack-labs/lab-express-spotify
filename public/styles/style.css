@@ -1,0 +1,95 @@
+html {
+  height: 100%;
+}
+
+.background {
+  background-image: url(../images/spotify-background.jpeg);
+  background-size: cover;                 
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.container {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  background: rgba(255, 255, 255, .5);
+  width: 800px;
+  height: 250px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container input {
+  width: 500px;
+  margin-bottom: 20px;
+}
+
+.container button {
+  padding: 8px 15px;
+  border: none;
+  color: white;
+}
+
+.track-and-audio {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 30px;
+  margin: 10px 0;
+  background-color: #fff9e1;
+}
+
+.navbar-table {
+  background-color: #553d2a;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row; 
+  color: #fff9e1;
+  height: 80px;
+  padding: 20px 20px;
+}
+
+.listen {
+  padding-right: 200px;
+}
+
+.artist-album-img {
+  width: 300px;
+  height: 300px;
+}
+
+.body-albums-artists {
+  padding: 0 300px;
+}
+
+.albums-artists {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.album-artist {
+  display: flex;
+  flex-direction: column;
+  margin: 30px 50px;
+}
+
+.bottom-image {
+  background-color: gray;
+  width: 300px;
+  text-align: center;
+  color: white;
+  padding: 5px 0;
+}
+
+.bottom-image p {
+  padding: 0;
+  margin-bottom: 5px;
+}

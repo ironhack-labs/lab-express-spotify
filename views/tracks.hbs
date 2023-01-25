@@ -1,0 +1,12 @@
+<ul>
+  <div class="navbar-table">
+    <h2>Title</h2>
+    <h2 class="listen">Listen</h2>
+  </div>
+    {{#each tracks as |track|}}
+    <div class="track-and-audio">
+      <p>{{track.name}}</p>
+      <p><audio controls src="{{track.preview_url}}"></audio></p>
+    </div>
+  {{/each}}
+</ul>
