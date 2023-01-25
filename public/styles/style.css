@@ -1,42 +1,40 @@
 body {
-    background-color: rgb(69, 162, 69);
+  background-color: rgb(69, 162, 69);
 }
 
-.card {
-    background-color: rgb(84, 82, 82);
-}
 
 .card {
-    color: white;
+  background-color: rgb(84, 82, 82);
+  color: white;
 }
 
 .back {
-    width: 1098px;
-    height: 554px;
-    position: absolute;
-    z-index: -1;
+  width: 1098px;
+  height: 554px;
+  position: absolute;
+  z-index: -1;
 }
 
 .container {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: space-between;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
 }
 
 .container>form {
-    width: 200px;
-    height: 50px;
-    display: flex;
-    flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-start;
-	align-items: center;
-	align-content: space-between;
-    position: absolute;
-    top: 200px;
-    left: 400px;
+  width: 200px;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: space-between;
+  position: absolute;
+  top: 200px;
+  left: 400px;
 }
