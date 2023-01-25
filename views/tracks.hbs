@@ -1,6 +1,17 @@
-<ul>
-  {{#each tracks as |track|}}
-    <h2 class="track-name">{{track.name}} </h2>
-     <audio controls src="{{track.preview_url}}"/></audio>
-  {{/each}}
-</ul>
+<table class="table">
+  <thead class="thead-dark">
+    <tr>
+      <th scope="col">Title</th>
+      <th scope="col">Listen</th>
+       </tr>
+  <tbody>
+    {{#each tracks as |track|}}
+    <tr>
+      <td><class="track-name">{{track.name}}</td>
+      <td><audio class = "audio" controls src="{{track.preview_url}}"/></audio></td>
+          </tr>
+          {{/each}}
+          </thead>
+  </tbody>
+</table>
+

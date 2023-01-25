@@ -1,9 +1,12 @@
 .home-image {
-    display: block;
-    margin: 0 auto;
-    width: 50%;
-    height: 50%;
-    padding-bottom: 5%;
+    min-height: 100%;
+    min-width: 1024;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: -1;
   }
 
   form {
@@ -63,6 +66,7 @@
     background-color: #cc3d1d;
     border-radius: 6px;
     outline: none;
+   
   }
 
   .albums {
@@ -82,4 +86,8 @@
 
   audio {
     padding: 20px;
+    margin-left: 100px;
+  }
+  h5 {
+    color: #453b3b;
   }
