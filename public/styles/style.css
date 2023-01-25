@@ -1,3 +1,18 @@
 body {
   background-color: aquamarine;
 }
+
+.artist-search {
+  position: absolute;
+  top: 200px;
+  left: 600px;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+
+
+
+
