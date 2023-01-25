@@ -2,6 +2,12 @@ body {
   background-color: aquamarine;
 }
 
+.container {
+  background-image: url("/images/spotify-background.jpeg");
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 .artist-search {
   position: absolute;
   top: 200px;
