@@ -9,7 +9,7 @@ module.exports.search = (req, res) => {
   spotifyApi
     .searchArtists(req.query.search)       /*'HERE GOES THE QUERY ARTIST'*/  // GET /artist-search?search=sharika
     .then(data => {
-     // console.log('The received data from the API: ', data.body.artists.items);
+      // console.log('The received data from the API: ', data.body.artists.items);
       // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("search", { artists: data.body.artists.items });
     })
