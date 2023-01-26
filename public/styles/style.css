@@ -1,13 +1,16 @@
 body {
-  background-color: aquamarine;
+  background-color: white;
 }
 
 .container {
-  background-image: url("/images/spotify-background.jpeg");
+  background-image: url("/images/spotify-background.webp");
+  background-position: center;
+  background-size: cover;
   display: flex;
   align-items: center;
   justify-content: center;
 }
+
 .artist-search {
   position: absolute;
   top: 200px;
@@ -16,9 +19,6 @@ body {
   flex-direction: column;
 }
 
-
-
-
-
-
-
+.card {
+  background-color: rgb(86, 82, 82);
+}
