@@ -16,3 +16,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
+.card {
+  background-color: rgb(90, 80, 80);
+}
