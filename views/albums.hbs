@@ -1,5 +1,4 @@
-{{!-- <h3>Albums for: {{artist.name}}</h3> --}}
-
+<h3>Albums for: {{ albums.0.artists.0.name }}</h3>
 <div class="row row-cols-1 row-cols-md-3 g-4">
   {{#each albums as |album|}}
     <div class="col w-5">

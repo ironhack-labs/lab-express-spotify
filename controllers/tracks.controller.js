@@ -5,6 +5,7 @@ module.exports.tracks = (req, res) => {
         .getAlbumTracks(req.params.tracksId)
         .then(data => {
             res.render('tracks', { tracks: data.body.items })
+            console.log(data.body.items[0].name)
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 };
