@@ -1,0 +1,9 @@
+<ul class="d-flex flex-column">
+    {{#each artists as |artist|}}
+        <li>
+            <img src={{artist.images.[2].url}}>
+            <h1>{{artist.name}}</h1>
+            <a href="/albums/{{artist.id}}">View Albums</a>
+        </li><br>
+    {{/each}}
+</ul>

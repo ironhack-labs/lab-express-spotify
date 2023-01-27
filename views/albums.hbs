@@ -1,0 +1,12 @@
+<ul class="d-flex flex-row flex-wrap">
+    {{#each albums as |album|}}
+    <div class="m-2">
+        <li>
+            <img src={{album.images.[1].url}}>
+            <h1>{{album.name}}</h1>
+            <a href="/tracks/{{album.id}}">View Tracks</a>
+        </li><br>
+    </div>
+    {{/each}}
+</ul>
+

@@ -1,0 +1,7 @@
+<ul>
+    {{#each tracks as |track|}}
+        <li class="d-flex justify-content-between m-1">
+            <p>{{track.name}}</p> <p>-</p> <audio controls src="{{track.preview_url}}">
+        </li>
+    {{/each}}
+</ul>
