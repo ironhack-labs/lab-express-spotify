@@ -31,3 +31,15 @@ module.exports.albums = (req, res, next) => {
   });
 }
 
+
+module.exports.tracks = (req, res, next) => {
+  spotifyAPI.getAlbumTracks(req.params.albumId)
+  .then(function(data) {
+    console.log('Tracks in album ', data.body);
+    res.render('album-tracks', {
+      tracks: data.body.items
+    })
+  }, function(err) {
+    console.error(err);
+  });
+}
