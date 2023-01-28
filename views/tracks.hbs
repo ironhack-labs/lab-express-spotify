@@ -1,0 +1,8 @@
+<div>
+    {{#each tracks as |track|}}
+        <div>
+            <h4>{{track.name}}</h4>
+            <audio controls src="{{track.preview_url}}" />
+        </div>
+    {{/each}}
+</div>
