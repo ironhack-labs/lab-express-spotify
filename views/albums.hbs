@@ -1,0 +1,11 @@
+<ul>
+    {{#each albums as |album|}}
+        <li>
+            <a href="/tracks/{{album.id}}">
+                {{album.name}}
+            </a>
+            
+        </li>
+    {{/each}}
+</ul>
+<a href="/">home</a>
