@@ -1,9 +1,9 @@
-<ul class="d-flex flex-row flex-wrap">
+<ul class="d-flex flex-row flex-wrap list-group">
     {{#each albums as |album|}}
-    <div class="m-2">
-        <li>
+    <div class="m-2 w-5">
+        <li class="list-group-item">
             <img src={{album.images.[1].url}}>
-            <h1>{{album.name}}</h1>
+            <h4>{{album.name}}</h4>
             <a href="/tracks/{{album.id}}">View Tracks</a>
         </li><br>
     </div>

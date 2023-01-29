@@ -1,0 +1,29 @@
+.content {
+    background-image: url("/public/styles/style.css");
+    background-repeat: no-repeat;
+}
+
+.containerArtist {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    width: 1200px;
+    margin: 0 auto;
+}
+
+.link {
+    background-color: rgb(84, 111, 246);
+    color: white;
+    border-radius: 5px;
+    text-decoration: none;
+    padding: 5px;
+    margin: 5px;
+}
+
+.singlecard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(55, 55, 55);
+    margin: 5px;
+}
