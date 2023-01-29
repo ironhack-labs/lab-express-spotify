@@ -1,0 +1,16 @@
+
+<div class="row row-cols-1 row-cols-md-3 g-3">
+   {{#each albums as |album|}}
+
+<div class="col">
+    <div class="card card-model">
+        <img src="{{album.images.0.url}}" class="card-img-top" alt="image"/>
+            <div class="card-body body-container">
+                 <a href="/tracks/{{album.id}}">{{album.name}}</a>
+                <h4 class="card-title"> {{artist.name}} </h4>
+                <a href="/albums/{{artist.id}}" class="btn btn-danger"> {{artist.name}} </a>
+            </div>
+        </div>
+    </div>
+    {{/each}}
+</div>
