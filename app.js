@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
+hbs.registerPartials(`${__dirname}/views/partials`);
 
 const app = express();
 
