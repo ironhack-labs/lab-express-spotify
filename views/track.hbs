@@ -1,0 +1,7 @@
+<div class="tracks-container">
+{{#each tracks as |track|}}
+  <div class="card tracks">
+    <figcaption>{{track.name}} - <audio controls src="{{track.preview_url}}"/></figcaption>
+  </div>
+{{/each}}
+</div>

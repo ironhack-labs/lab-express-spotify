@@ -1,0 +1,22 @@
+.body-container {
+  width: 18rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: darkgray;
+  color: white;
+}
+.card-model {
+  width: 18rem;
+  display: flex;
+  align-items: center;
+}
+.tracks-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.tracks {
+  margin: 1rem 2rem;
+  width:fit-content;
+}
