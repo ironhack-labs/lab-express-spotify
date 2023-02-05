@@ -1,0 +1,60 @@
+form {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  background-color: hsl(0, 0%, 100%, 0.5);
+  padding: 50px;
+  border-radius: 15px;
+}
+
+form > div {
+  width: 600px
+}
+
+.home {
+  width: 100vw;
+  height: 100vh;
+  background-image: url("https://www.forummusikae.com/wp-content/uploads/2018/08/aditya-chinchure-494048-unsplash.jpg");
+  background-repeat: no-repeat;
+  padding: 0px;
+}
+
+h3 {
+  padding: 20px 20px 30px 20px;
+}
+
+.results-container {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.card:not(.track-card) {
+  text-align: center;
+  margin: 20px;
+}
+
+h4 {
+  margin: 20px 0 30px 150px;
+  font-size: 32px;
+}
+
+.tracks-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.track-card {
+  height: 75px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 5px 0;
+  background-color: rgb(241, 241, 241);
+  width: 1000px;
+  border-radius: 10px;
+}
