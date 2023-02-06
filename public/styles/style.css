@@ -76,6 +76,14 @@ nav a {
   margin: 20px;
 }
 
+.track {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  margin: 20px;
+}
+
 /* From: https://getcssscan.com/css-buttons-examples */
 
 button {
