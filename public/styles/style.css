@@ -7,6 +7,30 @@ body {
   margin: 0;
 }
 
+.artist-search {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 95vh;
+  width: 100vw;
+  background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: 100vw 95vh;
+}
+
+.artist-search-form {
+  display: flex;
+  flex-direction: column;
+  font-size: 1.5rem;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+button[for="query"] {
+  margin-top: 20px;
+}
+
 a {
   text-decoration: none;
   color: inherit;
