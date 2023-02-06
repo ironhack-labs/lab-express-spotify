@@ -10,9 +10,13 @@
 <body>
     <div class ="artist-info">
 {{#each artistInfo}}
-<h2>{{name}}</h2>
+<div class ="artist-box">
 <img src="{{images.[0].url}}" alt="Images">
-<a href="albums/{{id}}">View Albums</a>
+<div class="artist-div">
+<h4>{{name}}</h4>
+<a href="albums/{{id}}"> <button class="artist-btn">View Albums</button></a>
+</div>
+</div>
 {{/each}}
 </div>
 

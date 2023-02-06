@@ -1,15 +1,85 @@
+#home {
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home-screen {
+    background-color: lightgrey;
+    width: 800px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 300px auto;
+    opacity: 0.5;
+    flex-wrap: wrap;
+}
+
+.home-screen input {
+    width: 400px;
+    height: 30px;
+    border: lightgrey;
+    border-radius: 5px;
+}
+
+.home-btn {
+    background-color: red;
+    padding: 10px 5px ;
+    color: white;
+    border: none;
+    margin-top: 10px;
+    width: 150px;
+}
+
+.home-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
 .artist-info img {
-    width: 100px;
+    height: 200px;
 }
 
 .artist-info {
     display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: 100px;
-
-
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: space-between;
+    margin: 50px 50px;
 }
+
+.artist-box {
+    display: flex;
+    flex-direction: column;
+    margin-top: 100px;
+}
+
+.artist-div {
+    background-color: grey;
+    color: white;
+    width: 200px;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 auto;
+}
+
+.artist-btn {
+    background-color: #FA695C;
+    padding: 5px 2px;
+    border: none;
+    border-radius: 5px;
+    color: white;
+}
+
 
 .album-img {
     width: 200px;
