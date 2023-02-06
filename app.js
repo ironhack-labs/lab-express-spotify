@@ -37,7 +37,17 @@ app.get('/artist-search', (req,res) => {
     console.log('The received data from the API: ', data.body);
 
 
-//GET https://api.spotify.com/v1/artists/{id}
+//GET https://api.spotify.com/v5/artists/{id}
+
+// Get Elvis' albums
+/* spotifyApi.getArtistAlbums('43ZHCT0cAZBISjO8DG9PnE').then(
+    function(data) {
+      console.log('Artist albums', data.body);
+    },
+    function(err) {
+      console.error(err);
+    }
+  ); */
 
     //res.render('artist-search');
 
