@@ -5,14 +5,19 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/style.css">
-    <title>Album Search Results</title>
+    <title>Album Tracks</title>
 </head>
 <body>
-    <div class ="album-info">
-{{#each albumInfo}}
+    <div class ="track-info">
+{{#each trackInfo}}
 <h4>{{name}}</h4>
-<img src="{{images.[0].url}}" class="album-img" alt="Images">
-<a href="tracks/{{id}}">View Tracks</a>
+<audio
+        controls
+        src="{{preview_url}}">
+            <a href="{{preview_url}}">
+                Download audio
+            </a>
+    </audio>
 {{/each}}
 </div>
 
