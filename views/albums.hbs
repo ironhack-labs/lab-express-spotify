@@ -1,0 +1,12 @@
+<h1 id="albums-header">Albums for: {{{dataArtists.name}}}</h1>
+<div id="albums-container">
+    {{#each artistAlbums}}
+    <div id="album-container">
+        <img id="cover-img" src="{{images.[0].url}}" alt="album cover">
+        <div id="title-container">
+            <h1>{{name}}</h1>
+            <a href="/tracks/{{id}}">View Tracks</a>
+        </div>
+    </div>
+{{/each}}
+</div>

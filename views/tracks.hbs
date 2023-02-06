@@ -1,0 +1,17 @@
+<div id="tracks-container">
+<div id="tracks-header"><h2>Title</h2>
+<h2>Listen</h2>
+</div>
+<ul>
+{{#each albumTracks}}
+    <li>
+        <div id="list-container">
+            <span id="track-name">{{name}}</span> 
+            <span id="audio">
+                <audio controls src="{{preview_url}}"></audio>  
+            </span>
+        </div>
+    </li>
+{{/each}}
+</ul>
+</div>
