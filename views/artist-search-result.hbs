@@ -1,5 +1,11 @@
+<div class="albums-container">
 {{#each dataArtists}}
-<img src="{{images.[0].url}}" alt="">
-<h1>{{name}}</h1>
-<a href="/albums/{{id}}">View Albums</a>
+    <div class="album-container">
+        <img class="cover-img" src="{{images.[0].url}}" alt="">
+        <div class="title-container">
+            <h1>{{name}}</h1>
+            <a href="/albums/{{id}}">View Albums</a>
+        </div>
+    </div>
 {{/each}}
+</div>

@@ -1,9 +1,9 @@
 <h1 id="albums-header">Albums for: {{{dataArtists.name}}}</h1>
-<div id="albums-container">
+<div class="albums-container">
     {{#each artistAlbums}}
-    <div id="album-container">
-        <img id="cover-img" src="{{images.[0].url}}" alt="album cover">
-        <div id="title-container">
+    <div class="album-container">
+        <img class="cover-img" src="{{images.[0].url}}" alt="album cover">
+        <div class="title-container">
             <h1>{{name}}</h1>
             <a href="/tracks/{{id}}">View Tracks</a>
         </div>
