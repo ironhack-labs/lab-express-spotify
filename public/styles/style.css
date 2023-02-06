@@ -49,8 +49,7 @@ nav a {
 }
 
 .album-collection,
-.artist-collection,
-.track-collection {
+.artist-collection {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
