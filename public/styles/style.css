@@ -1,0 +1,12 @@
+.artist-info img {
+width: 100px;
+}
+
+.artist-info {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap ;
+    width: 100px;
+
+
+}

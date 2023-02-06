@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>Artist Search Results</title>
+</head>
+<body>
+    <div class ="artist-info">
+{{#each artistInfo}}
+<img src="{{images.[0].url}}" alt="Images">
+<h2>{{name}}</h2>
+<button>View artist</button>
+{{/each}}
+</div>
+</section>
+</body>
+</html>
+
