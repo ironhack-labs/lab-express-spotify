@@ -33,7 +33,7 @@ app.get("/artist-search", (req, res) => {
       //   "The received data from the API: ",
       //   data.body.artists.items.forEach((item) => console.log(item.images))
       // );
-      res.render("artist-search-results", { artists: data.body.artists.items });
+      res.render("artists", { artists: data.body.artists.items });
     })
     .catch((err) => console.log("The error while searching artists occurred: ", err));
 });
