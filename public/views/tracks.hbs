@@ -4,20 +4,28 @@
 
     <div class="track">
 
-      <h2>{{name}}</h2>
+      <div class="track-name">
 
-      {{#if preview_url}}
+        <h2>{{name}}</h2>
 
-        <audio controls>
-          <source src="{{preview_url}}" type="audio/mpeg" />
-          Your browser does not support the audio element.
-        </audio>
+      </div>
 
-      {{else}}
+      <div class="track-preview">
 
-        <p>Preview not available for this track.</p>
+        {{#if preview_url}}
 
-      {{/if}}
+          <audio controls>
+            <source src="{{preview_url}}" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+
+        {{else}}
+
+          <p>Preview not available for this track.</p>
+
+        {{/if}}
+
+      </div>
 
     </div>
 

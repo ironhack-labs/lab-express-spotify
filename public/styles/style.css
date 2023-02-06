@@ -12,11 +12,11 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: 95vh;
+  height: 100vh;
   width: 100vw;
   background-image: url("/images/spotify-background.jpeg");
   background-repeat: no-repeat;
-  background-size: 100vw 95vh;
+  background-size: 100vw 100vh;
 }
 
 .artist-search-form {
@@ -40,15 +40,6 @@ nav a {
   padding: 20px;
 }
 
-.developer {
-  display: flex;
-  flex-direction: row;
-  width: 100vw;
-  text-align: center;
-  justify-content: center;
-  background-color: #33207e;
-}
-
 .album img,
 .artist img {
   width: 200px;
@@ -64,7 +55,8 @@ nav a {
   justify-content: space-evenly;
   align-items: space-around;
   flex-wrap: wrap;
-  margin-top: 35px;
+  height: 100vh;
+  width: 100vw;
 }
 
 .album,
@@ -76,13 +68,21 @@ nav a {
   margin: 20px;
 }
 
-.track {
+.track-name,
+.track-preview {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* .track {
   display: flex;
   flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  margin: 20px;
-}
+  justify-content: space-evenly;
+  text-align: left;
+} */
 
 /* From: https://getcssscan.com/css-buttons-examples */
 
