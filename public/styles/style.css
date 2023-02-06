@@ -1,17 +1,91 @@
-.artist-grid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  /* grid-template-rows: 1fr 1fr 1fr; */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
 }
 
-.artist-container {
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px;
+}
+
+.hero {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  margin: 0 auto;
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-position: center;
+}
+
+.search-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.form-box {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.input-box {
+  width: 500px;
+  height: 40px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.artist-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 50px;
+  row-gap: 10px;
+}
+
+.artist-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  text-align: center;
 }
 
 .artist-img {
-  width: 25%;
-  /* background-color: red; */
+  height: 200px;
+}
+
+.artist-name {
+  font-size: 16px;
+}
+
+.track-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 800px;
+  margin: 0 auto;
+  padding: 10px;
+  background-color: #212529;
+  border-radius: 12px;
+  margin-bottom: 10px;
+  margin-top: 10px;
+}
+
+.track-title {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: -16px;
 }

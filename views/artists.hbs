@@ -2,14 +2,18 @@
 
   <div class="artist-container">
 
-    {{#each albums}}
+    {{#each artists}}
 
       <div class="artist-item card text-bg-dark mb-3" style="width: 12rem;">
-        <img class="artist-img card-img-top" src="{{images.0.url}}" alt="" />
+        <img
+          class="artist-img card-img-top"
+          src="{{this.images.0.url}}"
+          alt=""
+        />
         <div class="artist-text card-body">
           <h2 class="artist-name card-title"> {{this.name}} </h2>
-          <a href="/tracks/{{id}}" name="">
-            <button class="artist-btn btn btn-success">See Tracks</button></a>
+          <a href="/albums/{{id}}" name="">
+            <button class="artist-btn btn btn-success">View Albums</button></a>
         </div>
       </div>
 

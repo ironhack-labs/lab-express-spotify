@@ -47,7 +47,8 @@ app.get("/artist-search", (req, res) => {
       //   console.log(id);
       //   console.log(artists);
       //   console.log(artists[0].images[0]);
-      res.render("artist-search-results", { artists });
+      // res.render("artist-search-results", { artists });
+      res.render("artists", { artists });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
