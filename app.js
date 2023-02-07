@@ -62,8 +62,10 @@ app.get('/albums/:artistId', (req, res) => {
 
 app.get('/tracks/:albumId', (req,res) => {
     const id = req.params.albumId
+    console.log (id) 
     spotifyApi.getAlbumTracks(id)
-  .then((data) => { const tracks = data.body.items
+  .then((data) => {
+    const tracks = data.body.items
     res.render("tracks", {tracks});
     console.log(tracks[0])
   }) .catch(err =>
