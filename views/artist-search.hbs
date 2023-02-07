@@ -1,0 +1,6 @@
+{{#each searchedArtist}}
+        <h1> {{name}}</h1>
+        <img src="{{images.0.url}}"" alt="images">  
+        <p> followers: {{followers.total}} </p>
+        <a href="/albums/{{id}}" name=""> <button>View Albums</button></a>
+{{/each}}
