@@ -1,5 +1,6 @@
-
-<h1>Hola</h1>
-<audio src={{preview_url}}>
-
+{{#each tracks}}
+<h1>{{name}}</h1>
+<audio controls>
+    <source src={{preview_url}} type="audio/mp3">
 </audio>
+{{/each}}

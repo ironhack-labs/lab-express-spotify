@@ -53,10 +53,11 @@ app.get("/artist-search", (req, res) => {
 
   app.get('/tracks/:albumId', (req,res,next) => {
     const id = req.params.albumId
-    spotifyApi.getAlbumTracks(id, { limit : 5, offset : 1 })
+    spotifyApi.getAlbumTracks(id)
   .then((data) => { const tracks = data.body.items
-    res.render("tracks", tracks);
-    console.log(tracks)
+    res.render("tracks", {tracks});
+    console.log("aqui empieza")
+    console.log(tracks[0])
   }) .catch(err =>
     console.log('Something went wrong!', err)
   );
