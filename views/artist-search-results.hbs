@@ -1,0 +1,21 @@
+<section class="main">
+    <h1>Showing results for <span class="query">{{query}}</span></h1>
+    <section class="results">
+        {{#each artists}}
+        <article class="card">
+            <a href="/albums/{{this.id}}">
+                <div class="card__img-container">
+                    {{#if this.images.[1].url}}
+                    <img class="card__img" src="{{this.images.[1].url}}" alt="">
+                    {{else}}No image
+                    {{/if}}
+                </div>
+                <div class="card__details">
+                    <h2 class="card__title">{{this.name}}</h2>
+                    <span class="card__category"> &#8226; Artist</span>
+                </div>
+            </a>
+        </article>
+        {{/each}}
+    </section>
+</section>
