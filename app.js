@@ -39,7 +39,7 @@ app.get("/albums/:artistId", (req, res) => {
     .catch((err) => console.log("The error while searching albums occurred: ", err));
 });
 
-app.get("/albums/tracks/:albumId", (req, res) => {
+app.get("/tracks/:albumId", (req, res) => {
   spotifyApi
     .getAlbumTracks(req.params.albumId)
     .then((data) => res.render("tracks", { tracks: data.body.items }))
