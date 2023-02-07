@@ -1,0 +1,16 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.buscadorArtista{
+    display: flex;
+    justify-content: center;
+    margin-top: 350px;
+}
+
+.botonArtista{
+margin-left: 10px;
+}
