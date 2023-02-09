@@ -1,0 +1,9 @@
+<div class="container mt-5">
+    {{#each track}}
+    <div class="row track">
+        <h3 class="col-3">{{name}}</h3>
+        <audio class="col-9" src="{{preview_url}}" controls></audio>
+    </div>
+    {{/each}}
+    <a href="/" class="btn btn-primary mt-4">Go back</a>
+</div>
