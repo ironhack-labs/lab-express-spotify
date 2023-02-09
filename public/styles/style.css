@@ -1,0 +1,14 @@
+/* body {
+    background-image: url(../images/spotify-background.jpeg);
+    object-fit: cover;
+    background-size: cover;
+} */
+
+.form {
+    text-align: center;
+    margin-top: 400px;
+}
+
+.btn {
+    background-color: lightblue;
+}
