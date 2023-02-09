@@ -1,0 +1,13 @@
+<h1>Albumes del Artista</h1>
+
+<hr>
+
+{{#each artist}}
+<div>
+    <img src={{images.url}} alt="{{name}}" style="width: 200px">
+    {{!-- <img src={{images}} alt="{{name}}"> --}}
+    <h1>{{name}}</h1>
+    <a href="/">Volver al Inicio</a>
+</div>
+
+{{/each}}

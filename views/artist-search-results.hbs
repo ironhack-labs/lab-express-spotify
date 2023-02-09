@@ -1,0 +1,13 @@
+<h1>Resultados de Busqueda</h1>
+
+<hr>
+
+{{#each artists}}
+<div>
+    <img src={{images.[0].url}} alt="{{name}}" style="width: 200px">
+    {{!-- <img src={{images}} alt="{{name}}"> --}}
+    <h1>{{name}}</h1>
+    <a href="/albums/{{id}}">View Albums</a>
+</div>
+
+{{/each}}
