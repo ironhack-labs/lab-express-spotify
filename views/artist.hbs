@@ -1,0 +1,23 @@
+<h2>Albums:</h2>
+<hr>
+<div class="container text-center">
+<ul class="row align-items-start">
+    {{#each list}}
+        <li class="col">
+            <div class="card" style="width: 18rem;">
+            {{!-- <img src="..." class="card-img-top" alt="..."> --}}
+            {{#each this.images}}
+                {{#if @first}}
+                    <img src={{this.url}} class="card-img-top" alt="artist image">
+                {{/if}}
+            {{/each}}
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>                
+                <p class="card-title">{{this.id}}</p>
+                <a href="/albums/{{this.id}}" class="btn btn-primary">View albums</a>
+            </div>
+            </div>
+        </li>
+    {{/each}}
+</ul>
+</div>

@@ -1,0 +1,20 @@
+<div class="container text-center">
+<ul class="row align-items-start">
+    {{#each list}}
+        <li class="col">
+            <div class="card" style="width: 18rem;">
+            {{#each this.images}}
+                {{#if @first}}
+                    <img src={{this.url}} class="card-img-top" alt="artist image">
+                {{/if}}
+            {{/each}}
+            <div class="card-body">
+                <h5 class="card-title">{{this.name}}</h5>
+                <p>{{this.id}}</p>
+                <a href="/tracks/{{this.id}}" class="btn btn-primary">View tracks</a>
+            </div>
+            </div>
+        </li>
+    {{/each}}
+</ul>
+</div>

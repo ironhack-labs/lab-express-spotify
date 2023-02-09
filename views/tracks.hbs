@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="row justify-content-between .no-gutters">
+        <header class="col-12 container">
+            <div class="row justify-content-between align-items-center full-height">
+                <h2 class="col-3 text-align-center">Title</h2>
+                <h2 class="col-3 text-align-center">Listen</h2>
+            </div>
+        </header>
+        <ul class="col-12 container-fluid">
+        {{#each items}}
+            <li class="row justify-content-between align-items-center track">
+                <h3 class="col">{{this.name}}</h3>
+                <div class="col">
+                    <p>{{this.href}}</p>
+                    <audio controls="display" src={{preview_url}}>
+                        <a href={{this.preview_url}}>
+                            Download audio
+                        </a>
+                    </audio>
+                </div>
+
+            </li>
+        {{/each}}
+        </ul>
+
+    </div>
+
+
+</div>
