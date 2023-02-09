@@ -1,0 +1,23 @@
+<div class=" container">
+    <h1 class="title">Albums</h1>
+    <hr>
+    <div class="row">
+
+        {{#each albums}}
+
+        <div class="col-md-4 d-flex align-items-stretch">
+            <div class="card mb-4">
+                <img src="{{images.1.url}}" class="card-img-top" alt="{{name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <p>{{cover}}</p>
+                </div>
+            </div>
+            <a href="/albums" class="btn btn-dark">View Albums</a>
+        </div>
+
+        {{/each}}
+
+    </div>
+
+</div>
