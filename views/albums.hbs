@@ -1,0 +1,17 @@
+<div class="row justify-content-center">
+    <h1>Albums for: {{artistName}}</h1>
+    <hr>
+    {{#each artistAlbums}}
+
+    <div class="card col-3 m-1 p-3">
+        <figure class="artist-img">
+            <img src="{{imageUrl}}" class="card-img-top" alt="{{name}}">
+        </figure>
+        <div class="card-body">
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/tracks/{{id}}/{{name}}" class="btn btn-light">Details</a>
+        </div>
+    </div>
+
+    {{/each}}
+</div>

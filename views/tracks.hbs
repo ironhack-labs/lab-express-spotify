@@ -1,0 +1,14 @@
+<div class="row justify-content-center div-search">
+    <h1>{{albumName}} track's</h1>
+    <hr>
+    {{#each tracks}}
+
+    <div class="d-flex justify-content-center align-items-center col-3 m-1 p-2 card">
+        <div class="card-body">
+            <h5 class="card-title my-1">{{name}}</h5>
+            <audio controls src="{{previewUrl}}"></audio>
+        </div>
+    </div>
+
+    {{/each}}
+</div>
