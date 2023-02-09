@@ -1,0 +1,13 @@
+<div>
+    <h2>Repertorio</h2>
+</div>
+
+<div>
+    {{#each albums}}
+    <div>
+        <h3>{{name}}</h3>
+        <img src="{{images.[0].url}}" alt="{{name}}">
+        <a class="btn btn-primary" href="/tracks/{{id}}">view tracks</a>
+    </div>
+    {{/each}}
+</div>
