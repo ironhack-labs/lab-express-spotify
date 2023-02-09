@@ -89,6 +89,8 @@ app.get("/tracks/:albumId/:albumName", (req, res) => {
             return albumTracks
         })
         .then(tracks => res.render("tracks", { tracks, albumName }))
+        .catch(err => console.log('The error while searching tracks occurred: ', err));
+
 
 })
 
