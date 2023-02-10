@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albumes</title>
+</head>
+<body>
+ <h1>Albums for {{artistName}}</h1>
+
+<ul>
+  {{#each albums}}
+    <li>
+      <h2>{{name}}</h2>
+      <img src="{{images.0.url}}" alt="{{name}}">
+      <a href="/tracks/{{id}}">View Tracks</a>
+    </li>
+  {{/each}}
+</ul>
+</body>
+</html>
