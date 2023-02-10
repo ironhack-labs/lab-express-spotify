@@ -1,0 +1,13 @@
+<table class="table">
+  <tbody>
+     {{#each tracks as | track | }}
+    <tr>
+      <td>{{track.name}}</td>
+      <td>
+        <audio controls src="{{track.preview_url}}">
+            <a href="{{track.preview_url}}">Download audio</a>
+        </audio>
+    </tr>
+     {{/each}}
+  </tbody>
+</table>
