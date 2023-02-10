@@ -1,0 +1,12 @@
+<h1>Album Tracks</h1>
+<table>
+  <tr>
+    <th>Track Name</th>
+    <th>Preview</th>
+<ul>
+  {{#each tracks}}
+    <li>{{name}}</li>
+    <audio controls src="{{preview_url}}"></audio>
+  {{/each}}
+</ul>
+</table>
