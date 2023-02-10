@@ -1,0 +1,16 @@
+<section class="artist-search">
+
+  <div class="card">
+    <div><img src="" alt="" /></div>
+    <div class="card__text">
+      {{#each items}}
+        <h1>
+          {{this.name}}
+        </h1>
+        <img src="{{this.images.0.url}}" alt="{{this.name}}">
+      <a href="/albums/{{this.id}}">View Albuns</a>
+      {{/each}}
+    </div>
+  </div>
+
+</section>
