@@ -1,14 +1,12 @@
 require("dotenv").config();
 
 const express = require("express");
-
-const port = 3000;
 const hbs = require("hbs");
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
 
-
+const port = 3000;
 const app = express();
 
 app.set("view engine", "hbs");
