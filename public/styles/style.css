@@ -1,0 +1,106 @@
+body{
+    margin:0; 
+    font-size: 30px;
+    background-color: brown;
+ }
+ 
+ #index-body-div{
+     height: 100vh;
+     width:100vw;
+     background-image: url(/images/spotify-background.jpeg);
+     background-size: 100%;
+     background-repeat: no-repeat;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     
+ }
+ #artist-search-form{
+     height:400px;
+     width:800px;
+     background-color:rgba(224, 193, 153, 0.8);
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     align-items: center;
+     border-radius: 20px;
+     
+ 
+ }
+ 
+ .image{
+     height:500px;
+     width:500px;
+     border-style: solid;
+     border-width:10px;
+     border-color: brown;
+     border-radius: 20px;
+ }
+
+.artist-or-album-div{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(224, 193, 153, 0.8);
+    padding-top:5%;
+    padding-bottom:5%;
+}
+
+.link-btn{
+    background-color: brown;
+    border-radius: 20px;
+    height:80px;
+    width:400px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    color:black;
+    text-decoration: none;
+}
+
+hr{
+    height:5px;
+    background-color: black;
+    
+}
+
+input{
+    height:60px;
+    width:400px;
+    border-radius: 20px;
+    margin-bottom: 2%;
+    text-align: center;
+   
+}
+
+button{
+    height:60px;
+    width:200px;
+    border-radius: 20px;
+    background-color: brown;
+}
+#nav-link{
+    text-decoration: none;
+    color:white;
+    font-size: 18px;
+    margin:2%;
+   
+}
+nav{
+    height:60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+   
+}
+
+audio{
+    background-color: brown;
+    border-width: 10px;
+    border-style: solid;
+    border-color: brown;
+    border-radius: 20px;
+}

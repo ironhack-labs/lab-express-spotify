@@ -1,0 +1,28 @@
+<body id="">
+
+    <div id="">
+
+       {{#each albumsArray}}
+          <div class="artist-or-album-div">
+
+                {{#each this.images}}
+                {{#if @first}}
+                <img class="image" src="{{this.url}}">
+                {{/if}}
+                {{/each}}            
+               
+                <p> 
+                   
+                   {{this.name}}
+                 
+                </p>   
+                
+                <a class="link-btn" href="/tracks/{{this.id}}">View Tracks</a>
+
+          </div>
+          <hr>  
+        {{/each}}
+           
+    </div>
+    
+</body>
