@@ -54,4 +54,11 @@ app.get('/albums/:id', (req, res, next) => {
 	});
 });
 
+app.get('/tracks/:id', (req, res, next) => {
+	spotifyApi.getAlbumTracks(req.params.id).then((data) => {
+		let allTracks = data.body.items;
+		res.render('tracks', { allTracks });
+	});
+});
+
 app.listen(port, () => console.log('My Spotify project running on port 3001 🎧 🥁 🎸 🔊'));
