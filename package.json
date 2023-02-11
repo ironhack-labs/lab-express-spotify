@@ -17,6 +17,7 @@
     "dotenv": "^16.0.3",
     "express": "^4.18.2",
     "hbs": "^4.2.0",
+    "path": "^0.12.7",
     "spotify-web-api-node": "^5.0.2"
   }
 }
