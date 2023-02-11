@@ -1,10 +1,19 @@
-<section>
+<section class="albums">
+  <h1>Albums for: {{artist.0.artists.0.name}}</h1>
+  <div class="albums__cards">
+    {{#each artist}}
+      <div class="albums__cards_each">
+        <img src="{{this.images.0.url}}" alt="{{this.name}}" class="albums__image" />
 
-  {{artist.0.artists.0.name}}
-  <br />
-  {{#each artist}}
-    <img src="{{this.images.0.url}}" alt="" />
-    <a href="/view-tracks/{{this.id}}">View Tracks</a>
-  {{/each}}
+        <div class="card__info">
+          <h1 class="card__info--title">
+            {{this.name}}
+          </h1>
+          <a href="/view-tracks/{{this.id}}" class="card__info--link">View
+            Tracks</a>
+        </div>
+      </div>
+    {{/each}}
 
+  </div>
 </section>

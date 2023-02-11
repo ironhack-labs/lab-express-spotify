@@ -1,16 +1,22 @@
 <section class="artist-search">
 
-  <div class="card">
-    <div><img src="" alt="" /></div>
-    <div class="card__text">
-      {{#each items}}
-        <h1>
+  {{#each items}}
+    <div class="artist-search__card">
+      <img src="{{this.images.0.url}}" alt="{{this.name}}" class="artist-search__card--image" />
+
+      <div class="card__info">
+        <h1 class="card__info--title">
           {{this.name}}
         </h1>
-        <img src="{{this.images.0.url}}" alt="{{this.name}}" />
-        <a href="/albums/{{this.id}}">View Albuns</a>
-      {{/each}}
+        <a href="/albums/{{this.id}}" class="card__info--link">View Albums</a>
+      </div>
     </div>
-  </div>
+  {{/each}}
 
 </section>
+
+{{!-- <section class="container__artist-search">
+  {{#each items}}
+    {{> artistSearchPartial}}
+  {{/each}}
+</section> --}}
