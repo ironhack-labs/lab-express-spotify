@@ -1,0 +1,51 @@
+body {
+  margin: 0;
+}
+
+/*          HOME PAGE            */
+
+.homeBackground {
+  background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#form__box {
+  width: 50%;
+}
+
+#form__box--content {
+  background-color: rgba(255, 255, 255, 0.3);
+  text-align: center;
+  padding: 50px;
+}
+
+#form__box--artist_name {
+  width: 80%;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: none;
+}
+
+#form__box--button {
+    background-color: rgba(255, 0, 0, 0.3);
+    color: white;
+    font-size: 20px;
+    border: none;
+    padding: 7px 12px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+/*         END HOME PAGE           */
+
+/* TRACKS VIEW */
+
+.nav-tracks {
+  background-color: grey;
+}
