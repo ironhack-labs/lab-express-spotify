@@ -1,0 +1,11 @@
+{{#each spotifyApi as |artist| }}
+
+    <div>
+        <img src="{{artist.img_url}}">
+        <div>
+            {{artist.name}}
+        </div>
+        <button>View Albums</button>
+    </div>
+
+{{/each}}
