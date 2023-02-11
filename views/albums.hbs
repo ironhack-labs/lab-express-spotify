@@ -1,0 +1,18 @@
+<section>
+
+
+  {{#each albums}}
+    <img src='{{images.0.url}}' alt='{{name}}' class='album-img' />
+  
+  
+    <h5 class='album-name'>{{name}}</h5>
+
+
+    <a href="/tracks/{{id}}">View tracks</a>
+
+
+  {{/each}}
+
+
+
+</section>
