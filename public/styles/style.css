@@ -1,0 +1,50 @@
+/* reset CSS */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+body {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.container {
+  background-color: #283739;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#search {
+  background-color: #2c5d63;
+  width: 50%;
+  opacity: 0.8;
+  margin: 30% auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.search-bar {
+  text-align: center;
+  margin: 5%;
+  height: 3.5em;
+  width: 90%;
+  border-radius: 5px;
+}
+.search-button {
+  color: #2c5d63;
+  font-weight: bold;
+  background-color: #e0e0e0;
+  font-size: 14px;
+  text-align: center;
+  margin-bottom: 5%;
+  width: 20%;
+  height: 40px;
+  border-radius: 5px;
+}
