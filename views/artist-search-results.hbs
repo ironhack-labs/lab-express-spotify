@@ -1,7 +1,9 @@
-<section>
+<section class="artist-search">
     {{#each result.artists.items}}
-    <h1>{{name}}</h1>
-    <img src="{{images.0.url}}" alt="">
-    <a href="/albums/{{id}}">View Albums</a>
+    <div class="artist-results">
+        <img src="{{images.0.url}}" alt="image">
+        <h1>{{name}}</h1>
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
     {{/each}}
 </section>

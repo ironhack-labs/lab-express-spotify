@@ -1,7 +1,16 @@
 <section>
+    <nav class="nav-bar">
+        <div class="title"><h1>Title</h1></div>
+        <div class="listen"><h1>Listen</h1></div>
+    </nav>
+    
     {{#each result.items}}
-    <h1>{{name}}</h1>
-    <audio controls src="{{preview_url}}">  <a href="{{preview_url}}">  Play Sound </a> </audio>
-    {{/each}}
+    <div class="tracks-flex">
+            <h1>{{name}}</h1>
+        <audio controls src="{{preview_url}}">  <a href="{{preview_url}}">  Play Sound </a> </audio>    
+    </div>
+     {{/each}}
+   
 </section>
 
+ 

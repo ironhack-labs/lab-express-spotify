@@ -1,0 +1,166 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.home {
+    background-image: url(/images/spotify-background.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 1800px;
+    height: 900px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home-box {
+    background-color: rgb(255,255,255, 0.5);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 150px;
+}
+
+.search-box {
+     width: 400px;
+     height: 30px;
+     margin-bottom: 10px;
+     background-color: white;
+     border: 2px solid rgb(194, 193, 193);
+     border-radius: 5px;
+}
+
+.search-button {
+    width: 150px;
+    height: 30px;
+    border: none;
+    background-color: rgb(255, 0, 0, 0.5);
+    color: white;
+    font-weight: bold;
+}
+
+.artist-search {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 230px;
+}
+
+.artist-results {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(60, 62, 62);
+    border: none;
+    margin: 30px 2px;
+}
+
+.artist-results img {
+    width: 500px;
+    height: 600px;
+}
+
+.artist-results h1 {
+    font-size: 25px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.artist-results a {
+    text-align: center;
+    background-color: rgba(227, 82, 82, 0.87);
+    text-decoration: none;
+    border-radius: 5px;
+    color: white;
+    margin: 3px 0 10px 0; 
+    padding: 5px 10px;
+}
+
+.albums-for {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+}
+
+.albums-search {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 10px 220px;
+}
+
+.albums-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(60, 62, 62);
+    font-size: 25px;
+    color: white;
+    margin: 30px 40px;
+}
+
+.albums-box img {
+    width: 400px;
+    height: 500px;
+}
+
+.albums-box h1 {
+    font-size: 15px;
+    color: white;
+    margin-top: 5px;
+    margin-bottom: 5px;
+}
+
+.albums-box a {
+    text-align: center;
+    padding: 5px 10px;
+    background-color: rgba(227, 82, 82, 0.87);
+    text-decoration: none;
+    border: 1px solid black;
+    border-radius: 5px;
+    color: white;
+    margin: 3px 0 10px 0;
+    font-size: 15px;
+    text-align: center;
+}
+
+.nav-bar {
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(60, 62, 62);
+    color:rgb(239, 243, 245);
+    height: 90px;
+    font-size: 25px;
+}
+
+.title {
+    margin-left: 60px;
+}
+
+.listen {
+    margin-right: 200px;
+}
+
+.tracks-flex {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(239, 243, 245);
+    margin-bottom: 5px;
+}
+
+.tracks-flex h1 {
+    margin: 30px 60px; 
+}
+
+.tracks-flex audio {
+    margin: 30px 60px;
+}

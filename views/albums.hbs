@@ -1,6 +1,11 @@
-<section>
+<nav class="albums-for"><h1>Albums</h1></nav>
+
+<section class="albums-search">
     {{#each result.items}}
-    <h1>{{name}}</h1>
-    <a href="/tracks/{{id}}">  <img src="{{images.0.url}}" alt=""> </a>
+    <div class="albums-box">
+        <img src="{{images.0.url}}" alt="">
+        <h1>{{name}}</h1>
+        <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
     {{/each}}
 </section>
