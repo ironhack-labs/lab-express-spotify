@@ -1,8 +1,11 @@
-<h1>Album for: {{albums.0.artists.0.name}} </h1>
+<h1 style="text-align: center;">Album for: {{albums.0.artists.0.name}} </h1>
+<section class="section2">
 {{#each albums}}
-  <div>
-    <img src="{{this.images.0.url}}" alt="" />
-    <p>{{this.name}}</p>
-    <a href="/view-tracks/{{this.id}}">View Tracks</a>
+  <div style="background-image: url('{{this.images.0.url}}');" class="div-artists">
+    <div class="view-albumdiv">
+    <p class="albumname">{{this.name}}</p>
+    <a href="/view-tracks/{{this.id}}" class="linkalbums">View Tracks</a>
+    </div>
   </div>
 {{/each}}
+</section>

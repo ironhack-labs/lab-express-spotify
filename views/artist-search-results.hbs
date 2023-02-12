@@ -1,9 +1,10 @@
-<section>
+<section class="section2">
 {{#each allArtists}}
-<div>
-<img src='{{this.images.0.url}}' alt="artist"/>
-<h1>{{this.name}}</h1>
-<a href="/albums/{{this.id}}">View albums</a> 
+<div style="background-image: url('{{this.images.0.url}}');" class="div-artists">
+<div class="view-albumdiv">
+<h1 class="albumname">{{this.name}}</h1>
+<a href="/albums/{{this.id}}" class="linkalbums">View albums</a> 
+</div>
 </div>
 {{/each}}
 </section>
