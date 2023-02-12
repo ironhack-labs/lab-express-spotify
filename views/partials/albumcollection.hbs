@@ -1,6 +1,8 @@
-<div class='albums'>
+<div class='album'>
 	<img src='{{this.images.0.url}}' alt='album image' />
-	<h3>{{this.name}}</h3>
-	<a href='{{this.external_urls.spotify}}'>Go to artist page</a>
-	<button><a href='/tracks/{{this.id}}'>Tracks</a></button>
+	<div class='grey-bar'>
+		<h3>{{this.name}}</h3>
+
+		<button class='search-button'><a href='/tracks/{{this.id}}'>Tracks</a></button>
+	</div>
 </div>

@@ -1,5 +1,5 @@
 require('dotenv').config();
-const port = 3001;
+const port = 3000;
 
 const express = require('express');
 const hbs = require('hbs');
@@ -61,4 +61,4 @@ app.get('/tracks/:id', (req, res, next) => {
 	});
 });
 
-app.listen(port, () => console.log('My Spotify project running on port 3001 🎧 🥁 🎸 🔊'));
+app.listen(port, () => console.log(`My Spotify project running on port ${port} 🎧 🥁 🎸 🔊`));

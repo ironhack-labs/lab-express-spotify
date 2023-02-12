@@ -1,0 +1,111 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+a {
+	text-decoration: none;
+	color: white;
+}
+
+body {
+	display: flex;
+	justify-content: center;
+	margin: 0;
+	padding: 0;
+	font-family: 'Roboto', sans-serif;
+}
+
+main#index {
+	height: 100vh;
+	width: 100vw;
+	background-image: url('/images/spotify-background.jpeg');
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#artist-search {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+}
+
+input#artist {
+	width: 25rem;
+	height: 2rem;
+}
+
+.search-button {
+	background-color: #fa6863;
+	color: white;
+	font-weight: 700;
+	border: none;
+	padding: 10px 20px;
+	width: fit-content;
+}
+
+.index-flex {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 15rem;
+	width: 50rem;
+}
+
+#artists-flex {
+	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#allArtists,
+#allAlbums {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	align-items: center;
+	gap: 30px;
+	margin: 10px;
+	width: 80%;
+}
+
+.artist,
+.album {
+	display: flex;
+	flex-direction: column;
+	width: 30%;
+	height: 450px;
+	overflow: hidden;
+}
+
+.artist img {
+	height: 350px;
+}
+
+.grey-bar {
+	display: flex;
+	height: fit-content;
+	flex-direction: column;
+	background-color: #6d6b6b;
+	color: white;
+	gap: 10px;
+	justify-content: center;
+	align-items: center;
+	padding: 10px;
+}
+
+.grey-bar h3 {
+	margin: 0;
+}
+
+#to-albums {
+	border-radius: 5px;
+}
