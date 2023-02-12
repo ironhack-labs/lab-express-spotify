@@ -33,7 +33,7 @@ spotifyApi
 // Our routes go here:
 
 app.get("/", (req, res) => {
-  res.render(__dirname + "/views/homepage.hbs")
+  res.render(__dirname + "/views/home.hbs")
 })
 /* spotifyApi.searchArtists("Love").then(
   function (data) {
