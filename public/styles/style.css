@@ -1,0 +1,81 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-container {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  width: 100vw;
+  height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-home {
+  width: 50%;
+  height: 30%;
+  background-color: rgba(255, 255, 255, 0.5);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.form-home button {
+  padding: 1vh 1vw;
+  background-color: brown;
+  color: white;
+  margin-top: 2vh;
+}
+
+#artist-search {
+  width: 20vw;
+  height: 5vh;
+}
+
+.form-home label {
+  display: none;
+}
+
+/* Artist-search: */
+
+.all-artists-container {
+  display: flex;
+  width: 80vw;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.artist-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2vh 1vw;
+  width: 25vw;
+}
+
+.artist-container p {
+  font-size: 1.5rem;
+}
+
+.artist-img {
+  width: 15vw;
+  height: auto;
+}
+
+.artist-container a {
+  text-decoration: none;
+}
+
+.artist-container button {
+  background-color: brown;
+  color: white;
+  padding: 1vh 1vw;
+}
