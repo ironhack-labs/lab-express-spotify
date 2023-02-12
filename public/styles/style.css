@@ -1,4 +1,128 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+}
+.home {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  height: 100vh;
+}
+
+.search-bar {
+  background-color: rgba(255, 255, 255, 0.5);
+  padding: 20px;
+  width: 50%;
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.search-btn {
+  display: flex;
+  background-color: rgba(241, 24, 67, 0.5);
+  border-radius: 0.5px;
+  padding: 10px 20px;
+  margin-top: 10px;
+  margin-left: 125px;
+  color: white;
+  border: none;
+  font-size: 16px;
+}
+
+input[type="text"] {
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  width: 400px;
+  margin-top: 20px;
+  outline: none;
+  border-radius: 5px;
+}
+
+/* home.hbs css */
+/* **************************************** */
+
+/* albums.hbs css */
+
+.albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  margin: 20px 0;
+}
+
+.albums a {
+  text-decoration: none;
+  color: #333;
+}
+
+.albums img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* *************************************************************** */
+
+/* artist search.hbs */
+
+.albums-btn {
+  background-color: rgb(58, 56, 56);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  margin-top: 20px;
+  display: flex;
+  width: 30vh;
+  align-items: center;
+}
 .card {
   display: flex;
-  height: 60vh;
+  flex-direction: column;
+  align-items: center;
+  background-color: #fff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+  padding: 20px;
+  margin: 20px 0;
+}
+
+.card img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 20px;
+}
+
+/* **************************************** */
+
+.header-tracks {
+  width: 100%;
+  background-color: rgb(58, 56, 56);
+  height: 10vh;
+  align-items: center;
+  display: flex;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#title {
+  color: white;
+}
+
+#listen {
+  color: white;
+  margin-left: 180vh;
 }
