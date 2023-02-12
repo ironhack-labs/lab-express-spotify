@@ -13,10 +13,10 @@ body {
 }
 
 .container {
+  display: flex;
   width: 100%;
   height: 100%;
   background-color: #283739;
-  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -52,4 +52,12 @@ body {
 }
 .search-button:hover {
   cursor: pointer;
+}
+
+#viewartist {
+  width: 200px;
+  height: 200px;
+  color: aliceblue;
+  padding: 4%;
+  display: inline-block;
 }

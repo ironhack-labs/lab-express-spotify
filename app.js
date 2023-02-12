@@ -1,5 +1,6 @@
 require("dotenv").config();
 
+const { json } = require("express");
 const express = require("express");
 const hbs = require("hbs");
 
@@ -33,6 +34,23 @@ spotifyApi
 // home
 app.get("/", (req, res, next) => {
   res.render("index.hbs");
+});
+
+app.get("/artist-search", (req, res, next) => {
+  const artist = req.query.artist;
+  console.log(artist);
+  spotifyApi
+    .searchArtists(artist)
+    .then((data) => {
+      console.log("The received data from the API for the search: ", data.body);
+      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      let artistData = data.body.artists.items;
+      console.log(artistData[0]);
+      res.render("artist-search-results.hbs", { artistData });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
 });
 
 // 404 page

@@ -1,0 +1,9 @@
+<div id="viewartist">
+  {{#each artistData}}
+    {{this.images.url}}
+    Name:
+    {{this.name}}
+    Followers:{{this.followers.total}}
+    <a href="{{href}}" class="button">Go to Albums</a>
+  {{/each}}
+</div>
