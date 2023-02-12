@@ -1,0 +1,110 @@
+* {
+  margin: 0;
+}
+.home-container {
+  background-image: url("/images/spotify-background.jpeg");
+  width: 100vw;
+  height: 100vh;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.home-form-container {
+  background-color: rgba(161, 159, 159, 0.384);
+  width: 60vw;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.home-form-container > form {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.home-form-container > form > input {
+  width: 50%;
+  height: 4vh;
+  border-radius: 3px;
+  border-width: 0;
+  margin: 1rem;
+}
+
+.home-form-container > form > button {
+  padding: 1vh 3vw;
+  background-color: rgba(255, 55, 0, 0.958);
+  border-width: 0;
+  color: white;
+  font-size: 1rem;
+}
+
+ul {
+  list-style: none;
+}
+
+.container-content ul {
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.container-content ul li {
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 1rem;
+}
+
+.container-content ul li img {
+  width: 20vw;
+  height: 30vh;
+  object-fit: cover;
+}
+
+.container-content-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgb(128, 128, 128);
+  width: 20vw;
+  padding: 0.7vh 0;
+}
+
+.container-content-text a {
+  text-decoration: none;
+  color: white;
+  background-color: rgba(255, 55, 0, 0.958);
+  padding: 0.2vw 0.3vw;
+  border-radius: 0.3rem;
+}
+
+.container-content-text p {
+  text-align: center;
+}
+
+.container-tracks {
+  padding: 0 2vw;
+}
+
+.container-tracks-header {
+  display: flex;
+  justify-content: space-between;
+  padding: 2vh 2vw;
+  background-color: gray;
+}
+
+.container-tracks-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.7rem;
+}
+audio {
+  padding: 1.2rem;
+}
