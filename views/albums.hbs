@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/styles/style.css">
+<div class="albums-page">
+    <div class="title">
+        <h1 >Albums for: {{albumData.artistName}}</h1>
+    </div>
+    <div class="albums">
+        {{#each albumData.albums}}
+        <div class="album">
+            <img src="{{this.images.0.url}}" alt="album image" class="album-img">
+            <div class="track-description">
+                <h2 class="album-name">{{this.name}}</h2>
+                <a href="/tracks/{{this.id}}" class="track-btn">View Tracks</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

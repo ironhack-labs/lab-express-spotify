@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/styles/style.css">
+<div class="artists">
+    {{#each data}}
+    <div class="artist">
+        <img src="{{this.images.0.url}}" alt="artist image" class="artist-img">
+        <div class="artist-description">
+            <h2 class="artist-name">{{this.name}}</h2>
+            <a href="/albums/{{this.id}}" class="artist-album-btn">View albums</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
