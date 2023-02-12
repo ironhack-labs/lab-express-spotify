@@ -1,9 +1,16 @@
-<div id="allAlbums">
+<button class='back-button'><a href='/'>Back to Search</a></button>
+<div id="album-container">
 
-	{{#each allAlbums}}
+		 <h1 >Albums for: {{allAlbums.artistName}}</h1>
 
-		{{> albumcollection}}
+		<div id="allAlbums">
 
-	{{/each}}
 
+			{{#each allAlbums.albums}}
+
+				{{> albumcollection}}
+
+			{{/each}}
+
+		</div>
 </div>

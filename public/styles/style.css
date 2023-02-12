@@ -16,8 +16,11 @@ body {
 	display: flex;
 	justify-content: center;
 	margin: 0;
+	color: white;
 	padding: 0;
 	font-family: 'Roboto', sans-serif;
+	background: rgb(7, 36, 13);
+	background: linear-gradient(90deg, rgba(7, 36, 13, 0.82) 55%, rgba(0, 0, 0, 0.84) 100%);
 }
 
 main#index {
@@ -45,13 +48,29 @@ input#artist {
 	height: 2rem;
 }
 
-.search-button {
+.search-button,
+.back-button {
 	background-color: #fa6863;
 	color: white;
 	font-weight: 700;
 	border: none;
 	padding: 10px 20px;
 	width: fit-content;
+}
+
+.back-button {
+	background-color: #6d6b6b;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 2rem;
+	font-weight: 700;
+	font-size: 16px;
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	padding: 10px;
+	border-radius: 0px 30px 30px 0px;
 }
 
 .index-flex {
@@ -64,6 +83,12 @@ input#artist {
 
 #artists-flex {
 	background-color: rgba(255, 255, 255, 0.4);
+}
+
+#album-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 }
 
 #allArtists,
@@ -83,6 +108,7 @@ input#artist {
 	flex-direction: column;
 	width: 30%;
 	max-height: 500px;
+	min-width: 375px;
 	overflow: hidden;
 }
 
@@ -91,7 +117,8 @@ input#artist {
 	height: 350px;
 }
 
-.grey-bar {
+.grey-bar,
+.grey-bar-2 {
 	display: flex;
 	height: 150px;
 	flex-direction: column;
@@ -102,11 +129,40 @@ input#artist {
 	align-items: center;
 	padding: 10px 20px;
 }
-
+.grey-bar-2 {
+	flex-direction: row;
+	width: 100%;
+	justify-content: space-between;
+	padding-right: 150px;
+	max-height: 90px;
+}
 .grey-bar h3 {
 	margin: 0;
 }
 
 #to-albums {
 	border-radius: 5px;
+}
+
+#all-tracks {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 5px;
+	width: 80%;
+	margin: 10px;
+}
+
+#track-list {
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	background-color: #f1f1f1;
+	padding: 5px 20px;
+	color: black;
+}
+
+audio {
+	border-radius: 0px;
 }

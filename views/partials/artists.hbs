@@ -1,5 +1,13 @@
 <div class='artist'>
-	<img src='{{this.images.0.url}}' alt='artist image' />
+
+	{{#if this.images}}
+		<img src='{{this.images.0.url}}' alt='artist image' />
+	{{else}}
+		<img
+			src='https://images.unsplash.com/photo-1458560871784-56d23406c091?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=2574&q=80'
+			alt='artist image'
+		/>
+	{{/if}}
 
 	<div class='grey-bar'>
 		<h3>{{this.name}}</h3>

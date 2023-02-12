@@ -1,10 +1,12 @@
-<div>
-	<p>{{this.track_number}}</p>
+<div id='track-list'>
 	<p>{{this.name}}</p>
-	<p>{{this.artists.0.name}}</p>
-	<p>{{this.album.name}}</p>
-	<audio controls>
-		<source src='{{this.preview_url}}' type='audio/mpeg' />
-	</audio>
+
+	{{#if this.preview_url}}
+		<audio controls>
+			<source src='{{this.preview_url}}' type='audio/mpeg' />
+		</audio>
+	{{else}}
+		<p>No preview available</p>
+	{{/if}}
 
 </div>
