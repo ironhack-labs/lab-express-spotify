@@ -1,7 +1,11 @@
-{{#each artistsNames}}
-  <div class="card">
-    <h2>{{this.name}}</h2>
-    <img src="{{this.images.0.url}}" alt="{{this.name}}" />
-     <a href="/albums/{{this.id}}">Show Albums</a> 
-  </div>
-{{/each}}
+
+  
+<section class="artist-search">
+    {{#each artistsNames}}
+    <div class="artist-results">
+        <img src="{{this.images.0.url}}" alt="image">
+        <h1>{{this.name}}</h1>
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
+</section>

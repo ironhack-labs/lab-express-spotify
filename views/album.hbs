@@ -1,10 +1,9 @@
-{{#each result}}
-  
-    <h2>{{this.name}}</h2>
-
-    
-
-    <a href="/tracks/{{this.id}}"><img src="{{this.images.0.url}}"></a> 
-    
-  
-{{/each}}
+<section class="albums-search">
+    {{#each result}}
+    <div class="albums-box">
+        <img src="{{this.images.0.url}}" alt="">
+        <h1>{{this.name}}</h1>
+        <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
+    {{/each}}
+</section>

@@ -1,7 +1,8 @@
-require('dotenv').config();
+require('dotenv').config(); // I would like to understand what is this
 
-const express = require('express');
-const hbs = require('hbs');
+const express = require('express'); // here we point to the "method" we are going to use to build our app - back end
+const hbs = require('hbs'); // here we point the method to organize our layout - front end
+
 
 // require spotify-web-api-node package here:
 
@@ -28,14 +29,15 @@ spotifyApi
 
 // Our routes go here:
 
-//iteration 1
+//iteration 1 -- Here we start setting the route for the first page:
 
 app.get('/', (req, res) => {
   res.render('index');
   
 });
 
-//Iteration 2
+//Iteration 2 -- Here we have to tell our app that we are going to use this data base and use its own methods to grab the info we need
+// our server interacting with the API to access the artists
 
 app.get("/artist-search", (req, res) => {
   spotifyApi
@@ -47,7 +49,7 @@ app.get("/artist-search", (req, res) => {
       .catch(err => console.log('The error while searching artists occurred: ', err));
     })
 
-//Iteration 3
+//Iteration 3 -- Our server interacting with the API to grab the albums
 
 app.get('/albums/:id', (req, res) => {
   let {id} = req.params;
@@ -60,6 +62,8 @@ app.get('/albums/:id', (req, res) => {
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
 
+// Our server interacting with the API to grab the tracks
+
 app.get('/tracks/:id', (req, res) => {
   let {id} = req.params;
   spotifyApi
@@ -70,8 +74,6 @@ app.get('/tracks/:id', (req, res) => {
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 })
-
-// Iteration 4
 
 
 
