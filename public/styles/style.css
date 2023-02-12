@@ -30,6 +30,7 @@
   align-items: center;
 }
 .search-input {
+  font-size: 14px;
   width: 20vw;
   height: 3.5vh;
   border: 1px solid #dabdb2;
@@ -42,6 +43,7 @@
   background-color: #fa6863;
   color: white;
   margin: 10px;
+  font-size: 14px;
 }
 .div-artists {
   display: flex;
