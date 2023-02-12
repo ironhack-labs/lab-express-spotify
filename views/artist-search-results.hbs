@@ -1,9 +1,7 @@
-<div id="viewartist">
-  {{#each artistData}}
-    <img src="{{this.images.[1].url}}" alt="">
-    Name:
+{{#each artistData}}
+  <div class="viewartist">
+    <img src="{{this.images.1.url}}" alt="" />
     {{this.name}}
-    Followers:{{this.followers.total}}
     <a href="/albums/{{this.id}}" class="button">Go to Albums</a>
-  {{/each}}
-</div>
+  </div>
+{{/each}}

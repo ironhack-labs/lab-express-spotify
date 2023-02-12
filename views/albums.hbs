@@ -1,7 +1,7 @@
-<div id="albums">
-  {{#each albums}}
-    <img src="{{this.images.[1].url}}" alt="">
+{{#each albums}}
+  <div class="albums">
+    <img src="{{this.images.1.url}}" alt="" />
     {{this.name}}
     <a href="/tracks/{{this.id}}" class="button">View tracks</a>
-  {{/each}}
-</div>
+  </div>
+{{/each}}
