@@ -1,9 +1,13 @@
-<ul>
-  {{#each items}}
-    <li>
-      <img src="{{this.images.0.url}}" alt="" />
-      <p>{{this.name}}</p>
-      <a href="{{this.id}}">View Tracks</a>
-    </li>
-  {{/each}}
-</ul>
+<div class="container-content">
+  <ul>
+    {{#each items}}
+      <li>
+        <img src="{{this.images.0.url}}" alt="" />
+        <div class="container-content-text">
+          <p>{{this.name}}</p>
+          <a href="{{this.id}}">View Tracks</a>
+        </div>
+      </li>
+    {{/each}}
+  </ul>
+</div>

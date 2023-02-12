@@ -1,7 +1,15 @@
-<ul>
-  {{#each items}}
-    <div>
-      <audio controls src="{{this.preview_url}}"></audio>
-    </div>
-  {{/each}}
-</ul>
+<div class="container-tracks">
+  <div class="container-tracks-header">
+    <p>Title</p>
+    <p>Listen</p>
+  </div>
+  <div class="container-tracks-content">
+    {{#each items}}
+
+      <audio controls>
+        <source src="{{this.preview_url}}" type="audio/mpeg" />
+      </audio>
+
+    {{/each}}
+  </div>
+</div>
