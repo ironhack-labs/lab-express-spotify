@@ -55,19 +55,32 @@ app.get("/artist-search", (req, res, next) => {
 
 app.get("/albums/:artistId", (req, res, next) => {
   let artistId = req.params.artistId;
-  
-  spotifyApi
-  .getArtistAlbums(artistId)
-  .then((data) => {
-	let albums = data.body.items
-	res.render("albums.hbs", { albums });
 
-  })
-  .catch((err) =>
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then((data) => {
+      let albums = data.body.items;
+      res.render("albums.hbs", { albums });
+	  console.log(albums)
+    })
+    .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
 });
 
+app.get("/tracks/:albumId/", (req, res, next) => {
+	let albumId = req.params.albumId;
+	console.log("this is the albumid", albumId)
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+        console.log("tracks view test", data.body.items);
+		let tracks = data.body.items
+		res.render("tracks.hbs", { tracks });
+      }).catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 // 404 page
 app.get("*", (req, res, next) => {
   res.send(
