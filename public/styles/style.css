@@ -82,24 +82,25 @@ input#artist {
 	display: flex;
 	flex-direction: column;
 	width: 30%;
-	height: 450px;
+	max-height: 500px;
 	overflow: hidden;
 }
 
-.artist img {
+.artist img,
+.album img {
 	height: 350px;
 }
 
 .grey-bar {
 	display: flex;
-	height: fit-content;
+	height: 150px;
 	flex-direction: column;
 	background-color: #6d6b6b;
 	color: white;
 	gap: 10px;
 	justify-content: center;
 	align-items: center;
-	padding: 10px;
+	padding: 10px 20px;
 }
 
 .grey-bar h3 {
