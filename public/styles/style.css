@@ -1,0 +1,155 @@
+/*--------------------------------------------------------------------------------------- RESET ⤵ */
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role="list"],
+ol[role="list"] {
+  list-style: none;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/*--------------------------------------------------------------------------------------- RESET ⤴ */
+
+/*--------------------------------------------------------------------------------------- GENERAL ⤵ */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    text-align: center;
+}
+
+/*--------------------------------------------------------------------------------------- HOME ⤵ */
+
+h1 {
+    padding-top: 50px;
+    color:rgb(255, 255, 255)
+}
+
+.search-container {
+  background-color: red;
+  background:
+        linear-gradient(
+          rgba(0, 0, 0, 0.8), 
+          rgba(0, 0, 0, 0.5)
+        ),
+        url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.search-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 60vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.search-form > * {
+    width: 50%;
+    margin: 10px;
+}
+
+#search-bar {
+    background-color: rgb(155, 155, 155);
+    padding: 10px;
+/*     background-image: url('/images/search-icon.png');
+    background-size: contain;
+    background-position: 5px; 
+    background-repeat: no-repeat; */
+    border-radius: 60px;
+    color:rgba(255, 255, 255)
+}
+
+.search-form input[type=search]{
+      text-indent: 20px;
+      color:rgb(255, 255, 255);
+}
+
+.search-form button {
+    background-color: rgb(188, 68, 68);
+    border: none;
+    border-radius: 60px;
+    padding: 10px;
+    color: rgb(255, 255, 255);
+}
+
+.search-form button:hover {
+    background-color: rgb(208, 87, 87);
+    cursor: pointer;
+}
+
+.search-form button:active {     
+    position:relative;
+	top: 2px;  
+}
+
