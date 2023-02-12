@@ -1,0 +1,11 @@
+{{#each allResults}}
+
+  <div>
+    <p>{{this.name}}</p>
+
+    <img src="{{this.images.0.url}}" alt="artist-img" />
+
+    <a href="/albums"><button>View Albums!</button></a>
+  </div>
+
+{{/each}}
