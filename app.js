@@ -53,6 +53,21 @@ app.get("/artist-search", (req, res, next) => {
     );
 });
 
+app.get("/albums/:artistId", (req, res, next) => {
+  let artistId = req.params.artistId;
+  
+  spotifyApi
+  .getArtistAlbums(artistId)
+  .then((data) => {
+	let albums = data.body.items
+	res.render("albums.hbs", { albums });
+
+  })
+  .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
+
 // 404 page
 app.get("*", (req, res, next) => {
   res.send(
