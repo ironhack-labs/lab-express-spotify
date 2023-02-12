@@ -1,6 +1,10 @@
-<h2>Albums from : {{albumData.0.artists.0.name}}</h2>
+<section class="albums">
+    <h2>Albums from : {{albumData.0.artists.0.name}}</h2>
+        <section class="albums-main-container">
+        {{#each albumData}}
+            {{> albums_card}}
+        {{/each}}
+</section>
+</section>
 
-{{#each albumData}}
-{{> albums_card}}
 
-{{/each}}

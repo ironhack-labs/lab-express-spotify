@@ -1,8 +1,10 @@
-<div class="container"> 
+<div class="tracks-table-top">
+    <h2 class="tracks-table-top_title">Title</h2>
+    <h2 class="tracks-table-top_listen">Listen</h2>
+</div>
+<div class="tracks-main-container"> 
     {{#each albumTracks}}
-
-    {{> tracks_card}}
-
-{{/each}}
+         {{> tracks_card}}
+    {{/each}}
 </div>
 
