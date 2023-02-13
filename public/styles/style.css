@@ -1,0 +1,36 @@
+.backgroundImage {
+  width: 1500px;
+}
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.form {
+  background-color: rgba(255, 255, 255, 0.7);
+  width: 700px;
+  height: 350px;
+}
+
+.artists {
+  margin-top: 50px;
+  margin-left: 65px;
+  width: 200px;
+  height: 60px;
+  background-color: #8b0000;
+}
+
+.input {
+  margin-top: 150px;
+  margin-left: 30px;
+  width: 400px;
+}
