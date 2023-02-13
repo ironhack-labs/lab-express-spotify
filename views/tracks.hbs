@@ -1,0 +1,18 @@
+<section id="allTracks"></div>
+  <div class="track-container">
+    <div class="track-title">
+      <h2>Title</h2>
+      <h2>Listen</h2>
+    </div>
+
+    <div class="track-list">
+      {{#each allTracks}}
+        <div class="track">
+          <h3>{{this.name}}</h3>
+          <audio controls="on" src="{{this.previewUrl}}"><a href="/media/cc0-audio/t-rex-roar.mp3">Download audio</a>
+          </audio>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</section>
