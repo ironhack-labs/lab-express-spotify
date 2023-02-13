@@ -66,7 +66,7 @@ input#artist {
 	height: 2rem;
 	font-weight: 700;
 	font-size: 16px;
-	position: absolute;
+	position: fixed;
 	top: 10px;
 	left: 10px;
 	padding: 10px;
@@ -161,8 +161,4 @@ input#artist {
 	background-color: #f1f1f1;
 	padding: 5px 20px;
 	color: black;
-}
-
-audio {
-	border-radius: 0px;
 }
