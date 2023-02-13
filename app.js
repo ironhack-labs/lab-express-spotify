@@ -25,7 +25,27 @@ spotifyApi
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
-// app.get("/artist-search", (req, res, next) => res.render("artistsearch"))
+app.get("/", (req, res, next) => {
+
+  res.render("index")
+
+})
+
+app.get("/artist-search", (req, res, next) => {
+
+  let artist = req.query.artist
+
+  spotifyApi
+  .searchArtists(artist)
+  .then(data => {
+    console.log('The received data from the API: ', data.body);
+    if(data) res.render("artist-search-results", data.body.artists)
+    else res.send("error - no artist found")
+    // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+
+})
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
