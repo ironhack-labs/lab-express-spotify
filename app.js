@@ -4,12 +4,10 @@ const express = require("express")
 const hbs = require("hbs")
 const bodyParser = require("body-parser")
 const app = express()
-
+const SpotifyWebApi = require("spotify-web-api-node")
 app.use(bodyParser.urlencoded({ extended: false }))
 
 // require spotify-web-api-node package here:
-
-const SpotifyWebApi = require("spotify-web-api-node")
 
 // Retrieve an access token
 const spotifyApi = new SpotifyWebApi({
@@ -33,17 +31,24 @@ spotifyApi
 // Our routes go here:
 
 app.get("/", (req, res) => {
-  res.render(__dirname + "/views/home.hbs")
+  res.render("home")
 })
-/* spotifyApi.searchArtists("Love").then(
-  function (data) {
-    console.log('Search artists by "Love"', data.body)
-  },
-  function (err) {
-    console.error(err)
-  }
-)
- */
+app.get("/artist-search", (req, res) => {
+  const query = req.query.q
+  // return spotifyApi
+  spotifyApi
+    .searchArtists(query)
+    .then((data) => {
+      console.log("The received data from the API: ", data.body.artists.items)
+      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      const firstPage = data.body.artists.items
+      res.json(`artist-search-results`, { artists: items })
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    )
+})
+
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 )

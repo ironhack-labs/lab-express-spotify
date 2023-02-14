@@ -1,3 +1,8 @@
-<div id="">
-
-</div>
+{{#each artists}}
+  <div>
+    <h2>{{name}}</h2>
+    {{#if images.length}}
+      <img src="{{images.0.url}}" alt="{{name}}" />
+    {{/if}}
+  </div>
+{{/each}}
