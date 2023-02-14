@@ -82,6 +82,8 @@ button {
 /* allAlbums */
 #album {
   font-weight: normal;
+  text-align: center;
+  margin-top: 2rem;
 }
 .album-box {
   display: flex;

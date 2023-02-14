@@ -73,6 +73,7 @@ app.get('/tracks/:trackId', async (req, res, next) => {
     console.log('Error occurred while looking up tracks')
   }
 })
+
 app.listen(PORT, () =>
   console.log(`My Spotify project running on port ${PORT} 🎧 🥁 🎸 🔊`)
 )
