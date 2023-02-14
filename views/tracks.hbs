@@ -1,1 +1,15 @@
-<p>Hellou</p>
+    <div id="tracks">
+        {{#each tracks}}
+<div>
+        <h5>{{this.name}}</h5>
+    <figure>
+    <audio
+        controls
+        src="{{this.preview_url}}>
+            <a href="{{this.preview_url}}">
+            </a>
+    </audio>
+    </figure>
+</div>
+        {{/each}}
+</div>

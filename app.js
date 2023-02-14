@@ -70,13 +70,14 @@ app.get('/tracks/:id', (req, res, next) => {
   
  let albumId = req.params.id
  console.log("req.params: ", albumId)
-  /*spotifyApi
-    .getAlbumsTracks(id, { limit: 5, offset : 1 })
+    spotifyApi
+    .getAlbumTracks(albumId)
     .then(data => {
-      console.log("Tracks info", data.body) */
-      res.render('tracks', {albumId})
-   /* })
-    .catch(err => console.log('The error while searching tracks occurred: ', err)) */
+      let tracks = data.body.items
+      console.log("Tracks info", tracks) 
+      res.render('tracks', {tracks})
+   })
+    .catch(err => console.log('The error while searching tracks occurred: ', err)) 
 }); 
 
 app.listen(3005, () => console.log('My Spotify project running on port 3005 🎧 🥁 🎸 🔊'));
