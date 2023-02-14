@@ -34,14 +34,19 @@ app.get("/", (req, res, next) => {
 app.get("/artist-search", (req, res, next) => {
 
   let artist = req.query.artist
+  let theArtist
 
   spotifyApi
   .searchArtists(artist)
   .then(data => {
     console.log('The received data from the API: ', data.body);
-    if(data) res.render("artist-search-results", data.body.artists)
-    else res.send("error - no artist found")
     // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    if(data) 
+    {
+      theArtist = data.body.artists.items[0]
+      res.render("artist-search-results", theArtist)
+    }
+    else res.send("error - no artist found")
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
 
