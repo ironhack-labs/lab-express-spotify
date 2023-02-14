@@ -1,5 +1,26 @@
-artist-search-results
-<div>
-    {{name}}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    artist-search-results
 
-</div>
+    <div class="artists">
+        <div id="artist">
+            {{#each artists}}
+            
+                {{this.name}}
+                <img src="{{this.images.1.url}}">
+                <a > View albums </a>
+            {{/each}}
+
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+#artists{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;   
+}
+
+.artist{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
