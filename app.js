@@ -75,6 +75,17 @@ app.get('/albums/:artistId', (req, res) => {
     });
 });
 
+app.get('/albums/:albumId/tracks', (req, res, next) => {
+  const albumId = req.params.albumId;
+  spotifyApi.getAlbumTracks(albumId)
+    .then(data => {
+      const tracks = data.body.items;
+      res.render('album-tracks', { tracks });
+    })
+    .catch(err => console.log('The error while getting tracks occurred: ', err));
+});
+
+
 
 
 app.listen(PORT, () => console.log(`My Spotify project running on port${PORT} 🎧 🥁 🎸 🔊`));
