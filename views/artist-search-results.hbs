@@ -1,9 +1,12 @@
-{{#each artists}}
-  <div>
-    <img src="{{img_url}}">
-    <div>
-      {{name}}
+
+<div class="search-results-container">
+  {{#each artists}}
+    <div class="artist-container">
+      <img src="{{img_url}}">
+      <div class="artist-name">
+        {{name}}
+      </div>
+      <a href="/albums/{{id}}">View Albums</a>
     </div>
-    <a href="/albums/{{id}}">View Albums</a>
-  </div>
-{{/each}}
+  {{/each}}
+</div>

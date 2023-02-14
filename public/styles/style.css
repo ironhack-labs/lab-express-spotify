@@ -1,7 +1,18 @@
+html, body {
+  height: 100%;
+}
+
+
 body {
-    background-color: #ad7474;
-    font-family: Arial, sans-serif;
-  }
+  background-image: url('/images/sunwaves_pic.jpg');
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
   
   form {
     display: flex;
@@ -14,28 +25,71 @@ body {
   }
 
   #search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     width: 50%;
     margin: auto;
-    margin-top: 25vh;
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(255, 255, 255, 0.7);
     border: none;
     box-shadow: none;
   }
   
   #search input[type="text"] {
-    background-color: transparent;
-    border: none;
-    border-bottom: 2px solid white;
+    background-color: rgba(255, 255, 255, 0.7);
+    border: black;
     color: rgb(112, 71, 71);
     font-size: 1.5rem;
     padding: 5px;
-    margin-right: 5px;
+    width: 100%;
+    height: 20%;
+    margin-bottom: 1rem;
   }
+
   #search button {
-    background-color: white;
-    color: black;
+    background-color: rgb(148, 20, 20);
+    color: white;
     border: none;
     padding: 5px;
-    font-size: 1.5rem;
+    font-size: 1.1rem;
     cursor: pointer;
+    width: 50%;
+    height: 20%;
+    margin-left: 25%;
+    margin-bottom: 1rem;
   }
+
+  .search-results-container {
+    width: 100%;
+    height: 60%;
+    overflow-x: scroll;
+    white-space: nowrap;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+  }
+  
+  .artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 3rem;
+    color: aliceblue;
+  }
+  
+  .artist-name {
+    margin-top: 0.5rem;
+  }
+
+  .artist-container img {
+    width: 30rem;
+    height: 30rem;
+  }
+
+  .artist-container a {
+    color: aliceblue;
+    height: 1.5rem;
+    width: 7rem;
+    background-color: black;
+  }
+  
