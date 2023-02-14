@@ -1,0 +1,145 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+
+main{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url("../images/spotify-background.jpeg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.inputContainer {
+    height: 150px;
+    width: 600px;
+    background-color: rgba(255,255,255, 0.3);
+}
+
+form > button {
+    margin-top: 30px;
+    height: 30px;
+    width: 194px;
+    border: none;
+    background-color: #eb674d;
+    color: white;
+}
+
+form > input {
+    width: 300px;
+    height: 27px;
+    border-radius: 1px;
+    border: none;
+}
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.cardsContainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    height: 100vh;
+}
+
+.subContainer{
+    width: 80%;
+    margin-top: 50px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.card{
+    height: 350px;
+    width: 400px;
+    color: white;
+    margin: 50px;
+
+}
+
+.card > img{
+    height: 100%;
+    width: 100%;
+    display: block;
+}
+
+.titleAndButton{
+    background-color: grey;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 90px;
+}
+
+.titleAndButton >button:hover{
+    cursor: pointer;
+}
+
+.titleAndButton > h2{
+    text-align: center;
+}
+
+.titleAndButton > button{
+    color: white;
+    width: 120px;
+    height: 28px;
+    background-color: coral;
+    border: none;
+    margin-top: 10px;
+}
+
+.titleAndButton > button > a{
+    text-decoration: none;
+    color: white;
+}
+
+.albumArtist{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.tracksContainer{
+    display: flex;
+    height: 50px;
+    background-color: grey;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.tracksContainer > .title{
+    margin-left: 50px;
+}
+
+.tracksContainer > .listen{
+    margin-right: 50px;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(188, 182, 182);
+    height: 50px;
+    margin-bottom: 5px;
+}
+
+.row > audio{
+    height: 40px;
+    margin-right: 50px;
+}
+
+.row > .title {
+    margin-left: 50px;
+}

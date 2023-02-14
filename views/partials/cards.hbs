@@ -1,0 +1,18 @@
+{{#each this.artists}}
+    <div class="card">
+        {{#if images.0.url}}
+        <img src={{images.0.url}} alt="">
+        {{else}}
+        <img src="https://images.unsplash.com/photo-1531174798007-21bff228ce3d?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=686&q=80" alt="">
+        {{/if}}
+        <div class="titleAndButton">
+            <h2>{{name}}</h2>
+            <button>
+            {{#if ../isArtistSearch}}
+             <a href="/albums/{{name}}/{{id}}">{{../buttonContent}}</a></button>
+            {{else}}
+            <a href="/tracks/{{id}}">{{../buttonContent}}</a></button>
+            {{/if}}
+        </div>
+    </div>
+{{/each}}

@@ -1,0 +1,16 @@
+<div class="tracksContainer">
+<div class="title">Title</div>
+<div class="listen">Listen</div>
+</div>
+{{#each this.tracks}}
+<div class="row">
+<div class="title">{{name}}</div>
+<audio controls>
+{{#if preview_url}}
+<source src={{preview_url}} type="audio/ogg">
+{{else}}
+<source src="https://p.scdn.co/mp3-preview/6928c4450944cf0eb7f16a600209c987f95f61d9?cid=adaaf209fb064dfab873a71817029e0d" type="audio/ogg">
+{{/if}}
+</audio>
+</div>
+{{/each}}
