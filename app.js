@@ -37,20 +37,26 @@ app.get('/', (req, res, next) => {
   }
 })
 
+//クエリパラメータ（URIで？の後に来る）特定のリソース操作して取得する際に必要な情報
+//https://localhost:3000/search?q=Laravelの?より後の?q=Laravelがクエリ
 //Iteration 3 | Search for an Artist
 app.get('/artists/search', async (req, res, next) => {
   try {
     //console.log(req.query)
     const listArtists = await spotifyApi.searchArtists(req.query.artist)
-    //console.log(listArtists)
+    console.log(listArtists)
     res.render('artist-search-results', {
       allArtists: listArtists.body.artists.items,
     })
+    // res.json(listArtists.body.artists.items)
   } catch (error) {
     console.log('Error occurred while looking up tracks')
   }
 })
 
+//パスパラメータ：URIでドメインの後？の前に来る
+//https://localhost:3000/search?q=Laravelのsearchの部分がpath params
+//特定のリソースを識別する為に必要な情報
 //Iteration 4 | View Albums
 app.get('/albums/:artistId', async (req, res, next) => {
   try {
