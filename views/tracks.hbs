@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Tracks for "{{album}}"</h1>
+  <ul>
+    {{#each tracks}}
+    <li>
+      <h2>{{name}}</h2>
+      <audio controls>
+        <source src="{{preview_url}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+    </li>
+    {{/each}}
+  </ul>
+</div>
