@@ -1,10 +1,23 @@
-#artists{
+.homeP {
+    display: inline-block;
+    justify-content: center;
+    text-align: center;
+}
+form {
+    padding: 10px;
+}
+
+#artists, #albums {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;   
 }
 
-.artist{
+.artist, .album {
     display: flex;
     flex-direction: column;
+    text-align: center;
+}
+
+h2 {
     text-align: center;
 }

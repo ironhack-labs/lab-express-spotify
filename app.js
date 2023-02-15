@@ -58,5 +58,17 @@ app.get("/albums/:id", (req, res, next) => {
 
 })
 
+app.get("/tracks/:id", (req, res, next) => {
+
+  spotifyApi
+  .getAlbumTracks(req.params.id)
+  .then(data => {
+    
+    res.render("tracks", ...data.body.items)
+    
+  })
+  .catch(err => console.log('The error while searching albums: ', err))
+
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
