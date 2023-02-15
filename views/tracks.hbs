@@ -1,12 +1,22 @@
-<h2> Album: {{this.name}} </h2>
 
 <div class="tracks">
 
-    <div id="track">
+    {{#if filteredAlbum}}
+        <div id="track">
+            {{#each filteredAlbum}}
+                <div> {{this.name}}</div>
+                {{#if this.preview_url}}
+                    <audio controls>
+                        <source src="{{this.preview_url}}" type="audio/mpeg">
+                    </audio>
+                {{/if}}
+            {{/each}}
+        </div>
+        
+    {{else}}
+        <div> This album do not have preview URL </div>
 
-        <audio controls>
-            <source src="{{this.preview_url}}" type="audio/mpeg">
-        </audio>
-
-    </div>
+    {{/if}}
 </div>
+
+

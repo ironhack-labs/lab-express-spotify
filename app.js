@@ -64,8 +64,10 @@ app.get("/tracks/:id", (req, res, next) => {
   .getAlbumTracks(req.params.id)
   .then(data => {
     
-    res.render("tracks", ...data.body.items)
-    
+    let filteredAlbum = data.body.items.filter(({preview_url}) => preview_url)
+
+    res.render("tracks", {filteredAlbum})
+
   })
   .catch(err => console.log('The error while searching albums: ', err))
 
