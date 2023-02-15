@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+h1 {
+  font-size: 16px;
+  padding: 15px 0;
+  color: white;
+}
+
+img {
+  width: 100%;
+}
+
+/* Home page */
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+nav {
+  background-color: white;
+  padding: 10px 40px;
+  color: black;
+}
+
+input {
+  padding: 16px 20px;
+  margin: 10px 0;
+  display: inline-block;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  color: #fa6863;
+}
+
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  background: url('/images/spotify-background.jpeg') no-repeat;
+  background-size: cover;
+}
+
+.btn-home {
+  background-color: #fa6863;
+  color: white;
+  font-size: 16px;
+  padding: 15px 30px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+  text-align: center;
+  width: 50%;
+  margin: 0 auto;
+}
+
+.btn-home:hover {
+  background-color: #4d4d4d;
+  color: white;
+}
+
+.bg-transparent {
+  background: white;
+  /* opacity: 0.5; */
+  width: 500px;
+  padding: 50px 100px;
+}
+
+/* Artists and Albums page */
+.artists,
+.albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 20px;
+  margin: 50px;
+}
+
+.artist-card,
+.album-card {
+  text-align: center;
+  background-color: #4d4d4d;
+  height: auto;
+}
+
+.btn {
+  background-color: #fa6863;
+  color: white;
+  padding: 6px 6px;
+  font-size: 14px;
+  border: none;
+  cursor: pointer;
+  border-radius: 2px;
+}
+
+.btn:hover {
+  color: #4d4d4d;
+}
+
+.btn-link {
+  padding-bottom: 20px;
+}
+
+.title-album {
+  color: black;
+  font-size: 24px;
+  text-align: center;
+}
+
+/*Tracks Page*/
+
+.tracks {
+  background-color: #d4d4d4;
+}
+
+.tracks-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px 50px;
+  padding: 20px 0;
+  border-bottom: solid 2px white;
+}
+
+.tracks-title {
+  background-color: #4d4d4d;
+  color: #ccc;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 24px;
+  padding: 20px 150px;
+}
