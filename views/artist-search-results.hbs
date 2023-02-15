@@ -1,26 +1,14 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-    artist-search-results
+<div class="artists">
 
-    <div class="artists">
-        <div id="artist">
-            {{#each artists}}
-            
+    <div id="artist">
+        
+        {{#each artists}}
+            <img src="{{this.images.1.url}}" width="200px">
+            <h4>
                 {{this.name}}
-                <img src="{{this.images.1.url}}">
-                <a > View albums </a>
-            {{/each}}
+            </h4>
+            <a > View Albums </a> </br>
+        {{/each}}
 
-        </div>
     </div>
-
-</body>
-</html>
+</div>
