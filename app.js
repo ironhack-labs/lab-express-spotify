@@ -71,6 +71,7 @@ app.get('/', (req, res) => {
       .catch(err => {
         console.log('Error retrieving album tracks:', err);
         res.render('error');
+      });
   });
 
 
