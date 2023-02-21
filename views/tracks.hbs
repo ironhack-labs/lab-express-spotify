@@ -1,0 +1,51 @@
+<html>
+  <body>
+    <h1>Tracks on "{{album}}"</h1>
+    {{#each tracks}}
+      <div>
+        <h2>{{name}}</h2>
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio tag.
+        </audio>
+      </div>
+    {{/each}}
+  </body>
+</html>
+<style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        text-align: center;
+        color: #444444;
+        margin-top: 50px;
+      }
+      
+      div {
+        background-color: #ffffff;
+        border: 2px solid #aaaaaa;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      h2 {
+        color: #444444;
+        margin-bottom: 10px;
+      }
+      
+      audio {
+        margin-top: 20px;
+      }
+      
+      source {
+        display: block;
+        margin-top: 10px;
+      }
+    </style>

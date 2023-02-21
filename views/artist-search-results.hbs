@@ -1,0 +1,64 @@
+<html>
+  <body>
+    <h1>Results for "{{query}}"</h1>
+    {{#each artists}}
+      <div>
+        <h2>{{name}}</h2>
+        <img src="{{images.[0].url}}" alt="{{name}} image">
+        <a href="/albums/{{id}}">View Albums</a>
+      </div>
+    {{/each}}
+  </body>
+</html>
+  <style>
+      body {
+        background-color: #f2f2f2;
+        font-family: Arial, sans-serif;
+      }
+      
+      h1 {
+        text-align: center;
+        color: #444444;
+        margin-top: 50px;
+      }
+      
+      div {
+        background-color: #ffffff;
+        border: 2px solid #aaaaaa;
+        border-radius: 5px;
+        padding: 20px;
+        margin: 20px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+      
+      h2 {
+        color: #444444;
+        margin-bottom: 10px;
+      }
+      
+      img {
+        width: 200px;
+        height: 200px;
+        object-fit: cover;
+        margin-bottom: 20px;
+      }
+      
+      a {
+        background-color: #1db954;
+        color: #ffffff;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        font-size: 18px;
+        text-decoration: none;
+        margin-top: 20px;
+        cursor: pointer;
+        transition: background-color 0.3s ease-in-out;
+      }
+      
+      a:hover {
+        background-color: #1aa64b;
+      }
+    </style>
