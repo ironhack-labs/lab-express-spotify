@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/styles/tracks.css">
+
+<div id="mainDiv">
+    <div id="topBar">
+        <h2>Title</h2>
+        <h2>Listen</h2>
+    </div>
+    {{#each track}}
+        <div class="song">
+            <span>{{this.name}}</span>
+            <audio controls src="{{this.preview_url}}"></audio>
+        </div>
+    {{/each}}
+</div>

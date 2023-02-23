@@ -1,0 +1,62 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+h1 {
+    height: 5%;
+    width: 100%;
+    text-align: center;
+}
+
+#mainDiv {
+    height: 95%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.album {
+    background-color: #3A3B3C;
+    height: 88%;
+    width: 30%;
+    margin: 1% 1%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    height: 80%;
+    width: 100%;
+}
+
+.albumImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.description {
+    font-size: 2rem;
+    height: 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+}
+
+a {
+    margin-top: 5%;
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    width: 50%;
+}

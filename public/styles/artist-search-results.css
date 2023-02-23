@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.artist {
+    background-color: #3A3B3C;
+    height: 46%;
+    width: 20%;
+    margin: 1% 5%;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    height: 80%;
+    width: 100%;
+}
+
+.artistImage {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.description {
+    height: 20%;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+h3 {
+    margin: 0;
+}
+
+a {
+    margin-top: 2%;
+    text-decoration: none;
+    color: white;
+    background-color: brown;
+    width: 40%;
+}

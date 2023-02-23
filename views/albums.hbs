@@ -1,0 +1,16 @@
+<link rel="stylesheet" href="/styles/albums.css">
+
+<h1>Albums for: {{albums.artist}}</h1>
+<div id="mainDiv">
+    {{#each albums.albums}}
+        <div class="album">
+            <div class="wraper">
+                <img src="{{this.images.0.url}}" alt="" class="albumImage">
+            </div>
+            <div class="description">
+                <h3>{{this.name}}</h3>
+                <a href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>

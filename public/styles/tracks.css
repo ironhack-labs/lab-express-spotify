@@ -1,0 +1,33 @@
+body {
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+}
+
+#topBar {
+    height: 10%;
+    background-color: #3A3B3C;
+    display: flex;
+    justify-content: space-between;
+    color: white;
+    padding: 0 5%;
+    margin: 0 2%;
+}
+
+#mainDiv {
+    height: 90%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.song {
+    margin: 0 2% 0.2%;
+    padding: 0 0 0 2%;
+    background-color: lightgray;
+    font-weight: bold;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}

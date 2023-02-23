@@ -1,0 +1,39 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: url("../images/spotifybackground.jpeg") no-repeat;
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+div {
+    height: 35%;
+    width: 35%;
+    background-color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    height: 10%;
+    margin-bottom: 5%;
+    width: 60%;
+}
+
+#input {
+    height: 100%;
+    width: 100%;
+}
+
+#button {
+    height: 15%;
+    width: 30%;
+    color: white;
+    background-color: brown;
+    border: none;
+}
