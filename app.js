@@ -40,13 +40,27 @@ app.get('/artist-search', (req, res, next) => {
     spotifyApi
         .searchArtists(artist)
         .then(data => {
-            const artists = data.body.artists.items;
+            const artist = data.body.artists.items;
             console.log(artists);
-            res.render('artist-search-result', {artists})
+            res.render('artist-search-result', {artist})
         })
         .catch(e => {
             console.log(`Erorr retreiving data from API: ${e}`);
         });
+});
+
+// GET /albums
+app.get('/albums/:artistId', (req, res, next) => {
+
+    const retreivedArtistId = req.params.artistId;
+
+    spotifyApi
+        .getArtistAlbums(retreivedArtistId)
+        .then(data => {
+            const album = data.body.items;
+            res.render('albums', {album})
+        })
+        .catch();
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

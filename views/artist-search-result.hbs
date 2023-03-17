@@ -1,5 +1,5 @@
-{{#each artists}}
+{{#each artist}}
     <p>{{this.name}}</p>
     <img src="{{this.images.1.url}}" />
-    <a href="/albums">VER ÁLBUMS</a>
+    <a href="/albums/{{this.id}}">VER ÁLBUMS</a>
 {{/each}}
