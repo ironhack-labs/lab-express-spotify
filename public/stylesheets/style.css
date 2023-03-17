@@ -1,0 +1,79 @@
+body {
+    margin: 0;
+    background-color: #191414;
+    color: white;
+}
+
+header {
+    height: 10vh;
+    background-color: #1DB954;
+    color: white;
+}
+
+h1 {
+    text-align: center;
+    margin: 2vw;
+}
+
+footer {
+    height: 10vh;
+    background-color: #1DB954;
+    color: white;
+}
+
+.form-container {
+    height: 40vh;
+    margin: 10vh 20vw;
+    background-color: rgba(216, 216, 216, 0.8);
+    border-radius: 2vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.form-container input {
+    width: 30vw;
+    height: 2em;
+    text-align: center;
+    margin: 2vh;
+    border: 1px solid rgb(173, 173, 173);
+    border-radius: 4px;    
+}
+
+.form-container button {
+    padding: 2vh;
+    border: none;
+    border-radius: 4px;
+    background-color: #191414;
+    color: white; 
+}
+
+.results-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artist-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.img-container {
+    overflow: hidden;
+    width: 30%;
+    scale: 1 / 1;
+}
+
+.img-container img {
+    width: 100%;
+}
+
