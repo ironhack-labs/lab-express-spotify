@@ -1,8 +1,11 @@
-<section>
-    {{#each items}}
-        <h3>{{name}}</h3>
-        <audio controls>
-            <source src={{preview_url}}>
-        </audio>
-    {{/each}}
+<section >
+  <h1>Tracks</h1>
+  {{#each items}}
+    <article id="tracks">
+      <label>{{name}}</label>
+      <audio controls>
+        <source src={{preview_url}} />
+      </audio>
+    </article>
+  {{/each}}
 </section>

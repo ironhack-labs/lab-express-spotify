@@ -38,10 +38,7 @@ app.post("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(nameArtist)
     .then((data) => {
-      console.log(
-        "The received data from the API: ",
-        data.body.artists.items[0].images
-      );
+      console.log("The received data from the API: ", data.body);
       // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("artist-search-results", data.body);
     })
@@ -62,31 +59,17 @@ app.get("/album/:id", (req, res, next) => {
     );
 });
 
-app.get("/track/:id",(req,res,next)=>{
-    spotifyApi
+app.get("/track/:id", (req, res, next) => {
+  spotifyApi
     .getAlbumTracks(req.params.id)
-    .then(data=>{
-        console.log(data.body)
-        res.render("track",data.body)
+    .then((data) => {
+      res.render("track", data.body);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
-})
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
-
-// {
-//     external_urls: [Object],
-//     followers: [Object],
-//     genres: [],
-//     href: 'https://api.spotify.com/v1/artists/5Pi3viYqawZx95Gan2dyC3',
-//     id: '5Pi3viYqawZx95Gan2dyC3',
-//     images: [Array],
-//     name: 'I Hate The Beatles',
-//     popularity: 7,
-//     type: 'artist',
-//     uri: 'spotify:artist:5Pi3viYqawZx95Gan2dyC3'
-//   }

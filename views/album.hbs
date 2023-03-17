@@ -1,11 +1,18 @@
-<div id="albums">
-
+<section>
+  <h1>ALBUMS</h1>
   {{#each items}}
-    <div id="all-albums">
+    <article>
       <h2>{{name}}</h2>
-      <img src={{images.1.url}} />
-      <p><a href="/track/{{id}}">Tracks</a></p>
-      <hr />
-    </div>
+      {{#if images.1.url}}
+        <p><img src={{images.1.url}} /></p>
+      {{else if image.2.url}}
+        <p><img src={{images.2.url}} /></p>
+      {{else if image.0.url}}
+        <p><img src={{images.0.url}} /></p>
+      {{else}}
+        <p><img></img></p>
+      {{/if}}
+      <span><a href="/track/{{id}}">Tracks</a></span>
+    </article>
   {{/each}}
-</div>
+</section>
