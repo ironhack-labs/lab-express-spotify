@@ -44,7 +44,7 @@ app.get('/artist-search', (req, res, next) => {
             res.render('artist-search-result', {artist})
         })
         .catch(e => {
-            console.log(`Erorr retreiving data from API: ${e}`);
+            console.log(`Found an error trying to search for artists: ${e}`);
         });
 });
 
@@ -59,7 +59,9 @@ app.get('/albums/:artistId', (req, res, next) => {
             const album = data.body.items;
             res.render('albums', {album})
         })
-        .catch();
+        .catch(e => {
+            console.log(`Found an error finding the specific album: ${e}`)
+        });
 });
 
 // GET /tracks
@@ -73,7 +75,9 @@ app.get('/tracks/:albumId', (req, res, next) => {
             const track = data.body.items;
             res.render('album-tracks', {track});
         })
-        .catch();
+        .catch(e => {
+            console.log(`Found an error finding the tracks of the album: ${e}`)
+        });
 
 })
 
