@@ -1,0 +1,18 @@
+#bodyBack{
+    height: 100vh;
+    background-image: url("../images/spotify-background.jpeg");
+    background-size:cover;
+    background-repeat: no-repeat;     
+    background-position: center;
+}
+
+.searchArtist{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: inherit;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
