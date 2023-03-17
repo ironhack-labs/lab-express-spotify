@@ -28,8 +28,7 @@ app.get('/', (req, res) => {
 	res.render('homepage');
 });
 
-app.get('/artist-search', (req, res) => {
-	console.log(req.query.search);
+app.get('/artists', (req, res) => {
 	spotifyApi
 		.searchArtists(req.query.search)
 		.then((data) => {
@@ -37,16 +36,28 @@ app.get('/artist-search', (req, res) => {
 			const { artists } = body;
 			const { items } = artists;
 
-			res.render('artist-search-results', { items });
+			res.render('artists', { items });
 		})
 		.catch((err) => console.log('The error while searching artists occurred: ', err));
 });
 
 app.get('/albums/:artistId', (req, res) => {
+	artistId = req.params.artistId;
 	spotifyApi
 		.getArtistAlbums(req.params.artistId)
 		.then((data) => {
+			console.log(data.body.items[0]);
 			res.render('albums', { data });
+		})
+		.catch((err) => console.log(err));
+});
+
+app.get('/tracks/:albumId', (req, res) => {
+	spotifyApi
+		.getAlbumTracks(req.params.albumId)
+		.then((data) => {
+			console.log(data.body);
+			res.render('tracks', { data });
 		})
 		.catch((err) => console.log(err));
 });
