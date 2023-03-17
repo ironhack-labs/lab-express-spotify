@@ -1,3 +1,201 @@
 body {
-    background-color: rgb(159, 39, 39);
+    font-family: Arial, sans-serif;
+    background-color: #FF9A8B;
+    background-image: linear-gradient(90deg, #FF9A8B 0%, #FF6A88 55%, #FF99AC 100%);
+    margin: 0;
+    min-height: 100vh;
+    padding-top: 20px;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        text-shadow: 0 0 10px #FF6A88, 0 0 20px #FF6A88, 0 0 30px #FF6A88, 0 0 40px #FF6A88;
+    }
+    50% {
+        text-shadow: 0 0 20px #FF6A88, 0 0 30px #FF6A88, 0 0 40px #FF6A88, 0 0 50px #FF6A88, 0 0 60px #FF6A88;
+    }
+}
+
+#home-search-container h1 {
+    color: #FF6A88;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    text-shadow: 0 0 10px #FF6A88;
+    animation: pulse 2s infinite;
+}
+
+
+#parent-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+#home-search-container {
+    background-color: #ffffff;
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 300px;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 2px solid #FF6A88;
+    border-radius: 4px;
+    font-size: 16px;
+    outline: none;
+}
+
+input[type="text"]:focus {
+    border: 2px solid #FF6A88;
+    box-shadow: 0 0 5px rgba(255, 106, 136, 0.3);
+}
+
+button[type="submit"] {
+    background-color: #FF6A88;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button[type="submit"]:hover {
+    background-color: #FF3E72;
+}
+
+/* ARTIST SEARCH CSS */
+.artist-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+.artist-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.artist-card a {
+    display: inline-block;
+    background-color: #FF6A88;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.artist-card a:hover {
+    background-color: #FF3E72;
+}
+
+.artist-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* ALBUMS CSS */
+.album-card {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    margin: 10px;
+    width: calc(25% - 20px);
+    box-sizing: border-box;
+}
+
+.album-card img {
+    max-width: 100%;
+    border-radius: 4px;
+}
+
+.album-card a {
+    display: inline-block;
+    background-color: #FF6A88;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.album-card a:hover {
+    background-color: #FF3E72;
+}
+
+.album-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 20px;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+
+/* TRACKS CSS */
+.track-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    text-align: center;
+}
+
+.track {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 15px;
+    margin: 10px 0;
+    border-radius: 5px;
+}
+
+.track:nth-child(odd) {
+    background-color: rgba(255, 255, 255, 0.05);
+}
+
+.track-container p {
+    font-size: 18px;
+    font-weight: bold;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin: 0;
+}
+
+.track-container audio {
+    width: 100%;
+    margin-top: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
 }
