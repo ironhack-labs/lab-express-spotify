@@ -52,3 +52,21 @@ body {
 	font-size: 2.2em;
 	width: 25vw;
 }
+
+.artist-div {
+	width: 30vw;
+	height: 60vh;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.artist-div img {
+	width: 15vw;
+	height: 29vh;
+}
+
+#artistWrapperDiv {
+	display: flex;
+	flex-wrap: wrap;
+}

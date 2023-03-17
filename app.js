@@ -37,10 +37,18 @@ app.get('/artist-search', (req, res) => {
 			const { artists } = body;
 			const { items } = artists;
 
-			console.log('The received data from the API: ', items[0]);
 			res.render('artist-search-results', { items });
 		})
 		.catch((err) => console.log('The error while searching artists occurred: ', err));
+});
+
+app.get('/albums/:artistId', (req, res) => {
+	spotifyApi
+		.getArtistAlbums(req.params.artistId)
+		.then((data) => {
+			res.render('albums', { data });
+		})
+		.catch((err) => console.log(err));
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
