@@ -27,8 +27,26 @@ spotifyApi
 
 // ROUTES:
 
+// GET / (home directory)
 app.get('/', (req, res, next) => {
     res.render('home')
-})
+});
+
+// GET /artist-search
+app.get('/artist-search', (req, res, next) => {
+
+    const artist = req.query.artistName;
+
+    spotifyApi
+        .searchArtists(artist)
+        .then(data => {
+            const artists = data.body.artists.items;
+            console.log(artists);
+            res.render('artist-search-result', {artists})
+        })
+        .catch(e => {
+            console.log(`Erorr retreiving data from API: ${e}`);
+        });
+});
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
