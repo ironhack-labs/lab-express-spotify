@@ -1,5 +1,16 @@
-{{#each data.body.items}}
-	<div class='album-div'>
-		<p>{{name}}</p>
-	</div>
-{{/each}}
+<div id='tracksHeader'>
+	<h2>Title</h2>
+	<h2>Listen</h2>
+</div>
+<div id='tracksWrapperDiv'>
+	{{#each data.body.items}}
+		<div class='track-div'>
+			<p>{{name}}</p>
+			<audio controls>
+				<source src='{{preview_url}}' type='' />
+			</audio>
+		</div>
+	{{/each}}
+
+	<a class='anchor' href='/'>Back</a>
+</div>

@@ -2,6 +2,8 @@ body {
 	margin: 0;
 	font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans',
 		'Helvetica Neue', sans-serif;
+	cursor: default;
+	background-color: rgb(165, 199, 250);
 }
 
 #homepageDiv {
@@ -59,14 +61,113 @@ body {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	justify-content: center;
+	box-shadow: 0px 0px 5px;
+	margin: 4vh auto;
+	background-color: white;
+	border-radius: 10px;
+	text-align: center;
+}
+
+.artist-div a {
+	font-size: 2em;
+	background-color: rgb(221, 78, 78);
+	color: white;
+	text-decoration: none;
+	margin: 3vh auto;
+	display: flex;
+	justify-content: center;
+	width: 12vw;
+	height: 5vh;
+	border-radius: 5px;
+}
+.artist-div a:hover {
+	background-color: rgb(196, 70, 70);
+	transition: all ease 150ms;
+}
+
+.artist-div:hover {
+	background: #f3f3f3;
+	transition: all ease 150ms;
+	box-shadow: 0px 0px 10px;
+	cursor: pointer;
 }
 
 .artist-div img {
 	width: 15vw;
 	height: 29vh;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px;
+}
+
+.artist-div p {
+	font-size: 2.2em;
+	font-weight: 600;
 }
 
 #artistWrapperDiv {
 	display: flex;
 	flex-wrap: wrap;
+}
+
+#tracksHeader {
+	display: flex;
+	justify-content: space-between;
+	background-color: rgb(143, 186, 250);
+}
+#tracksHeader h2 {
+	font-size: 2em;
+	font-weight: 500;
+	margin-left: 3vw;
+	margin-right: 14vw;
+}
+
+.track-div {
+	display: flex;
+	justify-content: space-between;
+	background: navajowhite;
+	color: rgb(131, 131, 131);
+	font-weight: 600;
+	font-size: 1.3em;
+	align-items: center;
+	border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.track-div * {
+	margin: 0.5vh 3vw;
+}
+
+#tracksWrapperDiv a {
+	font-size: 2em;
+	background-color: rgb(221, 78, 78);
+	color: white;
+	text-decoration: none;
+	margin: 3vh auto;
+	display: flex;
+	justify-content: center;
+	width: 10vw;
+	height: 5vh;
+	border-radius: 5px;
+}
+#tracksWrapperDiv a:hover {
+	background-color: rgb(196, 70, 70);
+	transition: all ease 150ms;
+}
+
+.anchor {
+	font-size: 2em;
+	background-color: rgb(221, 78, 78);
+	color: white;
+	text-decoration: none;
+	margin: 3vh auto;
+	display: flex;
+	justify-content: center;
+	width: 10vw;
+	height: 5vh;
+	border-radius: 5px;
+}
+
+.anchor:hover {
+	background-color: rgb(196, 70, 70);
+	transition: all ease 150ms;
 }
