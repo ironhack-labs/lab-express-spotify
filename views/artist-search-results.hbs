@@ -1,0 +1,19 @@
+{{#if body.artists}}
+  <section class="display">
+    {{#each body.artists.items}}
+      <a class="card"href="/albums/{{id}}">
+        <div class="img-container">
+          <img src="{{images.0.url}}" alt="" />
+        </div>
+        <div class="text-container">
+          <h5>
+            {{name}}
+          </h5>
+        </div>
+      </a>
+    {{/each}}
+  </section>
+  {{> home_button}}
+{{/if}}
+
+{{! found the solution for the image url here https://stackoverflow.com/questions/8044219/how-do-i-access-an-access-array-item-by-index-in-handlebars }}

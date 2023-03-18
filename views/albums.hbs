@@ -1,0 +1,17 @@
+{{#if body.items}}
+  <section class="display">
+    {{#each body.items}}
+      <a class="card" href="/albums/{{id}}/tracks">
+        <div class="img-container">
+          <img src="{{images.0.url}}" alt="" />
+        </div>
+        <div class="text-container">
+          <h5>
+            {{name}}
+          </h5>
+        </div>
+      </a>
+    {{/each}}
+  </section>
+  {{> home_button}}
+{{/if}}

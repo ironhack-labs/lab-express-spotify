@@ -1,0 +1,246 @@
+/* @import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@200&display=swap"); */
+@import url("https://fonts.googleapis.com/css2?family=Fira+Sans:wght@300&display=swap");
+
+*,
+* * {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --dark: rgba(0, 0, 0, 1);
+  --dark-08: rgba(0, 0, 0, 0.8);
+  --dark-05: rgba(0, 0, 0, 0.5);
+  --dark-02: rgba(0, 0, 0, 0.2);
+  --light: rgba(245, 245, 245, 1);
+  --light-08: rgba(245, 245, 245, 0.8);
+  --light-05: rgba(245, 245, 245, 0.5);
+  --light-02: rgba(245, 245, 245, 0.2);
+  --contrast-1: rgba(255, 102, 17, 1);
+  --contrast-1-08: rgba(255, 102, 17, 0.8);
+  --contrast-1-05: rgba(255, 102, 17, 0.5);
+  --contrast-1-02: rgba(255, 102, 17, 0.2);
+
+  --contrast-2: rgba(1, 210, 80, 1);
+  --contrast-2-08: rgba(1, 210, 80, 0.8);
+  --contrast-2-05: rgba(1, 210, 80, 0.5);
+  --contrast-2-02: rgba(1, 210, 80, 0.2);
+
+  --font-family-sans: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  /* --font-family-icons: "IBM Plex Mono", monospace; */
+  --font-family-icons: "Fira Sans", sans-serif;
+}
+
+body {
+  font-family: var(--font-family-sans);
+  font-size: 16px;
+  background-color: var(--dark);
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+main {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 3em;
+}
+
+section {
+  position: relative;
+  display: inline-flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.button {
+  width: 1.2em;
+  height: 1.2em;
+  z-index: 1000;
+  margin: auto;
+  font-size: 3em;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 50%;
+  border: none;
+  background-color: var(--contrast-1-08);
+  color: var(--light-08);
+  font-family: var(--font-family-icons);
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* transform: scale(1); */
+  transition: all 0.2s ease-in-out;
+}
+
+.button:hover {
+  background-color: var(--contrast-1);
+  color: var(--light);
+  transform: scale(1.2);
+}
+
+.button span {
+  display: inline-block;
+  position: relative;
+  top: -2px;
+}
+
+.form-button {
+  position: relative;
+  margin-right: 0.25em;
+}
+
+.form-button.reset {
+  background-color: var(--light-08);
+  color: var(--contrast-1-08);
+}
+.form-button.reset:hover {
+  background-color: var(--light);
+  color: var(--contrast-1);
+}
+
+.home form {
+  position: relative;
+  display: flex;
+  /* width: 100%; */
+  align-items: center;
+}
+
+.home input {
+  background: transparent;
+  border: none;
+  color: var(--contrast-1);
+  text-align: center;
+  font-size: 1.5em;
+  border-bottom: 1px solid var(--contrast-1-05);
+  padding: 0.5em 0;
+  transition: border-color 0.3s ease-in-out;
+}
+
+.home input:focus {
+  outline: none;
+  border-bottom: 1px solid var(--contrast-1);
+}
+
+.home form .button-container {
+  display: inline-flex;
+  position: absolute;
+  opacity: 0;
+  right: -10em;
+  transition: all 0.3s ease-in-out;
+}
+
+.home form:focus-within .button-container {
+  display: inline-flex;
+  opacity: 1;
+  right: -5em;
+}
+
+.home input::placeholder {
+  font-family: var(--font-family-sans);
+  font-weight: 300;
+  color: var(--light-08);
+}
+
+.home-button,
+.home-button:visited {
+  position: fixed;
+  top: 0.8em;
+  left: 0.8em;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.home-button:hover {
+  background-color: var(--contrast-1);
+  color: var(--light);
+}
+
+.card,
+.track {
+  background-color: var(--dark);
+  overflow: hidden;
+  border-radius: 4px;
+  transform: scale(1);
+  transition: transform 0.2s ease-in-out;
+  margin-bottom: 0.8em;
+}
+
+.card,
+.card:visited {
+  display: inline-block;
+  position: relative;
+  width: 8em;
+  text-decoration: none;
+}
+
+.track {
+  display: inline-flex;
+  width: 100%;
+  align-items: center;
+  padding: 0.5em 0;
+}
+
+.card:hover,
+.track:hover {
+  transform: scale(1.2);
+  z-index: 20;
+}
+
+.img-container {
+  position: relative;
+  height: 8em;
+  width: 100%;
+  border-radius: 4px;
+}
+
+.img-container img {
+  height: 8em;
+  width: auto;
+  max-width: auto;
+}
+
+.card .text-container,
+.track .text-container {
+  position: relative;
+  text-align: center;
+
+  padding: 0.5em 0;
+  color: var(--contrast-1-08);
+  transition: color 0.2s ease-in-out;
+}
+
+.card:hover .text-container,
+.track:hover .text-container {
+  color: var(--contrast-1);
+}
+
+.card .text-container {
+  width: 100%;
+}
+.track .text-container {
+  width: 50%;
+  display: inline-flex;
+}
+
+.track audio {
+  display: inline-flex;
+}
+
+.text-container h4 {
+  margin: 0 auto 0.5em;
+  padding: 0.25em 0;
+}
