@@ -1,10 +1,14 @@
 
+<link rel="stylesheet" href="/styles/style.css">
 
+<div class="outerContainer">
 {{#each albumsData.body.items}}
+<div class="artistContainer">
     <section class="card">
-        <h2>Name: {{name}}</h2>
         <img src="{{images.0.url}}" alt="" srcset="">
+         <h2> {{name}}</h2>
         <a href="/tracks/{{id}}">View Tracks</a>
-        <h1>{{id}}</h1>
     </section>
+    </div>
 {{/each}}
+</div>

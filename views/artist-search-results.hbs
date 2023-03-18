@@ -1,10 +1,15 @@
 {{!-- {{log data}} --}}
+<link rel="stylesheet" href="/styles/style.css">
 
-
+<div class="outerContainer">
 {{#each artists}}
+<div class="artistContainer">
     <section class="card">
-        <h2>Name: {{this.name}}</h2>
         <img src="{{this.images.0.url}}" alt="" srcset="">
+        <h2>{{this.name}}</h2>
         <a href="/albums/{{id}}">View Albums</a>
     </section>
+    </div>
+    
 {{/each}}
+</div>

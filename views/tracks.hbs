@@ -1,12 +1,16 @@
-<h1>Tracks</h1>
+<link rel="stylesheet" href="/styles/style.css">
 
+
+<div id="header">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+    </div>
 
 {{#each tracksData.body.items}}
-    <section class="card">
-        <h2>Name: {{name}}</h2>
-    </section>
-    <audio
-        controls
+<div class="audioDiv">
+    <p>{{name}}</p>
+    <audio controls title="{{name}}" 
         src="{{preview_url}}">
     </audio>
+    </div>
 {{/each}}
