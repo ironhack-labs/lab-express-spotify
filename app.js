@@ -40,7 +40,7 @@ app.get("/artist-search", (req, res) => {
             console.log(artistsData);
 
 
-            res.render("artist-search-result", {artistsArr: artistsData});
+            res.render("artist-search-result", {artistsArr: artistsData, artist: artist});
         })
         .catch(error => console.log(error));
 });

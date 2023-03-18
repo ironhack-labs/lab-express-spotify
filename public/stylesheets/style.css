@@ -8,6 +8,18 @@ header {
     height: 10vh;
     background-color: #1DB954;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header a {
+    height: 90%;
+    margin: 0;
+    border-radius: 50%;
+}
+
+header a img {
+    height: 100%;
 }
 
 h1 {
@@ -19,6 +31,11 @@ footer {
     height: 10vh;
     background-color: #1DB954;
     color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+    font-style: italic;
 }
 
 .form-container {
@@ -63,17 +80,39 @@ footer {
 
 .artist-container {
     display: flex;
+    width: 25%;
+    margin: 3vw;
     flex-direction: column;
     align-items: center;
+    justify-content: center;
 }
 
 .img-container {
     overflow: hidden;
-    width: 30%;
-    scale: 1 / 1;
+    width: 100%;
+    height: 55vh;
+    border-radius: 0.5em 0.5em 0 0;
 }
 
 .img-container img {
     width: 100%;
+}
+
+.artist-footer {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #1DB954;
+    border-radius: 0 0 0.5em 0.5em;
+}
+
+.artist-footer a {
+    text-decoration: none;
+    color: white;
+    padding: 0.6em;
+    background-color: #191414;
+    border-radius: 0.3em;
+    margin-bottom: 0.5em;
 }
 
