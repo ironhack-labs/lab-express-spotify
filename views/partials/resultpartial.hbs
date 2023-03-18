@@ -1,0 +1,13 @@
+<div class="result-container">
+    <div class="img-container">
+        {{#if this.images.0.url}}
+        <img src={{this.images.0.url}} alt={{this.name}}>
+        {{else}}
+        <img src="/images/logo.png" alt={{this.name}}>
+        {{/if}}
+    </div>
+    <div class="result-footer">
+        <h3>{{this.name}}</h3>
+        <a href="/albuns/{{this.id}}">{{buttonMessage}}</a>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+<h1>Albuns From {{albuns.0.artists.0.name}}:</h1>
+
+<section class="results-container">
+
+    {{#each albuns}}
+        {{> resultpartial buttonMessage="View Tracks"}}
+    {{else}}
+    <h2>No albuns found</h2>
+    {{/each}}
+
+</section>
