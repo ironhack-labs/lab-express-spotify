@@ -1,9 +1,14 @@
-<section>
+<section id="artist">
   {{#each artists.items}}
+
     <h2>{{name}}</h2>
+
     <img src={{images.1.url}} />
+
     <form action="/album/{{id}}" method="get">
+
       <button type="submit">View Albums</button>
     </form>
+
   {{/each}}
 </section>
