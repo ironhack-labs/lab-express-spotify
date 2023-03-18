@@ -65,12 +65,12 @@ app.get("/album/:albumId", (req, res, next) => {
 });
 
 // view tracks route
-app.get("/tracks/:tracksId", (req, res, next) => {
-  spotifyApi
-   .getAlbumTracks(req.params.id)
+app.get("/track/:id",(req,res,next)=>{
+    spotifyApi
+    .getAlbumTracks(req.params.id)
     .then(data=>{
         console.log(data.body)
-        res.render("track",data.body)
+        res.render("tracks",data.body)
     })
     .catch((err) =>
       console.log("An error while searching for tracks occurred: ", err)
