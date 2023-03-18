@@ -3,6 +3,7 @@ require('dotenv').config();
 const { response } = require('express');
 const express = require('express');
 const hbs = require('hbs');
+const bodyParser = require('body-parser');
 const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
@@ -10,6 +11,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+app.use(bodyParser.urlencoded({ extended: true }));
 
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -27,24 +29,22 @@ const spotifyApi = new SpotifyWebApi({
 // Our routes go here:
 
 //Homepage
-app.get("/artist-search", (req,res,next)=> {
+app.get("/", (req,res,next)=> {
 
     res.render("home");
-
-    
 })
 
 //Search for artist 
-app.post("/artist-search-results", (req, res, next) => {
-  const artistArr = req.body.artist;
+app.post("/artist-search", (req, res, next) => {
+  const nameArtist = req.body.artist;
   spotifyApi
-    .searchArtists(artistArr)
+    .searchArtists(nameArtist)
     .then((data) => {
       console.log(
         "The received data from the API: ",
-        data.body
+        data.body.artists.items[0].images
       );
-      res.render("artist-search-results",data.body);
+      res.render("artist-search-results", data.body);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)

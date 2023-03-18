@@ -1,11 +1,17 @@
-  {{#each artists}}
+
+<h1>Artists</h1>
 
 <section id="container">
+  {{#each artists.items}}
+    <div id="cover">
+      <h2>{{name}}</h2>
 
-  
-      <h2>{{this.name}}</h2>
+      <img id="img" src={{images.1.url}} />
+</div>
+      <form action="/album/{{id}}" method="get">
 
+        <button type="submit">View Albums</button>
+      </form>
 
-</section>
   {{/each}}
-
+</section>
