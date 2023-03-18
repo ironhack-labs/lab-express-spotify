@@ -36,12 +36,16 @@ app.get("/", (req, res) => {
 
 app.get("/artist-search", (req, res) => {
     const {artist} = req.query;
+
     spotifyApi.searchArtists(artist)
         .then(data => {
             const artistsData = data.body.artists.items;
             res.render("artist-search-result", {artistsArr: artistsData, artist: artist});
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            res.render("no-page")
+            console.log(error);
+        });
 });
 
 app.get("/albuns/:artistId", (req, res) => {
@@ -52,7 +56,26 @@ app.get("/albuns/:artistId", (req, res) => {
             const albunsArr = data.body.items;
             res.render("albuns", {albuns: albunsArr})
         })
-        .catch(error => console.log(error));
+        .catch(error => {
+            res.render("no-page")
+            console.log(error);
+        });
+});
+
+app.get("/tracks/:albumId", (req, res) => {
+    const {albumId} = req.params;
+
+    spotifyApi.getAlbumTracks(albumId)
+        .then(data => {
+            const tracksArr = data.body.items;
+            const albumName = data.body;
+            console.log(albumName);
+            res.render("tracks", {tracks: tracksArr});
+        })
+        .catch(error => {
+            res.render("no-page")
+            console.log(error);
+        });
 });
 
 app.get("/*", (req, res) => {

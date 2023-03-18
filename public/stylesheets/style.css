@@ -128,3 +128,28 @@ footer {
     color: #1DB954;
     font-size: 2em;
 }
+
+.tracks-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.track-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 60%;
+    background-color: #1DB954;
+    border-radius: 0.5em 0 0.5em 0;
+    margin: 1em;
+}
+
+.track-container h2 {
+    margin: 1em;
+}
+
+.track-container audio {
+    margin: 1em;
+}

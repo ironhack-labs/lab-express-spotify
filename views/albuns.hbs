@@ -3,7 +3,16 @@
 <section class="results-container">
 
     {{#each albuns}}
-        {{> resultpartial buttonMessage="View Tracks"}}
+        <div class="result-container">
+            
+            {{> resultpartial}}
+
+            <div class="result-footer">
+                <h3>{{this.name}}</h3>
+                <a href="/tracks/{{this.id}}">View Tracks</a>
+            </div>
+
+        </div>
     {{else}}
     <h2>No albuns found</h2>
     {{/each}}
