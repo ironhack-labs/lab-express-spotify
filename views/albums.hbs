@@ -1,10 +1,10 @@
 
-<h1>Albums</h1>
 
 {{#each albumsData.body.items}}
     <section class="card">
         <h2>Name: {{name}}</h2>
         <img src="{{images.0.url}}" alt="" srcset="">
-        <a href="/albums/{{id}}">View Albums</a>
+        <a href="/tracks/{{id}}">View Tracks</a>
+        <h1>{{id}}</h1>
     </section>
 {{/each}}
