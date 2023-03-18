@@ -7,11 +7,39 @@ background-size:cover;
 
 .card button {
     color: white;
-    background-color: brown;
-    
+    background-color: rgb(221, 85, 85);
+    display: flex;
+    margin-top: 10px;
+    justify-content: center;
+    width: 166px;
+    height: 34px;
+    align-items: center;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+}
+
+
+ .card input {
+    width: 32em;
+    height: 2em;
+    display: flex;
+    justify-content: center;
+    position: relative;
+    right: 28%;
+    border: 1px solid ghostwhite;
+    border-radius: 3px;
  }
 
-
+form{
+    display: flex;
+    align-content: flex-end;
+    flex-direction: column;
+    justify-content: center;
+    left: 35%;
+    position: relative;
+   
+}
 
 
 section {
