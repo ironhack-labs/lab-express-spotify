@@ -44,7 +44,6 @@ app.post("/artist-search", (req, res, next) => {
         "The received data from the API: ",
         data.body.artists.items[0].images
       );
-      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
       res.render("artist-search-results", data.body);
     })
     .catch((err) =>
