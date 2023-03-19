@@ -27,5 +27,25 @@ const spotifyApi = new SpotifyWebApi({
 
 
 // Our routes go here:
+app.get("/",(req,res,next)=>{
+  res.render("home")
+})
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.get("/artist-search",(req,res,next)=>{
+  const artist = req.query.artist
+    spotifyApi
+  .searchArtists(artist)
+  .then(data => {
+    //console.log('The received data from the API: ', data.body.artists.items[0].images);
+    const artistArray=data.body.artists.items
+    res.render("artist-search-results", {artists: artistArray})
+
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+  //  res.render("artistsearch")
+})
+
+
+
+
+app.listen(3000, () => console.log('My Spotify project running on port 3002 🎧 🥁 🎸 🔊'))
