@@ -1,0 +1,13 @@
+<section id="container">
+  {{#each items}}
+    <div id="cover">
+      <h2>{{this.name}}</h2>
+
+      <img id="img" src={{this.images.1.url}} />
+    <a href="/tracks/{{this.id}}">View Tracks</a>
+</div>
+ 
+
+
+  {{/each}}
+</section>

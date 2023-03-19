@@ -31,6 +31,19 @@ background-size:cover;
     border-radius: 3px;
  }
 
+ .card {
+    background-color:rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    display: flex;
+    height: 10em;
+    width: 39em;
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-right: -50%;
+ }
+
 form{
     display: flex;
     align-content: flex-end;
@@ -42,16 +55,71 @@ form{
 }
 
 
-section {
+nav {
+    background-color: gray;
     display: flex;
-    background-color:rgba(255, 255, 255, 0.3);
-    height: 10em;
-    width: 39em;
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%)
+    justify-content: space-around;
+    height: 3.5rem;
+}
 
+nav div {
+    font-size: x-large;
+    margin-top: 10px;
+   padding-bottom: 15px;
+   display: flex;
+
+}
+
+.audio {
+    display: flex;
+    justify-content: space-around;
+    border: 2px solid orange;
+    color: aliceblue;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+img {
+width: auto;
+height: 200px;
+position: relative;
+display: flex;
+align-items: center;
+}
+
+#cover {
+    width: 300px;
+    height: 300px;
+   border: 2px solid orange;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    
+}
+
+#cover a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    display: flex;
+    margin: 10px;
+    width: 5.5em;
+    height: 2em;
+    color: #ffff;
+    justify-items: center;
+    align-items: center;
+    padding: 6px 10px;
+    background-color: rgb(221, 85, 85);
+    position:absolute;
+    flex-wrap: wrap;
+
+}
+
+h2 {
+    display: flex;
 }
