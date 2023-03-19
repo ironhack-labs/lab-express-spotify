@@ -1,0 +1,25 @@
+.my-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  padding: 12px 24px;
+  border: none;
+  border-radius: 4px;
+  font-size: 18px;
+  position: absolute;
+}
+img {
+  max-width: 100%;
+  height: auto;
+}
+h1 {
+  text-align: center;
+}
+h2 {
+  text-decoration: none;
+}
+.artists-img {
+  display: flex;
+  justify-content: space-between;
+}
