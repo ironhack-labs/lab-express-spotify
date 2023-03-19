@@ -1,0 +1,10 @@
+<h1>Here are some albums of one of your favorite artists: </h1>
+
+{{#each albums}}
+<div>
+    <h2>{{name}}</h2>
+    <img src="{{image}}">
+    <a href="/tracks/{{id}}">View Tracks</a>
+</div>
+{{/each}}
+

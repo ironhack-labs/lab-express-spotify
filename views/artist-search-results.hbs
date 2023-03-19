@@ -1,16 +1,25 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hellify artist search result</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hellify artist search result</title>
 </head>
+
 <body>
-    {{#each artists}}
+  {{#each artists}}
+  <h2>{{name}}</h2>
+  <img src="{{images.[0].url}}" alt="{{name}}">
+  <a href="/albums/{{id}}">View Albums</a>
+  {{else}}
+  <section>
     <h2>{{name}}</h2>
-    <img src="{{images.[0].url}}" alt="{{name}}">
-    <a href="/albums/{{id}}">View Albums</a>
+    <p>Sorry, there is no result matching your search!</p>
+  </section>
   {{/each}}
 </body>
+
 </html>
+
