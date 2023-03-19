@@ -24,4 +24,10 @@ const spotifyApi = new SpotifyWebApi({
 
 // Our routes go here:
 
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.get('/', (req, res, next) => {
+    res.render('home')
+})
+
+
