@@ -1,0 +1,138 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+
+
+
+.home .search {
+    height: 100vh;
+    width: 100vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home .search form {
+    height: 30vh;
+    width: 50vw;
+    background-color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.home .search form label {
+    width: 40%;
+}
+
+.home .search form input {
+    width: 100%;
+    height: 40px;
+    line-height: 35px;
+    font-size: 14px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.home .search form button {
+    width: 25%;
+    margin: 10px 30px;
+    height: 12%;
+}
+
+
+
+.artist-search>div,
+.albums>div,
+.track-list>div {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: rgba(255, 255, 128, .5);
+}
+
+.artist-search section,
+.albums section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+.artist-search section h3,
+.albums section h3 {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.artist-search section img,
+.albums section img {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-top: 10px;
+}
+
+.artist-search section a,
+.albums section a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #4CAF50;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+
+
+
+.albums h2,
+.track-list h2 {
+    width: 100vw;
+    height: 7vh;
+    background-color: grey;
+    text-align: center;
+    line-height: 7vh;
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+
+.track-list .all-tracks {
+    flex-direction: column;
+}
+
+.track-list figure {
+    margin-bottom: 45px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.track-list figcaption {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.track-list audio {
+    width: auto;
+    margin: 10px 160px;
+}

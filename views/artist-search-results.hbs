@@ -1,0 +1,13 @@
+<div class="all-artists">
+    {{#each artistsArray}}
+    <section class="card">
+        <img src={{this.images.0.url}} alt={{this.name}} />
+        <h3>{{this.name}}</h3>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </section>
+    {{else}}
+    <section class="card">
+        <p>Sorry, there is no artist that match with your request</p>
+    </section>
+    {{/each}}
+</div>

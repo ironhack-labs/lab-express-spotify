@@ -1,0 +1,15 @@
+<h2>Tracks of: {{albumName}}</h2>
+<div class="all-tracks">
+{{#each tracksArray}}
+<section>
+<figure>
+    <audio controls src="{{this.preview_url}}"></audio>
+    <figcaption>{{this.name}}</figcaption>
+</figure>
+</section>
+{{else}}
+<section class="card">
+    <p>Sorry, there is no Track that match with your request</p>
+</section>
+{{/each}}
+</div>
