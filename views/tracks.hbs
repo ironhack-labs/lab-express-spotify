@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/styles/style.css">
+
+
+<div id="header">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+</div>
+
+{{#each tracksData.body.items}}
+<div class="audioDiv">
+    <p>{{name}}</p>
+    <audio controls title="{{name}}" src="{{preview_url}}">
+    </audio>
+</div>
+{{/each}}
