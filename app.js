@@ -69,7 +69,7 @@ app.get("/track-info/:trackId", (req, res) => {
     spotifyApi
       .getAlbumTracks(trackId)
       .then(album => {
-       console.log(`Artist albums from API:`, album.body);
+       console.log(`Album tracks from API:`, album.body);
         res.render("track-info", album.body );
       })
       .catch((err) =>
