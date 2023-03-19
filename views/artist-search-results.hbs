@@ -1,7 +1,9 @@
-<section>
-{{#each items}}
-    <h2>{{name}}</h2>
-    <img src={{images.1.url}} />
-    <a href="/albums/{{id}}">Link</a>
-{{/each}}
+<section class="sections">
+  {{#each items}}
+    <div class="items">
+      <img src={{images.1.url}} />
+      <h2>{{name}}</h2>
+      <a class="viewButton" href="/albums/{{id}}">View Albums</a>
+    </div>
+  {{/each}}
 </section>
