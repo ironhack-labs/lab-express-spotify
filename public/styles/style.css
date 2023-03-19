@@ -1,0 +1,48 @@
+.form
+{
+	text-align: center;
+}
+
+body
+{
+	background-color: #fff5e6;
+}
+
+.form input
+{
+	margin: 20px 0px;
+	font-size: 24px;
+}
+
+.form button
+{
+	background-color: blue;
+	color: white;
+	padding: 10px;
+	border: none;
+}
+.searchresults li 
+{
+	list-style-type: none;
+	display: inline-block;
+	width: 350px;
+	border:  1px solid black;
+	border-radius: 5px;
+	text-align: center;
+	padding: 20px;
+	margin: 10px;
+}
+
+.searchresults img
+{
+	width: 200px;
+	height: 200px;
+}
+
+.searchresults a
+{
+	text-decoration: none;
+	background-color: blue;
+	color: white;
+	padding: 10px;
+}
