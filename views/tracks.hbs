@@ -1,0 +1,10 @@
+<link rel="stylesheet" href="/styles/style.css">
+
+<div>
+    <h2>Listen</h2>
+</div>
+{{#each tracksData.body.items}}
+    <p>{{name}}</p>
+    <audio controls title="{{name}}" src="{{preview_url}}">
+    </audio>
+{{/each}}

@@ -1,0 +1,12 @@
+<link rel="stylesheet" href="/styles/style.css">
+<div class="all-results">
+{{#each artists}}
+<div class="container"></div>
+		<div class="card">
+        <img src="{{this.images.0.url}}" alt="{{this.name}}">
+		<h2>Name: {{this.name}}</h2>
+        <a href='/albums/{{id}}'>View Albums</a>
+		</div>
+</div>
+{{/each}}
+</div>
