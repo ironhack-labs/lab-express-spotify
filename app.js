@@ -40,3 +40,16 @@ app.get('/', (req, res) => {
   });
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 
+app.get('/albums/:artistId', (req, res, next) => {
+    const artistId = req.params.artistId;
+    spotifyApi.getArtistAlbums(artistId)
+      .then(data => {
+        console.log('Artist albums', data.body);
+        const albums = data.body.items;
+        res.render('albums', { albums });
+      })
+      .catch(err => {
+        console.error(err);
+        next(err);
+      });
+  });
