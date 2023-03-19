@@ -1,0 +1,10 @@
+<div class="artist-search-container">
+  {{#each element}}
+  <a href="/artist-page/{{this.id}}">
+    <div class="artist-card">
+      <img src="{{this.img}}" alt="{{this.name}}">
+      <p>{{this.name}}</p>
+    </div>
+  </a>
+  {{/each}}
+</div>
