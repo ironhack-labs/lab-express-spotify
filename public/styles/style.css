@@ -86,9 +86,9 @@ nav div {
 img {
 width: auto;
 height: 200px;
-position: relative;
+position:relative;
 display: flex;
-align-items: center;
+
 }
 
 #cover {
@@ -99,25 +99,32 @@ align-items: center;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
+    background-color: coral;
+    margin: 1.5em;
+    padding: 1.5em;
     
 }
 
-#cover a {
+ a {
     text-decoration: none;
     cursor: pointer;
-    transition: background-color 0.3s;
+    transition: 0.3s;
     display: flex;
     margin: 10px;
     width: 5.5em;
     height: 2em;
     color: #ffff;
-    justify-items: center;
     align-items: center;
     padding: 6px 10px;
     background-color: rgb(221, 85, 85);
-    position:absolute;
-    flex-wrap: wrap;
+    position:relative;
+    border-radius: 5px;
+    
 
+}
+
+a:hover{
+    background-color: gray;
 }
 
 h2 {
