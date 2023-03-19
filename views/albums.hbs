@@ -1,0 +1,15 @@
+<h1>Check albums</h1>
+<div class="artist-box">
+{{#each items}}
+  <div class="album-container">
+    <img class="album-img" src="{{images.1.url}}" alt="images" />
+    <div>
+      <p>"{{name}}"</p>
+      <p class="rel-date">Relase date: {{release_date}}</p> {{!--I added for my own curiosity--}} 
+      <button class="album-button">
+      <a href="/track-info/{{id}}">View tracks</a>
+      </button>
+    </div>
+  </div>
+{{/each}}
+</div>
