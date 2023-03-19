@@ -1,0 +1,11 @@
+<nav> 
+    <div>Song Title</div>
+</nav>
+
+
+   {{#each items }}
+   <div class='audio'>
+   <h2>{{this.name}}</h2> 
+   <audio controls><source src="{{this.preview_url}}"></audio>
+   </div> 
+   {{/each}}

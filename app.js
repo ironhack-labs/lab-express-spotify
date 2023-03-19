@@ -47,6 +47,40 @@ app.get('/artist-search', (req, res, next) => {
         });
 });
 
+
+//Albums
+app.get('/albums/:artistId', (req, res, next) => {
+
+    const retreivedArtistId = req.params.artistId;
+
+    spotifyApi
+        .getArtistAlbums(retreivedArtistId)
+        .then(data => {
+            const album = data.body.items;
+            res.render('albums', {album})
+        })
+        .catch(e => {
+            console.log(`Found an error in the albums: ${e}`)
+        });
+});
+
+// tracks
+app.get('/tracks/:albumId', (req, res, next) => {
+
+    const retreivedAlbumId = req.params.albumId;
+
+    spotifyApi
+        .getAlbumTracks(retreivedAlbumId)
+        .then(data => {
+            const track = data.body.items;
+            res.render('album-tracks', {track});
+        })
+        .catch(e => {
+            console.log(`Found an error in the tracks of the album: ${e}`)
+        });
+})
+
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 app.get('/', (req, res, next) => {
     res.render('home')
