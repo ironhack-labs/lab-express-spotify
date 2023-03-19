@@ -38,7 +38,6 @@ app.get('/', (req, res) => {
       })
       .catch(err => console.log('Error while searching artists', err));
   });
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 
 app.get('/albums/:artistId', (req, res, next) => {
     const artistId = req.params.artistId;
@@ -50,6 +49,21 @@ app.get('/albums/:artistId', (req, res, next) => {
       })
       .catch(err => {
         console.error(err);
-        next(err);
       });
   });
+
+  app.get('/tracks/:albumId', (req, res, next) => {
+    const albumId = req.params.albumId;
+    spotifyApi.getAlbumTracks(albumId)
+      .then(data => {
+        const tracks = data.body.items;
+        res.render('tracks', { tracks });
+      })
+      .catch(err => {
+        console.log('Error retrieving album tracks:', err);
+      });
+  });
+  
+  
+  app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+  
