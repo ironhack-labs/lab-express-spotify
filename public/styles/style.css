@@ -1,0 +1,132 @@
+body{
+    margin: 0;
+    padding: 0;
+    background-image: url(/images/background.png);
+}
+#index-file{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    height: 100vh;
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+#index-file h1{
+    color: black;
+    font-size: 2.8em;
+    text-shadow: 3px 3px white;
+}
+#form-box{
+    
+    width: 40vw;
+    height: 30vh;
+    background-color: white;
+    opacity: 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#form-box button{
+    background-color: red;
+    margin-top: 2vh;
+    width: 9vw;
+    color: white;
+    margin-left: 5vw;
+    border: none;
+    height: 4.5vh;
+    border-radius: 3px;
+}
+#form-box button:hover{
+    background-color: darkred;
+}
+#form-box input{
+    width: 18vw;
+    height: 3.5vh;
+    
+}
+#form-box div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+#albums-head{
+    color: white;
+    font-size: 1.8em;
+    text-shadow: 2px 2px black;
+}
+
+.general-result{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 10vh 8vw;
+}
+
+.result-box{
+    background-color: rgb(77,77,77);
+    width: 25vw;
+    height: 55vh;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 3vh; 
+}
+.result-box img{
+    width: 25vw;
+    height: 40vh;
+    background-size: cover;
+}
+.result-description{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.result-description button{
+    background-color: red;
+    margin-bottom: 2vh;
+    width: 9vw;
+    color: white;
+    border: none;
+    height: 4.5vh;
+    border-radius: 3px;
+}
+.result-description button:hover{
+    background-color: darkred;
+}
+#albums-site{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#tracks-site{
+    display: flex;
+    justify-content: center;
+}
+#tracks-table{
+    border-collapse: collapse;
+    width: 100vw;
+   
+}
+#tracks-table td{
+    background-color: lightgray;
+    border: 1px solid #ddd;
+    padding-left: 2vw;
+    text-shadow: 2px 2px rgb(185,195,203);
+}
+#tracks-table th{
+    border-left: 1px solid #ddd;
+    padding-left: 2vw;
+    background-color: rgb(88,115,139);
+    text-shadow: 2px 2px lightgray;
+}
+#sec-td{
+    width: 35%;
+}

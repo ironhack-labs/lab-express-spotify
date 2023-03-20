@@ -1,0 +1,22 @@
+<div id="albums-site">
+  <section id="albums-head">
+    <h1>Albums for: {{items.0.artists.0.name}}</h1>
+  </section>
+
+  <section class="general-result">
+    {{#each items}}
+      <div class="result-box">
+        <img src="{{this.images.0.url}}" alt="" />
+        <div class="result-description">
+          <h3>{{this.name}}</h3>
+
+          <form action="/tracks/{{this.id}}">
+            <button type="submit">View Tracks</button>
+          </form>
+
+        </div>
+
+      </div>
+    {{/each}}
+  </section>
+</div>

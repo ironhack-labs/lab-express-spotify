@@ -1,0 +1,16 @@
+<div class="general-result">
+{{#each items}}
+    <div class="result-box">
+        <img src="{{this.images.0.url}}" alt="no image provided">
+        <div class="result-description">
+            <h3>{{this.name}}</h3>
+            
+            <form action="/albums/{{this.id}}">
+                <button type="submit">View Albums</button>
+            </form>
+            
+        </div>
+        
+    </div> 
+{{/each}}
+</div>

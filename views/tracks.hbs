@@ -1,0 +1,29 @@
+<section id="tracks-site">
+    <table id="tracks-table">
+    <thead>
+        <tr>
+            <th>
+                <h2>Title</h2>
+            </th>
+            <th>
+                <h2>Listen</h2>
+                
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each items}}
+            <tr>
+                <td>
+                    {{this.name}}
+                </td>
+                <td id="sec-td">
+                    <audio controls src="{{this.preview_url}}">
+
+                    </audio>
+                </td>
+            </tr>
+        {{/each}}
+    </tbody>
+</table>
+</section>
