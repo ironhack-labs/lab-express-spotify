@@ -91,6 +91,7 @@ body {
 	transition: all ease 150ms;
 	box-shadow: 0px 0px 10px;
 	cursor: pointer;
+	transform: scale(1.01);
 }
 
 .artist-div img {
@@ -159,7 +160,7 @@ body {
 	background-color: rgb(221, 78, 78);
 	color: white;
 	text-decoration: none;
-	margin: 3vh auto;
+	margin: 2vh auto;
 	display: flex;
 	justify-content: center;
 	width: 10vw;
