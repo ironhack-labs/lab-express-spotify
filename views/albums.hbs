@@ -1,0 +1,16 @@
+<h1>Albums from: {{artistName}}</h1>
+
+{{#each items}}
+    {{#if name}}
+        <h2>Album: {{name}}</h2>
+        <h2>Release Date: {{release_date}}</h2>
+
+        <img width="200" src="{{images.0.url}}" />
+        
+        <section>
+            <a href="/tracks/{{id}}?album={{name}}">View Tracks</a>
+        </section>
+    {{else}}
+        <h2>This album in not in our database</h2>
+    {{/if}}
+{{/each}}

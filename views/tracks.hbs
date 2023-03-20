@@ -1,0 +1,11 @@
+<h1>Tracks from: {{album}}</h1>
+
+{{#each items}}
+    {{#if name}}
+        <h2>Track: {{name}}</h2>
+        <img width="200" src="{{images.0.url}}" />
+        <audio src="{{preview_url}}" controls></audio>
+    {{else}}
+        <h2>This album in not in our database</h2>
+    {{/if}}
+{{/each}}

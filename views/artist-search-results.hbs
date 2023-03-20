@@ -1,0 +1,17 @@
+
+{{#each artists.items}}
+    {{#if name}}
+        <h2>Artist: {{name}}</h2>
+        
+        <p>followers: {{followers.total}}</p>
+        <p>id: {{id}}</p>
+        
+        <img width="200" src="{{images.0.url}}" />
+        
+        <section>
+            <a href="/albums/{{id}}?artist={{name}}">View Albums</a>
+        </section>
+    {{else}}
+        <h2>This artist in not in our database</h2>
+    {{/if}}
+{{/each}}
