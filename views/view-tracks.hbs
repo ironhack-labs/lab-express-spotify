@@ -1,0 +1,15 @@
+<div style="display:flex; align-items:center ;flex-direction:column; width:98vw; overflow-x:hidden; gap:50px">
+{{#each tracks}}
+<div style="width:60vw; display:flex; justify-content:space-between">
+ <span>
+    {{this.name}}
+ </span>
+<audio controls>
+  <source src={{this.preview_url }}>
+ 
+</audio>
+</div>
+
+{{/each}}
+
+</div>
