@@ -1,8 +1,8 @@
 {{#if body.artists}}
   <section class="display">
     {{#each body.artists.items}}
-      <a class="card"href="/albums/{{id}}">
-        <div class="img-container">
+      <a class="card" href="/albums/{{id}}" style="--animation-order: {{@index}}">
+        <div class="img-container" style="--animation-order: {{@index}}">
           <img src="{{images.0.url}}" alt="" />
         </div>
         <div class="text-container">

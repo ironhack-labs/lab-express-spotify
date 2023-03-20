@@ -1,14 +1,14 @@
 {{#if body.items}}
   <section class="display">
-    {{#each body.items}}
-      <div class="track">
+    {{#each body.items }}
+      <div class="track" style="--animation-order: {{@index}}">
         <div class="text-container">
             <h4>
               {{name}}
             </h4>
         </div>
         {{#if preview_url}}
-          <audio controls src="{{preview_url}}"></audio>
+          <audio controls src="{{preview_url}}" style="--animation-order: {{@index}}"></audio>
         {{/if}}
       </div>
     {{/each}}
