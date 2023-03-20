@@ -27,7 +27,53 @@ const spotifyApi = new SpotifyWebApi({
 // Our routes go here:
 
 app.get("/", (req, res, next) =>  {
-    response.render("home");
+    res.render("home");
 });
+
+app.get("/artist-search", (req, res, next) => {
+
+    spotifyApi
+        .searchArtists(req.query.artistName)
+        .then((artistsArr) => {
+
+            const data = {
+                artists: artistsArr.body.artists.items
+            }
+
+            // console.log(data);
+
+            res.render('artist-search-results', data);
+
+        })
+        .catch(err => console.log('An error while searching artists occurred: ', err));
+        });
+
+app.get('/albums/:artistId', (req, res, next) => {
+
+    artistId = req.params.artistId;
+
+    spotifyApi
+        .getArtistAlbums(artistId)
+        .then(albumData => {
+            // console.log("artist's albums:", albumData.body );
+            res.render('albums', {albumData});
+        })
+        .catch(err => console.log('An error occurred while getting album data', err));
+})
+
+app.get('/tracks/:albumId', (req, res, next) => {
+
+    albumId = req.params.albumId;
+
+    spotifyApi
+        .getAlbumTracks(albumId)
+        .then(tracksData => {
+            // console.log("tracks from album:", tracksData.body.items);
+            res.render('tracks', {tracksData})
+        })
+        .catch(err => console.log('An error occurred while getting album tracks', err));
+})
+
+
 
 app.listen(3003, () => console.log('My Spotify project running on port 3003 🎧 🥁 🎸 🔊'));

@@ -1,0 +1,33 @@
+
+.search-bar {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: contain;
+    width: 50vw;
+    height: 70vh;
+    text-align: center;
+    margin: 0 auto;
+}
+
+#search-form {
+    padding: 30vh;
+}
+
+img {
+    height: 150px;
+}
+
+nav {
+    background-color: coral;
+    height: 10vh;
+    border-radius: 10px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+nav a {
+    font-weight: bolder;
+    font-size: larger;
+    color: black;
+}

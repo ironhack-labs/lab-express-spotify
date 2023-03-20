@@ -1,0 +1,13 @@
+<nav>
+    <a href="/">New Search</a>
+</nav>
+
+<h1>Albums</h1>
+
+<section id="'album-results">
+    {{#each albumData.body.items}}
+        <h3>{{name}}</h3>
+        <img src="{{images.0.url}}" alt="{{name}}">
+        <a href="/tracks/{{id}}">View Tracks</a>
+    {{/each}}
+</section>
