@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.home {
+  background-color: lightskyblue;
+  width: 95vw;
+  height: 90vh;
+  display: flex;
+}
+
+form {
+  margin: auto auto;
+  display: flex;
+  flex-direction: column;
+}
+
+form input {
+  width: 20rem;
+  height: 5rem;
+}
+
+form button {
+  width: 15rem;
+  height: 4rem;
+  margin: 0 auto;
+}
+
+.search-result {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  padding: 1rem 3rem;
+}
+
+.album-container {
+  display: flex;
+  flex-direction: column;
+  width: 20rem;
+  height: 28rem;
+  margin: 1rem 2rem;
+  background-color: gray;
+}
+
+.album-container img {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.album-container h1 {
+  font-size: 20px;
+  text-align: center;
+  color: white;
+}
+
+.album-container a {
+  text-align: center;
+  text-decoration: none;
+  color: white;
+  background-color: red;
+  width: 60%;
+  margin: 0 auto 1px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.track {
+  width: 100%;
+}
+.track h1 {
+  text-align: center;
+  position: fixed;
+  left: 45vw;
+  top: 2vh;
+}
+
+.track h2 {
+  font-size: 25px;
+  margin-bottom: 10px;
+}
+
+.preview-list {
+  margin-top: 60px;
+}

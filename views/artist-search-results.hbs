@@ -1,0 +1,15 @@
+<div class="search-result">
+  {{#each albumArr}}
+    <section class="album-container">
+      {{#if images.0.url}}
+        <img src="{{images.0.url}}" />
+      {{else}}
+        <img src="/images/blank.jpg" />
+      {{/if}}
+      <h1>{{name}}</h1>
+
+      <a href="/albums/{{id}}">View Albums</a>
+
+    </section>
+  {{/each}}
+</div>
