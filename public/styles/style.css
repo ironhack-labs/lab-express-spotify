@@ -89,6 +89,7 @@ button:hover {
     width: 18vw;
     height: 25vw;
     display: grid;
+    grid-template-rows: 5vw 15vw;
     justify-items: center;
     color: #ffffff;
 }
@@ -148,6 +149,7 @@ h1:hover {
     width: 18vw;
     height: 25vw;
     display: grid;
+    grid-template-rows: 5vw 15vw;
     justify-items: center;
     color: #ffffff;
 }
