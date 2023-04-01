@@ -24,26 +24,29 @@ spotifyApi
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
+
 // Our routes go here:
+
+// home route 
 app.get("/", (req, res) => {
     res.render("home");
   });
 
-const baseAPIRoute = "https://api.spotify.com/v1/artists/";
+// const baseAPIRoute = "https://api.spotify.com/v1/artists/";
+// console.log(baseAPIRoute);
 
-
+// artist rearch route 
 app.get("/artist-search", (req, res) => {
-    console.log(req.query);
     spotifyApi
-        .searchArtists(req.query)
+        .searchArtists(req.query.artist)
         .then(data => {
+            res.send("The artist was sent");
             console.log('The received data from the API: ', data.body);
-            const apiRouteToQuery = baseAPIRoute + req.query.name;
-            const response = get(apiRouteToQuery);
-            res.render("artist-search-results", { artists: response.data.results});
+            // const apiRouteToQuery = baseAPIRoute + req.query.name;
+            // const response = get(apiRouteToQuery);
+            // res.render("artist-search-results", { artists: response.data.results});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err)); 
-        // haha comment
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
