@@ -2,6 +2,7 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
+const mime = require('mime');
 
 // require spotify-web-api-node package here:
 
@@ -36,6 +37,30 @@ spotifyApi.clientCredentialsGrant()
           .then(data => {
             const artists = data.body.artists.items;
             res.render('artist-search-results', { artists });
+          })
+          .catch(err => console.log('The error while searching artists occurred: ', err));
+      });
+      
+      app.get('/albums/:artistId', (req, res, next) => {
+        const artistId = req.params.artistId;
+        spotifyApi.getArtistAlbums(artistId)
+          .then(data => {
+            console.log('Albums received from the API', data.body);
+
+            res.render('albums', { albums: data.body.items });
+          })
+          .catch(err => console.log('The error while searching artists occurred: ', err));
+      });
+
+      app.get('/tracks/:albumId', (req, res, next) => {
+        const { albumId, trackId } = req.params;
+      
+        spotifyApi
+          .getAlbumTracks(albumId)
+          .then(data => {
+            const tracks = data.body.items;
+            const track = tracks.find(t => t.id === trackId);
+            res.render('track-information', { track });
           })
           .catch(err => console.log('The error while searching artists occurred: ', err));
       });
