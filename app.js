@@ -42,7 +42,8 @@ app.get("/artist-search", (req, res) => {
             const response = get(apiRouteToQuery);
             res.render("artist-search-results", { artists: response.data.results});
         })
-        .catch(err => console.log('The error while searching artists occurred: ', err));
+        .catch(err => console.log('The error while searching artists occurred: ', err)); 
+        // haha comment
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
