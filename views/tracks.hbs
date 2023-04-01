@@ -1,0 +1,22 @@
+<div class="container-fluid">
+    <div class="container">
+    <div class="bg-dark d-flex justify-content-between align-items-center text-white" style="height:100px;">
+        <h1 class="p-5">Title</h1>
+        <h1 class="p-5">Listen</h1>
+    </div>
+<div class="col gap-1 d-flex flex-column">{{#each tracks}}
+    <div class="bg-light d-flex justify-content-between p-2">
+ <h5 class="fw-bold">{{this.name}}</h5>
+   <audio class="w-50" controls>
+  <source src="{{this.preview_url}}" type="audio/mpeg">
+  Your browser does not support the audio stag.
+</audio>
+    </div>
+{{/each}}
+
+</div>
+
+
+</div>
+
+</div>

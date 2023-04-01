@@ -1,11 +1,11 @@
 <div class="container-fluid">
-<div class="container d-flex flex-wrap justify-content-center gap-4">{{#each result}}
+<div class="container d-flex flex-wrap justify-content-center gap-4">{{#each albums}}
     <div class="card rounded-3" style="max-width:300px;width:300px;">
         <img class="h-75" src="{{this.images.[1].url}}" alt="">
         <div class="card-body d-flex flex-column align-items-center bg-secondary text-white rounded-bottom-3">
            <h5 class="card-title">{{this.name}}</h5>
-           <form  class="d-flex flex-column align-items-center gap-3" action="albums/{{this.id}}" method="post" enctype="application/json">
-           <button class="btn btn-danger" type"submit">View Albums</button>
+           <form  class="d-flex flex-column align-items-center gap-3" action="/tracks/{{this.id}}" method="post" enctype="application/json">
+           <button class="btn btn-danger" type="submit">View Tracks</button>
            </form>
         </div>
     </div>
