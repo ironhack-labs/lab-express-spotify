@@ -30,7 +30,10 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
-app.get("/albums", (req, res) => {
+app.get("/albums/:artistId", (req, res, next) => {
+  spotifyApi.getArtistAlbums(req.params.artistId).then((data) => {
+    console.log(data);
+  });
   res.render("albums");
 });
 
