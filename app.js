@@ -19,7 +19,7 @@ const spotifyApi = new SpotifyWebApi({
 // Retrieve an access token
 spotifyApi
   .clientCredentialsGrant()
-  .then((data) => spotifyApi.setAccessToken(data.body["access_token"]))
+  .then((data) => spotifyApi.setAccessToken(data.body.access_token))
   .catch((error) =>
     console.log("Something went wrong when retrieving an access token", error)
   );
@@ -30,13 +30,18 @@ app.get("/", (req, res) => {
   res.render("index");
 });
 
+app.get("/albums", (req, res) => {
+  res.render("albums");
+});
+
 app.get("/artist-search", (req, res) => {
   console.log(req.query.artist);
   spotifyApi
     .searchArtists(req.query.artist)
     .then((data) => {
       console.log("The received data from the API: ", data.body);
-      res.send("The artist was send"); // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.send("The artist was send");
+      res.render("artist-search-results");
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
