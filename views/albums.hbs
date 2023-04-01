@@ -3,6 +3,11 @@
 
 {{#each albums}}
     <h3>{{this.name}}</h3>
+   
+    {{#if images.length}}
+    <img src="{{this.images.[0].url}}">
+    {{/if}}
     <br>
+    <a href='/tracks/{{id}}'>View Tracks</a>
 {{/each}}
 
