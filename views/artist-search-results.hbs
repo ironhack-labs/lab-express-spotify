@@ -1,3 +1,13 @@
-{{#each}}
-<h3>{{this.name}}</h3>
+
+<h1>Search results</h1>
+<h1>{{name}}</h1>
+
+{{#each artists}}
+    <h3>{{name}}</h3>
+    {{#if images.length}}
+    <img src="{{images.[0].url}}">
+    {{/if}}
+    <br>
+    <button>Show albums</button>
 {{/each}}
+
