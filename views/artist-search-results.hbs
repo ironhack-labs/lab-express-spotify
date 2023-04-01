@@ -3,11 +3,11 @@
 <h1>{{name}}</h1>
 
 {{#each artists}}
-    <h3>{{name}}</h3>
+    <h3>{{this.name}}</h3>
     {{#if images.length}}
-    <img src="{{images.[0].url}}">
+    <img src="{{this.images.[0].url}}">
     {{/if}}
     <br>
-    <button>Show albums</button>
+    <a href='/albums/{{id}}'>View Albums</a>
 {{/each}}
 
