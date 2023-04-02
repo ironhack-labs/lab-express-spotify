@@ -10,7 +10,7 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
-// setting the spotify-api goes here:
+// setting the spotify-api
 const spotifyApi = new SpotifyWebApi({
   clientId: process.env.CLIENT_ID,
   clientSecret: process.env.CLIENT_SECRET,
@@ -24,7 +24,7 @@ spotifyApi
     console.log("Something went wrong when retrieving an access token", error)
   );
 
-// Our routes go here:
+// routes
 
 app.get("/", (req, res) => {
   res.render("index");

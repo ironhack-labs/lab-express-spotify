@@ -1,8 +1,12 @@
-{{#each artists}}
-  Artists:
-  {{name}}
-  <img src="{{images.0.url}}" />
-
-  <a href="/albums/{{id}}">View Albums</a>
-
-{{/each}}
+<div class="album-raster">
+  {{#each artists}}
+    <div class="container">
+      <img class="album-img" src="{{images.0.url}}" />
+      <div class="heading">
+        {{name}}
+        <br />
+        <a class="view-btn" href="/albums/{{id}}">View Albums</a>
+      </div>
+    </div>
+  {{/each}}
+</div>

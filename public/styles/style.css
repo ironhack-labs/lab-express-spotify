@@ -1,0 +1,63 @@
+.stage-img {
+}
+
+.search-page {
+  background-color: rgba(239, 243, 247, 0.954);
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 200px;
+}
+
+.enter-field {
+  width: 400px;
+}
+
+.search-btn {
+  margin: 10px;
+  padding: 10px;
+  width: 150px;
+  background-color: rgb(225, 51, 51);
+  color: white;
+  text-decoration: none;
+}
+
+.album-raster {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 10px;
+  margin: 5px;
+}
+
+.album-img {
+  width: 200px;
+}
+
+.heading {
+  background-color: rgb(74, 73, 73);
+  width: 200px;
+  height: 50px;
+  padding: 5px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+}
+
+.container {
+  height: 100%;
+  width: 200px;
+  text-align: center;
+}
+
+.view-btn {
+  padding: 3px;
+  width: 100px;
+  background-color: rgb(225, 51, 51);
+  color: white;
+  text-decoration: none;
+  margin-top: 5px;
+}
