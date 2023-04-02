@@ -1,0 +1,36 @@
+body{
+    background-color:aqua;
+}
+ul, li{
+    list-style: none;
+}
+#homeBody{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+
+}
+#artistUl, #albumId{
+    
+    display: flex;
+   flex-wrap: wrap;
+
+}
+#trackId li{
+display: flex;
+justify-content: space-between;
+margin: 25px;
+background: whitesmoke;
+align-items: center;
+
+
+}
+
+#artistUl li, #albumId li{
+    padding: 30px;
+}
+.albumImg, .artistImg{
+    width: 300px;
+    height: 300px;
+}

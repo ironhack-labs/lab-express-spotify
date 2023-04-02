@@ -1,3 +1,13 @@
+<ul id="artistUl">
+{{#each this}} <li>
+
+<img class="artistImg" src="{{this.images.[0].url}}" alt="test">
+
+
 <h1>
-    {{this}}
+    {{this.name}}
 </h1>
+<a href="/albums/{{this.id}}">View Albums</a>
+</li>
+{{/each}}
+</ul>
