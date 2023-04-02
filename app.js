@@ -3,7 +3,6 @@ require("dotenv").config();
 const express = require("express");
 const hbs = require("hbs");
 const path = require("path");
-//const axios = require("axios");
 
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
@@ -13,8 +12,6 @@ const app = express();
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
-
-console.log(process.env.CLIENT_ID, process.env.CLIENT_SECRET);
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -64,9 +61,17 @@ app.get("/albums/:artistId", (req, res) => {
     );
 });
 
-//   app.get("/albums/:artistId", (req, res, next) => {
-//     // .getArtistAlbums() code goes here
-//   });
+app.get("/:albumId", (req, res) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then((data) => {
+      console.log("Album Tracks", data.body);
+      res.render(path.join(__dirname, "views/tracks.hbs"), data.body);
+    })
+    .catch((err) =>
+      console.log("The error while searching album tracks occurred: ", err)
+    );
+});
 
 // Our routes go here:
 app.listen(3000, () =>
