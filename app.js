@@ -52,7 +52,7 @@ app.get("/albums/:artistId", (req, res) => {
       res.render("albums", { albums });
     })
     .catch((err) =>
-      console.log("The error while searching artists occurred: ", err)
+      console.log("The error while searching albums occurred: ", err)
     );
 });
 
@@ -65,7 +65,7 @@ app.get("/tracks/:albumId", (req, res) => {
       res.render("tracks", { tracks });
     })
     .catch((err) =>
-      console.log("The error while searching artists occurred: ", err)
+      console.log("The error while searching tracks occurred: ", err)
     );
 });
 
