@@ -42,7 +42,7 @@ body {
 
 .album-raster {
   display: grid;
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(5, 1fr);
   grid-gap: 10px;
   margin: 5px;
 }
@@ -80,18 +80,19 @@ body {
 table {
   border-collapse: collapse;
   width: 100%;
-  padding: 20px;
 }
 
 table thead {
   background-color: rgb(74, 73, 73);
   color: white;
   text-align: left;
+  border: 10px solid rgb(74, 73, 73);
 }
 
 td {
   background-color: rgb(226, 226, 226);
   border-bottom: 3px solid white;
+  padding-left: 10px;
 }
 
 .title-listen {
