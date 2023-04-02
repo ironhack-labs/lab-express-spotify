@@ -61,3 +61,19 @@
   text-decoration: none;
   margin-top: 5px;
 }
+
+.title-tracks {
+  background-color: rgb(74, 73, 73);
+}
+
+li {
+  list-style: none;
+  font-size: 15pt;
+  margin-bottom: 3px;
+  background-color: rgb(236, 236, 236);
+  padding: 5px 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}

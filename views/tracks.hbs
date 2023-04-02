@@ -1,0 +1,9 @@
+<h1 class="title-tracks">Title</h1>
+<ol>
+  {{#each tracks}}
+    <li>
+      {{name}}
+      <audio controls src="{{preview_url}}"></audio>
+    </li>
+  {{/each}}
+</ol>
