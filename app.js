@@ -33,16 +33,18 @@ const baseAPIRoute = "https://api.spotify.com/v1/artists/";
 
 
 app.get("/artist-search", (req, res) => {
-    console.log(req.query);
+    res.render("artist-search-results");
+    console.log(req.query.artist);
     spotifyApi
-        .searchArtists(req.query)
+        .searchArtists(req.query.artist)
         .then(data => {
             console.log('The received data from the API: ', data.body);
-            const apiRouteToQuery = baseAPIRoute + req.query.name;
+            const apiRouteToQuery = baseAPIRoute + req.query.artist;
             const response = get(apiRouteToQuery);
-            res.render("artist-search-results", { artists: response.data.results});
+            res.send("The artist is send");
+            // res.render("artist-search-results", { artists: response.data.results});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
