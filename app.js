@@ -4,6 +4,7 @@ const express = require('express');
 const hbs = require('hbs');
 const mime = require('mime');
 
+
 // require spotify-web-api-node package here:
 
 const app = express();
@@ -53,16 +54,17 @@ spotifyApi.clientCredentialsGrant()
       });
 
       app.get('/tracks/:albumId', (req, res, next) => {
-        const { albumId, trackId } = req.params;
+        const albumId = req.params.albumId;
       
-        spotifyApi
-          .getAlbumTracks(albumId)
+        spotifyApi.getAlbumTracks(albumId)
           .then(data => {
             const tracks = data.body.items;
-            const track = tracks.find(t => t.id === trackId);
-            res.render('track-information', { track });
+            res.render('tracks', { tracks });
           })
-          .catch(err => console.log('The error while searching artists occurred: ', err));
+          .catch(err => {
+            console.log('Error getting tracks:', err);
+            next(err);
+          });
       });
       
       
