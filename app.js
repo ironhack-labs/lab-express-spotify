@@ -61,7 +61,6 @@ app.get("/tracks/:albumId", (req, res) => {
   spotifyApi
     .getAlbumTracks(req.params.albumId)
     .then((data) => {
-      console.log(data.body);
       const tracks = data.body.items;
       res.render("tracks", { tracks });
     })

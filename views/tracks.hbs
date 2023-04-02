@@ -1,9 +1,14 @@
-<h1 class="title-tracks">Title</h1>
-<ol>
-  {{#each tracks}}
-    <li>
-      {{name}}
-      <audio controls src="{{preview_url}}"></audio>
-    </li>
-  {{/each}}
-</ol>
+<table>
+  <thead>
+    <th><h1>Title</h1></th>
+    <th class="title-listen"><h1>Listen</h1></th>
+  </thead>
+  <tbody>
+    {{#each tracks}}
+      <tr>
+        <td>{{name}}</td>
+        <td><audio controls src="{{preview_url}}"></audio></td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
