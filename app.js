@@ -33,16 +33,12 @@ const baseAPIRoute = "https://api.spotify.com/v1/artists/";
 
 
 app.get("/artist-search", (req, res) => {
-    res.render("artist-search-results");
     console.log(req.query.artist);
     spotifyApi
         .searchArtists(req.query.artist)
         .then(data => {
             console.log('The received data from the API: ', data.body);
-            const apiRouteToQuery = baseAPIRoute + req.query.artist;
-            const response = get(apiRouteToQuery);
-            res.send("The artist is send");
-            // res.render("artist-search-results", { artists: response.data.results});
+            res.render("artist-search-results", { artists: data.body.artists.items});
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
