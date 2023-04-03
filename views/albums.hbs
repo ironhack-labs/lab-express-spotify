@@ -1,4 +1,9 @@
-<h2>Albums for: {{name}}</h2>
 {{#each albums}}
-    {{}}
+<div class="album_card">
+ <h1>{{this.name}}</h1>
+ {{#if images.length}}
+ <img src="{{this.images.[0].url}}" alt="">
+ {{/if}}
+ <a href="/tracks">View Tracks</a>
+</div>
 {{/each}}

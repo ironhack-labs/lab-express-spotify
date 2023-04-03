@@ -43,18 +43,26 @@ app.get("/artist-search", (req, res) => {
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
-app.get("/albums:artistId", (req, res) => {
+// app.get("/albums/:artistId", (req, res) => {
+//   spotifyApi
+//   .getAlbums(req.params.artistId)
+//   .then(function(data) {
+//     console.log('Albums information', data.body);
+//     res.render("albums", { albums: data.body.items});
+//   }, function(err) {
+//     console.error("Error while displaying albums:" , err);
+//   });
+// });
+
+app.get("/albums/:artistId", (req, res) => {
   spotifyApi
-  .getAlbums(req.query.artist)
+  .getArtistAlbums(req.params.artistId)
   .then(function(data) {
     console.log('Albums information', data.body);
-    res.render("albums", { albums: data.body.artists.items});
+    res.render("albums", { albums: data.body.items});
   }, function(err) {
     console.error("Error while displaying albums:" , err);
   });
-
-
-
 });
 
 app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
