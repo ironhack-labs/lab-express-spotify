@@ -43,16 +43,6 @@ app.get("/artist-search", (req, res) => {
         .catch(err => console.log('The error while searching artists occurred: ', err));
 });
 
-// app.get("/albums/:artistId", (req, res) => {
-//   spotifyApi
-//   .getAlbums(req.params.artistId)
-//   .then(function(data) {
-//     console.log('Albums information', data.body);
-//     res.render("albums", { albums: data.body.items});
-//   }, function(err) {
-//     console.error("Error while displaying albums:" , err);
-//   });
-// });
 
 app.get("/albums/:artistId", (req, res) => {
   spotifyApi
@@ -64,5 +54,29 @@ app.get("/albums/:artistId", (req, res) => {
     console.error("Error while displaying albums:" , err);
   });
 });
+
+// app.get("/tracks/:albumId", (req, res) => {
+//   spotifyApi
+//   .getAlbumTracks(req.params.albumId)
+//   .then(function(data) {
+//     console.log("tracks info", data.body);
+//     res.render("tracks");
+//     // , { tracks: data.body.items}
+//   }, function(err) {
+//     console.log("Error while displaying tracks:", err);
+//   });
+// });
+
+app.get('/tracks/:albumId', (req, res, next) => {
+  spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      res.render('tracks', {tracks: data.body.items});
+      })
+    .catch(err => console.log('Error while displaying tracks:: ', err)); 
+});
+
+
+
 
 app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
