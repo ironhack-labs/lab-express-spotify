@@ -1,10 +1,14 @@
-{{#each albums}}
-<div id="album-card">
-  <h1>{{this.name}}</h1>
- {{#if images.length}}
-  <img src="{{this.images.[0].url}}" alt="">
- {{/if}}
-  <br><br>
-  <a href="/tracks/{{this.id}}">View Tracks</a>
+<div id="albums-results">
+    {{#each albums}}
+        <div id="album-card">
+            {{#if images.length}}
+                <img src="{{this.images.[0].url}}" alt="{{this.name}} album image"/>
+            {{/if}}
+            <br>
+            <h1>{{this.name}}</h1>
+            <br>
+            <a href="/tracks/{{this.id}}">View Tracks</a>
+       </div>
+    {{/each}}
 </div>
-{{/each}}
+

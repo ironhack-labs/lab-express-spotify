@@ -34,9 +34,70 @@ form button {
     font-size: 15px;
 }
 
-/* albums page */
-#album-card h1 {
-    color:rgb(221, 40, 40);
-    
+#search-results, 
+#albums-results {
+    background-color: aliceblue;
+    display: flex;
+    flex-wrap: wrap;
+    /* border: solid green 2px; */
+    justify-content: center;
+    gap: 40px;
 }
 
+#search-single-album,
+#album-card {
+    margin-top: 10px;
+    /* border: solid blue 2px; */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: gray;
+    color: aliceblue;
+    width: 300px;
+}
+
+#search-single-album h1,
+#album-card h1 {
+    margin: 0;
+    font-size: 20px;
+}
+
+#search-single-album img,
+#album-card img {
+   max-height: 300px;
+}
+
+#search-single-album a,
+#album-card a {
+    text-decoration: none;
+    font-size: 15px;
+    color: aliceblue;
+    background-color: rgb(221, 40, 40);
+    height: 30px;
+    width: 100px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding-top: 10px;
+}
+
+#tracks-results {
+    width: 800px;
+    margin: 0 auto;
+}
+
+#track-card {
+ display: flex;
+ background-color: rgba(240, 248, 255, 0.585);
+ margin-top: 10px;
+ justify-content: space-between;
+}
+
+#track-card p {
+    margin-left: 20px;
+    font-size: 20px;
+    text-transform: uppercase;
+}
+
+#track-card audio {
+    margin-right: 10px;
+}
