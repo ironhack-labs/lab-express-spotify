@@ -62,6 +62,18 @@ app.get('/albums/:artistId', (req, res, next) => {
     .catch(err => console.log('The error while getting artist albums occurred: ', err)); 
 });
 
+app.get('/tracks/:albumId', (req, res, next) => {
+  
 
-
+  spotifyApi
+  .getAlbumTracks(req.params.albumId)
+    .then(data => {
+      
+      res.render('tracks', { tracks: data.body.items });
+    })
+    .catch(err => {
+      console.log('Error', err);
+      next(err);
+    });
+});
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
