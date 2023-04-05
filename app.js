@@ -9,9 +9,9 @@ const SpotifyWebApi = require('spotify-web-api-node');
 
 const app = express();
 app.use(express.urlencoded({ extended: true }))
-app.set('view engine', 'hbs');
-app.set('views', __dirname + '/views');
-app.use(express.static(__dirname + '/public'));
+app.set("view engine", "hbs");
+app.set("views", __dirname + "/views");
+app.use(express.static(__dirname + "/public"));
 app.use(express.json())
 
 
@@ -35,13 +35,14 @@ app.get("/", (req, res) => {
 
   
 
+
   app.get("/artist-search", (req, res) => {
     spotifyApi
       .searchArtists(req.query.artist)
       .then((data) => {
         
         console.log("data", data.body.artists.items)
-        res.render("artist-search-results", { artists : data.body.artists})
+        res.render("artist-search-results", { artists : data.body.artists.items})
       
           
       })
@@ -49,20 +50,18 @@ app.get("/", (req, res) => {
         console.log("The error while searching artists occurred: ", err)
       );
   });
-
-
-  app.get("/albums/:artistId", (req, res, next) => {
-    spotifyApi
-      .searchArtists(req.query.artist)
-      .then((data) => {
-        
-        console.log("data", data.body.artists.items)
-        res.render("artist-search-results", { artists : data.body.artists})
-      
-          
+ 
+app.get('/albums/:artistId', (req, res, next) => {
+  
+  spotifyApi
+  
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+        res.render('albums', {albums : data.body.items} );
       })
-      .catch((err) =>
-        console.log("The error while searching artists occurred: ", err)
-      );
-  });
+    .catch(err => console.log('The error while getting artist albums occurred: ', err)); 
+});
+
+
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));

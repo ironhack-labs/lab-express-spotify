@@ -1,18 +1,12 @@
-<div class="search-page">
-  <div class="search-container">
+<h1>Search the artist</h1>
 
-    <div class="search-background">
-      <form action="/artist-search" method="GET">
-        <input
-          class="enter-field"
-          name="artist"
-          type="text"
-          placeholder="Enter name"
-        />
-        <br />
-        <button class="search-btn" type="submit">Search for an Artist!</button>
-      </form>
-    </div>
-
-  </div>
-</div>
+    <form action="/artist-search" method="get">
+      <input
+        id="artist"
+        name="artist"
+        type="text"
+        value=""
+        placeholder="Type the name of the artist"
+      />
+      <button type="submit">Search for the artist!</button>
+    </form>
