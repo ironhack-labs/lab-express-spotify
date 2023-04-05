@@ -50,7 +50,6 @@ app.post('/artist-search', (req,res) => {
 
 app.post('/albums/:artistId', (req,res, next) => {
   const {artistId} = req.params;
-  // console.log(artistId);
 spotifyApi.getArtistAlbums(artistId).then(
   function(data) {
     // console.log('Artist albums', data.body);
@@ -73,6 +72,11 @@ app.post('/tracks/:albumId', (req,res,next) => {
   });
 
 })
+
+app.use((req, res,next)=>{
+  res.status(404).render("404");
+});
+
 
 // Our routes go here:
 

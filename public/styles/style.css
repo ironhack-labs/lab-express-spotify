@@ -1,10 +1,17 @@
 html{
-    height:100% !important;
+    height:100%;
 }
-body{
+main{
     background-image: url('../images/spotify-background.jpeg');
     background-size:cover;
     background-repeat: no-repeat;
     background-position: center;
-    height:100% !important;
+    height:100vh !important;
+}
+
+.fs-xl{
+    font-size:3.5rem;
+}
+.bg-lightgrey{
+    background-color: #ced4da !important;
 }
