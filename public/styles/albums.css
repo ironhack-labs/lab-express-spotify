@@ -5,15 +5,9 @@ body {
   }
   .container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(3, 1fr);
     grid-gap: 20px;
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
-  }
-  
-  .artist {
-    border: 1px solid #ccc;
-    padding: 10px;
-    text-align: center;
   }
