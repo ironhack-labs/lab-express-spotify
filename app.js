@@ -1,8 +1,10 @@
 require("dotenv").config();
-require("dotenv").config();
+const path = require("path");
 const express = require("express");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
+
+hbs.registerPartials(path.join(__dirname, "views", "partials"));
 
 const app = express();
 
@@ -31,7 +33,17 @@ app.get("/", (req, res, next) => {
 app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist)
-    .then((data) => console.log(data.body.artists.items[0].uri))
+    .then(
+      (data) => {
+        res.render("artist-search", {
+          img: data.images[0],
+          artist: data.name,
+          _id: data.uri,
+          buttonText: "View Albums",
+        });
+      }
+      //console.log(data.body.artists)
+    )
     .catch((error) => console.error(error));
 });
 app.listen(3000, () =>
