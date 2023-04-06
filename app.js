@@ -49,4 +49,33 @@ app.get("/artist-search", async (req, res) => {
   }
 });
 
+app.get("/albums/:artistId", async (req, res) => {
+  const artistId = req.params.artistId;
+
+  try {
+    const data = await spotifyApi.getArtistAlbums(artistId);
+    console.log("Artist albums", data.body);
+
+    // Render the albums results
+    res.render("albums", { albums: data.body.items });
+  } catch (err) {
+    console.error(err);
+    res.status(500).send("Error fetching albums");
+  }
+});
+
+app.get("/tracks/:albumId", async (req, res) => {
+  const albumId = req.params.albumId;
+
+  try {
+    const data = await spotifyApi.getAlbumTracks(albumId);
+    console.log("Album tracks", data.body);
+
+    res.render("tracks", { tracks: data.body.items });
+  } catch (err) {
+    console.log("The error while fetching tracks occurred: ", err);
+    res.status(500).send("Error fetching tracks");
+  }
+});
+
 app.listen(5000, () => console.log("My Spotify project running on port 5000 🎧 🥁 🎸 🔊"));

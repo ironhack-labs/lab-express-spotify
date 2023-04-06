@@ -1,0 +1,26 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Album Tracks</title>
+  </head>
+  <body>
+    <h1>Album Tracks</h1>
+    <ul>
+      {{#each tracks}}
+        <li>
+          <h3>{{this.name}}</h3>
+          <p>Track Number: {{this.track_number}}</p>
+          {{#if this.preview_url}}
+            <audio controls>
+              <source src="{{this.preview_url}}" type="audio/mpeg" />
+              Your browser does not support the audio element.
+            </audio>
+          {{else}}
+            <p>No preview available</p>
+          {{/if}}
+        </li>
+      {{/each}}
+    </ul>
+  </body>
+</html>
