@@ -1,0 +1,46 @@
+body{
+  background-image: url(/images/spotify-background.jpeg);
+  background-size:cover;
+}
+.search{
+  background-color: rgba(255, 255, 255, 0.545);
+  text-align: center;
+  padding: 70px;
+  width: 300px;
+  height: 10px;
+  display: flex;
+  align-items:center;
+  justify-content: center;
+}
+
+
+input{
+  padding: 10px;
+  margin: 10px;
+}
+
+.submit-btn{
+  padding: 10px;
+  color: rgb(9, 9, 9);
+  font-size: 15px;
+}
+
+.albums{
+  background-color: rgb(93, 144, 188);
+  display: flex;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.a-album{
+color: white;
+font-size: 20px;
+padding: 20px;
+margin: 30px;
+text-decoration: none;
+display: flex;
+justify-content: start;
+}
+
+
+
