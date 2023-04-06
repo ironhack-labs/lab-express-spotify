@@ -1,7 +1,11 @@
-{{#each artists}}            
+ <link rel="stylesheet" href="/styles/albums.css">
+ <div class="container"></div>
+ {{#each artists}}            
   <div class="artist">
     <img src="{{ images.[0].url }}" alt="{{ name }}">
     <h3>{{ name }}</h3>
     <a href="/albums/{{ id }}">View Albums</a>
   </div>
 {{/each}}
+</div>
+

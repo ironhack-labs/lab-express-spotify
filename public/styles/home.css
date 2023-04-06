@@ -1,0 +1,22 @@
+body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 5em;
+    margin-top: 100px;
+    background: linear-gradient(to right, red, orange, yellow, green, violet);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  

@@ -1,3 +1,26 @@
+<script>
+ let currentlyPlaying = null;
+const tracks = document.querySelectorAll('audio');
+
+tracks.forEach(track => {
+  track.addEventListener('play', () => {
+    if (currentlyPlaying && currentlyPlaying !== track) {
+      currentlyPlaying.pause();
+    }
+    currentlyPlaying = track;
+  });
+});
+</script>
+
+
+<ul>
+  {{#each tracks}}
+    <li>
+      {{this.name}} - {{this.artists.[0].name}}
+      <audio controls src="{{this.preview_url}}"></audio>
+    </li>
+  {{/each}}
+</ul>
 <ul>
   {{#each tracks}}
     <li>

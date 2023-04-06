@@ -54,12 +54,12 @@ spotifyApi.clientCredentialsGrant()
       });
 
       app.get('/tracks/:albumId', (req, res, next) => {
-        const albumId = req.params.albumId;
+        //const albumId = req.params.albumId;
       
-        spotifyApi.getAlbumTracks(albumId)
+        spotifyApi.getAlbumTracks(req.params.albumId)
           .then(data => {
-            const tracks = data.body.items;
-            res.render('tracks', { tracks });
+           // const tracks = data.body.items;
+            res.render('tracks', { tracks:data.body.items });
           })
           .catch(err => {
             console.log('Error getting tracks:', err);
@@ -69,4 +69,4 @@ spotifyApi.clientCredentialsGrant()
       
       
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+app.listen(4000, () => console.log('My Spotify project running on port 4000 🎧 🥁 🎸 🔊'));
