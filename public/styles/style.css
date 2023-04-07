@@ -1,0 +1,170 @@
+/* Global */
+
+h1 {
+  text-align: center;
+  font-size: 50px;
+  padding: 15px;
+}
+
+/* Index */
+
+.index {
+  background-image: url(../images/spotify-background.jpg);
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.index form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(243, 243, 243, 0.5);
+  width: 30%;
+  padding: 10%;
+}
+
+.index form input {
+  margin-bottom: 30px;
+  color: #333;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  width: 100%;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.index form button {
+  background: #e62143;
+  border-radius: 11px;
+  box-sizing: border-box;
+  color: #fff;
+  cursor: pointer;
+
+  font-size: 1.15em;
+  font-weight: 700;
+  justify-content: center;
+  line-height: 33.4929px;
+  padding: 0.8em 1em;
+  text-align: center;
+  text-decoration: none;
+  text-decoration-skip-ink: auto;
+  text-shadow: rgba(0, 0, 0, 0.3) 1px 1px 1px;
+  text-underline-offset: 1px;
+  transition: all 0.2s ease-in-out;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+  width: 50%;
+  word-break: break-word;
+  border: 0;
+}
+
+.index form button:active,
+.index form button:focus {
+  border-bottom-style: none;
+  border-color: #dadada;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 3px 3px inset;
+  outline: 0;
+}
+
+.index form button:hover {
+  border-bottom-style: none;
+  border-color: #dadada;
+}
+
+/* Albums and Artist-search */
+
+.search {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 20px;
+  justify-content: space-around;
+}
+
+/* Card */
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #333;
+  width: 400px;
+  margin: 0 0 50px 0;
+  border-collapse: collapse;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 400px;
+  height: 400px;
+}
+
+.card h2 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 700;
+  font-size: 20px;
+  text-align: center;
+  margin: 10px;
+}
+
+.card a {
+  text-decoration: none;
+  margin-top: auto;
+  background-color: #e62143;
+  color: #fff;
+  padding: 5px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+/* Table */
+
+.center-table {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+table {
+  border-collapse: collapse;
+  margin: 25px 0;
+  font-size: 0.9em;
+  min-width: 400px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
+}
+
+table thead tr {
+  background-color: #009879;
+  color: #ffffff;
+  text-align: left;
+}
+
+table th,
+table td {
+  padding: 12px 15px;
+}
+
+table tbody tr {
+  border-bottom: 1px solid #dddddd;
+}
+
+table tbody tr:nth-of-type(even) {
+  background-color: #f3f3f3;
+}
+
+table tbody tr:last-of-type {
+  border-bottom: 2px solid #009879;
+}
+
+table tbody tr.active-row {
+  font-weight: bold;
+  color: #009879;
+}
