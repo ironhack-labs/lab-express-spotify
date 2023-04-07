@@ -1,6 +1,6 @@
 require("dotenv").config();
-const path = require("path");
 const express = require("express");
+const path = require("path");
 const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
 
@@ -10,7 +10,7 @@ const app = express();
 
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
-app.use(express.static(__dirname + "/public"));
+app.use(express.static(__dirname + "public"));
 
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
@@ -33,17 +33,12 @@ app.get("/", (req, res, next) => {
 app.get("/artist-search", (req, res, next) => {
   spotifyApi
     .searchArtists(req.query.artist)
-    .then(
-      (data) => {
-        res.render("artist-search", {
-          img: data.images[0],
-          artist: data.name,
-          _id: data.uri,
-          buttonText: "View Albums",
-        });
-      }
-      //console.log(data.body.artists)
-    )
+    .then((data) => {
+      const artists = data.body.artists.items;
+      res.render("artist-search", {
+        artists,
+      });
+    })
     .catch((error) => console.error(error));
 });
 app.listen(3000, () =>
