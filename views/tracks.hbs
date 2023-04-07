@@ -1,0 +1,15 @@
+<h1>{{name}}</h1>
+<table>
+<thead>
+  <tr>Title</tr>
+  <tr>Listen</tr>
+</thead>
+{{#if tracks }}
+<tbody>
+
+  {{#each tracks}}
+  {{> track this}}
+  {{/each}}
+  </tbody>
+{{/if}}
+</table>

@@ -44,12 +44,23 @@ app.get("/artist-search", (req, res, next) => {
 });
 
 app.get("/albums/:name/:id", (req, res, next) => {
-  console.log(req.params);
   const { name } = req.params;
   const { id } = req.params;
   spotifyApi.getArtistAlbums(id).then((data) => {
     const albums = data.body.items;
     res.render("albums", { name, albums });
+  });
+});
+
+app.get("/tracks/:name/:id", (req, res, next) => {
+  const { name } = req.params;
+  const { id } = req.params;
+  spotifyApi.getAlbumTracks(id).then((data) => {
+    const tracks = data.body.items;
+    res.render("tracks", {
+      name,
+      tracks,
+    });
   });
 });
 
