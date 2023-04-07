@@ -7,8 +7,10 @@
 
   <h2>{{name}}</h2>
 
-  {{#if type}}
-    <a href="/albums/{{id}}">View Albums</a>
+  {{#if album_group}}
+    <a href="/tracks/{{id}}">View Tracks</a>
+  {{else}}
+    <a href="/albums/{{name}}/{{id}}">View Albums</a>
   {{/if}}
 
 </div>
