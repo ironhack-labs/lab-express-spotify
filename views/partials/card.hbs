@@ -2,10 +2,13 @@
   {{#if images.0.url}}
     <img src="{{images.0.url}}" alt="card-image" />
   {{else}}
-    <img src="/images/no-cover.jpg" alt="card-image" />
+    <img src="images/no-cover.jpg" alt="card-image" />
   {{/if}}
 
   <h2>{{name}}</h2>
-  <a href="/albums/{{id}}">View Albums</a>
+
+  {{#if type}}
+    <a href="/albums/{{id}}">View Albums</a>
+  {{/if}}
 
 </div>
