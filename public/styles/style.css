@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Alfa+Slab+One&family=Chakra+Petch:wght@400;700&display=swap');
+
+img {
+    width: 300px;
+    height: auto;
+
+}
+p,h2,h3,h4,h5,h6 {
+    color: white;
+}
+a {
+    color: rgb(255, 0, 204);
+    text-decoration: none;
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(79, 226, 255), 0 0 5px rgb(0, 0, 255);
+}
+body {
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Alfa Slab One', cursive;
+    background-color: rgb(0, 0, 0);
+}
+.form {
+    align-items: center;
+}
+#search-submit {
+    background-color: rgb(236, 228, 0);
+    /* border-radius: 7px; */
+    border:0;
+}
+#search-submit:hover {
+    background-color: rgb(255, 255, 253);
+    cursor: pointer;
+}
+
+.all-founded {
+    display: flex;
+    justify-content: space-evenly;
+    margin: 3%;
+    flex-wrap: wrap;
+    gap: 4rem;
+}
+
+#founded-albums {
+    max-width: 300px;
+}
+
+#founded-artist {
+    max-width: 300px;
+}
+
+#cover {
+    background-color: rgb(0, 0, 0);
+    width: 100vw;
+    height: 100vw;
+}
+
+#search {
+    color: rgb(255, 0, 204);
+    font-size: 100%;
+    letter-spacing: 2px;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    align-items: center;
+    justify-content: center;
+}
+input[type=submit] {
+   height: fit-content;
+}
+#header {
+    text-shadow: 1px 1px 2px rgb(0, 0, 0), 0 0 25px rgb(79, 226, 255), 0 0 5px rgb(0, 0, 255);
+}
+
+#all-tracks {
+    margin: 3%;
+    column-count: 2;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-top: 3%;
+}
+
+.music-parts {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 3%;
+    align-items: center;
+    /* margin-bottom: 1%; */
+}
+

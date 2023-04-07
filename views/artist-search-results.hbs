@@ -1,0 +1,9 @@
+<div class="all-founded">
+    {{#each artist as |item|}}
+    <div id="founded-artist">
+        <img class="artist-img" src="{{images.0.url}}" alt="artist">
+        <h3 class="artist-name">{{name}}</h3>
+        <a href="/albums/{{id}}" class="artist-button">View Albums</a>
+    </div>
+    {{/each}}
+</div>
