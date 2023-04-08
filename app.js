@@ -27,24 +27,55 @@ spotifyApi
   );
 
 // Our routes go here:
-app.get('/', function(req,res,next){
-  res.render('homepage', {})
-})
+app.get("/", function (req, res, next) {
+  res.render("homepage", {});
+});
 
-app.get('/artist-search', function(req, res, next){
+app.get("/artist-search", function (req, res, next) {
   // 1. faire un call a l'api spotify pour recup les artistes trouves
   spotifyApi
-    .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-    .then(data => {
-      console.log('The received data from the API: ', data.body);
+    .searchArtists(req.query.artist)
+    .then((data) => {
+      console.log("The received data from the API: ", data.body.artists.items);
       // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      // 2. faire le rendu de la page de artist-search, presentant les resultats la recherche
+      res.render("artist-search", {
+        artists: data.body.artists.items,
+      });
     })
-    .catch(err => console.log('The error while searching artists occurred: ', err));
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
+});
 
-  // 2. faire le rendu de la page de artist-search, presentant les resultats la recherche
-res.render('artist-search', {})
-})
+// app.get("/albums/:req.params.artistId", (req, res, next) => {
+//   // .getArtistAlbums() code goes here
+//   //   console.log("Yoooooo", req.params.artistId);
+//   spotifyApi.getArtistAlbums(req.params).then(
+//     function (data) {
+//       console.log("Artist albums", data.body.items);
+//       res.render("albums", {
+//         albums: data.body.items,
+//       });
+//     },
+//     function (err) {
+//       console.error(err);
+//     }
+//   );
+// });
 
+// app.get("/tracks/:albumsId", (req, res, next) => {
+//   // .getArtistAlbums() code goes here
+//   spotifyApi.getAlbumsTracks("41MnTivkwTO3UUJ8DrqEJJ").then(
+//     function (data) {
+//       console.log("Artist albums", data.body);
+//       res.render("tracks", {});
+//     },
+//     function (err) {
+//       console.error(err);
+//     }
+//   );
+// });
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")

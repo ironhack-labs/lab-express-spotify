@@ -1,1 +1,23 @@
-<button >...</button>
+<h1>Artists</h1>
+<div class="artists-container">
+  {{#each artists }}
+  <div class="artist">
+    <img src="{{images.[1].url}}" alt="card-image" />
+    <h2>{{name}}</h2> 
+    <a href="/albums/{{id}}">View Albums</a>
+  {{/each}}
+</div>
+
+
+
+
+
+{{!-- <div class="search">
+    {{#each artists}}
+    <div class="artist">
+        <img src="{{images[0].url}}" alt="">
+        <h2>{{name}}</h2>
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
+</div> --}}
