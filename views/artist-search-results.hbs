@@ -1,5 +1,16 @@
- {{#each artists}}            
-    <img src="{{ images.[0].url }}" alt="{{ name }}">
-    <h3>{{ name }}</h3>
-    <a href="/albums/{{ id }}">View Albums</a>
+  
+ <div class="flex-direction">
+ {{#each artists}}
+ <div class="results-artist">     
+      <img src="{{ images.[0].url }}" alt="{{ name }}">
+        <div class="namelink">
+           <h2>{{ name }}</h2>
+           <a href="/albums/{{ id }}">View Albums</a>
+        </div>
+</div>
+
 {{/each}}
+
+</div>
+<button class="close-plp"><a href="/{{ id }}">BACK</a></button>
+

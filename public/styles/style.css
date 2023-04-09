@@ -3,11 +3,12 @@
     padding: 0;
     box-sizing: border-box;
 }
+/* Portada home */
 
 #background-home{
     background-image: url(../images/spotify-background.jpeg);
     height: 100%;
-    width: 100%;
+
     background-size:cover;
     display: flex;
     justify-content: center;
@@ -42,3 +43,48 @@
     padding: 5px;
     color: rgba(128, 128, 128, 0.619);
 }
+
+/* PLP albums */
+.flex-direction{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.results-artist img{
+    width: 200px;
+    height: 200px;
+}
+
+.results-artist{
+    margin: 20px 15px;
+    text-align: center;
+}
+
+.namelink{
+    background-color: rgb(66, 65, 65);
+    color: white;
+    padding: 5px;
+}
+
+.namelink a{
+    text-decoration: none;
+    color: white;
+    background-color: crimson;
+    border-radius: 4px;
+}
+
+.close-plp{
+    width: 100%;
+    background-color: crimson;
+    padding: 20;
+    border: none;
+}
+
+.close-plp a{
+    color: white;
+    text-decoration: none;
+    border: none;
+
+}
+
+
