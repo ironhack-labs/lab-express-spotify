@@ -1,8 +1,18 @@
 <div class="card">
   {{#if images.0.url}}
     <img src="{{images.0.url}}" alt="card-image" />
+    {{else}}
+    <img src="/images/no-image-avaiable.jpeg" alt="no image avaiable">
   {{/if}}
 
+<div class="card-footer">
   <h2>{{name}}</h2>
+
+  {{#if album_group}}
+    <a href="/tracks/{{name}}/{{id}}">View Tracks</a>
+  {{else}}
+    <a href="/albums/{{name}}/{{id}}">View Albums</a>
+  {{/if}}
+  </div>
 
 </div>

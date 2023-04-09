@@ -1,0 +1,121 @@
+.home {
+  background-image: url(../images/spotify-background.jpeg);
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.home form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 30%;
+  padding: 4% 10%;
+}
+
+.home form input {
+  margin-bottom: 3%;
+  font-size: 1.2rem;
+  padding: 20px;
+  border-radius: 0.2rem;
+  background-color: rgb(255, 255, 255);
+  border: 1px solid #9f9f9f;
+  width: 100%;
+  border-bottom: 0.3rem solid transparent;
+  transition: all 0.3s;
+}
+
+.home form button {
+  background: #e62143;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1.3em;
+  justify-content: center;
+  padding: 0.8em 1em;
+  text-align: center;
+  width: 40%;
+  border: 0;
+}
+
+h1 {
+  font-size: 3em;
+  margin: 40px;
+}
+.card {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 16%;
+  margin-left: 20px;
+}
+
+.card img {
+  height: 400px;
+}
+.card-footer {
+  background-color: gray;
+  color: #fff;
+  font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  width: 100%;
+  text-align: center;
+  padding: 10px;
+}
+
+.card-footer h2 {
+  margin-bottom: 20px;
+}
+
+.card a {
+  background: #e62143;
+  color: #fff;
+  padding: 10px;
+  border-radius: 11px;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+}
+
+.artists-page {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.albums-page {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+table {
+  width: 100vh;
+  margin: 0 200px 200px;
+}
+
+table thead th {
+  padding: 40px;
+  background-color: #4a4a4a;
+  color: #ffffff;
+  text-align: left;
+  width: 2em;
+}
+
+table tbody tr,
+td {
+  background-color: #f6f6f6;
+  margin: 2px 0;
+  vertical-align: middle;
+  padding: 10px 30px;
+}
+
+.right-column {
+  text-align: right;
+}
+
+h3 {
+  padding: 20px;
+}

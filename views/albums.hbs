@@ -1,10 +1,9 @@
-<h1>Albums</h1>
+<h1>Albums for: {{ name }}</h1>
 
 {{#if albums }}
-<div>
+<div class="albums-page">
   {{#each albums}}
   {{> card this}}
-      <a href="/tracks/{{name}}/{{id}}">View Tracks</a>
   {{/each}}
 </div>
 {{/if}}

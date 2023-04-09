@@ -1,0 +1,21 @@
+<h1>Tracks from {{ name }}</h1>
+
+<table>
+    <thead>
+        <tr>
+        <th>Title</th>
+        <th class="right-column">Listen</th>
+        </tr>
+    </thead>
+
+  {{#if tracks }}
+    <tbody>
+        {{#each tracks}}
+        <tr class="song-row">
+        {{> trackPartial this}}
+        </tr>
+        {{/each}}
+    </tbody>
+  {{/if}}
+
+  </table>

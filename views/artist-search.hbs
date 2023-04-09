@@ -1,8 +1,9 @@
 <h1>Artists</h1>
 
+<div class="artists-page">
 {{#if artists}}
 {{#each artists}}
 {{> card this}}
-<a href="/albums/{{name}}/{{id}}">View Albums</a>
 {{/each}}
 {{/if}}
+</div>
