@@ -1,10 +1,5 @@
-{{#each artists}}
-<h1> {{this.name}} </h1>
-{{#if this.images.0.url}}
-<img src= {{this.images.0.url}} alt="no image found">
-{{else}}
-<img src= "./public/images/imagen-vacia.jpg" alt="no image found">
-
-{{/if}}
-<button>View Albums</button>
+ {{#each artists}}            
+    <img src="{{ images.[0].url }}" alt="{{ name }}">
+    <h3>{{ name }}</h3>
+    <a href="/albums/{{ id }}">View Albums</a>
 {{/each}}
