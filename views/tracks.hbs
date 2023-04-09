@@ -13,19 +13,13 @@ tracks.forEach(track => {
 
 
 
-<ul>
+<ul class="flex-direction-track">
+  <h1>TÍTULO <span>PREVIEW</span></h1>
   {{#each tracks}}
-    <li>
+    <li class="name-track">
       {{this.name}} - {{this.artists.[0].name}}
       <audio controls src="{{this.preview_url}}"></audio>
     </li>
   {{/each}}
 </ul>
-<ul>
-  {{#each tracks}}
-    <li>
-      {{this.name}} - {{this.artists.[0].name}}
-      <audio controls src="{{this.preview_url}}"></audio>
-    </li>
-  {{/each}}
-</ul>
+<button class="close-track"><a href="/{{ id }}">BACK TO HOME</a></button>

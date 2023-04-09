@@ -1,16 +1,16 @@
   
  <div class="flex-direction">
  {{#each artists}}
- <div class="results-artist">     
+ <div class="results-styles">     
       <img src="{{ images.[0].url }}" alt="{{ name }}">
         <div class="namelink">
            <h2>{{ name }}</h2>
-           <a href="/albums/{{ id }}">View Albums</a>
+         <li><a href="/albums/{{ id }}">View Albums</a></li> 
         </div>
 </div>
 
 {{/each}}
 
 </div>
-<button class="close-plp"><a href="/{{ id }}">BACK</a></button>
+<button class="close-plp"><a href="/{{ id }}">BACK TO HOME</a></button>
 

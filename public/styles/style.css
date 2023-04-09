@@ -44,26 +44,34 @@
     color: rgba(128, 128, 128, 0.619);
 }
 
-/* PLP albums */
+/* PLP artist  and albums*/
 .flex-direction{
     display: flex;
     flex-wrap: wrap;
+    margin: 20px;
 }
 
-.results-artist img{
-    width: 200px;
+.results-styles img{
+    width: 210px;
     height: 200px;
 }
 
-.results-artist{
+.results-styles{
     margin: 20px 15px;
     text-align: center;
+    
 }
 
 .namelink{
     background-color: rgb(66, 65, 65);
     color: white;
     padding: 5px;
+    height: 65px;
+
+}
+
+.namelink h2{
+    width: 200px;
 }
 
 .namelink a{
@@ -71,6 +79,7 @@
     color: white;
     background-color: crimson;
     border-radius: 4px;
+    margin-top: 3px;
 }
 
 .close-plp{
@@ -86,5 +95,51 @@
     border: none;
 
 }
+
+.namelink li{
+    list-style: none;
+    padding: 8px;
+}
+
+/* STYLE TRACKS */
+.flex-direction-track li{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(174, 167, 167, 0.619);
+    margin: 5px 10px;
+    padding-left: 20px;
+}
+
+.flex-direction-track h1{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 50px;
+    height: 100px;
+    background-color: rgb(61, 58, 58);
+    font-size: larger;
+    font-weight: 700;
+    color: grey;
+    margin: 5px 10px;
+}
+
+.close-track{
+    width: 99%;
+    background-color:rgb(61, 58, 58);
+    padding: 20;
+    border: none;
+    margin: 5px 10px;
+}
+
+.close-track a{
+    color: grey;
+    text-decoration: none;
+    border: none;
+    
+
+}
+
+
 
 
