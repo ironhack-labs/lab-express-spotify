@@ -9,7 +9,7 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     height: 100vh;
-    display : flex;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
@@ -19,7 +19,7 @@ body {
     height: 150px;
     background-color: rgb(250, 250, 250, 0.5);
     display: flex;
-    flex-direction : column;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
 
@@ -30,22 +30,22 @@ body {
     flex-direction: column;
 }
 
-#search_area input{
-    font-size:1.1rem;
+#search_area input {
+    font-size: 1.1rem;
     border-radius: 5px;
     border-style: none;
     padding: 2px 5px;
-} 
+}
 
-#search_area button{
+#search_area button {
     margin-top: 10px;
     background-color: indianred;
-    font-size:1.2rem;
-    color:white;
-    padding:5px 10px;
+    font-size: 1.2rem;
+    color: white;
+    padding: 5px 10px;
     border-radius: 5px;
     border-style: none;
-} 
+}
 
 
 /* ------------------ ARTISTS and ALBUMS PAGE --------------*/
@@ -59,7 +59,7 @@ body {
 }
 
 .artist {
-    width: vw;
+    width: 15vw;
     padding: 5px;
     margin: 40px 20px;
     text-align: center;
@@ -68,40 +68,42 @@ body {
 
 .artist img {
     width: 100%;
+
 }
 
 /* ------------------ TRACKS--------------*/
 #tracks {
-    display : flex;
+    display: flex;
     justify-content: center;
 }
 
-#tracks table{
-    width : 80vw;
+#tracks table {
+    width: 80vw;
 }
 
-#tracks thead{
+#tracks thead {
     background-color: #707070;
-    font-size : 2rem;
-    color : #d3d3d3;
- 
+    font-size: 2rem;
+    color: #d3d3d3;
+
 }
 
-#tracks tbody{
+#tracks tbody {
     background-color: #e0e0e0;
     text-align: left;
 }
 
-#tracks .title{
+#tracks .title {
     text-align: left;
     padding-left: 10px;
-    width : 55vw;
+    width: 55vw;
 }
 
-#tracks .listen{
+#tracks .listen {
     text-align: center;
-    width : 25vw;
+    width: 25vw;
 }
+
 .listen img {
-    width : 2rem;
+    width: 2rem;
 }
