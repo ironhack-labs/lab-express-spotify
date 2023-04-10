@@ -65,18 +65,22 @@ app.get("/albums/:artistId", (req, res, next) => {
   );
 });
 
-// app.get("/tracks/:albumsId", (req, res, next) => {
-//   // .getArtistAlbums() code goes here
-//   spotifyApi.getAlbumsTracks("41MnTivkwTO3UUJ8DrqEJJ").then(
-//     function (data) {
-//       console.log("Artist albums", data.body);
-//       res.render("tracks", {});
-//     },
-//     function (err) {
-//       console.error(err);
-//     }
-//   );
-// });
+app.get("/tracks/:albumId", (req, res, next) => {
+  // .getAlbumTracks() code goes here
+  // 1. faire un call a l'api spotify pour recup les artistes trouves
+  spotifyApi.getAlbumTracks(req.params.albumId, { limit: 5, offset: 1 }).then(
+    function (data) {
+      console.log(data.body.items);
+      // 2. faire le rendu de la page de albums, presentant les resultats del'artiste choisi
+      res.render("tracks", {
+        tracks: data.body.items,
+      });
+    },
+    function (err) {
+      console.log("Something went wrong!", err);
+    }
+  );
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
