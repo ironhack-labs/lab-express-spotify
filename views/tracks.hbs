@@ -1,0 +1,9 @@
+<h1 class="heading">Tracks of {{albumName}}</h1>
+ <ol id="tracksTable">
+   {{#each tracks}}
+     <li class="tracksItem">
+       {{name}}
+       <audio class="tracksAudio" controls src="{{preview_url}}"></audio>
+     </li>
+   {{/each}}
+ </ol>
