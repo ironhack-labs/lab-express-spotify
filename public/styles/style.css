@@ -1,0 +1,21 @@
+body {
+    display: flex;
+    background-image: url(/images/spotify-background.jpeg);
+}
+
+form {
+    border: 2px solid black;
+    justify-content: center;
+    align-items: center ;
+
+}
+
+.bckgrnd {
+    
+    width: auto;
+    height: 900px;
+}
+
+button {
+    display: block;
+}
