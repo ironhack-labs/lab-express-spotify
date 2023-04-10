@@ -1,0 +1,42 @@
+body {
+    text-align: center;
+}
+
+#homepage {
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 40vh;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+
+#searchContainer {
+    width: 50vw;
+    height: 20vh;
+    background-color: lightgreen;
+    display: flex;
+    
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 10px;
+    
+}
+
+#searchForm {
+    
+}
+
+#searchButton {
+
+}
+
+
+
+.heading {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 2em;
+}
