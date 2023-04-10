@@ -1,0 +1,8 @@
+<section class="artists container">
+    <h2>Artists results for {{search}}</h2>
+    <div class="artists-results">
+    {{#each artists}}
+        {{> cardpartial this}}
+    {{/each }}
+    </div>
+</section>

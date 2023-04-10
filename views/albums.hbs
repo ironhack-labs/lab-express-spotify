@@ -1,0 +1,9 @@
+
+<section class="albums container">
+    <h2>Albums for {{search}}</h2>
+    <div class="albums-results">
+    {{#each albums}}
+        {{> cardpartial this}}
+    {{/each }}
+    </div>
+</section>
