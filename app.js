@@ -48,21 +48,22 @@ app.get("/artist-search", function (req, res, next) {
     );
 });
 
-// app.get("/albums/:req.params.artistId", (req, res, next) => {
-//   // .getArtistAlbums() code goes here
-//   //   console.log("Yoooooo", req.params.artistId);
-//   spotifyApi.getArtistAlbums(req.params).then(
-//     function (data) {
-//       console.log("Artist albums", data.body.items);
-//       res.render("albums", {
-//         albums: data.body.items,
-//       });
-//     },
-//     function (err) {
-//       console.error(err);
-//     }
-//   );
-// });
+app.get("/albums/:artistId", (req, res, next) => {
+  // .getArtistAlbums() code goes here
+  // 1. faire un call a l'api spotify pour recup les artistes trouves
+  spotifyApi.getArtistAlbums(req.params.artistId).then(
+    function (data) {
+      console.log("Artist albums", data.body.items);
+      // 2. faire le rendu de la page de albums, presentant les resultats del'artiste choisi
+      res.render("albums", {
+        albums: data.body.items,
+      });
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+});
 
 // app.get("/tracks/:albumsId", (req, res, next) => {
 //   // .getArtistAlbums() code goes here
