@@ -1,0 +1,54 @@
+img{
+    width: 100%;
+}
+body {
+    background-color: #ebd9ff;
+    font-family: "Poppins", sans-serif;
+    font-weight: 300;
+}
+
+footer{
+    height: 30px;
+    background-color: rgb(192, 131, 192);
+    color: white;
+    padding-top: 5px;
+}
+
+.standard-button-container{
+    padding-top: 20px;
+}
+
+.standard-button{
+    background-color: rgb(192, 131, 192);
+    border: solid 3px rgb(192, 131, 192);
+    box-shadow: 2px 2px purple;
+}
+
+.standard-button a{
+    text-decoration: none;
+    color: #ebd9ff;
+    text-transform: uppercase;
+    text-shadow: 2px 2px black;
+}
+
+.text{
+
+    text-decoration: none;
+    color: black;
+    font-family: 'Lora', serif;
+        font-family: 'Noto Serif Tamil', serif;
+        font-family: 'Roboto Condensed', sans-serif;
+    padding-left: 40px;
+    padding-top: 20px;
+}
+
+.navigator{
+    background-color: #ebd9ff;
+    margin-bottom: 20px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgb(192, 131, 192);
+}
+.bottom-container{
+    margin-bottom: 50px;
+}
+
