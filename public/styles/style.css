@@ -1,0 +1,118 @@
+body{
+    margin:0;
+    padding:0;
+}
+/*
+
+ _   _     U  ___ u  __  __  U _____ u  ____       _       ____  U _____ u 
+ |'| |'|     \/"_ \/U|' \/ '|u\| ___"|/U|  _"\ uU  /"\  uU /"___|u\| ___"|/ 
+/| |_| |\    | | | |\| |\/| |/ |  _|"  \| |_) |/ \/ _ \/ \| |  _ / |  _|"   
+U|  _  |u.-,_| |_| | | |  | |  | |___   |  __/   / ___ \  | |_| |  | |___   
+ |_| |_|  \_)-\___/  |_|  |_|  |_____|  |_|     /_/   \_\  \____|  |_____|  
+ //   \\       \\   <<,-,,-.   <<   >>  ||>>_    \\    >>  _)(|_   <<   >>  
+(_") ("_)     (__)   (./  \.) (__) (__)(__)__)  (__)  (__)(__)__) (__) (__) 
+
+
+*/
+header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding:0;
+background-image: url('/images/spotify-background.jpeg');
+height: 100vh;
+background-position: center;
+background-size: cover;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+input[type="text"]{
+    width: 400px;
+    height: 20px;
+}
+button[type="submit"]{
+background-color: #fb6862;
+width: 180px;
+height: 40px;
+color:white;
+border-style: none;
+font-weight: 700;
+}
+.homepagebutton{
+    width: 600px;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+img{
+    max-width: 100%;
+    
+
+}
+/*
+
+
+    _       ____      _____              ____     _____        ____   U _____ u    _       ____       ____   _   _   
+U  /"\  uU |  _"\ u  |_ " _|     ___    / __"| u |_ " _|      / __"| u\| ___"|/U  /"\  uU |  _"\ u U /"___| |'| |'|  
+ \/ _ \/  \| |_) |/    | |      |_"_|  <\___ \/    | |       <\___ \/  |  _|"   \/ _ \/  \| |_) |/ \| | u  /| |_| |\ 
+ / ___ \   |  _ <     /| |\      | |    u___) |   /| |\       u___) |  | |___   / ___ \   |  _ <    | |/__ U|  _  |u 
+/_/   \_\  |_| \_\   u |_|U    U/| |\u  |____/>> u |_|U       |____/>> |_____| /_/   \_\  |_| \_\    \____| |_| |_|  
+ \\    >>  //   \\_  _// \\_.-,_|___|_,-.)(  (__)_// \\_       )(  (__)<<   >>  \\    >>  //   \\_  _// \\  //   \\  
+(__)  (__)(__)  (__)(__) (__)\_)-' '-(_/(__)    (__) (__)     (__)    (__) (__)(__)  (__)(__)  (__)(__)(__)(_") ("_) 
+
+
+*/
+.artist-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+    list-style: none;
+    padding: 0;
+  }
+  
+ 
+  
+.albums-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px; 
+  }
+  h2{
+    color:white;
+    text-align: center;
+    font-size: 16px;
+  }
+  .artist-image{
+    aspect-ratio: 1/1;
+    object-fit: cover;
+    display: block;
+  }
+
+.artist-info{
+    display: flex;
+  flex-direction: column;
+  align-items: center;
+ background-color: #4d4d4d;
+}
+a{
+    padding: 10px;
+    text-decoration: none;
+    background: #fb6862;
+    color:white;
+    border-radius: 7px;
+    margin:10px;
+}
+/* .title-container {
+    max-width: 200px; 
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+   */

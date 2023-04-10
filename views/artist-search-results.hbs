@@ -1,0 +1,17 @@
+<h1>Résultats de la recherche d'artistes</h1>
+
+<ul class="artist-grid">
+  {{#each artists}}
+    <li class="artist-item">
+     
+      {{#if this.images.[0]}}
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}" class="artist-image">
+      {{/if}}
+      <div class="artist-info">
+      <h2>{{this.name}}</h2>
+        <a href="/albums/{{this.id}}">Voir les albums</a>
+      
+      </div>
+    </li>
+  {{/each}}
+</ul>
