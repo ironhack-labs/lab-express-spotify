@@ -1,17 +1,19 @@
 <div id="tracks">
-    <h1>Results</h1>
 
-    <div id="searchTracks">
-        {{#each tracksArr}}
-            <div class="artist">
-                <div class="artistImg">
-                    <img src="{{this.images.0.url}}" alt="artist img"/>
-                </div>
-                <div class="artist_name">
-                    <h3>{{this.name}}</h3>
-                </div>
-                <a href="/tracks/{{this.id}}">View tracks</a>
-            </div>
-        {{/each}}
-    </div>
+    <table>
+        <thead>
+            <tr> 
+                <th class="title"> Title </th>
+                <th class="listen"> Listen </th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each tracksArr}}
+                <tr> 
+                    <td class="title"> <h3>{{this.name}}</h3> </td>
+                    <td class="listen"> <audio src="{{this.preview_url}}" controls> </audio> <a href="#"><img src="/images/arrow-242.png" alt="download icon"></a> </td>
+                </tr>
+            {{/each}}
+        </tbody>
+    </table>
 </div>
