@@ -1,0 +1,9 @@
+{{#each albumTracks }}
+<p class="album-name"> {{name}}</p>
+<audio controls>
+  <source src="{{preview_url}}" type="audio/mpeg" />
+  <p>
+    Download <a href="{{preview_url}}">MP3</a>
+  </p>
+</audio>
+{{/each}}
