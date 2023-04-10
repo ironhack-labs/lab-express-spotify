@@ -1,8 +1,8 @@
-<div id="albums">
+<div id="tracks">
     <h1>Results</h1>
 
-    <div id="searchAlbums">
-        {{#each albumsArr}}
+    <div id="searchTracks">
+        {{#each tracksArr}}
             <div class="artist">
                 <div class="artistImg">
                     <img src="{{this.images.0.url}}" alt="artist img"/>
@@ -10,7 +10,7 @@
                 <div class="artist_name">
                     <h3>{{this.name}}</h3>
                 </div>
-                <a href="tracks/{{this.id}}">View tracks</a>
+                <a href="/tracks/{{this.id}}">View tracks</a>
             </div>
         {{/each}}
     </div>

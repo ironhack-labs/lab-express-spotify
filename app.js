@@ -17,10 +17,10 @@ app.use(express.static(__dirname + '/public'));
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
     clientSecret: process.env.CLIENT_SECRET
-  });
-  
+});
+
 // Retrieve an access token
-  spotifyApi
+spotifyApi
     .clientCredentialsGrant()
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
@@ -28,7 +28,7 @@ const spotifyApi = new SpotifyWebApi({
 // Our routes go here:
 app.get('/', (req, res, next) => {
     res.render('homepage')
-  });
+});
 
 app.get('/artist-search', (req, res, next) => {
     const artistSearch = req.query;
@@ -39,12 +39,12 @@ app.get('/artist-search', (req, res, next) => {
             console.log('The received data from the API: ', data.body);
             //const artistSingle= data.body.artists.items[0];
             //res.render('artist-search-results',{artistSingle})
-            const artistsArr= data.body.artists.items;
-            res.render('artist-search-results',{artistsArr})
+            const artistsArr = data.body.artists.items;
+            res.render('artist-search-results', { artistsArr })
             console.log(artistsArr)
-            console.log(artistsArr[0].images);        
+            console.log(artistsArr[0].images);
         })
-    // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+        // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
         .catch(err => console.log('The error while searching artists occurred: ', err));
     console.log(req.query);
 });
@@ -56,8 +56,20 @@ app.get('/albums/:artistId', (req, res, next) => {
             console.log('The received data from the API: ', data.body);
             //const artistSingle= data.body.artists.items[0];
             //res.render('artist-search-results',{artistSingle})
-            const albumsArr= data.body.items;
-            res.render('albums',{albumsArr})
+            const albumsArr = data.body.items;
+            res.render('albums', { albumsArr })
+        })
+});
+
+app.get('/albums/tracks/:albumId', (req, res, next) => {
+    spotifyApi
+        .getAlbumTracks(req.params.albumId)
+        .then(data => {
+            console.log('The received data from the API: ', data.body);
+            //const artistSingle= data.body.artists.items[0];
+            //res.render('artist-search-results',{artistSingle})
+            const tracksArr = data.body.items;
+            res.render('tracks', { tracksArr })
         })
 });
 
