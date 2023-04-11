@@ -1,10 +1,43 @@
+#home-body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
 #container {
-    background-image: url('/public/images/spotify-background.jpeg');
-    width: 100%;
-    height: 100%;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+form {
+    padding: 50px;
+    text-align: center;
+    background-color: rgba(211, 211, 211, 0.5);
+}
+
+button {
+    background-color: darkred;
+    color: white;
 }
 
 body {
-    margin: 0px;
+    margin: 50px;
+}
+
+#artist-container {
+    margin: 20px;
+}
+
+#artist-img {
+    height: 400px;
+}
+
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+#album-container {
+    margin: 20px;
 }

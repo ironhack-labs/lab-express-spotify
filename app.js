@@ -30,7 +30,6 @@ app.get('/', (req, res, next) => {
 });
 
 app.get('/artist-search', (req, res, next) => {
-    const data = spotifyApi.searchArtists(req.query.artist);
 spotifyApi
     .searchArtists(req.query.artist)
     .then(data => {
@@ -43,15 +42,21 @@ spotifyApi
 });
 
 app.get('/albums/:artistId', (req, res, next) => {
-    const data = spotifyApi.getArtistAlbums(req.params.artistId);
+spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
     const albums = data.body.items;
     res.render('albums', { albums });
+    })
 });
 
 app.get('/tracks/:albumId', (req, res, next) => {
-    const data = spotifyApi.getAlbumTracks(req.params.albumId);
+spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then(data => {
     const tracks = data.body.items;
     res.render('tracks', { tracks });
+    })
 });
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
