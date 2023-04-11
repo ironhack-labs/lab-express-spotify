@@ -1,1 +1,11 @@
-<a href='/albums/:artistId'>View Albums</a>
+<div>
+    {{#each artists}}
+    <div>
+    <img src="{{images.1.url}}" />
+    <div>
+    <p>{{name}}</p>
+    <a href='/albums/:artistId'>View Albums</a>
+    </div>
+    </div>
+    {{/each}}
+</div>

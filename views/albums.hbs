@@ -1,1 +1,11 @@
-<a href='/tracks/:artistId'>View Tracks</a>
+<div>
+    {{#each albums}}
+    <div>
+    <img src="{{images.1.url}}" />
+    <div>
+        <p>{{name}}</p>
+        <a href='/tracks/:artistId'>View Tracks</a>
+    </div>
+    </div>
+    {{/each}}
+</div>
