@@ -1,21 +1,34 @@
-{{#each artistsResults }}
-<p class="artist-name"> {{name}}</p>
+{{#each artistsResults}}
 
-{{!-- Para imprimir una imagen tenemos que localizar su key en el objeto . 
-Haciendo console.log de dataFromApi vemos que el campo images es un array de 3 objetos (3 imagenes diferentes).
-Imprimimos una posición de ese array para sacar 1 y su respectivo url --}}
 
-<img src="{{images.1.url}}" alt="">
 
- {{!-- Si quisiera sacar las 3 imagenes
+  <div id="search-results-section">
+
+
+
+
+
+
+      {{! Para imprimir una imagen tenemos que localizar su key en el objeto . 
+     Haciendo console.log de dataFromApi vemos que el campo images es un array de 3 objetos (3 imagenes diferentes).
+        Imprimimos una posición de ese array para sacar 1 y su respectivo url }}
+
+      {{!-- Si quisiera sacar las 3 imagenes
  
  {{#each images}}
     <img src="{{url}}" alt="" />
 
   {{/each}} --}}
 
+      <img src="{{images.1.url}}" alt="" />
+    <div id="search-results-items">
+      <p class="artist-name"> {{name}}</p>
 
-{{!-- aqui nos referimos al campo del objeto que nos interesa obtener. Su valor es lo que recoje el req.params.ArtistId --}}
+      {{! aqui nos referimos al campo del objeto que nos interesa obtener. Su valor es lo que recoje el req.params.ArtistId }}
 
-<a href="/albums/{{id}}">View Albums</a>
-{{/each}}
+      <a href="/albums/{{id}}">View Albums</a>
+   
+    </div>
+  </div>
+  
+     {{/each}}
