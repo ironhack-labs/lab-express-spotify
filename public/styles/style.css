@@ -1,5 +1,6 @@
 * {
-    font-family: 'Courier New', Courier, monospace;
+    font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 #container {
@@ -31,6 +32,7 @@
     justify-content: center;
     width: 400px; 
     
+    
 
 }
 
@@ -45,31 +47,71 @@ button {
     margin-top: 10px;
     height: 40px;
     color: white;
-    background-color: #FA6863;
+    background-color: black;
     border: none;
 
 
 }
 
+section {
+    text-align: center;
+
+}
 
 
-#search-results-section {
+body {
+    background-color: black;
+    
+}
+h1 {
+    color: white;
+    font-size: 2rem;
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    
+
+}
+
+#results-section {
     display: inline-flex;
     flex-wrap: wrap;
-    justify-content: center;
-    margin: 0 auto;
-    gap: 30px;
+    justify-content: center;  
     width: 20%;
-    border: solid red 1px;
+    margin-bottom: 30px;
+    margin-left: 30px;
+    border: solid 2px white;
+
+    
    
 }
 
-#search-results-section img {
+#results-section img {
     max-width: 100%;
     max-height: 100%;
     display: block;
     height: 300px;
 }
 
+
+
+.artist-card-items {
+    text-align: center;
+    margin: 10px;
+    color: white;
+
+}
+
+.artist-card-items a {
+    color: white;
+    text-decoration: none;
+    border: white 1px solid;
+    padding: 10px 30px 10px 30px;
+    
+}
+
+p {
+    margin-bottom: 20px;
+}
 
 
