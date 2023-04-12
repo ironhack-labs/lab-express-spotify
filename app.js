@@ -12,12 +12,6 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
-// 1. require the body-parser
-const bodyParser = require('body-parser');
-// 2. let know your app you will be using it
-app.use(bodyParser.urlencoded({ extended: true }));
-
-
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId: process.env.CLIENT_ID,
@@ -31,25 +25,48 @@ const spotifyApi = new SpotifyWebApi({
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
-app.get('/', (req, res, next) => {
+app.get('/', (req, res) => {
     res.render('index');
   });
 
-
-app.get('/artist-search', (req, res, next) => {
+  app.get('/artist-search', (req, res) => {
+    const { artistName } = req.query;
+    // const { artist } = req.query
     spotifyApi
-  .searchArtists('req.query')
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
-    app.post('/artist-search', (req, res) => {
-        let artista = req.body.artista;
-        res.send(req.query);
-      });
+  .searchArtists(`${artistName}`)
+  .then(response => {
+    const artistsList = response.body.artists.items;
 
-    res.render('artist-search-results');
+    res.render("artistSearchResult", {artistsList})
   })
   .catch(err => console.log('The error while searching artists occurred: ', err));
   });
 
+  app.get('/albums/:artistId', (req, res) => {
+    const {artistId} = req.params;
 
+    spotifyApi.getArtistAlbums(`${artistId}`)
+    .then(response => {
+        const albumsList = response.body.items
+        res.render('albums', { albumsList })
+    })
+    .catch(err => console.log(err))
+  })
+
+  app.get('/tracks/:albumId', (req, res) => {
+    const {albumId} = req.params;
+
+    spotifyApi
+    .getAlbumTracks(`${albumId}`)
+    .then(response => {
+        const tracksList = response.body.items
+
+        res.render('tracks', {tracksList})
+    })
+    .catch(err => console.log(err))
+  })
+
+
+
+//Se uede poner aquí proccess.env....
 app.listen(3001, () => console.log('My Spotify project running on port 3001 🎧 🥁 🎸 🔊'));

@@ -1,0 +1,20 @@
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Listen</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each tracksList}}
+      <tr>
+        <td>
+          <p>{{name}}</p>
+        </td>
+        <td>
+          <audio controls src='{{preview_url}}'></audio>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
