@@ -1,5 +1,18 @@
-{{#each artistAlbums}}
-<p class="artist-name"> {{name}}</p>
-<img src="{{images.1.url}}" alt="">
-<a href="/tracks/{{id}}">View Tracks</a>
-{{/each}}
+<section>
+
+  <h1> ARTISTS ALBUMS</h1>
+
+  {{#each artistAlbums}}
+
+    <div class="results-section">
+
+      <img src="{{images.1.url}}" alt="" />
+      <div class="artist-card-items">
+        <p class="artist-name"> {{name}}</p>
+        <a href="/tracks/{{id}}">View Tracks</a>
+      </div>
+
+    </div>
+  {{/each}}
+
+</section>

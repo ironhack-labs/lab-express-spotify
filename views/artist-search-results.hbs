@@ -4,17 +4,14 @@
 
   {{#each artistsResults}}
 
-    <div id="results-section">
+    <div class="results-section">
 
       <img src="{{images.1.url}}" alt="" />
 
       <div class="artist-card-items">
         <p class="artist-name"> {{name}}</p>
-
         {{! aqui nos referimos al campo del objeto que nos interesa obtener. Su valor es lo que recoje el req.params.ArtistId }}
-
         <a href="/albums/{{id}}">View Albums</a>
-
       </div>
 
     </div>

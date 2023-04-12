@@ -1,6 +1,7 @@
 * {
     font-family: Arial, Helvetica, sans-serif;
     
+    
 }
 
 #container {
@@ -12,7 +13,6 @@
     display: flex;
     justify-content: center;
     align-items: center;
-
 }
 
 #form-container {
@@ -21,8 +21,7 @@
     height: 30%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    
+    align-items: center;   
 }
 
 .form-box {
@@ -32,8 +31,6 @@
     justify-content: center;
     width: 400px; 
     
-    
-
 }
 
 form input {
@@ -49,8 +46,6 @@ button {
     color: white;
     background-color: black;
     border: none;
-
-
 }
 
 section {
@@ -60,9 +55,9 @@ section {
 
 
 body {
-    background-color: black;
-    
+    background-color: black;    
 }
+
 h1 {
     color: white;
     font-size: 2rem;
@@ -73,7 +68,7 @@ h1 {
 
 }
 
-#results-section {
+.results-section {
     display: inline-flex;
     flex-wrap: wrap;
     justify-content: center;  
@@ -86,7 +81,7 @@ h1 {
    
 }
 
-#results-section img {
+.results-section img {
     max-width: 100%;
     max-height: 100%;
     display: block;
@@ -107,6 +102,7 @@ h1 {
     text-decoration: none;
     border: white 1px solid;
     padding: 10px 30px 10px 30px;
+    margin-bottom: 30px;
     
 }
 
