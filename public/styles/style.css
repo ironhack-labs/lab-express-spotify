@@ -1,15 +1,54 @@
+/* background-image: url(/images/spotify-background.jpeg); */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
 #container {
+    height: 100vh;
+    width: 100vw;
     background-image: url(/images/spotify-background.jpeg);
-    width: 100%;
-    height: 100%;
+    background-size: cover;
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 #form-container {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    background-color: whitesmoke;
+    opacity: 0.5;
+    padding: 10vh 15vw 10vh;
+}
+
+#form-container input {
+    display: flex;
+    flex-direction: column;    
+    justify-content: center;
+    align-items: center;
+    padding: 5px 10px;
+    margin-bottom: 12px;
     
 }
 
-body {
-    margin: 0;
+.search {
+    padding: 10px 20px;
+    color: white;
+    background-color: salmon;
+    border: 0;
 }
 
+.list-page {
+    display: flex;   
+    justify-content: center; 
+}
+
+.list-card {
+    width: 200px;
+    height: 200px;
+}
