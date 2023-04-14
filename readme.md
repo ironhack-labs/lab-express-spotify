@@ -246,6 +246,26 @@ Happy Coding! :heart:
 </details>
 
 <details>
+  <summary>When I try to run the app, I get an error "command not found: nodemon"</summary>
+
+  <br>
+  Make sure you have <code>nodemon</code> installed on your machine:
+
+  ```bash
+  npm install -g nodemon
+  ```
+
+  This will install nodemon globally on your system, making it available to all of your projects.
+
+  <br>
+
+  [Back to top](#faqs)
+
+</details>
+
+
+
+<details>
   <summary>How to use <code>then()</code> and <code>catch()</code> with Promises?
 </summary>
 
