@@ -1,0 +1,32 @@
+body{
+  background-image: url(/images/spotify-background.jpeg) ;
+    border-image-repeat: no-repeat;
+    background-size:cover
+    
+    
+}
+h1{
+    font-size: 60px;
+    font-style: italic;
+   
+    text-align: center;
+}
+
+
+
+.search{
+    text-align: center;
+    text-decoration: double;
+    font-size: 40px;
+
+}
+.search button{
+   font-size: 25px;
+   border-radius: 10px;
+}
+.search input{
+    font-size:25px;
+    border-radius:10px;
+}
+
+    
