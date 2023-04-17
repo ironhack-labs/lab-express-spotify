@@ -1,0 +1,18 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+/* index */
+
+.index-container img{
+    height: 99vh;
+    width: 100vw;
+    
+}
+.index-container form{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
