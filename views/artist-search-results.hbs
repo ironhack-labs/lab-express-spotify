@@ -1,0 +1,21 @@
+<h1>This is the result page</h1>
+
+{{#each artists}}
+  <div>
+    {{!-- <img src="{{this.images.0.url}}" alt="{{this.name}}" height="{{this.images.0.height}}" width="this.images.0.width"> --}}
+    <img src="{{this.images.0.url}}" alt="{{this.name}}" height="200">
+    <p>{{this.name}}</p>
+    <button>Show Albums</button>
+  </div>
+  <p>Artist: {{this.name}}</p>
+{{/each}}
+{{!-- <p>Artist: {{artist.name}}</p>
+<img src="{{artist.images.0.url}}" height="{{artist.images.0.height}}" width="{{artist.images.0.width}}">
+<a>Show Albums</a> --}}
+
+{{!-- In order to display the found artists' information, 
+create an artist-search-results.hbs file inside the views folder 
+and display the name, image, and button (or link) to show the albums 
+for a particular artist on a new view (for now just create 
+the button/link and we will take care of the rest in the next step). 
+Again, styling is not your priority, so let's move to the next step. --}}
