@@ -61,6 +61,20 @@ const artistId = req.params.artistId
   })
 });
 
+// Iteration 5
+
+// Get tracks in an album
+app.get('/tracks/:artistId', (req, res, next) => {
+  const artistId = req.params.artistId
+
+spotifyApi
+.getAlbumTracks(artistId)
+  .then(data => {
+    const albumTracks = data.body.items
+    res.render("tracks", { albumTracks })
+  });
+})
+
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
 
 
