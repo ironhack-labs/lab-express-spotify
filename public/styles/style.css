@@ -1,0 +1,28 @@
+#mainpage {
+   /*  background-image: url(../images/spotify-background.jpeg);
+    background-size: contain;
+    background-repeat: no-repeat; */
+
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 1400px;
+    height: 900px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#mainform {
+
+    display: flex;
+    flex-direction: column;
+
+    
+
+}
