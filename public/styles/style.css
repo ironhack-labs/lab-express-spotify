@@ -1,0 +1,81 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #00b172;
+  color: #fff;
+}
+
+.index-container {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+}
+
+.search-field {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
+
+.search-input {
+  border: 10px solid #000;
+  color: #000;
+  text-decoration: none;
+}
+
+.search-button {
+  color: #fff;
+  background-color: #000;
+  text-decoration: none;
+  border: 10px solid #000;
+}
+
+.search-button:hover {
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  border: 10px solid #fff;
+  cursor: pointer;
+}
+
+.artist-container {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.item-info {
+  width: 340px;
+  padding: 40px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.item-info img {
+  height: 240px;
+}
+
+a {
+  text-decoration: none;
+  color: #000;
+  background-color: #fff;
+  text-decoration: none;
+  border: 10px solid #fff;
+  text-align: center;
+  padding: 10px;
+  font-size: 1.2em;
+  font-weight: 700;
+}
