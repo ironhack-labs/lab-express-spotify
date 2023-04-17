@@ -1,2 +1,5 @@
-<div>{{result.name}}</div>
-<div>Test</div>
+{{#each artistAlbums}}
+<img src="{{images.0.url}}" alt="Image" height="200px">
+<p class="name">{{name}}</p>
+<a href="/tracks/{{id}}"><button>View tracks</button></a>
+{{/each}}

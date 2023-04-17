@@ -1,4 +1,6 @@
-<div>{{result.0.name}}</div>
-<img src="{{result.0.images.0.url}}" alt="Image" height="200px">
-<button><a href="/albums/{{result.0.id}}">View Albums</a></button>
+{{#each searchArtist}}
+<img src="{{images.0.url}}" alt="Image" height="200px">
+<p class="name">{{name}}</p>
+<a href="/albums/{{id}}"><button>View Albums</button></a>
+{{/each}}
 
