@@ -62,6 +62,7 @@ app.get("/albums/:artistId", (req, res, next) => {
       //   console.log(params);
       //   console.log("Artist albums", data.body.items);
       const albumList = data.body.items;
+      const nameArtist = data.body.items[0].artists[0].name;
       console.log(albumList);
       //   console.log(albumList[0].images);
       res.render("albums", { albumList });
