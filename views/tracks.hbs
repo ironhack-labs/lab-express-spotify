@@ -1,0 +1,26 @@
+<div class="card card-title">
+  <h1>Album:<br>{{albumName}}</h1>
+</div>
+
+<div class="container">
+  <table>
+    <thead>
+      <tr>
+        <th>Nr</th>
+        <th>Title</th>
+        <th>Audio</th>
+        <th>Duration</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each searchResults}}
+        <tr>
+          <td>{{track_number}}</td>
+          <td>{{name}}</td>
+          <td><audio controls><source src="{{preview_url}}"></audio></td>
+          <td>{{#calculateSeconds}}{{duration_ms}}{{/calculateSeconds}}</td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

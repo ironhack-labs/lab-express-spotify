@@ -1,0 +1,33 @@
+<div class="card card-title">
+  <h1>Albums for {{artistName}}</h1>
+</div>
+
+<div class="container">
+  {{#each filteredResults}}
+    <div class="card">
+
+      <div>
+        <h2>{{name}}</h2>
+        <ul>
+          <li>Release Date: {{release_date}}</li>
+          <li>Total Tracks: {{total_tracks}}</li>
+        </ul>
+
+        <h3>Collaborating Artists</h3>
+        <ul>
+        {{#each artists}}
+          <li>{{name}}</li>
+        {{/each}}
+        </ul>
+
+        <img src="{{images.[1].url}}" alt="{{name}}-image" width="{{images.[1].width}}" height="{{images.[1].height}}">
+      </div>
+
+      <div>
+        <a href="/tracks/{{name}}/{{id}}">Preview Tracks</a>
+        <a href="{{external_urls.spotify}}" target="_blank">Open on Spotify</a>
+      </div>
+
+    </div>
+  {{/each}}
+</div>

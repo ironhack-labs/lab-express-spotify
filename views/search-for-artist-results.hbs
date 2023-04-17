@@ -1,0 +1,36 @@
+<div class="card card-title">
+  <h1>Search Results</h1>
+</div>
+
+<div class="container">
+  {{#each searchResults}}
+    <div class="card">
+
+      <div>
+        <h2>{{name}}</h2>
+
+        {{#if genres}}
+          <h3>Genres</h3>
+          <ul>
+          {{#each genres}}
+            <li>{{this}}</li>
+          {{/each}}
+          </ul>
+        {{/if}}
+
+        {{#if images}}
+          <img src="{{images.[1].url}}" alt="{{name}}-image" width="{{images.[1].width}}">
+          {{!-- {{#each images}}
+            <img src="{{this.url}}" alt="{{name}}-image" width="{{this.width}}" height="{{this.height}}">
+          {{/each}} --}}
+        {{/if}}
+      </div>
+
+      <div>
+        <a href="/albums/{{name}}/{{id}}">View Albums</a>
+        <a href="{{external_urls.spotify}}" target="_blank">Open on Spotify</a>
+      </div>
+
+    </div>
+  {{/each}}
+</div>
