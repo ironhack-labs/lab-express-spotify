@@ -11,6 +11,10 @@ h1 {
   font-size: 4rem;
 }
 
+span {
+  color: #ffc175;
+}
+
 .index-container {
   height: 100vh;
   display: flex;

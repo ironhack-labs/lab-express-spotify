@@ -47,7 +47,7 @@ app.get("/artist-search", (req, res) => {
       const artistList = data.body.artists.items;
       console.log(artistList);
       //   console.log(artistList[0].images);
-      res.render("artist-search-results", { artistList });
+      res.render("artist-search-results", { artistList, queryString });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
@@ -63,29 +63,59 @@ app.get("/albums/:artistId", (req, res, next) => {
       //   console.log("Artist albums", data.body.items);
       const albumList = data.body.items;
       const nameArtist = data.body.items[0].artists[0].name;
-      console.log(albumList);
-      //   console.log(albumList[0].images);
-      res.render("albums", { albumList });
+      console.log(nameArtist);
+      res.render("albums", { albumList, nameArtist }); // Here you can give the data you new for your template
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
 });
 
-app.get("/tracks/:albumId", (req, res, next) => {
+/* app.get("/tracks/:albumId", (req, res, next) => {
   const params2 = req.params.albumId;
   spotifyApi
     .getAlbumTracks(params2)
     .then((data) => {
       //   console.log("Album tracks", data.body.items);
       const trackList = data.body.items;
-      console.log(trackList);
-      res.render("tracks", { trackList });
-      console.log(data.body.items.artists);
+      const nameArtist = data.body.items[0].artists[0].name;
+      return { trackList, nameArtist };
+    })
+    .then((templateData) => {
+      return spotifyApi
+        .getAlbum(params2)
+        .then((data) => {
+          console.log(data.body.name);
+          return data.body.name;
+        })
+        .then((albumTitle) => {
+          return { ...templateData, albumTitle };
+        });
+    })
+    .then((templateData) => {
+      res.render("tracks", templateData);
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
+}); */
+
+app.get("/tracks/:albumId", async (req, res, next) => {
+  const params2 = req.params.albumId;
+  try {
+    // here we get the tracks info
+    const data = await spotifyApi.getAlbumTracks(params2);
+    const trackList = data.body.items;
+    const nameArtist = data.body.items[0].artists[0].name;
+    // here we get the album info
+    const albumData = await spotifyApi.getAlbum(params2);
+    console.log(albumData.body.name);
+    const albumTitle = albumData.body.name;
+    // here we render the infos
+    res.render("tracks", { trackList, nameArtist, albumTitle });
+  } catch (error) {
+    console.log("The error while searching artists occurred: ", error);
+  }
 });
 
 // Listen
