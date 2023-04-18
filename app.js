@@ -43,7 +43,6 @@ app.get("/artist-search", (req, res) => {
   spotifyApi
     .searchArtists(queryString)
     .then((data) => {
-      //   console.log("The received data from the API: ", data.body.artists.items);
       const artistList = data.body.artists.items;
       console.log(artistList);
       //   console.log(artistList[0].images);
@@ -55,15 +54,12 @@ app.get("/artist-search", (req, res) => {
 });
 
 app.get("/albums/:artistId", (req, res, next) => {
-  const params = req.params.artistId;
+  const artistId = req.params.artistId;
   spotifyApi
-    .getArtistAlbums(params)
+    .getArtistAlbums(artistId)
     .then((data) => {
-      //   console.log(params);
-      //   console.log("Artist albums", data.body.items);
       const albumList = data.body.items;
       const nameArtist = data.body.items[0].artists[0].name;
-      console.log(nameArtist);
       res.render("albums", { albumList, nameArtist }); // Here you can give the data you new for your template
     })
     .catch((err) =>
@@ -76,7 +72,6 @@ app.get("/albums/:artistId", (req, res, next) => {
   spotifyApi
     .getAlbumTracks(params2)
     .then((data) => {
-      //   console.log("Album tracks", data.body.items);
       const trackList = data.body.items;
       const nameArtist = data.body.items[0].artists[0].name;
       return { trackList, nameArtist };
@@ -101,17 +96,16 @@ app.get("/albums/:artistId", (req, res, next) => {
 }); */
 
 app.get("/tracks/:albumId", async (req, res, next) => {
-  const params2 = req.params.albumId;
+  const albumId = req.params.albumId;
   try {
     // here we get the tracks info
-    const data = await spotifyApi.getAlbumTracks(params2);
+    const data = await spotifyApi.getAlbumTracks(albumId);
     const trackList = data.body.items;
     const nameArtist = data.body.items[0].artists[0].name;
     // here we get the album info
-    const albumData = await spotifyApi.getAlbum(params2);
-    console.log(albumData.body.name);
+    const albumData = await spotifyApi.getAlbum(albumId);
     const albumTitle = albumData.body.name;
-    // here we render the infos
+    // here we render the infos we need in the page we want to render
     res.render("tracks", { trackList, nameArtist, albumTitle });
   } catch (error) {
     console.log("The error while searching artists occurred: ", error);
