@@ -1,0 +1,50 @@
+#home {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+.artist {
+    display: flex;
+    flex-direction: column;
+    background-color: beige;
+    height: 350px;
+    width: 250px;
+    margin: 10px;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+
+}
+
+.album {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    background-color: beige;
+    height: 350px;
+    width: 250px;
+    margin: 10px;
+
+}
+
+.tracks {
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    background-color: beige;
+    height: 70px;
+    width: 99vw;
+    margin: 10px;
+}
+
+body {
+    background-color: rgb(5, 80, 34);
+}

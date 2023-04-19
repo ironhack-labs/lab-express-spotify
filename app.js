@@ -1,10 +1,14 @@
+const express = require("express");
 const hbs = require("hbs");
 
+require("dotenv").config();
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
 
+app.set("view engine", "hbs");
+app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
@@ -23,48 +27,49 @@ spotifyApi
 
 // Our routes go here:
 
-app.get("/", (req, res, next) => {
+app.get("/", (req, res) => {
   res.render("index");
 });
-app.get("/artist-search", (req, res, next) => {
-  // console.log("Query artist-name:", req.query.artistName);
+
+app.get("/artist-search", (req, res) => {
+  const { artistName } = req.query;
 
   spotifyApi
-    .searchArtists(req.query.artistName)
-    .then((data) => {
-      // console.log(data.body.artists.items[0].images)
-      //duda de esto
-      res.render("artist-search-results", { artists: data.body.artists.items });
+    .searchArtists(`${artistName}`)
+    .then((response) => {
+      const artistsList = response.body.artists.items;
+
+      res.render("artistSearchResult", { artistsList });
     })
     .catch((err) =>
       console.log("The error while searching artists occurred: ", err)
     );
 });
 
-app.get("/albums/:artistId", (req, res, next) => {
-  //por que artistID
-  console.log(req.params.artistId);
+app.get("/albums/:artistId", (req, res) => {
+  const { artistId } = req.params;
+
   spotifyApi
-    .getArtistAlbums(req.params.artistId)
-    .then((data) => {
-      // console.log(data)
-      res.render("albums", { albums: data.body.items });
+    .getArtistAlbums(`${artistId}`)
+    .then((response) => {
+      const albumsList = response.body.items;
+
+      res.render("albums", { albumsList });
     })
-    .catch((err) =>
-      console.log("The error while searching albums occurred: ", err)
-    );
+    .catch((err) => console.log(err));
 });
 
-app.get("/tracks/:albumId", (req, res, next) => {
+app.get("/tracks/:albumId", (req, res) => {
+  const { albumId } = req.params;
+
   spotifyApi
-    .getAlbumTracks(req.params.albumId)
-    .then((data) => {
-      // console.log(data.body.items)
-      res.render("tracks", { tracks: data.body.items });
+    .getAlbumTracks(`${albumId}`)
+    .then((response) => {
+      const tracksList = response.body.items;
+
+      res.render("tracks", { tracksList });
     })
-    .catch((err) =>
-      console.log("The error while searching tracks occurred: ", err)
-    );
+    .catch((err) => console.log(err));
 });
 
 app.listen(3000, () =>
