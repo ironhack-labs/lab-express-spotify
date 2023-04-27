@@ -37,35 +37,57 @@ spotifyApi
 
 app.get('/', (req, res) => {
   res.render('index');
+  
 });
 
-app.get('/artist-search', (req, res) => {
-    const filePath = path.join(__dirname, 'views', 'artist-search')
-    spotifyApi.searchArtists(req.query.artist)
-    .then((data) => {
-        let allResults = data.body.artists.items
-        res.render(filePath, {allResults});  
-    })
-    .catch(err => console.error(err));
+// app.get('/artist-search', (req, res) => {
+//     spotifyApi.searchArtists(req.query.artist)
+//     .then((data) => {
+//         let allResults = data.body.artists.items
+//         res.render('artist-search', {allResults});  
+//     })
+//     .catch(err => console.error(err));
     
-});
-app.get('/albums/:artistId', (req, res)=>{
-    const filePath = path.join(__dirname, 'views', 'albums')
-    const artistId = req.params.artistId
-    spotifyApi.getArtistAlbums(artistId).then((data) =>{
-        res.render(filePath, {albums: data.body.items} )
-    }).catch(err => console.error(err));
+// });
+app.get('/artist-search', async(req, res)=>{
+    const searchedArtist = req.query.artist 
+    let result = await spotifyApi.searchArtists(searchedArtist)
+    result = result.body.artists.items
+
+    res.render('artist-search', {result})
 })
+
+
+
+
+// app.get('/albums/:artistId', (req, res)=>{
+//     const filePath = path.join(__dirname, 'views', 'albums')
+//     const artistId = req.params.artistId
+//     spotifyApi.getArtistAlbums(artistId).then((data) =>{
+//         res.render(filePath, {albums: data.body.items} )
+//     }).catch(err => console.error(err));
+// })
+
+app.get('/albums/:artistId', async(req,res)=>{
+    const id = req.params.artistId
+    let albums = await spotifyApi.getArtistAlbums(id)
+    albums = albums.body.items
+    res.render('albums', {albums}) /* hay q darle formato de objeto para que se pueda lo pueda pasar al hbs*/
+})
+
+
 app.get('/tracks/:albumId', (req, res)=>{
     const filePath = path.join(__dirname, 'views', 'tracks')
     const albumId = req.params.albumId   
-     
-    spotifyApi.getAlbumTracks(albumId, { limit : 20, offset : 1 })
+    spotifyApi.getAlbumTracks(albumId)
     .then((data)=>{
       res.render(filePath, {tracks : data.body.items})
     })
     .catch(err => console.error(err));
-    
 })
 
 app.listen(3000, () => console.log('Ironhackfy project running on port 3000 🎧 🥁 🎸 🔊'));
+
+
+
+

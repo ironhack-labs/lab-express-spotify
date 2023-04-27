@@ -23,15 +23,13 @@
             </div>
         </div>
     </nav>
-    <div class="container">
-        {{#if allResults}}
-        <div class="row align-items-stretch">
-            {{#each allResults}}
-            {{> artistCard this}}
+    <div class="row">
+        {{#if result}}
+            {{#each result}}
+                {{> artistCard this}}
             {{/each}}
-        </div>
         {{/if}}
     </div>
-
     
 </body>
+
