@@ -1,0 +1,15 @@
+<div class="albumes">
+    <center>
+  {{#each albums}}
+      <div class="card">
+        <img class="card-img-top" src="{{this.images.[0].url}}" alt="{{this.name}}">
+        <div class="card-body">
+          <h5 class="card-title">{{this.name}}</h5>
+          <p class="card-text">{{this.release_date}}</p>
+          <a href="/tracks/{{this.id}}" class="btn btn-sm btn-outline-secondary">View Traks</a>
+          <a href="{{this.external_urls.spotify}}" target="_blank" class="btn btn-sm btn-outline-secondary">View on Spotify</a>
+        </div>
+      </div>
+  {{/each}}
+  </center>
+</div>

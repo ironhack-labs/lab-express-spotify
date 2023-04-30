@@ -1,7 +1,11 @@
-spotifyApi
-  .searchArtists(/*'HERE GOES THE QUERY ARTIST'*/)
-  .then(data => {
-    console.log('The received data from the API: ', data.body);
-    // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-  })
-  .catch(err => console.log('The error while searching artists occurred: ', err));
+<ul>
+  <center>
+  {{#each artists}}
+    <li class="card">
+      <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+      <h2>{{this.name}}</h2>
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </li>
+  {{/each}}
+  </center>
+</ul>

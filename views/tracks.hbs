@@ -1,0 +1,14 @@
+
+        <div id="container">
+        <center>
+        {{#each tracks}}
+        <div class="card">
+            <h2>{{name}}</h2>
+            <audio controls>
+                <source src="{{preview_url}}" type="audio/mpeg">
+                Your browser does not support the audio element.
+            </audio>
+        </div>
+        {{/each}}
+        </center>
+        </div>
