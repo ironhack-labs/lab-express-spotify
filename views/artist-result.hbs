@@ -1,0 +1,18 @@
+<h1>Resultado de búsqueda</h1>
+<hr>
+<div class="container">
+
+    {{#each info}}
+    <ul>
+        <li>{{name}}
+            <a href="/albums/{{id}}" class="btn btn-dark">View Albums</a>
+        </li>
+    </ul>
+
+
+    <img src="{{images.[0].url}}" alt="">
+
+    {{/each}}
+
+    <a href="/" class="btn btn-dark">Volver al buscador</a>
+</div>
