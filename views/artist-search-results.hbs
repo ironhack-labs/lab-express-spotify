@@ -1,0 +1,13 @@
+<h1>Artistas similares a tus búsqueda</h1>
+
+<ul>
+    {{#each info}}
+    <img src="{{images.[0].url}}" alt="">
+    <li>
+        {{name}}
+        <a href="/albums/{{id}}" class="btn btn-dark">Ver Albums</a>
+    </li>
+    {{/each}}
+</ul>
+
+<a href="/" class="btn btn-dark">Volver al inicio</a>
