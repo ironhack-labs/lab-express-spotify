@@ -1,8 +1,17 @@
 <div class="container mb-5">
-    {{#each albums}}
-    <h3>{{name}}</h3>
-    <a href="/detalles/{{id}}">Ver Albumes</a>
-
-    <hr>
-    {{/each}}
+    <div class="row">
+        {{#each albums}}
+        <div class="col-md-4 ">
+            <div>
+                <h3>{{name}}</h3>
+                <div class=" beer-image" style="width: 18rem;">
+                    <img src={{images.[1].url}} class="card-img-top rounded mx-auto d-block mb-5" alt="{{name}}">
+                    <div class="card-body">
+                        <a href="/detalles/{{id}}" class="btn btn-dark mb-5">Ver albumes</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
 </div>

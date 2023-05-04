@@ -1,7 +1,21 @@
-<div>
-    {{#each albums}}
-    <h3>{{name}}</h3>
-    <img src="{{images.[1].url}}" alt="" style="width: 250px;">
-    <hr>
-    {{/each}}
+<div class="container">
+    <div class="row">
+        {{#each albums}}
+        <div class="col-md-4 ">
+            <div>
+                <div class=" beer-image  " style="width: 18rem;">
+                    <h5 class="card-title">{{name}}</h5>
+                    <img src={{images.[1].url}} class="card-img-top rounded mx-auto d-block mb-5" alt="{{name}}">
+                    <div class="card-body ">
+                        <a href="/detalles/{{id}}/tracks" class="btn btn-dark mb-5">Ver Sound track</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        {{/each}}
+
+    </div>
 </div>

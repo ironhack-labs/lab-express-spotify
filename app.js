@@ -55,6 +55,10 @@ app.get("/detalles/:id", (req, res) => {
         })
 })
 
+app.get("/detalles/{{id}}tracks", (req, res) => {
+    res.send("hola")
+})
+
 
 
 app.listen(5005, () => console.log('My Spotify project running on port 5005 🎧 🥁 🎸 🔊'));
