@@ -1,4 +1,18 @@
-<h1>Detalles de {{name}}</h1>
+<div class="container">
+    <h1>Detalles de {{name}}</h1>
 
-<p>{{id}}</p>
-<a href="//artist-search-result" class="btn btn-dark">Volver al listado</a>
+    <p>{{id}}</p>
+
+    {{#each artist}}
+
+    <div class="row">
+        <div class="col">
+
+            {{name}}
+
+
+        </div>
+    </div>
+    {{/each}}
+
+</div>
