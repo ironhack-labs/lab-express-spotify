@@ -1,0 +1,24 @@
+<div class="container">
+
+    <div class="row">
+
+        {{#each artista}}
+        <div class="col-md-3">
+
+            {{#each artists}}
+            <div>
+                {{name}}
+            </div>
+            {{/each}}
+
+            <div>
+                <img src="{{images.[1].url}}" alt="">
+                <a href="">View Tracks</a>
+
+            </div>
+
+        </div>
+        {{/each}}
+
+    </div>
+</div>
