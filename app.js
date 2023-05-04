@@ -55,7 +55,7 @@ app.get("/detalles/:id", (req, res) => {
         })
 })
 
-app.get("/detalles/{{id}}tracks", (req, res) => {
+app.get("/detalles/{{id}}/tracks", (req, res) => {
     res.send("hola")
 })
 
