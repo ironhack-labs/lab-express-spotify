@@ -1,0 +1,22 @@
+<div class="container">
+
+
+    <h1>Resultado de búsqueda</h1>
+    <hr>
+
+    <div class="row">
+        {{#each info}}
+        <div class="col-3">
+            <img src="{{image}}" alt="{{name}}">
+            <p>{{name}}</p>
+            <a href="/artist-albums/{{id}}"> Ver descripcion</a>
+
+        </div>
+        {{/each}}
+    </div>
+
+
+
+    <a href="/artist-search" class="btn btn-dark">Volver al inicio</a>
+
+</div>
