@@ -1,6 +1,6 @@
-<div>
-{{#each answer}}
+<div>Tracks
+{{#each info}}
     <p>{{this.name}}</p>
-    <audio controls src=""></audio>
+    <audio controls> <src={{this.external_urls.spotify}}></audio>
 {{/each}}
 </div>
