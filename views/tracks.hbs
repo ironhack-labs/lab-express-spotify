@@ -1,0 +1,12 @@
+<!-- tracks.hbs -->
+
+<h1>Tracks</h1>
+
+<div>
+  {{#each tracks}}
+
+      <h2>{{this.name}}</h2>
+      <audio controls src="{{this.preview_url}}"></audio>
+    
+  {{/each}}
+</div>

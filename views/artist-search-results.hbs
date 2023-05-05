@@ -1,0 +1,14 @@
+<!-- artist-search-results.hbs -->
+
+<h1>Search results for "{{query}}"</h1>
+
+<ul>
+  {{#each response.artists.items}}
+    <li>
+      <a href="/albums/{{id}}"> vie
+        <img src="{{images.0.url}}" alt="{{name}}">
+        <h2>{{name}}</h2>
+      </a>
+    </li>
+  {{/each}}
+</ul>
