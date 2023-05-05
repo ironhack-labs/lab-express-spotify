@@ -1,0 +1,10 @@
+<div>
+<h1 style="color: brown;">All related albums HERE!</h1>
+{{#each answer}}
+<h2>{{this.name}}</h2>
+<img src={{this.images.0.url}} alt="">
+
+<a href="/tracks/:{{this.id}}">View Tracks</a>
+{{/each}}
+
+</div>
