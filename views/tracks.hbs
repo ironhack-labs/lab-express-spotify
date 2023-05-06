@@ -1,6 +1,13 @@
-<div>Tracks
-{{#each info}}
-    <p>{{this.name}}</p>
-    <audio controls> <src={{this.external_urls.spotify}}></audio>
-{{/each}}
+
+<header id="tracks-header">
+    <p>Title</p>
+    <p id="center">Listen</p>
+</header>
+<div id="tracks-list">
+    {{#each info}}
+        <div class="track">
+            <p>{{this.name}}</p>
+            <audio controls src={{this.preview_url}}></audio>
+        </div>
+    {{/each}}
 </div>

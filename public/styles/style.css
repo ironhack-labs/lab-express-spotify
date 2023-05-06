@@ -1,0 +1,42 @@
+body{
+    font-family: monospace;
+}
+
+
+
+
+
+/*------------Tracks Page------------*/
+#tracks-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    height: 40px;
+    background-color: grey;
+
+    padding: 0 2%;
+}
+#tracks-header p{
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+}
+#center{
+    margin-right: 18%;
+}
+.track{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    padding: 5px 2%;
+    background-color: rgb(232, 232, 232);
+}
+.track p{
+    display: flex;
+    align-items: center;
+}
+.track audio{
+    width: 40%;
+    
+}
