@@ -1,0 +1,19 @@
+<div>
+    {{#each result}}
+    <h1>{{this.name}}</h1>
+    <img src={{this.images.0.url}} alt="">
+    <form action="/artist-search" method="GET">
+      <button type="submit" href="/albums/someArtistIdGoesHere">View Albums</button>
+    </form>
+    {{/each}}
+</div>
+
+<div>
+   {{#each data}}
+   <a href="/albums/{{this.id}}">
+    <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+    <h1>{{this.name}}</h1>
+    <button type="submit">View Albums</button>
+   </a>
+   {{/each}}
+   </div>
