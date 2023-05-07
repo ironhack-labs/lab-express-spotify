@@ -67,8 +67,8 @@ app.get('/album-tracks/:albumId', async (req, res) =>{
     let {albumId} = req.params
     try {
         const albumTracks = await spotifyApi.getAlbumTracks(albumId)
-        //res.render('album-tracks', {response:albumTracks.body.items})
-        res.send({response:albumTracks.body.items})
+        res.render('album-tracks', {response:albumTracks.body.items})
+        //res.send({response:albumTracks.body.items})
     }
     catch (err) {
         console.error(err);
