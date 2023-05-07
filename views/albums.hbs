@@ -1,8 +1,10 @@
-<header>Albums for: <span>{{this.artistName}}</span></header>
-<div>
-{{#each answer}}
-    <img src={{this.images.0.url}} alt="album-picture">    
-    <p>{{this.name}}</p>
-    <a href="/tracks/{{this.id}}">View Tracks</a>
-{{/each}}
+<header id="album-page-header">Albums for: <span>{{this.artistName}}</span></header>
+<div class="list">
+    {{#each answer}}
+    <div class="info-box">
+        <img src={{this.images.0.url}} alt="album-picture">    
+        <h3>{{this.name}}</h3>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+    </div>
+    {{/each}}
 </div>

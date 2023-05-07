@@ -1,10 +1,94 @@
 body{
     font-family: monospace;
+    margin: 0;
+}
+/*------------Homepage------------*/
+
+#homepage{
+    background-image: url('../images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 600px;
+    width: 100%;
+    display: flex;
+    
+    justify-content: center;
+    align-items: center;
+}
+#homepage form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#white-box{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10%;
+    width: 50%;
+
+    padding: 30px 50px;
+    background-color: rgba(255, 255, 255, 0.297);
+    
+}
+input{
+    width: 300px;
+}
+button{
+    color: white;
+    font-weight: bold;
+    
+    background-color: red;
+    border: 1px solid black;
+    padding: 3px 0;
+    margin: 10px ;
+    width: 50%;
+}
+/*------------Artist & Album Page------------*/
+#album-page-header{
+    text-align: center;
+    font-size: 2em;
+    font-weight: bold;
+}
+#album-page-header span{
+    text-transform: capitalize;
 }
 
+.list{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
 
+}
+.info-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
+    margin: 20px 1%;
 
+    width: 30%;
+    background-color: grey;
+    color: white;
+    text-align: center;
+}
+.info-box img{
+    width: 100%;
+}
+.info-box a{
+    text-decoration: none;
+    
+    color: white;
+    font-weight: bold;
+    
+    background-color: red;
+    border: 1px solid black;
+    width: 80%;
+    padding: 3px 0;
+    margin: 10px ;
+}
 
 /*------------Tracks Page------------*/
 #tracks-header{
@@ -38,5 +122,4 @@ body{
 }
 .track audio{
     width: 40%;
-    
 }

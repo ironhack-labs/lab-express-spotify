@@ -48,7 +48,7 @@ app.get('/albums/:artistsId', async (req, res)=>{
     let artistName = await spotifyApi.getArtist(req.params.artistsId)
       .then(data => data.body.name)
       .catch(error => console.log(error))
-    console.log(artistName)
+    
     res.render('albums', {answer: response.body.items, artistName})
   }
   catch(error){console.error(error)}
