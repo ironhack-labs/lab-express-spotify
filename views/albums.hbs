@@ -1,0 +1,15 @@
+<link rel="stylesheet" href="/styles/style.css" />
+
+<div class="albums-container">
+  <h1>Albums</h1>
+  <div class="albums-grid">
+    {{#each response.items}}
+      <div class="album-item">
+        <a href="/tracks/{{id}}">
+          <img src="{{images.0.url}}" alt="{{name}}" />
+          <h2>{{name}}</h2>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</div>

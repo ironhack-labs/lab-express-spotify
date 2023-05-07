@@ -1,0 +1,14 @@
+<link rel="stylesheet" href="/styles/style.css" />
+<div class="artists-container">
+  <h1>Search results for "{{query}}"</h1>
+  <div class="artists-grid">
+    {{#each response.artists.items}}
+      <div class="artist-item">
+        <a href="/albums/{{id}}">
+          <img src="{{images.0.url}}" alt="{{name}}" />
+          <h2>{{name}}</h2>
+        </a>
+      </div>
+    {{/each}}
+  </div>
+</div>

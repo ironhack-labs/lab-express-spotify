@@ -1,0 +1,104 @@
+.hero {
+  position: relative;
+  text-align: center;
+}
+
+.hero-image {
+  width: 1500px;
+}
+
+.search-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: rgba(255, 255, 255, 0.8);
+  padding: 20px;
+  border-radius: 10px;
+}
+
+.search-container h1 {
+  margin-bottom: 10px;
+}
+
+.search-container form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-container input[type="text"] {
+  padding: 10px;
+  margin-right: 10px;
+  border-radius: 5px;
+  border: none;
+}
+
+.search-container button {
+  padding: 10px 20px;
+  background-color: red;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.search-container button:hover {
+  background-color: red;
+}
+
+ul li a img {
+  width: 200px;
+}
+
+.artists-container {
+  text-align: center;
+}
+
+.artists-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px; 
+}
+
+.artist-item a {
+  text-decoration: none;
+  color: #000;
+}
+
+.artist-item img {
+  width: 100%;
+  max-width: 200px; 
+}
+
+.artist-item h2 {
+  margin-top: 10px;
+  font-size: 14px;
+}
+
+.albums-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.albums-grid {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  ); /* Adjust the number of columns as desired */
+  gap: 20px;
+}
+
+.album-item {
+  text-align: center;
+}
+
+.album-item img {
+  width: 100%;
+  height: auto;
+}
+
+.album-item h2 {
+  margin-top: 10px;
+}
