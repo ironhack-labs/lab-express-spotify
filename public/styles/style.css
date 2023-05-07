@@ -1,0 +1,132 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+}
+
+body {
+    background-image: url("../images/spotify-background.jpeg");
+    display: flex;
+    justify-content: center;
+    background-size:cover;
+    color:white;
+    text-align: center;
+}
+
+form {
+    margin-top: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px 120px;
+    background-color:rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+}
+
+button{
+    padding: 10px;
+    border-radius: 5px;
+    border-style: none;
+    margin-top: 5px;
+    color: white;
+    background-color: rgb(219, 67, 29);
+    font-size: 18px;
+    font-weight: bold;
+}
+
+button:hover{
+    background-color: white;
+    color: rgb(219, 67, 29);
+}
+
+img{
+    width: 150px;
+    border-radius: 10px;
+    margin: 10px 0px;
+    height: 150px;
+}
+
+input {
+    text-align: center;
+    margin-bottom: 10px;
+    width: 250px;
+    height: 30px;
+    font-size: 19px;
+}
+
+.viewButton {
+    border-radius: 5px;
+    border-style: none;
+    margin-top: 5px;
+    color: white;
+    background-color: rgb(219, 67, 29);
+    padding: 10px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.viewButton:hover{
+    background-color: white;
+    color: rgb(219, 67, 29);;
+}
+
+.kevin {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 150px;
+    text-align: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+.subKevin{
+    display: flex;
+    align-items: center;
+    justify-content:space-evenly;
+    flex-direction: row;
+    margin-top: 50px;
+}
+
+h2{
+    height: 50px;
+    overflow: hidden;
+}
+
+h3{
+    height: 47px;
+    overflow: hidden;
+}
+
+p{
+    margin: 5px 0px;
+}   
+
+.organize{
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align:left;
+    margin: 0px 20px;
+    width: 200px;
+    height: 300px;
+    text-align: center;
+}
+
+.organizeTracks{
+    background-color: rgba(255, 255, 255, 0.15);
+    padding: 20px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    text-align:left;
+    margin: 0px 50px;
+    text-align: center;
+}
+
+audio {
+    margin-top: 15px;
+}

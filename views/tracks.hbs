@@ -1,0 +1,10 @@
+<div class="kevin">
+  {{#each results}}
+    <div class="subKevin">
+      <div class="organizeTracks">
+        <h3>{{this.name}}</h3>
+        <audio controls src="{{this.preview.url}}"></audio>
+      </div>
+    </div>
+  {{/each}}
+</div>

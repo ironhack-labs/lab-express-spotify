@@ -1,0 +1,11 @@
+<div class="kevin">
+    {{#each results}}
+        <div class="subKevin">
+            <div class="organize">
+                <h2>{{this.name}}</h2>
+                <a href="/albums/{{this.id}}"><img src={{this.images.0.url}} alt="Image wasn't loaded"></a>
+                <a href="/albums/{{this.id}}" class="viewButton">View Albums</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
