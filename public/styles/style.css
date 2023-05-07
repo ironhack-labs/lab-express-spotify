@@ -1,0 +1,79 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Roboto:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+* {
+    font-family: Roboto, Helvetica, sans-serif;
+    background-color: #1e1e1e;
+    color: white;
+    text-overflow: ellipsis;
+}
+
+.btn {
+    background-color: #1ed760;
+    border: none;
+    color: white;
+    padding: 7px 15px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+input[type=text] {
+    width: 50%;
+    padding: 7px 15px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    background-color: #303030;
+    box-shadow: none;
+  }
+
+.search-form {
+    text-align: center;
+}
+
+.artist-search {
+    font-weight: bold;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    width: 200px;
+    background-color: black;
+  }
+  
+  li a {
+    display: block;
+    color: white;
+    padding: 8px 16px;
+    text-decoration: none;
+  }
+  
+  li a:hover {
+    background-color: #1ed760;
+    color: white;
+  }
+
+.results {
+    display: grid;
+    grid-template-columns: 150px 150px 150px 150px 150px;
+    column-gap: 25px;
+    row-gap: 25px;
+    justify-content: space-around;
+    margin: 1% 1% 1% 1%;
+}
+
+img {
+    width: 150px;
+    height: 150px;
+}
+
+.result-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    word-wrap: break-word;
+}
