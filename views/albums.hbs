@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ironhack Spotify</title>
+</head>
+<body>
+  <div class="results">
+
+
+    {{#each albumData}}
+
+    <div>
+
+        <div>
+            <img src="{{images.[0].url}}" alt="">
+            <div class="result-item">
+
+                <p>{{name}}</p>
+                <a href="/tracks/{{id}}" class="btn">View tracks</a>
+            </div>
+        </div>
+
+    </div>
+    {{/each}}
+</div>  
+</body>
+</html>
