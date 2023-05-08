@@ -1,0 +1,120 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+#homepage {
+  background-image: url("/images/spotify-background.jpeg");
+  background-repeat: no-repeat;
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 20%;
+}
+
+#div-form {
+  background-color: rgba(255, 255, 255, 0.324);
+  width: 600px;
+  height: 200px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#input-form {
+  width: 300px;
+  height: 30px;
+}
+
+#button-form {
+  margin-top: 5%;
+  background-color: #920101;
+  color: white;
+  padding: 3% 2%;
+  border-style: none;
+  width: 150px;
+}
+
+#artists-results {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.artists-div-info {
+  background-color: rgb(70, 70, 70);
+  color: white;
+  font-weight: 400;
+  width: 300px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  text-align: center;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.artists-image {
+  height: 300px;
+  width: 300px;
+  margin: 0px;
+}
+
+.artist-name {
+  margin: 5px 0px 5px 0px;
+}
+
+.view-albums {
+  text-decoration: none;
+  background-color: #920101;
+  color: white;
+  padding: 2%;
+  border-radius: 6%;
+  margin-bottom: 16px;
+}
+
+#albums {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.albums-div-info {
+  background-color: rgb(70, 70, 70);
+  color: white;
+  font-weight: 400;
+  width: 300px;
+  height: 370px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.7em;
+  text-align: center;
+  margin-left: 50px;
+  margin-bottom: 10px;
+}
+
+.albums-image {
+  height: 300px;
+  width: 300px;
+  margin: 0px;
+}
+
+.albums-name {
+  margin: 5px 0px 5px 0px;
+}

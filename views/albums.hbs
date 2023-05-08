@@ -1,0 +1,9 @@
+ <body id="albums">
+ {{#each response}} 
+  <div class="albums-div-info">
+  <img class="albums-image" src="{{this.images.0.url}}" alt="{{this.name}}" />
+    <h2 class="albums-name">{{this.name}}</h2>
+    <a href="/albums/:artistId">View Tracks</a>
+    </div>
+  {{/each}}
+</body>

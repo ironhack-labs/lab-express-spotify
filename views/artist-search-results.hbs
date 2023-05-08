@@ -1,0 +1,12 @@
+<body id="artists-results">
+
+  {{#each response.artists.items}}
+  <div class="artists-div-info">
+  <img class="artists-image" src="{{this.images.0.url}}" alt="{{this.name}}" />
+    <h2 class="artist-name">{{this.name}}</h2>
+    <a class="view-albums" href="/albums/{{this.id}}">View Albums</a>
+  </div>
+  {{/each}}
+
+</body>
+
