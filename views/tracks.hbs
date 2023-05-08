@@ -1,0 +1,14 @@
+<div>
+
+  <h1>Album Tracks</h1>
+
+  <div>
+
+    {{#each response}}
+      <p>{{this.name}}</p>
+      <audio src="{{this.preview_url}}" controls></audio>
+    {{/each}}
+
+  </div>
+
+</div>
