@@ -1,0 +1,10 @@
+<h1>Albums</h1>
+
+<ul>
+    {{#each data}}
+    <li>
+        <img src="{{this.images.0.url}}" alt="{{this.name}} cover">
+        <h2>{{this.name}}</h2>
+        <p>Released: {{this.release_date}}</p>
+    {{/each}}
+</ul>
