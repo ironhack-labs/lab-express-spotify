@@ -25,7 +25,7 @@ spotifyApi
 
 // Our routes go here:
 app.get("/", (req, res) => {
-  res.render("index");
+  res.render("index", {layout: false});
 });
 app.get("/artistSearch", (req, res) => {
   console.log(req.query);
@@ -62,7 +62,7 @@ app.get("/tracks/:albumId", (req, res) =>{
     spotifyApi.getAlbumTracks(albumId)
 
     .then((data)=>{
-        console.log("aaaaaaaaaaaaaaaaaaaaaaaa", data.body)
+        // console.log("aaaaaaaaaaaaaaaaaaaaaaaa (qué console.log tan poco elegante): ", data.body)
         res.render("tracks", data.body)
     })
     .catch(err => console.log("An error occurred: ", err));

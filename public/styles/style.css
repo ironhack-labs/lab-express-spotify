@@ -1,3 +1,55 @@
+body {
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+h1 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;    
+}
+
+h1.index {
+    font-size: 45;
+    color: white;
+    text-align: center;
+    padding-top: 50px
+}
+
+body.index {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover
+}
+
+div.index {
+    display: flex;
+    align-items: center;
+    height: 60%;
+    justify-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px 150px
+}
+
+form>input {
+    width: 150%
+}
+
+form>input,
+form>button {
+    padding: 5px;
+    margin: 5px
+}
+
+form>button {
+    background-color:rgb(255, 114, 83);
+    border: 0;
+    color: white;
+}
+
+
 .album {
     width: 200px
 }
