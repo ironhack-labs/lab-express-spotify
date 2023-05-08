@@ -2,7 +2,7 @@
   {{#each results}}
     <div class="subKevin">
       <div class="organize">
-        <img src="{{this.images.0.url}}" alt="{{this.name}} cover">
+        <a href="/tracks/{{this.id}}"><img src="{{this.images.0.url}}" alt="{{this.name}} cover"></a>
         <h3>{{this.name}}</h3>
         <p>Released: {{this.release_date}}</p>
         <a href="/tracks/{{this.id}}" class="viewButton">View Tracks</a>
