@@ -27,7 +27,7 @@ spotifyApi
 app.get("/", (req, res) => {
   res.render("index", {layout: false});
 });
-app.get("/artistSearch", (req, res) => {
+app.get("/artist-search", (req, res) => {
   console.log(req.query);
   let artist = req.query.artistSearch;
 
