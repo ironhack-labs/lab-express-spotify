@@ -1,0 +1,37 @@
+<div class="container">
+    <h1>Search Results</h1>
+    <hr>
+
+    <div class="row">
+
+        {{#each artistData.artists.items}}
+        <div class="col-md-4 mb-5">
+
+            <h5 class="mb-3">{{this.name}}</h5>
+            {{#if (secondImage this.images)}}
+            <img src="{{secondImage this.images}}" class="mb-3" alt="{{this.name}}">
+            {{!-- NOTE: when calling a helper function to iterate arrays in the view
+            - which is logicless and doesn't directly access array elements with an index -
+            the helper function passes this.images (the array of images) as an argument.
+            So, {{secondImage this.images}} will be replaced by the URL of the image. It's not necessary to add .url at
+            the end
+            because the helper function is already returning the URL, not the whole image object.
+            In contrast, when directly accessing properties of the images in the array without using a helper function,
+            i.e., if I want
+            to display all the images and not just the 2nd*, then 'this.url' needs to be included inside the img src
+            tag, that is,
+            ---> <img src="{{this.url}}" alt="{{../this.name}}"> to get the URL of each image. Also, the alt in this
+            case has ../ because
+            the name property is not in the image loop, but in the parent, one step above--}}
+            {{else}}
+            <div class="col-md-4 mb-5 text-center d-flex flex-column justify-content-center artistImage-placeholder">
+                <p>No images available for this artist</p>
+            </div>
+            {{/if}}
+            <a href="/albums/{{this.id}}" class="btn btn-sm btn-outline-dark mb-3 custom-button">View albums</a>
+        </div>
+        {{/each}}
+
+    </div>
+    <a href="/" class="btn btn-dark mb-5">Back to HOME</a>
+</div>

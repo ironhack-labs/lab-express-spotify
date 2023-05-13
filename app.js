@@ -4,6 +4,18 @@ const express = require('express');
 const hbs = require('hbs');
 
 // require spotify-web-api-node package here:
+const SpotifyWebApi = require('spotify-web-api-node');
+
+//On artist-search-results, I want to display only the 2nd image of each artist,
+// which has a more manageable size:
+hbs.registerHelper('secondImage', (images) => {
+    if (images.length > 0) {
+        return images[1] ? images[1].url : images[0].url;
+    }
+    return null;
+});
+
+
 
 const app = express();
 
@@ -12,7 +24,22 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
+const spotifyApi = new SpotifyWebApi({
+    clientId: process.env.CLIENT_ID,
+    clientSecret: process.env.CLIENT_SECRET
+});
+
+// Retrieve an access token
+spotifyApi
+    .clientCredentialsGrant()
+    .then(data => {
+        spotifyApi.setAccessToken(data.body['access_token'])
+        spotifyApi.setRefreshToken(data.body['refresh_token'])
+    })
+    .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
+const indexRoutes = require('./routes/index.routes')(spotifyApi)
+app.use("/", indexRoutes)
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
