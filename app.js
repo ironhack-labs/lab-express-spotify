@@ -32,16 +32,36 @@ app.get('/', (req, res) => {
     res.render('index');
 })
 
-
-
 app.get('/artist-search', (req, res) => {
     console.log(req.query)
   spotifyApi
-    .searchArtists(req.query.username)
+    .searchArtists(req.query.artistName)
     .then((data) => {
-        const artists = data.body.artists
-      console.log("The received data from the API: ", data.body.artists);
+      const artists = data.body.artists.items
+      // console.log("The received data from the API: ", artists);
     res.render('artist-search-results', {artists})
 })
 .catch((err) => console.log("The error while searching artists occurred: ", err));
+})
+
+app.get('/albums/:artistId', (req, res) => {
+  console.log('req.params', req.params)
+  spotifyApi
+   .getArtistAlbums(req.params.artistId)
+   .then((foundUser) => {
+    const albums = foundUser.body.items
+  res.render('albums', {albums})
+})
+   .catch(err => console.log(err))
+})
+
+app.get('/track-information/:albumId', (req, res) => {
+  console.log('req.params', req.params)
+  spotifyApi
+  .getAlbumTracks(req.params.albumId)
+   .then((foundAlbum) => {
+    const tracks = foundAlbum.body.items
+  res.render('track-information', {tracks})
+})
+   .catch(err => console.log(err))
 })
