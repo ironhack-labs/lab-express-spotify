@@ -31,9 +31,10 @@ app.get('/', (req, res) => {
     spotifyApi
       .searchArtists(artist) // Pass the artist query parameter to the searchArtists method
       .then(data => {
+        const artists = data.body.artists.items; // Get the array of artists from the response
         console.log('The received data from the API:', data.body);
         // Render the artist-search-results view and pass the search results to it
-        res.render('artist-search-results', { artists: data.body.artists.items });
+        res.render('artist-search-results', { artists });
       })
       .catch(err => {
         console.log('The error while searching artists occurred:', err);
