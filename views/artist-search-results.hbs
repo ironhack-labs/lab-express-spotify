@@ -13,7 +13,7 @@
         {{#each artists}}
             <div class="artist-card">
                 <h2>{{name}}</h2>
-                <img src="{{image}}" alt="{{name}} Image">
+                <img src="{{this.images.[0].url}}" alt="{{name}} Image">
                 <a href="/albums/{{id}}">View Albums</a>
             </div>
         {{/each}}
