@@ -12,6 +12,10 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+hbs.registerHelper('toYear', function (date) {
+  return "" + new Date(date).getFullYear();
+});
+
 // setting the spotify-api goes here:
 
 const spotifyApi = new SpotifyWebApi({

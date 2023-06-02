@@ -4,6 +4,15 @@
 {{!-- <p>Album : {{this.artists.[0].name}}</p>
 <p>For: {{this.name}}</p> --}}
 
+<div class="album-header">
+    {{#if this.album.images.[0].url}}
+        <img src="{{this.album.images.[0].url}}" alt="{{this.album.name}}">
+    {{/if}}
+    <p>{{this.album.name}}</p>
+    <p>{{this.album.artists.[0].name}}</p>
+    <p>{{toYear this.album.release_date}}</p>
+</div>
+
 <div id="tracks-list">
 
     <div id="tracks-list-header">
