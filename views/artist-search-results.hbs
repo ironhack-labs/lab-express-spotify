@@ -1,0 +1,20 @@
+
+
+<section>
+
+<div id="artist-list">
+
+    {{#each this.artists.items}}
+
+        <div class="artist">
+            {{#if this.images}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{/if}}
+            {{this.name}}
+   <a href="/album/{{this.id}}">View Albums</a>
+        </div>
+
+    {{/each}}
+
+</div>
+<section>
