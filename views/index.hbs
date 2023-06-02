@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Express Spotify</title>
+  <style>
+    #search-input #search-button #search-box {
+      outline: none;
+      box-shadow: none;
+    }
+  </style>
+  
+<link rel="stylesheet" type="text/css" href="/styles/style.css">
+</head>
+
+<body>
+<div class="container">
+
+    <form action="/artist-search", method="GET" id="form">
+        <label id="search-box"> 
+            <input type="text" artist="artist" placeholder="Enter artist name" id="search-input"/>
+        </label><br>
+
+        <button type="submit" id="search-button">Search for an Artist!</button>
+    </form>
+</div>
+
+<div class="image-container">  
+    <img src="/images/spotify-background.jpeg" id="image">
+</div>
+
+</body>
