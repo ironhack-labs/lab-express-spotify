@@ -1,10 +1,10 @@
 {{!-- {{log "received" this}} --}}
 
-<div id="artist-list">
+<div id="list">
 
     {{#each this.artists.items}}
         {{!-- {{log this}} --}}
-        <div class="artist">
+        <div class="artist item">
             {{log "artist" this}}
             {{#if this.images}}
                 <img src="{{this.images.[0].url}}" alt="{{this.name}}">
