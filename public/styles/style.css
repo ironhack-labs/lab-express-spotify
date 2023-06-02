@@ -1,0 +1,20 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  background-color: rgba(165, 42, 42, 0.354);
+}
+nav a {
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 2;
+}
+nav a:hover {
+  text-decoration: underline;
+  text-shadow: #fc0 1px 0 10px;
+}

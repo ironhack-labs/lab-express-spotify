@@ -1,0 +1,18 @@
+{{#if artistsArr}}
+    <h1>List of Artists:</h1>
+{{else}}
+    <h1 hidden>List of Artists:</h1>
+{{/if}}
+
+{{#each artistsArr}}
+    <section class="artist-summary">
+        <h2>{{this.name}}</h2>
+        <div><a href="">View albums</a></div>
+
+
+    </section>
+{{else}}
+    <section class="artist-summary">
+        <h2>Cannot find your search</h2>
+    </section>
+{{/each}}
