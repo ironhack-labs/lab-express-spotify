@@ -1,6 +1,20 @@
+:root {
+    --grid-margin: 30px;
+  }
+
 body {
     padding: 0;
     margin: 0;
+}
+
+a, button {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    padding: 10px 20px;
+    border: none;
+    font-weight: bold;
+    text-decoration: none;
 }
 
 #home {
@@ -27,30 +41,49 @@ body {
     border: 1px solid gray;
     border-radius: 2px;
 }
-#home button {
+
+/* #home button {
     background-color: red;
     color: white;
     border-radius: 5px;
     padding: 10px 20px;
     border: none;
     font-weight: bold;
-}
+} */
 
 #artist-list {
     display: flex;
     flex-wrap: wrap;
+    padding-left: 10%;
+    padding-right: 10%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
-.artist{
+.artist {
+    margin: var(--grid-margin);
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 200px;
+    /* justify-content: space-between; */
+    width: calc((100% - 6 * var(--grid-margin))/3);
+    background-color: grey;
+    color: white;
+    padding-bottom:  10px;
+}
+
+/* .artist a {
+    margin-bottom:;
+} */
+
+.artist span {
+    margin: 5px;
+    font-weight: bold;
 }
 
 .artist img {
-    max-width: 100px;
-    max-height: 100px;
+    max-width: 100%;
+    /* max-height: 30%; */
 }
 
 #albums-list {

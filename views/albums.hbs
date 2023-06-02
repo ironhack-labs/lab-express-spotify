@@ -10,8 +10,10 @@
         {{!-- {{log this}} --}}
         <div class="album">
             {{!-- {{log "album" this}} --}}
-            {{#if this.images}}
+            {{#if this.images.[0]}}
                 <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{else}}
+                <img src="/images/missing.png" alt="{{this.name}}">
             {{/if}}
             {{this.name}}
             <a href="/album/{{this.id}}">View Album details</a>

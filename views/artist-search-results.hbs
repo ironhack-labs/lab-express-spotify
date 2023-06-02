@@ -8,8 +8,10 @@
             {{log "artist" this}}
             {{#if this.images}}
                 <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{else}}
+                <img src="/images/missing.png" alt="{{this.name}}" width="500px">
             {{/if}}
-            {{this.name}}
+            <span>{{this.name}}</span>
             <a href="/albums/{{this.id}}">View Albums</a>
 
         </div>
