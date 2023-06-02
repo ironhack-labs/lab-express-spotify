@@ -78,8 +78,28 @@ h1 {
     /* max-height: 30%; */
 }
 
+#tracks-list {
+    margin: 0px 15px;
+}
+
+#tracks-list-header {
+    background-color: #4a4a4a;
+    display: flex;
+    justify-content:space-between;
+    margin: 2px;
+    padding: 20px 80px 20px 20px;
+    color: lightgray;
+    font-weight: bold;
+    font-size: 2rem;
+
+}
+
 .track {
     display: flex;
     justify-content:space-between;
+    align-items: center;
+    background-color: rgb(240, 240, 240);
+    margin: 2px;
+    padding-left: 20px;
     /* width: 100%; */
 }
