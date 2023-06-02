@@ -63,20 +63,20 @@ app.get("/albums/:artistId", (req, res) => {
   });
 })
 
-app.get("/album/:albumId", (req, res) => {
-
+app.get("/album/:albumId", async (req, res) => {
   console.log(req.query);
-  spotifyApi
-  .getAlbumTracks(req.params.albumId)
-  .then(data => {
-      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      console.log('The received data from the API: ', data.body);
-      res.render("album-tracks", data.body);
-  })
-  .catch(err => {
+  try {
+    const album = await spotifyApi.getAlbum(req.params.albumId);
+    const tracks = await spotifyApi.getAlbumTracks(req.params.albumId);
+    // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+    const data = { album: album.body, tracks: tracks.body.items };
+    console.log('The received data from the API: ', data);
+    res.render("album-tracks", data);
+  
+  } catch (err) {
     console.log('The error while searching artists occurred: ', err);
     res.send("Search failed with error 🫤: " + err);
-  });
+  }
 })
 
 
