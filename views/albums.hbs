@@ -1,0 +1,12 @@
+<h1>Albums for: {{albumsArr.[0].artists.[0].name}}</h1>
+{{#each albumsArr}}
+    {{#if this.images}}
+        <img src="{{this.images.[0].url}}" alt="Cover image not found" />
+    {{/if}}
+    <h1>{{this.name}}</h1>
+    <button>
+        <a href=""></a>
+    </button>
+{{else}}
+    <h2>Albums not found</h2>
+{{/each}}
