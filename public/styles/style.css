@@ -75,6 +75,7 @@ h1 {
 
 .item img {
     max-width: 100%;
+    aspect-ratio: 1 / 1;
     /* max-height: 30%; */
 }
 
