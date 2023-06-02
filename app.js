@@ -45,15 +45,30 @@ app.get("/artist-search", (req, res) => {
   console.log(filter);
   spotifyApi
     .searchArtists(filter)
-    .then((dataFromSpotifyApi) => {
-      const artistsArr = dataFromSpotifyApi.body.artists.items;
-      console.log(
-        "artistsArr type is",
-        typeof artistsArr,
-        "DETAILS",
-        artistsArr
-      );
+    .then((artistsDataFromSpotifyApi) => {
+      const artistsArr = artistsDataFromSpotifyApi.body.artists.items;
+      //   console.log(
+      //     "artistsArr type is",
+      //     typeof artistsArr,
+      //     "DETAILS",
+      //     artistsArr
+      //   );
       res.render("artist-search-results", { artistsArr });
+    })
+    .catch((e) => {
+      console.log("FAIL TO SEARCH", e);
+    });
+});
+//
+// Albums from Artist
+app.get("/albums/:artistId", (req, res) => {
+  const artistId = req.params.artistId;
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then((albumsDataFromSpotifyApi) => {
+      const albumsArr = albumsDataFromSpotifyApi.body.items;
+      res.render("albums", { albumsArr });
+    //   console.log("ALBUM", albumsArr[0].images);
     })
     .catch((e) => {
       console.log("FAIL TO SEARCH", e);
