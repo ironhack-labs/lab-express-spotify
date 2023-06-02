@@ -54,13 +54,23 @@ The following screens might be out of date since Spotify is constantly iterating
 
 <!-- ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_a3a19d215083c5526df1f53f3c1fdf6f.png) -->
 
-4. Fill in the fields and submit the form.
+4. Fill in the fields and submit the form clicking on the Save button.
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_db933b4f08d71ceff0b0d5d4ca124594.png)
+![alt text](./readme-images/create-app.png)
 
-5. We are ready to go! We have all the info we need :muscle: Let´s start!
+<!-- ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_db933b4f08d71ceff0b0d5d4ca124594.png) -->
 
-![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8859d022ca1d53adc9f9ec829ec3d17b.png)
+5. You'll be redirected to the 'Home' page of the app you've just created. Click on the 'Settings' button at the top- rigth.
+
+![alt text](./readme-images/home-settings.png)
+
+6. In the Basic Information page you'll find your credentials: the Client ID, and the Client secret clicking on **View client secret**.
+
+![alt text](./readme-images/credentials.png)
+
+<!-- ![](https://s3-eu-west-1.amazonaws.com/ih-materials/uploads/upload_8859d022ca1d53adc9f9ec829ec3d17b.png)  -->
+
+7. We are ready to go! We have all the info we need :muscle: Let´s start!
 
 ## Iteration 1 | Spotify API Setup
 
