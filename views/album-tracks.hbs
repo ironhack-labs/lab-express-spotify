@@ -1,0 +1,12 @@
+{{#each artistTracksObj}}
+	<article>
+		<h3>Track {{this.track_number}} - {{this.name}}</h3>
+		<a class='listen-spotify' href='{{this.external_urls.spotify}}'>Listen on
+			Spotify Tracks</a>
+		{{#if this.preview_url}}
+			<audio src='{{this.preview_url}}'></audio>
+		{{else}}
+			<p>preview unavailable</p>
+		{{/if}}
+	</article>
+{{/each}}
