@@ -14,3 +14,20 @@
     max-width: 100px;
     max-height: 100px;
 }
+
+#albums-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.album img {
+    max-width: 100px;
+    max-height: 100px;
+}

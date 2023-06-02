@@ -1,0 +1,23 @@
+
+<p>Albums for: {{this.items.[0].artists.[0].name}}</p>
+
+{{log "albums received" this}}
+{{log "albums artist" this.artists}}
+
+<div id="albums-list">
+
+    {{#each this.items}}
+        {{!-- {{log this}} --}}
+        <div class="album">
+            {{!-- {{log "album" this}} --}}
+            {{#if this.images}}
+                <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{/if}}
+            {{this.name}}
+            {{!-- <a href="/albums/{{this.id}}">View Albums</a> --}}
+
+        </div>
+        {{!-- {{this.name}} --}}
+    {{/each}}
+
+</div>
