@@ -11,6 +11,7 @@ const app = express();
 app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
+hbs.registerPartials(__dirname + "/views/partials"); //tell HBS which directory we use for partials
 
 hbs.registerHelper('toYear', function (date) {
   return "" + new Date(date).getFullYear();

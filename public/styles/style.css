@@ -119,3 +119,9 @@ h1 {
 .album-header p {
     margin: 0px;
 }
+
+#back {
+    display: flex;
+    justify-content: center;
+    margin: 20px;
+}
