@@ -31,3 +31,9 @@
     max-width: 100px;
     max-height: 100px;
 }
+
+.track {
+    display: flex;
+    justify-content:space-between;
+    /* width: 100%; */
+}

@@ -1,0 +1,27 @@
+
+{{log "album received" this}}
+
+{{!-- <p>Album : {{this.artists.[0].name}}</p>
+<p>For: {{this.name}}</p> --}}
+
+<div id="tracks-list">
+
+    {{#each this.items}}
+        {{!-- {{log this}} --}}
+        <div class="track">
+            {{!-- {{log "album" this}} --}}
+            {{this.name}}
+            
+            {{#if this.preview_url}}
+             <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+                    Your browser does not support the audio tag.
+            </audio>
+            {{else}}
+                <p>No preview available 🫤</p>
+            {{/if}}
+        </div>
+        {{!-- {{this.name}} --}}
+    {{/each}}
+
+</div>
