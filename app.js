@@ -56,7 +56,7 @@ app.get("/artist-search", (req, res) => {
       res.render("artist-search-results", { artistsArr });
     })
     .catch((e) => {
-      console.log("FAIL TO SEARCH", e);
+      console.log("FAIL TO SEARCH FOR ARTISTS", e);
     });
 });
 //
@@ -68,11 +68,26 @@ app.get("/albums/:artistId", (req, res) => {
     .then((albumsDataFromSpotifyApi) => {
       const albumsArr = albumsDataFromSpotifyApi.body.items;
       res.render("albums", { albumsArr });
-    //   console.log("ALBUM", albumsArr[0].images);
+      //   console.log("ALBUM", albumsArr[0].images);
     })
     .catch((e) => {
-      console.log("FAIL TO SEARCH", e);
+      console.log("FAIL TO SEARCH FOR ALBUMS", e);
     });
+});
+//
+// Tracks from Album
+app.get("/tracks/:albumId", (req, res) => {
+  console.log("tracks request");
+  const albumId = req.params.albumId;
+  spotifyApi.getAlbumTracks(albumId).then((tracksDataFromSpotifyApi) => {
+    const tracksArr = tracksDataFromSpotifyApi.body.items;
+    // console.log(tracksArr);
+    res.render("tracks", { tracksArr });
+    //       console.log("TRACKS", tracksDataFromSpotifyApi);
+    //     })
+    //     .catch((e) => {
+    //       console.log("FAIL TO SEARCH", e);
+  });
 });
 //
 // Port
