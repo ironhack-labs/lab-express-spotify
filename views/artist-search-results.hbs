@@ -1,0 +1,19 @@
+{{!-- {{log "received" this}} --}}
+
+<div id="artist-list">
+
+    {{#each this.artists.items}}
+        {{!-- {{log this}} --}}
+        <div class="artist">
+            {{log "artist" this}}
+            {{#if this.images}}
+                <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{/if}}
+            {{this.name}}
+            <button>View Albums</button>
+
+        </div>
+        {{!-- {{this.name}} --}}
+    {{/each}}
+
+</div>
