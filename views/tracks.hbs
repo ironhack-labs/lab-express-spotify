@@ -1,0 +1,20 @@
+<header id="header">
+  <h2 id="title">Title</h2>
+  <h2 id="play">Play and Listen</h2>
+</header>
+
+
+<ul id="ul-tracks">
+  {{#each dataTracks}}
+    <li>
+      <h3>{{this.name}}</h3>
+      {{#if this.preview_url}}
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg">
+        </audio>
+      {{else}}
+        <p>No preview available for this track</p>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
