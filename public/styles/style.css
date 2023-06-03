@@ -4,10 +4,13 @@ body {
 }
 
 nav {
-  background-color: rgba(165, 42, 42, 0.354);
+  height: 4vh;
+  background-color: #ad0715;
 }
 nav a {
+  padding-left: 2vw;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2vh;
   font-weight: bold;
   color: white;
   text-decoration: none;
@@ -16,5 +19,49 @@ nav a {
 }
 nav a:hover {
   text-decoration: underline;
-  text-shadow: #fc0 1px 0 10px;
+  text-shadow: rgb(248, 203, 20) 5px 0 10px;
+}
+.home-page-container {
+  width: 100vw;
+  height: 96vh;
+  background-image: url(../images/spotify-background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  /* border: 5px solid yellow; */
+  background-color: rgba(255, 255, 255, 0.37);
+  height: 15vh;
+  width: 30vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+  top: 35%; */
+}
+input {
+  width: 25vw;
+  height: 2.5vh;
+  border-radius: 2px;
+  margin-bottom: 2vh;
+  border: none;
+}
+button {
+  background-color: #ad0715;
+  color: white;
+  width: 7vw;
+  height: 3.5vh;
+  border-radius: 5px;
+  border: none;
+}
+button:hover {
+  text-decoration: underline;
+  text-shadow: rgb(255, 255, 255) 5px 0 10px;
 }
