@@ -1,0 +1,42 @@
+body {
+  padding: 0;
+  margin: 0;
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#homePageSection {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 700px;
+  height: 200px;
+  background-color: rgba(255, 255, 255, 0.453);
+}
+
+#homePageForm {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 0;
+  width: 300px;
+}
+
+#homePageInput {
+  border: 1px solid white;
+  width: 400px;
+  height: 30px;
+  margin-bottom: 10px;
+}
+
+#homePageButton {
+  background-color: rgb(215, 56, 56);
+  color: white;
+  border: 1px solid rgb(215, 56, 56);
+  width: 150px;
+  height: 30px;
+}

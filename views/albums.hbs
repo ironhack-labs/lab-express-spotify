@@ -1,13 +1,19 @@
-<h1>Albums for: {{albumsArr.0.artists.0.name}}</h1>
+<link rel="stylesheet" href="/styles/artist-albums.css" />
+
+<div id="artistsName">
+  <h1>Albums for: {{albumsArr.0.artists.0.name}}</h1>
+</div>
 {{#each albumsArr}}
-  <div>
+  <div class="box">
     {{#if this.images}}
       <img src="{{this.images.0.url}}" alt="Cover image not found" />
     {{/if}}
-    <h1>{{this.name}}</h1>
-    <button>
-      <a href="/tracks/{{this.id}}">View Tracks</a>
-    </button>
+    <div class="boxInfo">
+      <h1>{{this.name}}</h1>
+      <button class="button" type="button">
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+      </button>
+    </div>
   </div>
 {{else}}
   <h2>Albums not found</h2>

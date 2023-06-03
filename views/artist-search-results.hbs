@@ -1,12 +1,16 @@
+<link rel="stylesheet" href="/styles/artist-albums.css" />
+
 {{#each artistArr}}
-  <div>
+  <div class="box">
     {{#if this.images}}
       <img src="{{this.images.0.url}}" alt="Image not Found" />
     {{/if}}
-    <h1>{{this.name}}</h1>
-    <button>
-      <a href="/albums/{{this.id}}">View Albums</a>
-    </button>
+    <div class="boxInfo">
+      <h1>{{this.name}}</h1>
+      <button class="button" type="button">
+        <a href="/albums/{{this.id}}">View Albums</a>
+      </button>
+    </div>
   </div>
 {{else}}
   <h2>Artist not found</h2>
