@@ -57,9 +57,32 @@ app.get("/artist-search", (req, res, next) => {
 })
 
 app.get('/albums/:artistId', (req, res, next) => {
-
+    //console.log(req.params);
+    spotifyApi.getArtistAlbums(req.params.artistId)
+    .then((albumId) => {
+        //console.log(albumId.body.items);
+            const albumArr ={
+                albumArr: albumId.body.items
+            }
+        res.render("album", albumArr)
+    })
+    .catch(e => console.log("Error for searching album of artist by ID"));
   });
 
+app.get('/albums/tracks/:albumId', (req, res, next) =>{
+    
+    console.log(req.params);
+
+    spotifyApi.getAlbumTracks(req.params.albumId)
+    .then((tracksInfo) => {
+        //console.log(tracksInfo.body.items[0].href)
+        const tracksArr = {
+            tracksArr: tracksInfo.body.items
+        }
+        res.render('trackInfo', tracksArr)
+    })
+    .catch(e => console.log('Error for searching Track ID', e));
+  })
 
 
     // Our routes go here:

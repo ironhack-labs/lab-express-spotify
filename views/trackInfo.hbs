@@ -1,0 +1,12 @@
+<div>
+    <section class="track-summary">
+    {{#each tracksArr}}
+        <h2>{{this.name}}</h2> 
+        
+            <p><audio 
+                controls 
+                src="{{this.preview_url}}">
+                </audio></p>
+        {{/each}}
+    </section>
+</div>
