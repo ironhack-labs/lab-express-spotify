@@ -1,12 +1,13 @@
-
 {{#each artistArr}}
+  <div>
     {{#if this.images}}
-        <img src="{{this.images.[0].url}}" alt="Image not Found" />
+      <img src="{{this.images.0.url}}" alt="Image not Found" />
     {{/if}}
     <h1>{{this.name}}</h1>
     <button>
-        <a href="/albums/{{this.id}}">View Albums</a>
+      <a href="/albums/{{this.id}}">View Albums</a>
     </button>
+  </div>
 {{else}}
-    <h2>Artist not found</h2>
+  <h2>Artist not found</h2>
 {{/each}}
