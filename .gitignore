@@ -5,3 +5,7 @@ node_modules
 .DS_Store
 
 package-lock.json
+
+searchAlbum.js
+saearchArtist.js
+searchTracks.js
