@@ -1,0 +1,9 @@
+<h1>List of Reference :</h1>
+
+{{#each dataArr}}
+    <section class="Ref-summary">
+        <img src="{{this.images.[0].url}}">
+        <h2>{{this.name}}</h2>
+        <button href="/albums/{{this.id}}" >Views Album</button>
+    </section>
+{{/each}}
