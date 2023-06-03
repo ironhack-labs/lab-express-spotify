@@ -1,0 +1,26 @@
+
+
+<section class="chooseAlbum">
+
+<div class="chooseAlbum">
+
+    {{#each this.artists.items}}
+
+        <div class="artistImage">
+            {{#if this.images}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{else}}
+                <div class="noImageBox">
+                    <p>No image</p>
+                </div>
+            {{/if}}
+            <div class="artistName">
+            {{this.name}}
+   <a href="/albums/{{this.id}}">View Albums</a>
+                </div>
+        </div>
+
+    {{/each}}
+
+</div>
+<section>
