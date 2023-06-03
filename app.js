@@ -57,8 +57,8 @@ app.get('/tracks/:albumId', (req, res) => {
     .getAlbumTracks(albumId)
     .then(tracksData => {
       const tracks = tracksData.body.items
-      res.send(JSON.stringify( {tracks} ))
-      // res.render("tracks", { tracks })
+      // res.send(JSON.stringify({ tracks } ))
+      res.render("tracks", { tracks })
     })
     .catch(error => console.log('Track display error: ' + error))
 })
