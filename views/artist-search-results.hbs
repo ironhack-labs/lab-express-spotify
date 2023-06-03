@@ -1,12 +1,15 @@
+<link rel="stylesheet" type="text/css" href="\styles\artist-search.css">
 
-{{#each artists}}
-<h2>{{name}}</h2>
-
-{{#if images.[0]}}
-<img src="{{images.[1].url}}" alt="Artist Image">
-{{else}}
-<p>No image available for this artist.</p>
-{{/if}}
-
-<a href="/albums/{{id}}">View Album</a>
-{{/each}}
+<div class="grid-container">
+    {{#each artists}}
+    <div class="grid-item">
+        {{#if images.[0]}}
+        <img src="{{images.[1].url}}" alt="Artist Image">
+        {{else}}
+        <p>No image available for this artist.</p>
+        {{/if}}
+        <h2>{{name}}</h2>
+        <a href="/albums/{{id}}">View Album</a>
+    </div>
+    {{/each}}
+</div>

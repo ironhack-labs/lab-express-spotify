@@ -1,0 +1,51 @@
+@font-face {
+  font-family: "Circular";
+  src: url("fonts/circular-bold.ttf") format("truetype");
+}
+
+* {
+  font-family: "Circular", sans-serif;
+}
+body {
+  background-color: whitesmoke;
+}
+
+h1 {
+  text-align: center;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.grid-item {
+  background-color: rgba(128, 128, 128, 0.2);
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+}
+
+.grid-item h2 {
+  margin: 0;
+}
+
+.grid-item img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(252, 70, 70, 0.8);
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: rgb(167, 41, 41);
+}
