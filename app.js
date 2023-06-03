@@ -32,35 +32,50 @@ app.get('/artist-search', (req, res) => {
   spotifyApi
     .searchArtists(artist)
     .then(artistData => {
-      const artists = artistData.body.artists.items
+      const {
+        body: {
+          artists: {
+            items: artists
+          },
+        },
+      } = artistData
       // res.send(JSON.stringify(artists))
-      res.render('artist-search-results', { artists })
+      res.render("artist-search-results", { artists })
     })
     .catch(error => console.log('Artist search error: ' + error))
 })
 
-app.get('/albums/:artistId', (req, res) => {
+// Actiion response to button inside artist-search-results.hbs
+app.get("/artist/:artistId/albums", (req, res) => {
   const artistId = req.params.artistId
   spotifyApi
     .getArtistAlbums(artistId)
-    .then(albumsData => {
-      const albums = albumsData.body.items
+    .then((albumsData) => {
+      const {
+        body: {
+          items: albums
+        }
+      } = albumsData
       // res.send(JSON.stringify(albums))
       res.render("albums", { albums })
     })
-  .catch(error => console.log('Album serach error: ' + error))
+    .catch((error) => console.log("Album serach error: " + error))
 }) 
-
-app.get('/tracks/:albumId', (req, res) => { 
+// Action response to button inside albums.hbs
+app.get("/artist/:artistId/album/:albumId/tracks", (req, res) => {
   const albumId = req.params.albumId
   spotifyApi
     .getAlbumTracks(albumId)
-    .then(tracksData => {
-      const tracks = tracksData.body.items
+    .then((tracksData) => {
+      const {
+        body: { 
+          items: tracks
+        }
+      } = tracksData
       // res.send(JSON.stringify({ tracks } ))
       res.render("tracks", { tracks })
     })
-    .catch(error => console.log('Track display error: ' + error))
+    .catch((error) => console.log("Track display error: " + error))
 })
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
