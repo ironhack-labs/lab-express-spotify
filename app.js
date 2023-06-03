@@ -44,6 +44,21 @@ spotifyApi
 });
 })
 
+app.get("/album/:albumId", (req, res) => {
+
+  console.log(req.query);
+  spotifyApi
+  .getAlbumTracks(req.params.albumId)
+  .then(data => {
+      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      console.log('The received data from the API: ', data.body);
+      res.render("tracks", data.body);
+  })
+  .catch(err => {
+    res.send(err);
+  });
+})
+
 app.get("/albums/:artistId", (req, res) => {
 
   console.log(req.query);
@@ -60,20 +75,7 @@ app.get("/albums/:artistId", (req, res) => {
   });
 })
 
-app.get("/album/:albumId", (req, res) => {
 
-  console.log(req.query);
-  spotifyApi
-  .getAlbumTracks(req.params.albumId)
-  .then(data => {
-      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-      console.log('The received data from the API: ', data.body);
-      res.render("tracks", data.body);
-  })
-  .catch(err => {
-    res.send(err);
-  });
-})
 
 
 
