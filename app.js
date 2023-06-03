@@ -1,10 +1,9 @@
+// @ts-nocheck
 require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
-
-// require spotify-web-api-node package here:
-const SpotifyWebApi = require('spotify-web-api-node')
+const SpotifyWebApi = require('spotify-web-api-node') // require spotify-web-api-node package
 
 const app = express();
 
@@ -24,5 +23,45 @@ spotifyApi
   .catch(error => console.log('Something went wrong when retreiving an access token: ' + error))
 
 // Our routes go here:
+app.get('/', (req, res) => {
+  res.render('home')
+})
+
+app.get('/artist-search', (req, res) => { 
+  const { artist } = req.query
+  spotifyApi
+    .searchArtists(artist)
+    .then(artistData => {
+      const artists = artistData.body.artists.items
+      // res.send(JSON.stringify(artists))
+      res.render('artist-search-results', { artists })
+    })
+    .catch(error => console.log('Artist search error: ' + error))
+})
+
+app.get('/albums/:artistId', (req, res) => {
+  const artistId = req.params.artistId
+  spotifyApi
+    .getArtistAlbums(artistId)
+    .then(albumsData => {
+      const albums = albumsData.body.items
+      // res.send(JSON.stringify(albums))
+      res.render("albums", { albums })
+    })
+  .catch(error => console.log('Album serach error: ' + error))
+}) 
+
+app.get('/tracks/:albumId', (req, res) => { 
+  const albumId = req.params.albumId
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then(tracksData => {
+      const tracks = tracksData.body.items
+      console.log(albumId)
+      res.send(JSON.stringify(tracks))
+      // res.render("tracks", { tracks })
+    })
+    .catch(error => console.log('Track display error: ' + error))
+})
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
