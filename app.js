@@ -63,18 +63,12 @@ app.get("/view-tracks/:tracksId", (req, res, next) => {
     .getAlbumTracks(req.params.tracksId)
     .then((data) => {
       const tracks = data.body.items;
-      console.log(tracks);
       res.render("view-tracks", { tracks });
     })
     .catch((err) => {
       console.log("Error getting tracks... ", err);
     });
 });
-
-
-
-
-
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
