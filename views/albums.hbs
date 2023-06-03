@@ -1,0 +1,18 @@
+<section id="albumsLayer">
+
+{{#each albums}}
+
+<div class="artist-item">
+
+{{#if images.length}}
+
+    <img src="{{images.0.url}}" alt="{{name}} Album Cover"/>
+
+{{/if}}
+    <a href="/track-info/{{id}}">View Tracks</a>
+</div> 
+
+{{else}} 
+        <p>Page not available</p>  
+{{/each}}
+</section>

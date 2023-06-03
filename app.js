@@ -38,17 +38,39 @@ app.get("/", (req, res, next) => {
 app.get("/artist-search-result", (req, res, next) => {
     const artist = req.query.artistName
 
-    spotifyApi.searchArtists(artist)
+    spotifyApi
+    .searchArtists(artist)
         .then((data) => {
-            const artistArr = data.body.artists.items
-
-            res.render("artist-search-result", artistArr)
+            //const artistArr = data.body.artists.items[0]
+            res.render("artist-search-result", data.body)
+            //console.log("we are hereeee", data.body)
         })
         .catch((err) => console.log("ops, error", err))
 }) 
 
 app.get('/albums/:artistId',(req, res, next) => {
     
+    spotifyApi
+        .getArtistAlbums(req.params.artistId)
+        .then((data) => {
+            const albums = data.body.items
+            res.render("albums", { albums })
+            //console.log("artistAlbum", data.body)
+        })
+        .catch((err) => {console.log("ops error", err)})
+})
+
+app.get('/track-info/:albumId', (req, res, next) => {
+
+    console.log(req.params)
+    spotifyApi
+    .getAlbumTracks(req.params.albumId)
+    .then((data)=> {
+        const tracks = data.body.items
+        res.render('track-info', { tracks })
+    })
+    .catch((err) => {console.log("ops, error", err)
+    })
 })
 
 

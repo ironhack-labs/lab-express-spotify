@@ -1,4 +1,10 @@
-body {
-    background-image: url("/public/images/spotify-background.jpeg");
-    background-size: cover;
-}
+#home-page {
+        background-image: url(/images/spotify-background.jpeg);
+        background-size: cover;
+        height: 100vh;
+        width: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+      

@@ -1,13 +1,25 @@
 
 
 
-<section>
-{{#each artistArr}}
-    <h3>{{this.name}}</h3>
+<section id="container">
 
-    <img src="" alt="image-here">
+{{#each artists.items}}
+<div class="artist-item">
 
-    <a href="">Get Albums</a>
+{{#if images}}
+
+    <img src="{{images.0.url}}" alt="image-here">
+
+{{else}}
+
+        <p>Image not available</p>
+
+{{/if}}
+
+    <span>{{name}}</span>
+    <a href="/albums/{{id}}">View Albums</a>
+
+</div>  
 {{/each}}
 </section>
 
