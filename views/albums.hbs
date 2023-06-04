@@ -1,0 +1,12 @@
+<h1>Found this albums: </h1><br />
+<div class='artist-result'>
+	{{#each this.items}}
+		<div class='element'>
+			<img src='{{this.images.0.url}}' alt='{{this.name}}' />
+			<h2>{{this.name}}</h2>
+			<a href='/tracks/{{this.id}}'>Listen to the tracks</a>
+
+		</div>
+	{{/each}}
+
+</div>
