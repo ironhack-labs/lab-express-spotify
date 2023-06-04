@@ -1,0 +1,79 @@
+@font-face {
+  font-family: "Circular";
+  src: url("fonts/circular-bold.ttf") format("truetype");
+}
+
+* {
+  font-family: "Circular", sans-serif;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 50px;
+}
+
+th {
+  background-color: #444;
+  color: white;
+  padding: 10px;
+  text-align: left;
+}
+
+td {
+  padding: 10px;
+  text-align: left;
+}
+
+tr {
+  border: 1px solid rgba(30, 30, 30, 0.5);
+  background-color: rgba(128, 128, 128, 0.2);
+  font-size: large;
+  font-weight: bold;
+}
+
+.title-column {
+  background-color: #444;
+  color: white;
+  padding-left: 100px;
+  height: 70px;
+  font-size: xx-large;
+}
+
+.listen-column {
+  background-color: #444;
+  color: white;
+  text-align: right;
+  padding-right: 100px;
+  height: 70px;
+  font-size: xx-large;
+}
+
+.audio-controls {
+  text-align: right;
+}
+
+a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: rgba(252, 70, 70, 0.8);
+  color: white;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+a:hover {
+  background-color: rgb(167, 41, 41);
+}
+
+#go-back-btn {
+  position: fixed;
+  left: 50%;
+  top: 5px;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 5px 30px;
+  font-size: 20px;
+}
