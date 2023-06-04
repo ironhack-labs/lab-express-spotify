@@ -1,0 +1,153 @@
+body {
+	margin: 0;
+	padding: 0;
+}
+
+.bg {
+	display: flex;
+	flex-direction: column;
+	background-image: url('/images/spotify-background.jpeg');
+	background-size: cover;
+	background-position: center;
+	min-width: 100vw;
+	min-height: 100vh;
+}
+
+.home-container {
+	min-width: 100vw;
+	min-height: 100vh;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-container {
+	display: flex;
+	flex-direction: column;
+	background-color: rgba(255, 255, 255, 0.5);
+	width: 400px;
+	height: 130px;
+	justify-content: center;
+	align-items: center;
+	padding: 20px;
+}
+
+.search-container form {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 10px;
+	gap: 10px;
+	width: 400px;
+}
+
+.search-container input {
+	width: 90%;
+	height: 30px;
+}
+
+.button {
+	background-color: lightcoral;
+	color: white;
+	padding: 10px 10px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.home-bg .search-container button:hover {
+	background-color: #ff6f6f;
+}
+
+.results {
+	display: flex;
+	flex-direction: column;
+	max-width: 350px;
+	max-height: 400px;
+	/* 	gap: 20px; */
+	margin: 15px;
+	align-items: center;
+	flex-grow: 1;
+	background-color: rgb(70, 70, 70);
+	justify-content: flex-start;
+}
+
+.results img {
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.results h3 {
+	margin: 10px;
+	color: white;
+}
+
+.results a {
+	margin-bottom: 10px;
+}
+
+.results-container {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+
+.results {
+	background-color: rgb(70, 70, 70);
+	justify-content: flex-start;
+	max-height: 400px;
+}
+
+.tracks-header {
+	display: flex;
+	margin-left: 20px;
+	margin-right: 20px;
+	background-color: #494949;
+	padding: 30px;
+	color: rgb(211, 209, 209);
+}
+
+.tracks-header .title {
+	display: flex;
+	align-items: flex-start;
+	flex-grow: 1;
+}
+
+.tracks-header .listen {
+	display: flex;
+	justify-content: flex-end;
+	flex-grow: 1;
+}
+
+.tracks-container {
+	background-color: rgba(151, 147, 147, 0.5);
+	display: flex;
+	flex-direction: column;
+	margin: 20px;
+	margin-top: 0;
+	padding: 30px;
+	padding-top: 0;
+}
+
+.tracks-container article {
+	display: flex;
+	height: 10vh;
+	align-items: center;
+}
+
+.tracks-container article h3 {
+	display: flex;
+	flex-grow: 3;
+}
+
+.tracks-container article h3 a {
+	text-decoration: none;
+	color: black;
+}
+
+.listen-spotify {
+	height: 20px;
+}

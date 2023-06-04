@@ -1,0 +1,9 @@
+<div class='results-container'>
+	{{#each artistAlbumsArray}}
+		<article class='results'>
+			<img src='{{this.images.0.url}}' alt='ALBUM COVER' />
+			<h3>{{this.name}}</h3>
+			<a class='button' href='/tracks/{{this.id}}'>View Tracks</a>
+		</article>
+	{{/each}}
+</div>
