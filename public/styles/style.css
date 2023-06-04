@@ -14,6 +14,10 @@ body {
     flex-wrap: wrap;
 }
 
+#album-title{
+
+}
+
 .album-details{
     display: flex;
     flex-direction: column;
@@ -24,4 +28,8 @@ body {
 .album img {
     max-width: 100px;
     max-height: 100px;
+}
+
+#results-section{
+
 }
