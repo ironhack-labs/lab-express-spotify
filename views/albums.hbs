@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="/styles/artist-albums.css" />
+
+<div id="artistsName">
+  <h1>Albums for: {{albumsArr.0.artists.0.name}}</h1>
+</div>
+{{#each albumsArr}}
+  <div class="box">
+    {{#if this.images}}
+      <img src="{{this.images.0.url}}" alt="Cover image not found" />
+    {{/if}}
+    <div class="boxInfo">
+      <h1>{{this.name}}</h1>
+      <form action="/tracks/{{this.id}}">
+        <input class="button" type="submit" value="View Tracks" />
+      </form>
+    </div>
+  </div>
+{{else}}
+  <h2>Albums not found</h2>
+{{/each}}
