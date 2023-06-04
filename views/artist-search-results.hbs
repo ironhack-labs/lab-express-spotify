@@ -4,6 +4,8 @@
   <div class="box">
     {{#if this.images}}
       <img src="{{this.images.0.url}}" alt="Image not Found" />
+      {{else}}
+        <img src="/images/Image_not_available.png" alt="Image not Found" />
     {{/if}}
     <div class="boxInfo">
       <h1>{{this.name}}</h1>

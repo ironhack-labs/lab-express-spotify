@@ -1,4 +1,5 @@
 body {
+  background-color: rgb(206, 206, 206);
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
@@ -19,15 +20,19 @@ body {
 }
 
 .box img {
-  width: auto;
+  width: 400px;
   height: 350px;
 }
 
 .box {
   display: flex;
   flex-direction: column;
-  flex: 0 1 450px;
+  flex: 0 1 400px;
   margin: 40px;
+}
+
+.box:hover {
+  box-shadow: 5px 5px 15px black;
 }
 
 .boxInfo {
@@ -37,16 +42,17 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  
-
 }
 
 h1 {
-  margin-top: 2px;
+  margin-top: 10px;
   margin-bottom: 2px;
-  font-size: 25px;
+  font-size: 20px;
   text-align: center;
-  
+}
+
+form {
+  margin-top: 10px;
 }
 
 .button {
@@ -54,7 +60,11 @@ h1 {
   border: 1px solid rgb(215, 56, 56);
   color: white;
   border-radius: 5px;
-  margin-bottom: 10px;
   width: 150px;
   height: 30px;
+}
+
+.button:hover {
+  background-color: rgb(153, 43, 43);
+  font-size: 15px;
 }
