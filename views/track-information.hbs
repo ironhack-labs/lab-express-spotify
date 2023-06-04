@@ -1,0 +1,15 @@
+<h1>Tracks List</h1>
+
+{{#each tracks}}
+<div>
+    <h2>{{name}}</h2>
+    {{#if preview_url}}
+    <audio controls>
+        <source src="{{preview_url}}" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+    {{else}}
+    <p>No tracks found.</p>
+    {{/if}}
+</div>
+{{/each}}

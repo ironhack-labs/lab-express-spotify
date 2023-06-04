@@ -1,0 +1,27 @@
+body {
+    background-image: url("../images/spotify-background.jpeg");
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+#albums-list {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.album-details{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 200px;
+}
+
+.album img {
+    max-width: 100px;
+    max-height: 100px;
+}
