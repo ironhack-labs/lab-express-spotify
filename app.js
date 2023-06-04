@@ -29,6 +29,12 @@ app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
 app.use(express.static(__dirname + "/public"));
 
+// Our routes go here:
+
+app.get("/", (req, res, next) => {
+  res.render("home-page");
+});
+
 // setting the spotify-api goes here:
 app.get("/artist-search", (req, res, next) => {
   spotifyApi
@@ -39,29 +45,24 @@ app.get("/artist-search", (req, res, next) => {
     })
     .catch((error) => console.log(error));
 });
-// Our routes go here:
 
-app.get("/", (req, res, next) => {
-  res.render("home-page");
-});
 // app.get("", (req, res) => {
 //   res.render("artist-search-results", artists);
 // });
 
-app.get("/albums/:artistID", (req, res) => {
+app.get("/albums/:artistId", (req, res) => {
   console.log(req.params);
   spotifyApi
-    .getArtistAlbums(req.query.album /*get albums*/)
-    .then((data) => {
-      console.log(`Artist Albums: `, data.body);
-      res.render("albums", data.body);
-      return albums;
+    .getArtistAlbums(req.query.albums /*get albums*/)
+    .then((albums) => {
+      console.log(`Artist Albums: `, albums.body);
+      res.render("albums-results", albums.body);
+      return spotify.getAlbumTracks();
     })
-    .then((album) => {
-      spotifyApi.getAlbumTracks(req.query.tracks);
-      console.log(`Here are the album tracks`, data.body);
-      res.render("tracks", data.body);
-      return tracks;
+    .then("/tracks/:albumId", (res, req) => {
+      spotifyApi.getAlbumTracks(req.query.tracks); //get album tracks
+      console.log(`Here are the album tracks: `, tracks.body);
+      res.render("tracks-results", tracks.body);
     })
     .catch((e) => console.log("Error getting info", e));
 });

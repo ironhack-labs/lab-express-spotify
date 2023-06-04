@@ -1,24 +1,33 @@
-.body {
+.home-page {
     background-image: url("/images/spotify-background.jpeg");
+    width: 2000px;
+    height: 900px;
+    align-content: center;
 }
 
 .container {
-    display: flex;
+    background-color: orange;
+    margin: auto;
+    align-items: center;
+    font-size: 24px;
 }
 
 .img {
-    width: 100px;
-    height: 100px;
+    width: 400px;
+    height: 400px;
 }
 
-.search {
-    display: flex;
-    align-items: center;
-    align-content: center;
-    width: 50vw;
+.search-box {
+    width: 500px;
+    padding: 10%;
+    margin: auto;
+}
+
+.btn {
+    background-image: orange;
 }
 
 .footer {
     color: grey;
-    font-size: 8;
+    font-size: 8px;
 }
