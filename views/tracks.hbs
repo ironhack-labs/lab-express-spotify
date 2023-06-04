@@ -1,0 +1,11 @@
+{{log this}}
+
+{{#each this}}
+<div>
+    <p>Albums for: </p> {{this.name}}
+    <img class="img" src="{{this.images.url}}" alt="{{this.name}}">
+
+
+</div>
+<hr>
+{{/each}}

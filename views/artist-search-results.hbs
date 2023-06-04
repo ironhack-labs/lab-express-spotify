@@ -1,0 +1,13 @@
+{{log this}}
+
+{{#each this}}
+<div>
+ {{this.name}}
+ <img class= "img" src="{{this.images.[0].url}}" alt="{{this.name}}">
+
+    {{!-- <button onclick="{{this.href}}.url">View Albums</button> --}}
+    <button onclick="/albums-results/:artistID">View Albums</button>
+
+ </div>
+ <hr>
+{{/each}}

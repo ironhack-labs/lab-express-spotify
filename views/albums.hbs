@@ -1,0 +1,16 @@
+<div>
+    <section class="search-box">
+        <form method="get" action="/albums">
+            <input type="text" name="artistID" />
+        {{this.name}}
+        <img class="img" src="{{this.images.[0].url}}" alt="{{this.name}}">
+        
+        {{!-- <button onclick="{{this.href}}.url">View Albums</button> --}}
+        <button type="submit" onclick="/albums-results/:artistID">View Tracks</button>
+        
+        </div>
+            <div>
+           
+        </form>
+    </section>
+</div>
