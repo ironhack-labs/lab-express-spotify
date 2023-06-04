@@ -6,17 +6,25 @@
 * {
   font-family: "Circular", sans-serif;
 }
+
 body {
   background-color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  flex-direction: column;
 }
 
 h1 {
   text-align: center;
+  margin: 50px 0 0 0;
 }
 
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  margin-top: 50px;
 }
 
 .grid-item {
@@ -48,4 +56,14 @@ a {
 
 a:hover {
   background-color: rgb(167, 41, 41);
+}
+
+#go-back-btn {
+  position: fixed;
+  left: 50%;
+  top: 5px;
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+  padding: 5px 30px;
+  font-size: 20px;
 }
