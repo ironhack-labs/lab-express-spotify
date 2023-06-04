@@ -1,0 +1,72 @@
+/** @format */
+
+body {
+	margin: 0;
+	padding: 0;
+	background-image: url("/images/spotify-background.jpeg");
+	background-repeat: no-repeat;
+	background-size: cover;
+	height: 100%;
+	width: 100%;
+}
+
+.artist-search-container {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	width: 25rem;
+	height: 7rem;
+	background-color: rgba(255, 255, 255, 0.3);
+
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.search-container {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-around;
+}
+
+.button {
+	background-color: lightcoral;
+	color: white;
+	border: none;
+	text-decoration: none;
+	padding: 0.2rem 0.5rem;
+}
+
+.artist-container,
+.album-container {
+	width: 160px;
+	height: 240px;
+	background-color: gray;
+	text-align: center;
+	color: white;
+	font-size: 80%;
+}
+
+.artist-container .button {
+	border-radius: 5px;
+}
+.album-container .button {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.artist-container img {
+	width: 160px;
+	height: 160px;
+	background-size: cover;
+}
+
+.all-products {
+	background-color: white;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr);
+	grid-gap: 20px;
+}

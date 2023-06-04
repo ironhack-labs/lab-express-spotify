@@ -1,0 +1,17 @@
+<div class="all-products">
+
+	{{#each albumsArray}}
+		<div class="album-container" method="GET" action="/albums/{{this.id}}">
+
+			{{#if this.images}}
+				<img src="{{this.images.2.url}}" alt="" />
+			{{/if}}
+
+			<div class="album-description-container">
+				<h3>{{this.name}}</h3>
+				<a class="button" href="/tracks/{{this.id}}">View Tracks</a>
+
+			</div>
+		</div>
+	{{/each}}
+</div>
