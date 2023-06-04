@@ -1,0 +1,24 @@
+.body {
+    background-image: url("/images/spotify-background.jpeg");
+}
+
+.container {
+    display: flex;
+}
+
+.img {
+    width: 100px;
+    height: 100px;
+}
+
+.search {
+    display: flex;
+    align-items: center;
+    align-content: center;
+    width: 50vw;
+}
+
+.footer {
+    color: grey;
+    font-size: 8;
+}
