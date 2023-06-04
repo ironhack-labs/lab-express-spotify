@@ -1,13 +1,17 @@
+<section id="artist-search-results-page">
 {{#if artistsArr}}
     <h1>List of Artists:</h1>
 {{else}}
     <h1 hidden>List of Artists:</h1>
 {{/if}}
-
+<section id="all-artists-container">
 {{#each artistsArr}}
     <section class="artist-summary">
+        <img class="artist-summary-img" src="{{this.images.[0].url}}" alt="">
+        <div class="artist-summary-content">
         <h2>{{this.name}}</h2>
-        <div><a href="/albums/{{this.id}}">View albums</a></div>
+        <div class="artist-summary-content-link-container"><a class="artist-summary-content-link" href="/albums/{{this.id}}">View albums</a></div>
+        </div>
 
 
     </section>
@@ -16,3 +20,5 @@
         <h2>Cannot find your search</h2>
     </section>
 {{/each}}
+</section>
+</section>

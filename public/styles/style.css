@@ -8,6 +8,7 @@ nav {
   background-color: #ad0715;
 }
 nav a {
+  font-size: 1rem;
   padding-left: 2vw;
   font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
   font-size: 2vh;
@@ -38,7 +39,8 @@ form {
   /* border: 5px solid yellow; */
   background-color: rgba(255, 255, 255, 0.37);
   height: 15vh;
-  width: 30vw;
+  width: 35vw;
+  border-radius: 2px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -57,11 +59,79 @@ button {
   background-color: #ad0715;
   color: white;
   width: 7vw;
-  height: 3.5vh;
+  height: 3vh;
   border-radius: 5px;
   border: none;
 }
 button:hover {
   text-decoration: underline;
   text-shadow: rgb(255, 255, 255) 5px 0 10px;
+}
+#artist-search-results-page {
+  position: relative;
+  top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #ad0715;
+}
+#all-artists-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+.artist-summary {
+  margin-bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+}
+.artist-summary-img {
+  width: 23vw;
+  height: 23vw;
+  object-fit: cover;
+}
+.artist-summary-content {
+  background-color: #ad0715;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 23vw;
+}
+.artist-summary-content h2 {
+  /* position: absolute;
+  top: 0; */
+  padding: 0;
+  margin: 1.5vh 2vw 1.5vh 2vw;
+  color: antiquewhite;
+  width: 23vw;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.artist-summary-content-link-container {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 2vh;
+  background-color: antiquewhite;
+  width: 10.5vw;
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: center;
+}
+.artist-summary-content-link {
+  /* position: absolute;
+  top: 0; */
+  margin: 0 0.25vw 0 0.25vw;
+  font-size: 0.9rem;
+  color: #ad0715;
+  text-decoration: none;
 }
