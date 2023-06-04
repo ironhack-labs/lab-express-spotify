@@ -1,0 +1,13 @@
+<div class="artist-header">
+  <p>Albums for: <span style="color:blue">{{artist.name}}</span></p>
+</div>
+
+<div class="album-grid">
+  {{#each albums}}
+  <div class="album-sheet">
+    <img src="{{images.[0].url}}" alt="album image">
+    <h3>{{name}}</h3>
+    <a href="/tracks/{{id}}">View Tracks</a>
+  </div>
+  {{/each}}
+</div>
