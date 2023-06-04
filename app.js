@@ -60,6 +60,20 @@ app.get("/artist-search", (req, res) => {
       console.log("The error while searching artists occurred: ", err)
     );
 });
+
+app.get("/albums/:artistId", (req, res) => {
+  const artistId = req.params.artistId;
+
+  spotifyApi.getArtistAlbums(artistId).then(
+    (data) => {
+      const album = data.body.items;
+      res.render("albums", { album: album });
+    },
+    function (err) {
+      console.error(err);
+    }
+  );
+});
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
 );
