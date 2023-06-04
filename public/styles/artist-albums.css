@@ -1,4 +1,5 @@
 body {
+  font-family: Arial, Helvetica, sans-serif;
   margin: 0;
   padding: 0;
   display: flex;
@@ -8,7 +9,13 @@ body {
 }
 
 #artistsName {
+  background-color: rgb(70, 70, 70);
+  color: rgb(188, 188, 188);
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
+  height: 50px;
 }
 
 .box img {
@@ -19,7 +26,7 @@ body {
 .box {
   display: flex;
   flex-direction: column;
-  flex: 0 1 350px;
+  flex: 0 1 450px;
   margin: 40px;
 }
 
@@ -29,25 +36,25 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: flex-start;
+  justify-content: center;
+  
+
 }
 
 h1 {
   margin-top: 2px;
   margin-bottom: 2px;
+  font-size: 25px;
   text-align: center;
+  
 }
 
 .button {
   background-color: rgb(215, 56, 56);
   border: 1px solid rgb(215, 56, 56);
+  color: white;
   border-radius: 5px;
-  margin-bottom: 15px;
+  margin-bottom: 10px;
   width: 150px;
   height: 30px;
-}
-
-a {
-  color: white;
-  text-decoration: none;
 }

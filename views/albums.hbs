@@ -10,9 +10,9 @@
     {{/if}}
     <div class="boxInfo">
       <h1>{{this.name}}</h1>
-      <button class="button" type="button">
-        <a href="/tracks/{{this.id}}">View Tracks</a>
-      </button>
+      <form action="/tracks/{{this.id}}">
+        <input class="button" type="submit" value="View Tracks" />
+      </form>
     </div>
   </div>
 {{else}}

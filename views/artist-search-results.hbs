@@ -7,9 +7,13 @@
     {{/if}}
     <div class="boxInfo">
       <h1>{{this.name}}</h1>
-      <button class="button" type="button">
+      <form action="/albums/{{this.id}}">
+        <input class="button" type="submit" value="View Albums" />
+      </form>
+      {{!-- <button class="button" onclick="/albums/{{this.id}}" type="button">View Albums</button> --}}
+      {{!-- <button class="button" type="button">
         <a href="/albums/{{this.id}}">View Albums</a>
-      </button>
+      </button> --}}
     </div>
   </div>
 {{else}}
