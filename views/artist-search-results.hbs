@@ -1,2 +1,9 @@
-  <button>
-    <a href="/albums/{{artistId}}"> View Albums </a></button>
+{{#each this.artist.items}}
+
+  <section>
+    {{this.image}}
+    {{this.name}}
+    <a href="/albums/{{this.id}}">View Albums</a>
+  </section>
+
+{{/each}}
