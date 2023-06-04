@@ -1,24 +1,25 @@
-<section id="artist-search-results-page">
+<section id="detail-search-results-page">
 {{#if artistsArr}}
     <h1>List of Artists:</h1>
 {{else}}
     <h1 hidden>List of Artists:</h1>
 {{/if}}
-<section id="all-artists-container">
-{{#each artistsArr}}
-    <section class="artist-summary">
-        <img class="artist-summary-img" src="{{this.images.[0].url}}" alt="">
-        <div class="artist-summary-content">
-        <h2>{{this.name}}</h2>
-        <div class="artist-summary-content-link-container"><a class="artist-summary-content-link" href="/albums/{{this.id}}">View albums</a></div>
-        </div>
-
-
+    <section id="all-details-container">
+    {{#each artistsArr}}
+    {{!-- {{>detaildisplay}} --}}
+        <section class="detail-summary">
+            <img class="detail-summary-img" src="{{this.images.[0].url}}" alt="artist's picture">
+            <div class="detail-summary-content">
+                <h2>{{this.name}}</h2>
+                <div class="detail-summary-content-link-container">
+                    <a class="detail-summary-content-link" href="/albums/{{this.id}}">View albums</a>
+                </div>
+            </div>
+        </section>
+    {{else}}
+        <section class="detail-summary">
+            <h2>Cannot find your search</h2>
+        </section>
+    {{/each}}
     </section>
-{{else}}
-    <section class="artist-summary">
-        <h2>Cannot find your search</h2>
-    </section>
-{{/each}}
-</section>
 </section>

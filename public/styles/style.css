@@ -22,6 +22,9 @@ nav a:hover {
   text-decoration: underline;
   text-shadow: rgb(248, 203, 20) 5px 0 10px;
 }
+/* ------------------------ */
+/* ------------------------ */
+/* home-page */
 .home-page-container {
   width: 100vw;
   height: 96vh;
@@ -67,7 +70,10 @@ button:hover {
   text-decoration: underline;
   text-shadow: rgb(255, 255, 255) 5px 0 10px;
 }
-#artist-search-results-page {
+/* ------------------------ */
+/* ------------------------ */
+/* detail-search-results */
+#detail-search-results-page {
   position: relative;
   top: 3vh;
   display: flex;
@@ -77,7 +83,7 @@ button:hover {
 
   color: #ad0715;
 }
-#all-artists-container {
+#all-details-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
@@ -85,7 +91,7 @@ button:hover {
   justify-content: space-evenly;
   /* align-items: center; */
 }
-.artist-summary {
+.detail-summary {
   margin-bottom: 6vh;
   display: flex;
   flex-direction: column;
@@ -93,12 +99,12 @@ button:hover {
   align-items: center;
   width: 25vw;
 }
-.artist-summary-img {
+.detail-summary-img {
   width: 23vw;
   height: 23vw;
   object-fit: cover;
 }
-.artist-summary-content {
+.detail-summary-content {
   background-color: #ad0715;
   position: relative;
   display: flex;
@@ -107,7 +113,7 @@ button:hover {
   align-items: center;
   width: 23vw;
 }
-.artist-summary-content h2 {
+.detail-summary-content h2 {
   /* position: absolute;
   top: 0; */
   padding: 0;
@@ -117,7 +123,7 @@ button:hover {
   font-size: 1.5rem;
   text-align: center;
 }
-.artist-summary-content-link-container {
+.detail-summary-content-link-container {
   padding: 0;
   margin-top: 0;
   margin-bottom: 2vh;
@@ -127,7 +133,7 @@ button:hover {
   line-height: 1.5;
   text-align: center;
 }
-.artist-summary-content-link {
+.detail-summary-content-link {
   /* position: absolute;
   top: 0; */
   margin: 0 0.25vw 0 0.25vw;

@@ -1,19 +1,25 @@
+<section id="detail-search-results-page">
 {{#if albumsArr}}
-<h1>List of albums from {{artist}}:</h1>
+    <h1>List of albums:</h1>
 {{else}}
-<h1 hidden>List of albums:</h1>
+    <h1 hidden>List of albums:</h1>
 {{/if}}
-
-{{#each albumsArr}}
-<section class="album-summary">
-    <img src="{{this.images.[0].url}}" alt="">
-    <h2>{{this.name}}</h2>
-    <div><a href="/tracks/{{this.id}}">View tracks</a></div>
-
-
+    <section id="all-details-container">
+    {{#each albumsArr}}
+    {{!-- {{>detaildisplay}} --}}
+        <section class="detail-summary">
+            <img class="detail-summary-img" src="{{this.images.[0].url}}" alt="album's picture">
+            <div class="detail-summary-content">
+                <h2>{{this.name}}</h2>
+                <div class="detail-summary-content-link-container">
+                    <a class="detail-summary-content-link" href="/tracks/{{this.id}}">View tracks</a>
+                </div>
+            </div>
+        </section>
+    {{else}}
+        <section class="detail-summary">
+            <h2>Cannot find your search</h2>
+        </section>
+    {{/each}}
+    </section>
 </section>
-{{else}}
-<section class="album-summary">
-    <h2>Cannot find your search</h2>
-</section>
-{{/each}}
