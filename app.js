@@ -44,7 +44,6 @@ app.get('/albums/:artistId', (req, res, next) => {
 	spotifyApi
 		.getArtistAlbums(req.params.artistId)
 		.then((data) => {
-			console.log('This is what we got:', data.body);
 			res.render('albums', data.body);
 		})
 		.catch((err) => {
@@ -56,7 +55,6 @@ app.get('/tracks/:albumId', (req, res, next) => {
 	spotifyApi
 		.getAlbumTracks(req.params.albumId)
 		.then((data) => {
-			console.log('This is what we got:', data.body);
 			res.render('tracks', data.body);
 		})
 		.catch((err) => {
