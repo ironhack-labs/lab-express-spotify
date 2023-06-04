@@ -1,10 +1,87 @@
 body {
-  background-image: url("/images/spotify-background.jpeg");
   background-color: #cccccc;
-  height: 500px;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.home-page {
+  background-image: url("/images/spotify-background.jpeg");
+  height: 100%;
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.search-field {
+  background-color: #cccccc;
+  padding: 60px;
+  width: 70%;
   text-align: center;
-  font-family: Arial, Helvetica, sans-serif;
+  background: #c5d0cd50;
+  color: white;
+  border-radius: 5px;
+}
+
+.button {
+  font-size: 1em;
+  color: white;
+  background-color: #f44336;
+  border-radius: 5px;
+  padding: 5px;
+  margin: 10px;
+}
+
+.album-page {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 2em;
+}
+
+.each-album {
+  display: flex;
+  padding: 0.7em;
+  flex-wrap: wrap;
+  flex: 0 0 30%;
+  color: white;
+}
+
+.each-track {
+  display: flex;
+  padding: 0.7em;
+  flex: 0 0 30%;
+  color: white;
+  flex-direction: column;
+}
+
+.image {
+  width: 100%;
+  height: 350px;
+  object-fit: cover;
+}
+
+.album-text {
+  background-color: rgb(90, 84, 84);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 1em;
+}
+
+a:link,
+a:visited {
+  background-color: #f44336;
+  color: white;
+  padding: 14px 25px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  border-radius: 5px;
+}
+
+a:hover {
+  background-color: red;
 }
