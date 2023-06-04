@@ -1,12 +1,42 @@
-{{#each artistTracksObj}}
-	<article>
-		<h3>Track {{this.track_number}} - {{this.name}}</h3>
-		<a class='listen-spotify' href='{{this.external_urls.spotify}}'>Listen on
-			Spotify Tracks</a>
-		{{#if this.preview_url}}
-			<audio src='{{this.preview_url}}'></audio>
-		{{else}}
-			<p>preview unavailable</p>
-		{{/if}}
-	</article>
-{{/each}}
+<div class='tracks-header'>
+	<h2 class='title'>Title</h2>
+	<h2 class='listen'>Listen</h2>
+</div>
+<div class='tracks-container'>
+	{{#each artistTracksObj}}
+		<article class='tracks'>
+			{{!-- <h3>{{this.track_number}} - {{this.name}}</h3> --}}
+			<h3><a href='{{this.external_urls.spotify}}'>{{this.track_number}}
+					-
+					{{this.name}}</a></h3>
+
+			{{#if this.preview_url}}
+				<audio controls>
+					<source src='{{this.preview_url}}' type='audio/mpeg' />
+				</audio>
+			{{else}}
+				<a
+					class='listen-spotify button'
+					href='{{this.external_urls.spotify}}'
+				>Preview unavailable - click to listen on spotify</a>
+			{{/if}}
+		</article>
+	{{/each}}
+
+</div>
+
+{{! <div class='tracks'></div>
+<table>
+	<thead>
+		<tr>
+			<th class='table-title'>Title</th>
+			<th class='table-listen'>Listen</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<td>Row 1, Column 1</td>
+			<td>Row 1, Column 2</td>
+		</tr>
+	</tbody>
+</table> }}

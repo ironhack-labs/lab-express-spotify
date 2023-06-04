@@ -63,7 +63,7 @@ app.get('/tracks/:tracksId', async (req, res, next) => {
 
 	try {
 		const artistTracks = await spotifyApi.getAlbumTracks(tracksId);
-		/* console.log(artistTracks.body.items); */
+		console.log(artistTracks.body.items);
 		const artistTracksObj = artistTracks.body.items;
 		res.render('album-tracks', { artistTracksObj });
 	} catch (error) {
