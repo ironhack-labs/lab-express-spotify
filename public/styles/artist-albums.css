@@ -31,9 +31,9 @@ body {
   margin: 40px;
 }
 
-.box:hover {
+/* .box:hover {
   box-shadow: 5px 5px 15px black;
-}
+} */
 
 .boxInfo {
   background-color: rgb(70, 70, 70);
