@@ -8,24 +8,21 @@
       box-shadow: none;
     }
   </style>
-  
-<link rel="stylesheet" type="text/css" href="/styles/style.css">
+
+  <link rel="stylesheet" type="text/css" href="/styles/style.css">
 </head>
 
 <body>
-<div class="container">
-
+  <div class="container">
     <form action="/artist-search", method="GET" id="form">
-        <label id="search-box"> 
-            <input type="text" artist="artist" placeholder="Enter artist name" id="search-input"/>
-        </label><br>
-
+        <label for="search-box"></label>
+        <input id="search-input" type="text" name="artist" placeholder="Enter artist name"/>
         <button type="submit" id="search-button">Search for an Artist!</button>
     </form>
-</div>
+  </div>
 
-<div class="image-container">  
+  <div class="image-container">  
     <img src="/images/spotify-background.jpeg" id="image">
-</div>
-
+  </div>
 </body>
+</html>

@@ -25,28 +25,57 @@ const spotifyApi = new SpotifyWebApi({
   spotifyApi
     .clientCredentialsGrant()
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
-    .catch(error => console.log('Something went wrong when retrieving an access token', error));
+    .catch(error => console.log('Something went wrong when retrieving an access token', error));  
 
-    
-app.get('/', (req, res) => {
-  res.render('index')
+
+  app.get('/', (req, res) => {
+  res.render('index');
 })
 
 app.get('/artist-search', (req, res) => {
- const artist = req.query.artist;
- spotifyApi
- .searchArtists(artist)
- .then(data => {
-   const artists = data.body.artists.items.map(artist => ({
-     id: artist.id,
-     name: artist.name,
-     image: artist.images.length > 0 ? artist.images[0].url : 'image.png',
-   }));
-   res.render('artist-search-results', { artists });
- })
- .catch(err => {
-  console.log('The error while searching artists occurred: ', err);
-});
+  const search = req.query.artist;
+
+  spotifyApi
+    .searchArtists(search)
+    .then(data => {
+      console.log('The received data from the API: ', data.body);
+      // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+      res.render('artist-search-results', { artists: data.body.artists.items });
+     
+    })
+    .catch(err => console.log('error: ', err));
 });
 
-app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
+
+app.get('/albums/:artistId', (req, res, next) => {
+
+  spotifyApi
+    .getArtistAlbums(req.params.artistId)
+    .then(data => {
+      const albums = data.body.items;
+      res.render('albums', { albums });
+    })
+    .catch(err => {
+      console.log('Error ', err);
+      next(err);
+    });
+});
+
+
+app.get('/tracks/:id', (req, res, next) => {
+  const albumId = req.params.id;
+
+  spotifyApi
+    .getAlbumTracks(albumId)
+    .then((data) => {
+      const albumTracks = data.body.items;
+      res.render('tracks', { albumTracks });
+    })
+    .catch((err) => {
+      console.log('Error:', err);
+      next(err);
+    });
+});
+
+
+app.listen(3001, () => console.log('My Spotify project running on port 3001 🎧 🥁 🎸 🔊'));
