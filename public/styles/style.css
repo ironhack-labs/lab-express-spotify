@@ -1,0 +1,150 @@
+/* :root {
+
+} */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    padding: 0;
+    margin: 0;
+}
+#home {
+    background-image: url("/images/homebackground2.webp");
+    background-size: cover;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#home form {
+    background-color: #00000088;
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    width: 40vh;
+    height: 20vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#home input, #home button {
+
+    border-radius: 12px;
+    border: 0;
+    box-sizing: border-box;
+    font-size: 20px;
+    width: 30vh;
+    height: 5vh;
+    padding: 3vh;
+    outline: 0;
+    padding: 4px 20px 0;
+}
+
+#home button {
+    background-color: #303245;
+    color: #eee;
+}
+
+#home input {
+    background-color: eee;
+    color: #303245;
+    
+}
+
+input:focus::placeholder {
+    color: transparent;
+  }
+
+.artist-result {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    max-width: 40vh;
+    max-height: 40vh;
+    min-width: 40vh;
+    background-color: #303245;
+    color: white;
+    padding-bottom:  10px;
+    margin: 20px;
+    
+
+}
+
+.element img {
+    object-fit: cover;
+    width: 20vh;
+    height: 20vh;
+    border-radius: 100%;
+    border: 0;
+    padding: 20px;
+}
+
+.record-element {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    max-width: 20vh;
+    max-height: 80vh;
+    min-width: 80vh;
+    background-color: #303245;
+    color: white;
+    padding-bottom:  10px;
+    margin: 20px;
+    
+
+}
+
+.record-element img {
+    object-fit: cover;
+    width: 35vh;
+    height: 35vh;
+    padding: 20px;
+}
+.track-result {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.track-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    /* justify-content: space-between; */
+    max-width: 80vh;
+    max-height: 40vh;
+    min-width: 80vh;
+    background-color: #303245;
+    color: white;
+    padding-bottom:  10px;
+    margin: 20px;
+    
+}
+
+
+h1 {
+    font-size: 30px;
+}
+h2 {
+    font-size: 20px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 30px;
+    color: gray;
+    font-size: 10px;
+}
