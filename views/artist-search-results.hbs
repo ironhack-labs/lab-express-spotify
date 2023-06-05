@@ -1,0 +1,25 @@
+<section id="detail-search-results-page">
+{{#if artistsArr}}
+    <h1>List of Artists:</h1>
+{{else}}
+    <h1 hidden>List of Artists:</h1>
+{{/if}}
+    <section id="all-details-container">
+    {{#each artistsArr}}
+    {{!-- {{>detaildisplay}} tried to use partials but it is complicated to have styles from CSS  --}}
+        <section class="detail-summary">
+            <img class="detail-summary-img" src="{{this.images.[0].url}}" alt="artist's picture">
+            <div class="detail-summary-content">
+                <h2>{{this.name}}</h2>
+                <div class="detail-summary-content-link-container">
+                    <a class="detail-summary-content-link" href="/albums/{{this.id}}">View albums</a>
+                </div>
+            </div>
+        </section>
+    {{else}}
+        <section class="detail-summary">
+            <h2>Cannot find your search</h2>
+        </section>
+    {{/each}}
+    </section>
+</section>
