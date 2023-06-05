@@ -4,6 +4,7 @@ body {
   font-family: Verdana;
 }
 
+/* START of Albums styling */
 #albums-section {
   width: 100%;
   display: flex;
@@ -11,7 +12,6 @@ body {
   align-items: center;
   justify-content: space-evenly;
 }
-
 .album-container {
   width: 20%;
   max-width: 200px;
@@ -48,12 +48,11 @@ body {
 .album-info-container strong {
   margin-top: 3px;
 }
-
 #tracks-button {
   background-color: red;
   color: white;
   text-decoration: none;
-  padding: 4px;
+  padding: 3px 4px;
   margin: 5px 0;
   border-radius: 5px;
   font-size: 8px;
@@ -61,3 +60,45 @@ body {
 #tracks-button:hover {
   background-color: darkred;
 }
+/* END of Albums styling  */
+
+
+/* START of Tracks styling */
+#tracks-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tracks-header {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  background-color: rgb(57, 57, 57);
+  color: gray;
+}
+.tracks-header h2:first-child {
+  margin-left: 10px;
+}
+.tracks-header h2:nth-child(2) {
+  margin-right: 10%;
+}
+.track-container {
+  display: row;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  background-color: rgb(237, 240, 241);
+  margin: 5px;
+}
+#tracks-section div:nth-child(2) {
+  margin-top: 0;
+}
+.track-container strong {
+  margin-left: 10px;
+  font-size: 14px;
+}
+/* END of Tracks styling */
