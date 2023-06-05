@@ -167,13 +167,7 @@ button:hover {
   color: #ad0715;
   padding-left: 5vw;
 }
-/* .track-list-body-container{
-  border: 1px solid #0a07ad;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  align-items: center;
-} */
+
 ul.track-list-body {
   list-style: none;
   padding-left: 0;
