@@ -1,7 +1,11 @@
-{{#each albumArr}}
-    <section class="album-summary">
-        <img src="{{this.images.[0].url}}">
-        <h2>{{this.name}}</h2>
-        <a href="/albums/tracks/{{this.id}}" ><button>Views Album</button></a>
-    </section>
-{{/each}}
+<h1>Reference of Album :</h1>
+
+<div class="album-div">
+    {{#each albumArr}}
+        <section class="album-summary">
+            <img src="{{this.images.[0].url}}">
+            <h2>{{this.name}}</h2>
+            <a href="/albums/tracks/{{this.id}}" ><button>Views Album</button></a>
+        </section>
+    {{/each}}
+</div>

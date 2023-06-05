@@ -40,9 +40,11 @@ app.get("/", (req, res, next) => {
     res.render("artist-search");
 })
 
-
+ 
 app.get("/artist-search", (req, res, next) => {
     
+        //API search the Album with API use inside the Button page / from the input of the Home
+
     spotifyApi.searchArtists(req.query.artists)
 	.then((ref) => {
 		console.log(ref.body.artists.items[0].id)
@@ -58,11 +60,12 @@ app.get("/artist-search", (req, res, next) => {
 
 app.get('/albums/:artistId', (req, res, next) => {
     //console.log(req.params);
+        //API search the Album with API use inside the Button page /artist-Search
     spotifyApi.getArtistAlbums(req.params.artistId)
-    .then((albumId) => {
-        //console.log(albumId.body.items);
+    .then((artistID) => {
+        //console.log(artistID.body.items);
             const albumArr ={
-                albumArr: albumId.body.items
+                albumArr: artistID.body.items
             }
         res.render("album", albumArr)
     })
@@ -71,8 +74,9 @@ app.get('/albums/:artistId', (req, res, next) => {
 
 app.get('/albums/tracks/:albumId', (req, res, next) =>{
     
-    console.log(req.params);
-
+    //console.log(req.params);
+    //API search the tracklist with API use inside the Button page /album/:artistID
+    //we go inside l'ID of Album for take information of the trackList and open it for use only the most important, the track 
     spotifyApi.getAlbumTracks(req.params.albumId)
     .then((tracksInfo) => {
         //console.log(tracksInfo.body.items[0].href)
