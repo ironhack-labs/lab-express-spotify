@@ -33,7 +33,7 @@ app.get('/artist-search', (req, res) => {
     .searchArtists(artist)
     .then(artistData => {
       const {
-        body: {
+        body: { 
           artists: {
             items: artists
           },
@@ -67,9 +67,11 @@ app.get("/artist/:artistId/album/:albumId/tracks", (req, res) => {
   spotifyApi
     .getAlbumTracks(albumId)
     .then((tracksData) => {
+
+      console.log(tracksData)
       const {
         body: { 
-          items: tracks
+          items : tracks
         }
       } = tracksData
       // res.send(JSON.stringify({ tracks } ))
