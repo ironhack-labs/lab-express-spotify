@@ -125,3 +125,9 @@ h1 {
     justify-content: center;
     margin: 20px;
 }
+
+#no-content {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
