@@ -141,3 +141,70 @@ button:hover {
   color: #ad0715;
   text-decoration: none;
 }
+/* ------------------------ */
+/* ------------------------ */
+/* tracks display */
+.track-list-header-container {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.track-list-header:first-of-type {
+  
+  margin:2vh 0 0 0;
+  padding-left: 15vw;
+  width: 60vw;
+  font-size: 1rem;
+  color: #ad0715;
+}
+.track-list-header:last-of-type {
+  margin:2vh 0 0 0;
+  padding: 0;
+  width: 30vw;
+  font-size: 1rem;
+  color: #ad0715;
+  padding-left: 5vw;
+}
+/* .track-list-body-container{
+  border: 1px solid #0a07ad;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+} */
+ul.track-list-body {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li.track-list-body {
+  background-color: #F1F3F4;
+  margin-bottom: 0.3vh;
+  width: 90vw;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.track-list-body div:first-of-type  {
+  font-size: .9rem;
+  padding-left: 1.5vw;
+  width: 60vw;
+}
+.track-list-body div:last-of-type  {
+  width: 30vw;
+  padding-left: 1.5vw;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+}
+video{
+  height: 3vh;
+  width: 33vw;
+}

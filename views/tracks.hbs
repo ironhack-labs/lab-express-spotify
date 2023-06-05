@@ -1,16 +1,16 @@
 <section class="track-list-header-container">
-    <h2 class="track-list">Title</h2>
-    <h2 class="track-list">Listen</h2>
+    <h2 class="track-list-header">Title</h2>
+    <h2 class="track-list-header">Listen</h2>
 </section>
 <section class="track-list-body-container">
     <ul class="track-list-body">
     {{#each tracksArr}}
         <li class="track-list-body">
-                <span class="track-list-body">{{this.name}}</span>
+                <div class="track-list-body">{{this.name}}</div>
             {{#if this.preview_url}} 
-                <span class="track-list-body"><video controls name="media" class="track-list-body" ><source type="audio/mpeg" src="{{this.preview_url}}"></video></span>
+                <div class="track-list-body"><video controls name="media" class="track-list-body" ><source type="audio/mpeg" src="{{this.preview_url}}"></video></div>
             {{else}}
-                <span>No preview</span>
+                <div class="track-list-body">No preview</div>
             {{/if}}
         </li>
     {{/each}}
