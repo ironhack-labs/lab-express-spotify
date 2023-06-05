@@ -5,7 +5,7 @@
     </nav>
     {{#each tracksArr}}
         <section class="track-summary">
-            <h2>Track {{this.track_number}} - {{this.name}}</h2> 
+            <a href="{{this.spotify}}"><h2>Track {{this.track_number}} - {{this.name}}</h2></a>
             {{#if this.preview_url}}
             <p><audio 
                 controls 

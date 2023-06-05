@@ -33,19 +33,18 @@ body{
     padding: 1em 8em;
 }
 
-.dif-ref{
+.div-ref{
     width: 100%;
     height: auto;
     display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
 }
 
 .ref-summary{
     display: flex;
-    flex-direction: column;
     justify-content: center;
-    flex-wrap: wrap;
+    flex-flow:column wrap;
     background-color: #C4C4C4;
     width: 28vw;
     height: auto;
@@ -71,11 +70,18 @@ body{
     background-color: rgb(70, 253, 3);
 }
 
+.album-div{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
 .album-summary{
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    flex-wrap: wrap;
+    justify-content: space-evenly;
+    flex-flow:column wrap;
     background-color: #C4C4C4;
     width: 28vw;
     height: auto;
@@ -133,4 +139,15 @@ body{
 .track-summary hr{
     width: 75%;
     margin: 0;
+}
+
+.track-summary a{
+    text-decoration: none;
+    color: black;
+    transition: 1.5s;
+}
+
+
+.track-summary a:hover{
+    color: rgb(68, 255, 0);
 }
