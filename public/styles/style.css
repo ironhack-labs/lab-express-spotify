@@ -5,6 +5,9 @@ body {
 }
 
 /* START of Albums styling */
+#albums-header {
+  text-align: center;
+}
 #albums-section {
   width: 100%;
   display: flex;
@@ -32,6 +35,7 @@ body {
   background-color: rgb(60,60,60);
   margin: 0;
   padding: 0;
+  margin-bottom: 1px;
 }
 .album-info-container {
   display: flex;
@@ -100,5 +104,9 @@ body {
 .track-container strong {
   margin-left: 10px;
   font-size: 14px;
+}
+.track-container p {
+  margin-right: 7%;
+  color: darkred;
 }
 /* END of Tracks styling */
