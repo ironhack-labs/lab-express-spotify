@@ -53,14 +53,30 @@ form button:hover {
     background-color: rgba(255, 255, 255, 0.5);
 }
 
-#albums {
+#search-results{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     width: 90%;
 }
 
-.album-card {
+#search-results li{
+    width: 25%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+#albums, #artists  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+}
+
+.card {
     width: 25%;
     border: 1px solid #ddd;
     margin-bottom: 20px;
@@ -75,19 +91,19 @@ h1 {
     padding: 20px 0;
 }
 
-.album-card img {
+.card img {
     width: 100%;
     height: auto;
 }
 
-.album-card h2 {
+.card h2 {
     font-size: 1.5em;
     color: #333;
 }html{
     height: 100%;
 }
 
-.album-card p {
+.card p {
     font-size: 1em;
     color: #777;
 }
