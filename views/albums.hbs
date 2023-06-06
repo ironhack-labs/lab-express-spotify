@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Albums Search Results</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <h1>Albums Search Results</h1>
+{{#each albums}}
+    <div>
+      <h2>{{name}}</h2>
+      <img src="{{images.[0].url}}" alt="{{name}}">
+      <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
+  {{/each}}
+</body>
+</html>
