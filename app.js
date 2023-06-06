@@ -43,6 +43,17 @@ app.get('/artist-search', (req, res) => {
         const data = await spotifyApi.getArtistAlbums(artistId);
         res.render('albums', { albums: data.body.items });
       });
+
+      app.get('/albums/:albumId/tracks', async (req, res, next) => {
+        try {
+          const data = await spotifyApi.getAlbumTracks(req.params.albumId);
+          const tracks = data.body.items;
+          res.render('tracks', { tracks });
+        } catch(err) {
+          console.error('Error occurred while fetching tracks:', err);
+          next(err);
+        }
+      }); 
 });
 
 app.listen(3000, () =>
