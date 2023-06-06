@@ -115,8 +115,8 @@ body {
 
 .home-page {
   background-image: url("/images/spotify-background.jpeg");
-  width: 2000px;
-  height: 500px;
+  width: 100%;
+  height: auto;
   background-attachment: fixed;
   background-size: 100% 100%;
   position: relative;
