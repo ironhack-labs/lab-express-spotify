@@ -1,0 +1,190 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Verdana;
+}
+
+/* START of Albums styling */
+#albums-header {
+  text-align: center;
+}
+#albums-section {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+.album-container {
+  width: 20%;
+  max-width: 200px;
+  height: 250px;
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.album-img-container {
+  padding: 0;
+  margin-bottom: -5px;
+}
+#album-img {
+  width: 100%;
+  height: auto;
+  background-color: rgb(60,60,60);
+  margin: 0;
+  padding: 0;
+  margin-bottom: 1px;
+}
+.album-info-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 11px;
+  background-color: rgb(60,60,60);
+  width: 100%;
+  height: 65px;
+  color: white;
+}
+.album-info-container strong {
+  margin-top: 3px;
+}
+#tracks-button {
+  background-color: red;
+  color: white;
+  text-decoration: none;
+  padding: 3px 4px;
+  margin: 5px 0;
+  border-radius: 5px;
+  font-size: 8px;
+}
+#tracks-button:hover {
+  background-color: darkred;
+}
+/* END of Albums styling  */
+
+
+/* START of Tracks styling */
+#tracks-section {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.tracks-header {
+  display: flex;
+  flex-direction: row;
+  width: 95%;
+  justify-content: space-between;
+  background-color: rgb(57, 57, 57);
+  color: gray;
+}
+.tracks-header h2:first-child {
+  margin-left: 10px;
+}
+.tracks-header h2:nth-child(2) {
+  margin-right: 10%;
+}
+.track-container {
+  display: row;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 95%;
+  background-color: rgb(237, 240, 241);
+  margin: 5px;
+}
+#tracks-section div:nth-child(2) {
+  margin-top: 0;
+}
+.track-container strong {
+  margin-left: 10px;
+  font-size: 14px;
+}
+.track-container p {
+  margin-right: 7%;
+  color: darkred;
+}
+/* END of Tracks styling */
+
+/* CCS AF */
+
+.home-page {
+  background-image: url("/images/spotify-background.jpeg");
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 40vh;
+}
+
+.form-box {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5); 
+  margin: 150px;
+  padding: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.form-box button {
+  padding: 2em 4em;
+  color: white;
+  background-color: rgb(217, 71, 71);
+  opacity: 0.8;
+  border: none;
+}
+
+.div-res {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ref-summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #353535;
+  width: 21vw;
+  height: auto;
+  margin: 3em;
+  color: white;
+  align-items: center;
+}
+
+.ref-summary img{
+  width: 100%;
+}
+
+.ref-summary a{
+  padding: 2em 4em;
+  color: white;
+  background-color: rgb(217, 71, 71);
+  opacity: 0.8;
+  padding: 0.3em 0.1em;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 20px;
+  text-decoration: none;
+}   
+
+.artist-results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}

@@ -1,0 +1,20 @@
+<section id="tracks-section">
+  <div class="tracks-header">
+    <h2>Title</h2>
+    <h2>Listen</h2>
+  </div>
+
+  {{#each tracks}}
+    <div class="track-container">
+      <strong>{{name}}</strong>
+
+      {{#if preview_url}}
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/mp3">
+        </audio>
+      {{else}}
+        <p>Preview not available</p>
+      {{/if}}
+    </div>
+  {{/each}}
+</section>
