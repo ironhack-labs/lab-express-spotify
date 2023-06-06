@@ -110,3 +110,81 @@ body {
   color: darkred;
 }
 /* END of Tracks styling */
+
+/* CCS AF */
+
+.home-page {
+  background-image: url("/images/spotify-background.jpeg");
+  width: 100%;
+  height: auto;
+  background-attachment: fixed;
+  background-size: 100% 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  padding-top: 40vh;
+}
+
+.form-box {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.5); 
+  margin: 150px;
+  padding: 50px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  width: 400px;
+}
+
+.form-box button {
+  padding: 2em 4em;
+  color: white;
+  background-color: rgb(217, 71, 71);
+  opacity: 0.8;
+  border: none;
+}
+
+.div-res {
+  width: 100%;
+  height: auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.ref-summary{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex-wrap: wrap;
+  background-color: #353535;
+  width: 21vw;
+  height: auto;
+  margin: 3em;
+  color: white;
+  align-items: center;
+}
+
+.ref-summary img{
+  width: 100%;
+}
+
+.ref-summary a{
+  padding: 2em 4em;
+  color: white;
+  background-color: rgb(217, 71, 71);
+  opacity: 0.8;
+  padding: 0.3em 0.1em;
+  border: none;
+  border-radius: 0.5rem;
+  margin: 20px;
+  text-decoration: none;
+}   
+
+.artist-results {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
