@@ -1,7 +1,3 @@
-html{
-    height: 100%;
-}
-
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -20,12 +16,6 @@ body {
     background-color: rgba(255, 255, 255, 0.5);
     width: 600px;
     border-radius: 5px;
-}
-
-h1 {
-    color: #333;
-    text-align: center;
-    padding: 20px 0;
 }
 
 form {
@@ -53,4 +43,59 @@ form button {
 
 form button:hover {
     background-color: #1ED760;
+}
+
+.container {
+    display: flex;
+    width: 75%;
+    margin: auto;
+    overflow: hidden;
+    justify-content: center;
+    background-color: rgba(255, 255, 255, 0.5);
+}
+
+#albums {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.album-card {
+    width: 30%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.album-card img {
+    width: 100%;
+    height: auto;
+}
+
+.album-card h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.album-card p {
+    font-size: 1em;
+    color: #777;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #555;
 }
