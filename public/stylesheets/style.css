@@ -1,3 +1,7 @@
+html{
+    height: 100%;
+}
+
 body {
     font-family: Arial, sans-serif;
     background-color: #f0f0f0;
@@ -51,6 +55,7 @@ form button:hover {
     margin: auto;
     align-items: center;
     background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
 }
 
 #search-results{
@@ -76,6 +81,13 @@ form button:hover {
     width: 90%;
 }
 
+#tracks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
 .card {
     width: 25%;
     border: 1px solid #ddd;
@@ -99,8 +111,6 @@ h1 {
 .card h2 {
     font-size: 1.5em;
     color: #333;
-}html{
-    height: 100%;
 }
 
 .card p {
@@ -115,4 +125,18 @@ a {
 
 a:hover {
     color: #555;
+}
+
+.track {
+    display: flex;
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+}
+
+.audio-control {
+    margin-top: 10px;
 }

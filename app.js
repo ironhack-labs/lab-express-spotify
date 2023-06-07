@@ -56,9 +56,13 @@ app.get("/albums/:artistId", async (req, res) => {
 
 app.get("/albums/:albumId/tracks", async (req, res, next) => {
   try {
+    const albumData = await spotifyApi.getAlbum(req.params.albumId);
+    const album = albumData.body
+
     const data = await spotifyApi.getAlbumTracks(req.params.albumId);
     const tracks = data.body.items;
-    res.render("tracks", { tracks });
+
+    res.render("tracks", { tracks, album });
   } catch (err) {
     console.error("Error occurred while fetching tracks:", err);
     next(err);
