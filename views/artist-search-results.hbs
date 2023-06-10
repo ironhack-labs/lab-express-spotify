@@ -1,0 +1,15 @@
+<div>
+	
+		<div class='artists-results'>
+            {{#each this.artists.items}}
+            <figure>
+                <img src='{{this.images.0.url}}' alt='{{this.name}}' />
+                <figcaption>
+                    <p>{{this.name}}</p>
+			        <a href='/albums/{{this.id}}/albums'>View Albums</a>
+                </figcaption>
+            </figure>
+            {{/each}}
+		</div>
+    
+</div>
