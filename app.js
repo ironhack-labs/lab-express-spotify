@@ -33,7 +33,7 @@ app.get('/', (req, res) => {
 })
 
 app.get('/artist-search', (req, res) => {
-    console.log(req.query)
+    // console.log(req.query)
   spotifyApi
     .searchArtists(req.query.artistName)
     .then((data) => {
@@ -45,7 +45,7 @@ app.get('/artist-search', (req, res) => {
 })
 
 app.get('/albums/:artistId', (req, res) => {
-  console.log('req.params', req.params)
+  // console.log('req.params', req.params)
   spotifyApi
    .getArtistAlbums(req.params.artistId)
    .then((foundUser) => {
