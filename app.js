@@ -7,9 +7,14 @@ const hbs = require("hbs");
 const SpotifyWebApi = require("spotify-web-api-node");
 
 const app = express();
+app.use(express.json());
 
 app.set("view engine", "hbs");
 app.set("views", __dirname + "/views");
+
+// unsure of this line
+app.set("partials", "views" + "partials");
+
 app.use(express.static(__dirname + "/public"));
 
 // setting the spotify-api goes here:
@@ -28,16 +33,32 @@ spotifyApi
 
 // Our routes go here:
 app.get("/", (req, res, next) => {
-  spotifyApi.getArtist("2hazSY4Ef3aB9ATXW7F5w3").then(
-    function (data) {
-      console.log("Artist information", data.body);
-      res.send(data.body);
-    },
-    function (err) {
-      console.error(err);
-    }
-  );
+  res.render("index");
 });
+
+app.get("/artist-search", (req, res, next) => {
+  let { artist } = req.query;
+
+  if (artist.length > 0) {
+    spotifyApi
+      .searchArtists(artist)
+      .then((data) => {
+        let artists = data.body.artists.items;
+        artists.forEach((artist) => {
+          console.log(artist.name);
+        });
+
+        res.render("artist-search-results", artists);
+      })
+      .catch((err) =>
+        console.log("The error while searching artists occurred: ", err)
+      );
+  } else {
+    console.log("Please enter a valid name!");
+  }
+});
+
+// app.get("/artist-search/:artist", (req, res, next) => {});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
