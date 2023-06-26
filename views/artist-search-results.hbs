@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul>
+
+    {{#each albums }}
+
+    <li>
+        <p>Name: {{this.name}}</p>
+        {{!-- <p><img src="{{this.image}}"></p> --}}
+        <a href=" {{this.href}}"></a>
+        <a href="/albums/{{this.id}}"><button>View Albums</button></a>
+        
+    </li>
+    {{/each}}
+
+</ul>
+
+
+
+</body>
+</html>
