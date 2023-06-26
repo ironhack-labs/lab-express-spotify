@@ -1,0 +1,12 @@
+body {
+  background-color: black;
+  text-align: center;
+}
+
+h1 {
+  color: white;
+}
+
+.homepage {
+  width: 50vw;
+}
