@@ -11,14 +11,22 @@ const spotifyApi = new SpotifyWebApi({
 
 // Set up view engine
 app.set("view engine", "hbs");
+app.set("views", __dirname+"/views")
 
 // Middleware
 app.use(express.static(__dirname + "/public"));
+
+//Credentials
+spotifyApi
+  .clientCredentialsGrant()
+  .then(data => spotifyApi.setAccessToken(data.body['access_token']))
+  .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Routes
 app.get("/", (req, res) => {
   res.render("home");
 });
+
 
 app.get("/artist-search", (req, res) => {
   const artist = req.query.artist;
@@ -64,6 +72,8 @@ app.get("/tracks/:albumId", (req, res) => {
       res.render("error");
     });
 });
+
+
 
 // Start server
 const port = 3000;
