@@ -44,11 +44,8 @@ app.get("/artist-search", (req, res, next) => {
       .searchArtists(artist)
       .then((data) => {
         let artists = data.body.artists.items;
-        artists.forEach((artist) => {
-          console.log(artist.name);
-        });
-
-        res.render("artist-search-results", artists);
+        console.log(artists);
+        res.render("artist-search-results", { artists });
       })
       .catch((err) =>
         console.log("The error while searching artists occurred: ", err)
