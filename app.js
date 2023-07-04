@@ -2,7 +2,6 @@ require('dotenv').config();
 
 const express = require('express');
 const hbs = require('hbs');
-
 // require spotify-web-api-node package here:
 const SpotifyWebApi = require('spotify-web-api-node');
 
@@ -26,6 +25,8 @@ const spotifyApi = new SpotifyWebApi({
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
 
 // Our routes go here:
+const routes = require('./config/routes.config');
+app.use('/', routes);
 
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
