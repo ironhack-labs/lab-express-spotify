@@ -1,14 +1,13 @@
-<h1>album</h1>
-  <div class="row">
+<div class="row">
     {{#each album}}
-      <div class="col-sm-4">
+      <div class="col-sm-3">
         <div class="card">
         <img src="{{this.images.0.url}}" class="card-img-top" alt="{{this.name}}">
         <div class="card-body">
             <h5 class="card-title">{{this.name}}</h5>
-            <a href="/albums/{{this.id}}">View Tracks</a>
+            <a href="/tracks/{{this.id}}"><button class="btn btn-danger">View Tracks</button></a>
         </div>
         </div>
       </div>
     {{/each}}  
-  </div>
+</div>
