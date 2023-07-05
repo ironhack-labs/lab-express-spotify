@@ -1,0 +1,25 @@
+.home-view {
+  background-image: url("/images/spotify-background.jpeg");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 710px;
+  padding-top: 50px;
+  position: relative;
+}
+
+.search-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 320px;
+  margin-left: 425px;
+}
+
+.search-bar {
+  width: 500px;
+}
+
+#btn-search {
+  margin-top: 10px;
+  margin-left: 190px;
+}

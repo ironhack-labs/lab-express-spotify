@@ -1,7 +1,17 @@
 <form action="/artist-search" method="GET">
-  <div class="mb-3">
-    {{!-- <label for="artist" class="form-label">Artist</label> --}}
-    <input type="text" class="form-control" id="artist" name="artistName" autocomplete="off">
+  <div class="home-view">
+    {{! <label for="artist" class="form-label">Artist</label> }}
+    <div class="search-items">
+      <div class="search-bar">
+        <input
+          type="text"
+          class="form-control"
+          id="artist"
+          name="artistName"
+          autocomplete="off"
+        />
+        <button id="btn-search"  class="btn btn-primary">Search for an Artist</button>
+      </div>
+    </div>
   </div>
-  <button class="btn btn-primary">Search for an Artist</button>
 </form>
