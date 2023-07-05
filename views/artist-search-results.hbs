@@ -1,14 +1,25 @@
 <ul>
-    {{#each artists}}
-        <li>{{ this.name }}
-            <br>
-            {{#if this.images}}
-                <img src="{{this.images.2.url}}" alt="{{this.name}}">
-            {{else}}
-                <img src="/images/MusicDisc.png"
-                    alt="{{this.name}}" style="width: 160px">
-            {{/if}}
-            <br>
-            <a href="/albums/{{this.id}}">View albums</a> </li>
-    {{/each}}
+  {{#each artists}}
+    <li>{{this.name}}
+      <br />
+      {{#if this.images}}
+        <img
+          src="{{this.images.2.url}}"
+          alt="{{this.name}}"
+          width="160"
+          height="160"
+        />
+      {{else}}
+        <img
+          src="/images/MusicDisc.png"
+          alt="{{this.name}}"
+          width="160"
+          height="160"
+        />
+      {{/if}}
+      <br />
+      {{! "To be able to see all the albums of that particular artist" }}
+      <a href="/albums/{{this.id}}">View albums</a>
+    </li>
+  {{/each}}
 </ul>
