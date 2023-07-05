@@ -1,6 +1,6 @@
 <ul class="artists-ul">
   {{#each artists}}
-    <li>{{this.name}}
+    <li>
       <br />
       {{#if this.images}}
         <img
@@ -18,8 +18,10 @@
         />
       {{/if}}
       <br />
+      {{this.name}}
+      <br />
       {{! "To be able to see all the albums of that particular artist" }}
-      <a href="/albums/{{this.id}}">View albums</a>
+      <a href="/albums/{{this.id}}"> <button class="btn btn-danger">View Albums</button> </a>
     </li>
   {{/each}}
 </ul>

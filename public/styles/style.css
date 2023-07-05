@@ -33,14 +33,29 @@
 .artists-ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  list-style-type: none;
 }
 
 .albums-ul {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  list-style-type: none;
 }
 
 .tracks-list {
   display: flex;
   justify-content: space-between;
+  margin-right: 30px;
+}
+
+.tracks-titles {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-right: 100px;
 }
