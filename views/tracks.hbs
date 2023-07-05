@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+<ul>
+
+    {{#each track }}
+
+    <li>
+        <p>Name: {{this.name}}</p>
+        <p>Name: {{this.[0].preview_url}}</p>
+        <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        <a href="{{this.preview_url}}" download>Download audio</a>
+        </li>
+    {{/each}}
+
+</ul>
+    
+</body>
+</html>
