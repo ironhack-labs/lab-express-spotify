@@ -2,7 +2,7 @@ html, body {
     height: 100%;
     margin: 0;
   }
-.container {
+.home-container {
     background-image: url('/images/spotify-background.jpeg');
     background-size: cover;
     background-position: center;
