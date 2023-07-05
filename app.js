@@ -23,6 +23,45 @@ const spotifyApi = new SpotifyWebApi({
     .clientCredentialsGrant()
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
+
 // Our routes go here:
+
+app.get("/", (req, res, next) => {
+    console.log("Estamos en la home page")
+    res.render("home-page")
+})
+
+app.get("/artist-search", (req, res, next) => {
+
+    const artist = req.query.artist;
+  
+    /*const query = {};
+    
+    if (artist) {
+      const regex = new RegExp(artist, 'i');
+      query.artist = regex;
+    }*/
+
+  spotifyApi
+  .searchArtists(artist)
+  .then(data => {
+    console.log(`The received data from the API: ${ artist } `, data.body.artists.items[0]);
+    res.render("artist-search-results", { artist: data.body.artists.items });
+
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+})
+
+app.get('/albums/:id', (req, res, next) => {
+  const id = req.params.id
+
+  spotifyApi
+  .getArtistAlbums(id)
+  .then(album => {
+    console.log(album.body.items[0])
+    res.render("albums", { album: album.body.items })
+  })
+  .catch(err => console.log(err))
+});
 
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
