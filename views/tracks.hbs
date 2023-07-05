@@ -1,7 +1,8 @@
 <ul>
     {{#each tracks}}
-        <li>
+        <li class="tracks-list">
             <h4>{{this.name}}</h4>
+            <div class="listen-commands"></div>
             <br>
             {{#if this.preview_url}}
                 <audio controls>

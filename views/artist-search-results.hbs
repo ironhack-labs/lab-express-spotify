@@ -1,20 +1,20 @@
-<ul>
+<ul class="artists-ul">
   {{#each artists}}
     <li>{{this.name}}
       <br />
       {{#if this.images}}
         <img
-          src="{{this.images.2.url}}"
+          src="{{this.images.0.url}}"
           alt="{{this.name}}"
-          width="160"
-          height="160"
+          width="260"
+          height="260"
         />
       {{else}}
         <img
           src="/images/MusicDisc.png"
           alt="{{this.name}}"
-          width="160"
-          height="160"
+          width="260"
+          height="260"
         />
       {{/if}}
       <br />

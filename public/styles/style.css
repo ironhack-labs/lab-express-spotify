@@ -1,9 +1,15 @@
-.home-view {
+/* html, body {
+  height: 100%;
+  margin: 0;
+} */
+
+#home-view {
   background-image: url("/images/spotify-background.jpeg");
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  height: 710px;
+  height: 100vh;
+  width: 100%;
   padding-top: 50px;
   position: relative;
 }
@@ -12,14 +18,29 @@
   display: flex;
   flex-direction: column;
   margin-top: 320px;
-  margin-left: 425px;
+  margin-left: 550px;
 }
 
 .search-bar {
-  width: 500px;
+  width: 400px;
 }
 
 #btn-search {
-  margin-top: 10px;
-  margin-left: 190px;
+  margin-top: 15px;
+  margin-left: 130px;
+}
+
+.artists-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.albums-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+}
+
+.tracks-list {
+  display: flex;
+  justify-content: space-between;
 }
