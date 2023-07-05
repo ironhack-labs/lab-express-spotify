@@ -1,14 +1,19 @@
-<h2>results</h2>
+<h2>Results</h2>
+<div class="cards1 col-md-6">
 {{#each artists}}
+
+
+<div class="card">
   <h2>{{name}}</h2>
   {{#if this.images}}
-    <img
-      src="{{images.0.url}}"
-      alt="{{name}}"
-      style="width:100px; heigth:100px"
-    />
+    <img src="{{images.0.url}}" alt="{{name}}" style="width:595px; heigth:550px"/>
   {{/if}}
-  <a href="/albums/{{id}}">View Albums</a>
+  <button type="button" class="btn btn-danger"> <a class="v-Tracks" href="/albums/{{id}}">View Albums</a></button>
+ </div>
+ 
+
 {{/each}}
+</div>
+
 
 
