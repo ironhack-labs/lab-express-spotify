@@ -1,0 +1,19 @@
+*{
+    margin: 0;
+    padding: 0;
+   /* background-image: url(../images/spotify-background.jpeg);
+    background-size: 500px;
+    background-repeat: no-repeat; */
+}
+
+.background img {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    
+}
+
+form {
+    position: absolute;
+
+}
