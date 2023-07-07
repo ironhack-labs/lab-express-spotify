@@ -1,10 +1,10 @@
 
 <h1>Albums</h1>
-<div class="col-md-6">
+<div class="cards1 col-md-6">
 {{#each albums}}
   <div class="card">
     <h2 class="card-title">{{name}}</h2>
-    <img class="card-img-top" src="{{images.0.url}}" alt="Album Cover" style="width:595px; heigth:550px" />
+    <img class="card-img-top" src="{{images.0.url}}" alt="Album Cover" style="width:300px; heigth:300px" />
     <button type="button" class="btn btn-danger"><a class="v-Tracks" href="/tracks/{{id}}">View Tracks</a></button>
   </div>
 {{/each}}
