@@ -34,13 +34,6 @@ app.get("/", (req, res, next) => {
 app.get("/artist-search", (req, res, next) => {
 
     const artist = req.query.artist;
-  
-    /*const query = {};
-    
-    if (artist) {
-      const regex = new RegExp(artist, 'i');
-      query.artist = regex;
-    }*/
 
   spotifyApi
   .searchArtists(artist)

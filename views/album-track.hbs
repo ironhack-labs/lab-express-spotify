@@ -1,14 +1,16 @@
-<div class="row">
+<div class="artist-albums-container">
+  <div class="row">
     {{#each track}}
-      <div class="col-sm-4">
-        <div class="card">
-            <div class="card-body">
+      <div class="col-sm-4 my-3">
+        <div class="card" id="album-card">
+            <div class="card-body" id="album-card-body">
                 <h5 class="card-title">{{this.name}}</h5>
-                <audio controls preload="auto">
+                <audio id="audio-button" controls preload="auto">
                     <source src="{{this.preview_url}}" type="audio/mpeg"/>
                 </audio>
             </div>
         </div>
       </div>
     {{/each}}  
+  </div>  
 <div>
