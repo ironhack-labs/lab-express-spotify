@@ -1,0 +1,35 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.background  {
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: 100%;
+    height: 100vh;
+    
+    
+}
+
+.formulario {
+    padding: 400px;
+}
+
+.card{
+    display: flex !important;
+    justify-content: space-around !important;
+    width: 300px;
+    height: 300px;
+}
+
+.v-Tracks {
+    color: white;
+    text-decoration: none;
+}
+
+.cards1{
+    display: grid;
+    grid-template-columns: repeat(4 , 1fr);
+    gap: 10px;
+}
+
