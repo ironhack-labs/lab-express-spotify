@@ -1,0 +1,28 @@
+img {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    margin:0;
+    display: flex;
+}
+
+form {
+    position: absolute;
+    top: 40%;
+    left: 33%;
+    background-color: rgb(217, 217, 217, 0.8);
+    padding: 50px 100px;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 5px 20px;
+    margin: 0px 10px;
+}
+
+input {
+    padding: 5px 10px;
+}

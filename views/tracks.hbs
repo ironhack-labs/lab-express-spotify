@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    {{#each myTracks}}
+        <h2>{{name}}</h2>
+        <audio id="player{{id}}" src="{{preview_url}}"></audio>
+        <div> 
+            <button onclick="document.getElementById('player{{id}}').play()">Play</button> 
+            <button onclick="document.getElementById('player{{id}}').pause()">Pause</button> 
+        </div>
+    {{/each}}
+    
+</body>
+</html>
