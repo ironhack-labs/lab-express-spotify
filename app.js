@@ -54,7 +54,7 @@ app.get('/tracks/:id', (req, res) => {
         .getAlbumTracks(id)
         .then(data => {
             const tracks = data.body.items
-            // console.log(artists)
+            // console.log(tracks)
             res.render('tracks', { tracks, number: tracks.length })
         })
         .catch(err => console.log('The error while searching album occurred: ', err));
