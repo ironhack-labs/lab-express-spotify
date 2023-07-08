@@ -1,0 +1,14 @@
+<h1 class="number">{{number}} tracks</h1>
+{{#each tracks}}
+<div id="item">
+    <h1>{{name}}</h1>
+    <p>
+        {{#each artists}}
+            <a href="/albums/{{id}}">{{name}}</a>
+        {{/each}}
+    </p>
+    <audio controls>
+        <source src="{{preview_url}}" type="audio/mpeg">
+    </audio>
+</div>
+{{/each}}

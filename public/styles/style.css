@@ -1,0 +1,116 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    color: white;
+}
+
+body {
+    background-color: rgb(0, 0, 0);
+    padding-top: 100px;
+}
+
+.collection {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#card {
+    border: 1px solid rgb(50, 50, 50);
+    margin: 20px;
+    width: 300px;
+    overflow: hidden;
+}
+
+#card h1 {
+    font-size: 20px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+#card img {
+    width: 300px;
+    height: 300px;
+}
+
+#card>.lower {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    padding: 0 20px;
+    min-width: 0;
+}
+
+#card a {
+    color: black;
+    text-decoration: none;
+    background-color: #107AB0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    color: white;
+}
+
+form input {
+    background-color: rgb(23, 23, 23);
+    padding: 10px 25px;
+    border: none;
+    border-radius: 10px;
+    font-size: 18px;
+}
+
+form button {
+    background-color: #107AB0;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 10px;
+    font-size: 18px;
+    margin-left: 10px;
+    cursor: pointer;
+}
+
+#item {
+    display: flex;
+    align-items: center;
+    margin: 20px;
+    padding: 20px;
+    border: 1px solid rgb(50, 50, 50);
+    border-radius: 25px;
+}
+
+#item > audio {
+    margin-left: auto;
+}
+
+#item > h1 {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+#item > p {
+    margin-left: 20px;
+}
+
+#item a {
+    margin: 10px;
+}
+
+nav {
+    width: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    padding: 20px 0;
+    backdrop-filter: blur(50px);
+    border-bottom: 1px solid rgb(50, 50, 50);
+}
+
+.number {
+    text-align: center;
+    margin:20px 0;
+}
