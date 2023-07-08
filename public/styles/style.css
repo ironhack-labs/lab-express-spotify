@@ -1,0 +1,108 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+/* ========= homepage =========== */
+.homepage {
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  height: 100vh;
+}
+
+.overlay {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(196, 100, 100, 0.2);
+}
+
+.container {
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+.search-form {
+  display: flex;
+  flex-direction: column;
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.75);
+  width: 40%;
+  justify-content: center;
+  align-items: center;
+}
+
+.search-form button {
+  width: 40%;
+  background-color: rgb(245, 42, 42);
+  border: none;
+  margin-top: 20px;
+  padding: 10px;
+  color: white;
+}
+
+.search-form input {
+  width: 80%;
+  padding: 10px;
+  border-radius: 5px;
+  border: 2px rgb(112, 112, 112);
+}
+
+/* ============ end homepage =================== */
+
+/* ============ search result ================== */
+.search-result, .albums-page {
+  padding: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+.artist-card {
+  width: 30%;
+  height: 20%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+}
+
+.artist-card img {
+  width: 100%;
+  height: 50%;
+}
+
+.artist-info {
+    color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(78, 78, 78);
+  width: 100%;
+  padding: 10px 0;
+}
+
+.artist-info a {
+  text-decoration: none;
+  color: white;
+  padding: 15px;
+  background-color: rgb(237, 102, 18);
+  border-radius: 10px;
+}
+
+/* ============= end search result ==============*/
+
+
+/* =========== albums ================== */
+
+
+
+/* ============== end albums =========== */

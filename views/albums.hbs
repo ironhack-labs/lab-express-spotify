@@ -1,0 +1,18 @@
+<div class="albums-page">
+  {{#each albums}}
+    {{!-- {{> artistCard this}} --}}
+
+    <div class="artist-card">
+      <img
+        src="https://i.scdn.co/image/ab6761610000e5eb4b36d28b55620959821f4a5b"
+        alt="Artist image"
+      />
+      <div class="artist-info">
+        <h3>{{this.name}}</h3>
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+      </div>
+
+    </div>
+  {{/each}}
+
+</div>
