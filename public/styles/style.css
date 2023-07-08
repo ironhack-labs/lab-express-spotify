@@ -66,12 +66,12 @@ body {
 
 .artist-card {
   width: 30%;
-  height: 20%;
+  max-height: 30%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 20px;
+  margin: 10px;
 }
 
 .artist-card img {
