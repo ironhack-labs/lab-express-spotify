@@ -1,0 +1,27 @@
+body {
+    background-image: url('/public/images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 3cm;
+    text-align: center;
+  }
+  
+  .button {
+    background-color: red;
+    color: white;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 4px;
+    font-size: 18px;
+    font-family: Arial, sans-serif;
+  }
+  
+  
