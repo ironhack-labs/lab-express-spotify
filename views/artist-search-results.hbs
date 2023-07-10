@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://127.0.0.1:3000/styles/style.css" />
+    <title>Artist-Search</title>
+  </head>
+  <body class="homepage">
+    <h1 class="page-title">ARTIST SEARCH</h1>
+    <div class="results-box">
+      {{#each artists}}
+      <div class="element">
+        <img src="{{images.0.url}}" alt="Profile Photo" />
+        <h2>{{name}} </h2>
+        <button type="submit" class="results-btn">
+          <a href="/albums/{{id}}"> View Album</a>
+        </button>
+      </div>
+      {{/each}}
+    </div>
+
+  </body>
+</html>
