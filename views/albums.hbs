@@ -1,0 +1,23 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://127.0.0.1:3000/styles/style.css" />
+    <title>Album</title>
+  </head>
+  <body class="homepage">
+    <h1 class="page-title">ALBUMS:</h1>
+    <div class="results-box">
+      {{#each albums}}
+      <div class="element">
+        <h3>{{name}}</h3>
+        <img src="{{images.0.url}}" alt="" />
+        <button type="submit" class="results-btn">
+          <a href="/tracks/{{id}}"> View Tracks</a>
+        </button>
+      </div>
+      {{/each}}
+    </div>
+
+  </body>
+</html>

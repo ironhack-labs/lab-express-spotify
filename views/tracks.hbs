@@ -1,0 +1,28 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="http://127.0.0.1:3000/styles/style.css" />
+    <title>Tracks</title>
+  </head>
+  <body class="homepage">
+    <div>
+            <h1 class="page-title">TRACKS</h1> 
+       <button class="search-btn" type="submit">
+        <a href="/">Back to homepage</a>
+    </button>
+    </div>
+    <div class="results-box">
+      {{#each tracks}}
+      <div class="track-el">
+        <ul>
+          <li><h3 class="track-title">{{name}}</h3></li>
+          <li> <audio controls preload="auto" src="{{preview_url}}"></audio> </li>
+        </ul>
+      </div> 
+
+      {{/each}}
+    </div>
+
+  </body>
+</html>
