@@ -23,33 +23,15 @@ app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
 // setting the spotify-api goes here:
-app.get("/", (req,res)=>{
+app.get("/", (req, res) => {
     res.render("index")
-   /*  spotifyApi.searchArtists('madonna')
-    .then(data => {res.send(data.body.artists.items[0].images)})
-    .catch(err => console.log(err))    
-
-   res.send(`<div>
-                <h1>Apelidos do Lo</h1>
-                <h1>--------------</h1>
-                <ul>
-                    <li>Zah</li>
-                    <li>Mini gay</li>
-                    <li>Mini Corno</li>
-                    <li>Mini</li>
-                    <li>Cg</li>
-                    <li>Hd</li>
-                    <li>Hdd</li>
-                    <li>Saraiva</li>
-                    <li>Hpg</li>>
-                    <li>Vivi</li>
-                    <li>Meu corninho prefeiro</li>
-
-                </ul>
-            
-            </div>`)*/
-
-    
+})
+//res.render(data.body.artists.items[0].images)
+app.get("/artist-search", (req, res) => {
+    spotifyApi.searchArtists('artist-name')
+   .then(data => {res.render("artist-search",{ data })})
+    //data.body.artists.items[0].images)})
+   .catch(err => console.log(err))     
 })
 
 // Our routes go here:
