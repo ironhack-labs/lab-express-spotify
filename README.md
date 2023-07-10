@@ -88,9 +88,21 @@ The **Spotify** API will need a `clientId` and `clientSecret` in order to give u
 
 
 
-![]()
 
-6. We are ready to go! We have all the info we need :muscle: Let's start!
+
+6. After creating the app, go to the **Settings** page to find your ***Client ID*** and ***Client Secret***.
+   Keep these two values handy as you will need them in the next step.
+
+   
+
+   <p align="center">
+
+
+     <img src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/labs/lab-express-spotify/spotify-account-setup-05-settings-button.png" width="600"/>
+
+   
+
+   </p>
 
    <p align="center">
 
@@ -100,6 +112,14 @@ The **Spotify** API will need a `clientId` and `clientSecret` in order to give u
    
 
    </p>
+
+   <br>
+
+   
+
+   We are ready to go! We have everything we need :muscle: Let's start!
+
+   
 
     <br>
 
