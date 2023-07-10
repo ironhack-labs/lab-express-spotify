@@ -1,0 +1,25 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tracks</title>
+  </head>
+  <body>
+    <header>
+      <div class="header-container">
+        <h1 class="font">Title</h1>
+        <h2 class="font">Listen</h2>
+      </div>
+    </header>
+
+    {{#each albumTracks.items}}
+      <div class="album-tracks-container">
+        <ul>
+          <li>{{name}}</li>
+          <li> <audio controls preload="auto" src="{{preview_url}}"></audio></li>
+        </ul>
+      </div>
+    {{/each}}
+
+  </body>
+</html>
