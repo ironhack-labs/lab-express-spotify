@@ -24,9 +24,7 @@ app.use(express.static(__dirname + '/public'));
 
 //setting the spotify-api goes here:
 app.get('/', (rq, rs, next) => {
-    spotifyApi.searchArtists('madonna')
-    .then(data => rs.send(data.body.artists.items[0].images))
-    .catch(err => console.log(err))
+    rs.redirect('/home')
 })
 
 // Our routes go here:
@@ -69,6 +67,7 @@ app.get('/tracks/:id', (rq,rs) => {
     spotifyApi.getAlbumTracks(rq.params.id)
     .then(data => {
         const myTracks = data.body.items
+        console.log(myTracks)
         rs.render('tracks', {myTracks})
     })
 })

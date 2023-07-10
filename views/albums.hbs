@@ -3,22 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        img {
-            width: 100px;
-        }
-    </style>
+    <title>Albums</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style-lists.css" />
 </head>
 <body>
     {{#each myAlbums}}
-        <h1>{{name}}</h1>
-        <img src="{{image}}" alt="">
-        <form action="/tracks/{{id}}">
-            <label for="">
-                <button>View Tracks</button>
-            </label>
-        </form>
+        <div>
+            <img src="{{image}}" alt="">
+            <h3>{{name}}</h3>
+            <form action="/tracks/{{id}}">
+                <label for="">
+                    <button>View Tracks</button>
+                </label>
+            </form>
+        </div>
     {{/each}}
     
 </body>

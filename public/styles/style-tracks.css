@@ -1,0 +1,16 @@
+.main {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgb(245, 249, 249);
+    margin: 5px 50px;
+    width: 900px;
+}
+
+h4 {
+    margin: 10px 50px;
+}
+
+body {
+    margin: 30px 30px;
+}
