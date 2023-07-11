@@ -1,0 +1,109 @@
+body {
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    font-family: Arial, sans-serif;
+    color: white;
+    background-position: center;
+    position: relative;
+    height: 100vh;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: -100px;
+    
+  }
+  
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+  }
+  
+  input[type="text"] {
+    width: 300px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: solid 1px;
+    border-color: rgb(204,204,204);
+    border-radius: 5px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background-color: #FA6E68;
+    color: white;
+    width: 200px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #1aa34a;
+  }
+  
+  .card {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #f7f7f7;
+  }
+  
+  .artist {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artist p {
+    margin-bottom: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .artist img {
+    width: 100%;
+    max-height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  }
+  .album-container {
+    width: 500px;
+    margin: 0 auto;
+  }
+  
+  .album-title {
+    text-align: center;
+    font-size: 24px;
+  }
+  
+  .album-card {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+  }
+  
+  .album-cover {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .album-name {
+    font-size: 18px;
+  }
+  
