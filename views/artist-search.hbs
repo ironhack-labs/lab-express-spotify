@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>searched artiste</title>
+  <link rel="stylesheet" type="text/css" href="styles/style.css">
+</head>
+<body>
+  <div class="card">
+    {{#each artists}}
+    <div class="artist">
+      <p>{{this.name}}</p>
+      <img src="{{this.images.[0].url}}" alt="Artist image" />
+       <a href="/albums/{{this.id}}">View Album</a>
+    </div>
+    {{/each}}
+  </div>
+</body>
+</html>
