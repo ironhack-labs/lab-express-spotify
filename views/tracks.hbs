@@ -1,0 +1,28 @@
+<div class="container mt-4">
+  <div class="card mt-4">
+    <div class="card-body">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">Title</th>
+            <th scope="col">Actions</th>
+          </tr>
+        </thead>
+        <tbody>
+          {{#each tracks}}
+          <tr>
+            <td>{{this.name}}</td>
+            <td>
+              <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+                Your browser does not support the audio element.
+              </audio>
+              <a href="{{this.preview_url}}" download class="btn btn-sm btn-primary">Download</a>
+            </td>
+          </tr>
+          {{/each }}
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>

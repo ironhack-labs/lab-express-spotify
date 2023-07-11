@@ -1,0 +1,8 @@
+<h3>Albums for: {{albums.artists.[0].name}}</h3>
+<div class="row">
+  {{#each albums }}
+    <div class="col">
+    {{> album album=this}}
+  </div>
+  {{/each}}
+</div>
