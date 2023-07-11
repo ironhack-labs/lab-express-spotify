@@ -28,9 +28,9 @@ app.get("/", (req, res) => {
 })
 //res.render(data.body.artists.items[0].images)
 app.get("/artist-search", (req, res) => {
-    spotifyApi.searchArtists('artist-name')
+    console.log(req.query.artist)
+    spotifyApi.searchArtists(req.query.artist)
    .then(data => {res.render("artist-search",{ data })})
-    //data.body.artists.items[0].images)})
    .catch(err => console.log(err))     
 })
 
