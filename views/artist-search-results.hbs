@@ -1,0 +1,22 @@
+<style>
+  #Artist-List{  text-align: center; } 
+  img{ height: 300px; width:300px; }
+  button{margin-bottom: 20px;}
+</style>
+<body>
+  <div id="Artist-List">
+     <h1>List of artists</h1>
+      <div>
+        {{{body}}}
+        {{#each artist}}
+      <div>
+        <img src="{{this.images.[0].url}}{{! images.0.url}}" alt="" />
+        <h2>{{name}}</h2>
+        <form action="/albums/{{id}}" method="GET">
+            <button>View albums</button>
+        </form>
+      </div>
+      {{/each}}
+    </div>
+  </div>
+</body>
