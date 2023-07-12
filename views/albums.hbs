@@ -1,0 +1,27 @@
+<div class="container">
+    <h1>{{albumData.items.artists.name}} ALBUMS</h1>
+    {{!-- ARTISTALBUMS.items.artists.name
+    ARTISTALBUMS.name
+    ARTISTALBUMS.images (array with 3) --}}
+    <hr>
+
+    <div class="row">
+
+        {{#each albumData.items}}
+        <div class="col-md-4 mb-5">
+
+            <h5 class="mb-3">{{this.name}}</h5>
+            {{#if (secondImage this.images)}}
+            <img src="{{secondImage this.images}}" class="mb-3" alt="{{this.name}}">
+            {{else}}
+            <div class="col-md-4 mb-5 text-center d-flex flex-column justify-content-center artistImage-placeholder">
+                <p>No images available for this artist</p>
+            </div>
+            {{/if}}
+            <a href="/tracks/{{this.id}}" class="btn btn-sm btn-outline-dark mb-3 custom-button">See tracks</a>
+        </div>
+        {{/each}}
+
+    </div>
+    <a href="/" class="btn btn-dark mb-5">Back to HOME</a>
+</div>
