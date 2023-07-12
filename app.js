@@ -28,14 +28,14 @@ app.get("/", (req, res) => {
 })
 //res.render(data.body.artists.items[0].images)
 app.get("/artist-search", (req, res) => {
-    console.log(req.query.artist)
+    //console.log(req.query.artist)
     spotifyApi.searchArtists(req.query.artist)
-   .then(data => {res.render("artist-search",{ data })})
+    //.then(data => {console.log(data.body.artists.items)})
+   .then(data => {res.render("artist-search-result",{artist:data.body.artists.items})})
    .catch(err => console.log(err))     
 })
 
 // Our routes go here:
 
-
-
+//
 app.listen(3000, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
