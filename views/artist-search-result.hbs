@@ -1,0 +1,15 @@
+<!--<ul>
+  {{#each artist}}
+    <li style="display: inline-block; margin-right: 10px; text-align: center;">
+      <div style="position: relative;">
+        <img src="{{this.images.1.url}}" alt="" style="width: 200px; height: 200px;">
+        <button>Information</button>
+      </div>
+    </li>
+  {{/each}}
+</ul>-->
+<div class="container">
+  <h1>{{artistName}}</h1>
+  <img src="{{artistImage}}" alt="">
+  <a href="/albums/{{artistId}}"><button class="button">See Albums</button></a>
+</div>
