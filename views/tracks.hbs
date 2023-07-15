@@ -1,0 +1,18 @@
+<h1>TRACKS</h1>
+
+<div>
+    <div class="row">
+        {{#each track}}
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <audio controls preload="auto">
+                        <source src="{{this.preview_url}}" type="audio/mpeg"/>
+                    </audio>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
