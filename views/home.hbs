@@ -1,0 +1,35 @@
+<div class="home-container">
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+    <img class= "nav-logo" src="https://upload.wikimedia.org/wikipedia/commons/thumb/2/26/Spotify_logo_with_text.svg/1200px-Spotify_logo_with_text.svg.png" alt="navbar-img">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse nav justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Premium</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Discover</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Help</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="#">Download</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav> 
+    <div class="form-container">
+        <form action="/artist-search" method="GET">
+            <div class="mb-3">
+                <!-- <label for="artist-name" class="form-label">Email address</label> -->
+                <input type="text" class="form-control" id="artist-name" name="artist">
+            </div>
+            <button type="submit" id="search-button" class="btn btn-primary">Search for the artist</button>
+        </form>
+    </div>
+</div>
