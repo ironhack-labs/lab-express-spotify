@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artist Search Results</title>
+</head>
+<body>
+    <h1>Artist Search Results</h1>
+    {{#each artists}}
+    <div>
+        <h2>{{name}}</h2>
+        {{#if images.length}}
+        <img src="{{images.[0].url}}" alt="Artist Image">
+        {{/if}}
+        <a href="/albums/{{id}}">View Albums</a>
+    </div>
+    {{/each}}
+</body>
+</html>
