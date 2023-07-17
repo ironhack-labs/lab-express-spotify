@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style-lists.css" />
+</head>
+<body>
+    {{#each myAlbums}}
+        <div>
+            <img src="{{image}}" alt="">
+            <h3>{{name}}</h3>
+            <form action="/tracks/{{id}}">
+                <label for="">
+                    <button>View Tracks</button>
+                </label>
+            </form>
+        </div>
+    {{/each}}
+    
+</body>
+</html>

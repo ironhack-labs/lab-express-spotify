@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+div {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    text-align: center;
+    overflow-wrap: break-word;
+    margin: 10px 0px;
+    background-color: darkgray;
+}
+
+button {
+    background-color: red;
+    color: white;
+    padding: 6.5px 20px;
+    margin: 0px 10px 10px 10px;
+    border: red;
+    border-radius: 5px;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+}
+
+h3 {
+    word-wrap: break-word;
+    color: white;
+    margin: 10px 0px;
+}

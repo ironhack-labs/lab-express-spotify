@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tracks</title>
+    <link rel="stylesheet" type="text/css" href="/styles/style-tracks.css" />
+</head>
+<body>
+    <h2>Listen to the tracks</h2>
+    {{#each myTracks}}
+        <div class="main">
+            <h4>{{name}}</h4>
+            <audio controls src="{{preview_url}}">Your browser does not support the audio player</audio>
+        </div>
+    {{/each}}
+</body>
+</html>
