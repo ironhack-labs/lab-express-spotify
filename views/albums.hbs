@@ -1,0 +1,11 @@
+<div class="collection">
+    {{#each albums}}
+    <div id="card">
+        <img src="{{images.1.url}}" alt="{{name}}">
+        <div class="lower">
+            <h1>{{name}}</h1>
+            <a href="/tracks/{{id}}">Track</a>
+        </div>
+    </div>
+    {{/each}}
+</div>
