@@ -1,0 +1,32 @@
+<style>
+  main { 
+    margin: 0; 
+    padding: 0; 
+    height: 100vh; 
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center; }
+</style>
+<form
+  class="row gx-3 gy-2 d-flex justify-content-center align-items-center position-absolute top-50 start-50 translate-middle"
+  method="GET"
+  action="/artist-search"
+>
+  <div class="col-sm-8">
+    <label class="visually-hidden">Name</label>
+    <input
+      type="text"
+      class="form-control"
+      id="artist_name"
+      name="artist"
+      placeholder="Artist's Name"
+    />
+  </div>
+  <div class="col-auto">
+    <button type="submit" class="btn btn-danger">Search for an Artist</button>
+  </div>
+</form>

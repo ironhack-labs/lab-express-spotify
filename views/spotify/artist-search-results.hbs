@@ -1,0 +1,9 @@
+<div class='row row-cols-1 row-cols-md-5 g-2 pt-5'>
+  {{#each artists as |artist|}}
+    <div class='col'>
+      <div class='card border border-0'>
+        {{> artistPartial info=artist  isAlbum=false}}
+      </div>
+    </div>
+  {{/each}}
+</div>
