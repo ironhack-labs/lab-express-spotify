@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados de la búsqueda</title>
+</head>
+<body>
+    <h2>Resultados tu búsqueda</h2>
+    {{#if artists}}
+    <ul>
+        {{#each artists}}
+        <li>
+            <h2>{{this.name}}</h2>
+            {{#if this.images.length}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}" style="width: 200px;">
+            {{else}}
+            <p>No hay image disponible.</p>
+            {{/if}}
+                <form action="/albums/{{this.id}}" method="GET">
+                    <button type="submit">Ver Albums</button>
+                </form>        
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>No hay artistas encontrados.</p>
+    {{/if}}
+</body>
+</html>
