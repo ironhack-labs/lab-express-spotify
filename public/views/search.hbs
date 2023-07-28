@@ -1,0 +1,24 @@
+<div id="grid-sec-page">
+{{#if artists.length}}
+  
+  <ul>
+    
+    {{#each artists}}
+      <li>
+        
+        
+        {{#if images.length}}
+          <img src="{{images.[0].url}}" alt="{{name}} Image" width="200">
+        {{/if}}
+        <h2>{{name}}</h2>
+        <a href="/albums/{{id}}">Show Albums</a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No artists found.</p>
+{{/if}}
+
+
+</div>
+

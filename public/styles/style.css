@@ -1,0 +1,137 @@
+body {
+    color: rgb(161, 80, 14);
+    background-image: url('/images/spotify-background.jpeg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+
+h1 {
+    /* align-items: center; */
+
+}
+#grid{
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    /* height: 100vh;
+    width: 100vh; */
+}
+#home{
+    margin-top: 15%;
+    background-color: rgba(255, 255, 255, 0.5);
+    /* border: 10px solid rgb(28, 87, 175); */
+    height: 40vh;
+    width: 60vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+    border-radius: 1%;
+   
+}
+#search{
+    margin-top: 20%;
+    position: relative;
+    color: rgb(0, 0, 0);
+    
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+    align-items: center;
+}
+#form{
+    width: 300px;
+    height: 30px;
+}
+#first-butt{
+margin-top: 5%;
+margin-left: 15%;
+padding: 10px;
+background-color: rgba(255, 0, 0, 0.7);
+color: whitesmoke;
+font-weight: bolder;
+border-radius: 10%;
+font-size: larger;
+
+}
+#grid-sec-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+}
+#grid-sec-page>ul{
+    list-style: none;
+    color: rgb(7, 41, 71);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+#grid-sec-page>ul>li>a{
+   text-decoration: none !important;
+   color: rgb(78, 24, 24);
+   font-size: large;
+   font-weight: bold;
+  
+}
+#grid-thir-page>h1{
+    color: blanchedalmond;
+}
+
+#grid-thir-page{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+    list-style: none;
+}
+#grid-thir-page>ul{
+    list-style: none;
+    color: rgb(7, 41, 71);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+}
+#grid-thir-page>ul>li>a{
+   text-decoration: none !important;
+   color: rgb(78, 24, 24);
+   font-size: large;
+   font-weight: bold;
+  
+}
+
+#track-grid{
+
+    color: black;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: center;
+
+}
+#track-grid>ul{
+list-style: none;
+display: flex;
+flex-wrap: wrap;
+justify-content: space-around;
+align-items: center;
+align-content: center;
+
+
+}
+
