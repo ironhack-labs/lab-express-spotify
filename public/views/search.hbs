@@ -1,1 +1,21 @@
 <h1>search result</h1>
+
+{{#if artists.length}}
+  <h1>Found Artists:</h1>
+  <ul>
+    
+    {{#each artists}}
+      <li>
+        <h2>{{name}}</h2>
+        
+        {{#if images.length}}
+          <img src="{{images.[0].url}}" alt="{{name}} Image" width="200">
+        {{/if}}
+        
+        <a href="/albums/{{id}}">Show Albums</a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No artists found.</p>
+{{/if}}

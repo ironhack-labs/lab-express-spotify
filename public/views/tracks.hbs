@@ -1,0 +1,22 @@
+<h1>Tracks</h1>
+
+
+{{#if tracks.length}}
+  <ul>
+    
+    {{#each tracks}}
+      <li>
+        <h2>{{name}}</h2>
+        
+        {{#if preview_url}}
+          <audio controls>
+            <source src="{{preview_url}}" type="audio/mpeg">
+            For sure your browser is Explorer.
+          </audio>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No tracks found.</p>
+{{/if}}
