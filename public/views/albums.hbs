@@ -1,3 +1,4 @@
+<div id="grid-thir-page">
 
 <h1>Albums for {{artistName}}</h1>
 
@@ -7,16 +8,20 @@
     
     {{#each albums}}
       <li>
-        <h2>{{name}}</h2>
+       
         
         {{#if images}}
           <img src="{{images.[0].url}}" alt="{{name}} Cover" width="200">
         {{/if}}
+         <h2>{{name}}</h2>
         <a href="/tracks/{{id}}">View Tracks</a>
       </li>
     {{/each}}
+    {{!-- <a href="/tracks/{{id}}">View Tracks</a> --}}
   </ul>
 {{else}}
   <p>No albums found for this artist.</p>
 {{/if}}
-<a href="/tracks/{{id}}">View Tracks</a>
+
+</div>
+
