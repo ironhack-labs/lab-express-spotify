@@ -90,3 +90,17 @@ h3 {
     flex-direction: row;
     justify-content: space-around;
 }
+
+/*
+------------------------2023_07 SOLVED SECOND TIME------------------------------------------
+
+.tracks {
+    background-color: #f1f3f4;
+}
+
+figcaption {
+    font-weight: 600;
+    font-size: large;
+    font-stretch: expanded;
+}
+*/

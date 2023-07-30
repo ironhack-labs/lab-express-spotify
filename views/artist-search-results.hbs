@@ -10,3 +10,26 @@
         </div>
         {{/each}}
 </div>
+
+{{!--------------------------2023_07 SOLVED SECOND TIME ---------------------}}
+{{!--
+<div class="container col m-1">
+    <div class="row">
+    <div class="col text-center">
+        <h2>Results from your artists' search</h2>
+        <div class="d-flex justify-content-center row text-center">
+            {{#each items}}
+            <div class="card m-1 " style="width: 18rem;">
+                <img src="{{this.images.1.url}}" class="card-img-top" alt="{{this.name}} image">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <p class="card-text">Popularity: {{this.popularity}}</p>
+                    <a href="/albums/{{this.id}}" class="btn btn-dark">View Albums</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    </div>
+</div>
+}}
