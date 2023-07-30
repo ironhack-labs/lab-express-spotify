@@ -1,0 +1,13 @@
+body {
+  background-color: aquamarine;
+  text-align: center;
+}
+
+#homepage {
+  width: 20% "vw";
+}
+
+#search-button {
+  width: auto;
+  flex-wrap: wrap-reverse;
+}
