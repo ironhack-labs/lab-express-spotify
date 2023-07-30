@@ -1,18 +1,6 @@
-    <div id="albums">
-        {{#each albums}}
-        <div id="album">
-            <div>
-{{!--Accessing the array of objects "this.images" at index 0 and key "url"  --}}
-            <img src= "{{this.images.0.url}}">
-            </div>
-            <h3>{{this.name}}</h3>
-            <a href="/tracks/{{this.id}}">View Track</a>
-        </div>
-        {{/each}}
-</div>
 
 {{!--------------------------2023_07 SOLVED SECOND TIME ---------------------}}
-{{!-----
+
 <div class="container col m-1">
     <div class="row">
     <div class="col text-center">
@@ -31,4 +19,3 @@
     </div>
     </div>
 </div>
---}}

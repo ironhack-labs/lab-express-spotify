@@ -1,0 +1,14 @@
+{{!--
+    <div id="albums">
+        {{#each albums}}
+        <div id="album">
+            <div>
+{{!--Accessing the array of objects "this.images" at index 0 and key "url"  --}}
+            <img src= "{{this.images.0.url}}">
+            </div>
+            <h3>{{this.name}}</h3>
+            <a href="/tracks/{{this.id}}">View Track</a>
+        </div>
+        {{/each}}
+</div>
+--}}
