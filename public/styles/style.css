@@ -1,0 +1,15 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+
+img {
+width: 100vw;
+height: 100vh;
+
+}
+
+label {
+    padding-top: 20em;
+}
