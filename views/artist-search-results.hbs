@@ -1,0 +1,20 @@
+<h2>Artist result</h2>
+    {{#if artists}}
+    <ul>
+        {{#each artists}}
+        <li>
+            <h2>{{this.name}}</h2>
+            {{#if this.images.length}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}" style="width: 200px;">
+            {{else}}
+            <p>No hay image disponible.</p>
+            {{/if}}
+                <form action="/albums/{{this.id}}" method="GET">
+                    <button type="submit">Ver Albums</button>
+                </form>        
+        </li>
+        {{/each}}
+    </ul>
+    {{else}}
+    <p>No hay artistas encontrados.</p>
+    {{/if}}

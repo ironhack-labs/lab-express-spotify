@@ -1,0 +1,19 @@
+{{#if tracks}}
+  <ul>
+    {{#each tracks}}
+      <li>
+        <h2>{{this.name}}</h2>
+        {{#if this.preview_url}}
+          <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mpeg" />
+            Your browser does not support the audio element.
+          </audio>
+        {{else}}
+          <p>No hay vista previa.</p>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No hay canciones encontradas.</p>
+{{/if}}
