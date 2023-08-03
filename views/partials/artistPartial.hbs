@@ -2,23 +2,20 @@
   {{#if info.images.0.url}}
     <img
       src="{{info.images.0.url}}"
-      class="card-img-top object-fit-contain"
-      style="height: 170px;"
+      class="object-fit-contain"
       alt="{{info.name}}"
     />
   {{else}}
     <img
       src="images/no-cover.png"
-      class="card-img-top object-fit-contain"
-      style="height: 170px;"
+      class="object-fit-contain"
       alt="{{info.name}}"
     />
   {{/if}}
 {{else}}
   <img
     src="images/no-cover.png"
-    class="card-img-top object-fit-contain"
-    style="height: 170px;"
+    class="object-fit-contain"
     alt="{{info.name}}"
   />
 {{/if}}
@@ -26,7 +23,11 @@
   <p class="card-title"><strong>{{info.name}}</strong></p>
   {{#if isAlbum}}
     <p>{{info.release_date}}</p>
-    <a type="button" href="/albums/{{info.id}}/tracks" class="btn btn-danger btn-sm">
+    <a
+      type="button"
+      href="/albums/{{info.id}}/tracks"
+      class="btn btn-danger btn-sm"
+    >
       View Tracks
     </a>
   {{else}}

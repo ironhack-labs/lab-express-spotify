@@ -1,0 +1,21 @@
+main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+#bg {
+  background-color: white;
+  padding: 5rem;
+}
+
+#imgTracks {
+  height: 30px;
+}
