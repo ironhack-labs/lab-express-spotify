@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="row justify-content-center">
+        {{#each data}}
+        <div class="col-3 mt-3 ms-4 me-4 mb-2 text-center">
+            <div class="card" style="width: 18rem;">
+                <img src="{{images.1.url}}" class="card-img-top" alt="...">
+                <div class="card-body bg-dark">
+                    <h5 class="card-title text-white">{{name}}</h5>
+                    <a href="/albums/tracks/{{id}}" class="btn bg-danger text-white fw-bold">View Tracks</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
