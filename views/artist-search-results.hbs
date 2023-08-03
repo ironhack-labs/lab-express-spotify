@@ -1,0 +1,17 @@
+{{#each items}}
+
+<h3>{{name}} </h3>
+
+<p>
+
+    {{#if images.[1]}}
+
+    <img src="{{this.images.[1].url}}">
+
+    {{/if}}
+
+</p>
+
+<a href="/albums/{{id}}"> View albums </a>
+
+{{/each}}

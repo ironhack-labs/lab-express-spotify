@@ -1,0 +1,20 @@
+{{#each tracks}}
+
+<h3>{{name}} </h3>
+
+<p> {{preview_url}} </p>
+
+
+{{#if preview_url}}
+
+<audio controls>
+
+    <source src="{{preview_url}}" type="audio/mpeg">
+
+    Your browser does not support the <code>audio</code> element.
+
+</audio>
+
+{{/if}}
+
+{{/each}}
