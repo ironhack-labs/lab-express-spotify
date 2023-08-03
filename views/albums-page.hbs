@@ -1,0 +1,17 @@
+<div class='container mt-5'>
+  <div class='row d-flex justify-content-between'>
+
+    {{#each albums}}
+
+      <div class='card col-4 mb-4'>
+        <img src='{{images.1.url}}' class='card-img-top' alt='...' />
+        <div class='card-body'>
+          <h5 class='card-title'>{{name}}</h5>
+          <a href='/albums/tracks/{{id}}' class='btn btn-success'>View tracks</a>
+        </div>
+      </div>
+
+    {{/each}}
+
+  </div>
+</div>
