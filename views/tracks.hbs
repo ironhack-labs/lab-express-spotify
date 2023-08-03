@@ -1,0 +1,11 @@
+<div class='container mt-3 mb-3'>
+    <div class="row">
+        {{#each items}}
+        <div class="col-12 audiocolor mb-4 d-flex justify-content-between align-items-center">
+
+            <p><strong>{{name}}</strong></p>
+            <audio controls src="{{preview_url}}"></audio>
+        </div>
+        {{/each}}
+    </div>
+</div>
