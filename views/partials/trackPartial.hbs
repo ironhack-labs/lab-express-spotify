@@ -1,0 +1,21 @@
+<li class="list-group-item d-flex justify-content-between align-items-center">
+  <strong>{{info.name}}</strong>
+  <span class="badge rounded-pill">
+    <figure class="d-flex align-items-center">
+      {{#if info.preview_url}}
+        <audio controls src="{{info.preview_url}}">
+        </audio>
+        <a href="{{info.preview_url}}" class="">
+          <img
+            src="/images/download-icon.png"
+            id="imgTracks"
+            alt="Download"
+          />
+        </a>
+      {{else}}
+        <audio controls src="">
+        </audio>
+      {{/if}}
+    </figure>
+  </span>
+</li>

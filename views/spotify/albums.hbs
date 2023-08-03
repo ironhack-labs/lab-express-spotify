@@ -1,0 +1,15 @@
+<div class="m-5">
+  <a class="btn btn-link" href="{{httpHeader}}">Volver a {{artist}}</a>
+  <div class="">
+    <h2 class="pb-4">Albums for: {{artist}}</h2>
+  </div>
+  <div class='row row-cols-1 row-cols-md-4 g-5'>
+    {{#each albums as |album|}}
+      <div class='col'>
+        <div class='card border border-0'>
+          {{> artistPartial info=album  isAlbum=true}}
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>

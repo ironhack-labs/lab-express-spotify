@@ -1,0 +1,16 @@
+<div class="m-5">
+  <a class="btn btn-link" href="/">Volver a home</a>
+  <ul class="list-group">
+    <li
+      class="list-group-item d-flex justify-content-around align-items-center text-bg-secondary"
+    >
+      <strong>Title</strong>
+      <span class="badge rounded-pill">
+        <strong>Listen</strong>
+      </span>
+    </li>
+    {{#each tracks as |track|}}
+      {{> trackPartial info=track}}
+    {{/each}}
+  </ul>
+</div>
