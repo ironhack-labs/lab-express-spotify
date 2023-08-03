@@ -1,0 +1,16 @@
+<div class="container mt-3 mb-3">
+    <div class="row">
+        {{#each items}}
+
+        <div class="col-md-4 mt-3">
+            <div class="card" style="width: 18rem;">
+                <img src="{{images.1.url}}" alt="{{name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <a href="/albums/{{id}}">View Albums</a>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
