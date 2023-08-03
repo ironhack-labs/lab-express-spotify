@@ -1,0 +1,11 @@
+<div class="container text-center row">
+    {{#each data.artist.items as |artist|}}
+    <div>
+        <h2>{{artist.name}}</h2>
+        <h2>{{artist.images}}</h2>
+            <img src="{{artist.images.2.url}}" alt="{{artist.name}}'s image" />
+            {{/if}}
+
+    </div>
+    {{/each}}
+</div>
