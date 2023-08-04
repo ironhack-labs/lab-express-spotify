@@ -1,8 +1,10 @@
-<div>
+<div class="tracks-background-div">
+  <div class="tracks-title-div"><p>Title</p><p>Listen</p></div>
   {{#each tracks}}
-    <div>
+    <div class="tracks-div">
       <p>{{this.name}}</p>
-      <audio controls><source src="{{this.preview_url}}" type="audio/mpeg">Not supported in your browser</audio>
+      <audio controls><source src="{{this.preview_url}}" type="audio/mpeg" />Not
+        supported in your browser</audio>
     </div>
   {{/each}}
 </div>

@@ -1,10 +1,8 @@
-<div class="artist-search-results-div">
+<div class="searched-result-background-div">
   {{#each artists}}
-    <div class="searched-artist-container">
-      <div class="searched-artist-img">
-        <img src="{{this.images.1.url}}" />
-      </div>
-      <div class="searched-artist-text-div">
+    <div class="searched-result-container-div">
+      <img src="{{this.images.1.url}}" />
+      <div class="searched-result-text-div">
         <p>{{this.name}}</p>
         <a href="/albums/{{this.id}}">View Albums</a>
       </div>

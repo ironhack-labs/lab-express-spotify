@@ -1,6 +1,9 @@
 body {
   margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Index Page CSS */
 
 .index-div {
   display: flex;
@@ -8,6 +11,7 @@ body {
   justify-content: center;
   align-items: center;
   min-height: 100vh;
+  height: 100vh;
   background-image: url("/images/spotify-background.jpeg");
   background-size: cover;
   background-repeat: no-repeat;
@@ -38,51 +42,72 @@ body {
   font-weight: bold;
 }
 
-.artist-search-results-div {
+/* Artist and Album Search Page CSS */
+
+.searched-result-background-div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-around;
-  align-items: center;
 }
 
-.searched-artist-container {
+.searched-result-container-div {
   display: flex;
   flex-direction: column;
-  height: 400px;
+  align-items: center;
+  height: 420px;
   width: 300px;
-  margin: 60px;
+  margin: 30px;
 }
 
-.searched-artist-img {
-  height: 100%;
+.searched-result-text-div {
+  font-size: 18px;
   width: 100%;
+  height: 100px;
+  text-align: center;
+  background-color: rgb(95, 95, 95);
+  color: white;
 }
 
-.searched-artist-text-div {
+.searched-result-text-div a {
+  text-decoration: none;
+  color: white;
+  background-color: red;
+}
+
+/* Tracks Page CSS */
+
+.tracks-background-div {
   display: flex;
   flex-direction: column;
-  align-self: flex-end;
-  justify-content: center;
+}
+
+.tracks-title-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
   align-items: center;
-  background-color: darkslategrey;
-  color: white;
-  width: 100%;
-  height: 100%;
-  margin: 0;
+  height: 80px;
+  margin: 0px 5px 0px 5px;
+  background-color: rgb(59, 59, 59);
 }
 
-.searched-artist-text-div p {
-    font-size: 18px;
+.tracks-title-div p {
+    color:white;
+    font-size: 24px;
+    margin: 15px;
 }
 
-.searched-artist-text-div a {
-    height: 20px;
-    width: 100px;
-    vertical-align: center;
-    text-align: center;
-    background-color: rgba(255, 0, 0, 0.8);
-    color: white;
-    text-decoration: none;
-    border-radius: 5px;
+.tracks-div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin: 0px 5px 5px 5px;
+    background-color: rgb(189, 189, 189);
+  }
+
+  .tracks-div p {
+    color:black;
+    font-size: 16px;
+    margin: 15px;
 }

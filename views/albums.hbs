@@ -1,9 +1,11 @@
-<div>
+<div class="searched-result-background-div">
   {{#each albums}}
-    <div>
+    <div class="searched-result-container-div">
       <img src="{{this.images.1.url}}"/>
+      <div class="searched-result-text-div">
       <p>{{this.name}}</p>
       <a href="/tracks/{{this.id}}">View Tracks</a>
+      </div>
     </div>
   {{/each}}
 </div>
