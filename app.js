@@ -34,9 +34,8 @@ app.get("/", (req, res) => {
 app.get("/artist-search", async (req, res) => {
   try {
     const { artist } = req.query;
-    searchedArtists = await spotifyApi.searchArtists(artist);
+    const searchedArtists = await spotifyApi.searchArtists(artist);
     const artists = searchedArtists.body.artists.items;
-    console.log(searchedArtists.body.artists.items)
     res.render("artist-search-results", { artists });
   } catch (error) {
     console.log("Error: ", error);
@@ -46,8 +45,8 @@ app.get("/artist-search", async (req, res) => {
 app.get("/albums/:artistId", async (req, res) => {
   try {
     const { artistId } = req.params;
-    let artistAlbums = await spotifyApi.getArtistAlbums(artistId);
-    let albums = artistAlbums.body.items;
+    const artistAlbums = await spotifyApi.getArtistAlbums(artistId);
+    const albums = artistAlbums.body.items;
     res.render("albums", { albums });
   } catch (error) {
     console.log("Error: ", error);
@@ -55,16 +54,15 @@ app.get("/albums/:artistId", async (req, res) => {
 });
 
 app.get("/tracks/:albumId", async (req, res) => {
-    try {
-      const { albumId } = req.params;
-      let albumTracks = await spotifyApi.getAlbumTracks(albumId);
-      console.log(albumTracks.body.items);
-      let tracks = albumTracks.body.items;
-      res.render("tracks", { tracks });
-    } catch (error) {
-      console.log("Error: ", error);
-    }
-  });
+  try {
+    const { albumId } = req.params;
+    const albumTracks = await spotifyApi.getAlbumTracks(albumId);
+    const tracks = albumTracks.body.items;
+    res.render("tracks", { tracks });
+  } catch (error) {
+    console.log("Error: ", error);
+  }
+});
 
 app.listen(3000, () =>
   console.log("My Spotify project running on port 3000 🎧 🥁 🎸 🔊")
