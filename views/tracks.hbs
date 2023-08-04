@@ -1,8 +1,8 @@
 <div>
   {{#each tracks}}
-  <div>
-    <img />
-    <p>{{this.name}}</p>
-  </div>
+    <div>
+      <p>{{this.name}}</p>
+      <audio controls><source src="{{this.preview_url}}" type="audio/mpeg">Not supported in your browser</audio>
+    </div>
   {{/each}}
 </div>

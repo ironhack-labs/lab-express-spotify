@@ -1,0 +1,88 @@
+body {
+  margin: 0;
+}
+
+.index-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+.index-search-form-div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 12rem;
+  width: 42rem;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.index-search-form {
+  height: 2rem;
+  width: 28rem;
+  margin: 1rem;
+}
+
+.index-search-button {
+  background-color: rgba(255, 0, 0, 0.5);
+  height: 2.5rem;
+  width: 10rem;
+  border: none;
+  color: white;
+  font-weight: bold;
+}
+
+.artist-search-results-div {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.searched-artist-container {
+  display: flex;
+  flex-direction: column;
+  height: 400px;
+  width: 300px;
+  margin: 60px;
+}
+
+.searched-artist-img {
+  height: 100%;
+  width: 100%;
+}
+
+.searched-artist-text-div {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+  justify-content: center;
+  align-items: center;
+  background-color: darkslategrey;
+  color: white;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+.searched-artist-text-div p {
+    font-size: 18px;
+}
+
+.searched-artist-text-div a {
+    height: 20px;
+    width: 100px;
+    vertical-align: center;
+    text-align: center;
+    background-color: rgba(255, 0, 0, 0.8);
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+}
