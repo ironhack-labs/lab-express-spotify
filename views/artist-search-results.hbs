@@ -1,0 +1,22 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/styles/style.css' />
+    <title>Artist</title>
+  </head>
+  <body>
+    <div class='div-all-search'>
+      {{#each artists}}
+        <div class='search'>
+          <img src='{{this.images.1.url}}' alt='' class='search-img' />
+          <div class='grey'>
+            <h1 class='search-heading'>{{this.name}}</h1>
+            <a href='/albums/{{this.id}}' class='search-a'>See Albums</a>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+
+  </body>
+</html>
