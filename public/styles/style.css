@@ -1,0 +1,162 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+}
+/* index */
+.div-search-artist {
+  background: url("/images/spotify-background.jpeg") no-repeat center
+    center/cover;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.div-search-artist-input-button {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.5);
+  width: 600px;
+  height: 200px;
+}
+
+.div-search-artist input {
+  height: 2rem;
+  width: 30rem;
+  font-size: 1rem;
+  padding-left: 15px ;
+}
+.div-search-artist button {
+  padding: 0.5rem;
+  width: 80px;
+  align-items: center;
+  background-color: rgb(177, 67, 95);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+}
+
+/* artists-search-results */
+
+.searched-artist {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  background-color: #5a5a5a;
+  margin: 20px;
+  height: 98%;
+}
+
+.div-all-searched-artists {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 0 50px;
+}
+
+.searched-artist-img {
+  width: 100%;
+}
+
+.searched-artist-heading {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.searched-artist-a {
+  padding: 0.5rem;
+  background-color: rgb(177, 67, 95);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+  position: relative;
+  margin: -20px -50px;
+  left: 50%;
+}
+
+/* albums */
+
+.searched-albums {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: white;
+  margin: 20px;
+  height: 95%;
+  background-color: #5a5a5a;
+}
+
+.div-all-searched-albums {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  margin: 0 50px;
+}
+
+.searched-album-img {
+  width: 100%;
+}
+
+.searched-album-heading {
+  font-size: 1.2rem;
+  margin: 20px 0;
+  text-align: center;
+}
+
+.searched-album-a {
+  padding: 0.5rem;
+  background-color: rgb(177, 67, 95);
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  text-align: center;
+  font-size: 1rem;
+  color: white;
+  text-decoration: none;
+}
+
+/* tracks */
+
+.searched-tracks-title-listen {
+  background-color: #5a5a5a;
+  display: flex;
+  justify-content: space-around;
+  color: lightgray;
+  height: 100px;
+  margin: 0 20px;
+  align-items: center;
+}
+
+.searched-tracks-ul-li {
+  display: flex;
+  justify-content: space-between;
+  margin: 5px 20px;
+  background-color: lightgray;
+  align-items: center;
+  height: 80px;
+}
+
+.searched-tracks-heading {
+  margin-left: 30px;
+}
+
+.searched-tracks-audio {
+  margin-right: 30px;
+}
+

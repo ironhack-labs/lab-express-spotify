@@ -1,0 +1,21 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/styles/style.css" />
+  </head>
+  <body>
+   
+    <div class="div-all-searched-albums">
+
+      {{#each searchedAlbums}}
+        <div class="searched-albums">
+          <img class="searched-album-img" src="{{this.images.0.url}}" />
+          <h1 class="searched-album-heading">{{this.name}}</h1>
+          <a class="searched-album-a" href="/tracks/{{this.id}}">View Tracks</a>
+        </div>
+      {{/each}}
+    </div>
+  </body>
+</html>
