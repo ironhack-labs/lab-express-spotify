@@ -1,0 +1,18 @@
+<div>
+     <h1>TRACKS</h1> 
+       <button class="search-btn" type="submit">
+        <a href="/">Back to home</a>
+        </button>
+</div>
+
+<div class="results-box">
+    {{#each tracks}}
+        <div class="track-el">
+        <ul>
+          <li><h3 class="track-title">{{name}}</h3></li>
+          <li> <audio controls preload="auto" src="{{preview_url}}"></audio> </li>
+        </ul>
+      </div> 
+
+      {{/each}}
+    </div>
