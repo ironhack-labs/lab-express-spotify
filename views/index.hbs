@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+</head>
+<body>
+        <div class="div-search-beers">
+        <h1 class="home-title">Spot Your Artist!</h1>
+        <div id = "form">
+        <form action="/artist-search" method="GET"> <!--The form redirects you for the beer page of the beer you're searching (it gets you the searched beer-->
+            <input type="text" name="artist" placeholder="Artist name"> <!--beer is the name of the field, placeholder appears in the place where you write the beer name you want to search-->
+             <button type="submit">Search for an artist</button><!--type is submit because we use the button to submit info-->
+        </form>
+        </div>
+    </div>
+</body>
+</html>
