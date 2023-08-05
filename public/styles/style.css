@@ -55,9 +55,14 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 420px;
+  height: 380px;
   width: 300px;
   margin: 30px;
+}
+
+.searched-result-container-div img {
+  height: 300px;
+  width: 300px;
 }
 
 .searched-result-text-div {
@@ -67,6 +72,7 @@ body {
   text-align: center;
   background-color: rgb(95, 95, 95);
   color: white;
+  font-size: 16px;
 }
 
 .searched-result-text-div a {
@@ -93,21 +99,21 @@ body {
 }
 
 .tracks-title-div p {
-    color:white;
-    font-size: 24px;
-    margin: 15px;
+  color: rgb(209, 208, 208);
+  font-size: 24px;
+  margin: 15px;
 }
 
 .tracks-div {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    margin: 0px 5px 5px 5px;
-    background-color: rgb(189, 189, 189);
-  }
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 0px 5px 5px 5px;
+  background-color: rgb(189, 189, 189);
+}
 
-  .tracks-div p {
-    color:black;
-    font-size: 16px;
-    margin: 15px;
+.tracks-div p {
+  color: black;
+  font-size: 16px;
+  margin: 15px;
 }
