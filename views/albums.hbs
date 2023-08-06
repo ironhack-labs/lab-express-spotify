@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Albums</title>
+</head>
+<body>
+    {{#each allAlbums}} 
+    <div class="album-search-result">
+            <h1 class="searched-album-heading">{{name}}</h1>
+            <img class="album-search-result-img" src="{{images.0.url}}">
+            <a class="album-search-result-a" href="/tracks/{{id}}">see more</a>
+    </div>
+{{/each}}
+</body>
+</html>
