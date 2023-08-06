@@ -58,7 +58,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 360px;
+  height: 400px;
   width: 300px;
   margin: 40px;
 }
@@ -93,7 +93,7 @@ body {
   flex-direction: column;
 }
 
-.tracks-title-div {
+.tracks-header-div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -103,22 +103,29 @@ body {
   background-color: rgb(59, 59, 59);
 }
 
-.tracks-title-div p {
+.tracks-header-div p {
   color: rgb(209, 208, 208);
   font-size: 24px;
   margin: 15px;
 }
 
-.tracks-div {
+.track-div {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: center;
   margin: 0px 5px 5px 5px;
   background-color: rgb(189, 189, 189);
 }
 
-.tracks-div p {
+.track-div p {
   color: black;
   font-size: 16px;
   margin: 15px;
+}
+
+.track-div audio {
+  width: 300px;
+  height: 36px;
+  margin: 5px;
 }
