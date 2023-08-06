@@ -1,0 +1,15 @@
+{{!< layout }}
+
+<div class="container">
+    <h1>{{artist.name}} Albums</h1>
+    {{#each albums.items}}
+    <div class="album-card">
+        <div class="album-image">
+            <img src="{{images.[0].url}}" alt="{{name}} Album Cover">
+        </div>
+        <h2 class="album-name">{{name}}</h2>
+        <a href="/tracks/{{id}}" class="view-tracks-link">View Tracks</a>
+    </div>
+    {{/each}}
+</div>
+
