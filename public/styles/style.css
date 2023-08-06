@@ -1,0 +1,183 @@
+body {
+    background-color: rgba(0, 0, 0, 0.897);
+    color: white;
+    margin: 0;
+    font-family: 'Circular Spotify Text Black', sans-serif;
+    
+}
+
+#index-div{
+    display: flex;
+    background-image: url(/images/spotify-background.jpeg);
+    height: 100vh;
+    width: 100vw;
+    background-size: cover;
+    justify-content: center;
+    align-items: center;
+}
+
+#index-div form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 45%;
+    background-color: rgba(255, 255, 255, 0.603);
+    padding: 90px 0;
+}
+
+#index-div form input{
+    padding: 8px;
+    width: 50%;
+    align-items: center;
+    display: block;
+    margin: 10px auto;
+}
+
+#index-div form button{
+    background-color: rgb(214, 95, 95);
+    border: none;
+    color: white;
+    padding: 10px;
+    margin-top: 6px;
+    font-size: 18px;
+}
+
+#artists-div{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+#artist-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 90px;
+}
+
+#artist-box h1{
+    font-size: 30px;
+    margin: 4px;
+}
+
+#artist-box img{
+    height: 400px;
+    width: 400px
+}
+
+#artist-box-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30 215 96);
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+#artist-box-container a{
+    background-color: rgb(214, 95, 95);
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#albums-div{
+    display: flex;
+    height: 100%;
+    width: 100%;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 80px;
+    box-sizing: border-box;
+}
+
+#album-box{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 90px;
+}
+
+#album-box h1{
+    font-size: 30px;
+    margin: 4px;
+}
+
+#album-box img{
+    height: 400px;
+    width: 400px
+}
+
+#album-box-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(30 215 96);
+    width: 400px;
+    margin-bottom: 40px;
+}
+
+#album-box-container a{
+    background-color: rgb(214, 95, 95);
+    border: none;
+    color: white;
+    padding: 7px 10px;
+    margin-top: 6px;
+    font-size: 14px;
+    text-decoration: none;
+    border-radius: 7px;
+    margin-bottom: 10px;
+    margin-top: 0;
+}
+
+#album-title{
+    text-align: center;
+    padding-top: 30px;
+    margin-bottom: 0;
+}
+
+#tracks-div{
+    display: flex;
+    flex-direction: column;
+}
+
+#track-box{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.705);
+    margin: 0 20%;
+}
+
+#track-box audio{
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+#track-box audio::-webkit-media-controls-panel{
+    background-color: rgba(30 215 96);
+}
+
+#tracks-title{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    background-color: rgba(30 215 96);
+    padding-right: 5%;
+    color: black;
+}
