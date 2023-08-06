@@ -1,0 +1,159 @@
+ .index {
+    margin: 0;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+}
+.search-artist{
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.search-artist input{
+    height: 2rem;
+    width: 32rem;
+    border-radius: 5px;
+}
+
+.search-artist button{
+    padding: 0.5rem 2rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(215, 76, 76);
+    color:antiquewhite;
+
+}
+.search-artist button:hover {
+   background-color: brown;
+}
+
+/*searched artist*/
+.artist-body {
+    background-color: rgb(245, 238, 229);
+}
+
+.div-searched-artist {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+    
+}
+
+.searched-artist {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.searched-artist-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.searched-artist-heading {
+    margin: 10px;
+    color: rgb(65, 63, 63);
+    text-transform: uppercase;
+}
+
+.searched-artist-a  {
+    margin-bottom: 10px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(215, 76, 76);
+    color:antiquewhite;
+    text-decoration: none;
+}
+.searched-artist-a:hover {
+    background-color: brown;
+}
+
+/*albums*/
+.body-albums{
+    background-color: rgb(245, 238, 229);
+
+}
+
+.div-searched-album{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    
+}
+
+.searched-album {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 20px 10px;
+}
+
+.searched-album-img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+.searched-album-heading{
+    margin: 10px;
+    color: rgb(46, 49, 60);
+    text-transform: uppercase;
+}
+
+.searched-album-a {
+    margin-bottom: 10px;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: rgb(215, 76, 76);
+    color:antiquewhite;
+    text-decoration: none;
+}
+.searched-album-a:hover {
+    background-color: brown;
+}
+.tracks-header {
+    display: flex;
+    margin: 10px 0;
+    background-color: rgb(68, 62, 62);
+    border-radius: 3px;
+    color: rgb(218, 212, 206);
+    justify-content: space-between;
+    padding: auto 1rem;
+}
+.title {
+    margin-left: 15px;
+}
+.listen {
+    margin-right: 150px;
+}
+
+.tracks-play-div {
+    display: flex;
+    justify-content: space-between;
+    background-color: lightgrey;
+    padding: auto 1rem;
+    margin: 10px 0;
+}
+.tracks-name {
+    margin-left: 15px
+}
+audio {
+    margin-right: 15px
+}

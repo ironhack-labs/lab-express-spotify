@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="/styles/style.css">
+  <title>Traciks</title>
+</head>
+<body>
+  
+</body>
+</html>
+<div class="tracks-header">
+  <h2 class="title">Title</h2>
+  <h2 class="listen">Listen</h2>
+</div>
+<div class="tracks-div">
+  {{#each searchedTracks}}
+  <div class="tracks-play-div">
+   <p class="tracks-name">{{this.name}} </p>
+    <audio controls src="{{this.preview_url}}" type="audio/mpeg">
+      <a href="{{this.preview_url}}">Play preview</a>
+    </audio>
+   </div>
+   
+  {{/each}}
+</div>
