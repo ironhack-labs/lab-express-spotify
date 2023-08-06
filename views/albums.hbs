@@ -1,0 +1,21 @@
+
+{{!--------------------------2023_07 SOLVED SECOND TIME ---------------------}}
+
+<div class="container col m-1">
+    <div class="row">
+    <div class="col text-center">
+        <h2>Albums</h2>
+        <div class="d-flex justify-content-center row text-center">
+            {{#each albums}}
+            <div class="card m-1 " style="width: 18rem;">
+                <img src="{{this.images.1.url}}" class="card-img-top" alt="{{this.name}} album">
+                <div class="card-body">
+                    <h5 class="card-title">{{this.name}}</h5>
+                    <a href="/tracks/{{this.id}}" class="btn btn-dark">View Tracks</a>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+    </div>
+</div>

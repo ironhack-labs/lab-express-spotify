@@ -1,0 +1,92 @@
+/*
+------------------------2023_07 SOLVED SECOND TIME------------------------------------------ */
+
+.index {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    justify-content: center;
+    height:100vh;
+    width: 100vw;
+}
+
+.form-container {
+    display: flex;
+    background-color: rgba(255,255,255, 0.5);
+    height: 20vh;
+    width: 40vw;
+    flex-direction: row;
+    justify-content: center;
+    align-items:center;
+    margin-top: 30vh;
+    border-radius: 10px;
+}
+
+.tracks {
+    background-color: #f1f3f4;
+}
+
+figcaption {
+    font-weight: 600;
+    font-size: large;
+    font-stretch: expanded;
+}
+
+body{
+
+    background: #d1d5db;
+}
+
+.height{
+
+    height: 100vh;
+}
+
+.form{
+
+    position: relative;
+}
+
+.form .fa-search{
+
+    position: absolute;
+    top:20px;
+    left: 20px;
+    color: #9ca3af;
+
+}
+
+.form span{
+
+        position: absolute;
+    right: 17px;
+    top: 13px;
+    padding: 2px;
+    border-left: 1px solid #d1d5db;
+
+}
+
+.left-pan{
+    padding-left: 7px;
+}
+
+.left-pan i{
+   
+   padding-left: 10px;
+}
+
+.form-input{
+
+    height: 55px;
+    text-indent: 33px;
+    border-radius: 10px;
+}
+
+.form-input:focus{
+
+    box-shadow: none;
+    border:none;
+}

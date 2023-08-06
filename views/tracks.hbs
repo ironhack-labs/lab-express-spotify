@@ -1,0 +1,24 @@
+
+
+{{!--------------------------2023_07 SOLVED SECOND TIME ---------------------}}
+
+<div class="w-100 d-flex">
+    <div class="col-12">
+        <div class="row bg-dark text-white d-flex justify-content-around">
+            <h2>Title</h2>
+            <h2>Listen</h2>
+        </div>
+        <div>
+            {{#each tracks}}
+            <div class="mb-1 tracks">
+                <figure class="d-flex justify-content-around m-1">
+                    <figcaption class="d-flex justify-content-start col-6">{{this.name}}</figcaption>
+                    <audio class="d-flex justify-content-end col-6" controls src="{{this.preview_url}}">
+                    </audio>
+                </figure>
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</div>
+
