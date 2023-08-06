@@ -1,0 +1,16 @@
+<div class="searched-result-background-div">
+  {{#each artists}}
+    <div class="searched-result-container-div">
+      <img src="{{this.images.1.url}}" />
+      <div class="searched-result-text-div">
+        <p>{{this.name}}</p>
+        <button
+          class="searched-result-button"
+          onclick="location.href='/albums/{{this.id}}'"
+          type="button"
+        >View Albums
+        </button>
+      </div>
+    </div>
+  {{/each}}
+</div>
