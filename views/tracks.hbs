@@ -1,0 +1,20 @@
+{{!< layout }}
+
+<div class="container">
+    {{#each tracks}}
+    <div class="track-card">
+        <div class="track-image">
+            <img src="{{album.images.[0].url}}" alt="{{name}} Track Cover">
+        </div>
+        <h2 class="track-name">{{name}}</h2>
+        {{#if preview_url}}
+        <audio controls>
+            <source src="{{preview_url}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+        </audio>
+        {{else}}
+        <p>No preview available.</p>
+        {{/if}}
+    </div>
+    {{/each}}
+</div>

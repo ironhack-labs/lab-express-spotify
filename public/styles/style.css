@@ -1,0 +1,73 @@
+/* Reset some default browser styles */
+html, body, h1, h2, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background image for the body */
+body {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    font-family: Arial, sans-serif;
+    color: white;
+    text-align: center;
+    padding: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Style the main content */
+.container {
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.artist-card, .album-card, .track-card {
+    background-color: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    margin: 10px;
+    max-width: 300px;
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-image, .album-image, .track-image {
+    margin-bottom: 10px;
+}
+
+.artist-image img, .album-image img, .track-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.artist-name, .album-name, .track-name {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.view-albums-link, .view-tracks-link {
+    color: #1DB954;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: auto;
+}
+
+/* Style the footer */
+footer {
+    background-color: rgba(0, 0, 0, 0.7);
+    padding: 10px 0;
+    width: 100%;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+}
+
+footer p {
+    font-size: 14px;
+}
