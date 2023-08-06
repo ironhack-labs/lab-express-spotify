@@ -1,0 +1,29 @@
+
+body {
+    margin: 0;
+}
+
+.div-search-artists {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; /* This elemente added in order to center the .div-search-beers h1*/
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-repeat: none;
+    height: 100vh;
+    color: white;
+
+}
+
+
+.div-search-artists input button {
+    padding: 0.5rem 2rem; 
+    background-color: rgb(251, 251, 251);
+    border: none;
+    cursor: pointer;
+    color: white;
+   
+
+}
