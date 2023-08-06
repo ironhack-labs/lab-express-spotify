@@ -1,0 +1,18 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searched Artist</title>
+</head>
+<body>
+    {{#each artist}} 
+    <div class="artist-search-result">
+            <h1 class="searched-artist-heading">{{name}}</h1>
+            <img class="artist-search-result-img" src="{{images.0.url}}">
+            <a class="artist-search-result-a" href="/albums/{{id}}">see more</a>
+    </div>
+{{/each}}
+</body>
+</html>
