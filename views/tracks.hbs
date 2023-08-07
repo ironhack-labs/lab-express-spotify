@@ -1,0 +1,14 @@
+  <div class="div-tracks">
+        {{#each tracks}}
+      <h1 class="specific-track-heading">{{this.name}}</h1>
+      {{!-- <a class="specific-track-button" href="{{this.preview_url}}"/> --}}
+<audio controls>
+  <source src="{{preview_url}}" type="audio/mpeg" />
+  <p>
+    Download <a href="myAudio.mp3">MP3</a> or
+    <a href="myAudio.ogg">OGG</a> audio.
+  </p>
+</audio>
+
+      {{/each}}
+    </div>
