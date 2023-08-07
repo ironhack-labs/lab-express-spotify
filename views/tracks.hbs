@@ -1,0 +1,19 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+      {{#each tracksFound}}
+        <h1>{{name}}</h1>
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/mpeg" />
+          Your browser does not support the audio element.
+        </audio>
+        {{! Questionar isto!! }}
+      {{/each}}
+    </div>
+  </body>
+</html>
