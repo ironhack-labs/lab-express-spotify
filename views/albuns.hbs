@@ -1,0 +1,16 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div>
+        {{#each albunsFound}}
+        <h1>{{name}}</h1>
+        <img src="{{images.0.url}}" alt=""/>
+        <a href="/tracks/{{id}}">Search More</a>
+        {{/each}}
+    </div>
+  </body>
+</html>
