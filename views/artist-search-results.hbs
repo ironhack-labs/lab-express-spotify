@@ -1,0 +1,28 @@
+{{!-- The purpose of this file is to display the found artists' information. It will show the name, image, and button/link for each artist.  --}}
+
+
+{{!--  
+In the each statement, it should reference the variable (bananas) in the render part of the route. See bottom of the page for a reference of the route.
+Using an each statement allows us to iterate through the bananas array and grab information from the object
+
+--}}
+ 
+  <body>
+    <div class="div-specific-artist">
+        {{#each bananas}}
+      <h1 class="specific-artist-heading">{{this.name}}</h1>
+      <img class="specific-artist-img" src={{this.images.0.url}} />
+      <a class="specific-artist-button" href="/albums/{{this.id}}">View Albums</a> 
+      {{/each}}
+    </div>
+
+
+{{!-- 
+app.get("/artist-search", async (req,res) => {
+try {
+     let allSearchedArtist= await spotifyApi.searchArtists(req.query.artist);
+      console.log('The received data from the API: ', allSearchedArtist.body.artists.items);
+  res.render("artist-search-results",{
+    bananas: allSearchedArtist.body.artists.items
+  });
+} --}}

@@ -1,0 +1,12 @@
+{{!-- This provides the format for the homepage then directs the user (directs its query) to a url ending in /artist-search after they submit the button. Uses GET method rather than PUSH to retrieve data --}}
+        <div class="div-search-artist">
+        <form action="/artist-search", method="GET">
+            <input type="text" name="artist" placeholder="Artist Here">
+            <button type="submit">Search for an Artist</button>
+        </form>
+    </div>
+{{!-- 
+    1. Using form allows us to create a search page 
+    2. The name attribute in input must equal the parameter being used in req.query in the route. We used "artist" here because the parameter is defined using req.query.artist 
+    3.
+    --}}
