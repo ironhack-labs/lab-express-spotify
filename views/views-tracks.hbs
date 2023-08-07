@@ -1,0 +1,21 @@
+<style>
+  #Albums-List{  text-align: center; } 
+  button{margin-bottom: 20px;}
+</style>
+<body>
+  <div id="Albums-List">
+     <h1>List of tracks</h1>
+      {{#each tracks}}
+        <div>
+          <h2>{{name}}</h2>
+          <div>
+            <audio controls>
+              <source src="{{preview_url}}" type="audio/mpeg">
+              Your browser does not support the audio element.
+            </audio>
+          </div>
+        </div>
+      {{/each}}
+    </div>
+  </div>
+</body>

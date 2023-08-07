@@ -1,0 +1,28 @@
+
+body{
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-size: auto;
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+}
+  #homepage {
+    width: 20% "vw";
+  }
+  
+  #search-button {
+    width: auto;
+    flex-wrap: wrap-reverse;
+  }
+  .artist-layout{
+    flex: 0 0 200px;
+    margin: 10px;
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 6px 0px  rgba(0,0,0,0.3);
+  }
+  .cards {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+  }
