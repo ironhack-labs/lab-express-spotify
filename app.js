@@ -39,13 +39,13 @@ app.get("/", (req, res,) => {
   
     spotifyApi
       .searchArtists(newestArtist) 
-      //we use the spotifyApi method search artist adn pass it my newestArtist query
+      
       .then((data) => {
         //we receive the array with objects
         console.log("The received data from the API: ", data.body.artists.items); //we see the array in the console and start navigating until getting the LPs
         res.render("artist-search-results", data.body.artists.items);
   
-        // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
+        
       })
       .catch((err) =>
         console.log("The error while searching artists occurred: ", err)
