@@ -1,0 +1,7 @@
+<div class="div-your-searched-artists">
+  {{#each bananas}}
+    <h1 class="searched-artists-heading">{{this.name}}</h1>
+    <img class="searched-artists-img" src={{this.images.0.url}} />
+    <a class="searched-artists-a" href="/albums/{{this.id}}">View Albums</a>
+  {{/each}}
+</div>
