@@ -1,0 +1,7 @@
+{{#each albums as |album|}}
+<section>
+    <img src="{{album.images.0.url}}" />
+    <p>{{album.name}}</p>
+    <a href="/tracks/{{album.id}}">View Tracks</a>
+</section>
+{{/each}}
