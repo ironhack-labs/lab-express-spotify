@@ -1,0 +1,9 @@
+.home {
+    height: 100vh;
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+}
+
+.home input {
+width: 400px;
+}

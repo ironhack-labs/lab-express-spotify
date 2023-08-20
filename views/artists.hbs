@@ -1,0 +1,8 @@
+<a href="/">Volver</a>
+{{#each artists as |artist|}}
+<section>
+    <img src="{{artist.images.0.url}}"/>
+    <p>{{artist.name}}</p>
+    <a href="/albums/{{artist.id}}">View Albums</a>
+</section>
+{{/each}}
