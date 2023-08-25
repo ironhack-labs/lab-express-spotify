@@ -1,0 +1,20 @@
+<h1>List of corresponding artists on Spotify</h1>
+
+{{#if artistsResults}}
+
+  {{#each artistsResults}}
+    <section class="artists-list">
+      <h2>{{this.name}}</h2>
+      <img src="{{images.1.url}}" style="max-width:320px" /><br />
+      <a href="/albums/{{this.id}}" style="color :black;">See the albums from
+        {{this.name}}</a>
+
+      <hr />
+    </section>
+  {{/each}}
+
+{{else}}
+
+  <p>Sorry, no artists matching your criterias</p>
+
+{{/if}}

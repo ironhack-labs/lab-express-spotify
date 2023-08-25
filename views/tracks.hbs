@@ -1,0 +1,15 @@
+<h1>List of the tracks</h1>
+
+{{#each tracksList}}
+  <div>
+    <p>{{this.name}}</p><br />
+    {{#if this.preview_url}}
+      <audio controls src="{{this.preview_url}}"></audio>
+    {{else}}
+      <p>This track has no preview available</p>
+    {{/if}}
+
+    <hr />
+  </div>
+
+{{/each}}
