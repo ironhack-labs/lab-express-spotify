@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Album Tracks</title>
+</head>
+<body>
+    <h1>Tracks for {{ albumName }}</h1>
+    <ul>
+        {{#each tracks}}
+            <li>
+                {{ this.name }}
+                <audio controls>
+                    <source src="{{ this.preview_url }}" type="audio/mpeg">
+                    Your browser does not support the audio element.
+                </audio>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>

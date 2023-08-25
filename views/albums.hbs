@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artist Albums</title>
+</head>
+<body>
+    <h1>Albums for {{ artistName }}</h1>
+    <ul>
+        {{#each albums}}
+            <li>
+                <img src="{{ this.images[0].url }}" alt="{{ this.name }}" width="100">
+                {{ this.name }}
+                <a href="/tracks/{{ this.id }}">View Tracks</a>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
