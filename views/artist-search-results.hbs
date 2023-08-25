@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artist Search Results</title>
+</head>
+<body>
+    <h1>Search Results for "{{ searchQuery }}"</h1>
+    <ul>
+        {{#each artists}}
+            <li>
+                <img src="{{ this.images[0].url }}" alt="{{ this.name }}" width="100">
+                {{ this.name }}
+                <a href="/albums/{{ this.id }}">View Albums</a>
+            </li>
+        {{/each}}
+    </ul>
+</body>
+</html>
+
+
+

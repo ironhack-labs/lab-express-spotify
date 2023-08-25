@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Artist Search Results</title>
+</head>
+<body>
+    <h1>Search Results for <%= searchQuery %> </h1>
+    <ul>
+        <% artists.forEach(artist => { %>
+            <li><%= artist.name %></li>
+        <% }); %>
+        
+    </ul>
+</body>
+</html>
