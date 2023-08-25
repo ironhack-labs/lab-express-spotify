@@ -1,0 +1,35 @@
+html {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#artistResult, #albumsByArtist{
+    display: flex;
+    gap:20px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.artistItem, .albumItem {
+    padding: 20px;
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+}
+
+#tracksByAlbum {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin-left: 150px;
+    margin-right: 150px;
+    padding: 30px;
+}
+
+.trackItem {
+    display: flex;
+    align-items: center;
+    justify-content:space-between;
+    border: solid black;
+    padding-left: 15px
+}

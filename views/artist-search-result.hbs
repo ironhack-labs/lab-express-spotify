@@ -1,0 +1,15 @@
+<h1>Search result</h1>
+
+
+
+
+<section id="artistResult">
+{{#each artistList}}
+<div class="artistItem">
+    <h3>{{name}}</h3>
+    <img src="{{images.1.url}}" alt="">
+    <a href="/albums/{{this.id}}">View Albums</a>
+</div>
+{{/each}}
+<h3>end of results</h3>
+</section>

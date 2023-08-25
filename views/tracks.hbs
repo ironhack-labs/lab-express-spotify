@@ -1,0 +1,19 @@
+<h1>This Album's Tracks</h1>
+
+<section id="tracksByAlbum">
+{{#each albumTracks}}
+<div class="trackItem">
+    <h3>{{name}}</h3>
+    <audio src="{{preview_url}}">listen</audio>
+
+    <figure>
+  <figcaption>Listen:</figcaption>
+  <audio controls src="{{preview_url}}">
+    <a href="{{preview_url}}"> Download audio </a>
+  </audio>
+</figure>
+
+</div>
+{{/each}}
+<h3>end of results</h3>
+</section>
