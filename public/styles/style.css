@@ -90,19 +90,6 @@ body {
     margin-bottom: 10px;
 }
 
-.result-name {
-    color: aliceblue;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    position: absolute;
-    bottom: 20px;
-    width: 100%;
-    padding: 5px;
-    text-align: center;
-    color: aliceblue;
-    margin-top: 10px;
-}
-
-
 
 h2 {
     text-align: center;
