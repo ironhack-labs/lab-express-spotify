@@ -1,0 +1,10 @@
+<h1 id="search-title">Albums</h1>
+
+{{#each albumList}}
+<span class="artists-list">
+	<a href="/tracks/{{this.id}}" id="album-link">
+	<h2 id="artist-name">{{this.name}}</h2>
+	<img src="{{images.0.url}}" id="album-cover"/>
+	</a>
+</span>
+{{/each}}
