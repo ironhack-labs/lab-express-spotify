@@ -1,0 +1,137 @@
+body {
+    background-color: #8FBC8B;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+#home-style {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+}
+
+#search-h1 {
+    text-align: center;
+    font-size: 60px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-top: 200px;
+
+}
+
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.search-bar {
+    width: 600px;
+    padding: 10px;
+    margin-bottom: 10px;
+    border-radius: 10px;
+}
+
+
+
+.button {
+    padding: 8px 24px;
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #fff;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    bottom: 0;
+    
+}
+
+#search-button {
+    background-color: #2F4F4F;
+}
+
+#album-button, #track-button {
+    background-color: #808080;
+    color: #fff;
+}
+
+
+
+.container {
+    padding: 150px;
+    padding-top: 80px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.result {
+
+    padding: 40px;
+    position: relative;
+    margin-left: 50px;
+    margin-right: 50px;
+    background-color: #2F4F4F;
+    margin-top: 0px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border-radius: 10px;
+}
+
+.result img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+
+h2 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    margin-top: 30px;
+    margin-bottom: 0px;
+    padding: 30px;
+    background-color: #2F4F4F;
+    border-radius: 10px;
+}
+
+h4 {
+    text-align: center;
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue;
+    margin-top: 30px;
+}
+
+.audio-display {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 10px;
+    padding-right: 10px;
+    border: 2px solid #2F4F4F; 
+    width: 80%;
+    margin: 10px;
+    background-color: #808080;
+    border-radius: 10px;
+}
+
+#songs {
+    margin-bottom: 20px;
+}
+
+h3 {
+    text-align: center;
+    font-size: 30px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: aliceblue; 
+}

@@ -1,0 +1,22 @@
+<h2>Albums</h2>
+<div class="container">
+    {{#if albums}}
+    {{#each albums}}
+    <div class="result">
+        
+        <div>
+            <h4 >{{name}}</h4>
+        </div>
+        <img src={{images.[1].url}} alt="">
+        <button class="button" id="track-button">
+            <a class="button" href="/track/{{id}}">View Albums</a>
+        </button>
+    </div>
+
+    {{/each}}
+
+    {{else}}
+    <h3>Sorry, no results found</h3>
+
+    {{/if}}
+</div>
