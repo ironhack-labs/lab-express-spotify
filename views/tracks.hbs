@@ -1,0 +1,9 @@
+<h1 id="search-title">Tracks</h1>
+
+{{#each tracksList}}
+<span>
+	<p>{{this.name}}</p><br />
+	<audio controls src="{{this.preview_url}}"></audio>
+</span>
+
+{{/each}}

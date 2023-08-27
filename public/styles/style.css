@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+#background-image {
+    width: 100vw;
+    height: auto;
+    position: relative;
+    display: inline;
+    overflow: hidden;
+}
+#form {
+    background-color: rgba(194, 165, 131, 0.563);
+    position: absolute;
+    top: 30vh;
+    left: 35vw;
+    padding: 6vh 10vw;
+}
+#search-title {
+    margin-bottom: 3rem;
+    text-align: center;
+    font-size: 3rem;
+}
+.artists-list {
+    box-sizing: border-box;
+    width: 10vw;
+    text-align: center;
+    margin: 3rem;
+}
+
+#album-cover {
+    height: 40vh;
+    margin-bottom: 5rem;
+}
+#album-link {
+    display: inline-block;
+    text-decoration: none;
+    color: black;
+    position: relative;
+}
+#artist-name {
+    background-color: rgba(255, 255, 255, 0.701);
+    position: absolute;
+    width: 17vw;
+    text-align: center;
+}
