@@ -13,7 +13,6 @@ body {
     background-image: url("/images/spotify-background.jpeg");
     background-size: cover;
     background-position: center;
-    font-family: Arial, sans-serif;
     display: flex;
     justify-content: center;
     align-items: center;
