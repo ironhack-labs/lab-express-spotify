@@ -1,0 +1,46 @@
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    
+    
+    
+    
+}
+
+
+
+.container-item {
+
+height: 40vh;
+width: 30vw;
+margin: 10px;
+border: solid;
+border-width: 1px;
+border-color: black;
+text-align: center;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: space-around;
+
+}
+
+img{
+    
+    max-height: 25vh;
+
+    
+}
+
+#homepage{
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: 100vw;
+}
+
+.search{
+    position: absolute;
+    top: 50vh;
+    left: 40vw;
+}
