@@ -1,0 +1,13 @@
+<div class="artists-header">All results for searching term: <span class="search-term">{{artistName}}</span> </div>
+
+  {{#each artistsData}}
+    <section id="section-artist-search">
+      <div class="album-container">
+        {{#if this.image}}
+          <img src="{{this.image.url}}" alt="{{this.name}} Image" />
+        {{/if}}
+        <h2 class="artist-title"> {{this.name}}</h2>
+        <a class="show-album" href="/albums/{{this.id}}">Show Albums</a>
+      </div>
+    </section>
+  {{/each}}
