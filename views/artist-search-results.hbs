@@ -1,0 +1,25 @@
+<section class="artist-search">
+  {{#each listOfArtists}}
+    <div class="one-artist">
+      {{#if this.images.1.url}}
+        <img
+          src="{{this.images.1.url}}"
+          alt="artist image"
+          style="width: 300px; height: 300px"
+        />
+      {{else}}
+        <img
+          src="/images/no_image_available.png"
+          alt="artist image"
+          style="width: 300px; height: 300px"
+        />
+      {{/if}}
+      <h3>{{this.name}}</h3>
+      <form method="GET" action="/albums/{{this.id}}">
+        <button type="submit">View Albums</button>
+      </form>
+    </div>
+
+  {{/each}}
+
+</section>
