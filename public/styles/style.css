@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand&display=swap');
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    font-family: 'Quicksand', sans-serif;
+}
+
+#background-img {
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-container {
+    background-color: rgba(248, 241, 241, 0.5); /* Semi-transparent black background */
+    padding: 70px;
+    box-shadow: 0 0 10px white(0, 0, 0, 0.3); /* Add a subtle shadow */
+    width: 500px;
+}
+
+.center-content {
+    text-align: center;
+}
+
+.center-content input[type="text"] {
+    font-size: 16px;
+    width: 100%;
+    padding: 5px;
+    margin-bottom: 10px;
+    border: 1px solid rgb(191, 191, 191);
+    height: 40px;
+    border-radius: 5px;
+    outline: none;
+}
+
+.center-content button {
+    padding: 10px 30px;
+    background-color: #db4c4c;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+
+.artist-search, .albums-results {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 10px 100px;
+}
+
+
+.artist-search button, .one-album button{
+    padding: 10px 30px;
+    background-color: #db4c4c;
+    border: none;
+    color: white;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.one-album img {
+    width: 100%;
+    height: auto;
+}
+
+.one-artist, .one-album {
+    margin: 10px 30px;
+    width: 300px;
+    text-align: center;
+    background-color: rgb(66, 65, 65);
+}
+
+.one-artist h3, .one-album h3 {
+    color: white;
+    margin: 5px;
+    text-align: center;
+    /* max-width: 200px; */
+    /* padding-left: 40px;  */
+}
+
+
+h2 {
+    margin-top: 20px;
+    text-align: center;
+}
+
+
+.fixed-header {
+    font-size: 20px;
+    color: white;
+    position:fixed;
+    background-color: rgb(66, 65, 65);
+    width: 1420px;
+    height: 100px;
+    margin: 0px 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000; 
+
+}
+
+
+#listen {
+    margin-right: 200px ;
+}
+
+.tracks {
+    margin: 50px;
+    top: 100px;
+    background-color:  rgb(249, 249, 249);
+    padding: 5px;
+    
+}
+
+.tracks li {
+margin-bottom: 10px;
+display: flex;
+justify-content: space-between;
+}
+
+.track-name {
+    font-weight: bold;
+padding-top: 20px;
+}
+
+.content-section {
+padding-top: 80px;
+}
+
+hr {
+    border: none;
+    border-top: 1px solid #ccc;
+    margin: 10px 0;
+}
