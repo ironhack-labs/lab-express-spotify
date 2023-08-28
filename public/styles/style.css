@@ -1,0 +1,48 @@
+#image-bg-section {
+    background-image: url('../images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+#white-div {
+    background-color: rgba((255), 255, 255, 0.2);
+    padding: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+input {
+    height: 40px;
+    width: 100%;
+    border-radius: 8px;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+button {
+    height: 48px;
+    width: 100%;
+    background-color: black;
+    border-color: none;
+    border-radius: 20px;
+    color: white;
+}
+
+form {
+    width: 320px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+}

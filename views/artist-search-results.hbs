@@ -1,0 +1,21 @@
+
+<section>
+    <h1>Search results</h1>
+
+    {{#if artists}}
+        <ul>
+        {{#each artists}}
+        <li>
+            <h2> {{this.name}} </h2>
+            {{#if this.images.[0]}}
+            <img src="{{this.images.[0].url}}" width="240px">
+            {{/if}}
+            <button>
+                <a href="/albums/{{this.id}}">View Albums</a></button>
+        </li>
+        {{/each}}
+        </ul>
+    {{else}}
+        <h2>No artist selected</h2>
+    {{/if}}
+</section>
