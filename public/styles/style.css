@@ -1,0 +1,21 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Rubik', sans-serif;
+    font-size: 1em;
+}
+
+h1 {
+    font-size: 2em;
+}
+
+.home-form-wrapper {
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    background-repeat: no-repeat;
+}
