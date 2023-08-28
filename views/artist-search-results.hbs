@@ -1,0 +1,18 @@
+<div>
+  <h1>Spotify search results for "{{artistName}}"</h1>
+  <ul>
+    {{#each artists}}
+    <div>
+
+      {{#if imageArtist}}
+    <img class="artist-image" src="{{this.imageArtist.url}}" />
+   {{/if}}
+      <p>
+        {{this.name}} 
+      </p>
+<a href="/albums/{{this.id}}">view albums</a>
+
+    </div>
+    {{/each}}
+  </ul>
+</div>
