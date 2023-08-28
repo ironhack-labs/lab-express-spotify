@@ -1,0 +1,15 @@
+<h1>List of artists:</h1>
+
+{{#if listOfArtists}}
+{{#each listOfArtists}}
+<section class="artist-search">
+    <h2>Name:{{this.name}}</h2>
+
+    <a href="/albums/{{this.id}}">View Albums</a>
+
+    <hr>
+</section>
+{{/each}}
+{{else}}
+<h3>Sorry, no artist with that search criteria</h3>
+{{/if}}
