@@ -1,0 +1,11 @@
+<div class="artist-container">
+    <h1>Artists:</h1>
+    <div class="artist-row">
+        {{#each artists }}
+            <h2>{{name}}</h2>
+            <img src="{{images.[0].url}}" alt="{{name}} Image">
+            <p>Link: <a href="{{external_urls.spotify}}" target="_blank">{{external_urls.spotify}}</a></p>
+            <a href="/albums/{{artists:Id}}">View Albums</a>
+        {{/each}}   
+    </div>
+</div>

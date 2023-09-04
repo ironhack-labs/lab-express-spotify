@@ -1,0 +1,14 @@
+<div class="tracks-container">
+    <h1>Title</h1>
+
+    <div class="tracks-row">
+        {{#each tracks }}
+            <h2>{{name}}</h2>
+            <audio controls>
+                <source src="{{preview_url}}" type="audio/mpeg">
+                Your browser doesn't support the audio element.
+            </audio>
+        
+        {{/each}}   
+    </div>
+</div>
