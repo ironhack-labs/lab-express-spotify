@@ -31,7 +31,7 @@ app.get('/', (req, res) => {
 
 app.get('/artist-search', (req, res) => {
     res.render("artist-search-results"); 
-    const artistName = req.query.artistName;
+    const artistName = req.query.artistName; 
     res.send(`You searched for artist ${artistName}`);
 
 
