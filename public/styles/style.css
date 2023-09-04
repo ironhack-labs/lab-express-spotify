@@ -1,0 +1,54 @@
+*{
+    margin: 0px;
+    padding: 0;
+}
+
+.home {
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+
+.home-button {
+    background-color: aqua;
+    border-color: cadetblue;
+    border-radius: 5px;
+}
+
+.search-results {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.albums{
+    display: flex;
+    flex-direction: row;
+    /* align-items: flex-start; */
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    font-size: 15px;
+}
+
+
+.albums img {
+    height: auto;
+    width: 18em;  
+}
+
+
+.artist-details{
+  margin: 5px;
+}
+
+.search-results img {
+    height: auto;
+    width: 10em;
+}
