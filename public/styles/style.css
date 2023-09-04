@@ -1,0 +1,70 @@
+* {
+    margin: 0;
+    padding: 0
+}
+body {
+    background-image: url('/images/spotify-background.jpeg');
+}
+
+.landing {
+    width: 500px;
+  height: 250px;
+  margin: 50px;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.artist-container , .albums-container{
+    display:flex;
+    flex-wrap: wrap;
+}
+
+.artist-card, .album-card{
+    display: flex;
+    flex-direction: column;
+    border: solid 1px;
+    padding: 5px;
+    margin: 15px;
+    max-width: 20%;
+    background-color: antiquewhite;
+    align-items:  center;
+    
+}
+
+.artist-card a, .album-card a {
+    text-decoration: none;
+    color: white;
+    padding: 20px;
+    background-color: rgb(85, 85, 132);
+    border-radius: 3px;
+    margin: 1em;
+    
+}
+
+.artist-card img {
+    width: 80%
+}
+
+ .album-card img {
+    width: 50%
+}
+
+.tracks-container {
+    margin: 0 auto;
+    width: 80%
+}
+.tracks-header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    margin: 10px;
+    background-color:antiquewhite
+}
+
+.tracks-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px
+}
