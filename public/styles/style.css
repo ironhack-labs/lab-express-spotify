@@ -66,5 +66,6 @@ body {
 .tracks-item {
     display: flex;
     justify-content: space-between;
-    padding: 10px
+    padding: 10px;
+    color: antiquewhite;
 }
