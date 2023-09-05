@@ -1,0 +1,15 @@
+<h1>Albums Page</h1>
+
+{{#if artistAlbums.length}}
+  <ul>
+    {{#each artistAlbums}}
+      <li>
+        <img src="{{images.0.url}}" alt="{{name}} Image" />
+        <h2>{{name}}</h2>
+        <a href="/tracks/{{id}}"><button>View Tracks</button></a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No albums found for this artist.</p>
+{{/if}}
