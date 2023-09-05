@@ -1,0 +1,14 @@
+* {
+  margin: 0px;
+  padding: 0;
+}
+
+.home {
+  background-image: url(../images/spotify-background.jpeg);
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
