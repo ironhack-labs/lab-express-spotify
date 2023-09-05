@@ -4,16 +4,29 @@
 }
 body {
     background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center ;
+    background-repeat: no-repeat;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 
 .landing {
-    width: 500px;
-  height: 250px;
-  margin: 50px;
+     width: 500px;
+  height: 500px;
+  display: flex; 
+    justify-content: center;
+    padding:50px 400px
+}
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.form {
+    display: flex; 
+    align-items: center;  
+    gap: 10px;
+
+}
+
+.form input {
+    font-size: 20px; 
 }
 
 .artist-container , .albums-container{
@@ -29,26 +42,20 @@ body {
     margin: 15px;
     max-width: 20%;
     background-color: antiquewhite;
-    align-items:  center;
-    
+    align-items:  center;   
 }
 
 .artist-card a, .album-card a {
     text-decoration: none;
     color: white;
-    padding: 20px;
-    background-color: rgb(85, 85, 132);
+    padding: 10px 50px;
+    background-color: rgb(165, 109, 109);
     border-radius: 3px;
     margin: 1em;
-    
 }
 
-.artist-card img {
+.artist-card img, .album-card img{
     width: 80%
-}
-
- .album-card img {
-    width: 50%
 }
 
 .tracks-container {
