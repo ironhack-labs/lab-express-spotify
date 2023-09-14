@@ -3,6 +3,9 @@
   <div class="artists">
     <h1>Artist:{{this.name}}</h1>
     <p><a href="/albums/{{this.id}}"><button class="button">View Albums</button></a></p>
-    <img src="{{this.images.0.url}}" alt="{{this.name}} image" />
+    <a href="/albums/{{this.id}}"><img
+        src="{{this.images.0.url}}"
+        alt="{{this.name}} image"
+      /></a>
   </div>
 {{/each}}
