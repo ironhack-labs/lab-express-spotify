@@ -1,0 +1,9 @@
+<div class="albums">
+<h1>Albums</h1>
+{{#each this.Albums}}
+  <div class="albums">
+    <a class="albumTitle" href="/tracks/{{this.id}}">{{this.name}} </a>
+    <a href="/tracks/{{this.id}}"><img src="{{this.images.0.url}}" alt="{{this.name}}" /></a>
+    <!-- <a class="viewTrack" href="/tracks/{{this.id}}">View Tracks</a> -->
+  </div>
+{{/each}}
