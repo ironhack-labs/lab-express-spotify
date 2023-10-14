@@ -6,17 +6,22 @@
     <title>Tracks</title>
   </head>
   <body>
-    <div class='div-all-tracks-search'>
-      {{#each albumTracks}}
-        <div class='tracks-search'>
-          <h1 class='search-tracks-heading'>{{this.name}}</h1>
-          <audio controls src='{{this.preview_url}}'>
-            <a href=''> </a>
-          </audio>
-
-        </div>
-      {{/each}}
+    <div class='header'>
+      <a href='/'><i class='fa-solid fa-house fa-2xl'></i></a>
+      <h1>Tracks</h1>
+      {{! <a href='/albums/:artistId'>Back</a> }}
     </div>
-
+    <div class='bg-grey'>
+      <div class='div-all-tracks'>
+        {{#each albumTracks}}
+          <div>
+            <h1 class='search-tracks-heading'>{{this.name}}</h1>
+            <audio controls src='{{this.preview_url}}'>
+              <a href=''> </a>
+            </audio>
+          </div>
+        {{/each}}
+      </div>
+    </div>
   </body>
 </html>

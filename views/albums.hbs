@@ -6,15 +6,25 @@
     <title>Albums</title>
   </head>
   <body>
-    <div class='div-all-search'>
-      {{#each artistAlbums}}
-        <div class='search'>
-          <img src='{{this.images.1.url}}' alt='' class='search-img' />
-          <h1 class='search-heading'>{{this.name}}</h1>
-          <a href='/tracks/{{this.id}}' class='search-a'>See tracks</a>
-        </div>
-      {{/each}}
+    <div class='header'>
+      <a href='/'><i class='fa-solid fa-house fa-2xl'></i></a>
+      <h1>Albums</h1>
+      {{! <a href='/artist-search'>Back</a> }}
     </div>
-
+    <div class='bg-dark'>
+      <div class='div-all-search'>
+        {{#each artistAlbums}}
+          <div class='albums'>
+            <a href='/tracks/{{this.id}}'><img
+                src='{{this.images.1.url}}'
+                alt=''
+                class='search-img'
+              /></a>
+            <h1 class='search-heading'>{{this.name}}</h1>
+            <a href='/tracks/{{this.id}}' class='search-a'>See tracks</a>
+          </div>
+        {{/each}}
+      </div>
+    </div>
   </body>
 </html>

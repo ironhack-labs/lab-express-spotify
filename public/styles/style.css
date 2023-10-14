@@ -1,3 +1,4 @@
+/* GENERAL */
 * {
   margin: 0;
   padding: 0;
@@ -5,20 +6,28 @@
 a {
   text-decoration: none;
 }
-.div-artist-search {
+.bg-dark {
+  background-color: #000;
+}
+.bg-grey {
+  background-color: #333;
+}
+
+/* HOME PAGE */
+.artist-search {
   background: url(/images/spotify-background.jpeg) no-repeat center center/cover;
   opacity: 0.9;
   height: 100%;
 }
 .search-content {
-  min-height: 100vh;
+  min-height: 70vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
 }
 .search-content img {
-  width: 300px;
+  width: 28%;
   margin: 30px;
   padding: 5px;
   background-color: rgb(243, 243, 243, 0.5);
@@ -40,28 +49,81 @@ button {
   font-size: 17px;
 }
 .search-img {
-  width: 200px;
+  width: 100%;
   height: 250px;
-  border-radius: 2px;
-}
-.div-all-search {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  row-gap: 40px;
-  text-align: center;
-  margin: 30px 0;
-}
-.search-heading {
-  font-size: 20px;
-  color: #333;
-  margin: 10px;
+  border-radius: 10px;
 }
 
-.search-a {
-  background-color: rgb(255, 187, 0);
-  border-radius: 2px;
+/* HEADER/NAVBAR */
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  text-align: center;
+  padding: 15px 0;
+  width: 100%;
+  background-color: rgb(48 186 122);
+}
+.header h1 {
+  text-align: center;
+  margin: auto;
+}
+.header a {
+  padding-left: 20px;
+  color: black;
+}
+.header a:hover {
+  opacity: 0.8;
+  transform: scale(1.04);
+}
+
+/* PAGES */
+.div-all-search {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 40px;
+  text-align: center;
+  margin: 0 80px;
+  padding: 60px 0;
+}
+.search-heading {
+  font-size: 16px;
+  font-weight: 400;
   color: #fff;
+  margin: 12px 0 20px 0;
+}
+.albums,
+.artists {
+  height: 50vh;
+  padding: 10px;
+  margin-top: auto;
+  border-radius: 10px;
+  background-color: #242424;
+  display: flex;
+  flex-direction: column;
+}
+.search-a {
+  background-color: #707070;
+  border-radius: 20px;
+  color: #fff;
+  font-weight: 100;
   padding: 5px 10px;
+}
+.search-a:hover {
+  opacity: 0.8;
+}
+.search-img:hover {
+  opacity: 0.8;
+  transform: scale(1.01);
+}
+.div-all-tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: space-around;
+  gap: 70px;
+  margin: auto;
+  padding: 60px 100px;
+  color: #fff;
 }
 .search-tracks-heading {
   font-size: 20px;
