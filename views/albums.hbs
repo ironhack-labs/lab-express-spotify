@@ -1,0 +1,15 @@
+
+{{#each albums}}
+
+  <li class="card">
+    <h2>{{name}}</h2>
+    {{#if images.length}}
+      <img src="{{images.[0].url}}" alt="{{name}} Image">
+    {{else}}
+      <p>No image available</p>
+    {{/if}}
+    <a href="/view-tracks/{{id}}">View Tracks</a>
+  </li>
+
+{{/each}}
+</div>
