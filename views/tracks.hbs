@@ -1,0 +1,21 @@
+
+
+
+<div class="list">
+  {{#each tracks}}
+  <div >
+    <li class="card">
+      <h2>{{name}}</h2>
+      <img src="/images/img.png" alt="{{name}} Image" style="width:250px; hight:inherit">
+      <audio controls style="width:250px; hight:inherit">
+        {{#if preview_url.length}}
+          <source src="{{preview_url}}" type="audio/mpeg" />
+        {{else}}
+          <h1>sorry no preview for this one</h1>
+        {{/if}}
+      </audio>
+    </li>
+    </div>
+  {{/each}}
+  </div>
+
