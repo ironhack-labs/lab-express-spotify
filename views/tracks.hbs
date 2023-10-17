@@ -1,9 +1,13 @@
-<h1>Album Tracks</h1>
-<ul>
+
+
+
+<div class="list">
   {{#each tracks}}
-    <li>
+  <div >
+    <li class="card">
       <h2>{{name}}</h2>
-      <audio controls>
+      <img src="/images/img.png" alt="{{name}} Image" style="width:250px; hight:inherit">
+      <audio controls style="width:250px; hight:inherit">
         {{#if preview_url.length}}
           <source src="{{preview_url}}" type="audio/mpeg" />
         {{else}}
@@ -11,5 +15,7 @@
         {{/if}}
       </audio>
     </li>
+    </div>
   {{/each}}
-</ul>
+  </div>
+

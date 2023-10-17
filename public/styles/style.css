@@ -1,3 +1,7 @@
+*{
+    font-family: 'VT323', monospace;
+
+}
 body{
     filter: grayscale(100%);
   height: 100vh;
@@ -7,19 +11,23 @@ body{
   flex-direction: column;
   align-items: center;
  background-image: url('../images/3944.jpg');
- background-size:contain ;
+ background-repeat: no-repeat;
+ background-size:cover ;
+ border-radius: 5px;
 }
 .main-container {
+    color:yellow;
     filter: grayscale(100%);
     align-items: center;
     justify-content: center;
     text-align: center;
-    margin-top: 20vh;
-  background-color: rgb(22, 21, 21,.3);
+   
+  background-color: rgb(22, 21, 21,.8);
     width: 50%;
   border: #3251fd solid .2em;
-    height: 50vh;
+    height: 30vh;
     display: flex;
+    border-radius: 10px;
 
   }
   nav{
@@ -62,8 +70,10 @@ body{
     margin: 0 1.5em
   }
   #inputField {
-    width: 100vh; 
+    background-image: url(../images/img.png);
+    width: 70vh; 
     height: 40px; 
+    color:yellow;
   }
   .list{
     height: 100%;
