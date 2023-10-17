@@ -1,0 +1,9 @@
+<div class="search-card-container">
+    {{#each artists}}
+    <div class="search-card">
+        <img src="{{this.image}}" alt="{{this.title}}">
+        <h2 class="search-card-title">{{this.title}}</h2>
+        <a href="{{this.link}}" class="search-card-btn">View Albums</a>
+    </div>
+    {{/each}}
+</div>
