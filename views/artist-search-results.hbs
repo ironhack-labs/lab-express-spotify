@@ -1,0 +1,31 @@
+<html lang='en'>
+  <head>
+    <meta charset='UTF-8' />
+    <meta name='viewport' content='width=device-width, initial-scale=1.0' />
+    <link rel='stylesheet' href='/styles/style.css' />
+    <title>Artist</title>
+  </head>
+  <body>
+    <div class='header'>
+      <a href='/'><i class='fa-solid fa-house fa-2xl'></i></a>
+      <h1>Results</h1>
+    </div>
+    <div class='bg-dark'>
+      <div class='div-all-search'>
+        {{#each artists}}
+          <div class='artists'>
+            <a href='/albums/{{this.id}}'><img
+                src='{{this.images.1.url}}'
+                alt=''
+                class='search-img'
+              /></a>
+            <h1 class='search-heading'>{{this.name}}</h1>
+            <a href='/albums/{{this.id}}' class='search-a'>See Albums</a>
+          </div>
+        {{/each}}
+      </div>
+
+    </div>
+
+  </body>
+</html>
