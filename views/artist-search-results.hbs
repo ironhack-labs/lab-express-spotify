@@ -1,0 +1,17 @@
+
+<div>
+        <a href="/">Go back to search</a>
+    </div>
+<ul> 
+    {{#each artists}}
+
+        <li>Name: {{this.name}}
+     {{#if this.images }}
+     <img src = "{{this.images.0.url}}">
+     {{/if}}
+     </li>
+     <a href="/albums/{{this.id}}">View Album</a>
+
+    {{/each}}
+   
+</ul>

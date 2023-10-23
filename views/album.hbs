@@ -1,0 +1,18 @@
+<div>
+        <a href="/">Go back to search</a>
+    </div>
+<div class = "album-container">
+<h1>Here is the album view</h1>
+<ul>
+    {{#each album}}
+        <li>
+          {{this.name}}
+       {{#if this.images }}
+     <img src = "{{this.images.0.url}}">
+     {{/if}}
+     </li>
+     <a href="/tracks/{{this.id}}">View Tracks</a>
+    {{/each}}
+</ul>
+
+</div>
