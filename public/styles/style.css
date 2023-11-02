@@ -1,0 +1,15 @@
+body {
+    text-align: center;
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+}
+
+
+h1 {
+    padding-top: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.container {
+    padding-top: 40px;
+}
