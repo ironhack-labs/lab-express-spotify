@@ -1,0 +1,38 @@
+.homepage {
+    background-image: url(./../images/spotify-background.jpeg);
+    background-size: cover;
+    padding-bottom: 453px;
+}
+
+.myForm {
+    text-align: center;
+    padding-top: 300px;
+}
+
+.imgResults {
+    height: 350px;
+}
+
+.imgAlbums {
+    height: 350px;
+}
+
+.namesArtists {
+    font-family: sans-serif;
+    font-size: 20px;
+}
+
+.albumsNames {
+    font-size: 30px;
+    font-family: sans-serif;
+}
+
+.buttonsAlbums {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.viewButtons {
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
