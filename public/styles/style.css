@@ -1,0 +1,21 @@
+.artistimg {
+    width: 50%;
+    padding-top: 6%;
+    padding-bottom: 7%;
+    border-radius: 25px;
+}
+
+body {
+    padding-top: 60px;
+    padding-left: 2%;
+}
+
+.bckimg {
+    background: url('/images/spotify-background.jpeg') no-repeat center center;
+    background-size: cover;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
