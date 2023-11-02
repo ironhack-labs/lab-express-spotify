@@ -1,0 +1,26 @@
+body {
+    background-color: #1DB954;
+}
+
+.myIndex {
+
+    background-image: url(/images/spotify-background.jpeg);
+    background-size: cover;
+    width: 100%;
+    min-height: 85vh;
+
+}
+
+
+img {
+    height: 250px;
+    object-fit: cover;
+}
+
+.myCard {
+    background-color: #126d32;
+}
+
+.myNavbar {
+    background-color: #126d32;
+}

@@ -1,0 +1,26 @@
+<div class="container">
+    <table class="table table-striped table-dark text-center align-middle">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Preview</th>
+            </tr>
+        </thead>
+        <tbody>
+            {{#each arr}}
+            <tr>
+                <td>{{name}}</td>
+                <td>
+                    <audio controls>
+                        <source src="{{preview_url}}" type="audio/ogg">
+                    </audio>
+
+                </td>
+            </tr>
+            {{/each}}
+
+        </tbody>
+    </table>
+
+
+</div>

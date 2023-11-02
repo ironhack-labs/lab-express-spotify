@@ -1,0 +1,18 @@
+<div class="container mt-5">
+    <div class="row justify-content-center">
+        {{#each arr}}
+        <div class="col-md-4 mb-3 ">
+            <div class="card h-100 w-100 text-center myCard" style="width: 18rem;">
+                <img src="{{images}}" class="card-img-top" alt="{{name}}">
+                <div class="card-body">
+                    <h5 class="card-title">{{name}}</h5>
+                    <hr>
+                    <p class="card-text">
+                        <a class="btn btn-primary" href="/tracks/{{id}}" role="button">Ver Tracks</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
