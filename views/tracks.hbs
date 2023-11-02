@@ -1,0 +1,16 @@
+<div class="container">
+    <h1>Tracks</h1>
+    <div class="row">
+        {{#each tracks}}
+            <div class="container col-sm-4">
+                <div class="card bg-dark text-white mt-3" style="width: 21rem;">
+                    <div class="card-body">
+                        <p>{{ name }}</p>
+
+                        <audio controls src="{{preview_url}}"></audio>
+                    </div>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+</div>
