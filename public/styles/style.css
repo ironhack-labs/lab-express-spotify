@@ -1,0 +1,17 @@
+* {
+  font-family: sans-serif;
+}
+
+.home-bg {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.form-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* vh stands for viewport height */
+}
