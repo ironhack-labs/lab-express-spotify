@@ -1,0 +1,9 @@
+.cards {
+  padding: 1em;
+  background-color: bisque;
+  margin: 2em;
+}
+
+.card-img {
+  max-width: 120px;
+}
