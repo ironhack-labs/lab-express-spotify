@@ -1,0 +1,49 @@
+h1 {
+    background-color: antiquewhite;
+}
+
+.cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container {
+    overflow: hidden;
+    width: 30%;
+    box-sizing: border-box;
+    height: 80vh;
+    margin: 10px;
+}
+
+.container img {
+    width: 100%;
+    height: auto;
+}
+
+.btn-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: brown;
+    flex-direction: column;
+}
+
+
+a {
+    text-decoration: none;
+    padding: 5px;
+}
+
+p {
+    margin: 5px;
+}
+
+.head{
+    background-color: grey;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 20px;
+}
