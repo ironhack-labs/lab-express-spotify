@@ -1,0 +1,29 @@
+<!-- views/artist-search-results.hbs -->
+
+
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Artist Search Results</title>
+  </head>
+  <body>
+    <h1>Artist Search Results</h1>
+
+    {{#if artists.length}}
+      <ul>
+        {{#each artists}}
+          <li>
+            <h2>{{name}}</h2>
+            {{#if images.length}}
+              <img src="{{images.0.url}}" alt="{{name}}" />
+            {{/if}}
+            <a href="/artist/{{id}}/albums">Show Albums</a>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <p>No artists found.</p>
+    {{/if}}
+  </body>
+</html>
