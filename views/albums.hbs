@@ -1,7 +1,10 @@
 <ul class="album-list">
   {{#each albums}}
     <li class="album-item">
-      {{this.name}}
+      <div class="album-info">
+
+        {{this.name}}
+      </div>
       <br />
       <img src="{{this.images.2.url}}" alt="{{this.name}}" />
       <br />

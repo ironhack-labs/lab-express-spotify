@@ -7,6 +7,10 @@ body {
   height: 100vh;
   margin: 0;
   padding: 0;
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  zoom: 90%;
 }
 
 .search-form {
@@ -25,6 +29,7 @@ button {
   color: #fff;
   border: none;
   cursor: pointer;
+  background-color: crimson;
 }
 
 button:hover {
@@ -39,13 +44,11 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: #f8f8f8; /* Arka plan rengi */
   height: 100vh;
 }
 
 .artist-item {
   width: 200px;
-  background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -63,11 +66,11 @@ button:hover {
 .artist-info h4 {
   margin: 0;
   font-size: 18px;
-  color: #333;
+  color: rgb(83, 100, 113);
 }
 
 .artist-info a {
-  color: #1db954; /* Spotify yeşili */
+  color: crimson; /* Spotify yeşili */
   text-decoration: none;
   font-weight: bold;
   display: block;
@@ -91,13 +94,16 @@ button:hover {
   display: flex;
   flex-wrap: wrap;
   gap: 20px;
-  background-color: #f8f8f8; /* Arka plan rengi */
+
   height: 100vh;
+}
+
+.album-info {
+  color: rgb(83, 100, 113);
 }
 
 .album-item {
   width: 200px;
-  background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -110,7 +116,7 @@ button:hover {
 }
 
 .album-item a {
-  color: #1db954; /* Spotify yeşili */
+  color: crimson; /* Spotify yeşili */
   text-decoration: none;
   font-weight: bold;
   display: block;
@@ -130,22 +136,21 @@ button:hover {
 }
 
 .track-item {
-  background-color: #fff;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
   padding: 20px;
-  margin-bottom: 20px;
+  margin-bottom: 10px;
 }
 
 .track-item h4 {
   margin: 0;
-  font-size: 18px;
-  color: #333;
+  font-size: 15px;
+  color: rgb(83, 100, 113);
 }
 
 .track-item audio {
-  width: 100%;
+  width: 50%;
   margin-top: 10px;
 }
 
