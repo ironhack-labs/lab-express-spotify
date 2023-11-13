@@ -1,0 +1,14 @@
+<div class="search-results">
+    <h1>Test</h1>
+    {{#each artists}}
+        <div class="search-result-card">
+            <div class="artist-name">
+                {{ this.name }}
+            </div>
+            <div class="artist-img">
+                <img src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg" alt="placeholder"> 
+            </div>
+            <button> <a href="{{ this.href }}" ></a>View Albums</button>
+    </div>
+    {{/each}}
+</div>

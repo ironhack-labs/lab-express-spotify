@@ -1,0 +1,80 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+h1, h2, h3, {
+    font-family: 'Nanum Gothic', sans-serif;
+}
+
+h4, h5, h6, p, a {
+    font-family: 'Roboto Flex', sans-serif;
+}
+
+h1 {
+    font-size: 42px;
+}
+
+a,p {
+    font-size: 18px;
+    font-weight: 600;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 50px;
+    background-color: rgb(168, 52, 168);
+}
+
+nav a {
+    color: #f7f9f9;
+    text-decoration: none;
+    margin-left: 30px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+}
+
+section  {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background: rgb(236, 195, 238);
+}
+
+
+
+
+footer {
+    margin-top: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 40px;
+    background-color: rgb(168, 52, 168);
+}
+
+footer p {
+    color: #f7f9f9;
+    padding-left: 30px;
+    font-size: 1em;
+}
+
+footer p a{
+    color: #f7f9f9;
+    text-underline-offset: 10px;
+}
