@@ -1,0 +1,10 @@
+{{#each data}}
+  <form action='/artist-search' method='GET'>
+    <div class='cards'>
+      <h1>{{this.name}}</h1>
+      <img src={{this.images.0.url}} class='card-img' alt={{this.name}} />
+      <button type='submit'>See Tracks</button>
+
+    </div>
+  </form>
+{{/each}}
