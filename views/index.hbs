@@ -1,17 +1,9 @@
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-  </head>
-  <body>
-    <p>hello world</p>
-    <form action="/artist-search" method="GET">
-      <label for="artist-name-input">Artist Name:</label>
-      <input id="artist-name-input" type="text" name="artistName" />
-
-      <button type="submit">Search for an Artist</button>
-    </form>
-  </body>
-</html>
+<form action="/artist-search" method="get">
+  <input
+    type="text"
+    name="theArtistName"
+    id="search-input"
+    placeholder="Insert artist name here..."
+  />
+  <button type="submit"> Find artists! </button>
+</form>

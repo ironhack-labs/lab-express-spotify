@@ -1,0 +1,160 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+.search-form {
+  text-align: center;
+}
+
+#search-input {
+  padding: 10px;
+  font-size: 16px;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #1db954;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #16914a; /* Hover rengi */
+}
+
+/* '2' */
+
+.artist-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f8f8f8; /* Arka plan rengi */
+  height: 100vh;
+}
+
+.artist-item {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.artist-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.artist-info {
+  padding: 20px;
+}
+
+.artist-info h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.artist-info a {
+  color: #1db954; /* Spotify yeşili */
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.artist-info a:hover {
+  text-decoration: underline;
+}
+
+.artist-image img {
+  width: 75%;
+  height: auto;
+}
+
+/* 3 */
+
+.album-list {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  background-color: #f8f8f8; /* Arka plan rengi */
+  height: 100vh;
+}
+
+.album-item {
+  width: 200px;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+}
+
+.album-item img {
+  width: 75%;
+  height: auto;
+}
+
+.album-item a {
+  color: #1db954; /* Spotify yeşili */
+  text-decoration: none;
+  font-weight: bold;
+  display: block;
+  margin-top: 10px;
+}
+
+.album-item a:hover {
+  text-decoration: underline;
+}
+
+/* 4 */
+.track-list {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+  height: 100vh;
+}
+
+.track-item {
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  margin-bottom: 20px;
+}
+
+.track-item h4 {
+  margin: 0;
+  font-size: 18px;
+  color: #333;
+}
+
+.track-item audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.no-preview {
+  color: #d9534f; /* Kırmızı renk */
+  margin-top: 10px;
+}
+
+.no-preview b {
+  font-weight: normal;
+  color: inherit;
+}
