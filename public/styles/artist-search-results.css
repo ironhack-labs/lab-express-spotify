@@ -12,13 +12,12 @@ h1 {
     overflow: hidden;
     width: 30%;
     box-sizing: border-box;
-    height: 80vh;
     margin: 10px;
 }
 
 .container img {
     width: 100%;
-    height: auto;
+    height: fit-content;
 }
 
 .btn-container {
@@ -26,7 +25,7 @@ h1 {
     align-items: center;
     justify-content: center;
     padding: 20px;
-    background-color: brown;
+    background-color: gray;
     flex-direction: column;
 }
 
