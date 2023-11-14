@@ -1,0 +1,14 @@
+body {
+  text-align: center;
+  background-image: "/public/images/spotify-background.jpeg";
+  background-size: cover;
+}
+
+h1 {
+  padding-top: 20px;
+  font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+}
+
+.container {
+  padding-top: 40px;
+}
