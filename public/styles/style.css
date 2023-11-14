@@ -1,0 +1,36 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("../images/spotify-background.jpeg");
+  background-size: cover;
+  background-position: center;
+  zoom: 90%;
+}
+
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  .artist-card {
+    width: 30%;
+    margin-bottom: 20px;
+  }
+  
+  .artist-card img {
+    width: 20% !important; 
+    height: auto;
+  }
+
+  .artist-info {
+    text-align: center;
+  }
+
+  
