@@ -1,0 +1,35 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+.index{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+    background-image: url("https://asset.japantoday.com/img/store/fe/f2/630912b9101138fbcb7aabf3fdf324336eae/disco2.jpg");
+    
+ 
+}
+.index form{
+    border: 2px solid black;
+    padding: 20px;
+    background-color: whitesmoke ;
+}
+
+.index input{
+    padding: 10px;
+    width: 400px;
+}
+
+.index button {
+    background-color: pink;
+    padding: 5px;
+    display: block;
+    border-radius: 5px;
+    margin-top: 15px;
+    margin-left: 150px;
+
+}
