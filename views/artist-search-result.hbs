@@ -1,0 +1,22 @@
+<div class="search-results-container">
+    <h1>Your search results</h1>
+    {{#each artists}}
+        <div class="search-result-card">
+            <div class="artist-name">
+                <p>{{ name }}</p>
+            </div>
+            <div class="artist-img">
+                {{#if images}}
+                <img src="{{images.2.url}}" alt="{{ name }}"> 
+                {{else}}
+                <img
+                    src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                    alt="{{ name }}"
+                    style= "width: 160px"
+                />
+                {{/if}}
+            </div>
+             <button><a href="/albums/{{ id }}"> View Albums</a></button>
+    </div>
+    {{/each}}
+</div>

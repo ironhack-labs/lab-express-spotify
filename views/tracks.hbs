@@ -1,0 +1,43 @@
+<div class="tracks-contrainer">
+    <div class="tracks-image">
+        {{#if info.images}}
+            <img src="{{info.images.1.url}}" alt="{{info.artists.0.name}}"/>
+        {{else}}
+            <img
+                src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                alt="{{ name }}"
+                style= "width: 300px"
+            />
+        {{/if}}
+    </div>
+    <div class="tracks-title">
+        <h1>{{info.name}}</h1>
+        <h3>by {{info.artists.0.name}}</h3>
+    </div>
+    <div class="tracks-list">
+        <table>
+            <thead>
+                <tr>
+                    <th>Number</th>
+                    <th>Name</th>
+                    <th>Audio-Preview</th>
+                </tr>
+            </thead>
+            <tbody>
+                {{#each tracks}}
+                <tr>
+                    <td class="table-number"> {{ track_number }}</td>
+                    <td class="table-name"> {{ name }}</td>
+                    <td class="table-preview">
+                        <audio controls>
+                            <source src="{{ preview_url }}" type="audio/mpeg">
+                            Your browser does not support the audio tag.
+                        </audio>
+                    </td>
+                </tr>
+                {{/each}}
+            </tbody>
+
+        </table>
+    </div>
+</div>
