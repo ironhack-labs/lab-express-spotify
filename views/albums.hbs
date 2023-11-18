@@ -1,0 +1,23 @@
+<div class="albums-container">
+    <h1>Albums of '<span style="color: pink">{{albums.0.artists.0.name}}</span>'</h1>
+    {{#each albums}}
+    <div class="album-card">
+        <div class="album-info">
+           <p>{{ name }} </p> 
+           <p>{{ total_tracks }} songs</p> 
+        </div>
+        <div class="album-img">
+            {{#if images}}
+                <img src="{{ images.2.url }}" alt="{{ name }}"/>
+            {{else}}
+                <img
+                    src="https://t3.ftcdn.net/jpg/02/48/42/64/360_F_248426448_NVKLywWqArG2ADUxDq6QprtIzsF82dMF.jpg"
+                    alt="{{ name }}"
+                    style= "width: 160px"
+                />
+            {{/if}}
+        </div>
+         <button><a href="/album/tracks/{{ id }}"> View Album</a></button>
+    </div>
+    {{/each}}
+</div>
