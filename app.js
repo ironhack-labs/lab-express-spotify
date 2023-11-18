@@ -36,7 +36,22 @@ app.get("/", (req, res) => {
 });
 
 app.get("/artist-search", (req, res) => {
-  res.render("/artist-search");
+  //   console.log('what is this: ', req.query);
+  console.log("Search Query:", req.query.theArtistName);
+
+  spotifyApi
+    //  |------> Method provided by the SpotifyWebApi npm packages and helps us to search artists whose name contains the search term
+    .searchArtists(req.query.theArtistName) // <----- theArtistName is name="theArtistName" in our search form
+    .then((data) => {
+      console.log(
+        "The received data from the API: ",
+        data.body.artists.items[0]
+      );
+      res.render("artist-search-results", { artists: data.body.artists.items });
+    })
+    .catch((err) =>
+      console.log("The error while searching artists occurred: ", err)
+    );
 });
 
 // Start the server
