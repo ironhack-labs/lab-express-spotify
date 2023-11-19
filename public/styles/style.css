@@ -1,0 +1,281 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+  background-image: url("/images/spotify-background.jpeg");
+  background-size: cover;
+  background-position: center;
+
+}
+
+h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+
+form {
+  font-size: 30px;
+  padding: 50px;
+  height: 90px;
+  width: 500px;
+  border: none;
+  background-color: rgba(255, 253, 253, 0.7);
+  text-align: center;
+}
+
+button {
+  color: white;
+  margin-top: 10px;
+  background-color: tomato;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  width: 100px;
+  height: 40px;
+  text-align: center;
+}
+
+input {
+  width: 400px;
+  height: 30px;
+  text-align: center;
+  border-radius: 5px;
+
+}
+
+
+.artist-search {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.artist-card {
+  flex: 1 1 300px;
+  max-width: 400px;
+  margin-bottom: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 10px;
+  overflow: hidden;
+  position: relative;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.artist-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.artist-card::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.artist-card:hover::before {
+  opacity: 1;
+
+}
+
+.artist-card img {
+  width: 100%;
+  height: auto;
+}
+
+.artist-info {
+  padding: 15px;
+  text-align: center;
+}
+
+.button-album {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: tomato;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+
+}
+
+.button-album:hover {
+  background-color: #050505;
+}
+
+
+.albums {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 10px;
+  max-width: 800px;
+  margin: 0 auto;
+  align-items: center;
+ 
+}
+
+.album .a {
+  display: block;
+  width: fit-content;
+  margin: 0 auto;
+  background-color: tomato;
+  color: white;
+  text-decoration: none;
+  padding: 8px 20px;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  
+}
+
+.album .a:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  background-color: rgb(20, 19, 19);
+}
+
+.album {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.album:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.album::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.album:hover::before {
+  opacity: 1;
+  pointer-events: none;
+}
+
+
+.album img {
+
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 8px;
+}
+
+.container {
+  background-color: rgba(249, 249, 249, 0.85);
+  border-radius: 12px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  margin-bottom: 30px;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  display: flex;
+}
+
+.container:hover {
+  transform: scale(1.02);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+}
+
+
+.tracklist li {
+  flex-basis: calc(50% - 20px);
+  margin-bottom: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.audio-player {
+  width: 100%;
+}
+
+.track-info {
+  flex-grow: 1;
+}
+
+.track-number,
+.track-name,
+.track-info {
+  margin: 0;/ padding: 10px;
+}
+
+.form {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+.form:hover {
+  transform: scale(1.03);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.form::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.1));
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+  pointer-events: none;
+}
+
+.form:hover::before {
+  opacity: 1;
+}
+
+.form form {
+  position: relative;
+  z-index: 1;
+}
+
+.form {
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  text-align: center;
+}
+
+
+.form button {
+  display: inline-block;
+  width: auto;
+  box-sizing: border-box;
+  padding: 6px 16px;
+  margin-bottom: 10px;
+  color: white;
+  background-color: tomato;
+
+  transition: color 0.3s ease-in-out, background-color 0.3s ease-in-out, transform 0.3s ease-in-out;
+}
+
+.form button:hover {
+  color: white;
+  background-color: black;
+  transform: scale(0.95);
+}

@@ -1,0 +1,13 @@
+<div class="artist-search">
+  {{#each artists}}
+    <div class="artist-card">
+      <img src="{{images.[0].url}}" class="artist-image">
+      <div class="artist-info">
+        <h3>{{name}}</h3>
+        <a class="button-album" href="/albums/{{id}}">Albums</a>
+      </div>
+    </div>
+  {{/each}}
+</div>
+
+
