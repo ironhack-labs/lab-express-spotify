@@ -1,0 +1,17 @@
+<h2>{{albumName}}</h2>
+<ul class="tracklist">
+  {{#each tracks}}
+    <li class="container">
+      <div class="track-info">
+        <span class="track-number">{{track_number}}.</span>
+        <span class="track-name">{{name}}</span>
+      </div>
+      {{#if preview_url}}
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/mpeg">
+          Your browser does not support the audio element.
+        </audio>
+      {{/if}}
+    </li>
+  {{/each}}
+</ul>
