@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col-8 bg-secondary text-light"> 
+            <h2>TITLE</h2>
+        </div>
+        <div class="col-4 bg-secondary text-light">
+            <h2>LISTEN</h2>
+        </div>
+        
+        
+        {{#each tracks}}
+            <div class="col-8">
+                {{name}}
+                <a href="{{external_urls.spotify}}" target="blank" class="text-decoration-none badge bg-success text-bg-success">Listen on Spotify</a>
+            </div>
+
+            <div class="col-4">
+                <audio src="{{preview_url}}" controls></audio>
+            </div>
+        {{/each}}
+    </div>
+</div>
