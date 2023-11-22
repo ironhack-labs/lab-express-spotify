@@ -1,0 +1,14 @@
+#home-container {
+    background-image: url("../images/spotify-background.jpeg");
+    background-position: center;
+    background-size: cover;
+    min-height: 100vh;
+}
+
+#home-container form {
+    max-width: 50%;
+    background: rgba(255, 255, 255, 0.4);
+    width: 100%;
+    padding: 5%;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
