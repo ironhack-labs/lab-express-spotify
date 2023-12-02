@@ -1,14 +1,17 @@
-<ul class="album-list">
-  {{#each albums}}
-    <li class="album-item">
-      <div class="album-info">
+<!-- albums.hbs -->
 
-        {{this.name}}
-      </div>
-      <br />
-      <img src="{{this.images.2.url}}" alt="{{this.name}}" />
-      <br />
-      <a href="/tracks/{{this.id}}">View tracks</a>
-    </li>
-  {{/each}}
-</ul>
+<h1>Albums</h1>
+
+{{#if albums.length}}
+  <ul>
+    {{#each albums}}
+      <li>
+        <img src="{{images.0.url}}" alt="{{name}}" />
+        <h2>{{name}}</h2>
+        <a href="/tracks/{{id}}">View Tracks</a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No albums found for this artist</p>
+{{/if}}

@@ -1,16 +1,24 @@
+<!-- views/index.hbs -->
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <title>Spotify Artist Search</title>
+    <link rel="stylesheet" href="./styles/style.css" />
   </head>
   <body>
-    <p>AAAAAAAAAH</p>
-    <form action="/artist-search" method="GET">
-      <label for="artist-name-input">Artist Name:</label>
-      <input id="artist-name-input" type="text" name="theArtistName" />
+    <div class="card">
+      <h1>Spotify Artist Search</h1>
+    </div>
 
-      <button type="submit">Search for an Artist</button>
-    </form>
+    <div class="card">
+      <form action="/artist-search" method="GET">
+        <label for="artist-name-input">Artist Name:</label>
+        <input id="artist-name-input" type="text" name="theArtistName" />
+
+        <button type="submit">Search for an Artist</button>
+      </form>
+    </div>
   </body>
 </html>
