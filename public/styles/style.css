@@ -1,0 +1,51 @@
+body {
+    background-image: url("../images/spotify-background.jpeg");
+    justify-content: center;
+    align-items: center;
+    background-image: no-repeat;
+    background-image: fixed;
+    background-image: center;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
+
+p {
+    color: white;
+}
+
+#form {
+    justify-content: center;
+    align-items: center;
+    width: 500px;
+    height: 800px;
+
+
+}
+
+.image {
+    width: 200px;
+    height: 300px;
+}
+
+.artists-conteiner {
+    display: inline-flex;
+    grid-row: initial;
+    margin-right: 30px;
+    margin-bottom: 30px;
+}
+
+.div-button {
+    background-color: grey;
+    justify-content: center;
+    align-items: center;
+}
+
+.button {
+    border-radius: 10%;
+    background-color: red;
+    color: white;
+    margin-bottom: 15px;
+
+}
