@@ -1,0 +1,23 @@
+<ul class="artist-list">
+  {{#each artists}}
+    <li class="artist-item">
+      <div class="artist-container">
+        <div class="artist-info">
+          <h4>{{this.name}}</h4>
+          <a href="/albums/{{this.id}}">View albums</a>
+        </div>
+        <div class="artist-image">
+          {{#if this.images}}
+            <img src="{{this.images.2.url}}" alt="{{this.name}}" />
+          {{else}}
+            <img
+              src="https://user-images.githubusercontent.com/25275745/82283218-ba9ec200-9963-11ea-9fc8-8408b57bef12.png"
+              alt="{{this.name}}"
+              style="width: 160px"
+            />
+          {{/if}}
+        </div>
+      </div>
+    </li>
+  {{/each}}
+</ul>
