@@ -1,0 +1,13 @@
+<h1>Album Search Result Page</h1>
+<ul>
+  {{#each myData}}
+    <div>
+      <img src="{{images.1.url}}" alt="Artist Image" />
+      <div>
+        <p>{{name}}</p>
+        <p>{{id}}</p>
+        <button><a href="/tracks/{{id}}">View Tracks</a></button>
+      </div>
+    </div>
+  {{/each}}
+</ul>
