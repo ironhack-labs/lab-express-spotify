@@ -1,0 +1,22 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="display_body">
+
+    {{! <h1>Album Search Result Page</h1> }}
+
+    {{#each myData}}
+      <div class="division">
+        <img src="{{images.1.url}}" alt="Album Image" />
+        <div>
+          <p>{{name}}</p>
+          <button><a href="/tracks/{{id}}">View Tracks</a></button>
+        </div>
+      </div>
+    {{/each}}
+
+  </body>
+</html>

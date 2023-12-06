@@ -1,0 +1,15 @@
+{{! <h1>Track Search Result Page</h1> }}
+<ul>
+  {{#each myData}}
+    <div>
+      <div>
+        <p>{{name}}</p>
+        <audio controls>
+          <source src="{{preview_url}}" type="audio/ogg" />
+
+        </audio>
+
+      </div>
+    </div>
+  {{/each}}
+</ul>
