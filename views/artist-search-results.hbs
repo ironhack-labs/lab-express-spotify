@@ -1,12 +1,26 @@
-<h1>Artist Search Result Page</h1>
-<ul>
-  {{#each myData}}
-    <div>
-      <img src="{{images.1.url}}" alt="Artist Image" />
-      <div class="btn-container">
-        <p>{{name}}</p>
-        <button><a href="/albums/{{id}}">View Albums</a></button>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body id="display_body">
+    {{! <h1>Artist Search Result Page</h1> }}
+    <nav>
+      <ul>
+        <li>Titlt</li>
+        <li>Listen</li>
+      </ul>
+    </nav>
+    {{#each myData}}
+      <div class="division">
+        <img src="{{images.1.url}}" alt="Artist Image" />
+        <div>
+          <p>{{name}}</p>
+          <button><a href="/albums/{{id}}">View Albums</a></button>
+        </div>
       </div>
-    </div>
-  {{/each}}
-</ul>
+    {{/each}}
+
+  </body>
+</html>
