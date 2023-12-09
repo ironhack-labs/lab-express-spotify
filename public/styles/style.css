@@ -1,0 +1,72 @@
+*{
+    padding: 0;
+    margin: 0;
+ } 
+
+ #index{
+background-image: url("../images/spotify-background.jpeg");
+height: 100vh;
+display: flex;
+align-items: center;
+justify-content: center;
+background-repeat: no-repeat;
+background-size: cover;
+flex-wrap: wrap;
+ }
+
+ #index form{
+    display: flex;
+flex-direction: column;
+gap:8px;
+align-items: center;
+   }
+
+   .search-form-container{
+    padding: 48px 89px;
+    background-color: rgba(255, 255, 255, 0.5);
+   }
+
+  .search{
+    width: 200px;
+    height: 30px;
+    border: none;
+    padding-left: 4px;
+  }
+  .artist-search-button{
+background-color: red;
+border: none;
+height: 30px;
+padding: 0 4px;
+color: white;
+  }
+
+  .cards{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .container {
+    overflow: hidden;
+    width: 30%;
+    box-sizing: border-box;
+    margin: 10px;
+}
+
+.container img {
+    width: 100%;
+    height: fit-content;
+}
+
+.btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  background-color: gray;
+  flex-direction: column;
+}
+
+
+
+
