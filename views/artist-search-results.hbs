@@ -1,0 +1,11 @@
+<div class="results">
+    {{#each items}}
+    <div class="card" style="width: 18rem;">
+    <img src="{{images.[0].url}}" class="card-img-top" alt="{{name}}">
+    <div class="card-body">
+        <h2 class="card-title">{{name}}</h2>
+        <a href="/albums/{{id}}" type="submit" class="btn btn-primary">View Albums</a>
+    </div>
+    </div>
+    {{/each}}
+</div>
