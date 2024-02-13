@@ -1,0 +1,45 @@
+
+
+.formImg {
+  background-image: url('../images/spotify-background.jpeg');
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.formArtist {
+  opacity: 0.9;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+.formSearch {
+  height: 35px;
+}
+
+.btn-danger {
+  background-color: #f86762 !important;
+}
+
+.bg-dark-subtle2 {
+  background-color: #4d4d4d !important;
+}
+
+.noBorder {
+
+  --bs-list-group-border-width: unset !important;
+}
+
+.bgListTracksTitle {
+  height: 70px;
+  background-color: #4b4a4a !important;
+  border-radius: 0!important;
+}
+
+.centerListen {
+  width: 25%;
+}
+
+.bgListTracks {
+  background-color: #f6f6f6 !important;
+}
+

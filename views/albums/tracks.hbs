@@ -1,0 +1,16 @@
+<section class="round-0 m-0">
+  <ul class="list-group noBorder">
+    <li class="list-group-item d-flex justify-content-between mx-5 bgListTracksTitle text-white-50">
+      <span class="ms-5 d-flex align-items-center fs-4 fw-semibold">Title</span>
+      <span class="d-flex justify-content-center align-items-center fs-4 fw-semibold centerListen">Listen</span>
+    </li>
+  {{#each tracks}}
+
+    <li class="list-group-item d-flex justify-content-between bgListTracks mx-5 mb-1">
+      <span class="ms-5 d-flex align-items-center">{{name}}</span>
+      <audio class="me-5" controls src="{{preview_url}}"></audio>
+    </li>
+
+  {{/each}}
+  </ul>
+</section>

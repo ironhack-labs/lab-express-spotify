@@ -1,0 +1,15 @@
+<div class="container mt-3 mb-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {{#each artists}}
+      <div class="col">
+        <div class="card h-80 rounded-0" style="">
+          <img src="{{images.[0].url}}" class="card-img-fluid" alt="{{name}}">
+          <div class="card-body d-flex flex-column justify-content-center align-items-center bg-dark-subtle2 text-light" >
+            <h5 class="card-title">{{name}}</h5>
+            <a href="/albums/{{id}}" class="btn btn-sm btn-danger">View Albums</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</div>
