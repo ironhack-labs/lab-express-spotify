@@ -1,0 +1,22 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+  {{#each albums as |album|}}
+    <div class="col">
+      <div class="card ga-2 mb-3 text-bg-dark">
+        <img
+          src="{{album.images.0.url}}"
+          class="object-fit-cover"
+          alt="{{album.name}}"
+          height="300px"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{album.name}}</h5>
+          <p class="text-center">Release date: {{album.release_date}}</p>
+          <div class="text-center"><a
+              href="/tracks/{{album.id}}"
+              class="btn btn-danger m"
+            >View tracks</a></div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>

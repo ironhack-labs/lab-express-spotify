@@ -1,0 +1,14 @@
+<ul class="list-group">
+  <li class="list-group-item d-flex bg-dark-subtle">
+    <span class="me-auto">Title</span>
+    <span>Listen</span>
+  </li>
+  {{#each tracks as |track|}}
+    <li class="list-group-item d-flex">
+      <span class="me-auto">{{track.name}}</span>
+      <audio controls>
+        <source src="{{track.preview_url}}" />
+      </audio>
+    </li>
+  {{/each}}
+</ul>
