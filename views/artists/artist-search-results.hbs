@@ -1,0 +1,21 @@
+<div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-1">
+  {{#each artists as |artist|}}
+    <div class="col">
+      <div class="card ga-2 mb-3 text-bg-dark">
+        <img
+          src="{{artist.images.0.url}}"
+          class="object-fit-cover"
+          alt="{{artist.name}}"
+          height="300px"
+        />
+        <div class="card-body">
+          <h5 class="card-title text-center">{{artist.name}}</h5>
+          <div class="text-center"><a
+              href="albums/{{artist.id}}"
+              class="btn btn-danger m"
+            >View albums</a></div>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+</div>
