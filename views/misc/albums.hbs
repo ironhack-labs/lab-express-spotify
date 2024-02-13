@@ -1,0 +1,18 @@
+{{>navbar}}
+
+<div class="container" style="margin-top:20px">
+<h2 class="text-start" style="font-size: 7.5em; color:#26d767;">Albums</h2>
+<div class="row gy-4" style="margin-top:20px">
+    {{#each albums as |album|}}
+        <div class="col-3 d-flex justify-content-between" >
+            <div class="card text-bg-dark border-secondary" style="width: 16rem;">
+                <img src="{{this.images.2.url}}" class="card-img-top" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{album.name}}</h5>
+                    <a href="/tracks/{{album.id}}?artistId={{../artistId}}&query={{../query}}" class="btn btn-primary">View tracks</a>
+                </div>
+            </div>
+        </div>
+    {{/each}}
+</div>
+</div>

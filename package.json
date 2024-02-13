@@ -4,13 +4,19 @@
   "description": "",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon -e js,css,hbs app.js",
+    "start": "node app.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.2",
+    "express": "^4.18.2",
+    "hbs": "^4.2.0",
+    "spotify-web-api-node": "^5.0.2"
+  },
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^3.0.3"
   }
 }
