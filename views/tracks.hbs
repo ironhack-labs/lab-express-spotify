@@ -1,0 +1,21 @@
+<div class="tracks-container" style="margin-top:40px">
+    <h1>Tracks</h1>
+        <table class="table">
+            <thead class="thead-dark">
+                <th scope="col">Title</th>
+                <th scope="col">Listen</th>
+            </thead>
+            <tbody>
+                <table class="table">
+                    {{#each tracks as |track|}}
+                        <thead class="thead-light">
+                            <tr>
+                                <audio controls>
+                                    <source src="{{track.preview_url}}" type="audio/mpeg">
+                                </audio>
+                            </tr>
+                        </thead>
+                    {{/each}}
+            </tbody>
+        </table>
+</div>
