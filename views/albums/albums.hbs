@@ -1,12 +1,12 @@
 <div class="container">
     <h1>Albums</h1>
     <div class="row row-cols-lg-3">
-    {{#each patata as |album|}}
+    {{#each albums as |album|}}
         <div class="card h-100">
             <img src="{{album.images.[0].url}}">
             <div>
                 <p>{{album.name}}</p>
-                <a class="btn btn-danger" href="/albums/{{album.id}}">View Albums</a>
+                <a class="btn btn-danger" href="/albums/{{album.id}}/tracks">View Tracks</a>
             </div>
         </div>
     {{/each}}
