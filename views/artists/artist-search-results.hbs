@@ -1,0 +1,14 @@
+<div class="container text-center row">
+    {{#each artists as |artist|}}
+    <div>
+        <h2>{{artist.name}}</h2>
+            <img src="{{artist.images.0.url}}" alt="{{artist.name}}" height="300px"/>
+
+        <div class="card-body">
+          <h5 class="card-title text-center">{{artist.name}}</h5>
+          <div class="text-center"><a class="btn btn-albums">View albums</a>
+        </div>
+
+    </div>
+    {{/each}}
+</div>
