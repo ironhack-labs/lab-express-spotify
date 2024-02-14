@@ -1,0 +1,22 @@
+<div class="artist-container" style="margin: 40px" >
+    <h1>Artists</h1>
+        <div class="row">
+            {{#each artists}}
+                <div class="col-sm-4">
+                    <div class="text-center">
+                        <div class="artist-card" style="background-color: gray;">
+                            <div class="div-button">
+
+                                <img src="{{images.0.url}}" class="card-img-top"alt="{{name}}" style="width: 100%; height: 100%; object-fit: cover;"/>
+                                <h5 class="text-white">{{this.name}}</h5>
+                                <a href="/albums/{{this.id}}">
+                                    <button class="btn btn-danger">View Albums</button>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/each}}
+            
+        </div>
+</div>
