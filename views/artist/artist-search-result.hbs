@@ -1,0 +1,14 @@
+<div class="container">
+    <h1>Artist</h1>
+    <div class="row row-cols-lg-3">
+    {{#each result as |artist|}}
+        <div class="card h-100">
+            <img src="{{artist.images.[0].url}}">
+            <div>
+                <p>{{artist.name}}</p>
+
+            </div>
+        </div>
+    {{/each}}
+    </div>
+</div>
