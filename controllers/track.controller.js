@@ -1,15 +1,14 @@
-const spotifyApi = require('../configs/routes.config')
+const spotifyApi = require('../configs/spotify.config')
 
-module.exports.tracks = (req, res, next) => {
-    const albumId = req.params.artistId;
-    //const search = req.query;
+module.exports.tracks = ('/tracks/:albumId', (req, res, next) => {
+    const albumId = req.params.albumId;
 
     spotifyApi
     .getAlbumTracks(albumId)
     .then((data) => {
-        res.render("album/tracks", { tracks: data.body.items });
+        res.render("tracks", { tracks: data.body.items });
     })
     .catch((error) => {
         console.error("Error fetching tracks:", error);
     });
-};
+});

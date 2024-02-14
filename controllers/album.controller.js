@@ -9,6 +9,7 @@ module.exports.albums = ('/albums/:artistId', (req, res, next) => {
     spotifyApi
         .getArtistAlbums(artistId)
         .then((data) => {
+            console.log(data.body.items)
             res.render("albums", { albums: data.body.items, search: search, artistId: artistId });
         })
         .catch((error) => { 

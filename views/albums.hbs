@@ -1,19 +1,22 @@
-<div class="album-container">
-    <h1 class="text">Albums Of {{this.name}}</h1>
+<div class="album-container" style="margin: 40px">
+    <h1 class="text">Albums</h1>
 
     <div class="row">
         {{#each albums as |album|}}
             <div class="col-sm-4">
-                <div class="card">
-                    <img src="{{album.images.0.url}}" class="card-img-top" alt="{{album.name}}" style="max-width: 200px; height: auto;">
+                <div class="album-card" style="background-color: gray;">
+                    <img src="{{album.images.0.url}}" class="card-img-top" alt="{{album.name}}" style="width: 100%; height: 100%; object-fit: cover;">
                     <div class="card-body">
-                        <h5 class="card-title">{{album.name}}</h5>
-                        <a href="/albums/{{album.id}}" class="btn btn-primary">View Tracks</a>
+                        <div class="text-white">
+                            <div class="text-center">
+                                <h5 class="card-title mb-3">{{album.name}}</h5>
+                                <p class="card-text">Some description or additional info if needed.</p>
+                                <a href="/tracks/{{album.id}}" class="btn btn-danger">View Tracks</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         {{/each}}
     </div>
 </div>
-
-
