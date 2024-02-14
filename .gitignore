@@ -5,3 +5,6 @@ node_modules
 .DS_Store
 
 package-lock.json
+
+CLIENT_ID=1e3b272ba3554259b30db1df4264bd9c
+CLIENT_SECRET=c2d0f6d4cd7149d69aa945b2f3c3e884
