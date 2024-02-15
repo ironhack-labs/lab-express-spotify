@@ -1,0 +1,15 @@
+<div class="container text-center row">
+    {{#each albums as |album|}}
+        <div class="col-md-4">
+            <div class="card m-3" style="width:22rem; height:auto" id="no-border">
+                 <div class="card-body">
+                    <h4 class="card-title"><b>{{album.name}}</b></h4>
+                </div>
+                    {{#if album.images}}
+                    <img src="{{album.images.0.url}}" class="img-fluid rounded-start p-3 mx-auto d-block"  style="height: 220px;" alt="..."/>
+                    {{/if}}
+                </div>
+                <a href="/{{album.id}}/tracks">View tracks</a>
+        </div> 
+    {{/each}}
+</div>

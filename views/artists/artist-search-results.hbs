@@ -1,0 +1,15 @@
+<div class="container text-center row">
+    {{#each artists.artists.items as |artist|}}
+        <div class="col-md-4">
+            <div class="card m-3" style="width:22rem; height:auto" id="no-border">
+                 <div class="card-body">
+                    <h4 class="card-title"><b>{{artist.name}}</b></h4>
+                </div>
+                    {{#if artist.images}}
+                    <img src="{{artist.images.2.url}}" class="img-fluid rounded-start p-3 mx-auto d-block"  style="height: 220px;" alt="{{artist.name}}"/>
+                    {{/if}}
+                </div>
+                <a href="/albums/{{artist.id}}">View Albums</a>
+        </div> 
+    {{/each}}
+</div>
