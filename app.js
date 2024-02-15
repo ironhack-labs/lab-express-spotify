@@ -13,6 +13,8 @@ app.set('view engine', 'hbs');
 app.set('views', __dirname + '/views');
 app.use(express.static(__dirname + '/public'));
 
+
+hbs.registerPartials(`${__dirname}/views/pages`);
 // setting the spotify-api goes here:
 const spotifyApi = new SpotifyWebApi({
     clientId : process.env.CLIENT_ID,
@@ -24,9 +26,24 @@ spotifyApi
     .clientCredentialsGrant()
     .then(data => spotifyApi.setAccessToken(data.body['access_token']))
     .catch(error => console.log('Something went wrong when retrieving an access token', error));
+    
+    app.use(express.urlencoded({ extended: true }));
+
 // Our routes go here:
 app.get ("/" , (req,res,next)=>{
     res.render("pages/homepage")
+})
+app.get ("/artist-search", (req,res,next)=> {
+    spotifyApi
+  .searchArtists(req.query.search_field)
+  .then(data => {
+    const artist = data.body.artists.items
+    console.log('The received data from the API: ', data.body.artists.items);
+    res.render ( "pages/artist-search-results", {artist})
+  })
+  .catch(err => console.log('The error while searching artists occurred: ', err));
+    
+
 })
 
 
