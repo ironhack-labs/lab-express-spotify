@@ -19,8 +19,8 @@ app.use(express.static(__dirname + '/public'));
 
 // Our routes go here:
 
-const router = require('./configs/router.config');
-app.use('/', router)
+const routes = require('./configs/router.config');
+app.use('/', routes)
 
 const port = 3000;
 app.listen(port, () => console.log('My Spotify project running on port 3000 🎧 🥁 🎸 🔊'));
