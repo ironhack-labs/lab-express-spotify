@@ -1,0 +1,14 @@
+<div class="container text-center py-2 margin-top: 100px">
+    <h1>Albums</h1>
+    <div class="row row-cols-lg-3">
+        {{#each albums as |album|}}
+        <div class="card h-100">
+            <img src="{{album.images.[0].url}}">
+            <div class="btn margin-bottom: 100px">
+                <p>{{album.name}}</p>
+                <a class="btn btn-danger" href="/albums/{{album.id}}/tracks">View Tracks</a>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>

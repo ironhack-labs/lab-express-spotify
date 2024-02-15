@@ -1,11 +1,16 @@
-const spotifyApi = require('../configs/spotify.config');
+const spotifyApi = require('../configs/spotify.config')
 
-module.exports.artists = (req, res, next) => {
-    
-        spotifyApi.searchArtists(req.query.artists)  /**Le decimos de dónde debe coger la información (barra de búsqueda) */
-        .then((data) => {
-            const artist = data.body.artists.items;
-            res.render('misc/artists-search', {artist});
+module.exports.artist = (req, res, next) => {
+    const { artist } = req.query
+    if (!artist) {
+        res.redirect('/')
+    }
+    spotifyApi
+        .searchArtists(artist)
+        .then(data => {
+            //console.log('The received data from the API: ', data.body)
+            const result = data.body.artists.items
+            res.render('artists/artist-search-result', { result })
         })
-        .catch((error) => next(error));
+        .catch(err => console.log('The error while searching artists occurred: ', err))
 }

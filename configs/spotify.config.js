@@ -5,5 +5,4 @@ const spotifyApi = new SpotifyWebApi({
   clientSecret: process.env.CLIENT_SECRET
 });
 
-
 module.exports = spotifyApi;
