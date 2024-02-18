@@ -1,0 +1,8 @@
+<div>
+  <h1>Artist Search Results</h1>
+    {{#each artists as |artist|}}
+        {{artist.name}} 
+       <img src="{{artist.images.2.url}}" alt="images of artists"/> 
+        <a href="/albums/{{artist.id}}">More info</a>      
+    {{/each}}
+</div>
