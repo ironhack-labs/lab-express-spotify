@@ -1,0 +1,8 @@
+<ul class="list-group">
+    {{#each tracks as |track|}}
+    <li>
+        <div>{{track.name}}</div>
+        <audio controls src="{{track.preview_url}}"></audio>
+    </li>
+    {{/each}}
+</ul>
