@@ -1,0 +1,9 @@
+{{>navbar}}
+<ul class="list-group container py-4">
+    {{#each tracks as |track|}}
+    <li class="list-group-item d-flex">
+        <span class="me-auto">{{track.name}}</span>
+        <audio controls src="{{track.preview_url}} class=me-auto"></audio>
+    </li>
+    {{/each}}
+</ul>
