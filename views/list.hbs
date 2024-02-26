@@ -1,0 +1,16 @@
+<div class="artist-container">
+
+  {{#each selectedItems as |item|}}
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{item.images.0.url}}" alt="{{item.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text"> <strong>Popularity: </strong>{{item.popularity}}</p>
+      <p class="card-text"> <strong>Type: </strong>{{item.type}}</p>
+
+      <a href="/albums/{{item.id}}" class="btn btn-primary">View albums</a>
+    </div>
+
+  </div>
+  {{/each}}
+</div>

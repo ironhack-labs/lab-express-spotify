@@ -1,0 +1,19 @@
+<div class="artist-container">
+
+  {{#each albumsArr as |item|}}
+  <div class="card" style="width: 18rem;">
+    <img class="card-img-top" src="{{item.images.0.url}}" alt="{{item.name}}">
+    <div class="card-body">
+      <h5 class="card-title">{{item.name}}</h5>
+      <p class="card-text"> <strong>Tracks: </strong>{{item.total_tracks}}</p>
+      <p class="card-text"> <strong>Type: </strong>{{item.type}}</p>
+      <strong>Artists: </strong>{{#each item.artists as |artist|}}
+            <span class="card-text"> {{artist.name}}</span>
+      {{/each}} <br>
+
+      <a href="/albums/{{item.id}}/tracks" class="btn btn-primary mt-3">View tracks</a>
+    </div>
+
+  </div>
+  {{/each}}
+</div>

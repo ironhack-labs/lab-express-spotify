@@ -1,0 +1,44 @@
+.search-div {
+height: 200px;
+width: 50%;
+display: flex;
+justify-content: center;
+align-items: center;
+background-color: rgba(255, 255, 255, 0.589);
+}
+
+main {
+    height: 100vh;
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-btn{
+    background-color: rgb(255, 75, 75);
+    color: white;
+    width: 220px;
+    margin: auto;
+}
+
+.search-div input{
+    width: 400px;
+}
+
+.search-div form{
+    display: flex;
+    flex-direction: column;
+}
+
+.artist-container{
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.card {
+    margin: 10px;
+  }
