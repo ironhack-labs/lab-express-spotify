@@ -33,6 +33,12 @@ main {
 }
 
 .artist-container{
-  width: 100vw;
-  background-color: aqua;
+  background-color: aliceblue;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
 }
+
+.card {
+    margin: 10px;
+  }

@@ -1,0 +1,14 @@
+
+<div class="container m-5">
+    <h1 class="mb-3" >Tracks</h1>
+<ul class="list-group w-90">
+  {{#each tracksArr as |track|}}
+  <li class="list-group-item d-flex align-items-center">
+    <strong class="me-auto">{{track.track_number}}. </strong> {{track.name}}
+    <audio class="ms-auto" controls src="{{track.preview_url}}">
+  Tu navegador no soporta el elemento de audio.
+</audio>
+  </li>
+{{/each}}
+</ul>
+</div>
