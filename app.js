@@ -30,14 +30,11 @@ app.get('/', (req, res)=>{
 
 app.get('/artist-search',(req,res)=>{
 
-    const artist = req.query
+    const { artist } = req.query
     
     spotifyApi
-        .searchArtists(req.query.artist)
+        .searchArtists(artist)
         .then(data => {
-            // console.log('The received data from the API: ', data.body);
-            // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            // res.send(data.body.artists.items)
             res.render('artist-search-results', {artists: data.body.artists.items})
         })
         .catch(err => console.log('The error while searching artists occurred: ', err));
@@ -46,13 +43,10 @@ app.get('/artist-search',(req,res)=>{
 })
 
 app.get('/albums/:id', (req, res)=>{
-    const id = req.params
+    const { id } = req.params
     spotifyApi
-        .getArtistAlbums(req.params.id)
+        .getArtistAlbums(id)
         .then(dataElm => {
-            // console.log('The received data from the API: ', dataElm.body)
-            // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            // res.send(dataElm.body.items)
             res.render('album', { albums: dataElm.body.items })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err))
@@ -61,13 +55,10 @@ app.get('/albums/:id', (req, res)=>{
 })
 
 app.get('/songs/:id', (req, res) => {
-    const id = req.params
+    const { id } = req.params
     spotifyApi
-        .getAlbumTracks(req.params.id)
+        .getAlbumTracks(id)
         .then(dataElement => {
-            // console.log('The received data from the API: ', dataElm.body)
-            // ----> 'HERE'S WHAT WE WANT TO DO AFTER RECEIVING THE DATA FROM THE API'
-            // res.send(dataElement.body.items)
             res.render('songs', { songs: dataElement.body.items })
         })
         .catch(err => console.log('The error while searching artists occurred: ', err))
