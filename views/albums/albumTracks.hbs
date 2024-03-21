@@ -1,0 +1,30 @@
+<div class="container">
+  <div class="row">
+    <div class="col-8 bg-secondary text-light">
+      <h2>Title</h2>
+    </div>
+    <div class="col bg-secondary text-light">
+      <h2>Listen</h2>
+    </div>
+
+    <div class="row mt-4">
+        <div class="row">
+            {{#each tracks}}
+            <div class="col-8 pt-3">
+            {{name}}
+            <a href="{{external_urls.spotify}}" target="_blank" class="text-decoration-none badge bg-success text-bg-success">Listen on Spotify</a>
+            {{#if explicit}}
+                <span class="badge bg-danger text-bg-danger">Explicit</span>
+            {{/if}}
+            </div>
+            <div class="col-2 mb-2">
+            <audio src="{{preview_url}}" controls />
+            </div>
+            {{/each}}
+        </div>
+    </div>
+  </div>
+  <p class="float-end mb-3">
+    <a href="/" class="btn btn-danger">Back to search</a>
+  </p>
+</div>
