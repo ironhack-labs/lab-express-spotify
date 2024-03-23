@@ -1,0 +1,12 @@
+
+<h1>Hello</h1>
+{{#each artists}}
+  <div class="artist">
+    <h2>{{name}}</h2>
+    {{! to check if the images array is not empty }}
+    {{#if images.[0]}}
+      <img src="{{images.[0].url}}" alt="{{name}} Image" />
+    {{/if}}
+    <a href="/albums/{{id}}">View Albums</a>
+  </div>
+{{/each}}

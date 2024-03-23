@@ -1,0 +1,16 @@
+<div id="top-bar">
+  <h1>Title</h1>
+  <h1>Listen</h1>
+</div>
+<div class="track-list">
+  {{#each tracks}}
+    <div class="track">
+      <h2>{{name}}</h2>
+      <figure>
+        <figcaption>Listen to {{name}}: </figcaption>
+        <audio controls src="{{preview_url}}"></audio>
+        <a href="{{preview_url}}" download="">Download audio</a>
+      </figure>
+    </div>
+  {{/each}}
+</div>

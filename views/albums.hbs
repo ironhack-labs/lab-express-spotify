@@ -1,0 +1,12 @@
+{{!-- albums.hbs --}}
+
+<h1>Albums for: </h1>
+<div class="albums">
+    {{#each albums}}
+    <div class="album">
+        <img src="{{images.[0].url}}" alt="{{name}}">
+        <h2>{{name}}</h2>        
+        <a href="/tracks/{{id}}">View Tracks</a>
+    </div>
+    {{/each}}
+</div>
