@@ -1,0 +1,94 @@
+body {
+  display: flex;
+  /* justify-content: center;
+    align-items: center; */
+  flex-wrap: wrap;
+  align-items: flex-end;
+  gap: 20px;
+}
+
+#form-style {
+  display: flex;
+  flex-direction: column;
+  width: 60%;
+  height: 12rem;
+  background: rgba(255, 255, 255, 0.5);
+  background-image: none;
+}
+
+#box {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%; /* Adjust width as needed */
+  height: 100%; /* Adjust height as needed */
+}
+
+#input-field {
+  margin-bottom: 10px;
+  width: 50%;
+}
+
+#button-field {
+  background-color: red;
+  color: white;
+  border: none;
+  height: 1.5rem;
+  opacity: 0.7;
+}
+
+.artist,
+.albums {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+}
+
+.artist-info, .album {
+  display: flex;
+  flex-direction: column;
+}
+
+.name-link-artist-search {
+  background-color: rgb(79, 79, 79);
+  width: 200px;
+  text-align: center;
+  color: white;
+  text-decoration: none;
+  font-size: 0.7rem;
+  height: 4.5rem;
+}
+
+.name-artist-search {
+  margin: auto;
+  padding-bottom: 5px;
+}
+
+.artist-album-img {
+  width: 200px;
+  height: 200px;
+}
+
+.button-artist-search {
+  color: white;
+  text-decoration: none;
+  background-color: red;
+  border-radius: 3px;
+  padding: 3px;
+}
+
+.h1-albums {
+  width: 100%;
+  text-align: center;
+}
+
+.name-track {
+  background-color: rgb(79, 79, 79);
+  text-align: center;
+  color: white;
+}
+
+.text-track {
+  margin-bottom: 10px;
+}

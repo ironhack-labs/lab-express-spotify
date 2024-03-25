@@ -1,0 +1,13 @@
+
+<div class="track-list">
+  {{#each tracks}}
+    <div class="track">
+      <h2 class="name-track">{{name}}</h2>
+      <figure>
+        <figcaption class="text-track">Listen to {{name}}: </figcaption>
+        <audio controls src="{{preview_url}}"></audio>
+        <a href="{{preview_url}}" download="">Download audio</a>
+      </figure>
+    </div>
+  {{/each}}
+</div>
