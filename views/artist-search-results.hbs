@@ -1,12 +1,15 @@
 
-<h1>Hello</h1>
 {{#each artists}}
   <div class="artist">
-    <h2>{{name}}</h2>
-    {{! to check if the images array is not empty }}
-    {{#if images.[0]}}
-      <img src="{{images.[0].url}}" alt="{{name}} Image" />
-    {{/if}}
-    <a href="/albums/{{id}}">View Albums</a>
+    <div class="artist-info">  
+      {{! to check if the images array is not empty }}
+      {{#if images.[0]}}
+        <img  class="artist-album-img" src="{{images.[0].url}}" alt="{{name}} Image" />
+      {{/if}}
+      <div class="name-link-artist-search">
+        <h2 class="name-artist-search">{{name}}</h2>
+        <a class="button-artist-search" href="/albums/{{id}}">View Albums</a>
+      </div>
+    </div> 
   </div>
 {{/each}}

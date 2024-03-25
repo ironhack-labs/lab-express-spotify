@@ -1,0 +1,7 @@
+body {
+    background-image:url(/images/spotify-background.jpeg);
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

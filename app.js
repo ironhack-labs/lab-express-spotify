@@ -62,7 +62,8 @@ app.get("/albums/:artistId", (req, res, next) => {
     .getArtistAlbums(artistId)
     .then((data) => {
       // render the albums.hbs template, passing the albums data
-      res.render("albums", { albums: data.body.items });
+      res.render("albums", { albums: data.body.items, artist: data.body.items[0].artists[0] });
+      console.log(data.body.items[0].artists)
       console.log(data)
     })
     .catch((error) => {
