@@ -1,0 +1,11 @@
+<div>
+    <h2 id="result-text">Here are the results for your artist search:</h2>
+</div>
+<div class="artists">
+    {{#each albumDetails}}
+        {{> albumPartial this}} 
+    {{else}}
+        <p>No items yet!</p>
+    {{/each}}
+</div>
+

@@ -1,0 +1,11 @@
+<div>
+    <h2 id="result-text">Here are the songs for the selected album</h2>
+</div>
+<div class="tracks">
+    {{#each trackDetails}}
+        {{> trackPartial this}} 
+    {{else}}
+        <p>No items yet!</p>
+    {{/each}}
+</div>
+
