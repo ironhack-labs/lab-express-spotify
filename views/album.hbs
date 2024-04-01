@@ -1,0 +1,23 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Albums</title>
+</head>
+<body>
+  <h1>Artist Albums</h1>
+  <div class="album-list">
+    {{#each albums}}
+    <div class="album-item">
+      <h2>{{name}}</h2>
+      {{#if image}}
+      <img src="{{image}}" alt="{{name}}" width="200">
+      {{else}}
+      <p>No image available</p>
+      {{/if}}
+      <a href="/albums/{{album.id}}/tracks">View Tracks</a>
+    </div>
+    {{/each}}
+  </div>
+</body>
+</html>

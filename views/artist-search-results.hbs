@@ -1,0 +1,24 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artist Search Results</title>
+</head>
+<body>
+  <h1>Artist Search Results</h1>
+  <div class="artist-list">
+    {{#each artists}}
+    <div class="artist-item">
+      <h2>{{name}}</h2>
+      {{#if image}}
+      <img src="{{image}}" alt="{{name}}" width="200">
+      {{else}}
+      <p>No image available</p>
+      {{/if}}
+      <!-- Add a button or link to show albums for the artist -->
+      <a href="/albums/{{id}}">Show Albums</a>
+    </div>
+    {{/each}}
+  </div>
+</body>
+</html>
