@@ -1,0 +1,99 @@
+#home{
+    width: 100%;
+    height: 700px;
+    background-image: url(../images/spotify-background.jpeg);
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#artist-form{
+    display: flex;
+    justify-content: center;
+    background-color: rgb(245, 245, 220, 0.5);
+    padding: 50px 200px;
+}
+#artist-form form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#artist-form form input{
+    width: 350px;
+    height: 30px;
+}
+#artist-form form button{
+    width: 150px;
+    height: 30px;
+    margin-top: 20px;
+    background-color: red;
+    border-style: none;
+    color: white;
+}
+#artists{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#artists button{
+    display: flex;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#artists a{
+    text-decoration: none;
+}
+#artists div{
+    width: 25%;
+    background-color: grey;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#artists h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#albums{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+}
+#albums button{
+    display: flex;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-decoration: none;
+    border-style: none;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+#albums a{
+    text-decoration: none;
+    color: white;
+}
+#albums div{
+    width: 25%;
+    background-color: grey;
+    margin: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#albums h3{
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+}
+#tracks div audio{
+    width: 100%;
+}
