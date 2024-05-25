@@ -1,10 +1,10 @@
 {
   "name": "starter-code",
   "version": "1.0.0",
-  "description": "",
+  "description": "![logo_ironhack_blue 7](https://user-images.githubusercontent.com/23629340/40541063-a07a0a8a-601a-11e8-91b5-2f13e4e6b441.png)",
   "main": "app.js",
   "scripts": {
-    "dev": "nodemon app.js",
+    "dev": "nodemon app.js -e hbs,js,css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -12,5 +12,11 @@
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "express": "^4.19.2",
+    "hbs": "^4.2.0",
+    "spotify-web-api-node": "^5.0.2"
   }
 }
