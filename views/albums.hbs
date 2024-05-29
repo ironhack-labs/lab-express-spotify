@@ -1,0 +1,16 @@
+<div>
+<h2 class="text-2x1 text-center mb-2"> Albums for: {{albums.0.artists.0.name}}</h2>
+<div class="grid grid-cols-3 gap-3">
+    {{#each albums}}
+        <div class="flex flex-col items-center justify-cetner">
+            {{#if this.images.length}}
+            {{!-- Foto del artista con this.images.0.url --}}
+            <img src="{{this.images.0.url}}" alt="" width="300">
+            {{/if}}
+            <p>{{this.name}}</p>
+            <button class="bg-blue-500 p-3 rounded mt-2 text-white hover:bg-blue-800">
+                <a href="/tracks/{{this.id}}">View Tracks</a></button>
+        </div>
+    {{/each}}
+    </div>
+</div>
