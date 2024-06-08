@@ -1,0 +1,133 @@
+body {
+    background-image: url('../images/spotify-background.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    color: #ffffff;
+}
+
+h1 {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 100px;
+}
+
+p {
+    font-size: 18px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+li {
+    list-style-type: none;
+}
+
+button {
+    background-color: #1db954;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+#search-container {
+    text-align: center;
+    margin-top: 50px;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+    background-image: url('./images/spotify-background.jpg');
+
+}
+
+#artist-container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    margin-top: 50px;
+}
+
+#artist-partial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#artist-partial a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#albums-container ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 50px;
+    margin-top: 50px;
+}
+
+#albums-container a {
+    color: #ffffff;
+    text-decoration: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #1db954;
+    color: #ffffff;
+    font-size: 18px;
+    font-weight: bold;
+    text-decoration: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#tracks-container th {
+    background-color: #333333;
+    color: #d3d3d3;
+    padding: 20px;
+}
+
+#tracks-container td {
+    padding: 10px;
+    border-bottom: 1px solid #d3d3d3;
+}
+
+#tracks-container {
+    margin-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+#tracks-container table {
+    width: 100%;
+}
+
+#tracks-container thead {
+    width: 100%;
+}
+
+#tracks-container tbody {
+    width: 100%;
+}

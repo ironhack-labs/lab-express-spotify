@@ -1,0 +1,21 @@
+<div id="artist-partial">
+    <h2>{{name}}</h2>
+    <a href="/albums/{{id}}">View Ablums</a>
+    <h3>Genres:</h3>
+    <ul>
+        {{#each genres}}
+        <li>{{this}}</li>
+    {{/each}}
+    </ul>
+    <h3>Followers:</h3>
+    <p>{{followers.total}}</p>
+    <h3>Popularity:</h3>
+    <p>{{popularity}}</p>
+    <h3>Spotify ID:</h3>
+    <p>{{id}}</p>
+    <h3>Spotify Link:</h3>
+    <a href="{{external_urls.spotify}}">Link to {{name}} on Spotify</a>
+    <h3>Images:</h3>
+    <img src="{{images.[0].url}}" alt="{{name}}" />
+</div>
+</div>
