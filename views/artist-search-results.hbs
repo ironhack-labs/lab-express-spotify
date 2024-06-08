@@ -1,0 +1,9 @@
+<div style="display: flex; flex-wrap: wrap">
+{{#each artists }}
+    <div class="artist-card">
+        <img src="{{this.images.[0].url}}"></img>
+        <p>{{this.name}}</p>
+        <a href="/albums/{{this.id}}">View Albums</a>
+    </div>
+{{/each}}
+</div>

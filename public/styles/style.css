@@ -1,0 +1,81 @@
+body {
+    background-image: url("../images/spotify-background.jpeg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+}
+
+form {
+    width: 50%;
+    height: 200px;
+    background-color: rgba(255, 255, 255, 0.5);
+    margin: auto;
+    margin-top: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+input {
+    width: 60%;
+    height: 25px;
+    display: block;
+}
+
+form button {
+    padding: 10px;
+    margin-top: 10px;
+}
+
+.artist-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 10%; 
+    height: 200px;
+    background-color: rgb(80, 80, 80);
+    margin-left: 20px;
+    margin-right: 20px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.artist-card img {
+    width: 100%; 
+    height: 80%
+}
+
+.artist-card p {
+    text-align: center;
+    margin: 0 0;
+    color: white;
+}
+
+.artist-card button {
+    width: 60%;
+    border-radius: 5px;
+}
+
+button, a {
+    background-color: rgb(215, 105, 105);
+    color: white;
+    border-style: none;
+    padding: 3px;
+    display: block;
+}
+
+a {
+    border-radius: 5px;
+    text-decoration: none;
+    margin-bottom: 5px;
+}
+
+.track {
+    margin: auto;
+    width: 50%;
+    background-color: rgb(195, 195, 195);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}

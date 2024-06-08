@@ -1,0 +1,6 @@
+<div style="background-color: grey; width: 50%; margin: auto; font-size: 30px">Title</div>
+{{#each tracks }}
+    <div class="track">{{this.name}}
+    <audio src="{{this.preview_url}}" controls></audio>
+    </div>
+{{/each}}
