@@ -1,0 +1,20 @@
+body{
+    margin: 0;
+}
+.background{
+    background-image: url("/images/spotify-background.jpeg");
+    width: 100vw;
+    height: 100vh;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+form{
+    width: 50rem;
+}
+.index-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: rgba(239, 239, 239, 0.56);
+}
