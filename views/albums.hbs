@@ -1,0 +1,17 @@
+<!-- views/albums.hbs -->
+
+<h2>Albums</h2>
+<ul>
+  {{#each albums}}
+    <li>
+      <h3>{{this.name}}</h3>
+      {{#if this.images.[0]}}
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}" width="100">
+      {{else}}
+        <p>No image available</p>
+      {{/if}}
+      <br>
+      <a href="/tracks/{{this.id}}">View Tracks</a>
+    </li>
+  {{/each}}
+</ul>

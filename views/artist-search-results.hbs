@@ -1,0 +1,18 @@
+
+<!-- views/artist-search-results.hbs -->
+
+<h2>Search Results for "{{query}}":</h2>
+<ul>
+  {{#each artists}}
+    <li>
+      <h3>{{this.name}}</h3>
+      {{#if this.images.[0]}}
+        <img src="{{this.images.[0].url}}" alt="{{this.name}}" width="100">
+      {{else}}
+        <p>No image available</p>
+      {{/if}}
+      <br>
+      <a href="/albums/{{this.id}}">View Albums</a>
+    </li>
+  {{/each}}
+</ul>
