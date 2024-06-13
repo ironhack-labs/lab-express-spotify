@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Music Streaming Webpage</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Music Streaming Webpage</h1>
+    </header>
+
+    <main>
+        <section class="featured">
+            <h2>Featured Songs</h2>
+            {{!-- Display featured songs here --}}
+        </section>
+
+        <section class="popular">
+            <h2>Popular Songs</h2>
+            {{!-- Display popular songs here --}}
+        </section>
+
+        <section class="new-releases">
+            <h2>New Releases</h2>
+            {{!-- Display new releases here --}}
+        </section>
+    </main>
+
+    <form action="/artist-search" method="GET">
+    <input type="text" name="artist" placeholder="Enter artist's name">
+    <button type="submit">Search</button>
+</form>
+
+    <footer>
+        <p>&copy; 2022 Music Streaming Webpage. All rights reserved.</p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
