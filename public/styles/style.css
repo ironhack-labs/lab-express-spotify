@@ -1,0 +1,162 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  .background {
+    background-image: url('/images/spotify-background.jpeg');
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .search-container {
+    background-color: rgba(255, 255, 255, 0.8); /* 透明度のある背景 */
+    padding: 20px;
+    border-radius: 10px;
+  }
+  
+  .search-container input[type="text"] {
+    padding: 10px;
+    margin-right: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .search-container button {
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-container button:hover {
+    background-color: #d32f2f;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .artists-container, .albums-container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 20px;
+  }
+  
+  .artist, .album {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 200px;
+    height: 400px; /* 固定の高さを設定 */
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .artist img, .album img, .artist .no-image, .album .no-image {
+    width: 100%;
+    height: auto;
+    max-height: 300px; /* 画像の最大高さを設定 */
+  }
+  
+  .artist .no-image, .album .no-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 300px; /* 画像がない場合の高さを設定 */
+    background-color: #f0f0f0;
+    color: #888;
+  }
+  
+  .artist h2, .album h2 {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  .btn {
+    display: block;
+    padding: 10px 20px;
+    background-color: #f44336;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    margin: 10px auto 0;
+    transition: background-color 0.3s;
+  }
+  
+  .btn:hover {
+    background-color: #d32f2f;
+  }
+  
+  .tracks-table {
+    width: 80%;
+    margin: 20px auto;
+    border-collapse: collapse;
+  }
+  
+  .tracks-table th, .tracks-table td {
+    border: 1px solid #ddd;
+    padding: 10px;
+  }
+  
+  .tracks-table .title-header {
+    text-align: left;
+  }
+  
+  .tracks-table .listen-header {
+    text-align: center;
+  }
+  
+  .tracks-table .title-cell {
+    text-align: left;
+  }
+  
+  .tracks-table .listen-cell {
+    text-align: right;
+  }
+  
+  .tracks-table th {
+    background-color: #333;
+    color: white;
+  }
+  
+  .tracks-table td {
+    background-color: #f9f9f9;
+  }
+  
+  .audio-container {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  
+  .audio-container audio {
+    margin-right: 10px;
+  }
+  
+  .download-btn {
+    color: #f44336;
+    text-decoration: none;
+    padding: 5px;
+    border-radius: 5px;
+    transition: color 0.3s;
+  }
+  
+  .download-btn:hover {
+    color: #d32f2f;
+  }
+  

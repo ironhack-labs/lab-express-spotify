@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Search Results</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <h1>Artist Search Results</h1>
+  <div class="artists-container">
+    {{#each artists}}
+      <div class="artist">
+        <h2>{{this.name}}</h2>
+        {{#if this.images.[0]}}
+          <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+        {{else}}
+          <div class="no-image">No Image Available</div>
+        {{/if}}
+        <a href="/albums/{{this.id}}" class="btn">View Albums</a>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>

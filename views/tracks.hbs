@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Tracks</title>
+  <link rel="stylesheet" href="/styles/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+<body>
+  <h1>Tracks for: {{albumName}}</h1>
+  <table class="tracks-table">
+    <thead>
+      <tr>
+        <th class="title-header">Title</th>
+        <th class="listen-header">Listen</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each tracks}}
+        <tr>
+          <td class="title-cell">{{this.name}}</td>
+          <td class="listen-cell">
+            {{#if this.preview_url}}
+              <div class="audio-container">
+                <audio controls>
+                  <source src="{{this.preview_url}}" type="audio/mpeg">
+                  Your browser does not support the audio element.
+                </audio>
+                <a href="{{this.preview_url}}" download class="download-btn">
+                  <i class="fas fa-download"></i>
+                </a>
+              </div>
+            {{else}}
+              No preview available
+            {{/if}}
+          </td>
+        </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</body>
+</html>

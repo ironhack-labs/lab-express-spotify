@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Albums</title>
+  <link rel="stylesheet" href="/styles/style.css">
+</head>
+<body>
+  <h1>Albums for: {{artistName}}</h1>
+  <div class="albums-container">
+    {{#each albums}}
+      <div class="album">
+        {{#if this.images.[0]}}
+          <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+        {{else}}
+          <div class="no-image">No Image Available</div>
+        {{/if}}
+        <div class="album-info">
+          <h2>{{this.name}}</h2>
+          <a href="/tracks/{{this.id}}" class="btn">View Tracks</a>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+</body>
+</html>
