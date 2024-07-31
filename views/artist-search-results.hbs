@@ -1,0 +1,10 @@
+<h1>Welcome Search Spotify API</h1>
+
+{{#each artist}}
+<div>
+    {{#if this.images.length}}
+    <img src="{{this.images.0.url}}" alt="">
+    {{/if}}
+    <button><a href="/albums/{{this.id}}">View Albums</a></button>
+</div>
+{{/each}}
