@@ -1,0 +1,39 @@
+<head>
+    <link href="/styles/style.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Lora:ital@1&family=Noto+Serif+Tamil&family=Roboto+Condensed:wght@300&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <nav>
+        <div class="row navigator">
+            <div class="col-8 text ">
+                <h1>Albums </h1>
+            </div>
+            <div class="col-4">
+                <div class="container standard-button-container d-flex justify-content-center">
+                    <button type="button" class="btn btn-outline-secondary standard-button">
+                        <a href="/">Search another artist</a>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        {{#if albums}} 
+            <div class="row align-items-stretch">
+                {{#each albums}}
+                {{> albumsCard this}}
+                {{/each}}
+            </div>
+        {{/if}}
+    </div>
+
+</body>
+
+
+
+
