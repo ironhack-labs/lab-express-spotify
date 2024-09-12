@@ -1,0 +1,15 @@
+<div class='artist-result'>
+	{{#each this.artists.items}}
+		<div class='element'>
+			{{#if this.images.0.url}}
+				<img src='{{this.images.0.url}}' alt='{{this.name}}' />
+			{{else}}
+				<img src='/images/images.jpeg' alt='{{this.name}}' />
+			{{/if}}
+			<h2>{{this.name}}</h2>
+			<a href='/albums/{{this.id}}'>View Albums</a>
+
+		</div>
+	{{/each}}
+
+</div>
