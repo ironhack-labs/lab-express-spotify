@@ -1,0 +1,21 @@
+
+<head>
+  <title>Tracks</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+    <body>
+      <h1>Album Tracks</h1>
+      <ul>
+        {{#each albumTracks}}
+          <li>
+            <p>Song: {{ name }}</p>
+            <p>Artist: {{ artists.[0].name }}</p>
+            <audio controls>
+              <source src="{{ preview_url }}" type="audio/mpeg">
+            </audio>
+          </li>
+        {{/each}}
+      </ul>
+    </body>
+
+    
