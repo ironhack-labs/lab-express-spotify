@@ -3,5 +3,6 @@
 node_modules
 .env
 .DS_Store
+notes.txt
 
 package-lock.json
