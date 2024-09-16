@@ -1,0 +1,18 @@
+<div class="all-products">
+
+	{{#each artistsArray}}
+
+		<div class="artist-container">
+			{{#if this.images}}
+				<img src="{{this.images.2.url}}" alt="" />
+			{{/if}}
+
+			<div class="artists-description-container">
+				<h3>{{this.name}}</h3>
+
+				<a class="button" href="/albums/{{this.id}}">View albums</a>
+
+			</div>
+		</div>
+	{{/each}}
+</div>
