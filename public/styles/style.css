@@ -1,0 +1,204 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  height: 4vh;
+  background-color: #ad0715;
+}
+nav a {
+  font-size: 1rem;
+  padding-left: 2vw;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  font-size: 2vh;
+  font-weight: bold;
+  color: white;
+  text-decoration: none;
+  text-transform: uppercase;
+  line-height: 2;
+}
+nav a:hover {
+  text-decoration: underline;
+  text-shadow: rgb(248, 203, 20) 5px 0 10px;
+}
+/* ------------------------ */
+/* ------------------------ */
+/* home-page */
+.home-page-container {
+  width: 100vw;
+  height: 96vh;
+  background-image: url(../images/spotify-background.jpeg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+form {
+  /* border: 5px solid yellow; */
+  background-color: rgba(255, 255, 255, 0.37);
+  height: 15vh;
+  width: 35vw;
+  border-radius: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  /* position: absolute;
+  top: 35%; */
+}
+input {
+  width: 25vw;
+  height: 2.5vh;
+  border-radius: 2px;
+  margin-bottom: 2vh;
+  border: none;
+}
+button {
+  background-color: #ad0715;
+  color: white;
+  width: 7vw;
+  height: 3vh;
+  border-radius: 5px;
+  border: none;
+}
+button:hover {
+  text-decoration: underline;
+  text-shadow: rgb(255, 255, 255) 5px 0 10px;
+}
+/* ------------------------ */
+/* ------------------------ */
+/* detail-search-results */
+#detail-search-results-page {
+  position: relative;
+  top: 3vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  color: #ad0715;
+}
+#all-details-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 85%;
+  justify-content: space-evenly;
+  /* align-items: center; */
+}
+.detail-summary {
+  margin-bottom: 6vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 25vw;
+}
+.detail-summary-img {
+  width: 23vw;
+  height: 23vw;
+  object-fit: cover;
+}
+.detail-summary-content {
+  background-color: #ad0715;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 23vw;
+}
+.detail-summary-content h2 {
+  /* position: absolute;
+  top: 0; */
+  padding: 0;
+  margin: 1.5vh 2vw 1.5vh 2vw;
+  color: antiquewhite;
+  width: 23vw;
+  font-size: 1.5rem;
+  text-align: center;
+}
+.detail-summary-content-link-container {
+  padding: 0;
+  margin-top: 0;
+  margin-bottom: 2vh;
+  background-color: antiquewhite;
+  width: 10.5vw;
+  border-radius: 5px;
+  line-height: 1.5;
+  text-align: center;
+}
+.detail-summary-content-link {
+  /* position: absolute;
+  top: 0; */
+  margin: 0 0.25vw 0 0.25vw;
+  font-size: 0.9rem;
+  color: #ad0715;
+  text-decoration: none;
+}
+/* ------------------------ */
+/* ------------------------ */
+/* tracks display */
+.track-list-header-container {
+  
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.track-list-header:first-of-type {
+  
+  margin:2vh 0 0 0;
+  padding-left: 15vw;
+  width: 60vw;
+  font-size: 1rem;
+  color: #ad0715;
+}
+.track-list-header:last-of-type {
+  margin:2vh 0 0 0;
+  padding: 0;
+  width: 30vw;
+  font-size: 1rem;
+  color: #ad0715;
+  padding-left: 5vw;
+}
+
+ul.track-list-body {
+  list-style: none;
+  padding-left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+li.track-list-body {
+  background-color: #F1F3F4;
+  margin-bottom: 0.3vh;
+  width: 90vw;
+  line-height: 1.5;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+.track-list-body div:first-of-type  {
+  font-size: .9rem;
+  padding-left: 1.5vw;
+  width: 60vw;
+}
+.track-list-body div:last-of-type  {
+  width: 30vw;
+  padding-left: 1.5vw;
+  font-size: .9rem;
+  display: flex;
+  align-items: center;
+}
+video{
+  height: 3vh;
+  width: 33vw;
+}
