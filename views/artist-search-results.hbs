@@ -1,0 +1,15 @@
+  <div class="results-section">
+    <h1>Artist Search Results</h1>
+
+    {{#each artists}}
+      <div class="artist-item">
+        <h2 class="artist-name">{{name}}</h2>
+        {{#if images.length}}
+          <img class="artist-image" src="{{images.[0].url}}" alt="{{name}} Image" />
+        {{/if}}
+        <a href="/albums/{{id}}">View Albums</a>
+      </div>
+    {{else}}
+      <p>No artists found.</p>
+    {{/each}}
+  </div>

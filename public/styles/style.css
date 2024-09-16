@@ -1,0 +1,110 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center;
+  }
+  .hero-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    margin: 20px;
+    width: 500px;
+    height: 200px;
+    border-radius: 10px;
+  }
+  h1 {
+    color: #000;
+    font-size: 25px;
+    text-align: center;
+    margin-bottom: 5px;
+  }
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+
+  }
+  input {
+    padding: 10px;
+    font-size: 15px;
+  }
+  button {
+    font-size: 15px;
+    background-color: #fff;
+    border: none;
+    cursor: pointer;
+    background-color: #828282;
+	border-radius:28px;
+	display:inline-block;
+	color:#ffffff;
+	font-family:Arial;
+	font-size:17px;
+	padding:15px 25px;
+    margin-top: 20px;
+	text-decoration:none;
+  }
+button:hover {
+	background-color: #84bd00;
+}
+button:active {
+	position:relative;
+	top:1px;
+}
+
+.albums-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  .album-item {
+    flex-basis: 30%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+  .album-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .album-title {
+    margin-top: 10px;
+  }
+
+  .results-section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f1f1f1;
+  }
+  .artist-item {
+    flex-basis: 30%;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fff;
+    text-align: center;
+  }
+  .artist-image {
+    width: 100%;
+    height: 500px;
+    object-fit: cover;
+  }
+  .artist-name {
+    margin-top: 10px;
+  }
