@@ -1,0 +1,14 @@
+<div class="album-page">
+  {{#each this.items}}
+    <div class="each-track">
+      <h3>{{this.name}}</h3>
+      {{#if this.preview_url}}
+        <audio controls>
+          <source src="{{this.preview_url}}" type="audio/mpeg" />
+        </audio>
+      {{else}}
+        <p>No track</p>
+      {{/if}}
+    </div>
+  {{/each}}
+</div>
