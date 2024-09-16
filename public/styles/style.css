@@ -1,0 +1,30 @@
+#home-page {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  height: 100vh;
+  width: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.album-selection {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
+
+#list {
+  /* font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: large;
+  display: flexbox;
+  position: relative; */
+  /* flex-wrap: wrap; */
+  /* justify-content: center; */
+  /* align-items: center; */
+}
+
+#tracks {
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
+}
