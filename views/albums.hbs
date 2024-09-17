@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <ul>
+    
+        {{#each album}}
+    
+        <li>
+            <p>Name: {{this.name}}</p>
+            <img src="{{this.images.[0].url}}"></img>
+            <a href="/tracks/{{this.id}}"><button>View</button></a>
+        
+        {{!-- <audio controls>
+            <source src="{{this.href}}" type="audio/ogg">
+        </audio> --}}
+    
+        </li>
+        {{/each}}
+
+
+
+</body>
+</html>
