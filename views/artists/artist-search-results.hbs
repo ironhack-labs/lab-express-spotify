@@ -1,0 +1,22 @@
+<div class="container">
+  <p class="float-end mb-4 mt-4">
+    <a href="/" class="btn">Go search</a>
+  </p>
+  <h1 class="display-1 mb-3 text-center col">Artist</h1>
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4">
+    {{#each artists}}
+      <div class="col mb-4">
+        <div class="card h-100">
+          <img src="{{images.0.url}}" class="card-img-top h-100" alt="" />
+          <div class="card-body text-center p-4">
+            <h5 class="card-title mb-3">{{name}}</h5>
+            <a href="/albums/{{id}}" class="btn btn-primary btn-width">View Albums</a>
+          </div>
+        </div>
+      </div>
+    {{/each}}
+  </div>
+  <p class="float-end mb-3">
+    <a href="#" class="btn btn-danger">Back to top</a>
+  </p>
+</div>
