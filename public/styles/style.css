@@ -1,0 +1,138 @@
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.index{
+    background-image: url("/images/spotify-background.jpeg");
+    width: 100%;
+    height: 830px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: relative;
+    display: flex;
+    justify-content: center;
+
+}
+
+.div-form{
+    width: 600px;
+    height: 70px;
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.4); 
+    margin: 300px;
+    padding: 50px;
+}
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+form input{
+    height: 25px;
+    width: 400px;
+    border-radius: 5px;
+    border: none;
+}
+form button{
+    background-color: red;
+    border: none;
+    color: white;
+    margin-top: 10px;
+    height: 30px;
+    width: 180px;
+
+}
+.artists-results{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+.albums-results{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    align-content: space-evenly;
+    justify-content: center;
+    flex-wrap: wrap;
+    max-width: 1200px;
+}
+ figure {
+    border: none;
+    display: flex;
+    flex-flow: column;
+    align-content:flex-start;
+    max-width: 250px;
+    max-height: 250px;
+    padding: 10px;
+    margin: 40px;
+}
+
+img {
+    max-width: 250px;
+    max-height: 250px;
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    align-content:space-evenly;
+    align-items: center;
+    background-color:dimgray;
+    color: #fff;
+    font: italic smaller sans-serif;
+    padding: 3px;
+    text-align: center;
+}
+
+figure a{
+    background-color: red;
+    background-size: 30px 30px;
+    color: white;
+    text-decoration: none;
+    padding: 5px 10px;
+    margin: 0 10px 0 10px;
+}
+
+figure p{
+    margin: 0;
+    padding: 0;
+    font-size: 15px;
+}
+.traks-page{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+}
+.table-tracks{
+    display: flex;
+    flex-direction: column;
+    width: 800px;
+    align-content: center;
+    margin-left: 300px;
+}
+
+table th{
+    background-color:black;
+    color:white;
+    height: 40px;
+}
+table td:nth-child(1){
+    background-color: lightgray;
+    text-align: left;
+}
+
+table td:nth-child(2){
+    background-color: lightgray;
+    text-align: right;
+
+}
