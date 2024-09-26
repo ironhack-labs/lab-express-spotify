@@ -1,0 +1,142 @@
+html{
+    height: 100%;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f0f0;
+    margin: 0;
+    padding: 0;
+    background: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-form{
+    background-color: rgba(255, 255, 255, 0.5);
+    width: 600px;
+    border-radius: 5px;
+}
+
+form {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+form input[type="text"] {
+    width: 300px;
+    height: 30px;
+    padding: 5px;
+    margin-right: 10px;
+}
+
+form button {
+    height: 42px;
+    background-color: #1DB954;
+    color: white;
+    border: none;
+    padding: 0 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #1ED760;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+    margin: auto;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 50px;
+}
+
+#search-results{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+}
+
+#search-results li{
+    width: 25%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+#albums, #artists  {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 90%;
+}
+
+#tracks-list {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+}
+
+.card {
+    width: 25%;
+    border: 1px solid #ddd;
+    margin-bottom: 20px;
+    padding: 15px;
+    box-shadow: 2px 2px 5px rgba(0,0,0,.3);
+    text-align: center;
+}
+
+h1 {
+    color: #333;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h2 {
+    font-size: 1.5em;
+    color: #333;
+}
+
+.card p {
+    font-size: 1em;
+    color: #777;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+}
+
+a:hover {
+    color: #555;
+}
+
+.track {
+    display: flex;
+    flex-grow: 1;
+    padding: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 10px;
+    background-color: #f9f9f9;
+    justify-content: space-between;
+}
+
+.audio-control {
+    margin-top: 10px;
+}
