@@ -1,0 +1,59 @@
+body {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 200vh;
+  margin: 0;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; /* Set the container height to fill the viewport */
+}
+
+.search {
+  background-color: rgba(255, 255, 255, 0.363);
+  text-align: center;
+  padding: 110px;
+  width: 600px;
+  height: 10px;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+input {
+  padding: 10px;
+  margin: 10px;
+  width: 20vw;
+}
+
+.submit-btn {
+  padding: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 15px;
+  background-color: rgb(144, 17, 17);
+  box-shadow: none;
+}
+
+.albums {
+  background-color: rgb(93, 144, 188);
+  display: grid;
+  justify-content: space-between;
+  margin: 5px;
+}
+
+.a-album {
+  color: white;
+  font-size: 20px;
+  padding: 20px;
+  margin: 30px;
+  text-decoration: none;
+  display: flex;
+  justify-content: start;
+}
