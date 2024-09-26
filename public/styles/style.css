@@ -1,0 +1,172 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+#search-bar {
+  background-image: url(/images/spotify-background.jpeg);
+  background-size: cover;
+}
+
+#search-bar form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#search-bar form label {
+  margin-bottom: 10px;
+}
+
+#search-bar form label input {
+  height: 35px;
+  width: 350px;
+  border-radius: 20px;
+  border: none;
+  text-align: center;
+}
+
+#search-bar form button {
+  height: 30px;
+  width: 150px;
+  background-color: red;
+  color: white;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+#artist {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#artist > div {
+  flex-basis: calc(33.33% - 20px);
+  margin: 10px;
+}
+
+#artist img {
+  width: 100%;
+  height: 400px;
+}
+
+#artist h3 {
+  margin-top: 10px;
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+#artist a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: blueviolet;
+  width: 120px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-weight: bold;
+}
+
+#albums {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+ul#ul-albums {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  text-align: center;
+}
+
+#ul-albums {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  list-style: none;
+  padding: 0;
+}
+
+#ul-albums li {
+  flex-basis: calc(33.33% - 20px);
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+#ul-albums img {
+  width: 100%;
+  height: auto;
+}
+
+#ul-albums a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+  text-decoration: none;
+  background-color: blueviolet;
+  width: 120px;
+  height: 30px;
+  margin-left: auto;
+  margin-right: auto;
+  color: white;
+  font-weight: bold;
+}
+
+#tracks {
+  text-align: center;
+  text-transform: uppercase;
+}
+
+#ul-tracks {
+  margin: 0;
+  padding: 0;
+}
+
+#ul-tracks li {
+  list-style: none;
+  display: flex;
+  background-color: rgb(158, 157, 157);
+  margin: 0 0 5px 0;
+}
+
+#ul-tracks li h3 {
+  margin-left: 10px;
+}
+
+#ul-tracks li audio {
+  position: absolute;
+  right: 10px;
+}
+
+#header {
+  display: flex;
+  background-color: rgb(67, 64, 64);
+  color: white;
+}
+
+#header #title {
+  margin-left: 10px;
+}
+
+#header #play {
+  position: absolute;
+  right: 6%;
+}
+
+
+
+
+
