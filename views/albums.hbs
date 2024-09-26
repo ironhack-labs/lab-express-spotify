@@ -1,0 +1,24 @@
+<link rel="stylesheet" type="text/css" href="\styles\artist-search.css">
+
+<a id="go-back-btn" onclick="history.back()">🔙</a>
+
+<h1>Albums for:
+    {{#each albums.[0].artists}}
+    {{name}}{{#unless @last}}, {{/unless}}
+    {{/each}}
+</h1>
+
+<div class="grid-container">
+
+    {{#each albums}}
+    <div class="grid-item">
+        {{#if images.[0]}}
+        <img src="{{images.[1].url}}" alt="Artist Image">
+        {{else}}
+        <p>No image available for this artist.</p>
+        {{/if}}
+        <h2>{{name}}</h2>
+        <a href="/view-tracks/{{id}}">View tracks</a>
+    </div>
+    {{/each}}
+</div>
