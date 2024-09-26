@@ -1,0 +1,21 @@
+<div>
+
+    <div id="tracks-list">
+        <span>Title</span>
+        <span>Listen</span>
+    </div>
+
+    {{#each this.items}}
+        <div class="tracks">
+            {{this.name}}
+            {{#if this.preview_url}}
+             <audio controls>
+                <source src="{{this.preview_url}}" type="audio/mpeg">
+            </audio>
+            {{else}}
+                <p>No Track</p>
+            {{/if}}
+        </div>
+    {{/each}}
+
+</div>

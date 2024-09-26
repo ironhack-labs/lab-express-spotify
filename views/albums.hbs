@@ -1,0 +1,20 @@
+<p id="albumsFor">Albums for: {{this.items.[0].artists.[0].name}}</p>
+
+<div class="chooseAlbum">
+    {{#each this.items}}
+        <div class="artistImage">
+            {{#if this.images}}
+                <img src="{{this.images.[0].url}}" alt="{{this.name}}">
+            {{else}}
+                <div class="noImageBox">
+                    <p>No image</p>
+                </div>
+                <div class="artistName">
+            {{/if}}
+            <div class="artistName">
+            {{this.name}}
+            <a href="/album/{{this.id}}">View Tracks</a>
+            </div>
+        </div>
+    {{/each}}
+</div>
