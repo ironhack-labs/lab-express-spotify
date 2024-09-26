@@ -1,0 +1,18 @@
+<ul class="albums-ul">
+  {{#each albums}}
+    <li>
+      <br />
+      <img
+        src="{{this.images.0.url}}"
+        alt="{{this.name}}"
+        width="260"
+        height="260"
+      />
+      <br />
+      {{this.name}}
+      <br />
+      {{! "To be able to see the tracks of the particular album" }}
+      <a href="/tracks/{{this.id}}"><button class="btn btn-danger">View Tracks</button></a>
+    </li>
+  {{/each}}
+</ul>

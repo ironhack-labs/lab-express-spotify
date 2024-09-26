@@ -1,0 +1,61 @@
+/* html, body {
+  height: 100%;
+  margin: 0;
+} */
+
+#home-view {
+  background-image: url("/images/spotify-background.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  padding-top: 50px;
+  position: relative;
+}
+
+.search-items {
+  display: flex;
+  flex-direction: column;
+  margin-top: 320px;
+  margin-left: 550px;
+}
+
+.search-bar {
+  width: 400px;
+}
+
+#btn-search {
+  margin-top: 15px;
+  margin-left: 130px;
+}
+
+.artists-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  list-style-type: none;
+}
+
+.albums-ul {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  list-style-type: none;
+}
+
+.tracks-list {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+}
+
+.tracks-titles {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 30px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h3 {
+  margin-right: 100px;
+}
