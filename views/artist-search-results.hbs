@@ -1,0 +1,10 @@
+<div class="artist-results">
+            {{#each artists}}
+        <section class="ref-summary">
+
+        <img src="{{this.images.[0].url}}" alt="artist" width="80px">
+        {{name}}
+        <a href="/artist/{{id}}/albums">View Albums</a>
+        </section>
+    {{/each}}
+</div>
