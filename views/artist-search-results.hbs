@@ -1,0 +1,10 @@
+<H2>Artists</H1>
+{{#each this}}
+    {{this.name}}
+  <img src="{{this.images.[0].url}}" alt="artist pic">  
+
+        <form method="GET", action="/albums">
+            <button type="button" name = "albumTitles">Albums</button>
+        </form>
+
+{{/each}}
