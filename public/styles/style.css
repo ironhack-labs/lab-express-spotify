@@ -1,0 +1,25 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+.home-container {
+    background-image: url('/images/spotify-background.jpeg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+  } 
+ .form-container {
+  width: 900;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+ }
+ #search-button {
+  margin-left: 25px;
+  margin-top: 10px;
+ }
