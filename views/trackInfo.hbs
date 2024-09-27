@@ -1,0 +1,20 @@
+<div class="track-Div">
+    <nav>
+        <h1>Title</h1>
+        <h1>Listen</h1>
+    </nav>
+    {{#each tracksArr}}
+        <section class="track-summary">
+            <a href="{{this.spotify}}"><h2>Track {{this.track_number}} - {{this.name}}</h2></a>
+            {{#if this.preview_url}}
+            <p><audio 
+                controls 
+                    src="{{this.preview_url}}">
+                </audio></p>
+            {{else}}
+                <p>Not Availaible</p>
+            {{/if}}
+        </section>
+        <hr>
+    {{/each}}
+</div>
