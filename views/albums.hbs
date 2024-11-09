@@ -1,0 +1,19 @@
+<h1>Albums by {{artistName}}</h1>
+
+{{#if albums.length}}
+  <ul>
+    {{#each albums}}
+      <li>
+        <h2>{{this.name}}</h2>
+        {{#if this.images.length}}
+          <img src="{{this.images.[0].url}}" alt="{{this.name}}" style="width: 200px;">
+        {{/if}}
+        <!-- Link to view tracks (this will be added in the next iteration) -->
+        <a href="/tracks/{{this.id}}">View Tracks</a>
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No albums found for this artist.</p>
+{{/if}}
+

@@ -1,0 +1,20 @@
+
+  <h1>Search Results</h1>
+  
+  {{#if artists.length}}
+    <ul>
+      {{#each artists}}
+        <li>
+          <h2>{{this.name}}</h2>
+          {{#if this.images.length}}
+            <img src="{{this.images.[0].url}}" alt="{{this.name}}" style="width: 200px;">
+          {{/if}}
+          <!-- Link to albums (functionality will be added later) -->
+          <a href="/albums/{{this.id}}">View Albums</a>
+        </li>
+      {{/each}}
+    </ul>
+  {{else}}
+    <p>No artists found. Please try again.</p>
+  {{/if}}
+

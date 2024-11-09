@@ -1,0 +1,22 @@
+<h1>Tracks from {{albumName}}</h1>
+
+{{#if tracks.length}}
+  <ul>
+    {{#each tracks}}
+      <li>
+        <h3>{{this.name}}</h3>
+        {{#if this.preview_url}}
+          <!-- Add audio preview for the track -->
+          <audio controls>
+            <source src="{{this.preview_url}}" type="audio/mpeg">
+            Your browser does not support the audio element.
+          </audio>
+        {{else}}
+          <p>No preview available</p>
+        {{/if}}
+      </li>
+    {{/each}}
+  </ul>
+{{else}}
+  <p>No tracks found for this album.</p>
+{{/if}}
