@@ -1,0 +1,23 @@
+<div
+  style="padding: 15px; margin:20px;"
+  class="row row-cols-2 row-cols-md-4 g-4"
+>
+
+  {{#each albums as |album|}}
+    <div class="col" style="padding: 5px;">
+      <div class="card" style="background-color: rgba(227, 182, 134, 0.646); padding:10px;" >
+        <img
+          style="height: 250px; object-fit: contain;"
+          src="{{album.images.0.url}}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body"style=" display: flex; flex-direction:column; align-items:center; justify-content:center;">
+          <h5 class="card-title">{{album.name}}</h5>
+          <a href="/tracks/{{album.id}}" class="btn btn-primary" style="background-color: rgb(251 104 98); border-style:none;">View Tracks</a>
+        </div>
+
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,17 @@
+#header {
+    display: flex;
+    justify-content: space-between;
+    background-color: rgba(228, 157, 109, 0.929);
+    p {
+        margin: 30px;
+        font-size: 30px;
+        font-weight: 600;
+    }
+}
+#track-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin: 15px;
+}

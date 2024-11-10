@@ -1,0 +1,23 @@
+<div
+  style="padding: 15px; margin:20px;"
+  class="row row-cols-2 row-cols-md-4 g-4"
+>
+
+  {{#each artists as |artist|}}
+    <div class="col" style="padding: 5px;">
+      <div class="card" style="background-color: rgba(239, 224, 197, 0.646); padding:10px;" >
+        <img
+          style="height: 250px; object-fit: contain;"
+          src="{{artist.images.0.url}}"
+          class="card-img-top"
+          alt="..."
+        />
+        <div class="card-body"style=" display: flex; flex-direction:column; align-items:center; justify-content:center;">
+          <h5 class="card-title">{{artist.name}}</h5>
+          <a href="/albums/{{artist.id}}" class="btn btn-primary" style="background-color: rgb(251 104 98); border-style:none;">View Albums</a>
+        </div>
+
+      </div>
+    </div>
+  {{/each}}
+</div>

@@ -1,0 +1,20 @@
+body{
+    background-image: url("/images/spotify-background.jpeg");
+    background-size: cover;
+
+    #main-div{
+        width: 100vw;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        div {
+            background-color: rgba(255, 255, 255, 0.7); 
+            padding: 20px;
+            border-radius: 4px;
+            width: 500px;
+            height: 150px;
+            
+        }
+    }
+}
