@@ -1,0 +1,32 @@
+body{
+    background-image: url("../images/spotify-background.jpeg")!important;
+    background-position: center;
+    background-size: cover;
+}
+form{
+    padding: 20px;
+    background-color:#1DB954;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+.spoty{
+    padding: 5px;
+    background-color:#1DB954;
+    color: white;
+  
+}
+.form-control {
+    background-color: rgb(202, 202, 202);
+    color: #ffffff; 
+    border: 0px solid  rgb(163, 255, 163) ; 
+}
+.btn-primary{
+background-color: #19a048;
+border: 0px;
+}
+
+.btn-primary:hover {
+ background-color: #0b5725;
+}
+.container{
+ margin-top: 20px;
+}
