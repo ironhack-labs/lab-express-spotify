@@ -1,0 +1,33 @@
+<div class="container mt-4">
+    <h1 class="text-center mb-4">Albums for: {{albums.[0].artists.[0].name}}</h1>
+    
+    <div class="row row-cols-1 row-cols-md-3 g-4">
+        {{#each albums}}
+        <div class="col">
+            <div class="card h-100 bg-dark text-white">
+                {{#if images.[0].url}}
+                <img src="{{images.[0].url}}" class="card-img-top" alt="{{name}}" style="height: 300px; object-fit: cover;">
+                {{/if}}
+                <div class="card-body text-center">
+                    <h5 class="card-title">{{name}}</h5>
+                    <div class="mt-3">
+                        <a href="/tracks/{{id}}" class="btn btn-danger">
+                            View Tracks
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {{/each}}
+    </div>
+</div>
+
+<style>
+    .card {
+        transition: transform 0.2s;
+        border: none;
+    }
+    .card:hover {
+        transform: translateY(-5px);
+    }
+</style>

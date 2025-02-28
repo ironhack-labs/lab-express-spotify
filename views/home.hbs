@@ -1,0 +1,22 @@
+<style>
+    body {
+        background: url('/images/spotify-background.jpeg') no-repeat center center fixed;
+        background-size: cover;
+    }
+    .search-container {
+        max-width: 500px;
+        width: 100%;
+        opacity: 0.9;
+    }
+</style>
+
+<div class="container d-flex justify-content-center align-items-center vh-100">
+    <div class="bg-light p-5 rounded shadow search-container">
+        <form action="/artist-search" method="GET">
+            <div class="mb-3">
+                <input type="text" class="form-control" placeholder="Search for an artist" name="artist" required />
+            </div>
+            <button type="submit" class="btn btn-danger w-100">Search</button>
+        </form>
+    </div>
+</div>
